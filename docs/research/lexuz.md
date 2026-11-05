@@ -139,6 +139,9 @@ Taxmin: MVP qamrovidagi ≈34 400 ta lotin hujjatning ≈22 mingtasi amalda.
    Lekin lex.uz bazasidan pullik xizmat uchun nusxa olish sayt shartlariga zid bo'ladi. Eng xavfsiz
    yo'l — Markazdan yozma rozilik yoki ma'lumot almashish shartnomasini olish
    ([xat loyihasi](../adolat-markazi-xat.md)). Ishga tushirishdan oldin yurist bilan maslahatlashish kerak.
+5. **Loyiha qarori (2026-11-05).** Hozircha xizmat bepul, har bir javobda lex.uz'ga havola
+   beriladi. Xat pullik tariflar qo'shilganda, ular ishga tushishidan oldin yuboriladi
+   ([PLAN.md, 3-bo'lim](../../PLAN.md)).
 
 ### Markaz kontaktlari
 

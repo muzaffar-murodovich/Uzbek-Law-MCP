@@ -2,15 +2,15 @@
 
 > **Qonunshunos** — ishchi (vaqtinchalik) nom.
 
-O'zbekiston Respublikasi qonunchiligiga oid savollarga javob topishda yordam beradigan, pullik
-xizmat sifatida taqdim etiladigan masofaviy (remote) MCP server.
+O'zbekiston Respublikasi qonunchiligiga oid savollarga javob topishda yordam beradigan masofaviy
+(remote) MCP server. Hozircha xizmat to'liq bepul, pullik tariflar keyinroq qo'shiladi.
 
 ## 1. Qabul qilingan qarorlar
 
 | Mavzu | Qaror |
 |---|---|
 | Nom | Qonunshunos (ishchi nom) |
-| Manba | lex.uz (Qonunchilik ma'lumotlari milliy bazasi), mahalliy bazaga yuklab olinadi va indekslanadi. ⚠️ Pullik xizmat uchun "Adolat" markazining yozma roziligi kerak (3-bo'lim) |
+| Manba | lex.uz (Qonunchilik ma'lumotlari milliy bazasi), mahalliy bazaga yuklab olinadi va indekslanadi. Har bir javobda lex.uz'ga havola beriladi. Pullik tariflar ishga tushishidan oldin "Adolat" markazining yozma roziligi olinadi (3-bo'lim) |
 | Qamrov (MVP) | Qonun hujjatlari (Konstitutsiya, kodekslar, qonunlar), Prezident hujjatlari, Hukumat qarorlari, vazirlik va idoralar hujjatlari. Keyin: mahalliy hokimiyat qarorlari, xalqaro shartnomalar, sud amaliyoti |
 | Til | Hozircha o'zbek (lotin). Keyin: o'zbek (kirill), rus |
 | Qidiruv | Gibrid: to'liq matnli (kalit so'z) + semantik (embedding), natijalar RRF bilan birlashtiriladi |
@@ -23,7 +23,7 @@ xizmat sifatida taqdim etiladigan masofaviy (remote) MCP server.
 | Mijozlar | claude.ai, Claude Desktop, Claude Code, ChatGPT, Cursor — OAuth 2.1 orqali |
 | Kirish | Google (Gmail) va Telegram orqali |
 | Bepul limit | Kuniga 3 ta qidiruv (`search_law`). Boshqa vositalar (modda o'qish va h.k.) uchun kuniga 20 ta chaqiruv |
-| To'lov | Hozircha yo'q. Tarif foydalanuvchiga administrator tomonidan qo'lda beriladi, foydalanish statistikasi boshidan yoziladi (keyin Payme/Click ulash uchun) |
+| To'lov | Hozircha hamma narsa bepul. Pullik tariflar (Payme/Click) keyinroq qo'shiladi. Foydalanish statistikasi boshidan yoziladi, administrator foydalanuvchiga alohida limit berishi mumkin |
 
 ## 2. 0-bosqich natijalari (lex.uz tadqiqoti)
 
@@ -54,12 +54,16 @@ Batafsil: [docs/research/lexuz.md](docs/research/lexuz.md). Qisqacha:
   shunday yozilgan: axborot faqat shaxsiy maqsadlarda ishlatiladi, *"daromad olish maqsadida
   maʼlumotlardan nusxa olish, tarqatish, sotish, berish resurs egasining yozma roziligisiz
   taqiqlanadi"*. Resurs egasi — Adliya vazirligi qoshidagi "Adolat" milliy huquqiy axborot markazi.
-- **Qaror:** "Adolat" markazidan yozma rozilik yoki ma'lumot almashish shartnomasini so'raymiz.
-  Xat loyihasi: [docs/adolat-markazi-xat.md](docs/adolat-markazi-xat.md). Yuborishdan oldin yurist
-  bilan maslahatlashish tavsiya etiladi.
-- **Rozilik olinguncha:** ishlab chiqish kichik namunaviy to'plamda (Konstitutsiya + 5–10 kodeks)
-  olib boriladi, xizmat ommaga ochilmaydi. To'liq yuklab olish va pullik ishga tushirish rozilik
-  olingandan keyin bo'ladi. Rozilik berilmasa, rejani qayta ko'rib chiqamiz.
+- Shartlarning o'zi bir xil ma'noda emas: bir joyda axborotdan "faqat shaxsiy maqsadlarda"
+  foydalanish mumkinligi aytilgan, boshqa joyda boshqa resurslarda lex.uz'ga havola qilgan holda
+  foydalanishga yo'l qo'yiladi. Aniq taqiq esa daromad olish maqsadidagi foydalanishga tegishli.
+- **Qaror (2026-11-05):** hozircha xizmat to'liq bepul. Har bir javobda lex.uz'dagi asl hujjatga
+  havola va manba ko'rsatiladi. Bepul xizmatni to'liq qamrov bilan ommaga ochish uchun rozilik
+  kutilmaydi.
+- **"Adolat" markaziga xat** ([loyiha](docs/adolat-markazi-xat.md)) loyihaga pullik tariflar
+  qo'shilganda yuboriladi. Shartlarga ko'ra rozilik daromad olishdan oldin kerak. Shuning uchun xat
+  to'lov bosqichi boshlanganda yuboriladi va yozma rozilik kelmaguncha pullik tariflar yoqilmaydi.
+  Reklama kabi boshqa daromad manbalari uchun ham shu tartib amal qiladi.
 
 ## 4. Arxitektura
 
@@ -162,13 +166,13 @@ Tamoyillar:
 | # | Bosqich | Muddat | Holati |
 |---|---|---|---|
 | 0 | lex.uz tadqiqoti | 1–2 kun | ✅ bajarildi |
-| 0a | "Adolat" markaziga xat yuborish | — | ⏳ siz tomondan |
-| 1 | Parser + crawler (avval namunaviy to'plamda) | 1 hafta | |
+| 1 | Parser + crawler (avval namunaviy to'plamda) | 1 hafta | ⏳ jarayonda |
 | 2 | Indekslash, gibrid qidiruv, baholash to'plami | 1 hafta | |
 | 3 | MCP server va tool'lar | 3–4 kun | |
 | 4 | OAuth, Google/Telegram kirish, limitlar | 1 hafta | domen kerak |
 | 5 | Hetzner'ga deploy, zaxira nusxa, monitoring, kunlik yangilash | 2–3 kun | |
-| 6 | To'liq yuklab olish va ommaga ochish | 1–2 kun | rozilik kerak |
+| 6 | To'liq yuklab olish va bepul ommaga ochish | 1–2 kun | |
+| 7 | Pullik tariflar | — | avval "Adolat" markaziga xat va yozma rozilik |
 
 ### 1-bosqich. Parser va crawler
 
@@ -197,7 +201,8 @@ Tamoyillar:
 ### Keyingi bosqichlar
 
 - O'zbek (kirill) va rus tillari. Kirill↔lotin transliteratsiya qidiruvda ham foydali.
-- To'lov: tariflar, Payme/Click (`usage_events` tayyor bo'ladi).
+- Pullik tariflar (7-bosqich): birinchi qadam — "Adolat" markaziga xat. Yozma rozilik olingach
+  tariflar va Payme/Click ulanadi (`usage_events` tayyor bo'ladi).
 - Kuchliroq server: kattaroq embedding modeli, reranker (masalan `bge-reranker-v2-m3`).
 - Mahalliy hokimiyat qarorlari, xalqaro shartnomalar, sud amaliyoti (Oliy sud Plenumi qarorlari).
 - Hujjatlar orasidagi bog'lanishlar ("bu moddaga qaysi hujjat o'zgartirish kiritgan") va tahrirlar
@@ -224,4 +229,5 @@ docs/           tadqiqot, xatlar
 ## 10. Ochiq savollar
 
 1. **Domen.** Google va Telegram kirishini sozlash uchun 4-bosqichdan oldin kerak bo'ladi.
-2. **"Adolat" markazining roziligi** va yurist bilan maslahat (3-bo'lim).
+2. **Kunlik limit bepul davrda.** Kuniga 3 ta qidiruv limiti xizmat to'liq bepul bo'lgan davrda
+   ham qoladimi yoki pullik tariflar bilan birga kiritiladimi?

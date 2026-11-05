@@ -1,5 +1,8 @@
 # Xat loyihasi: "Adolat" markaziga
 
+> **Qachon yuboriladi:** loyihaga pullik tariflar qo'shilganda, ular ishga tushishidan oldin
+> ([PLAN.md, 3-bo'lim](../PLAN.md)). Yozma rozilik kelmaguncha pullik tariflar yoqilmaydi.
+>
 > Kvadrat qavs ichidagi joylarni to'ldiring. Yuborish usuli: info@adolatmarkazi.uz yoki rasmiy
 > xat (Toshkent sh., Mirobod tumani, Amir Temur shohko'chasi, 19-uy). Telefon: (55) 510-47-87.
 > Yuborishdan oldin matnni yurist bilan ko'rib chiqish tavsiya etiladi.
@@ -27,7 +30,8 @@ Xizmatda:
 - hujjatlar matni o'zgartirilmaydi, har bir javobda Qonunchilik ma'lumotlari milliy bazasidagi asl
   hujjatga (lex.uz) havola beriladi va manba ko'rsatiladi;
 - ma'lumotlar har kuni yangilanadi;
-- foydalanuvchilarga xizmat ko'rsatish kelgusida pullik bo'lishi rejalashtirilgan.
+- hozirda xizmat foydalanuvchilarga bepul ko'rsatilmoqda ([foydalanuvchilar soni] nafar
+  foydalanuvchi), endi pullik tariflar joriy etilishi rejalashtirilmoqda.
 
 Lex.uz saytidagi "Axborotni taqdim etish shartlari"ga ko'ra, ma'lumotlardan daromad olish maqsadida
 foydalanish uchun resurs egasining yozma roziligi talab etiladi. Shu munosabat bilan quyidagilarni
