@@ -1,0 +1,1540 @@
+<!DOCTYPE html>
+<html lang="uz-Latn-UZ">
+<head>
+<title>Lex.uz - Izlash natijalari</title>
+
+
+
+
+
+
+
+</head>
+<body>
+<div class="wrapper">
+
+
+
+
+
+<main class="main">
+<div class="container" id="lx_showsearchform">
+<div class="row">
+<div class="refind__result-export__item w-100 w-sm-auto mb-3" id="shsb" style="margin-left: 1rem;">
+<div class="btn refind__result-export__btn d-block w-100 w-sm-auto d-sm-inline-block" onclick="showsearchform(); return false;">
+                            izlash shaklini ochish
+                        </div>
+</div>
+<div class="refind__result-export__item w-100 w-sm-auto mb-3" id="hhsb" style="display: none; margin-left: 1rem;">
+<div class="btn refind__result-export__btn d-block w-100 w-sm-auto d-sm-inline-block" onclick="hidesearchform(); return false;">
+                            izlash shaklini yopish
+                        </div>
+</div>
+<div class="refind__result-export__item w-100 w-sm-auto mb-3" id="shsb1" style="margin-left: 1rem;">
+<div class="btn refind__result-export__btn d-block w-100 w-sm-auto d-sm-inline-block" id="mic_id" onclick="routeIndex();">
+<i class="fas fa-solid fa-microphone"></i>
+</div>
+</div>
+</div>
+</div>
+<div class="container">
+<div class="searchPanelExt" id="searchPanelExt" style="display: none;">
+<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+<li class="nav-item">
+<a aria-controls="pills-home" aria-selected="true" class="nav-link active" data-toggle="pill" href="#pills-all" id="pills-home-tab" role="tab">Hammasi</a>
+</li>
+<li class="nav-item">
+<a aria-controls="pills-contact" aria-selected="false" class="nav-link" data-toggle="pill" href="#pills-ol" id="pills-contact3-tab" role="tab">Oliy Majlis</a>
+</li>
+<li class="nav-item">
+<a aria-controls="pills-profile" aria-selected="false" class="nav-link" data-toggle="pill" href="#pills-mv" id="pills-profile-tab" role="tab">Mahalliy hokimiyat</a>
+</li>
+<li class="nav-item">
+<a aria-controls="pills-contact" aria-selected="false" class="nav-link" data-toggle="pill" href="#pills-mn" id="pills-contact-tab" role="tab">Xalqaro</a>
+</li>
+<li class="nav-item">
+<a aria-controls="pills-contact" aria-selected="false" class="nav-link" data-toggle="pill" href="#pills-tx" id="pills-contact1-tab" role="tab">Texnik</a>
+</li>
+<li class="nav-item">
+<a aria-controls="pills-contact" aria-selected="false" class="nav-link" data-toggle="pill" href="#pills-cd" id="pills-contact2-tab" role="tab">Sud amaliyoti</a>
+</li>
+<li class="nav-item">
+<a aria-controls="pills-contact" aria-selected="false" class="nav-link" data-toggle="pill" href="#pills-cr" id="pills-contact4-tab" role="tab">Sud qarorlari</a>
+</li>
+</ul>
+<div class="tab-content" id="pills-tabContent">
+<div class="d-flex justify-content-center align-items-center justify-content-md-between" id="deep_search_header">
+<h4><b>Kengaytirilgan qidiruv</b></h4>
+<a class="d-lg-block d-none d-md-none" href="#" id="searchPanelExt__basic-link"><u>Universal qidiruv</u></a>
+</div>
+<div aria-labelledby="pills-home-tab" class="tab-pane fade show active" id="pills-all" role="tabpanel">
+<div class="searchPanelExt__body">
+<form>
+<div class="row">
+<div class="col-12 col-lg-6">
+<div class="form-row align-items-center">
+<div class="col">
+<div class="form-group">
+<label for="actnum_1">Hujjat raqami</label>
+<input class="form-control" id="actnum_1" type="text" value=""/>
+</div>
+</div>
+<div class="col-12 col-lg-6">
+<div class="form-group">
+<div class="label-ph d-none d-xl-block"></div>
+<div class="custom-control custom-checkbox">
+<input class="custom-control-input" id="regnummj_1" type="checkbox"/>
+<label class="custom-control-label" for="regnummj_1">
+<span class="mr-1">Adliya vazirligi</span><br class="d-none d-md-block"/>
+<span>ro‘yxat raqami</span>
+</label>
+</div>
+</div>
+</div>
+<div class="col-12">
+<div class="form-group">
+<label for="query_61">Hujjat nomi</label>
+<input class="form-control lxAutoComplete" data-url="/uz/suggestions/query_61" id="query_61" type="text" value=""/>
+<div class="custom-control custom-checkbox mb-2">
+<input class="custom-control-input" id="exact_21" type="checkbox"/>
+<label class="custom-control-label" for="exact_21">Aniq mos kelishi</label>
+</div>
+</div>
+</div>
+<div class="col-12">
+<div class="form-group">
+<label for="query_1">Matndagi  so‘z yoki jumla</label>
+<input class="form-control lxAutoComplete" data-url="/uz/suggestions/query_1" id="query_1" type="text" value=""/>
+<div class="custom-control custom-checkbox mb-2">
+<input class="custom-control-input" id="exact_1" type="checkbox"/>
+<label class="custom-control-label" for="exact_1">Aniq mos kelishi</label>
+</div>
+</div>
+</div>
+<div class="col-12">
+<div class="form-group">
+<label>Hujjat holati</label>
+
+</div>
+</div>
+<div class="col-8">
+<div class="form-group">
+<label>Kuchga kirish sanasi</label>
+<div class="form-inline flex-nowrap">
+<div class="form-group form-datepicker">
+<input class="form-control mr-sm-2 position-relative datepicker" id="df_1_eff" placeholder="Sana kiriting" type="text" value=""/>
+<i class="far fa-calendar position-absolute"></i>
+</div>
+<div class="form-group form-datepicker" id="searchPanelExt__daterange_1_eff">
+<input class="form-control position-relative datepicker" id="dt_1_eff" placeholder="gacha" type="text" value=""/>
+<i class="far fa-calendar position-absolute"></i>
+</div>
+</div>
+</div>
+</div>
+<div class="col-4">
+<div class="form-group">
+<div class="label-ph d-none d-sm-block"></div>
+<div class="custom-control custom-checkbox ml-0">
+<input class="custom-control-input" id="checkbox-dp_1_eff" type="checkbox"/>
+<label class="custom-control-label" for="checkbox-dp_1_eff">Oraliq</label>
+</div>
+</div>
+</div>
+<div class="col-8">
+<div class="form-group">
+<label>Hujjat kuchini yo‘qotish sanasi</label>
+<div class="form-inline flex-nowrap">
+<div class="form-group form-datepicker">
+<input class="form-control mr-sm-2 position-relative datepicker" id="df_1_obs" placeholder="Sana kiriting" type="text" value=""/>
+<i class="far fa-calendar position-absolute"></i>
+</div>
+<div class="form-group form-datepicker" id="searchPanelExt__daterange_1_obs">
+<input class="form-control position-relative datepicker" id="dt_1_obs" placeholder="gacha" type="text" value=""/>
+<i class="far fa-calendar position-absolute"></i>
+</div>
+</div>
+</div>
+</div>
+<div class="col-4">
+<div class="form-group">
+<div class="label-ph d-none d-sm-block"></div>
+<div class="custom-control custom-checkbox ml-0">
+<input class="custom-control-input" id="checkbox-dp_1_obs" type="checkbox"/>
+<label class="custom-control-label" for="checkbox-dp_1_obs">Oraliq</label>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-12 col-lg-6">
+<div class="form-row align-items-center">
+<div class="col-12 col-xl-2">
+<div class="form-group">
+<label>Hujjat tili</label>
+
+</div>
+</div>
+<div class="col-8 col-xl-7">
+<div class="form-group">
+<label>Qabul qilingan sanasi</label>
+<div class="form-inline flex-nowrap">
+<div class="form-group form-datepicker">
+<input class="form-control mr-sm-2 position-relative datepicker" id="df_1" placeholder="Sana kiriting" type="text" value=""/>
+<i class="far fa-calendar position-absolute"></i>
+</div>
+<div class="form-group form-datepicker" id="searchPanelExt__daterange_1">
+<input class="form-control position-relative datepicker" id="dt_1" placeholder="gacha" type="text" value=""/>
+<i class="far fa-calendar position-absolute"></i>
+</div>
+</div>
+</div>
+</div>
+<div class="col-4 col-xl-3">
+<div class="form-group">
+<div class="label-ph d-none d-sm-block"></div>
+<div class="custom-control custom-checkbox ml-0">
+<input class="custom-control-input" id="checkbox-dp_1" type="checkbox"/>
+<label class="custom-control-label" for="checkbox-dp_1">Oraliq</label>
+</div>
+</div>
+</div>
+<div class="col-12">
+<div class="form-group">
+<label>Hujjat turi</label>
+
+<div class="custom-control custom-checkbox mb-2"></div>
+</div>
+<div class="form-group">
+<label>Organ</label>
+<div class="lx_stm">
+<div class="lx_stm_bn" id="lx_stm_bn_org_1" onclick="lx_stm.lx_stm_open('org_1')">
+<input id="org_1" type="hidden" value=""/>
+<span class="form-control" id="name_org_1"></span>
+<button class="lx_stm_bn_clear" onclick="lx_stm.lx_stm_clear_all(event,'org_1')" tabindex="-1" title="Tozalash" type="button">×</button>
+<span class="lx_stm_bn_arrow"><b role="presentation"></b></span>
+</div>
+<div class="lx_stm_dd" id="lx_stm_dd_org_1">
+<input class="lx_stm_search" id="lx_stm_search_org_1" onkeyup="lx_stm.lx_stm_search(this.value, 'org_1')" placeholder="Izlash" type="text"/>
+<input id="lx_stm_url_org_1" type="hidden" value="/uz/ajax_methods_url?action=GetOrganTree&amp;parentId=&amp;ucId=org_1"/>
+<div class="lx_stm_not_found">No results found</div>
+<div class="lx_stm_options" id="lx_stm_options_org_1">Loading...</div>
+</div>
+</div>
+<div class="custom-control custom-checkbox mb-2"></div>
+</div>
+<div class="form-group">
+<label>Hujjat tusi</label>
+
+</div>
+</div>
+<div class="col-12">
+<div class="form-group">
+<label>Qonunchilik sohalari</label>
+<div class="lx_stm">
+<div class="lx_stm_bn" id="lx_stm_bn_okoz_1" onclick="lx_stm.lx_stm_open('okoz_1')">
+<input id="okoz_1" type="hidden" value=""/>
+<span class="form-control" id="name_okoz_1"></span>
+<button class="lx_stm_bn_clear" onclick="lx_stm.lx_stm_clear_all(event,'okoz_1')" tabindex="-1" title="Tozalash" type="button">×</button>
+<span class="lx_stm_bn_arrow"><b role="presentation"></b></span>
+</div>
+<div class="lx_stm_dd" id="lx_stm_dd_okoz_1">
+<input class="lx_stm_search" id="lx_stm_search_okoz_1" onkeyup="lx_stm.lx_stm_search(this.value, 'okoz_1')" placeholder="Izlash" type="text"/>
+<input id="lx_stm_url_okoz_1" type="hidden" value="/uz/ajax_methods_url?action=GetOkozTree&amp;ucId=okoz_1"/>
+<div class="lx_stm_not_found">No results found</div>
+<div class="lx_stm_options" id="lx_stm_options_okoz_1">Loading...</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-12">
+<div class="form-group">
+<label>Hujjatning yaxlitligi</label>
+
+</div>
+</div>
+</div>
+</div>
+<div class="col-6">
+<button class="btn btn-light pt-2 pb-2" onclick="clearSearchForm(1);return false;" style="float: right;">Izlashni tozalash</button>
+</div>
+<div class="col-6">
+<button class="btn btn-primary pt-2 pb-2 pl-sm-4 pr-sm-4" onclick="goSearch(1);return false;">Izlash</button>
+</div>
+</div>
+</form>
+</div>
+</div>
+<div aria-labelledby="pills-profile-tab" class="tab-pane fade" id="pills-mv" role="tabpanel">
+<div class="searchPanelExt__body">
+<form>
+<div class="row">
+<div class="col-12 col-lg-6">
+<div class="form-row align-items-center">
+<div class="col">
+<div class="form-group">
+<label for="actnum_2">Hujjat raqami</label>
+<input class="form-control" id="actnum_2" type="text" value=""/>
+</div>
+</div>
+<div class="col-12 col-lg-6">
+</div>
+<div class="col-12">
+<div class="form-group">
+<label for="query_62">Hujjat nomi</label>
+<input class="form-control lxAutoComplete" data-url="/uz/suggestions/query_62" id="query_62" type="text" value=""/>
+<div class="custom-control custom-checkbox mb-2">
+<input class="custom-control-input" id="exact_22" type="checkbox"/>
+<label class="custom-control-label" for="exact_22">Aniq mos kelishi</label>
+</div>
+</div>
+</div>
+<div class="col-12">
+<div class="form-group">
+<label for="query_2">Matndagi  so‘z yoki jumla</label>
+<input class="form-control lxAutoComplete" data-url="/uz/suggestions/query_2" id="query_2" type="text" value=""/>
+<div class="custom-control custom-checkbox mb-2">
+<input class="custom-control-input" id="exact_2" type="checkbox"/>
+<label class="custom-control-label" for="exact_2">Aniq mos kelishi</label>
+</div>
+</div>
+</div>
+<div class="col-12">
+<div class="form-group">
+<label>Hujjat holati</label>
+
+</div>
+</div>
+<div class="col-8">
+<div class="form-group">
+<label>Kuchga kirish sanasi</label>
+<div class="form-inline flex-nowrap">
+<div class="form-group form-datepicker">
+<input class="form-control mr-sm-2 position-relative datepicker" id="df_2_eff" placeholder="Sana kiriting" type="text" value=""/>
+<i class="far fa-calendar position-absolute"></i>
+</div>
+<div class="form-group form-datepicker" id="searchPanelExt__daterange_2_eff">
+<input class="form-control position-relative datepicker" id="dt_2_eff" placeholder="gacha" type="text" value=""/>
+<i class="far fa-calendar position-absolute"></i>
+</div>
+</div>
+</div>
+</div>
+<div class="col-4">
+<div class="form-group">
+<div class="label-ph d-none d-sm-block"></div>
+<div class="custom-control custom-checkbox ml-0">
+<input class="custom-control-input" id="checkbox-dp_2_eff" type="checkbox"/>
+<label class="custom-control-label" for="checkbox-dp_2_eff">Oraliq</label>
+</div>
+</div>
+</div>
+<div class="col-8">
+<div class="form-group">
+<label>Hujjat kuchini yo‘qotish sanasi</label>
+<div class="form-inline flex-nowrap">
+<div class="form-group form-datepicker">
+<input class="form-control mr-sm-2 position-relative datepicker" id="df_2_obs" placeholder="Sana kiriting" type="text" value=""/>
+<i class="far fa-calendar position-absolute"></i>
+</div>
+<div class="form-group form-datepicker" id="searchPanelExt__daterange_2_obs">
+<input class="form-control position-relative datepicker" id="dt_2_obs" placeholder="gacha" type="text" value=""/>
+<i class="far fa-calendar position-absolute"></i>
+</div>
+</div>
+</div>
+</div>
+<div class="col-4">
+<div class="form-group">
+<div class="label-ph d-none d-sm-block"></div>
+<div class="custom-control custom-checkbox ml-0">
+<input class="custom-control-input" id="checkbox-dp_2_obs" type="checkbox"/>
+<label class="custom-control-label" for="checkbox-dp_2_obs">Oraliq</label>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-12 col-lg-6">
+<div class="form-row align-items-center">
+<div class="col-12 col-xl-2">
+<div class="form-group">
+<label>Hujjat tili</label>
+
+</div>
+</div>
+<div class="col-8 col-xl-7">
+<div class="form-group">
+<label>Qabul qilingan sanasi</label>
+<div class="form-inline flex-nowrap">
+<div class="form-group form-datepicker">
+<input class="form-control mr-sm-2 position-relative datepicker" id="df_2" placeholder="Sana kiriting" type="text" value=""/>
+<i class="far fa-calendar position-absolute"></i>
+</div>
+<div class="form-group form-datepicker" id="searchPanelExt__daterange_2">
+<input class="form-control position-relative datepicker" id="dt_2" placeholder="gacha" type="text" value=""/>
+<i class="far fa-calendar position-absolute"></i>
+</div>
+</div>
+</div>
+</div>
+<div class="col-4 col-xl-3">
+<div class="form-group">
+<div class="label-ph d-none d-sm-block"></div>
+<div class="custom-control custom-checkbox ml-0">
+<input class="custom-control-input" id="checkbox-dp_2" type="checkbox"/>
+<label class="custom-control-label" for="checkbox-dp_2">Oraliq</label>
+</div>
+</div>
+</div>
+<div class="col-12">
+<div class="form-group">
+<label>Hujjat turi</label>
+
+<div class="custom-control custom-checkbox mb-2"></div>
+</div>
+<div class="form-group">
+<label>Organ</label>
+<div class="lx_stm">
+<div class="lx_stm_bn" id="lx_stm_bn_org_2" onclick="lx_stm.lx_stm_open('org_2')">
+<input id="org_2" type="hidden" value=""/>
+<span class="form-control" id="name_org_2"></span>
+<button class="lx_stm_bn_clear" onclick="lx_stm.lx_stm_clear_all(event,'org_2')" tabindex="-1" title="Tozalash" type="button">×</button>
+<span class="lx_stm_bn_arrow"><b role="presentation"></b></span>
+</div>
+<div class="lx_stm_dd" id="lx_stm_dd_org_2">
+<input class="lx_stm_search" id="lx_stm_search_org_2" onkeyup="lx_stm.lx_stm_search(this.value, 'org_2')" placeholder="Izlash" type="text"/>
+<input id="lx_stm_url_org_2" type="hidden" value="/uz/ajax_methods_url?action=GetOrganTree&amp;parentId=813&amp;ucId=org_2"/>
+<div class="lx_stm_not_found">No results found</div>
+<div class="lx_stm_options" id="lx_stm_options_org_2">Loading...</div>
+</div>
+</div>
+<div class="custom-control custom-checkbox mb-2"></div>
+</div>
+<div class="form-group">
+<label>Qonunchilik sohalari</label>
+<div class="lx_stm">
+<div class="lx_stm_bn" id="lx_stm_bn_okoz_2" onclick="lx_stm.lx_stm_open('okoz_2')">
+<input id="okoz_2" type="hidden" value=""/>
+<span class="form-control" id="name_okoz_2"></span>
+<button class="lx_stm_bn_clear" onclick="lx_stm.lx_stm_clear_all(event,'okoz_2')" tabindex="-1" title="Tozalash" type="button">×</button>
+<span class="lx_stm_bn_arrow"><b role="presentation"></b></span>
+</div>
+<div class="lx_stm_dd" id="lx_stm_dd_okoz_2">
+<input class="lx_stm_search" id="lx_stm_search_okoz_2" onkeyup="lx_stm.lx_stm_search(this.value, 'okoz_2')" placeholder="Izlash" type="text"/>
+<input id="lx_stm_url_okoz_2" type="hidden" value="/uz/ajax_methods_url?action=GetOkozTree&amp;ucId=okoz_2"/>
+<div class="lx_stm_not_found">No results found</div>
+<div class="lx_stm_options" id="lx_stm_options_okoz_2">Loading...</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-12">
+<div class="form-group">
+<label>Hujjatning yaxlitligi</label>
+
+</div>
+</div>
+</div>
+</div>
+<div class="col-12">
+<div class="d-flex align-items-center justify-content-center mb-2">
+<button class="btn btn-light mr-3 pt-2 pb-2" onclick="clearSearchForm(2);return false;">Izlashni tozalash</button>
+<button class="btn btn-primary pt-2 pb-2 pl-sm-4 pr-sm-4" onclick="goSearch(2);return false;">Izlash</button>
+</div>
+</div>
+</div>
+</form>
+</div>
+</div>
+<div aria-labelledby="pills-contact-tab" class="tab-pane fade" id="pills-mn" role="tabpanel">
+<div class="searchPanelExt__body">
+<form>
+<div class="row">
+<div class="col-12 col-lg-6">
+<div class="form-row align-items-center">
+<div class="col">
+<div class="form-group">
+<label for="actnum_3">Hujjat raqami</label>
+<input class="form-control" id="actnum_3" type="text" value=""/>
+</div>
+</div>
+<div class="col-12 col-lg-6">
+</div>
+<div class="col-12">
+<div class="form-group">
+<label for="query_63">Hujjat nomi</label>
+<input class="form-control lxAutoComplete" data-url="/uz/suggestions/query_63" id="query_63" type="text" value=""/>
+<div class="custom-control custom-checkbox mb-2">
+<input class="custom-control-input" id="exact_23" type="checkbox"/>
+<label class="custom-control-label" for="exact_23">Aniq mos kelishi</label>
+</div>
+</div>
+</div>
+<div class="col-12">
+<div class="form-group">
+<label for="query_3">Matndagi  so‘z yoki jumla</label>
+<input class="form-control lxAutoComplete" data-url="/uz/suggestions/query_3" id="query_3" type="text" value=""/>
+<div class="custom-control custom-checkbox mb-2">
+<input class="custom-control-input" id="exact_3" type="checkbox"/>
+<label class="custom-control-label" for="exact_3">Aniq mos kelishi</label>
+</div>
+</div>
+</div>
+<div class="col-12">
+<div class="form-group">
+<label>Tomonlar</label>
+
+</div>
+</div>
+<div class="col-12">
+<div class="form-group">
+<label>Hujjat holati</label>
+
+</div>
+</div>
+<div class="col-8">
+<div class="form-group">
+<label>Kuchga kirish sanasi</label>
+<div class="form-inline flex-nowrap">
+<div class="form-group form-datepicker">
+<input class="form-control mr-sm-2 position-relative datepicker" id="df_3_eff" placeholder="Sana kiriting" type="text" value=""/>
+<i class="far fa-calendar position-absolute"></i>
+</div>
+<div class="form-group form-datepicker" id="searchPanelExt__daterange_3_eff">
+<input class="form-control position-relative datepicker" id="dt_3_eff" placeholder="gacha" type="text" value=""/>
+<i class="far fa-calendar position-absolute"></i>
+</div>
+</div>
+</div>
+</div>
+<div class="col-4">
+<div class="form-group">
+<div class="label-ph d-none d-sm-block"></div>
+<div class="custom-control custom-checkbox ml-0">
+<input class="custom-control-input" id="checkbox-dp_3_eff" type="checkbox"/>
+<label class="custom-control-label" for="checkbox-dp_3_eff">Oraliq</label>
+</div>
+</div>
+</div>
+<div class="col-8">
+<div class="form-group">
+<label>Hujjat kuchini yo‘qotish sanasi</label>
+<div class="form-inline flex-nowrap">
+<div class="form-group form-datepicker">
+<input class="form-control mr-sm-2 position-relative datepicker" id="df_3_obs" placeholder="Sana kiriting" type="text" value=""/>
+<i class="far fa-calendar position-absolute"></i>
+</div>
+<div class="form-group form-datepicker" id="searchPanelExt__daterange_3_obs">
+<input class="form-control position-relative datepicker" id="dt_3_obs" placeholder="gacha" type="text" value=""/>
+<i class="far fa-calendar position-absolute"></i>
+</div>
+</div>
+</div>
+</div>
+<div class="col-4">
+<div class="form-group">
+<div class="label-ph d-none d-sm-block"></div>
+<div class="custom-control custom-checkbox ml-0">
+<input class="custom-control-input" id="checkbox-dp_3_obs" type="checkbox"/>
+<label class="custom-control-label" for="checkbox-dp_3_obs">Oraliq</label>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-12 col-lg-6">
+<div class="form-row align-items-center">
+<div class="col-12 col-xl-2">
+<div class="form-group">
+<label>Hujjat tili</label>
+
+</div>
+</div>
+<div class="col-8 col-xl-7">
+<div class="form-group">
+<label>Shartnoma imzolangan sana</label>
+<div class="form-inline flex-nowrap">
+<div class="form-group form-datepicker">
+<input class="form-control mr-sm-2 position-relative datepicker" id="df_3" placeholder="Sana kiriting" type="text" value=""/>
+<i class="far fa-calendar position-absolute"></i>
+</div>
+<div class="form-group form-datepicker" id="searchPanelExt__daterange_3">
+<input class="form-control position-relative datepicker" id="dt_3" placeholder="gacha" type="text" value=""/>
+<i class="far fa-calendar position-absolute"></i>
+</div>
+</div>
+</div>
+</div>
+<div class="col-4 col-xl-3">
+<div class="form-group">
+<div class="label-ph d-none d-sm-block"></div>
+<div class="custom-control custom-checkbox ml-0">
+<input class="custom-control-input" id="checkbox-dp_3" type="checkbox"/>
+<label class="custom-control-label" for="checkbox-dp_3">Oraliq</label>
+</div>
+</div>
+</div>
+<div class="col-12">
+<div class="form-group">
+<label>Hujjat turi</label>
+
+<div class="custom-control custom-checkbox mb-2"></div>
+</div>
+<div class="form-group">
+<label>Organ</label>
+<div class="lx_stm">
+<div class="lx_stm_bn" id="lx_stm_bn_org_3" onclick="lx_stm.lx_stm_open('org_3')">
+<input id="org_3" type="hidden" value=""/>
+<span class="form-control" id="name_org_3"></span>
+<button class="lx_stm_bn_clear" onclick="lx_stm.lx_stm_clear_all(event,'org_3')" tabindex="-1" title="Tozalash" type="button">×</button>
+<span class="lx_stm_bn_arrow"><b role="presentation"></b></span>
+</div>
+<div class="lx_stm_dd" id="lx_stm_dd_org_3">
+<input class="lx_stm_search" id="lx_stm_search_org_3" onkeyup="lx_stm.lx_stm_search(this.value, 'org_3')" placeholder="Izlash" type="text"/>
+<input id="lx_stm_url_org_3" type="hidden" value="/uz/ajax_methods_url?action=GetOrganTree&amp;parentId=8980&amp;ucId=org_3"/>
+<div class="lx_stm_not_found">No results found</div>
+<div class="lx_stm_options" id="lx_stm_options_org_3">Loading...</div>
+</div>
+</div>
+<div class="custom-control custom-checkbox mb-2"></div>
+</div>
+</div>
+<div class="col-12">
+<div class="form-group">
+<label>Sub’ektlar soni bo‘yicha</label>
+
+</div>
+</div>
+<div class="col-12">
+<div class="form-group">
+<label>Darajasi</label>
+
+</div>
+</div>
+<div class="col-12">
+<div class="form-group">
+<label>Qonunchilik sohalari</label>
+<div class="lx_stm">
+<div class="lx_stm_bn" id="lx_stm_bn_okoz_3" onclick="lx_stm.lx_stm_open('okoz_3')">
+<input id="okoz_3" type="hidden" value=""/>
+<span class="form-control" id="name_okoz_3"></span>
+<button class="lx_stm_bn_clear" onclick="lx_stm.lx_stm_clear_all(event,'okoz_3')" tabindex="-1" title="Tozalash" type="button">×</button>
+<span class="lx_stm_bn_arrow"><b role="presentation"></b></span>
+</div>
+<div class="lx_stm_dd" id="lx_stm_dd_okoz_3">
+<input class="lx_stm_search" id="lx_stm_search_okoz_3" onkeyup="lx_stm.lx_stm_search(this.value, 'okoz_3')" placeholder="Izlash" type="text"/>
+<input id="lx_stm_url_okoz_3" type="hidden" value="/uz/ajax_methods_url?action=GetOkozTree&amp;ucId=okoz_3"/>
+<div class="lx_stm_not_found">No results found</div>
+<div class="lx_stm_options" id="lx_stm_options_okoz_3">Loading...</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-12">
+<div class="form-group">
+<label>Hujjatning yaxlitligi</label>
+
+</div>
+</div>
+</div>
+</div>
+<div class="col-12">
+<div class="d-flex align-items-center justify-content-center mb-2">
+<button class="btn btn-light mr-3 pt-2 pb-2" onclick="clearSearchForm(3);return false;">Izlashni tozalash</button>
+<button class="btn btn-primary pt-2 pb-2 pl-sm-4 pr-sm-4" onclick="goSearch(3);return false;">Izlash</button>
+</div>
+</div>
+</div>
+</form>
+</div>
+</div>
+<div aria-labelledby="pills-contact-tab" class="tab-pane fade" id="pills-tx" role="tabpanel">
+<div class="searchPanelExt__body">
+<form>
+<div class="row">
+<div class="col-12 col-lg-6">
+<div class="form-row align-items-center">
+<div class="col">
+<div class="form-group">
+<label for="actnum_4">Hujjat raqami</label>
+<input class="form-control" id="actnum_4" type="text" value=""/>
+</div>
+</div>
+<div class="col-12 col-lg-6">
+</div>
+<div class="col-12">
+<div class="form-group">
+<label for="query_64">Hujjat nomi</label>
+<input class="form-control lxAutoComplete" data-url="/uz/suggestions/query_64" id="query_64" type="text" value=""/>
+<div class="custom-control custom-checkbox mb-2">
+<input class="custom-control-input" id="exact_24" type="checkbox"/>
+<label class="custom-control-label" for="exact_24">Aniq mos kelishi</label>
+</div>
+</div>
+</div>
+<div class="col-12">
+<div class="form-group">
+<label for="query_4">Matndagi  so‘z yoki jumla</label>
+<input class="form-control lxAutoComplete" data-url="/uz/suggestions/query_4" id="query_4" type="text" value=""/>
+<div class="custom-control custom-checkbox mb-2">
+<input class="custom-control-input" id="exact_4" type="checkbox"/>
+<label class="custom-control-label" for="exact_4">Aniq mos kelishi</label>
+</div>
+</div>
+</div>
+<div class="col-12">
+<div class="form-group">
+<label>Hujjat holati</label>
+
+</div>
+</div>
+<div class="col-8">
+<div class="form-group">
+<label>Kuchga kirish sanasi</label>
+<div class="form-inline flex-nowrap">
+<div class="form-group form-datepicker">
+<input class="form-control mr-sm-2 position-relative datepicker" id="df_4_eff" placeholder="Sana kiriting" type="text" value=""/>
+<i class="far fa-calendar position-absolute"></i>
+</div>
+<div class="form-group form-datepicker" id="searchPanelExt__daterange_4_eff">
+<input class="form-control position-relative datepicker" id="dt_4_eff" placeholder="gacha" type="text" value=""/>
+<i class="far fa-calendar position-absolute"></i>
+</div>
+</div>
+</div>
+</div>
+<div class="col-4">
+<div class="form-group">
+<div class="label-ph d-none d-sm-block"></div>
+<div class="custom-control custom-checkbox ml-0">
+<input class="custom-control-input" id="checkbox-dp_4_eff" type="checkbox"/>
+<label class="custom-control-label" for="checkbox-dp_4_eff">Oraliq</label>
+</div>
+</div>
+</div>
+<div class="col-8">
+<div class="form-group">
+<label>Hujjat kuchini yo‘qotish sanasi</label>
+<div class="form-inline flex-nowrap">
+<div class="form-group form-datepicker">
+<input class="form-control mr-sm-2 position-relative datepicker" id="df_4_obs" placeholder="Sana kiriting" type="text" value=""/>
+<i class="far fa-calendar position-absolute"></i>
+</div>
+<div class="form-group form-datepicker" id="searchPanelExt__daterange_4_obs">
+<input class="form-control position-relative datepicker" id="dt_4_obs" placeholder="gacha" type="text" value=""/>
+<i class="far fa-calendar position-absolute"></i>
+</div>
+</div>
+</div>
+</div>
+<div class="col-4">
+<div class="form-group">
+<div class="label-ph d-none d-sm-block"></div>
+<div class="custom-control custom-checkbox ml-0">
+<input class="custom-control-input" id="checkbox-dp_4_obs" type="checkbox"/>
+<label class="custom-control-label" for="checkbox-dp_4_obs">Oraliq</label>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-12 col-lg-6">
+<div class="form-row align-items-center">
+<div class="col-12 col-xl-2">
+<div class="form-group">
+<label>Hujjat tili</label>
+
+</div>
+</div>
+<div class="col-8 col-xl-7">
+<div class="form-group">
+<label>Qabul qilingan sanasi</label>
+<div class="form-inline flex-nowrap">
+<div class="form-group form-datepicker">
+<input class="form-control mr-sm-2 position-relative datepicker" id="df_4" placeholder="Sana kiriting" type="text" value=""/>
+<i class="far fa-calendar position-absolute"></i>
+</div>
+<div class="form-group form-datepicker" id="searchPanelExt__daterange_4">
+<input class="form-control position-relative datepicker" id="dt_4" placeholder="gacha" type="text" value=""/>
+<i class="far fa-calendar position-absolute"></i>
+</div>
+</div>
+</div>
+</div>
+<div class="col-4 col-xl-3">
+<div class="form-group">
+<div class="label-ph d-none d-sm-block"></div>
+<div class="custom-control custom-checkbox ml-0">
+<input class="custom-control-input" id="checkbox-dp_4" type="checkbox"/>
+<label class="custom-control-label" for="checkbox-dp_4">Oraliq</label>
+</div>
+</div>
+</div>
+<div class="col-12">
+<div class="form-group">
+<label>Hujjat turi</label>
+
+<div class="custom-control custom-checkbox mb-2"></div>
+</div>
+<div class="form-group">
+<label>Organ</label>
+<div class="lx_stm">
+<div class="lx_stm_bn" id="lx_stm_bn_org_4" onclick="lx_stm.lx_stm_open('org_4')">
+<input id="org_4" type="hidden" value=""/>
+<span class="form-control" id="name_org_4"></span>
+<button class="lx_stm_bn_clear" onclick="lx_stm.lx_stm_clear_all(event,'org_4')" tabindex="-1" title="Tozalash" type="button">×</button>
+<span class="lx_stm_bn_arrow"><b role="presentation"></b></span>
+</div>
+<div class="lx_stm_dd" id="lx_stm_dd_org_4">
+<input class="lx_stm_search" id="lx_stm_search_org_4" onkeyup="lx_stm.lx_stm_search(this.value, 'org_4')" placeholder="Izlash" type="text"/>
+<input id="lx_stm_url_org_4" type="hidden" value="/uz/ajax_methods_url?action=GetOrganTree&amp;parentId=&amp;ucId=org_4"/>
+<div class="lx_stm_not_found">No results found</div>
+<div class="lx_stm_options" id="lx_stm_options_org_4">Loading...</div>
+</div>
+</div>
+<div class="custom-control custom-checkbox mb-2"></div>
+</div>
+<div class="form-group">
+<label>Qonunchilik sohalari</label>
+<div class="lx_stm">
+<div class="lx_stm_bn" id="lx_stm_bn_okoz_4" onclick="lx_stm.lx_stm_open('okoz_4')">
+<input id="okoz_4" type="hidden" value=""/>
+<span class="form-control" id="name_okoz_4"></span>
+<button class="lx_stm_bn_clear" onclick="lx_stm.lx_stm_clear_all(event,'okoz_4')" tabindex="-1" title="Tozalash" type="button">×</button>
+<span class="lx_stm_bn_arrow"><b role="presentation"></b></span>
+</div>
+<div class="lx_stm_dd" id="lx_stm_dd_okoz_4">
+<input class="lx_stm_search" id="lx_stm_search_okoz_4" onkeyup="lx_stm.lx_stm_search(this.value, 'okoz_4')" placeholder="Izlash" type="text"/>
+<input id="lx_stm_url_okoz_4" type="hidden" value="/uz/ajax_methods_url?action=GetOkozTree&amp;ucId=okoz_4"/>
+<div class="lx_stm_not_found">No results found</div>
+<div class="lx_stm_options" id="lx_stm_options_okoz_4">Loading...</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-12">
+<div class="form-group">
+<label>Hujjatning yaxlitligi</label>
+
+</div>
+</div>
+</div>
+</div>
+<div class="col-12">
+<div class="d-flex align-items-center justify-content-center mb-2">
+<button class="btn btn-light mr-3 pt-2 pb-2" onclick="clearSearchForm(4);return false;">Izlashni tozalash</button>
+<button class="btn btn-primary pt-2 pb-2 pl-sm-4 pr-sm-4" onclick="goSearch(4);return false;">Izlash</button>
+</div>
+</div>
+</div>
+</form>
+</div>
+</div>
+<div aria-labelledby="pills-contact-tab" class="tab-pane fade" id="pills-cd" role="tabpanel">
+<div class="searchPanelExt__body">
+<form>
+<div class="row">
+<div class="col-12 col-lg-6">
+<div class="form-row align-items-center">
+<div class="col">
+<div class="form-group">
+<label for="actnum_5">Hujjat raqami</label>
+<input class="form-control" id="actnum_5" type="text" value=""/>
+</div>
+</div>
+<div class="col-12 col-lg-6">
+</div>
+<div class="col-12">
+<div class="form-group">
+<label for="query_65">Hujjat nomi</label>
+<input class="form-control lxAutoComplete" data-url="/uz/suggestions/query_65" id="query_65" type="text" value=""/>
+<div class="custom-control custom-checkbox mb-2">
+<input class="custom-control-input" id="exact_25" type="checkbox"/>
+<label class="custom-control-label" for="exact_25">Aniq mos kelishi</label>
+</div>
+</div>
+</div>
+<div class="col-12">
+<div class="form-group">
+<label for="query_5">Matndagi  so‘z yoki jumla</label>
+<input class="form-control lxAutoComplete" data-url="/uz/suggestions/query_5" id="query_5" type="text" value=""/>
+<div class="custom-control custom-checkbox mb-2">
+<input class="custom-control-input" id="exact_5" type="checkbox"/>
+<label class="custom-control-label" for="exact_5">Aniq mos kelishi</label>
+</div>
+</div>
+</div>
+<div class="col-12">
+<div class="form-group">
+<label>Ish turi:</label>
+
+</div>
+</div>
+<div class="col-12">
+<div class="form-group">
+<label>Hujjat holati</label>
+
+</div>
+</div>
+</div>
+</div>
+<div class="col-12 col-lg-6">
+<div class="form-row align-items-center">
+<div class="col-12 col-xl-2">
+<div class="form-group">
+<label>Hujjat tili</label>
+
+</div>
+</div>
+<div class="col-8 col-xl-7">
+<div class="form-group">
+<label>Qabul qilingan sanasi</label>
+<div class="form-inline flex-nowrap">
+<div class="form-group form-datepicker">
+<input class="form-control mr-sm-2 position-relative datepicker" id="df_5" placeholder="Sana kiriting" type="text" value=""/>
+<i class="far fa-calendar position-absolute"></i>
+</div>
+<div class="form-group form-datepicker" id="searchPanelExt__daterange_5">
+<input class="form-control position-relative datepicker" id="dt_5" placeholder="gacha" type="text" value=""/>
+<i class="far fa-calendar position-absolute"></i>
+</div>
+</div>
+</div>
+</div>
+<div class="col-4 col-xl-3">
+<div class="form-group">
+<div class="label-ph d-none d-sm-block"></div>
+<div class="custom-control custom-checkbox ml-0">
+<input class="custom-control-input" id="checkbox-dp_5" type="checkbox"/>
+<label class="custom-control-label" for="checkbox-dp_5">Oraliq</label>
+</div>
+</div>
+</div>
+<div class="col-12">
+<div class="form-group">
+<label>Ish shakli:</label>
+
+<div class="custom-control custom-checkbox mb-2"></div>
+</div>
+<div class="form-group">
+<label>Daraja:</label>
+
+<div class="custom-control custom-checkbox mb-2"></div>
+</div>
+</div>
+<div class="col-12">
+<div class="form-group">
+<label>Instantsiya:</label>
+
+</div>
+</div>
+<div class="col-12">
+<div class="form-group">
+<label>Hujjatning yaxlitligi</label>
+
+</div>
+</div>
+</div>
+</div>
+<div class="col-12">
+<div class="d-flex align-items-center justify-content-center mb-2">
+<button class="btn btn-light mr-3 pt-2 pb-2" onclick="clearSearchForm(5);return false;">Izlashni tozalash</button>
+<button class="btn btn-primary pt-2 pb-2 pl-sm-4 pr-sm-4" onclick="goSearch(5);return false;">Izlash</button>
+</div>
+</div>
+</div>
+</form>
+</div>
+</div>
+<div aria-labelledby="pills-contact-tab" class="tab-pane fade" id="pills-cr" role="tabpanel">
+
+<div class="searchPanelExt__body">
+<form>
+<div class="row">
+<div class="col-12 col-lg-6">
+<div class="form-group">
+<label>Iqtisodiy ishlar bo’yicha sud qarorlari</label>
+
+</div>
+</div>
+<div class="col-12 col-lg-6">
+<div class="form-group">
+<label>Ma’muriy ishlar bo’yicha sud qarorlari</label>
+
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-12 col-lg-6">
+<div class="form-group">
+<label>Fuqarolik ishlari bo’yicha sud qarorlari</label>
+
+</div>
+</div>
+<div class="col-12 col-lg-6">
+<div class="form-group">
+<label>Jinoyat ishlari bo’yicha sud qarorlari</label>
+
+</div>
+</div>
+</div>
+</form>
+</div>
+</div>
+<div aria-labelledby="pills-contact-tab" class="tab-pane fade" id="pills-ol" role="tabpanel">
+<div class="searchPanelExt__body">
+<form>
+<div class="row">
+<div class="col-12 col-lg-6">
+<div class="form-row align-items-center">
+<div class="col">
+<div class="form-group">
+<label for="actnum_6">Hujjat raqami</label>
+<input class="form-control" id="actnum_6" type="text" value=""/>
+</div>
+</div>
+<div class="col-12 col-lg-6">
+</div>
+<div class="col-12">
+<div class="form-group">
+<label for="query_66">Hujjat nomi</label>
+<input class="form-control lxAutoComplete" data-url="/uz/suggestions/query_64" id="query_66" type="text" value=""/>
+<div class="custom-control custom-checkbox mb-2">
+<input class="custom-control-input" id="exact_26" type="checkbox"/>
+<label class="custom-control-label" for="exact_26">Aniq mos kelishi</label>
+</div>
+</div>
+</div>
+<div class="col-12">
+<div class="form-group">
+<label for="query_6">Matndagi  so‘z yoki jumla</label>
+<input class="form-control lxAutoComplete" data-url="/uz/suggestions/query_4" id="query_6" type="text" value=""/>
+<div class="custom-control custom-checkbox mb-2">
+<input class="custom-control-input" id="exact_6" type="checkbox"/>
+<label class="custom-control-label" for="exact_6">Aniq mos kelishi</label>
+</div>
+</div>
+</div>
+<div class="col-12">
+<div class="form-group">
+<label>Hujjat holati</label>
+
+</div>
+</div>
+<div class="col-8">
+<div class="form-group">
+<label>Kuchga kirish sanasi</label>
+<div class="form-inline flex-nowrap">
+<div class="form-group form-datepicker">
+<input class="form-control mr-sm-2 position-relative datepicker" id="df_6_eff" placeholder="Sana kiriting" type="text" value=""/>
+<i class="far fa-calendar position-absolute"></i>
+</div>
+<div class="form-group form-datepicker" id="searchPanelExt__daterange_6_eff">
+<input class="form-control position-relative datepicker" id="dt_6_eff" placeholder="gacha" type="text" value=""/>
+<i class="far fa-calendar position-absolute"></i>
+</div>
+</div>
+</div>
+</div>
+<div class="col-4">
+<div class="form-group">
+<div class="label-ph d-none d-sm-block"></div>
+<div class="custom-control custom-checkbox ml-0">
+<input class="custom-control-input" id="checkbox-dp_6_eff" type="checkbox"/>
+<label class="custom-control-label" for="checkbox-dp_6_eff">Oraliq</label>
+</div>
+</div>
+</div>
+<div class="col-8">
+<div class="form-group">
+<label>Hujjat kuchini yo‘qotish sanasi</label>
+<div class="form-inline flex-nowrap">
+<div class="form-group form-datepicker">
+<input class="form-control mr-sm-2 position-relative datepicker" id="df_6_obs" placeholder="Sana kiriting" type="text" value=""/>
+<i class="far fa-calendar position-absolute"></i>
+</div>
+<div class="form-group form-datepicker" id="searchPanelExt__daterange_6_obs">
+<input class="form-control position-relative datepicker" id="dt_6_obs" placeholder="gacha" type="text" value=""/>
+<i class="far fa-calendar position-absolute"></i>
+</div>
+</div>
+</div>
+</div>
+<div class="col-4">
+<div class="form-group">
+<div class="label-ph d-none d-sm-block"></div>
+<div class="custom-control custom-checkbox ml-0">
+<input class="custom-control-input" id="checkbox-dp_6_obs" type="checkbox"/>
+<label class="custom-control-label" for="checkbox-dp_6_obs">Oraliq</label>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-12 col-lg-6">
+<div class="form-row align-items-center">
+<div class="col-12 col-xl-2">
+<div class="form-group">
+<label>Hujjat tili</label>
+
+</div>
+</div>
+<div class="col-8 col-xl-7">
+<div class="form-group">
+<label>Qabul qilingan sanasi</label>
+<div class="form-inline flex-nowrap">
+<div class="form-group form-datepicker">
+<input class="form-control mr-sm-2 position-relative datepicker" id="df_6" placeholder="Sana kiriting" type="text" value=""/>
+<i class="far fa-calendar position-absolute"></i>
+</div>
+<div class="form-group form-datepicker" id="searchPanelExt__daterange_6">
+<input class="form-control position-relative datepicker" id="dt_6" placeholder="gacha" type="text" value=""/>
+<i class="far fa-calendar position-absolute"></i>
+</div>
+</div>
+</div>
+</div>
+<div class="col-4 col-xl-3">
+<div class="form-group">
+<div class="label-ph d-none d-sm-block"></div>
+<div class="custom-control custom-checkbox ml-0">
+<input class="custom-control-input" id="checkbox-dp_6" type="checkbox"/>
+<label class="custom-control-label" for="checkbox-dp_6">Oraliq</label>
+</div>
+</div>
+</div>
+<div class="col-12">
+<div class="form-group">
+<label>Hujjat tusi</label>
+
+<div class="custom-control custom-checkbox mb-2"></div>
+</div>
+<div class="form-group">
+<label>Organ</label>
+<div class="lx_stm">
+<div class="lx_stm_bn" id="lx_stm_bn_org_6" onclick="lx_stm.lx_stm_open('org_6')">
+<input id="org_6" type="hidden" value=""/>
+<span class="form-control" id="name_org_6"></span>
+<button class="lx_stm_bn_clear" onclick="lx_stm.lx_stm_clear_all(event,'org_6')" tabindex="-1" title="Tozalash" type="button">×</button>
+<span class="lx_stm_bn_arrow"><b role="presentation"></b></span>
+</div>
+<div class="lx_stm_dd" id="lx_stm_dd_org_6">
+<input class="lx_stm_search" id="lx_stm_search_org_6" onkeyup="lx_stm.lx_stm_search(this.value, 'org_6')" placeholder="Izlash" type="text"/>
+<input id="lx_stm_url_org_6" type="hidden" value="/uz/ajax_methods_url?action=GetOrganTree&amp;parentId=740&amp;ucId=org_6"/>
+<div class="lx_stm_not_found">No results found</div>
+<div class="lx_stm_options" id="lx_stm_options_org_6">Loading...</div>
+</div>
+</div>
+<div class="custom-control custom-checkbox mb-2"></div>
+</div>
+<div class="form-group">
+<label>Qonunchilik sohalari</label>
+<div class="lx_stm">
+<div class="lx_stm_bn" id="lx_stm_bn_okoz_6" onclick="lx_stm.lx_stm_open('okoz_6')">
+<input id="okoz_6" type="hidden" value=""/>
+<span class="form-control" id="name_okoz_6"></span>
+<button class="lx_stm_bn_clear" onclick="lx_stm.lx_stm_clear_all(event,'okoz_6')" tabindex="-1" title="Tozalash" type="button">×</button>
+<span class="lx_stm_bn_arrow"><b role="presentation"></b></span>
+</div>
+<div class="lx_stm_dd" id="lx_stm_dd_okoz_6">
+<input class="lx_stm_search" id="lx_stm_search_okoz_6" onkeyup="lx_stm.lx_stm_search(this.value, 'okoz_6')" placeholder="Izlash" type="text"/>
+<input id="lx_stm_url_okoz_6" type="hidden" value="/uz/ajax_methods_url?action=GetOkozTree&amp;ucId=okoz_6"/>
+<div class="lx_stm_not_found">No results found</div>
+<div class="lx_stm_options" id="lx_stm_options_okoz_6">Loading...</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-12">
+<div class="form-group">
+<label>Hujjatning yaxlitligi</label>
+
+</div>
+</div>
+</div>
+</div>
+<div class="col-12">
+<div class="d-flex align-items-center justify-content-center mb-2">
+<button class="btn btn-light mr-3 pt-2 pb-2" onclick="clearSearchForm(6);return false;">Izlashni tozalash</button>
+<button class="btn btn-primary pt-2 pb-2 pl-sm-4 pr-sm-4" onclick="goSearch(6);return false;">Izlash</button>
+</div>
+</div>
+</div>
+</form>
+</div>
+</div>
+</div>
+
+
+
+
+
+</div>
+</div>
+<div class="container mb-3">
+
+<div class="lx_ad_frame" style="width: 1640px; aspect-ratio: 1640 / 120;">
+<ins data-revive-id="78e68e5f1d0b927002f03e3ccab613df" data-revive-zoneid="2"></ins>
+</div>
+</div>
+<div class="container">
+<form action="./nat?lang=4&amp;fform_id=3964" id="Form1" method="post">
+<input id="__VIEWSTATE" name="__VIEWSTATE" type="hidden" value="i0KU6MIDEmRTlntOTCgGKI4rkrsIqui8OAVVSnRon95yrUMZ//UAdvATGvchR8TcvGuTdsdQF96ub2b0dgBmPvJmspaz/35FHXEEQNMMyds39+du9BK2Y7lSl7OoCQ7y6x5RcsPZkxcyA0ZV3hJDvw+Z4x8OAoqFHqicHQ3TeznhRVtbDnKL7VtPX4H2S8Ul0s2tsGm+kMr26DKEXDHfngboUoWyKeRMiMQtW/mGc6mYZgjDSVw6elVtnvLs8DeYmTVOrlmFzpEAh197dwLVsIJkoh38DW+iqAGIvlGQk875nX+BrOzBjlVf5CuGiUYH7DMt5BfJq7C4Thm4/zF8Kdlc0e22+F+9swgxyBvi1ITx37+ijjF9FDkIfbjUCD15cTkyfs9s4YGj8YiMYyyu/zRKTltEpk0vTouZ8GSwRhs="/>
+<input id="__VIEWSTATEGENERATOR" name="__VIEWSTATEGENERATOR" type="hidden" value="4CEDEDF5"/>
+<div class="refindHeader d-none d-sm-block">
+<h4 class="refindHeader__title d-none d-sm-block">Natijalarni aniqlashtirish:</h4>
+<h4 class="refindHeader__title-mobile text-center d-sm-none">Filtrlash</h4>
+<div class="form">
+<div class="form-row">
+<div class="col-lg-2 col-md-3 mb-2 col-sm-12">
+<div class="refindHeader__link">
+<label class="d-sm-none">Yillar bo‘yicha</label>
+
+</div>
+</div>
+<div class="col-lg-2 col-md-3 mb-2 col-sm-12">
+<div class="refindHeader__link">
+<label class="d-sm-none">Oylar bo‘yicha</label>
+
+</div>
+</div>
+<div class="col-lg-4 col-md-3 mb-2 col-sm-12">
+<div class="refindHeader__link">
+<label class="d-sm-none">Organ bo‘yicha</label>
+
+</div>
+</div>
+<div class="col-lg-4 col-md-3 mb-2 col-sm-12">
+<div class="refindHeader__link">
+<label class="d-sm-none">Shakli bo‘yichaм</label>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="refind__result-export">
+<div class="container">
+<div class="row d-flex align-items-center justify-content-between flex-column flex-md-row">
+<div class="refind__result-export__title-mobile mb-3 d-sm-none">
+<a href="#">Bosh sahifa</a>
+<b>&gt;</b>
+<a href="#">Izlash natijalari</a>
+</div>
+<div class="refind__result-export__title_search-mobile mb-3 d-sm-none">
+<h4>Izlash</h4>
+</div>
+<div class="refind__result-export__title mb-3">
+                    28 hujjat topildi
+                </div>
+<div class="refind__result-export__item-mobile d-sm-none w-100">
+<a class="btn refind__result-export__btn-mobile w-100 mb-3" data-target="#filter" data-toggle="modal" href="#"><i class="fas fa-filter mr-3"></i>Filtrlash</a>
+</div>
+<div class="modal fade refind__result-export__filterMobile" id="filter" role="dialog">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close modal__close-btn" data-dismiss="modal" type="button"><i class="fas fa-arrow-left text-black"></i></button>
+</div>
+<div class="modal-body">
+<div class="refindHeader">
+<h4 class="refindHeader__title d-none d-sm-block">Natijalarni aniqlashtirish:</h4>
+<h4 class="refindHeader__title-mobile text-center d-sm-none">Filtrlash</h4>
+<div class="form">
+<div class="form-row">
+<div class="col-lg-2 col-md-3 mb-2 col-sm-12">
+<div class="refindHeader__link">
+<label class="d-sm-none">Yillar bo‘yicha</label>
+
+</div>
+</div>
+<div class="col-lg-2 col-md-3 mb-2 col-sm-12">
+<div class="refindHeader__link">
+<label class="d-sm-none">Oylar bo‘yicha</label>
+
+</div>
+</div>
+<div class="col-lg-4 col-md-3 mb-2 col-sm-12">
+<div class="refindHeader__link">
+<label class="d-sm-none">Organ bo‘yicha</label>
+
+</div>
+</div>
+<div class="col-lg-4 col-md-3 mb-2 col-sm-12">
+<div class="refindHeader__link">
+<label class="d-sm-none">Shakli bo‘yicha</label>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="modal-footer">
+<button class="btn btn-o" onclick="clear_filter_result_mobile()" type="reset">Izlashni tozalash</button>
+<button class="btn btn-p ml-3" onclick="filter_result_mobile()" type="button">Qo'llash</button>
+</div>
+</div>
+</div>
+</div>
+<div class="refind__result-export__item w-100 w-sm-auto">
+<a class="btn refind__result-export__btn d-block w-100 w-sm-auto d-sm-inline-block" href="javascript:__doPostBack('ucFoundActsControl$ctl00','')">
+<i class="far fa-file mr-3"></i>Ro‘yxatni Word ga eksport qilish</a>
+</div>
+</div>
+</div>
+</div>
+<div class="refind__table">
+<div class="dd-table__main">
+<table style="width: 100%">
+<tr class="dd-table__main-item">
+<td><span class="dd-table__main-item_number">21</span></td>
+<td>
+<span class="lx_act_state">
+<i class="fa fa-check-circle status_code_y"></i>
+</span>
+<div class="dd-table__main-left-desc">
+<a class="lx_link" href="/uz/docs/-180552" target="_blank">Oʻzbekiston Respublikasining Fuqarolik kodeksi (ikkinchi qism)</a>
+</div>
+<div class="dd-table__main-extra">
+<div><span class="badge badge-pill badge-nine">Oʻzbekiston Respublikasining Fuqarolik kodeksi</span></div>
+<div style="padding-top: 8px"><a class="lx_link lx_act_passport" href="/uz/doc-passport/-180552" target="_blank">Qo‘shimcha ma’lumotlar</a></div>
+<div style="padding-top: 8px"></div>
+<div style="padding-top: 8px"><a class="lx_link" href="/uz/docs/-180552?type=doc" target="_blank" title="MS Word ga saqlash"></a></div>
+</div>
+</td>
+</tr>
+<tr class="dd-table__main-item">
+<td><span class="dd-table__main-item_number">22</span></td>
+<td>
+<span class="lx_act_state">
+<i class="fa fa-check-circle status_code_y"></i>
+</span>
+<div class="dd-table__main-left-desc">
+<a class="lx_link" href="/uz/docs/-111189" target="_blank">Oʻzbekiston Respublikasining Fuqarolik kodeksi (birinchi qism)</a>
+</div>
+<div class="dd-table__main-extra">
+<div><span class="badge badge-pill badge-nine">Oʻzbekiston Respublikasining Fuqarolik kodeksi</span></div>
+<div style="padding-top: 8px"></div>
+<div style="padding-top: 8px"></div>
+<div style="padding-top: 8px"><a class="lx_link" href="/uz/docs/-111189?type=doc" target="_blank" title="MS Word ga saqlash"></a></div>
+</div>
+</td>
+</tr>
+<tr class="dd-table__main-item">
+<td><span class="dd-table__main-item_number">23</span></td>
+<td>
+<span class="lx_act_state">
+<i class="fa fa-times-circle status_code_r"></i>
+</span>
+<div class="dd-table__main-left-desc">
+<a class="lx_link" href="/uz/docs/-142859" target="_blank">Oʻzbekiston Respublikasining Mehnat kodeksi</a>
+</div>
+<div class="dd-table__main-extra">
+<div></div>
+<div style="padding-top: 8px"></div>
+<div style="padding-top: 8px"></div>
+<div style="padding-top: 8px"><a class="lx_link" href="/uz/docs/-142859?type=doc" target="_blank" title="MS Word ga saqlash"></a></div>
+</div>
+</td>
+</tr>
+<tr class="dd-table__main-item">
+<td><span class="dd-table__main-item_number">24</span></td>
+<td>
+<span class="lx_act_state">
+<i class="fa fa-check-circle status_code_y"></i>
+</span>
+<div class="dd-table__main-left-desc">
+<a class="lx_link" href="/uz/docs/-111460" target="_blank">Oʻzbekiston Respublikasining Jinoyat-protsessual kodeksi</a>
+</div>
+<div class="dd-table__main-extra">
+<div><span class="badge badge-pill badge-nine">Oʻzbekiston Respublikasining Jinoyat-protsessual kodeksi</span></div>
+<div style="padding-top: 8px"></div>
+<div style="padding-top: 8px"></div>
+<div style="padding-top: 8px"><a class="lx_link" href="/uz/docs/-111460?type=doc" target="_blank" title="MS Word ga saqlash"></a></div>
+</div>
+</td>
+</tr>
+<tr class="dd-table__main-item">
+<td><span class="dd-table__main-item_number">25</span></td>
+<td>
+<span class="lx_act_state">
+<i class="fa fa-check-circle status_code_y"></i>
+</span>
+<div class="dd-table__main-left-desc">
+<a class="lx_link" href="/uz/docs/-111453" target="_blank">Oʻzbekiston Respublikasining Jinoyat kodeksi</a>
+</div>
+<div class="dd-table__main-extra">
+<div><span class="badge badge-pill badge-nine">Oʻzbekiston Respublikasining Jinoyat kodeksi</span></div>
+<div style="padding-top: 8px"></div>
+<div style="padding-top: 8px"></div>
+<div style="padding-top: 8px"><a class="lx_link" href="/uz/docs/-111453?type=doc" target="_blank" title="MS Word ga saqlash"></a></div>
+</div>
+</td>
+</tr>
+<tr class="dd-table__main-item">
+<td><span class="dd-table__main-item_number">26</span></td>
+<td>
+<span class="lx_act_state">
+<i class="fa fa-check-circle status_code_y"></i>
+</span>
+<div class="dd-table__main-left-desc">
+<a class="lx_link" href="/uz/docs/-97664" target="_blank">Oʻzbekiston Respublikasining Maʼmuriy javobgarlik toʻgʻrisidagi kodeksi</a>
+</div>
+<div class="dd-table__main-extra">
+<div><span class="badge badge-pill badge-nine">Oʻzbekiston Respublikasining Maʼmuriy javobgarlik toʻgʻrisidagi kodeksi</span></div>
+<div style="padding-top: 8px"></div>
+<div style="padding-top: 8px"></div>
+<div style="padding-top: 8px"><a class="lx_link" href="/uz/docs/-97664?type=doc" target="_blank" title="MS Word ga saqlash"></a></div>
+</div>
+</td>
+</tr>
+<tr class="dd-table__main-item">
+<td><span class="dd-table__main-item_number">27</span></td>
+<td>
+<span class="lx_act_state">
+<i class="fa fa-times-circle status_code_r"></i>
+</span>
+<div class="dd-table__main-left-desc">
+<a class="lx_link" href="/uz/docs/-195760" target="_blank">Oʻzbekiston Respublikasining Xoʻjalik protsessual kodeksi</a>
+</div>
+<div class="dd-table__main-extra">
+<div></div>
+<div style="padding-top: 8px"></div>
+<div style="padding-top: 8px"></div>
+<div style="padding-top: 8px"><a class="lx_link" href="/uz/docs/-195760?type=doc" target="_blank" title="MS Word ga saqlash"></a></div>
+</div>
+</td>
+</tr>
+<tr class="dd-table__main-item">
+<td><span class="dd-table__main-item_number">28</span></td>
+<td>
+<span class="lx_act_state">
+<i class="fa fa-check-circle status_code_y"></i>
+</span>
+<div class="dd-table__main-left-desc">
+<a class="lx_link" href="/uz/docs/-55594" target="_blank">Oʻzbekiston Respublikasining Havo kodeksi</a>
+</div>
+<div class="dd-table__main-extra">
+<div><span class="badge badge-pill badge-nine">Oʻzbekiston Respublikasining Havo kodeksi</span></div>
+<div style="padding-top: 8px"></div>
+<div style="padding-top: 8px"></div>
+<div style="padding-top: 8px"><a class="lx_link" href="/uz/docs/-55594?type=doc" target="_blank" title="MS Word ga saqlash"></a></div>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="pgn">
+<div class="item_pgn_phone1">
+<a href="javascript:__doPostBack('ucFoundActsControl$LinkButton3','')" id="ucFoundActsControl_LinkButton3"><i class="fas fa-chevron-left"></i></a>
+</div>
+<div class="item_pgn1">
+<a href="javascript:__doPostBack('ucFoundActsControl$lbFirst','')" id="ucFoundActsControl_lbFirst">Birinchi</a>
+</div>
+<div class="item_pgn2">
+<a href="javascript:__doPostBack('ucFoundActsControl$lbPrevious','')" id="ucFoundActsControl_lbPrevious">Orqaga</a>
+</div>
+<div class="item_pgn3">
+<table cellspacing="0" id="ucFoundActsControl_rptPaging">
+<tr>
+<td>
+<a class="btn btn_pgn_extend" href="javascript:__doPostBack('ucFoundActsControl$rptPaging$ctl00$lbPaging','')" id="ucFoundActsControl_rptPaging_lbPaging_0">1</a>
+</td><td>
+<a class="aspNetDisabled btn btn_pgn_extend" id="ucFoundActsControl_rptPaging_lbPaging_1">2</a>
+</td>
+</tr>
+</table>
+</div>
+<div class="item_pgn4">
+</div>
+<div class="item_pgn5">
+</div>
+<div class="item_pgn_phone2">
+<a><i class="fas fa-chevron-right"></i></a>
+</div>
+</div>
+</form>
+
+</div>
+<div class="container">
+<div class="secondary">
+<div class="secondary__content"></div>
+<aside class="secondary__sidebar"></aside>
+</div>
+</div>
+</main>
+<main class="main">
+<section class="slider_resource">
+<div class="container">
+<div class="slider_resource__title">Foydali resurslar</div>
+<div class="slider_resource__body">
+<a class="slider_resource__item" href="http://www.prezident.uz" target="_blank">
+<div class="slider_resource__img">
+<img src="/assets/img/gerb.png" style="max-width: 80px"/>
+</div>
+<div class="slider_resource__desc">O‘zbekiston Respublikasi Prezidenti</div>
+</a>
+<a class="slider_resource__item" href="http://www.parliament.gov.uz" target="_blank">
+<div class="slider_resource__img">
+<img src="/assets/img/oliy_majlis.png"/>
+</div>
+<div class="slider_resource__desc">O‘zbekiston Respublikasi Oliy Majlisi Qonunchilik palatasi</div>
+</a>
+<a class="slider_resource__item" href="http://www.gov.uz/ru/" target="_blank">
+<div class="slider_resource__img">
+<img src="/img/lx_bt_a3.png"/>
+</div>
+<div class="slider_resource__desc">O‘zbekiston Respublikasi<br/>Hukumat portali</div>
+</a>
+<a class="slider_resource__item" href="http://www.senat.gov.uz" target="_blank">
+<div class="slider_resource__img">
+<img src="/img/lx_bt_a2.png"/>
+</div>
+<div class="slider_resource__desc">O‘zbekiston Respublikasi<br/>Oliy Majlisining Senati</div>
+</a>
+<a class="slider_resource__item" href="http://www.minjust.uz" target="_blank">
+<div class="slider_resource__img">
+<img src="/assets/img/gerb_ministerstva.png"/>
+</div>
+<div class="slider_resource__desc">O‘zbekiston Respublikasi<br/>Adliya vazirligi</div>
+</a>
+<a class="slider_resource__item" href="http://www.strategy.uz/" target="_blank">
+<div class="slider_resource__img">
+<img src="/assets/img/strategy.png"/>
+</div>
+<div class="slider_resource__desc">Taraqqiyot strategiyasi<br/>markazi</div>
+</a>
+</div>
+</div>
+</section>
+<div class="container">
+<div class="secondary">
+<div class="secondary__content"></div>
+<aside class="secondary__sidebar"></aside>
+</div>
+</div>
+</main>
+
+<div id="lx_alert" style="display: none;">
+<div class="lx_alert_content">
+<div class="lx_alert_body">
+<div id="lx_alert_message"></div>
+</div>
+<div class="lx_alert_footer">
+<button class="btn btn-primary" id="lx_alert_close" onclick="lxCloseAlert();" type="button">Yopish</button>
+</div>
+</div>
+</div>
+<span id="lx_btn_up" onclick="lx_btn_up_top()" title="">
+
+</span>
+</div>
+</body>
+</html>
+<html>
+
+
+</html>
