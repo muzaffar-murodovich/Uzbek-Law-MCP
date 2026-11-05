@@ -58,3 +58,14 @@ def sample_ids(client: LexClient) -> list[int]:
     """Constitution plus every code in force (Latin versions)."""
     codes = [row.lex_id for row in iter_listing(client, CODES_LISTING) if row.in_force]
     return [CONSTITUTION_ID, *codes]
+
+
+def load_parsed(ws: Workspace, lex_id: int) -> tuple[ParsedDocument, DocumentCard | None]:
+    payload = json.loads(ws.parsed_path(lex_id).read_text(encoding="utf-8"))
+    card = payload.get("card")
+    return ParsedDocument(**payload["document"]), DocumentCard(**card) if card else None
+
+
+def parsed_ids(ws: Workspace) -> list[int]:
+    folder = ws.data_dir / "parsed"
+    return sorted(int(p.stem) for p in folder.glob("*.json")) if folder.is_dir() else []

@@ -1,0 +1,271 @@
+"""Write parsed documents into PostgreSQL: documents → sections → chunks (+ FTS, embeddings)."""
+
+import hashlib
+import json
+import logging
+import re
+from dataclasses import dataclass, field
+
+import numpy as np
+import psycopg
+from psycopg.types.json import Jsonb
+
+from qonunshunos.index.embed import Embed
+from qonunshunos.parser.card import DocumentCard
+from qonunshunos.parser.models import Heading, ParsedDocument, Unit
+from qonunshunos.text.chunk import Chunk, chunk_unit, unit_text
+from qonunshunos.text.fts import to_fts_text
+from qonunshunos.text.normalize import fold
+
+log = logging.getLogger(__name__)
+
+# card1 "form" values (always Russian) → Uzbek name used in chunk headings.
+FORM_UZ = {
+    "Конституция": "Konstitutsiya",
+    "Кодекс": "Kodeks",
+    "Закон": "Qonun",
+    "Указ": "Prezident farmoni",
+    "Постановление": "Qaror",
+    "Распоряжение": "Farmoyish",
+    "Приказ": "Buyruq",
+    "Положение": "Nizom",
+}
+
+_COUNTRY_PREFIX_RE = re.compile(r"^Oʻzbekiston Respublikasining\s+")
+
+
+def short_title(document: ParsedDocument, card: DocumentCard | None) -> str:
+    """Name used inside chunk headings: "Mehnat kodeksi", "Prezident farmoni PF-60: ..."."""
+    title = _COUNTRY_PREFIX_RE.sub("", document.title).strip()
+    lowered = title.lower()
+    if "kodeks" in lowered or "konstitutsiya" in lowered:
+        return title[:1].upper() + title[1:]
+    form = FORM_UZ.get(card.form or "", "") if card else ""
+    label = " ".join(p for p in (form, document.number) if p)
+    title = title if len(title) <= 160 else title[:157].rstrip() + "…"
+    return f"{label}: {title}" if label else title
+
+
+def content_hash(document: ParsedDocument, card: DocumentCard | None) -> str:
+    payload = {
+        "document": document.model_dump(mode="json"),
+        "card": card.model_dump(mode="json") if card else None,
+    }
+    raw = json.dumps(payload, ensure_ascii=False, sort_keys=True).encode("utf-8")
+    return hashlib.sha256(raw).hexdigest()
+
+
+@dataclass
+class SectionRow:
+    kind: str
+    number: str | None
+    title: str | None
+    path: list[str]
+    elem_id: int | None
+    text: str
+    level: int | None = None
+    extra: dict = field(default_factory=dict)
+    unit: Unit | None = None
+
+
+def build_sections(document: ParsedDocument) -> list[SectionRow]:
+    """Interleave headings and units in reading order.
+
+    Units carry the path of headings they live under; a heading is emitted when it first
+    appears in a unit's path (or differs from the previous unit's path at its level).
+    Heading metadata is looked up forward in ``document.headings`` by text.
+    """
+    rows: list[SectionRow] = []
+    headings = document.headings
+    cursor = 0
+    previous: list[str] = []
+
+    def find_heading(text: str) -> Heading | None:
+        nonlocal cursor
+        for i in range(cursor, len(headings)):
+            if headings[i].text == text:
+                cursor = i + 1
+                return headings[i]
+        return None
+
+    for unit in document.units:
+        common = 0
+        while common < min(len(previous), len(unit.path)) and previous[common] == unit.path[common]:
+            common += 1
+        for depth in range(common, len(unit.path)):
+            text = unit.path[depth]
+            heading = find_heading(text)
+            rows.append(
+                SectionRow(
+                    kind=heading.kind if heading else "sarlavha",
+                    number=heading.number if heading else None,
+                    title=heading.title if heading else text,
+                    path=unit.path[:depth],
+                    elem_id=heading.elem_id if heading else None,
+                    text=text,
+                    level=heading.level if heading else None,
+                )
+            )
+        previous = unit.path
+        extra = {}
+        if unit.okoz:
+            extra["okoz"] = unit.okoz
+        if unit.changes:
+            extra["changes"] = [c.model_dump(mode="json") for c in unit.changes]
+        if unit.comments:
+            extra["comments"] = [c.model_dump(mode="json") for c in unit.comments]
+        rows.append(
+            SectionRow(
+                kind=unit.kind,
+                number=unit.number,
+                title=unit.title,
+                path=unit.path,
+                elem_id=unit.elem_id,
+                text=unit_text(unit),
+                extra=extra,
+                unit=unit,
+            )
+        )
+    return rows
+
+
+def _date(value: str | None) -> str | None:
+    return value or None
+
+
+def stored_hash(conn: psycopg.Connection, lex_id: int) -> str | None:
+    row = conn.execute("SELECT content_hash FROM documents WHERE id = %s", (lex_id,)).fetchone()
+    return row[0] if row else None
+
+
+def index_document(
+    conn: psycopg.Connection,
+    document: ParsedDocument,
+    card: DocumentCard | None,
+    embedder: Embed,
+    *,
+    use_stem: bool = True,
+    force: bool = False,
+) -> int | None:
+    """(Re)write one document. Returns the number of chunks, or ``None`` if unchanged."""
+    digest = content_hash(document, card)
+    if not force and stored_hash(conn, document.lex_id) == digest:
+        return None
+
+    status = card.status if card else "unknown"
+    name = short_title(document, card)
+    searchable = status == "in_force" and document.content == "html"
+    sections = build_sections(document) if searchable else []
+    chunks: list[tuple[int, Chunk]] = []
+    for index, row in enumerate(sections):
+        if row.unit is not None:
+            chunks.extend((index, c) for c in chunk_unit(name, row.unit))
+    vectors = (
+        embedder.passages([c.passage for _, c in chunks])
+        if chunks
+        else np.zeros((0, 384), dtype=np.float32)
+    )
+
+    meta = {
+        "alternates": document.alternates,
+        "okoz": document.okoz,
+        "tsz": document.tsz,
+        "signature": document.signature,
+        "signed_place": document.signed_place,
+        "signed_date": document.signed_date,
+        "publication_origin": document.publication_origin,
+        "notes": document.notes,
+        "parser_version": document.parser_version,
+        "embed_model": getattr(embedder, "name", "unknown"),
+        "fts_stem": use_stem,
+    }
+    title_norm = fold(" ".join(p for p in (document.title, document.number or "") if p))
+
+    with conn.transaction():
+        conn.execute("DELETE FROM documents WHERE id = %s", (document.lex_id,))
+        conn.execute(
+            """
+            INSERT INTO documents (id, title, short_title, doc_type, number, adopted_at, status,
+                accepting_body, url, content, edition_date, last_change_date, content_hash,
+                card, meta, title_norm)
+            VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+            """,
+            (
+                document.lex_id,
+                document.title,
+                name,
+                card.form if card else None,
+                document.number,
+                _date(document.date),
+                status,
+                document.accepting_body,
+                document.url,
+                document.content,
+                _date(document.edition_date),
+                _date(document.last_change_date),
+                digest,
+                Jsonb(card.model_dump(mode="json")) if card else None,
+                Jsonb(meta),
+                title_norm,
+            ),
+        )
+        section_ids: list[int] = []
+        with conn.cursor() as cur:
+            for ord_, row in enumerate(sections):
+                cur.execute(
+                    """
+                    INSERT INTO sections (document_id, ord, kind, level, number, title, path,
+                        elem_id, text, extra)
+                    VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s) RETURNING id
+                    """,
+                    (
+                        document.lex_id,
+                        ord_,
+                        row.kind,
+                        row.level,
+                        row.number,
+                        row.title,
+                        row.path,
+                        row.elem_id,
+                        row.text,
+                        Jsonb(row.extra),
+                    ),
+                )
+                section_ids.append(cur.fetchone()[0])
+            cur.executemany(
+                """
+                INSERT INTO chunks (document_id, section_id, ord, heading, text, tsv, embedding)
+                VALUES (%s, %s, %s, %s, %s,
+                    setweight(to_tsvector('simple', %s), 'A')
+                    || setweight(to_tsvector('simple', %s), 'B'),
+                    %s::halfvec)
+                """,
+                [
+                    (
+                        document.lex_id,
+                        section_ids[index],
+                        ord_,
+                        chunk.heading,
+                        chunk.text,
+                        to_fts_text(chunk.heading, use_stem),
+                        to_fts_text(chunk.text, use_stem),
+                        vectors[ord_].tolist(),
+                    )
+                    for ord_, (index, chunk) in enumerate(chunks)
+                ],
+            )
+    log.info("indexed %s: %d sections, %d chunks", document.lex_id, len(sections), len(chunks))
+    return len(chunks)
+
+
+def rebuild_fts(conn: psycopg.Connection, use_stem: bool) -> int:
+    """Recompute ``chunks.tsv`` (e.g. after changing the stemmer) without re-embedding."""
+    rows = conn.execute("SELECT id, heading, text FROM chunks").fetchall()
+    with conn.transaction(), conn.cursor() as cur:
+        cur.executemany(
+            "UPDATE chunks SET tsv = setweight(to_tsvector('simple', %s), 'A')"
+            " || setweight(to_tsvector('simple', %s), 'B') WHERE id = %s",
+            [(to_fts_text(h, use_stem), to_fts_text(t, use_stem), i) for i, h, t in rows],
+        )
+        cur.execute("UPDATE documents SET meta = meta || %s", (Jsonb({"fts_stem": use_stem}),))
+    return len(rows)

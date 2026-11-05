@@ -10,7 +10,8 @@ from qonunshunos.crawler.client import LexClient
 from qonunshunos.text.normalize import normalize_text
 
 NEXT_PAGE_TARGET = "ucFoundActsControl$LinkButton1"
-CODES_LISTING = "/uz/search/nat?lang=4&fform_id=3964"
+FORM_LISTING = "/uz/search/nat?lang=4&fform_id="
+CODES_LISTING = f"{FORM_LISTING}3964"
 
 _DOC_HREF_RE = re.compile(r"/docs/(-?\d+)")
 _TOTAL_RE = re.compile(r"(\d[\d\s]*)\s+hujjat topildi")

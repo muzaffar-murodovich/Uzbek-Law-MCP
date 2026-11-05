@@ -10,9 +10,10 @@ log = logging.getLogger(__name__)
 
 
 def connect(dsn: str, *, vector: bool = True) -> psycopg.Connection:
+    """Autocommit connection: multi-statement writes use explicit ``conn.transaction()``."""
     if not dsn:
         raise ValueError("database DSN is empty: set QONUNSHUNOS_DSN (see .env.example)")
-    conn = psycopg.connect(dsn)
+    conn = psycopg.connect(dsn, autocommit=True)
     if vector:
         register_vector(conn)
     return conn
@@ -33,7 +34,6 @@ def migrate(dsn: str) -> list[str]:
             "CREATE TABLE IF NOT EXISTS schema_migrations "
             "(version text PRIMARY KEY, applied_at timestamptz NOT NULL DEFAULT now())"
         )
-        conn.commit()
         done = {row[0] for row in conn.execute("SELECT version FROM schema_migrations")}
         for version, sql in migration_files():
             if version in done:
