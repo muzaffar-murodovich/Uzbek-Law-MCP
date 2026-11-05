@@ -1,5 +1,6 @@
 """Hybrid search: full-text (FTS) and vector candidates merged with Reciprocal Rank Fusion."""
 
+import math
 from collections.abc import Sequence
 from dataclasses import dataclass, field
 from typing import Literal
@@ -7,7 +8,7 @@ from typing import Literal
 import psycopg
 
 from qonunshunos.index.embed import Embed
-from qonunshunos.text.fts import to_tsquery
+from qonunshunos.text.fts import terms
 
 Mode = Literal["hybrid", "fts", "vector"]
 
@@ -54,6 +55,24 @@ def _filters(statuses: Sequence[str], doc_types: Sequence[str] | None) -> tuple[
     return sql, params
 
 
+HEADING_BONUS = 0.5  # extra weight when a term occurs in the chunk heading
+COMMON_DF = 0.05  # terms in more than 5 % of chunks only score, they do not select
+
+
+def idf_weights(
+    conn: psycopg.Connection, words: Sequence[str]
+) -> tuple[dict[str, float], dict[str, float]]:
+    """BM25-style IDF and document share of each query term; unknown terms are dropped."""
+    total = conn.execute("SELECT count(*) FROM chunks").fetchone()[0]
+    rows = conn.execute(
+        "SELECT word, ndoc FROM fts_stats WHERE word = ANY(%s)", (list(words),)
+    ).fetchall()
+    df = dict(rows)
+    return {w: math.log((total - df[w] + 0.5) / (df[w] + 0.5) + 1) for w in words if df.get(w)}, {
+        w: df[w] / max(total, 1) for w in words if df.get(w)
+    }
+
+
 def fts_candidates(
     conn: psycopg.Connection,
     query: str,
@@ -63,20 +82,29 @@ def fts_candidates(
     doc_types: Sequence[str] | None = None,
     limit: int = CANDIDATES,
 ) -> list[int]:
-    tsquery = to_tsquery(query, use_stem)
-    if tsquery is None:
+    """Chunks ranked by the summed IDF of matching query terms (+ bonus for heading matches)."""
+    words = list(dict.fromkeys(terms(query, use_stem)))
+    weights, share = idf_weights(conn, words)
+    if not weights:
         return []
-    where, params = _filters(statuses, doc_types)
+    selective = [w for w in weights if share[w] <= COMMON_DF] or list(weights)
+    score_parts, params = [], []
+    for word, weight in weights.items():
+        score_parts.append(
+            "%s * ((c.tsv @@ to_tsquery('simple', %s))::int"
+            " + %s * (c.tsv @@ to_tsquery('simple', %s))::int)"
+        )
+        params += [weight, word, HEADING_BONUS, f"{word}:A"]
+    where, filter_params = _filters(statuses, doc_types)
     rows = conn.execute(
         f"""
-        SELECT c.id
-        FROM chunks c JOIN documents d ON d.id = c.document_id,
-             to_tsquery('simple', %s) q
-        WHERE c.tsv @@ q {where}
-        ORDER BY ts_rank_cd(c.tsv, q, 1) DESC, c.id
+        SELECT c.id, {" + ".join(score_parts)} AS score
+        FROM chunks c JOIN documents d ON d.id = c.document_id
+        WHERE c.tsv @@ to_tsquery('simple', %s) {where}
+        ORDER BY score DESC, length(c.text), c.id
         LIMIT %s
         """,
-        [tsquery, *params, limit],
+        [*params, " | ".join(selective), *filter_params, limit],
     ).fetchall()
     return [r[0] for r in rows]
 

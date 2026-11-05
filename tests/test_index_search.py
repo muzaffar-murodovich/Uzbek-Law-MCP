@@ -4,7 +4,12 @@ import numpy as np
 import pytest
 
 from qonunshunos.db import connect
-from qonunshunos.index.writer import build_sections, index_document, short_title
+from qonunshunos.index.writer import (
+    build_sections,
+    index_document,
+    refresh_fts_stats,
+    short_title,
+)
 from qonunshunos.parser.card import parse_card
 from qonunshunos.parser.document import parse_document
 from qonunshunos.search.hybrid import rrf, search
@@ -70,6 +75,7 @@ def test_index_and_search(db_dsn, fixture_html):
         count = index_document(conn, doc, card, embedder)
         assert count and count >= len(doc.units) - 5
         assert index_document(conn, doc, card, embedder) is None  # unchanged → skipped
+        assert refresh_fts_stats(conn) > 100
 
         unit = next(u for u in doc.units if u.kind == "modda" and u.title)
         for mode in ("fts", "vector", "hybrid"):

@@ -268,4 +268,16 @@ def rebuild_fts(conn: psycopg.Connection, use_stem: bool) -> int:
             [(to_fts_text(h, use_stem), to_fts_text(t, use_stem), i) for i, h, t in rows],
         )
         cur.execute("UPDATE documents SET meta = meta || %s", (Jsonb({"fts_stem": use_stem}),))
+    refresh_fts_stats(conn)
     return len(rows)
+
+
+def refresh_fts_stats(conn: psycopg.Connection) -> int:
+    """Recount document frequencies of FTS terms (``ts_stat`` over all chunks)."""
+    with conn.transaction():
+        conn.execute("TRUNCATE fts_stats")
+        conn.execute(
+            "INSERT INTO fts_stats (word, ndoc)"
+            " SELECT word, ndoc FROM ts_stat('SELECT tsv FROM chunks')"
+        )
+    return conn.execute("SELECT count(*) FROM fts_stats").fetchone()[0]

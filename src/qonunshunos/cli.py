@@ -142,7 +142,7 @@ def _crawl(client: LexClient, ws: Workspace, ids: list[int], force: bool) -> int
 
 def _index(args: argparse.Namespace, ws: Workspace) -> int:
     from qonunshunos.index.embed import Embedder
-    from qonunshunos.index.writer import index_document, rebuild_fts
+    from qonunshunos.index.writer import index_document, rebuild_fts, refresh_fts_stats
 
     settings = Settings.from_env(args.data_dir)
     with connect(settings.dsn) as conn:
@@ -161,6 +161,8 @@ def _index(args: argparse.Namespace, ws: Workspace) -> int:
             state = "unchanged" if count is None else f"{count} chunks"
             print(f"{lex_id:>9}  {state:<12} {document.title[:70]}", flush=True)
             total += count or 0
+        if total:
+            refresh_fts_stats(conn)
         print(f"{len(ids)} documents, {total} new chunks")
     return 0
 
