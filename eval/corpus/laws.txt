@@ -1,0 +1,67 @@
+# Laws added to the stage 2 evaluation corpus (lex ids, Latin). Selected 2026-11-05 from
+# data/listings/form-3968.json: base (non-amending) laws in force on topics people ask about.
+-7886679 Davlat ijtimoiy sugʻurtasi toʻgʻrisida
+-7389404 Banklardagi omonatlarni himoya qilish kafolatlari toʻgʻrisida
+-7219502 Bolalarni zoʻravonlikning barcha shakllaridan himoya qilish toʻgʻrisida
+-6786401 Pedagogning maqomi toʻgʻrisida
+-6764454 Yoʻl harakati toʻgʻrisida
+-6502543 Davlat hisobidan yuridik yordam koʻrsatish toʻgʻrisida
+-6472100 Alkogol va tamaki mahsulotlarining tarqatilishini hamda isteʼmol qilinishini cheklash toʻgʻrisida
+-6297080 Koʻchmas mulkka boʻlgan huquqlarni davlat roʻyxatidan oʻtkazish toʻgʻrisida
+-6213382 Elektron tijorat toʻgʻrisida
+-6145972 Davlat fuqarolik xizmati toʻgʻrisida
+-6087433 Yer uchastkalarini kompensatsiya evaziga jamoat ehtiyojlari uchun olib qoʻyish tartib-taomillari toʻgʻrisida
+-6052631 Reklama toʻgʻrisida
+-5972411 Nobank kredit tashkilotlari va mikromoliyalashtirish faoliyati toʻgʻrisida
+-5957612 Toʻlovga qobiliyatsizlik toʻgʻrisida
+-5534923 Sudlar toʻgʻrisida
+-5511879 Litsenziyalash, ruxsat berish va xabardor qilish tartib-taomillari toʻgʻrisida
+-5491534 Vijdon erkinligi va diniy tashkilotlar toʻgʻrisida
+-5443899 Chet el fuqarolarining va fuqaroligi boʻlmagan shaxslarning huquqiy holati toʻgʻrisida
+-5382974 Davlat xaridlari toʻgʻrisida
+-5351631 Dehqon xoʻjaligi toʻgʻrisida
+-5351489 Tomorqa xoʻjaligi toʻgʻrisida
+-5055690 Aholi bandligi toʻgʻrisida
+-5049511 Nogironligi boʻlgan shaxslarning huquqlari toʻgʻrisida
+-5013007 Taʼlim toʻgʻrisida
+-4761984 Oʻzbekiston Respublikasining fuqaroligi toʻgʻrisida
+-4680944 Davlat boji toʻgʻrisida
+-4646908 Maktabgacha taʼlim va tarbiya toʻgʻrisida
+-4631281 Kasaba uyushmalari toʻgʻrisida
+-4586282 Koʻp kvartirali uylarni boshqarish toʻgʻrisida
+-4494709 Xotin-qizlarni tazyiq va zoʻravonlikdan himoya qilish toʻgʻrisida
+-4494849 Xotin-qizlar va erkaklar uchun teng huquq hamda imkoniyatlar kafolatlari toʻgʻrisida
+-4396419 Shaxsga doir maʼlumotlar toʻgʻrisida
+-4445288 Qurol toʻgʻrisida
+-4428097 Turizm toʻgʻrisida
+-3805227 Mediatsiya toʻgʻrisida
+-3492199 Maʼmuriy tartib-taomillar toʻgʻrisida
+-3088008 Korrupsiyaga qarshi kurashish toʻgʻrisida
+-3027843 Ichki ishlar organlari toʻgʻrisida
+-2307826 Vasiylik va homiylik toʻgʻrisida
+-2055680 Xususiy mulkni himoya qilish va mulkdorlar huquqlarining kafolatlari toʻgʻrisida
+-2004956 Oilaviy tadbirkorlik toʻgʻrisida
+-1721063 Dafn etish va dafn ishi toʻgʻrisida
+-1342474 Transport vositalari egalarining fuqarolik javobgarligini majburiy sugʻurta qilish toʻgʻrisida
+-1390913 Ishlab chiqarishdagi baxtsiz hodisalar va kasb kasalliklaridan majburiy davlat ijtimoiy sugʻurtasi toʻgʻrisida
+-1297315 Bola huquqlarining kafolatlari toʻgʻrisida
+-1072079 Hakamlik sudlari toʻgʻrisida
+-1063359 Ipoteka toʻgʻrisida
+-1022944 Mualliflik huquqi va turdosh huquqlar toʻgʻrisida
+-1004687 Isteʼmol krediti toʻgʻrisida
+-390573 Fuqarolarning jamgʻarib boriladigan pensiya taʼminoti toʻgʻrisida
+-78717 Umumiy harbiy majburiyat va harbiy xizmat toʻgʻrisida
+-26477 Sud hujjatlari va boshqa organlar hujjatlarini ijro etish toʻgʻrisida
+-54503 Advokatura toʻgʻrisida
+-54458 Notariat toʻgʻrisida
+-26013 Fuqarolar sogʻligʻini saqlash toʻgʻrisida
+-4704 Isteʼmolchilarning huquqlarini himoya qilish toʻgʻrisida
+-112314 Fuqarolarning davlat pensiya taʼminoti toʻgʻrisida
+-112170 Mahalliy davlat hokimiyati toʻgʻrisida
+-98430 Davlat uy-joy fondini xususiylashtirish toʻgʻrisida
+-1319 Axborot olish kafolatlari va erkinligi toʻgʻrisida
+-22964 Avtomobil transporti toʻgʻrisida
+-8354256 Davlat organining yoki uning mansabdor shaxsining qonunga xilof qarori ... zararning oʻrnini qoplash
+-8383786 Rieltorlik faoliyati toʻgʻrisida
+-2387357 Huquqbuzarliklar profilaktikasi toʻgʻrisida
+-1685726 Voyaga yetmaganlar oʻrtasida nazoratsizlik va huquqbuzarliklarning profilaktikasi toʻgʻrisida

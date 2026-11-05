@@ -48,7 +48,10 @@ _APPENDIX_RE = re.compile(r"(?:(\w+ga)\s+)?(\d+)\s*-\s*ilova\b", re.IGNORECASE)
 _MAIN_ACT_OWNERS = ("qaror", "farmon", "farmoyish", "qonun", "buyrugʻ", "kodeks")
 
 _SKIP = {"NEW_EDITION", "OFFICIAL_SOUR_TEXT"}  # the latter: link to a PDF
-_HEADINGS = {"TEXT_HEADER_DEFAULT", "TEXT_BOLD_CENTER", "TEXT_CENTER"}
+_HEADINGS = {"TEXT_HEADER_DEFAULT", "TEXT_BOLD_CENTER", "TEXT_CENTER", "TEXT_HEADER_AFTER_SRC"}
+# Adoption stamps of laws ("Qonunchilik palatasi tomonidan ... qabul qilingan").
+_NOTES = {"GRIF_PARLAMENT", "TEXT_RIGHT"}
+_QUOTES = "“”\"«„'"
 _CONTENT = {"ACT_TEXT", "FOOTNOTE"}
 
 # (regex on folded heading text, level, kind)
@@ -185,7 +188,7 @@ def _handle_block(state: _State, cls: str, block: Tag, no_select: bool) -> None:
             state.pending_okoz.extend(codes)
         return
 
-    if cls == "COMMENT":
+    if cls in ("COMMENT", "EXPLANATION"):  # editorial notes, not normative text
         if str(raw_id or "").startswith("edi") or text.startswith("Oldingi tahrirga"):
             return
         comment = Comment(elem_id=elem_id, text=text, links=links_of(inner))
@@ -253,6 +256,11 @@ def _handle_block(state: _State, cls: str, block: Tag, no_select: bool) -> None:
             )
         return
 
+    if cls in _NOTES:
+        if text:
+            doc.notes.append(text)
+        return
+
     if cls in _HEADINGS:
         if not text:
             return
@@ -271,6 +279,10 @@ def _handle_block(state: _State, cls: str, block: Tag, no_select: bool) -> None:
 
     if cls == "CLAUSE_DEFAULT":
         if not text:
+            return
+        if text[0] in _QUOTES and state.unit is not None:
+            # An article quoted inside an amending provision ("“67²-modda. ...”") is text.
+            state.unit.paragraphs.append(Paragraph(elem_id=elem_id, text=text))
             return
         m = _ARTICLE_RE.match(text)
         if m:

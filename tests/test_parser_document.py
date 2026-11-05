@@ -247,3 +247,17 @@ def test_pdf_only(fixture_html):
 def test_page_without_text_raises():
     with pytest.raises(ParseError):
         parse_document("<html><title>x</title></html>", -1)
+
+
+def test_law_parliament_stamp_and_quoted_article(fixture_html):
+    doc = parse_document(fixture_html("doc_law_omonatlar.html"), -7389404)
+    assert doc.warnings == []
+    assert doc.notes == [
+        "Qonunchilik palatasi tomonidan 2024-yil 18-oktabrda qabul qilingan "
+        "Senat tomonidan 2025-yil 24-yanvarda maʼqullangan"
+    ]
+    last = doc.units[-1]
+    assert last.number == "47"
+    # an article quoted inside an amending provision stays text of article 47
+    assert any(p.text.startswith("“67²-modda.") for p in last.paragraphs)
+    assert "67²" not in [u.number for u in doc.units]

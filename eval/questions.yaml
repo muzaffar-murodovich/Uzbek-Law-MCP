@@ -8,319 +8,396 @@
   question: Ish beruvchi meni sababsiz ishdan boʻshatishi mumkinmi?
   expected: [{document: -6257288, article: "161"}, {document: -6257288, article: "163"}]
   tags: [mehnat, sozlashuv]
+  alt: ["ish beruvchi tashabbusi bilan mehnat shartnomasini bekor qilish asoslari"]
 - id: mk-02
   question: Yillik taʼtil necha kun boʻladi?
   expected: [{document: -6257288, article: "217"}, {document: -6257288, article: "216"}]
   tags: [mehnat, sozlashuv]
+  alt: ["har yilgi asosiy mehnat taʼtilining eng kam muddati kalendar kunlarda"]
 - id: mk-03
   question: Sinov muddati eng koʻpi bilan qancha boʻlishi mumkin?
   expected: [{document: -6257288, article: "130"}]
   tags: [mehnat, sozlashuv]
+  alt: ["ishga qabul qilishda dastlabki sinov muddati"]
 - id: mk-04
   question: Oʻz xohishim bilan ishdan ketmoqchiman, necha kun oldin ariza berishim kerak?
   expected: [{document: -6257288, article: "160"}]
   tags: [mehnat, sozlashuv]
+  alt: ["xodimning tashabbusi bilan mehnat shartnomasini bekor qilish, ogohlantirish muddati"]
 - id: mk-05
   question: Ishdan boʻshatilganda qanday nafaqa toʻlanadi?
   expected: [{document: -6257288, article: "173"}]
   tags: [mehnat, sozlashuv]
+  alt: ["mehnat shartnomasi bekor qilinganda ishdan boʻshatish nafaqasi miqdori"]
 - id: mk-06
   question: Haftasiga necha soat ishlash normal hisoblanadi?
   expected: [{document: -6257288, article: "182"}]
   tags: [mehnat, sozlashuv]
+  alt: ["ish vaqtining normal davomiyligi haftasiga soat"]
 - id: mk-07
   question: Ish vaqtidan tashqari ishlash uchun qancha haq toʻlanadi va necha soatgacha ruxsat?
   expected: [{document: -6257288, article: "189"}, {document: -6257288, article: "190"}]
   tags: [mehnat, sozlashuv]
+  alt: ["ish vaqtidan tashqari ishga haq toʻlash va uning eng koʻp davomiyligi"]
 - id: mk-08
   question: Homiladorlik va tugʻish taʼtili necha kun beriladi?
   expected: [{document: -6257288, article: "404"}]
   tags: [mehnat, rasmiy]
+  alt: ["homiladorlik va tugʻish taʼtilining davomiyligi"]
 - id: mk-09
   question: Bola parvarishi boʻyicha dekret taʼtili necha yoshgacha?
   expected: [{document: -6257288, article: "405"}]
   tags: [mehnat, sozlashuv]
+  alt: ["bolani parvarishlash taʼtili muddati"]
 - id: mk-10
   question: Ish haqi oyiga necha marta toʻlanishi kerak?
   expected: [{document: -6257288, article: "253"}]
   tags: [mehnat, sozlashuv]
+  alt: ["ish haqini toʻlash muddatlari va davriyligi"]
 - id: mk-11
   question: ish haqimdan qancha foizini ushlab qolishlari mumkin
   expected: [{document: -6257288, article: "270"}, {document: -6257288, article: "269"}]
   tags: [mehnat, xatoli]
+  alt: ["ish haqidan ushlab qolish miqdorining chegarasi"]
 - id: mk-12
   question: Ish beruvchi ish haqini kechiktirsa javobgarligi qanday?
   expected: [{document: -6257288, article: "333"}]
   tags: [mehnat, sozlashuv]
+  alt: ["ish haqini toʻlashni kechiktirganlik uchun ish beruvchining javobgarligi"]
 - id: mk-13
   question: Ishdan boʻshatishdan oldin ish beruvchi necha kun oldin ogohlantirishi shart?
   expected: [{document: -6257288, article: "165"}]
   tags: [mehnat, sozlashuv]
+  alt: ["ish beruvchi tashabbusi bilan bekor qilishda xodimni oldindan ogohlantirish muddati"]
 - id: mk-14
   question: Homilador ayolni ishdan boʻshatish mumkinmi?
   expected: [{document: -6257288, article: "163"}, {document: -6257288, article: "392"}]
   tags: [mehnat, sozlashuv]
+  alt: ["homilador ayollar bilan mehnat shartnomasini bekor qilishni taqiqlash"]
 - id: mk-15
   question: Taʼtil oʻrniga pul olsa boʻladimi?
   expected: [{document: -6257288, article: "234"}]
   tags: [mehnat, sozlashuv]
+  alt: ["foydalanilmagan mehnat taʼtili uchun pulli kompensatsiya"]
 - id: mk-16
   question: Oʻz hisobimdan taʼtil olish huquqim bormi?
   expected: [{document: -6257288, article: "241"}, {document: -6257288, article: "242"}]
   tags: [mehnat, sozlashuv]
+  alt: ["ish haqi saqlanmaydigan taʼtil berish"]
 - id: mk-17
   question: Xizmat safari xarajatlari qoplanadimi?
   expected: [{document: -6257288, article: "287"}]
   tags: [mehnat, sozlashuv]
+  alt: ["xizmat safari bilan bogʻliq xarajatlarni kompensatsiya qilish"]
 - id: mk-18
   question: Dam olish kuni ishga chaqirishsa nima boʻladi?
   expected: [{document: -6257288, article: "210"}, {document: -6257288, article: "211"}, {document: -6257288, article: "209"}]
   tags: [mehnat, sozlashuv]
+  alt: ["xodimni dam olish va bayram kunlari ishga jalb etish tartibi"]
 - id: mk-19
   question: Ishga qabul qilishda mehnat daftarchasi talab qilinadimi?
   expected: [{document: -6257288, article: "125"}]
   tags: [mehnat, sozlashuv]
+  alt: ["mehnat daftarchasini yuritish va taqdim etish"]
 - id: mk-20
   question: Xodim ish beruvchiga zarar yetkazsa toʻliq qoplashi kerakmi?
   expected: [{document: -6257288, article: "337"}]
   tags: [mehnat, sozlashuv]
+  alt: ["xodimning ish beruvchiga yetkazilgan zarar uchun moddiy javobgarligi"]
 - id: mk-21
   question: Ishdan noqonuniy boʻshatilsam majburiy progul uchun pul olamanmi?
   expected: [{document: -6257288, article: "174"}]
   tags: [mehnat, sozlashuv]
+  alt: ["mehnat shartnomasi qonunga xilof bekor qilinganda majburiy progul uchun haq toʻlash va ishga tiklash"]
 - id: mk-22
   question: ishlab chiqarishda jarohat olsam ish beruvchi zararni toʻlaydimi
   expected: [{document: -6257288, article: "321"}]
   tags: [mehnat, xatoli]
+  alt: ["mehnatda mayib boʻlish natijasida yetkazilgan zararni ish beruvchi tomonidan qoplash"]
 
 # --- Oila kodeksi (-104720) ---
 - id: ok-01
   question: Nikoh yoshi necha yosh?
   expected: [{document: -104720, article: "15"}]
   tags: [oila, sozlashuv]
+  alt: ["nikoh yoshi erkak va ayol uchun"]
 - id: ok-02
   question: Aliment miqdori qancha boʻladi, bitta bola uchun?
   expected: [{document: -104720, article: "99"}]
   tags: [oila, sozlashuv]
+  alt: ["voyaga yetmagan bolalar uchun aliment miqdori daromadning ulushi"]
 - id: ok-03
   question: Ajrashganda er-xotinning mol-mulki qanday boʻlinadi?
   expected: [{document: -104720, article: "27"}, {document: -104720, article: "28"}]
   tags: [oila, sozlashuv]
+  alt: ["er-xotinning umumiy mol-mulkini boʻlish va ulushlarni aniqlash"]
 - id: ok-04
   question: FHDYO orqali ajrashish mumkinmi yoki faqat sud orqalimi?
   expected: [{document: -104720, article: "38"}, {document: -104720, article: "42"}, {document: -104720, article: "40"}]
   tags: [oila, sozlashuv]
+  alt: ["FHDYO organlarida nikohdan ajratish va sud tartibida ajratish"]
 - id: ok-05
   question: Xotinim homilador boʻlsa ajrashish uchun ariza bera olamanmi?
   expected: [{document: -104720, article: "39"}]
   tags: [oila, sozlashuv]
+  alt: ["xotin homiladorligida erning nikohdan ajratish toʻgʻrisida talab qoʻyishini taqiqlash"]
 - id: ok-06
   question: Nikoh shartnomasini qachon tuzish mumkin?
   expected: [{document: -104720, article: "30"}, {document: -104720, article: "29"}]
   tags: [oila, rasmiy]
+  alt: ["nikoh shartnomasini tuzish vaqti va shakli"]
 - id: ok-07
   question: Nikohdan oldin tibbiy koʻrikdan oʻtish majburiymi?
   expected: [{document: -104720, article: "17"}]
   tags: [oila, sozlashuv]
+  alt: ["nikohlanuvchilarni tibbiy koʻrikdan oʻtkazish"]
 - id: ok-08
   question: otalikni sud orqali aniqlash
   expected: [{document: -104720, article: "62"}]
   tags: [oila, xatoli]
+  alt: ["otalikni sud tartibida belgilash"]
 - id: ok-09
   question: Soxta nikoh deganda nima tushuniladi?
   expected: [{document: -104720, article: "54"}]
   tags: [oila, rasmiy]
+  alt: ["soxta nikohni haqiqiy emas deb topish"]
 
 # --- Fuqarolik kodeksi (-111189 birinchi qism, -180552 ikkinchi qism) ---
 - id: fk-01
   question: Daʼvo muddati umumiy holda necha yil?
   expected: [{document: -111189, article: "150"}]
   tags: [fuqarolik, rasmiy]
+  alt: ["umumiy daʼvo muddati"]
 - id: fk-02
   question: Necha yoshdan boshlab inson toʻliq muomalaga layoqatli boʻladi?
   expected: [{document: -111189, article: "22"}]
   tags: [fuqarolik, sozlashuv]
+  alt: ["fuqaroning toʻliq muomala layoqati vujudga kelish yoshi"]
 - id: fk-03
   question: 15 yoshli bola oʻzi bitim tuza oladimi?
   expected: [{document: -111189, article: "27"}]
   tags: [fuqarolik, sozlashuv]
+  alt: ["oʻn toʻrt yoshdan oʻn sakkiz yoshgacha voyaga yetmaganlarning bitim tuzish huquqi"]
 - id: fk-04
   question: Qarz berdim, tilxat bor, qaytarmayapti. Qarz shartnomasi qanday shaklda tuziladi?
   expected: [{document: -180552, article: "733"}, {document: -180552, article: "732"}]
   tags: [fuqarolik, sozlashuv]
+  alt: ["qarz shartnomasining yozma shakli va tilxat"]
 - id: fk-05
   question: Qarzni vaqtida qaytarmasa qanday oqibat boʻladi?
   expected: [{document: -180552, article: "736"}]
   tags: [fuqarolik, sozlashuv]
+  alt: ["qarz oluvchi qarzni oʻz vaqtida qaytarmaganda javobgarlik"]
 - id: fk-06
   question: Neustoyka nima?
   expected: [{document: -111189, article: "260"}]
   tags: [fuqarolik, rasmiy]
+  alt: ["neustoyka tushunchasi jarima penya"]
 - id: fk-07
   question: Hadya qilingan narsani qaytarib olish mumkinmi?
   expected: [{document: -180552, article: "507"}]
   tags: [fuqarolik, sozlashuv]
+  alt: ["hadyani bekor qilish asoslari"]
 - id: fk-08
   question: Ota-onadan qolgan merosni birinchi navbatda kimlar oladi?
   expected: [{document: -180552, article: "1135"}]
   tags: [fuqarolik, meros, sozlashuv]
+  alt: ["qonun boʻyicha birinchi navbatdagi merosxoʻrlar"]
 - id: fk-09
   question: Vasiyatnomada nomi boʻlmasa ham merosdan majburiy ulush oladiganlar kimlar?
   expected: [{document: -180552, article: "1142"}]
   tags: [fuqarolik, meros, sozlashuv]
+  alt: ["merosdan majburiy ulush olish huquqi"]
 - id: fk-10
   question: Vasiyatnoma notarius orqali tasdiqlanishi shartmi?
   expected: [{document: -180552, article: "1125"}, {document: -180552, article: "1124"}]
   tags: [fuqarolik, meros, sozlashuv]
+  alt: ["vasiyatnomaning notarial tasdiqlanishi va shakli"]
 - id: fk-11
   question: merosdan voz kechsa boladimi
   expected: [{document: -180552, article: "1147"}]
   tags: [fuqarolik, meros, xatoli]
+  alt: ["merosdan voz kechish huquqi"]
 - id: fk-12
   question: Kvartirani ijaraga berish shartnomasi yozma boʻlishi kerakmi?
   expected: [{document: -180552, article: "603"}]
   tags: [fuqarolik, uy-joy, sozlashuv]
+  alt: ["uy-joyni ijaraga berish shartnomasining shakli"]
 - id: fk-13
   question: Ijarachi muddatidan oldin chiqib ketmoqchi boʻlsa shartnoma qanday bekor qilinadi?
   expected: [{document: -180552, article: "552"}, {document: -180552, article: "551"}]
   tags: [fuqarolik, sozlashuv]
+  alt: ["ijara shartnomasini muddatidan oldin bekor qilish ijaraga oluvchi talabi bilan"]
 - id: fk-14
   question: Doʻkondan olgan tovarim sifatsiz chiqdi, kafolat muddati qanday hisoblanadi?
   expected: [{document: -180552, article: "404"}, {document: -180552, article: "403"}]
   tags: [fuqarolik, sozlashuv]
+  alt: ["tovarning kafolat muddati va sifat kafolati"]
 - id: fk-15
   question: 13 yoshli bola birovning mashinasini sindirdi, zararni kim toʻlaydi?
   expected: [{document: -180552, article: "993"}]
   tags: [fuqarolik, sozlashuv]
+  alt: ["oʻn toʻrt yoshga toʻlmagan voyaga yetmagan yetkazgan zarar uchun ota-onaning javobgarligi"]
 
 # --- Jinoyat kodeksi (-111453) ---
 - id: jk-01
   question: Firibgarlik uchun qanday jazo bor?
   expected: [{document: -111453, article: "168"}]
   tags: [jinoyat, sozlashuv]
+  alt: ["firibgarlik jinoyati uchun jazo"]
 - id: jk-02
   question: Oʻgʻrilik qilgan odam qanday javobgarlikka tortiladi?
   expected: [{document: -111453, article: "169"}]
   tags: [jinoyat, sozlashuv]
+  alt: ["oʻgʻrilik jinoyati uchun javobgarlik"]
 - id: jk-03
   question: Pora berganlik uchun jazo
   expected: [{document: -111453, article: "211"}]
   tags: [jinoyat, rasmiy]
+  alt: ["pora berish jinoyati uchun javobgarlik"]
 - id: jk-04
   question: Mansabdor shaxs pora olsa necha yil qamaladi?
   expected: [{document: -111453, article: "210"}]
   tags: [jinoyat, sozlashuv]
+  alt: ["mansabdor shaxsning pora olishi uchun jazo"]
 - id: jk-05
   question: Necha yoshdan jinoiy javobgarlikka tortiladi?
   expected: [{document: -111453, article: "17"}]
   tags: [jinoyat, sozlashuv]
+  alt: ["jinoiy javobgarlikka tortish yoshi"]
 - id: jk-06
   question: Internetda tuhmat qilsa jinoyat boʻladimi?
   expected: [{document: -111453, article: "139"}, {document: -97664, article: "40"}]
   tags: [jinoyat, sozlashuv]
+  alt: ["tuhmat uchun jinoiy va maʼmuriy javobgarlik"]
 - id: jk-07
   question: Aliment toʻlamaslik jinoyatmi?
   expected: [{document: -111453, article: "122"}, {document: -97664, article: "47⁴"}]
   tags: [jinoyat, oila, sozlashuv]
+  alt: ["aliment toʻlashdan boʻyin tovlash uchun javobgarlik"]
 - id: jk-08
   question: jabrlanuvchi bilan yarashsa jinoiy ish yopiladimi
   expected: [{document: -111453, article: "66¹"}]
   tags: [jinoyat, xatoli]
+  alt: ["jabrlanuvchi bilan yarashganlik munosabati bilan jinoiy javobgarlikdan ozod qilish"]
 
 # --- Maʼmuriy javobgarlik toʻgʻrisidagi kodeks (-97664) ---
 - id: mjk-01
   question: Mast holda mashina haydaganlik uchun jarima qancha?
   expected: [{document: -97664, article: "131"}, {document: -97664, article: "136"}]
   tags: [mamuriy, yol, sozlashuv]
+  alt: ["transport vositasini mastlik holatida boshqarish uchun javobgarlik"]
 - id: mjk-02
   question: Jamoat joyida pivo ichish uchun jarima bormi?
   expected: [{document: -97664, article: "187"}]
   tags: [mamuriy, sozlashuv]
+  alt: ["jamoat joylarida alkogol isteʼmol qilish uchun maʼmuriy javobgarlik"]
 - id: mjk-03
   question: Mayda bezorilik uchun nima jazo beriladi?
   expected: [{document: -97664, article: "183"}]
   tags: [mamuriy, sozlashuv]
+  alt: ["mayda bezorilik uchun maʼmuriy jazo"]
 - id: mjk-04
   question: Haydovchilik guvohnomasisiz mashina haydash
   expected: [{document: -97664, article: "135"}]
   tags: [mamuriy, yol, rasmiy]
+  alt: ["haydovchilik guvohnomasi boʻlmagan shaxsning transport vositasini boshqarishi"]
 - id: mjk-05
   question: Qizil chiroqda oʻtib ketsa jarima
   expected: [{document: -97664, article: "128⁴"}]
   tags: [mamuriy, yol, sozlashuv]
+  alt: ["svetoforning taqiqlovchi signaliga harakatlanish uchun jarima"]
 - id: mjk-06
   question: Piyoda yoʻl qoidasini buzsa jarima bormi?
   expected: [{document: -97664, article: "138"}]
   tags: [mamuriy, yol, sozlashuv]
+  alt: ["piyodalarning yoʻl harakati qoidalarini buzishi uchun javobgarlik"]
 - id: mjk-07
   question: Kamera orqali yozilgan jarimaga qanday eʼtiroz bildiriladi?
   expected: [{document: -97664, article: "309¹"}, {document: -97664, article: "17¹"}]
   tags: [mamuriy, yol, sozlashuv]
+  alt: ["foto va video qayd etish vositalari orqali qayd etilgan yoʻl harakati qoidabuzarligi boʻyicha ish yuritish"]
 - id: mjk-08
   question: Necha yoshdan maʼmuriy javobgarlik boshlanadi?
   expected: [{document: -97664, article: "13"}]
   tags: [mamuriy, sozlashuv]
+  alt: ["maʼmuriy javobgarlikka tortilish yoshi"]
 - id: mjk-09
   question: Jarimani necha kun ichida toʻlash kerak?
   expected: [{document: -97664, article: "332"}]
   tags: [mamuriy, sozlashuv]
+  alt: ["jarima solish toʻgʻrisidagi qarorni ijro etish muddati"]
 
 # --- Soliq kodeksi (-4674902) ---
 - id: sk-01
   question: Ish haqidan olinadigan daromad soligʻi necha foiz?
   expected: [{document: -4674902, article: "381"}]
   tags: [soliq, sozlashuv]
+  alt: ["jismoniy shaxslardan olinadigan daromad soligʻi stavkasi rezidentlar uchun"]
 - id: sk-02
   question: QQS stavkasi qancha?
   expected: [{document: -4674902, article: "258"}]
   tags: [soliq, sozlashuv]
+  alt: ["qoʻshilgan qiymat soligʻi stavkasi"]
 - id: sk-03
   question: Uy-joy uchun mol-mulk soligʻi stavkasi
   expected: [{document: -4674902, article: "422"}]
   tags: [soliq, rasmiy]
+  alt: ["jismoniy shaxslardan olinadigan mol-mulk soligʻi stavkalari"]
 - id: sk-04
   question: Aylanmadan olinadigan soliq stavkalari
   expected: [{document: -4674902, article: "467"}]
   tags: [soliq, rasmiy]
+  alt: ["aylanmadan olinadigan soliq stavkalari"]
 - id: sk-05
   question: Jismoniy shaxslar yer soligʻini qancha toʻlaydi?
   expected: [{document: -4674902, article: "437"}]
   tags: [soliq, sozlashuv]
+  alt: ["jismoniy shaxslardan olinadigan yer soligʻi stavkalari"]
 - id: sk-06
   question: Korxona foyda soligʻi necha foiz?
   expected: [{document: -4674902, article: "337"}]
   tags: [soliq, sozlashuv]
+  alt: ["foyda soligʻi stavkasi"]
 
 # --- Konstitutsiya (-6445145) ---
 - id: kon-01
   question: Prezident necha yilga saylanadi?
   expected: [{document: -6445145, article: "106"}]
   tags: [konstitutsiya, sozlashuv]
+  alt: ["Prezidentning vakolat muddati Konstitutsiya"]
 - id: kon-02
   question: Oʻzbekistonda oʻlim jazosi bormi?
   expected: [{document: -6445145, article: "25"}]
   tags: [konstitutsiya, sozlashuv]
+  alt: ["yashash huquqi oʻlim jazosi taqiqlangan Konstitutsiya"]
 - id: kon-03
   question: Davlat tili qaysi til?
   expected: [{document: -6445145, article: "4"}]
   tags: [konstitutsiya, sozlashuv]
+  alt: ["davlat tili oʻzbek tili Konstitutsiya"]
 - id: kon-04
   question: Uy-joyimdan sud qarorisiz chiqarib yuborishlari mumkinmi?
   expected: [{document: -6445145, article: "47"}]
   tags: [konstitutsiya, uy-joy, sozlashuv]
+  alt: ["uy-joy daxlsizligi va uy-joydan mahrum etish Konstitutsiya"]
 - id: kon-05
   question: Bepul taʼlim olish huquqi kafolatlanganmi?
   expected: [{document: -6445145, article: "50"}]
   tags: [konstitutsiya, sozlashuv]
+  alt: ["taʼlim olish huquqi Konstitutsiya"]
 - id: kon-06
   question: soz erkinligi konstitutsiyada
   expected: [{document: -6445145, article: "33"}]
   tags: [konstitutsiya, xatoli]
+  alt: ["soʻz va fikr erkinligi Konstitutsiya"]
 - id: kon-07
   question: Qariganda pensiya olish huquqi
   expected: [{document: -6445145, article: "46"}]
   tags: [konstitutsiya, rasmiy]
+  alt: ["ijtimoiy taʼminot huquqi qariganda Konstitutsiya"]
 - id: kon-08
   question: Advokat yollashga pulim boʻlmasa davlat bepul yuridik yordam beradimi?
   expected: [{document: -6445145, article: "29"}]
   tags: [konstitutsiya, sozlashuv]
+  alt: ["malakali yuridik yordam olish huquqi davlat hisobidan Konstitutsiya"]

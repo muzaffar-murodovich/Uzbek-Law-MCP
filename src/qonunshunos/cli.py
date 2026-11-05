@@ -43,6 +43,7 @@ def build_parser() -> argparse.ArgumentParser:
     p = sub.add_parser("listing", help="save a lex.uz listing (all pages) as JSON")
     p.add_argument("form_id", type=int, help="document form, e.g. 3968 (Qonun)")
     p.add_argument("--out", type=Path, help="default: data/listings/form-<id>.json")
+    p.add_argument("--max-pages", type=int, default=10_000, help="newest documents come first")
 
     p = sub.add_parser("crawl", help="fetch and parse the given documents")
     p.add_argument("lex_ids", type=int, nargs="*")
@@ -248,7 +249,9 @@ def main(argv: list[str] | None = None) -> int:
             return _crawl(client, ws, ids, args.force)
 
         if args.command == "listing":
-            rows = list(iter_listing(client, f"{FORM_LISTING}{args.form_id}"))
+            rows = list(
+                iter_listing(client, f"{FORM_LISTING}{args.form_id}", max_pages=args.max_pages)
+            )
             out = args.out or args.data_dir / "listings" / f"form-{args.form_id}.json"
             out.parent.mkdir(parents=True, exist_ok=True)
             payload = [dataclasses.asdict(r) for r in rows]
