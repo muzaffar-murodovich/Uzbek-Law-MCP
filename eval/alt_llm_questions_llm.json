@@ -326,5 +326,77 @@
  "llm-082": [
   "bank omonat hisobvarag‘ini uchinchi shaxs tomonidan to‘ldirish tartibi",
   "omonat hisobvarag‘iga boshqa shaxs tomonidan pul mablag‘larini kiritish"
+ ],
+ "llm-083": [
+  "majburiy ijro byurosi xodimining qarori ustidan shikoyat berish muddati va tartibi",
+  "davlat ijrochisining harakatlari hamda qaroridan sudga yoki yuqori turuvchi organga shikoyat qilish"
+ ],
+ "llm-084": [
+  "tug‘ilganlikni davlat ro‘yxatidan o‘tkazish muddati",
+  "bola tug‘ilganligini qayd etish uchun murojaat qilish muddati"
+ ],
+ "llm-085": [
+  "apellatsiya shikoyatini ko‘rib chiqish sud majlisi tayinlash vaqti hamda taraflarni xabardor qilish muddati",
+  "yuqori instansiya sudi sud majlisi kuni belgilanishi va sud muhokamasi haqida xabar berish tartibi"
+ ],
+ "llm-086": [
+  "aybni tan olish ko‘rsatuvi dalillarni tekshirish va baholash",
+  "jinoyat ishini sudga yuborish uchun yetarli dalillar to‘plash"
+ ],
+ "llm-087": [
+  "ekstraditsiya qilingan shaxsni topshirishga sabab bo‘lmagan jinoyat uchun javobgarlikka tortish",
+  "ushlab berilgan shaxsga nisbatan topshirishdan oldingi boshqa jinoyatlar bo‘yicha ta’qib etmaslik"
+ ],
+ "llm-088": [
+  "jazoni ijro etishdan kasallik tufayli ozod qilish nogironlik",
+  "og‘ir kasallik sababli jazodan ozod etish sud tomonidan"
+ ],
+ "llm-089": [
+  "davlat xaridlari g‘olibi shartnoma tuzishdan bosh tortganda zakalatni qaytarish",
+  "tender g‘olibi shartnoma tuzishdan bosh tortishi ta’minot summasini qaytarish"
+ ],
+ "llm-090": [
+  "import qilinayotgan tovarlarning bojxona qiymatini ataylab pasaytirib deklaratsiya qilish uchun javobgarlik",
+  "bojxona toʻlovlarini kamaytirish maqsadida hujjatlarda notoʻgʻri qiymat ko‘rsatish jarima"
+ ],
+ "llm-091": [
+  "jinoyat oqibati O‘zbekiston hududida yuz bergan shaxslar javobgarligi",
+  "O‘zbekiston hududidan tashqarida sodir etilgan qilmish oqibati O‘zbekistonda jinoyat javobgarligi"
+ ],
+ "llm-092": [
+  "arizani qabul qilishni rad etish asoslari va rad javobini berish muddati",
+  "jismoniy va yuridik shaxslarning murojaatlarini qabul qilmaslik hollari hamda yozma javob berish muddati"
+ ],
+ "llm-093": [
+  "kim oshdi savdosi bitta ishtirokchi savdo bo‘lib o‘tmagan deb topish",
+  "auksion tan olinishi yagona qatnashuvchi ishtirok etgan taqdirda"
+ ],
+ "llm-094": [
+  "maktabgacha ta’lim tashkiloti xodimlarini majburiy tibbiy ko‘rikdan o‘tkazish",
+  "ishga qabul qilishda dastlabki va mehnat faoliyati davomida davriy tibbiy ko‘riklar"
+ ],
+ "llm-095": [
+  "jinoyat protsessida jabrlanuvchi vakili va yaqin qarindosh ishtiroki",
+  "jabrlanuvchining vakili sifatida advokat va qonuniy vakil huquqlari"
+ ],
+ "llm-096": [
+  "jismoniy shaxslarning yakka tartibdagi va jamoaviy yozma murojaatlari mahalliy davlat hokimiyati organlari ko‘rib chiqish muddati",
+  "fuqarolarning murojaatlari hokimlikka yozma murojaat berish va uni ko‘rib chiqish tartibi"
+ ],
+ "llm-097": [
+  "mahalliy davlat hokimiyati organlarining ochiq eshituv to‘g‘risidagi qarorini e’lon qilish rasmiy veb-sayt",
+  "ochiq eshituv o‘tkazish haqidagi qarorni internet tarmog‘iga joylashtirish muddati va tartibi"
+ ],
+ "llm-098": [
+  "ijro hujjatini ijroga taqdim etish muddati o‘tkazib yuborilgan muddatni tiklash",
+  "ijro varaqasini majburiy ijroga topshirish muddatini qayta tiklash tartibi"
+ ],
+ "llm-099": [
+  "fuqaroni ruhiy holatini aniqlash uchun psixiatriya stasionariga majburiy yotqizish to‘g‘risidagi arizani sudda ko‘rish muddati",
+  "fuqaroning psixiatriya yordami ko‘rsatish to‘g‘risidagi ish bo‘yicha sud majlisida ishtiroki sog‘lig‘i imkon bersa"
+ ],
+ "llm-100": [
+  "bojxona ko‘rigi tovarning nomi kelib chiqqan mamlakati miqdori va qiymatini deklaratsiya hujjatlaridagi ma’lumotlar bilan solishtirish",
+  "bojxona nazorati tovarlar va transport vositalarini ko‘zdan kechirish hujjatlardagi ma’lumotlarning to‘g‘riligini tekshirish"
  ]
 }
