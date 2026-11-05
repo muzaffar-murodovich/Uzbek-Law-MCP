@@ -14,7 +14,7 @@ Mode = Literal["hybrid", "fts", "vector"]
 
 CANDIDATES = 50
 RRF_K = 60
-EF_SEARCH = 80
+EF_SEARCH = 100
 SNIPPET = 400
 LEX_BASE = "https://lex.uz/docs"
 
@@ -119,20 +119,28 @@ def vector_candidates(
     limit: int = CANDIDATES,
 ) -> list[int]:
     vector = embedder.query(query).tolist()
-    where, params = _filters(statuses, doc_types)
     with conn.transaction():
         conn.execute(f"SET LOCAL hnsw.ef_search = {int(EF_SEARCH)}")
-        conn.execute("SET LOCAL hnsw.iterative_scan = relaxed_order")
-        rows = conn.execute(
-            f"""
-            SELECT c.id
-            FROM chunks c JOIN documents d ON d.id = c.document_id
-            WHERE c.embedding IS NOT NULL {where}
-            ORDER BY c.embedding <=> %s::halfvec
-            LIMIT %s
-            """,
-            [*params, vector, limit],
-        ).fetchall()
+        if tuple(statuses) == ("in_force",) and not doc_types:
+            # Only documents in force have chunks: no join, plain index scan.
+            rows = conn.execute(
+                "SELECT id FROM chunks WHERE embedding IS NOT NULL"
+                " ORDER BY embedding <=> %s::halfvec LIMIT %s",
+                [vector, limit],
+            ).fetchall()
+        else:
+            where, params = _filters(statuses, doc_types)
+            conn.execute("SET LOCAL hnsw.iterative_scan = strict_order")
+            rows = conn.execute(
+                f"""
+                SELECT c.id
+                FROM chunks c JOIN documents d ON d.id = c.document_id
+                WHERE c.embedding IS NOT NULL {where}
+                ORDER BY c.embedding <=> %s::halfvec
+                LIMIT %s
+                """,
+                [*params, vector, limit],
+            ).fetchall()
     return [r[0] for r in rows]
 
 

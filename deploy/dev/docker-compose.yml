@@ -4,6 +4,7 @@ name: qonunshunos-dev
 services:
   postgres:
     image: pgvector/pgvector:0.8.0-pg16
+    shm_size: 1g  # parallel HNSW builds need more than the 64 MB default
     environment:
       POSTGRES_USER: qonunshunos
       POSTGRES_PASSWORD: qonunshunos
