@@ -1,0 +1,20 @@
+# Local development database: PostgreSQL 16 + pgvector (same major version as myserver).
+# Usage: docker compose -f deploy/dev/docker-compose.yml up -d
+name: qonunshunos-dev
+services:
+  postgres:
+    image: pgvector/pgvector:0.8.0-pg16
+    environment:
+      POSTGRES_USER: qonunshunos
+      POSTGRES_PASSWORD: qonunshunos
+      POSTGRES_DB: qonunshunos
+    ports:
+      - "127.0.0.1:5433:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    command: ["postgres", "-c", "shared_buffers=512MB", "-c", "maintenance_work_mem=512MB"]
+    healthcheck:
+      test: ["CMD", "pg_isready", "-U", "qonunshunos"]
+      interval: 5s
+volumes:
+  pgdata:

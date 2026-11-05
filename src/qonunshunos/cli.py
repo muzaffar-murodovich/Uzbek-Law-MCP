@@ -6,8 +6,10 @@ from collections import Counter
 from pathlib import Path
 
 from qonunshunos import __version__
+from qonunshunos.config import Settings
 from qonunshunos.crawler.client import FetchError, LexClient, NotFound
 from qonunshunos.crawler.pipeline import Workspace, fetch, parse, sample_ids
+from qonunshunos.db import migrate
 
 
 def build_parser() -> argparse.ArgumentParser:
@@ -26,6 +28,8 @@ def build_parser() -> argparse.ArgumentParser:
 
     p = sub.add_parser("crawl-sample", help="Constitution + codes in force: fetch, parse, report")
     p.add_argument("--force", action="store_true")
+
+    sub.add_parser("db-migrate", help="create or upgrade the database schema (QONUNSHUNOS_DSN)")
     return parser
 
 
@@ -51,6 +55,11 @@ def main(argv: list[str] | None = None) -> int:
         return 0
 
     ws = Workspace(args.data_dir)
+
+    if args.command == "db-migrate":
+        applied = migrate(Settings.from_env(args.data_dir).dsn)
+        print(f"applied: {', '.join(applied)}" if applied else "schema is up to date")
+        return 0
 
     if args.command == "parse":
         document, card = parse(ws, args.lex_id)
