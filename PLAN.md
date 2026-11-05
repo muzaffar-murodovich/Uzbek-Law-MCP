@@ -169,7 +169,7 @@ Tamoyillar:
 | # | Bosqich | Muddat | Holati |
 |---|---|---|---|
 | 0 | lex.uz tadqiqoti | 1–2 kun | ✅ bajarildi |
-| 1 | Parser + crawler (avval namunaviy to'plamda) | 1 hafta | ⏳ jarayonda |
+| 1 | Parser + crawler (avval namunaviy to'plamda) | 1 hafta | ✅ bajarildi (namunaviy to'plam) |
 | 2 | Indekslash, gibrid qidiruv, baholash to'plami | 1 hafta | |
 | 3 | MCP server va tool'lar | 3–4 kun | |
 | 4 | OAuth, Google/Telegram kirish, limitlar | 1 hafta | domen kerak |

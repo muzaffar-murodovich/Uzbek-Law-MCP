@@ -1,6 +1,6 @@
 # 1-bosqich: parser va crawler
 
-Holat (2026-11-05): dizayn tayyor, qolgan tadqiqot bajarildi ([lexuz.md, 8-bo'lim](research/lexuz.md)).
+Holat (2026-11-05): ✅ bajarildi. Tadqiqot: [lexuz.md, 8-bo'lim](research/lexuz.md).
 Tegishli hujjatlar: [PLAN.md](../PLAN.md), [lex.uz tadqiqoti](research/lexuz.md).
 
 ## Maqsad
@@ -25,13 +25,43 @@ hujjat: 20 ta kodeks + Konstitutsiya).
 1. ✅ **Qolgan tadqiqot** — [lexuz.md, 8-bo'lim](research/lexuz.md): qaror va farmonlar
    tuzilishi, ilovalar, jadvallar, faqat PDF'li yangi hujjatlar, card1, kodekslar ro'yxati
    (`fform_id=3964`) va postback bilan sahifalash.
-2. **Loyiha karkasi:** `pyproject.toml` (uv), `src/qonunshunos/`, `tests/`, ruff, `.gitignore`
+2. ✅ **Loyiha karkasi:** `pyproject.toml` (uv), `src/qonunshunos/`, `tests/`, ruff, `.gitignore`
    (`data/`), qisqa README.
-3. `text/normalize.py` + testlar.
-4. `parser/document.py` + fixture'lar + testlar.
-5. `parser/card.py` + testlar.
-6. `crawler/` (klient, saqlash, ro'yxatlar) + CLI + testlar.
-7. Namunaviy to'plamni yuklab olish, natijalarni tekshirish, parserni tuzatish.
+3. ✅ `text/normalize.py` + testlar.
+4. ✅ `parser/document.py` + fixture'lar + testlar.
+5. ✅ `parser/card.py` + testlar.
+6. ✅ `crawler/` (klient, saqlash, ro'yxatlar) + CLI + testlar.
+7. ✅ Namunaviy to'plamni yuklab olish, natijalarni tekshirish, parserni tuzatish.
+
+## Natija (2026-11-05)
+
+`qonunshunos crawl-sample`: 21 ta hujjat (Konstitutsiya + 20 ta amaldagi kodeks), ≈44 ta so'rov,
+xatosiz. Parserda ogohlantirish yo'q, takroriy yoki bo'sh modda yo'q.
+
+| Hujjat | Moddalar | Hujjat | Moddalar |
+|---|---:|---|---:|
+| Konstitutsiya | 155 | Mehnat | 593 |
+| Fuqarolik (1-qism) | 386 | Fuqarolik (2-qism) | 811 |
+| Jinoyat | 406 | Jinoyat-protsessual | 773 |
+| Maʼmuriy javobgarlik | 673 | Fuqarolik protsessual | 513 |
+| Soliq | 500 | Bojxona | 419 |
+| Iqtisodiy protsessual | 390 | Maʼmuriy sud ishlari | 309 |
+| Oila | 220 | Jinoyat-ijroiya | 200 |
+| Budjet | 179 | Suv | 165 |
+| Uy-joy | 141 | Havo | 136 |
+| Saylov | 116 | Yer | 110 |
+| Shaharsozlik | 85 | | |
+
+Sinov paytida topilib tuzatilganlar: `599- modda` / `184³ -modda` (defis atrofida bo'shliq),
+bo'sh `CLAUSE_DEFAULT`, `TABLE_STD`, `OFFICIAL_SOUR_TEXT` (rasmiy manba PDF havolasi), modda
+ichidagi kichik sarlavhalar (Suv kodeksi, jadval ustida).
+
+Ochiq qolganlar (2-bosqichda yoki to'liq yuklashda ko'riladi):
+
+- Faqat PDF'li hujjatlar (`content="pdf_only"`): HTML qachon paydo bo'lishini kuzatish.
+- Farmon va qarorlar faqat 4 ta namunada tekshirildi; to'liq yuklashda ogohlantirishlar
+  hisobotiga qarab parser kengaytiriladi.
+- Katta jadvallar (masalan VM 916-son) bo'laklashda alohida chegaralanadi.
 
 ## Texnologiyalar
 
@@ -69,7 +99,7 @@ class Unit:
     paragraphs: list[Paragraph]
     changes: list[Change]
     okoz: list[str]
-    comments: list[str]        # "LexUZ sharhi"lar ("Oldingi tahrirga qarang"siz)
+    comments: list[Comment]    # "LexUZ sharhi"lar ("Oldingi tahrirga qarang"siz), havolalari bilan
 
 class Table:      elem_id: int; rows: list[list[str]]
 
@@ -118,9 +148,10 @@ xaritalanadi. Sanalar `dd.mm.yyyy` → ISO.
    | `TEXT_HEADER_DEFAULT`, `TEXT_BOLD_CENTER` | sarlavha; bo'sh bo'lsa o'tkazib yuboriladi |
    | `CLAUSE_DEFAULT` | yangi `Unit(kind="modda")` |
    | `ACT_TEXT` | joriy unitga paragraf; unit hali bo'lmasa `kind="kirish"` (preambula) |
-   | `INDEXES_ON_REF` | birinchi sarlavha yoki moddadan oldin bo'lsa hujjat `okoz`iga, keyin bo'lsa joriy unitga |
-   | `CHANGES_ORIGINS` | joriy unitning `changes`iga |
-   | `COMMENT` | "Oldingi tahrirga qarang" tashlanadi, qolgani joriy unitning `comments`iga |
+   | `INDEXES_ON_REF` | `onLBC-{lex_id}` / `onLS-{lex_id}` — hujjat `okoz` / `tsz`iga; qolganlari keyingi kontent oladigan unitga (ID `onLBC-{elem}` keyingi elementni ko'rsatadi) |
+   | `CHANGES_ORIGINS` | joriy unitning `changes`iga; unit bo'lmasa (masalan imzodan keyin) hujjatning `changes`iga |
+   | `COMMENT` | "Oldingi tahrirga qarang" (`id="edi-…"`) tashlanadi, qolgani joriy unitning (yoki hujjatning) `comments`iga |
+   | `TEXT_CENTER lx_no_select` | tahririyat izohi → hujjatning `notes`iga |
    | `PUBLICATION_ORIGIN` | hujjatning `publication_origin`iga |
    | `ACCEPTING_BODY` | hujjat darajasidagi ma'lumot (organ) |
    | `SIGNATURE`, `ACT_ESSENTIAL_ELEMENTS`, `ACT_ESSENTIAL_ELEMENTS_NUM` | hujjatning `signature`, `place`, `signed_date`, `signed_number` maydonlari |
@@ -147,7 +178,11 @@ xaritalanadi. Sanalar `dd.mm.yyyy` → ISO.
    `ACT_TEXT` yangi `Unit(kind="band")` ochadi. "a)", "b)" kichik bandlar va oddiy xatboshilar shu
    bandga qo'shiladi. Hujjatda `CLAUSE_DEFAULT` bo'lsa, band qoidasi o'chiriladi (kodekslarda "1."
    modda ichidagi qism raqami). Band OKOZ kodi band matnidan oldin keladi, shuning uchun
-   `INDEXES_ON_REF` moddasiz hujjatda keyingi unitga biriktiriladi.
+   `INDEXES_ON_REF` keyingi unitga biriktiriladi (kodekslarda ham shu qoida ishlaydi).
+   Sarlavha, imzo va ilova banneri joriy unitni yopadi: keyingi raqamsiz matn yangi `matn` unit
+   bo'ladi (birinchi sarlavhadan oldin — `kirish`).
+   Ba'zi sahifalarda (masalan Mehnat kodeksi) tahrirlar ro'yxati bo'sh, shuning uchun
+   `last_change_date` — `CHANGES_ORIGINS` havolalaridagi eng so'nggi `ONDATE` — ham saqlanadi.
 7. Matnni tozalash: `<sup>N</sup>` yuqori indeksga aylanadi, bo'shliqlar bitta probelga
    keltiriladi, apostroflar kanonik shaklga o'tkaziladi: `o`/`g`dan keyin `ʻ` (U+02BB), boshqa
    harfdan keyin `ʼ` (U+02BC). So'z boshidagi qo'shtirnoq o'zgartirilmaydi.

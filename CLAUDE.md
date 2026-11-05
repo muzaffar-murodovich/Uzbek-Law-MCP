@@ -45,5 +45,8 @@ Dasturlash tili — Python.
 
 ## Joriy holat
 
-Bosqichlar holati `PLAN.md`ning 8-bo'limida. Keyingi ish — 1-bosqich:
-`docs/stage1-parser-crawler.md`, "Ishlar tartibi" bo'limi.
+Bosqichlar holati `PLAN.md`ning 8-bo'limida. 1-bosqich bajarildi
+(`docs/stage1-parser-crawler.md`, "Natija"). Keyingi ish — 2-bosqich: indekslash, gibrid qidiruv,
+baholash to'plami.
+
+CLI: `uv run qonunshunos fetch|parse|crawl-sample` (`--data-dir`, standart `./data`).
