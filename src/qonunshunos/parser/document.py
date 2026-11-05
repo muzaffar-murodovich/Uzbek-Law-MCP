@@ -36,7 +36,7 @@ class ParseError(ValueError):
 
 
 _SUP = "⁰¹²³⁴⁵⁶⁷⁸⁹"
-_ARTICLE_RE = re.compile(rf"^(\d+[{_SUP}]*)-modda\.?\s*(.*)$")
+_ARTICLE_RE = re.compile(rf"^(\d+[{_SUP}]*)\s*-\s*modda\.?\s*(.*)$")
 _BAND_RE = re.compile(rf"^(\d+[{_SUP}]*)\.\s+\S")
 _TITLE_RE = re.compile(
     r"^(?:(?P<number>\S+?)-сон\s+)?(?P<date>\d{2}\.\d{2}\.\d{4})\.\s*(?P<title>.+)$"
@@ -47,7 +47,7 @@ _INDEX_ID_RE = re.compile(r"^on(LBC|LS)(-?\d+)$")
 _APPENDIX_RE = re.compile(r"(?:(\w+ga)\s+)?(\d+)\s*-\s*ilova\b", re.IGNORECASE)
 _MAIN_ACT_OWNERS = ("qaror", "farmon", "farmoyish", "qonun", "buyrugʻ", "kodeks")
 
-_SKIP = {"NEW_EDITION"}
+_SKIP = {"NEW_EDITION", "OFFICIAL_SOUR_TEXT"}  # the latter: link to a PDF
 _HEADINGS = {"TEXT_HEADER_DEFAULT", "TEXT_BOLD_CENTER", "TEXT_CENTER"}
 _CONTENT = {"ACT_TEXT", "FOOTNOTE"}
 
@@ -260,12 +260,18 @@ def _handle_block(state: _State, cls: str, block: Tag, no_select: bool) -> None:
             doc.notes.append(text)
             return
         level, kind, number, title = classify_heading(text)
+        if level == 5 and state.unit is not None and state.unit.kind == "modda":
+            # A minor heading inside an article (e.g. above a table) stays part of the article.
+            state.unit.paragraphs.append(Paragraph(elem_id=elem_id, text=text))
+            return
         state.push_heading(
             Heading(elem_id=elem_id, level=level, kind=kind, number=number, title=title, text=text)
         )
         return
 
     if cls == "CLAUSE_DEFAULT":
+        if not text:
+            return
         m = _ARTICLE_RE.match(text)
         if m:
             unit = state.new_unit("modda", elem_id, number=m.group(1), title=m.group(2) or None)
@@ -275,7 +281,7 @@ def _handle_block(state: _State, cls: str, block: Tag, no_select: bool) -> None:
         state.attach_okoz(unit)
         return
 
-    if cls in {"TABLE_STD2", "BY_DEFAULT"}:
+    if cls.startswith("TABLE_") or cls == "BY_DEFAULT":
         table = inner.find("table")
         if table is not None:
             state.content_unit(elem_id).tables.append(_parse_table(table, elem_id))

@@ -50,6 +50,37 @@ def test_classify_heading(text, expected):
     assert classify_heading(text) == expected
 
 
+@pytest.mark.parametrize(
+    ("html", "number", "title"),
+    [
+        ("599- modda. Lizing", "599", "Lizing"),
+        ("184<sup>3</sup> -modda. Milliy", "184³", "Milliy"),
+        ("126<sup>1</sup>-modda.", "126¹", None),
+    ],
+)
+def test_article_heading_variants(html, number, title):
+    block = f'<div class="CLAUSE_DEFAULT lx_elem"><div id="-2">{html}</div></div>'
+    page = f'<title>x</title><div id="divCont">{block}</div>'
+    doc = parse_document(page, -1)
+    assert (doc.units[0].number, doc.units[0].title) == (number, title)
+    assert doc.warnings == []
+
+
+def test_empty_article_heading_and_table_std_are_handled():
+    page = (
+        '<title>x</title><div id="divCont">'
+        '<div class="CLAUSE_DEFAULT lx_elem"><div id="-2"> </div></div>'
+        '<div class="CLAUSE_DEFAULT lx_elem"><div id="-3">1-modda. A</div></div>'
+        '<div class="TABLE_STD lx_elem"><div id="-4">'
+        "<table><tr><td>a</td><td>b</td></tr></table></div></div>"
+        "</div>"
+    )
+    doc = parse_document(page, -1)
+    assert len(doc.units) == 1
+    assert doc.units[0].tables[0].rows == [["a", "b"]]
+    assert doc.warnings == []
+
+
 def test_parse_link():
     link = parse_link("/docs/-7108715?ONDATE=21.09.2024 00#-7108833", " Qonuni ")
     assert (link.doc_id, link.elem_id, link.ondate, link.text) == (
