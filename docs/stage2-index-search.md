@@ -28,8 +28,8 @@ kutubxona va CLI bor. MCP server 3-bosqichda shu kutubxona ustiga quriladi.
 
 ## Ishlar tartibi
 
-1. Mahalliy muhit: `deploy/dev/docker-compose.yml` (`pgvector/pgvector:pg16`), DSN `.env`
-   orqali beriladi.
+1. ✅ Mahalliy muhit: Homebrew `postgresql@17` + `pgvector` (port 5433), DSN `.env` orqali
+   beriladi. Docker ishlatilmaydi.
 2. `db/`: sxema, migratsiyalar, `db-migrate`.
 3. `text/chunk.py` (bo'lish) va `text/fts.py` (FTS normalizatsiyasi) + testlar.
 4. `index/embed.py` (ONNX model) + `index/writer.py` + `index` CLI.
@@ -184,7 +184,6 @@ src/qonunshunos/
   search/hybrid.py   search(), RRF
 eval/
   questions.yaml, results/
-deploy/dev/docker-compose.yml
 ```
 
 Yangi bog'liqliklar: `psycopg[binary,pool]`, `pgvector`, `onnxruntime`, `tokenizers`, `numpy`,

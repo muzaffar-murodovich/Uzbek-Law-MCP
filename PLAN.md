@@ -18,7 +18,7 @@ O'zbekiston Respublikasi qonunchiligiga oid savollarga javob topishda yordam ber
 | Tahrirlar | Faqat amaldagi tahrir. Kuchini yo'qotgan hujjatlarning faqat rekvizitlari saqlanadi, matni indekslanmaydi |
 | Yangilash | Har kuni tunda avtomatik |
 | Stek | Python: MCP Python SDK (FastMCP) + Starlette/FastAPI |
-| Joylashuv | Gibrid (2026-11-05). Xizmat `myserver`da (Hetzner, 2 vCPU / 3,7 GB, ochiq IP) Dockersiz ishlaydi: systemd + mavjud nginx + mavjud PostgreSQL 16 + pgvector. Og'ir ish (to'liq yuklab olish, boshlang'ich embedding) `home` serverda (i5-1235U, 12 oqim, 7,4 GB) bajariladi, tayyor baza `pg_dump` bilan `myserver`ga ko'chiriladi. Kunlik yangilash `myserver`ning o'zida |
+| Joylashuv | Gibrid (2026-11-05). Xizmat `myserver`da (Hetzner, 2 vCPU / 3,7 GB, ochiq IP) Dockersiz ishlaydi: systemd + mavjud nginx + mavjud PostgreSQL 16 + pgvector. Og'ir ish (to'liq yuklab olish, boshlang'ich embedding) `home` serverda (i5-1235U, 12 oqim, 7,4 GB) bajariladi va natija SSH tunnel orqali to'g'ridan-to'g'ri `myserver` bazasiga yoziladi. Kunlik yangilash `myserver`ning o'zida. Docker hech qayerda ishlatilmaydi (2026-11-05) |
 | Domen | `qonunshunos.muzaffar.zip` (MCP manzili: `https://qonunshunos.muzaffar.zip/mcp`). DNS A yozuvi spaceship.com'da `myserver` IP'siga qo'shiladi |
 | Transport | Streamable HTTP (remote MCP) |
 | Mijozlar | claude.ai, Claude Desktop, Claude Code, ChatGPT, Cursor — OAuth 2.1 orqali |
@@ -82,8 +82,8 @@ Batafsil: [docs/research/lexuz.md](docs/research/lexuz.md). Qisqacha:
                  │    │        ▲                                                             │
                  │    └─ worker: kunlik systemd timer → crawler → parser → chunk → embedding│
                  └──────────────────────────────────────────────────────────────────────────┘
-                                         ▲ pg_dump / pg_restore (boshlang'ich yuklash)
-                 ┌─────────── home (Docker: postgres 16 + pgvector) ───────────┐
+                                         ▲ SSH tunnel (boshlang'ich yuklash)
+                 ┌─────────── home (bazasiz, faqat hisoblash) ─────────────────┐
                  │ to'liq yuklab olish → parser → chunk → embedding (12 oqim)  │
                  └─────────────────────────────────────────────────────────────┘
 ```
@@ -91,8 +91,12 @@ Batafsil: [docs/research/lexuz.md](docs/research/lexuz.md). Qisqacha:
 - **Gibrid joylashuv:** `myserver`da allaqachon nginx, PostgreSQL 16, 3 ta gunicorn ilova va
   Telegram bot ishlaydi (bo'sh RAM ≈2,8 GB). Docker qo'shilmaydi, Qonunshunos ham boshqa ilovalar
   kabi systemd xizmati sifatida ishlaydi. `home` — uy noutbuki: kuchli, lekin doim yoqiq emas.
-  Shuning uchun u faqat og'ir, bir martalik ishlar uchun ishlatiladi. Ikkala muhitda ham
-  PostgreSQL 16 bo'lishi kerak, aks holda dump/restore muammo beradi.
+  Shuning uchun u faqat og'ir, bir martalik ishlar uchun ishlatiladi. `home`da baza bo'lmaydi:
+  `qonunshunos index` SSH tunnel (`ssh -L 5434:localhost:5432 myserver`) orqali `myserver`dagi
+  bazaga yozadi, shuning uchun PostgreSQL versiyalari mos kelishi muammosi yo'q.
+- **pgvector versiyasi:** Ubuntu 24.04 repozitoriyasidagi `postgresql-16-pgvector` 0.6 versiyada,
+  bizga esa ≥ 0.8 kerak (`halfvec` 0.7 dan, `iterative_scan` 0.8 dan). `myserver`ga paket PGDG
+  repozitoriyasidan (apt.postgresql.org) o'rnatiladi.
 
 - **PostgreSQL + pgvector** — bitta bazada hujjatlar, FTS indeksi, vektorlar, foydalanuvchilar,
   OAuth tokenlar va statistika saqlanadi.
@@ -214,8 +218,9 @@ Tamoyillar:
 - OAuth va kirish 7-bo'limda yozilganidek. claude.ai va ChatGPT konnektorlari bilan sinaladi.
 - Deploy: `myserver`da systemd xizmatlari (`qonunshunos-app`, `qonunshunos-worker.timer`), mavjud
   nginx'ga `qonunshunos.muzaffar.zip` uchun sayt va Let's Encrypt sertifikati. PostgreSQL 16'ga
-  `postgresql-16-pgvector` paketi o'rnatiladi va alohida baza hamda foydalanuvchi ochiladi.
-  Boshlang'ich baza `home`da tayyorlanib `pg_dump`/`pg_restore` bilan ko'chiriladi. Har kuni
+  PGDG repozitoriyasidan `postgresql-16-pgvector` (≥ 0.8) o'rnatiladi va alohida baza hamda
+  foydalanuvchi ochiladi. Boshlang'ich indekslash `home`da hisoblanib, SSH tunnel orqali shu
+  bazaga yoziladi. Har kuni
   `pg_dump` bilan zaxira nusxa olinadi (masalan, `home`ga), healthcheck ishlaydi, xatolik bo'lsa
   Telegram orqali xabar keladi.
 
@@ -243,7 +248,7 @@ src/qonunshunos/
   db/           modellar, Alembic migratsiyalar
 tests/
 eval/           baholash savollari va skripti
-deploy/         docker-compose.yml, Caddyfile
+deploy/         systemd unit'lari, nginx sayti
 docs/           tadqiqot, xatlar
 ```
 

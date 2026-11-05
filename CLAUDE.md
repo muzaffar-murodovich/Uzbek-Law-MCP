@@ -29,8 +29,10 @@ Dasturlash tili — Python.
 - Faqat amaldagi tahrir indekslanadi. Kuchini yo'qotgan hujjatlarning faqat rekvizitlari saqlanadi.
 - Stek: Python 3.12+, uv, MCP Python SDK (FastMCP), PostgreSQL 16 + pgvector,
   `multilingual-e5-small` (ONNX, int8).
-- Joylashuv: xizmat `myserver`da (`ssh myserver`, Hetzner, systemd + nginx, Dockersiz). Og'ir
-  bir martalik ishlar (to'liq yuklab olish, embedding) `home`da (`ssh home`, Tailscale, Docker).
+- Joylashuv: xizmat `myserver`da (`ssh myserver`, Hetzner, systemd + nginx). Og'ir bir martalik
+  ishlar (to'liq yuklab olish, embedding) `home`da (`ssh home`, Tailscale): natija SSH tunnel orqali
+  to'g'ridan-to'g'ri `myserver` bazasiga yoziladi. Docker ishlatilmaydi.
+- Mahalliy baza (Mac): Homebrew `postgresql@17` + `pgvector`, port 5433 (`.env.example`).
   Domen: `qonunshunos.muzaffar.zip`. Serverlarda o'zgarish qilishdan oldin foydalanuvchidan so'ra.
 - Bepul davr limitlari: kuniga 30 ta qidiruv, 200 ta boshqa chaqiruv, daqiqasiga 10 ta.
 
