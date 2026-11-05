@@ -63,13 +63,14 @@ def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("models", nargs="*", help="default: all candidates")
     parser.add_argument("--questions", type=Path, default=Path("eval/questions.yaml"))
+    parser.add_argument("--alt-file", type=Path, help="JSON {id: [queries]} replacing alt")
     parser.add_argument("--max-seq", type=int, default=512)
     args = parser.parse_args()
 
     from sentence_transformers import SentenceTransformer
 
     settings = Settings.from_env()
-    questions = load_questions(args.questions)
+    questions = load_questions(args.questions, args.alt_file)
     cache = settings.data_dir / "bench"
     cache.mkdir(parents=True, exist_ok=True)
 
@@ -101,7 +102,11 @@ def main() -> None:
     results = {}
     for cand in chosen:
         print(f"== {cand.name} ({cand.repo})", flush=True)
-        model = SentenceTransformer(cand.repo, device="mps", **cand.kwargs)
+        try:
+            model = SentenceTransformer(cand.repo, device="mps", **cand.kwargs)
+        except OSError as exc:  # gated or missing repositories
+            print(f"   skipped: {type(exc).__name__}: {str(exc)[:120]}", flush=True)
+            continue
         model.max_seq_length = min(args.max_seq, model.max_seq_length or args.max_seq)
         path = cache / f"{cand.name}.npy"
         started = time.perf_counter()
@@ -144,7 +149,8 @@ def main() -> None:
         )
         del model
 
-    out = Path("eval/results") / f"{time.strftime('%Y-%m-%d')}-embedding-models.json"
+    label = args.questions.stem + (f"-{args.alt_file.stem}" if args.alt_file else "")
+    out = Path("eval/results") / f"{time.strftime('%Y-%m-%d')}-embedding-models-{label}.json"
     previous = json.loads(out.read_text()) if out.exists() else {}
     out.write_text(json.dumps({**previous, **results}, indent=1), encoding="utf-8")
     print(f"saved {out}")
