@@ -1,0 +1,390 @@
+{
+ "mk-01": [
+  "mehnat shartnomasini ish beruvchining tashabbusi bilan bekor qilish asoslari",
+  "ishga doir munosabatlarni ish beruvchi tomonidan asossiz tugatishni taqiqlash"
+ ],
+ "mk-02": [
+  "har yilgi mehnat ta’tilining eng kam muddati",
+  "yillik mehnat ta’tili davomiyligi"
+ ],
+ "mk-03": [
+  "sinov muddati ko‘pi bilan qancha muddat belgilanadi",
+  "ishga qabul qilishda sinov muddati eng ko‘p muddati"
+ ],
+ "mk-04": [
+  "mehnat shartnomasini xodim tashabbusi bilan bekor qilish ariza berish muddati",
+  "xodimning o‘z xohishiga ko‘ra ishdan bo‘shash to‘g‘risida oldindan yozma ogohlantirish muddati"
+ ],
+ "mk-05": [
+  "mehnat shartnomasi bekor qilinganda ishdan bo‘shatish nafaqasi",
+  "ishdan bo‘shatish nafaqasi to‘lash tartibi va miqdori"
+ ],
+ "mk-06": [
+  "ish vaqtining normal davomiyligi haftasiga qirq soat",
+  "xodimlar uchun ish vaqti normal muddati"
+ ],
+ "mk-07": [
+  "ish vaqtidan tashqari ishga haq to‘lash va davomiyligi",
+  "ishga ortiqcha vaqt jalb etishning cheklangan muddati va kompensatsiyasi"
+ ],
+ "mk-08": [
+  "homiladorlik va tug‘ish ta’tilining davomiyligi",
+  "homiladorlik va tug‘ish ta’tili necha kalendar kun"
+ ],
+ "mk-09": [
+  "bola parvarishlash ta’tili muddati",
+  "bolani ikki yoshga to‘lgungacha parvarishlash ta’tili"
+ ],
+ "mk-10": [
+  "ish haqini to‘lash muddatlari oyiga kamida necha marta",
+  "mehnatga haq to‘lash davriyligi yarim oyda bir marta"
+ ],
+ "mk-11": [
+  "ish haqidan ushlab qolish miqdori va cheklovlari",
+  "xodimning ish haqidan ushlab qolishning eng ko‘p miqdori"
+ ],
+ "mk-12": [
+  "ish haqini o‘z vaqtida to‘lamaganlik uchun ish beruvchining javobgarligi",
+  "mehnatga haq to‘lash muddatini buzganlik uchun javobgarlik"
+ ],
+ "mk-13": [
+  "mehnat shartnomasini bekor qilish to‘g‘risida xodimni oldindan ogohlantirish muddati",
+  "ish beruvchining tashabbusi bilan ishdan bo‘shatishda ogohlantirish muddati"
+ ],
+ "mk-14": [
+  "homilador xodim bilan mehnat shartnomasini bekor qilish",
+  "homilador ayollar mehnatiga oid kafolatlar va ishdan bo‘shatishni cheklash"
+ ],
+ "mk-15": [
+  "foydalanilmagan mehnat ta'tili uchun pul kompensatsiyasi",
+  "yillik mehnat ta'tilini pul kompensatsiyasi bilan almashtirish"
+ ],
+ "mk-16": [
+  "ish haqi saqlanmagan holda ta'til berish",
+  "xodimga o'z hisobidan ta'til olish huquqi"
+ ],
+ "mk-17": [
+  "xizmat safari xarajatlarini qoplash tartibi",
+  "xodimga xizmat safari bilan bog‘liq xarajatlar kompensatsiyasi"
+ ],
+ "mk-18": [
+  "dam olish kunlarida ishga jalb etish tartibi",
+  "dam olish kunidagi ish uchun kompensatsiya va haq to‘lash"
+ ],
+ "mk-19": [
+  "ishga qabul qilishda mehnat daftarchasi taqdim etilishi",
+  "mehnat shartnomasini tuzishda talab qilinadigan hujjatlar mehnat daftarchasi"
+ ],
+ "mk-20": [
+  "xodimning moddiy javobgarligi va zararni to‘liq qoplash hollari",
+  "ish beruvchiga yetkazilgan zararni to‘liq undirish asoslari"
+ ],
+ "mk-21": [
+  "g‘ayriqonuniy ishdan bo‘shatish majburiy progul uchun haq to‘lash",
+  "ishga tiklash majburiy progul vaqti uchun o‘rtacha ish haqi undirish"
+ ],
+ "mk-22": [
+  "mehnatda mayib bo‘lishda ish beruvchining moddiy javobgarligi",
+  "ishlab chiqarishdagi baxtsiz hodisa oqibatida xodimga yetkazilgan zararni qoplash"
+ ],
+ "ok-01": [
+  "nikoh yoshi",
+  "nikoh tuzish uchun belgilangan yosh"
+ ],
+ "ok-02": [
+  "voyaga yetmagan bir nafar bola uchun aliment miqdori",
+  "ota-onaning voyaga yetmagan bolalarni ta'minlash majburiyati aliment ulushi"
+ ],
+ "ok-03": [
+  "nikohdan ajratilganda er-xotinning umumiy mol-mulkini bo‘lish",
+  "er-xotin umumiy birgalikdagi mol-mulkini taqsimlash tartibi"
+ ],
+ "ok-04": [
+  "nikohdan ajratish FHDYO organlari tomonidan",
+  "nikohdan ajratish sud tartibida"
+ ],
+ "ok-05": [
+  "nikohdan ajratishni cheklash homilador xotin",
+  "erning nikohdan ajratish to‘g‘risida da'vo qo‘zg‘atishi homiladorlik davrida"
+ ],
+ "ok-06": [
+  "nikoh shartnomasini tuzish vaqti",
+  "nikoh shartnomasini nikoh davlat roʻyxatidan oʻtkazilgunga qadar yoki nikoh davrida tuzish"
+ ],
+ "ok-07": [
+  "nikohlanuvchi shaxslarni tibbiy ko‘rikdan o‘tkazish",
+  "nikohdan oldin majburiy tibbiy ko‘rik"
+ ],
+ "ok-08": [
+  "otalikni sud tartibida belgilash",
+  "otalikni aniqlash toʻgʻrisidagi ishlar"
+ ],
+ "ok-09": [
+  "soxta nikoh tushunchasi",
+  "nikohni haqiqiy emas deb topish"
+ ],
+ "fk-01": [
+  "da'vo muddati umumiy muddati",
+  "umumiy da'vo muddati necha yil"
+ ],
+ "fk-02": [
+  "fuqarolarning to‘liq muomala layoqati yoshi",
+  "voyaga yetganlikdan boshlab to‘liq muomala layoqati"
+ ],
+ "fk-03": [
+  "voyaga yetmaganlarning bitim tuzish layoqati",
+  "o'n to'rt yoshdan o'n sakkiz yoshgacha bo'lgan voyaga yetmaganlar bitimlari"
+ ],
+ "fk-04": [
+  "qarz shartnomasining shakli va tilxat",
+  "qarz shartnomasi yozma shakli qarz oluvchining tilxati"
+ ],
+ "fk-05": [
+  "qarz shartnomasi bo‘yicha majburiyatni bajarmaganlik oqibatlari",
+  "pul majburiyatini o‘z vaqtida bajarmaslik uchun javobgarlik"
+ ],
+ "fk-06": [
+  "neustoyka tushunchasi va turlari",
+  "majburiyat bajarilmaganda neustoyka to‘lash"
+ ],
+ "fk-07": [
+  "hadya shartnomasini bekor qilish asoslari",
+  "sovg‘a qilingan mol-mulkni qaytarib olish"
+ ],
+ "fk-08": [
+  "merosxo'rlarning birinchi navbatdagi vorislari",
+  "qonun bo'yicha vorislik birinchi navbat"
+ ],
+ "fk-09": [
+  "merosdan majburiy ulush olish huquqiga ega shaxslar",
+  "vasiyatnomadan qat'i nazar majburiy ulush oluvchilar"
+ ],
+ "fk-10": [
+  "vasiyatnomani notarial tasdiqlash tartibi",
+  "vasiyatnomaning haqiqiyligi va notarius tomonidan tasdiqlanishi"
+ ],
+ "fk-11": [
+  "merosdan voz kechish tartibi",
+  "vorisning merosdan voz kechishi"
+ ],
+ "fk-12": [
+  "uy-joy ijarasi shartnomasi yozma shakli",
+  "kvartirani ijaraga berish shartnomasi yozma ravishda tuzilishi"
+ ],
+ "fk-13": [
+  "ijara shartnomasini muddatidan oldin bekor qilish tartibi",
+  "ijarachining tashabbusi bilan ijara shartnomasini bekor qilish"
+ ],
+ "fk-14": [
+  "sifatsiz tovar kafolat muddati hisoblanishi",
+  "tovarning kafolat muddati iste'molchining huquqlari"
+ ],
+ "fk-15": [
+  "voyaga yetmagan shaxs yetkazgan zarar uchun javobgarlik",
+  "o‘n to‘rt yoshga to‘lmagan shaxs tomonidan yetkazilgan zararni qoplash"
+ ],
+ "jk-01": [
+  "firibgarlik uchun jazo",
+  "o‘zganing mulkini aldash yoki ishonchni suiiste’mol qilish yo‘li bilan talon-toroj qilish"
+ ],
+ "jk-02": [
+  "o‘g‘rilik uchun jinoiy javobgarlik",
+  "mol-mulkni yashirin talon-toroj qilish javobgarligi"
+ ],
+ "jk-03": [
+  "pora berganlik uchun javobgarlik",
+  "pora berish jinoyati uchun jazo"
+ ],
+ "jk-04": [
+  "mansabdor shaxs tomonidan pora olish uchun javobgarlik",
+  "pora olish jinoyati uchun ozodlikdan mahrum etish jazosi"
+ ],
+ "jk-05": [
+  "jinoiy javobgarlik yoshi",
+  "jinoiy javobgarlikka tortilish yoshi"
+ ],
+ "jk-06": [
+  "axborot tarmoqlarida tuhmat qilganlik uchun javobgarlik",
+  "internet tarmog'ida haqorat va tuhmat uchun jinoiy javobgarlik"
+ ],
+ "jk-07": [
+  "aliment to‘lashdan bo‘yin tovlash javobgarlik",
+  "voyaga yetmaganlarni ta’minlash majburiyatini bajarmaslik javobgarlik"
+ ],
+ "jk-08": [
+  "jabrlanuvchi bilan yarashganligi munosabati bilan jinoiy javobgarlikdan ozod qilish",
+  "yarashuv munosabati bilan jinoyat ishini tugatish asoslari"
+ ],
+ "mjk-01": [
+  "transport vositasini mast holda boshqarish uchun ma'muriy javobgarlik",
+  "alkogolli mastlik holatida transport vositasini boshqarganlik uchun jarima"
+ ],
+ "mjk-02": [
+  "jamoat joylarida alkogolli mahsulotlarni iste'mol qilish taqiqlanishi va javobgarlik",
+  "jamoat joyida pivo ichish uchun ma'muriy javobgarlik va jarima"
+ ],
+ "mjk-03": [
+  "mayda bezorilik uchun javobgarlik",
+  "mayda bezorilik sodir etganlik uchun jazo choralari"
+ ],
+ "mjk-04": [
+  "transport vositasini boshqarish huquqini tasdiqlovchi hujjatsiz boshqarish",
+  "haydovchilik guvohnomasi bo‘lmagan shaxsning transport vositasini boshqarishi"
+ ],
+ "mjk-05": [
+  "transport vositasini svetoforning taqiqlovchi ishorasida boshqarib o‘tish uchun jarima",
+  "svetoforning qizil chirog‘ida harakatlanish qoidabuzarligi uchun ma’muriy javobgarlik"
+ ],
+ "mjk-06": [
+  "piyodalar tomonidan yo‘l harakati qoidalarini buzish uchun javobgarlik",
+  "yo‘l harakati qoidalarini buzgan piyodalarga jarima"
+ ],
+ "mjk-07": [
+  "maxsus avtomatlashtirilgan foto va video qayd etish vositalari orqali rasmiylashtirilgan ma'muriy jarima ustidan shikoyat qilish tartibi",
+  "ma'muriy huquqbuzarlik to'g'risidagi qaror ustidan e'tiroz bildirish va shikoyat berish"
+ ],
+ "mjk-08": [
+  "ma'muriy javobgarlikka tortish yoshi",
+  "ma'muriy javobgarlik subyekti yoshi"
+ ],
+ "mjk-09": [
+  "ma'muriy jarimani to'lash muddati",
+  "jarimani ixtiyoriy to'lash muddati"
+ ],
+ "sk-01": [
+  "jismoniy shaxslarning daromad solig‘i stavkasi ish haqi",
+  "mehnatga haq to‘lash tarzidagi daromadlarga soliq stavkasi"
+ ],
+ "sk-02": [
+  "qo‘shilgan qiymat solig‘i stavkasi",
+  "QQS soliq stavkasi miqdori"
+ ],
+ "sk-03": [
+  "jismoniy shaxslarning uy-joy obyektlariga mol-mulk solig‘i stavkalari",
+  "uy-joy bo‘yicha mol-mulk solig‘i hisoblash stavkasi"
+ ],
+ "sk-04": [
+  "aylanmadan olinadigan soliq stavkalari",
+  "aylanmadan olinadigan soliq bo‘yicha soliq stavkasi"
+ ],
+ "sk-05": [
+  "jismoniy shaxslardan olinadigan yer solig‘i stavkalari",
+  "yer solig‘i jismoniy shaxslar uchun soliq stavkalari"
+ ],
+ "sk-06": [
+  "foyda solig‘i stavkasi",
+  "yuridik shaxslar foyda solig‘i"
+ ],
+ "kon-01": [
+  "O‘zbekiston Respublikasi Prezidenti saylanish muddati",
+  "Prezident vakolat muddati necha yil"
+ ],
+ "kon-02": [
+  "o‘lim jazosi bekor qilinganligi",
+  "jinoyat qonunchiligida o‘lim jazosini qo‘llamaslik"
+ ],
+ "kon-03": [
+  "davlat tili o‘zbek tili",
+  "O‘zbekiston Respublikasining davlat tili"
+ ],
+ "kon-04": [
+  "turar joydan chiqarish sud qarori asosida",
+  "uy-joydan majburiy ko‘chirish qonuniy asoslari"
+ ],
+ "kon-05": [
+  "bepul ta'lim olish huquqi kafolatlanadi",
+  "davlat bepul umumiy ta'lim olishni kafolatlaydi"
+ ],
+ "kon-06": [
+  "so‘z erkinligi konstitutsiyaviy huquq",
+  "fikr bildirish va axborot tarqatish erkinligi"
+ ],
+ "kon-07": [
+  "yoshga doir pensiya olish huquqi",
+  "davlat pensiya ta'minoti yoshga doir pensiya tayinlash shartlari"
+ ],
+ "kon-08": [
+  "davlat tomonidan bepul yuridik yordam ko‘rsatish",
+  "advokat xizmatlari uchun davlat hisobidan yuridik yordam"
+ ],
+ "q-01": [
+  "pensiya tayinlash uchun ish staji talabi",
+  "qarilik pensiyasi uchun zarur mehnat staji"
+ ],
+ "q-02": [
+  "yoshga doir pensiya tayinlash uchun zarur ish staji yetarli bo‘lmagan shaxslar",
+  "ish staji mavjud bo‘lmaganda yoki yetarli bo‘lmaganda nafaqa tayinlash tartibi"
+ ],
+ "q-03": [
+  "pensiya tayinlash uchun murojaat qilish tartibi",
+  "pensiya tayinlash toʻgʻrisida ariza berish organi"
+ ],
+ "q-04": [
+  "sifatsiz tovarni almashtirish iste'molchi huquqlari",
+  "nuqsonli telefonni qaytarish yoki almashtirish sotuvchi majburiyati"
+ ],
+ "q-05": [
+  "tegishli sifatdagi nooziq-ovqat tovarini almashtirish o‘lchami mos kelmasa",
+  "iste’molchi huquqlari kiyim-kechakni qaytarish yoki almashtirish tartibi"
+ ],
+ "q-06": [
+  "bank omonatlarini kafolatlash va qoplab berish tartibi",
+  "bank tugatilganda omonatchilarga kompensatsiya to‘lash miqdori"
+ ],
+ "q-07": [
+  "kreditni muddatidan oldin qaytarish uchun neustoyka undirishni taqiqlash",
+  "qarz oluvchining kreditni muddatidan oldin so‘ndirish huquqi"
+ ],
+ "q-08": [
+  "iste'mol krediti olish uchun taqdim etiladigan hujjatlar",
+  "qarz oluvchining to'lovga qobiliyatini tasdiqlovchi hujjatlar"
+ ],
+ "q-09": [
+  "harbiy xizmatga chaqiruvni kechiktirish ta'lim olayotgan fuqarolar",
+  "muddatli harbiy xizmatga chaqiruvdan o'qish munosabati bilan kechiktirish"
+ ],
+ "q-10": [
+  "harbiy xizmatdan ozod etiladigan shaxslar",
+  "muddatli harbiy xizmatga chaqirilishdan ozod qilish asoslari"
+ ],
+ "q-11": [
+  "muddatli harbiy xizmat muddati",
+  "harbiy xizmatni o‘tash muddati oy"
+ ],
+ "q-12": [
+  "davlat boji to‘lashdan ozod etiladigan shaxslar",
+  "sudga da’vo arizasi bilan murojaat qilganda davlat bojidan ozod etish"
+ ],
+ "q-13": [
+  "davlat bojining ortiqcha toʻlangan summasini qaytarish",
+  "ortiqcha toʻlangan davlat bojini qaytarish tartibi"
+ ],
+ "q-14": [
+  "fuqarolik javobgarligini majburiy sug‘urta polisi amal qilish muddati",
+  "transport vositalari egalarining fuqarolik javobgarligini majburiy sug‘urta shartnomasi muddati"
+ ],
+ "q-15": [
+  "transport vositalari egalarining fuqarolik javobgarligini majburiy sugʻurta sugʻurta toʻlovi miqdori",
+  "yoʻl-transport hodisasi natijasida yetkazilgan zararni qoplash sugʻurta tovoni"
+ ],
+ "q-16": [
+  "O‘zbekiston Respublikasining fuqaroligiga qabul qilish tartibi",
+  "fuqarolikni olish asoslari va shartlari"
+ ],
+ "q-17": [
+  "ikki fuqarolik",
+  "O‘zbekiston Respublikasining fuqaroligi boshqa davlat fuqaroligi bilan birgalikda tan olinishi"
+ ],
+ "q-18": [
+  "notarial harakatni amalga oshirishni rad etish asoslari",
+  "notarius notarial harakatni bajarishni rad etadigan hollar"
+ ],
+ "q-19": [
+  "shaxsga doir ma'lumotlarni uchinchi shaxslarga berish",
+  "shaxsga doir ma'lumotlarni tarqatishga rozilik"
+ ],
+ "q-20": [
+  "davlat hisobidan yuridik yordam olish huquqiga ega shaxslar",
+  "bepul yuridik yordam ko‘rsatiladigan fuqarolar toifalari"
+ ]
+}

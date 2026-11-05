@@ -72,6 +72,7 @@ def build_parser() -> argparse.ArgumentParser:
     p.add_argument("--modes", default="fts,vector,hybrid")
     p.add_argument("--no-stem", action="store_true")
     p.add_argument("--no-alt", action="store_true", help="ignore alternative phrasings")
+    p.add_argument("--alt-file", type=Path, help="JSON {id: [queries]} replacing alt")
     p.add_argument("--model", default=DEFAULT_MODEL, choices=sorted(MODELS))
     p.add_argument("--save", metavar="LABEL", help="write eval/results/<date>-<LABEL>.json")
     return parser
@@ -83,7 +84,7 @@ def _eval(args: argparse.Namespace) -> int:
     from qonunshunos.search.hybrid import search
 
     settings = Settings.from_env(args.data_dir)
-    questions = load_questions(args.questions)
+    questions = load_questions(args.questions, args.alt_file)
     embedder = Embedder(settings.model_dir, args.model)
     with connect(settings.dsn) as conn:
 
@@ -97,7 +98,7 @@ def _eval(args: argparse.Namespace) -> int:
     report["settings"] = {
         "model": args.model,
         "stem": not args.no_stem,
-        "alt": not args.no_alt,
+        "alt": "none" if args.no_alt else str(args.alt_file or "questions"),
         "questions": str(args.questions),
     }
     print(format_report(report))

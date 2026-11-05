@@ -34,3 +34,15 @@ def test_load_questions(tmp_path):
     )
     (q,) = load_questions(path)
     assert q.expected == [Expected(-6257288, "161")]
+
+
+def test_alt_file_replaces_alt(tmp_path):
+    path = tmp_path / "q.yaml"
+    path.write_text(
+        "- id: a\n  question: Savol?\n  expected: [{document: -1, article: 1}]\n  alt: [eski]\n",
+        encoding="utf-8",
+    )
+    alt = tmp_path / "alt.json"
+    alt.write_text('{"a": ["yangi ibora"]}', encoding="utf-8")
+    assert load_questions(path)[0].alt == ["eski"]
+    assert load_questions(path, alt)[0].alt == ["yangi ibora"]

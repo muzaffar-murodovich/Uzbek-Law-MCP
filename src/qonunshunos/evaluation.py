@@ -27,8 +27,10 @@ class Question:
     alt: list[str] = field(default_factory=list)
 
 
-def load_questions(path: Path) -> list[Question]:
+def load_questions(path: Path, alt_file: Path | None = None) -> list[Question]:
+    """Questions from YAML; ``alt_file`` (JSON ``{id: [query, ...]}``) replaces ``alt``."""
     raw = yaml.safe_load(path.read_text(encoding="utf-8"))
+    alt_override = json.loads(alt_file.read_text(encoding="utf-8")) if alt_file else None
     questions = []
     seen = set()
     for item in raw:
@@ -43,7 +45,11 @@ def load_questions(path: Path) -> list[Question]:
                     Expected(int(e["document"]), str(e["article"])) for e in item["expected"]
                 ],
                 tags=list(item.get("tags", [])),
-                alt=list(item.get("alt", [])),
+                alt=list(
+                    alt_override.get(str(item["id"]), [])
+                    if alt_override is not None
+                    else item.get("alt", [])
+                ),
             )
         )
     return questions
