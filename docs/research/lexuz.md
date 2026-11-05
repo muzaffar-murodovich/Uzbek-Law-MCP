@@ -79,6 +79,51 @@ Lotin matnlarda rasmiy imlo ishlatilgan: `ʻ` (U+02BB, oʻ / gʻ) va `ʼ` (U+02B
 Foydalanuvchilar esa `o'`, `o‘`, `o’`, `` o` `` deb yozadi. Indekslash va qidiruvda hammasi bitta
 shaklga keltiriladi.
 
+### Parser uchun tafsilotlar
+
+- Hujjat matni `div#divCont` ichida. Uning bolalari tekis ketma-ketlikda keladi, ichma-ich
+  daraxt yo'q. Mehnat kodeksida bunday bolalar 5 286 ta.
+- Ketma-ketlik namunasi (Mehnat kodeksi):
+
+  ```
+  INDEXES_ON_REF       hujjat darajasidagi OKOZ/TSZ kodlari (ACT_FORM'dan oldin)
+  ACT_FORM, ACT_TITLE, NEW_EDITION, BY_DEFAULT
+  TEXT_HEADER_DEFAULT  "UMUMIY QISM" → "I BOʻLIM. UMUMIY QOIDALAR" → (bo'sh) → "1-bob. Asosiy qoidalar"
+  CLAUSE_DEFAULT       "1-modda. …"
+  INDEXES_ON_REF       moddaning OKOZ kodlari (modda sarlavhasidan keyin)
+  ACT_TEXT …           modda matni (har bir qism yoki band alohida blok)
+  COMMENT              "Oldingi tahrirga qarang." (o'zgartirilgan xatboshidan oldin)
+  CHANGES_ORIGINS      o'zgartirish manbasi (o'zgartirilgan xatboshidan keyin)
+  …
+  PUBLICATION_ORIGIN   rasmiy nashr manbalari ro'yxati (eng oxirida)
+  ```
+
+- Bo'sh `TEXT_HEADER_DEFAULT` bloklari uchraydi, ular o'tkazib yuboriladi.
+- `CHANGES_ORIGINS` ichida o'zgartirish kiritgan hujjatga havola bor:
+  `<a href="/docs/-7108715?ONDATE=21.09.2024 00#-7108833">Qonuni </a>`. Matn namunasi:
+  "(4-moddaning ikkinchi qismi Oʻzbekiston Respublikasining 2024-yil 20-sentabrdagi OʻRQ-963-sonli
+  Qonuni tahririda — Qonunchilik maʼlumotlari milliy bazasi, 21.09.2024-y., 03/24/963/0735-son)".
+  Ba'zan kelajakdagi kuchga kirish sanasi ham yoziladi: "Kuchga kirish sanasi — 2026-yil 12-sentabr".
+- `COMMENT` ikki xil bo'ladi: "Oldingi tahrirga qarang." (navigatsiya, kerak emas) va
+  "LexUZ sharhi. Qarang: …" (boshqa hujjatlarga havolalar bilan).
+- Kiritilgan modda va bandlar `<sup>` bilan yoziladi: `5<sup>1</sup>) …` (band),
+  `39<sup>1</sup>-moddalari`, `97 — 103<sup>1</sup>-moddalari`. Matnda ular Unicode yuqori
+  indeksga (¹²³…) aylantiriladi.
+- `<title>` formati: `&nbsp;O‘RQ-42-сон 20.07.2006.&nbsp;Mualliflik huquqi va turdosh huquqlar
+  toʻgʻrisida`, ya'ni raqam (lotin sahifada ham kirillcha "-сон" bilan), sana va nom. Raqami yo'q
+  hujjatda faqat sana va nom bo'ladi: `&nbsp; 30.04.2023.&nbsp;Oʻzbekiston Respublikasi
+  Konstitutsiyasi`. `ACT_TITLE` ko'pincha katta harflarda yozilgan, shuning uchun nomni `<title>`dan
+  olish ma'qul.
+- Tahrir sanalari `#dd3` ochiluvchi ro'yxatida: birinchisi (havolasiz) joriy tahrir, qolganlari
+  `lxOpenUrl('/docs/{id}?ONDATE=…')`.
+- Til tugmalari: `Рус` → `openUrl('/docs/6445147')`, `Eng` → `openUrl('/docs/6451070')`,
+  `Ўзб` / `O’zb` → kirill / lotin versiya. Joriy versiya tugmasida `onclick` bo'lmaydi.
+- Hujjatlar ichidagi havolalarda uchragan ID'lar (nomi hali tekshirilmagan): `111453` (Jinoyat
+  kodeksi bo'lsa kerak), `97664` (Ma'muriy javobgarlik to'g'risidagi kodeks bo'lsa kerak), `111460`.
+- Statistika sahifasida ro'yxatlarga havola yo'q, shuning uchun "Kodeks" shaklining `form_id`si
+  hali topilmagan. Bosh sahifadagi havolalar: `sort_id=3975&form_id=3968` — "Qonun" shakli
+  (1 590 ta lotin hujjat), `sort_id=3985` — Prezident hujjatlari (5 612 ta).
+
 ## 5. Hujjatlar ro'yxati va yangilanishlar
 
 - Qidiruv ro'yxatlari: `/uz/search/nat?lang=4&sort_id=…[&form_id=…]`. Sahifada 20 ta natija.
