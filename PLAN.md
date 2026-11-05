@@ -18,11 +18,12 @@ O'zbekiston Respublikasi qonunchiligiga oid savollarga javob topishda yordam ber
 | Tahrirlar | Faqat amaldagi tahrir. Kuchini yo'qotgan hujjatlarning faqat rekvizitlari saqlanadi, matni indekslanmaydi |
 | Yangilash | Har kuni tunda avtomatik |
 | Stek | Python: MCP Python SDK (FastMCP) + Starlette/FastAPI |
-| Joylashuv | Hetzner, 4 GB RAM / 2 vCPU (keyin kuchliroq server) |
+| Joylashuv | Gibrid (2026-11-05). Xizmat `myserver`da (Hetzner, 2 vCPU / 3,7 GB, ochiq IP) Dockersiz ishlaydi: systemd + mavjud nginx + mavjud PostgreSQL 16 + pgvector. Og'ir ish (to'liq yuklab olish, boshlang'ich embedding) `home` serverda (i5-1235U, 12 oqim, 7,4 GB) bajariladi, tayyor baza `pg_dump` bilan `myserver`ga ko'chiriladi. Kunlik yangilash `myserver`ning o'zida |
+| Domen | `qonunshunos.muzaffar.zip` (MCP manzili: `https://qonunshunos.muzaffar.zip/mcp`). DNS A yozuvi spaceship.com'da `myserver` IP'siga qo'shiladi |
 | Transport | Streamable HTTP (remote MCP) |
 | Mijozlar | claude.ai, Claude Desktop, Claude Code, ChatGPT, Cursor — OAuth 2.1 orqali |
 | Kirish | Google (Gmail) va Telegram orqali |
-| Bepul limit | Kuniga 3 ta qidiruv (`search_law`). Boshqa vositalar (modda o'qish va h.k.) uchun kuniga 20 ta chaqiruv |
+| Bepul limit | Bepul davrda (2026-11-05 qarori): kuniga 30 ta `search_law`, boshqa vositalar uchun kuniga 200 ta chaqiruv, bundan tashqari daqiqasiga 10 tadan ko'p chaqiruv qilinmaydi. Bu limitlar serverni suiiste'moldan himoya qiladi, oddiy foydalanishga xalaqit bermaydi. Kuniga 3 ta qidiruv limiti pullik tariflar bilan birga bepul tarifga kiritiladi. Barcha qiymatlar konfiguratsiyada |
 | To'lov | Hozircha hamma narsa bepul. Pullik tariflar (Payme/Click) keyinroq qo'shiladi. Foydalanish statistikasi boshidan yoziladi, administrator foydalanuvchiga alohida limit berishi mumkin |
 
 ## 2. 0-bosqich natijalari (lex.uz tadqiqoti)
@@ -71,17 +72,27 @@ Batafsil: [docs/research/lexuz.md](docs/research/lexuz.md). Qisqacha:
 ## 4. Arxitektura
 
 ```
-                 ┌──────────────────────── Hetzner (Docker Compose) ───────────────────────┐
- MCP mijoz ──TLS──► Caddy (HTTPS, avtomatik sertifikat)                                      │
+                 ┌──────────────────────── myserver (systemd, Dockersiz) ──────────────────┐
+ MCP mijoz ──TLS──► nginx (HTTPS, Let's Encrypt, mavjud)                                     │
  (claude.ai,     │    │                                                                     │
   ChatGPT, ...)  │    ├─► app: MCP server (/mcp) + OAuth server (/authorize, /token, ...)   │
                  │    │        │  kirish: Google (OIDC), Telegram Login                      │
                  │    │        ▼                                                             │
-                 │    │   PostgreSQL 16 + pgvector + pg_trgm                                 │
+                 │    │   PostgreSQL 16 + pgvector + pg_trgm (mavjud klaster, alohida baza) │
                  │    │        ▲                                                             │
-                 │    └─ worker: kunlik cron → lex.uz crawler → parser → chunk → embedding  │
+                 │    └─ worker: kunlik systemd timer → crawler → parser → chunk → embedding│
                  └──────────────────────────────────────────────────────────────────────────┘
+                                         ▲ pg_dump / pg_restore (boshlang'ich yuklash)
+                 ┌─────────── home (Docker: postgres 16 + pgvector) ───────────┐
+                 │ to'liq yuklab olish → parser → chunk → embedding (12 oqim)  │
+                 └─────────────────────────────────────────────────────────────┘
 ```
+
+- **Gibrid joylashuv:** `myserver`da allaqachon nginx, PostgreSQL 16, 3 ta gunicorn ilova va
+  Telegram bot ishlaydi (bo'sh RAM ≈2,8 GB). Docker qo'shilmaydi, Qonunshunos ham boshqa ilovalar
+  kabi systemd xizmati sifatida ishlaydi. `home` — uy noutbuki: kuchli, lekin doim yoqiq emas.
+  Shuning uchun u faqat og'ir, bir martalik ishlar uchun ishlatiladi. Ikkala muhitda ham
+  PostgreSQL 16 bo'lishi kerak, aks holda dump/restore muammo beradi.
 
 - **PostgreSQL + pgvector** — bitta bazada hujjatlar, FTS indeksi, vektorlar, foydalanuvchilar,
   OAuth tokenlar va statistika saqlanadi.
@@ -93,8 +104,9 @@ Batafsil: [docs/research/lexuz.md](docs/research/lexuz.md). Qisqacha:
   ishlatiladi va unga o'zimizning normalizatsiya qo'shiladi: apostroflar (`oʻ o' o‘ o'` → bitta
   shakl), pastki registr, oddiy qo'shimchalarni kesish. `pg_trgm` faqat hujjat nomi va raqami
   bo'yicha xatoli qidiruv uchun ishlatiladi.
-- **4 GB RAM:** Postgres `shared_buffers≈1GB`, app va model ≈1 GB, qolgani OS keshiga.
-  Bu chegaraga yaqin, lekin MVP uchun yetadi.
+- **RAM:** `myserver`dagi Postgres klasteri boshqa ilovalar bilan umumiy. Qonunshunos app va
+  modeli ≈0,5–1 GB oladi. Vektor indeksi (≈22 ming hujjat, bir necha yuz ming bo'lak × 384 ×
+  2 bayt) bir necha yuz MB bo'ladi.
 
 ## 5. Ma'lumotlar modeli (soddalashtirilgan)
 
@@ -124,14 +136,15 @@ beruvchining tashabbusiga ko'ra bekor qilish".
 
 | Tool | Vazifasi | Limit |
 |---|---|---|
-| `search_law(query, alt_queries?, doc_types?, limit=8)` | Gibrid qidiruv, faqat amaldagi hujjatlar bo'yicha. `alt_queries` (≤2) bilan bitta chaqiruvda bir nechta ifoda qidiriladi, bu bitta qidiruv deb sanaladi | 3/kun |
-| `get_article(document, article)` | Moddaning to'liq matni ("Mehnat kodeksi", "161") | 20/kun* |
-| `get_document(document_id)` | Rekvizitlar + mundarija | 20/kun* |
-| `get_section(document_id, path)` | Bob yoki bo'lim matni (sahifalab) | 20/kun* |
-| `find_document(title_or_number, doc_type?, year?)` | Hujjatni nomi yoki raqami bo'yicha topish ("PF-60", "OʻRQ-963") | 20/kun* |
+| `search_law(query, alt_queries?, doc_types?, limit=8)` | Gibrid qidiruv, faqat amaldagi hujjatlar bo'yicha. `alt_queries` (≤2) bilan bitta chaqiruvda bir nechta ifoda qidiriladi, bu bitta qidiruv deb sanaladi | 30/kun |
+| `get_article(document, article)` | Moddaning to'liq matni ("Mehnat kodeksi", "161") | 200/kun* |
+| `get_document(document_id)` | Rekvizitlar + mundarija | 200/kun* |
+| `get_section(document_id, path)` | Bob yoki bo'lim matni (sahifalab) | 200/kun* |
+| `find_document(title_or_number, doc_type?, year?)` | Hujjatni nomi yoki raqami bo'yicha topish ("PF-60", "OʻRQ-963") | 200/kun* |
 | `list_codes()` | Amaldagi kodekslar ro'yxati | limitsiz |
 
-\* Bu to'rt vosita uchun umumiy limit.
+\* Bu to'rt vosita uchun umumiy limit. Qiymatlar bepul davr uchun (1-bo'lim). Barcha vositalarga
+qo'shimcha ravishda daqiqasiga 10 ta chaqiruv chegarasi qo'yiladi.
 
 Tamoyillar:
 
@@ -157,7 +170,8 @@ Tamoyillar:
 - **Telegram:** Telegram Login Widget. BotFather'da bot ochiladi va `/setdomain` bilan domenga
   bog'lanadi. Server javobni bot tokeni bilan HMAC-SHA256 orqali tekshiradi.
 - Bitta akkauntga Google va Telegram ikkalasini ham ulash mumkin.
-- **Limitlar:** bepul tarifda kuniga 3 ta `search_law` va 20 ta boshqa chaqiruv. Hisoblagich har
+- **Limitlar:** bepul davrda kuniga 30 ta `search_law` va 200 ta boshqa chaqiruv, daqiqasiga 10 ta
+  (pullik tariflar kelganda bepul tarif kuniga 3 ta `search_law`ga tushiriladi). Hisoblagich har
   kuni 00:00 da (Toshkent vaqti) nolga tushadi. Limit tugaganda vosita xato emas, o'zbekcha xabar
   qaytaradi ("Bugungi bepul limit tugadi, ertaga 00:00 dan keyin qayta urinib ko'ring"). Shunda AI
   yordamchi buni foydalanuvchiga tushuntira oladi.
@@ -172,8 +186,8 @@ Tamoyillar:
 | 1 | Parser + crawler (avval namunaviy to'plamda) | 1 hafta | ✅ bajarildi (namunaviy to'plam) |
 | 2 | Indekslash, gibrid qidiruv, baholash to'plami | 1 hafta | |
 | 3 | MCP server va tool'lar | 3–4 kun | |
-| 4 | OAuth, Google/Telegram kirish, limitlar | 1 hafta | domen kerak |
-| 5 | Hetzner'ga deploy, zaxira nusxa, monitoring, kunlik yangilash | 2–3 kun | |
+| 4 | OAuth, Google/Telegram kirish, limitlar | 1 hafta | domen: `qonunshunos.muzaffar.zip` |
+| 5 | `myserver`ga deploy, zaxira nusxa, monitoring, kunlik yangilash | 2–3 kun | |
 | 6 | To'liq yuklab olish va bepul ommaga ochish | 1–2 kun | |
 | 7 | Pullik tariflar | — | avval "Adolat" markaziga xat va yozma rozilik |
 
@@ -198,8 +212,12 @@ Tamoyillar:
 
 - MCP server: FastMCP, Streamable HTTP. MCP Inspector va Claude Code bilan sinaladi.
 - OAuth va kirish 7-bo'limda yozilganidek. claude.ai va ChatGPT konnektorlari bilan sinaladi.
-- Deploy: Docker Compose (`caddy`, `app`, `worker`, `postgres`). Har kuni `pg_dump` bilan zaxira
-  nusxa (Hetzner Storage Box), healthcheck, xatolik bo'lsa Telegram orqali xabar.
+- Deploy: `myserver`da systemd xizmatlari (`qonunshunos-app`, `qonunshunos-worker.timer`), mavjud
+  nginx'ga `qonunshunos.muzaffar.zip` uchun sayt va Let's Encrypt sertifikati. PostgreSQL 16'ga
+  `postgresql-16-pgvector` paketi o'rnatiladi va alohida baza hamda foydalanuvchi ochiladi.
+  Boshlang'ich baza `home`da tayyorlanib `pg_dump`/`pg_restore` bilan ko'chiriladi. Har kuni
+  `pg_dump` bilan zaxira nusxa olinadi (masalan, `home`ga), healthcheck ishlaydi, xatolik bo'lsa
+  Telegram orqali xabar keladi.
 
 ### Keyingi bosqichlar
 
@@ -231,6 +249,5 @@ docs/           tadqiqot, xatlar
 
 ## 10. Ochiq savollar
 
-1. **Domen.** Google va Telegram kirishini sozlash uchun 4-bosqichdan oldin kerak bo'ladi.
-2. **Kunlik limit bepul davrda.** Kuniga 3 ta qidiruv limiti xizmat to'liq bepul bo'lgan davrda
-   ham qoladimi yoki pullik tariflar bilan birga kiritiladimi?
+Hozircha yo'q. Hal qilinganlar (2026-11-05): domen va joylashuv (1-bo'lim), bepul davrdagi
+limitlar (1-bo'lim).

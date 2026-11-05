@@ -26,8 +26,12 @@ Dasturlash tili — Python.
 - Pullik tariflar va boshqa daromad manbalari faqat "Adolat" markazining yozma roziligidan keyin
   yoqiladi. Xat to'lov bosqichi boshlanganda yuboriladi.
 - Faqat amaldagi tahrir indekslanadi. Kuchini yo'qotgan hujjatlarning faqat rekvizitlari saqlanadi.
-- Stek: Python 3.12+, uv, MCP Python SDK (FastMCP), PostgreSQL + pgvector,
-  `multilingual-e5-small` (ONNX, int8), Docker Compose + Caddy, Hetzner (4 GB RAM / 2 vCPU).
+- Stek: Python 3.12+, uv, MCP Python SDK (FastMCP), PostgreSQL 16 + pgvector,
+  `multilingual-e5-small` (ONNX, int8).
+- Joylashuv: xizmat `myserver`da (`ssh myserver`, Hetzner, systemd + nginx, Dockersiz). Og'ir
+  bir martalik ishlar (to'liq yuklab olish, embedding) `home`da (`ssh home`, Tailscale, Docker).
+  Domen: `qonunshunos.muzaffar.zip`. Serverlarda o'zgarish qilishdan oldin foydalanuvchidan so'ra.
+- Bepul davr limitlari: kuniga 30 ta qidiruv, 200 ta boshqa chaqiruv, daqiqasiga 10 ta.
 
 ## lex.uz bilan ishlash
 
