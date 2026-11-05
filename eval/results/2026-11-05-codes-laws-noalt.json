@@ -1,0 +1,2998 @@
+{
+ "modes": {
+  "fts": {
+   "overall": {
+    "n": 97,
+    "recall_at_1": 0.14432989690721648,
+    "recall_at_5": 0.5154639175257731,
+    "recall_at_10": 0.6701030927835051,
+    "mrr": 0.3061937489772541
+   },
+   "by_tag": {
+    "bank": {
+     "n": 1,
+     "recall_at_1": 0.0,
+     "recall_at_5": 0.0,
+     "recall_at_10": 0.0,
+     "mrr": 0.0
+    },
+    "davlat-boji": {
+     "n": 2,
+     "recall_at_1": 0.5,
+     "recall_at_5": 1.0,
+     "recall_at_10": 1.0,
+     "mrr": 0.625
+    },
+    "fuqarolik": {
+     "n": 15,
+     "recall_at_1": 0.13333333333333333,
+     "recall_at_5": 0.3333333333333333,
+     "recall_at_10": 0.6666666666666666,
+     "mrr": 0.24423280423280422
+    },
+    "fuqarolik-instituti": {
+     "n": 2,
+     "recall_at_1": 0.0,
+     "recall_at_5": 0.5,
+     "recall_at_10": 0.5,
+     "mrr": 0.125
+    },
+    "harbiy": {
+     "n": 3,
+     "recall_at_1": 0.0,
+     "recall_at_5": 1.0,
+     "recall_at_10": 1.0,
+     "mrr": 0.3611111111111111
+    },
+    "istemolchi": {
+     "n": 2,
+     "recall_at_1": 0.0,
+     "recall_at_5": 0.5,
+     "recall_at_10": 1.0,
+     "mrr": 0.3
+    },
+    "jinoyat": {
+     "n": 8,
+     "recall_at_1": 0.375,
+     "recall_at_5": 0.75,
+     "recall_at_10": 0.875,
+     "mrr": 0.5125
+    },
+    "konstitutsiya": {
+     "n": 8,
+     "recall_at_1": 0.125,
+     "recall_at_5": 0.5,
+     "recall_at_10": 0.625,
+     "mrr": 0.2760416666666667
+    },
+    "kredit": {
+     "n": 2,
+     "recall_at_1": 0.0,
+     "recall_at_5": 0.5,
+     "recall_at_10": 0.5,
+     "mrr": 0.16666666666666666
+    },
+    "malumot": {
+     "n": 1,
+     "recall_at_1": 0.0,
+     "recall_at_5": 0.0,
+     "recall_at_10": 0.0,
+     "mrr": 0.0
+    },
+    "mamuriy": {
+     "n": 9,
+     "recall_at_1": 0.0,
+     "recall_at_5": 0.3333333333333333,
+     "recall_at_10": 0.3333333333333333,
+     "mrr": 0.14814814814814814
+    },
+    "mehnat": {
+     "n": 22,
+     "recall_at_1": 0.18181818181818182,
+     "recall_at_5": 0.5909090909090909,
+     "recall_at_10": 0.7272727272727273,
+     "mrr": 0.3606601731601731
+    },
+    "meros": {
+     "n": 4,
+     "recall_at_1": 0.25,
+     "recall_at_5": 0.5,
+     "recall_at_10": 1.0,
+     "mrr": 0.44166666666666665
+    },
+    "notariat": {
+     "n": 1,
+     "recall_at_1": 0.0,
+     "recall_at_5": 1.0,
+     "recall_at_10": 1.0,
+     "mrr": 0.5
+    },
+    "oila": {
+     "n": 10,
+     "recall_at_1": 0.1,
+     "recall_at_5": 0.7,
+     "recall_at_10": 0.8,
+     "mrr": 0.37916666666666665
+    },
+    "pensiya": {
+     "n": 3,
+     "recall_at_1": 0.0,
+     "recall_at_5": 0.6666666666666666,
+     "recall_at_10": 0.6666666666666666,
+     "mrr": 0.25
+    },
+    "qonun": {
+     "n": 20,
+     "recall_at_1": 0.05,
+     "recall_at_5": 0.55,
+     "recall_at_10": 0.6,
+     "mrr": 0.23833333333333334
+    },
+    "rasmiy": {
+     "n": 12,
+     "recall_at_1": 0.08333333333333333,
+     "recall_at_5": 0.6666666666666666,
+     "recall_at_10": 0.9166666666666666,
+     "mrr": 0.33968253968253964
+    },
+    "soliq": {
+     "n": 6,
+     "recall_at_1": 0.3333333333333333,
+     "recall_at_5": 0.3333333333333333,
+     "recall_at_10": 0.8333333333333334,
+     "mrr": 0.40046296296296297
+    },
+    "sozlashuv": {
+     "n": 79,
+     "recall_at_1": 0.13924050632911392,
+     "recall_at_5": 0.4810126582278481,
+     "recall_at_10": 0.620253164556962,
+     "mrr": 0.28955193891902753
+    },
+    "sugurta": {
+     "n": 2,
+     "recall_at_1": 0.0,
+     "recall_at_5": 0.0,
+     "recall_at_10": 0.0,
+     "mrr": 0.0
+    },
+    "uy-joy": {
+     "n": 2,
+     "recall_at_1": 0.0,
+     "recall_at_5": 0.0,
+     "recall_at_10": 0.0,
+     "mrr": 0.0
+    },
+    "xatoli": {
+     "n": 6,
+     "recall_at_1": 0.3333333333333333,
+     "recall_at_5": 0.6666666666666666,
+     "recall_at_10": 0.8333333333333334,
+     "mrr": 0.4583333333333333
+    },
+    "yol": {
+     "n": 5,
+     "recall_at_1": 0.0,
+     "recall_at_5": 0.2,
+     "recall_at_10": 0.2,
+     "mrr": 0.1
+    },
+    "yuridik-yordam": {
+     "n": 1,
+     "recall_at_1": 0.0,
+     "recall_at_5": 0.0,
+     "recall_at_10": 0.0,
+     "mrr": 0.0
+    }
+   },
+   "ms_per_query": 12.5
+  },
+  "vector": {
+   "overall": {
+    "n": 97,
+    "recall_at_1": 0.14432989690721648,
+    "recall_at_5": 0.41237113402061853,
+    "recall_at_10": 0.5051546391752577,
+    "mrr": 0.25188594338078873
+   },
+   "by_tag": {
+    "bank": {
+     "n": 1,
+     "recall_at_1": 0.0,
+     "recall_at_5": 0.0,
+     "recall_at_10": 0.0,
+     "mrr": 0.0
+    },
+    "davlat-boji": {
+     "n": 2,
+     "recall_at_1": 1.0,
+     "recall_at_5": 1.0,
+     "recall_at_10": 1.0,
+     "mrr": 1.0
+    },
+    "fuqarolik": {
+     "n": 15,
+     "recall_at_1": 0.06666666666666667,
+     "recall_at_5": 0.4,
+     "recall_at_10": 0.4666666666666667,
+     "mrr": 0.20777777777777778
+    },
+    "fuqarolik-instituti": {
+     "n": 2,
+     "recall_at_1": 0.0,
+     "recall_at_5": 0.0,
+     "recall_at_10": 0.0,
+     "mrr": 0.0
+    },
+    "harbiy": {
+     "n": 3,
+     "recall_at_1": 0.3333333333333333,
+     "recall_at_5": 1.0,
+     "recall_at_10": 1.0,
+     "mrr": 0.5555555555555555
+    },
+    "istemolchi": {
+     "n": 2,
+     "recall_at_1": 0.0,
+     "recall_at_5": 0.0,
+     "recall_at_10": 0.0,
+     "mrr": 0.0
+    },
+    "jinoyat": {
+     "n": 8,
+     "recall_at_1": 0.125,
+     "recall_at_5": 0.375,
+     "recall_at_10": 0.375,
+     "mrr": 0.22916666666666666
+    },
+    "konstitutsiya": {
+     "n": 8,
+     "recall_at_1": 0.0,
+     "recall_at_5": 0.125,
+     "recall_at_10": 0.125,
+     "mrr": 0.041666666666666664
+    },
+    "kredit": {
+     "n": 2,
+     "recall_at_1": 0.0,
+     "recall_at_5": 0.5,
+     "recall_at_10": 0.5,
+     "mrr": 0.25
+    },
+    "malumot": {
+     "n": 1,
+     "recall_at_1": 0.0,
+     "recall_at_5": 0.0,
+     "recall_at_10": 0.0,
+     "mrr": 0.0
+    },
+    "mamuriy": {
+     "n": 9,
+     "recall_at_1": 0.1111111111111111,
+     "recall_at_5": 0.6666666666666666,
+     "recall_at_10": 0.7777777777777778,
+     "mrr": 0.3308641975308642
+    },
+    "mehnat": {
+     "n": 22,
+     "recall_at_1": 0.2727272727272727,
+     "recall_at_5": 0.4090909090909091,
+     "recall_at_10": 0.6818181818181818,
+     "mrr": 0.35705266955266957
+    },
+    "meros": {
+     "n": 4,
+     "recall_at_1": 0.0,
+     "recall_at_5": 0.25,
+     "recall_at_10": 0.5,
+     "mrr": 0.10416666666666666
+    },
+    "notariat": {
+     "n": 1,
+     "recall_at_1": 0.0,
+     "recall_at_5": 1.0,
+     "recall_at_10": 1.0,
+     "mrr": 0.3333333333333333
+    },
+    "oila": {
+     "n": 10,
+     "recall_at_1": 0.1,
+     "recall_at_5": 0.4,
+     "recall_at_10": 0.4,
+     "mrr": 0.19166666666666665
+    },
+    "pensiya": {
+     "n": 3,
+     "recall_at_1": 0.0,
+     "recall_at_5": 0.6666666666666666,
+     "recall_at_10": 0.6666666666666666,
+     "mrr": 0.13333333333333333
+    },
+    "qonun": {
+     "n": 20,
+     "recall_at_1": 0.2,
+     "recall_at_5": 0.5,
+     "recall_at_10": 0.5,
+     "mrr": 0.29500000000000004
+    },
+    "rasmiy": {
+     "n": 12,
+     "recall_at_1": 0.16666666666666666,
+     "recall_at_5": 0.5833333333333334,
+     "recall_at_10": 0.6666666666666666,
+     "mrr": 0.3611111111111111
+    },
+    "soliq": {
+     "n": 6,
+     "recall_at_1": 0.0,
+     "recall_at_5": 0.16666666666666666,
+     "recall_at_10": 0.3333333333333333,
+     "mrr": 0.08333333333333333
+    },
+    "sozlashuv": {
+     "n": 79,
+     "recall_at_1": 0.13924050632911392,
+     "recall_at_5": 0.379746835443038,
+     "recall_at_10": 0.46835443037974683,
+     "mrr": 0.2340315451074945
+    },
+    "sugurta": {
+     "n": 2,
+     "recall_at_1": 0.5,
+     "recall_at_5": 0.5,
+     "recall_at_10": 0.5,
+     "mrr": 0.5
+    },
+    "uy-joy": {
+     "n": 2,
+     "recall_at_1": 0.0,
+     "recall_at_5": 0.0,
+     "recall_at_10": 0.0,
+     "mrr": 0.0
+    },
+    "xatoli": {
+     "n": 6,
+     "recall_at_1": 0.16666666666666666,
+     "recall_at_5": 0.5,
+     "recall_at_10": 0.6666666666666666,
+     "mrr": 0.26851851851851855
+    },
+    "yol": {
+     "n": 5,
+     "recall_at_1": 0.2,
+     "recall_at_5": 0.6,
+     "recall_at_10": 0.8,
+     "mrr": 0.4222222222222222
+    },
+    "yuridik-yordam": {
+     "n": 1,
+     "recall_at_1": 0.0,
+     "recall_at_5": 0.0,
+     "recall_at_10": 0.0,
+     "mrr": 0.0
+    }
+   },
+   "ms_per_query": 5.8
+  },
+  "hybrid": {
+   "overall": {
+    "n": 97,
+    "recall_at_1": 0.21649484536082475,
+    "recall_at_5": 0.5567010309278351,
+    "recall_at_10": 0.7010309278350515,
+    "mrr": 0.35960153820978563
+   },
+   "by_tag": {
+    "bank": {
+     "n": 1,
+     "recall_at_1": 0.0,
+     "recall_at_5": 0.0,
+     "recall_at_10": 0.0,
+     "mrr": 0.0
+    },
+    "davlat-boji": {
+     "n": 2,
+     "recall_at_1": 1.0,
+     "recall_at_5": 1.0,
+     "recall_at_10": 1.0,
+     "mrr": 1.0
+    },
+    "fuqarolik": {
+     "n": 15,
+     "recall_at_1": 0.13333333333333333,
+     "recall_at_5": 0.5333333333333333,
+     "recall_at_10": 0.7333333333333333,
+     "mrr": 0.29748677248677247
+    },
+    "fuqarolik-instituti": {
+     "n": 2,
+     "recall_at_1": 0.0,
+     "recall_at_5": 0.5,
+     "recall_at_10": 0.5,
+     "mrr": 0.25
+    },
+    "harbiy": {
+     "n": 3,
+     "recall_at_1": 0.6666666666666666,
+     "recall_at_5": 1.0,
+     "recall_at_10": 1.0,
+     "mrr": 0.8333333333333334
+    },
+    "istemolchi": {
+     "n": 2,
+     "recall_at_1": 0.0,
+     "recall_at_5": 0.0,
+     "recall_at_10": 0.5,
+     "mrr": 0.07142857142857142
+    },
+    "jinoyat": {
+     "n": 8,
+     "recall_at_1": 0.125,
+     "recall_at_5": 0.375,
+     "recall_at_10": 0.75,
+     "mrr": 0.30257936507936506
+    },
+    "konstitutsiya": {
+     "n": 8,
+     "recall_at_1": 0.0,
+     "recall_at_5": 0.25,
+     "recall_at_10": 0.5,
+     "mrr": 0.12395833333333334
+    },
+    "kredit": {
+     "n": 2,
+     "recall_at_1": 0.0,
+     "recall_at_5": 0.5,
+     "recall_at_10": 1.0,
+     "mrr": 0.3333333333333333
+    },
+    "malumot": {
+     "n": 1,
+     "recall_at_1": 0.0,
+     "recall_at_5": 0.0,
+     "recall_at_10": 0.0,
+     "mrr": 0.0
+    },
+    "mamuriy": {
+     "n": 9,
+     "recall_at_1": 0.3333333333333333,
+     "recall_at_5": 0.5555555555555556,
+     "recall_at_10": 0.7777777777777778,
+     "mrr": 0.4095679012345679
+    },
+    "mehnat": {
+     "n": 22,
+     "recall_at_1": 0.36363636363636365,
+     "recall_at_5": 0.7727272727272727,
+     "recall_at_10": 0.7727272727272727,
+     "mrr": 0.5053030303030304
+    },
+    "meros": {
+     "n": 4,
+     "recall_at_1": 0.25,
+     "recall_at_5": 0.5,
+     "recall_at_10": 1.0,
+     "mrr": 0.3715277777777778
+    },
+    "notariat": {
+     "n": 1,
+     "recall_at_1": 0.0,
+     "recall_at_5": 1.0,
+     "recall_at_10": 1.0,
+     "mrr": 0.3333333333333333
+    },
+    "oila": {
+     "n": 10,
+     "recall_at_1": 0.1,
+     "recall_at_5": 0.5,
+     "recall_at_10": 0.6,
+     "mrr": 0.27999999999999997
+    },
+    "pensiya": {
+     "n": 3,
+     "recall_at_1": 0.0,
+     "recall_at_5": 0.6666666666666666,
+     "recall_at_10": 1.0,
+     "mrr": 0.17037037037037037
+    },
+    "qonun": {
+     "n": 20,
+     "recall_at_1": 0.2,
+     "recall_at_5": 0.55,
+     "recall_at_10": 0.7,
+     "mrr": 0.35769841269841274
+    },
+    "rasmiy": {
+     "n": 12,
+     "recall_at_1": 0.25,
+     "recall_at_5": 0.6666666666666666,
+     "recall_at_10": 0.75,
+     "mrr": 0.4078703703703704
+    },
+    "soliq": {
+     "n": 6,
+     "recall_at_1": 0.3333333333333333,
+     "recall_at_5": 0.5,
+     "recall_at_10": 0.5,
+     "mrr": 0.375
+    },
+    "sozlashuv": {
+     "n": 79,
+     "recall_at_1": 0.20253164556962025,
+     "recall_at_5": 0.5316455696202531,
+     "recall_at_10": 0.6835443037974683,
+     "mrr": 0.3401999196302994
+    },
+    "sugurta": {
+     "n": 2,
+     "recall_at_1": 0.0,
+     "recall_at_5": 0.5,
+     "recall_at_10": 0.5,
+     "mrr": 0.25
+    },
+    "uy-joy": {
+     "n": 2,
+     "recall_at_1": 0.0,
+     "recall_at_5": 0.0,
+     "recall_at_10": 0.0,
+     "mrr": 0.0
+    },
+    "xatoli": {
+     "n": 6,
+     "recall_at_1": 0.3333333333333333,
+     "recall_at_5": 0.6666666666666666,
+     "recall_at_10": 0.8333333333333334,
+     "mrr": 0.5185185185185185
+    },
+    "yol": {
+     "n": 5,
+     "recall_at_1": 0.2,
+     "recall_at_5": 0.6,
+     "recall_at_10": 0.8,
+     "mrr": 0.31222222222222223
+    },
+    "yuridik-yordam": {
+     "n": 1,
+     "recall_at_1": 0.0,
+     "recall_at_5": 0.0,
+     "recall_at_10": 0.0,
+     "mrr": 0.0
+    }
+   },
+   "ms_per_query": 20.1
+  }
+ },
+ "questions": {
+  "mk-01": {
+   "question": "Ish beruvchi meni sababsiz ishdan boʻshatishi mumkinmi?",
+   "ranks": {
+    "fts": null,
+    "vector": null,
+    "hybrid": null
+   },
+   "top3": {
+    "fts": [
+     "Mehnat kodeksi 173",
+     "Mehnat kodeksi 98",
+     "Mehnat kodeksi 100"
+    ],
+    "vector": [
+     "Mehnat kodeksi 269",
+     "Fuqarolik protsessual kodeksi 122",
+     "Iqtisodiy protsessual kodeksi 45"
+    ],
+    "hybrid": [
+     "Mehnat kodeksi 173",
+     "OʻRQ-642: Aholi bandligi toʻgʻrisida 45",
+     "Mehnat kodeksi 98"
+    ]
+   }
+  },
+  "mk-02": {
+   "question": "Yillik taʼtil necha kun boʻladi?",
+   "ranks": {
+    "fts": null,
+    "vector": null,
+    "hybrid": 5
+   },
+   "top3": {
+    "fts": [
+     "Mehnat kodeksi 226",
+     "Mehnat kodeksi 449",
+     "Mehnat kodeksi 418"
+    ],
+    "vector": [
+     "Uy-joy kodeksi 52",
+     "Soliq kodeksi 374",
+     "Soliq kodeksi 5"
+    ],
+    "hybrid": [
+     "Mehnat kodeksi 401",
+     "Mehnat kodeksi 418",
+     "Soliq kodeksi 374"
+    ]
+   }
+  },
+  "mk-03": {
+   "question": "Sinov muddati eng koʻpi bilan qancha boʻlishi mumkin?",
+   "ranks": {
+    "fts": 3,
+    "vector": 4,
+    "hybrid": 1
+   },
+   "top3": {
+    "fts": [
+     "Bojxona kodeksi 215",
+     "Jinoyat-ijroiya kodeksi 179",
+     "Mehnat kodeksi 130"
+    ],
+    "vector": [
+     "Qonun OʻRQ-996: Bolalarni zoʻravonlikning barcha shakllaridan himoya qilish toʻgʻrisida 48",
+     "Qonun OʻRQ-901: Pedagogning maqomi toʻgʻrisida 18",
+     "Soliq kodeksi 374"
+    ],
+    "hybrid": [
+     "Mehnat kodeksi 130",
+     "Mehnat kodeksi 132",
+     "Jinoyat-ijroiya kodeksi 179"
+    ]
+   }
+  },
+  "mk-04": {
+   "question": "Oʻz xohishim bilan ishdan ketmoqchiman, necha kun oldin ariza berishim kerak?",
+   "ranks": {
+    "fts": 2,
+    "vector": 7,
+    "hybrid": 1
+   },
+   "top3": {
+    "fts": [
+     "Mehnat kodeksi 116",
+     "Mehnat kodeksi 160",
+     "Jinoyat-protsessual kodeksi 583"
+    ],
+    "vector": [
+     "Jinoyat-protsessual kodeksi 351",
+     "Fuqarolik protsessual kodeksi 198",
+     "Mehnat kodeksi 511"
+    ],
+    "hybrid": [
+     "Mehnat kodeksi 160",
+     "Mehnat kodeksi 116",
+     "Jinoyat-protsessual kodeksi 351"
+    ]
+   }
+  },
+  "mk-05": {
+   "question": "Ishdan boʻshatilganda qanday nafaqa toʻlanadi?",
+   "ranks": {
+    "fts": 1,
+    "vector": 1,
+    "hybrid": 1
+   },
+   "top3": {
+    "fts": [
+     "Mehnat kodeksi 173",
+     "OʻRQ-642: Aholi bandligi toʻgʻrisida 49",
+     "OʻRQ-642: Aholi bandligi toʻgʻrisida 53"
+    ],
+    "vector": [
+     "Mehnat kodeksi 173",
+     "Mehnat kodeksi 189",
+     "Soliq kodeksi 369"
+    ],
+    "hybrid": [
+     "Mehnat kodeksi 173",
+     "OʻRQ-642: Aholi bandligi toʻgʻrisida 52",
+     "OʻRQ-642: Aholi bandligi toʻgʻrisida 57"
+    ]
+   }
+  },
+  "mk-06": {
+   "question": "Haftasiga necha soat ishlash normal hisoblanadi?",
+   "ranks": {
+    "fts": 3,
+    "vector": 3,
+    "hybrid": 2
+   },
+   "top3": {
+    "fts": [
+     "Mehnat kodeksi 116",
+     "Mehnat kodeksi 198",
+     "Mehnat kodeksi 182"
+    ],
+    "vector": [
+     "Mehnat kodeksi 198",
+     "Mehnat kodeksi 186",
+     "Mehnat kodeksi 182"
+    ],
+    "hybrid": [
+     "Mehnat kodeksi 198",
+     "Mehnat kodeksi 182",
+     "Mehnat kodeksi 193"
+    ]
+   }
+  },
+  "mk-07": {
+   "question": "Ish vaqtidan tashqari ishlash uchun qancha haq toʻlanadi va necha soatgacha ruxsat?",
+   "ranks": {
+    "fts": 6,
+    "vector": 1,
+    "hybrid": 1
+   },
+   "top3": {
+    "fts": [
+     "Mehnat kodeksi 116",
+     "Bojxona kodeksi 134",
+     "Mehnat kodeksi 262"
+    ],
+    "vector": [
+     "Mehnat kodeksi 189",
+     "Soliq kodeksi 374",
+     "Mehnat kodeksi 182"
+    ],
+    "hybrid": [
+     "Mehnat kodeksi 189",
+     "Mehnat kodeksi 116",
+     "Mehnat kodeksi 262"
+    ]
+   }
+  },
+  "mk-08": {
+   "question": "Homiladorlik va tugʻish taʼtili necha kun beriladi?",
+   "ranks": {
+    "fts": 3,
+    "vector": 1,
+    "hybrid": 1
+   },
+   "top3": {
+    "fts": [
+     "Mehnat kodeksi 227",
+     "Mehnat kodeksi 228",
+     "Mehnat kodeksi 404"
+    ],
+    "vector": [
+     "Mehnat kodeksi 404",
+     "Mehnat kodeksi 392",
+     "Mehnat kodeksi 408"
+    ],
+    "hybrid": [
+     "Mehnat kodeksi 404",
+     "Mehnat kodeksi 408",
+     "Mehnat kodeksi 400"
+    ]
+   }
+  },
+  "mk-09": {
+   "question": "Bola parvarishi boʻyicha dekret taʼtili necha yoshgacha?",
+   "ranks": {
+    "fts": 7,
+    "vector": 8,
+    "hybrid": 3
+   },
+   "top3": {
+    "fts": [
+     "Mehnat kodeksi 395",
+     "Qonun 349-I: Advokatura toʻgʻrisida 13¹",
+     "Qonun 938-XII: Fuqarolarning davlat pensiya taʼminoti toʻgʻrisida 37"
+    ],
+    "vector": [
+     "Qonun OʻRQ-996: Bolalarni zoʻravonlikning barcha shakllaridan himoya qilish toʻgʻrisida 48",
+     "Oila kodeksi 164",
+     "Oila kodeksi 171"
+    ],
+    "hybrid": [
+     "Mehnat kodeksi 395",
+     "Mehnat kodeksi 409",
+     "Mehnat kodeksi 405"
+    ]
+   }
+  },
+  "mk-10": {
+   "question": "Ish haqi oyiga necha marta toʻlanishi kerak?",
+   "ranks": {
+    "fts": 2,
+    "vector": 8,
+    "hybrid": 2
+   },
+   "top3": {
+    "fts": [
+     "Mehnat kodeksi 116",
+     "Mehnat kodeksi 253",
+     "Mehnat kodeksi 257"
+    ],
+    "vector": [
+     "Soliq kodeksi 374",
+     "Mehnat kodeksi 198",
+     "Mehnat kodeksi 269"
+    ],
+    "hybrid": [
+     "Mehnat kodeksi 257",
+     "Mehnat kodeksi 253",
+     "Mehnat kodeksi 193"
+    ]
+   }
+  },
+  "mk-11": {
+   "question": "ish haqimdan qancha foizini ushlab qolishlari mumkin",
+   "ranks": {
+    "fts": 1,
+    "vector": 1,
+    "hybrid": 1
+   },
+   "top3": {
+    "fts": [
+     "Mehnat kodeksi 269",
+     "Soliq kodeksi 345",
+     "Soliq kodeksi 388"
+    ],
+    "vector": [
+     "Mehnat kodeksi 269",
+     "Soliq kodeksi 369",
+     "OʻRQ-642: Aholi bandligi toʻgʻrisida 52"
+    ],
+    "hybrid": [
+     "Mehnat kodeksi 269",
+     "Mehnat kodeksi 270",
+     "Qonun 258-II: Sud hujjatlari va boshqa organlar hujjatlarini ijro etish toʻgʻrisida 66"
+    ]
+   }
+  },
+  "mk-12": {
+   "question": "Ish beruvchi ish haqini kechiktirsa javobgarligi qanday?",
+   "ranks": {
+    "fts": 4,
+    "vector": null,
+    "hybrid": 4
+   },
+   "top3": {
+    "fts": [
+     "Mehnat kodeksi 331",
+     "Mehnat kodeksi 324",
+     "Mehnat kodeksi 325"
+    ],
+    "vector": [
+     "Mehnat kodeksi 339",
+     "Mehnat kodeksi 337",
+     "Iqtisodiy protsessual kodeksi 45"
+    ],
+    "hybrid": [
+     "Mehnat kodeksi 324",
+     "Mehnat kodeksi 331",
+     "Mehnat kodeksi 329"
+    ]
+   }
+  },
+  "mk-13": {
+   "question": "Ishdan boʻshatishdan oldin ish beruvchi necha kun oldin ogohlantirishi shart?",
+   "ranks": {
+    "fts": 2,
+    "vector": 8,
+    "hybrid": 1
+   },
+   "top3": {
+    "fts": [
+     "Mehnat kodeksi 116",
+     "Mehnat kodeksi 165",
+     "Mehnat kodeksi 494"
+    ],
+    "vector": [
+     "Mehnat kodeksi 280",
+     "Mehnat kodeksi 269",
+     "Mehnat kodeksi 98"
+    ],
+    "hybrid": [
+     "Mehnat kodeksi 165",
+     "Mehnat kodeksi 160",
+     "Mehnat kodeksi 137"
+    ]
+   }
+  },
+  "mk-14": {
+   "question": "Homilador ayolni ishdan boʻshatish mumkinmi?",
+   "ranks": {
+    "fts": 2,
+    "vector": 7,
+    "hybrid": 4
+   },
+   "top3": {
+    "fts": [
+     "Mehnat kodeksi 408",
+     "Mehnat kodeksi 392",
+     "Mehnat kodeksi 398"
+    ],
+    "vector": [
+     "Mehnat kodeksi 408",
+     "Mehnat kodeksi 394",
+     "Mehnat kodeksi 396"
+    ],
+    "hybrid": [
+     "Mehnat kodeksi 408",
+     "Mehnat kodeksi 394",
+     "Mehnat kodeksi 398"
+    ]
+   }
+  },
+  "mk-15": {
+   "question": "Taʼtil oʻrniga pul olsa boʻladimi?",
+   "ranks": {
+    "fts": null,
+    "vector": null,
+    "hybrid": null
+   },
+   "top3": {
+    "fts": [
+     "Mehnat kodeksi 418",
+     "Mehnat kodeksi 429",
+     "Fuqarolik kodeksi (ikkinchi qism) 1007"
+    ],
+    "vector": [
+     "Soliq kodeksi 369",
+     "Soliq kodeksi 118",
+     "Soliq kodeksi 112"
+    ],
+    "hybrid": [
+     "Soliq kodeksi 369",
+     "Soliq kodeksi 118",
+     "Mehnat kodeksi 418"
+    ]
+   }
+  },
+  "mk-16": {
+   "question": "Oʻz hisobimdan taʼtil olish huquqim bormi?",
+   "ranks": {
+    "fts": null,
+    "vector": null,
+    "hybrid": null
+   },
+   "top3": {
+    "fts": [
+     "Mehnat kodeksi 227",
+     "Mehnat kodeksi 217",
+     "Mehnat kodeksi 236"
+    ],
+    "vector": [
+     "Qonun OʻRQ-763: Toʻlovga qobiliyatsizlik toʻgʻrisida 222",
+     "Qonun OʻRQ-763: Toʻlovga qobiliyatsizlik toʻgʻrisida 198",
+     "Soliq kodeksi 125"
+    ],
+    "hybrid": [
+     "Qonun OʻRQ-763: Toʻlovga qobiliyatsizlik toʻgʻrisida 222",
+     "Qonun OʻRQ-763: Toʻlovga qobiliyatsizlik toʻgʻrisida 198",
+     "Mehnat kodeksi 227"
+    ]
+   }
+  },
+  "mk-17": {
+   "question": "Xizmat safari xarajatlari qoplanadimi?",
+   "ranks": {
+    "fts": 4,
+    "vector": 2,
+    "hybrid": 2
+   },
+   "top3": {
+    "fts": [
+     "Qonun OʻRQ-788: Davlat fuqarolik xizmati toʻgʻrisida 41",
+     "Mehnat kodeksi 147",
+     "Qonun OʻRQ-788: Davlat fuqarolik xizmati toʻgʻrisida 40"
+    ],
+    "vector": [
+     "Soliq kodeksi 369",
+     "Mehnat kodeksi 287",
+     "Fuqarolik protsessual kodeksi 138"
+    ],
+    "hybrid": [
+     "Soliq kodeksi 369",
+     "Mehnat kodeksi 287",
+     "Mehnat kodeksi 147"
+    ]
+   }
+  },
+  "mk-18": {
+   "question": "Dam olish kuni ishga chaqirishsa nima boʻladi?",
+   "ranks": {
+    "fts": 1,
+    "vector": 1,
+    "hybrid": 1
+   },
+   "top3": {
+    "fts": [
+     "Mehnat kodeksi 209",
+     "Mehnat kodeksi 204",
+     "Mehnat kodeksi 206"
+    ],
+    "vector": [
+     "Mehnat kodeksi 209",
+     "Mehnat kodeksi 263",
+     "Mehnat kodeksi 211"
+    ],
+    "hybrid": [
+     "Mehnat kodeksi 209",
+     "Mehnat kodeksi 263",
+     "Mehnat kodeksi 212"
+    ]
+   }
+  },
+  "mk-19": {
+   "question": "Ishga qabul qilishda mehnat daftarchasi talab qilinadimi?",
+   "ranks": {
+    "fts": 1,
+    "vector": null,
+    "hybrid": 3
+   },
+   "top3": {
+    "fts": [
+     "Mehnat kodeksi 125",
+     "Mehnat kodeksi 124",
+     "Mehnat kodeksi 171"
+    ],
+    "vector": [
+     "Mehnat kodeksi 124",
+     "Mehnat kodeksi 434",
+     "Mehnat kodeksi 123"
+    ],
+    "hybrid": [
+     "Mehnat kodeksi 124",
+     "Mehnat kodeksi 434",
+     "Mehnat kodeksi 125"
+    ]
+   }
+  },
+  "mk-20": {
+   "question": "Xodim ish beruvchiga zarar yetkazsa toʻliq qoplashi kerakmi?",
+   "ranks": {
+    "fts": 8,
+    "vector": 1,
+    "hybrid": 4
+   },
+   "top3": {
+    "fts": [
+     "Mehnat kodeksi 343",
+     "Mehnat kodeksi 346",
+     "Mehnat kodeksi 341"
+    ],
+    "vector": [
+     "Mehnat kodeksi 337",
+     "Mehnat kodeksi 346",
+     "Mehnat kodeksi 347"
+    ],
+    "hybrid": [
+     "Mehnat kodeksi 346",
+     "Mehnat kodeksi 341",
+     "Mehnat kodeksi 343"
+    ]
+   }
+  },
+  "mk-21": {
+   "question": "Ishdan noqonuniy boʻshatilsam majburiy progul uchun pul olamanmi?",
+   "ranks": {
+    "fts": null,
+    "vector": null,
+    "hybrid": null
+   },
+   "top3": {
+    "fts": [
+     "Jinoyat kodeksi 188¹",
+     "Jinoyat kodeksi 229⁵",
+     "Jinoyat kodeksi 188"
+    ],
+    "vector": [
+     "Soliq kodeksi 369",
+     "Soliq kodeksi 89",
+     "Soliq kodeksi 92"
+    ],
+    "hybrid": [
+     "Soliq kodeksi 374",
+     "Soliq kodeksi 369",
+     "Jinoyat kodeksi 188¹"
+    ]
+   }
+  },
+  "mk-22": {
+   "question": "ishlab chiqarishda jarohat olsam ish beruvchi zararni toʻlaydimi",
+   "ranks": {
+    "fts": null,
+    "vector": 9,
+    "hybrid": null
+   },
+   "top3": {
+    "fts": [
+     "Qonun OʻRQ-407: Ichki ishlar organlari toʻgʻrisida 21",
+     "Mehnat kodeksi 359",
+     "Mehnat kodeksi 474"
+    ],
+    "vector": [
+     "Mehnat kodeksi 346",
+     "Mehnat kodeksi 337",
+     "Mehnat kodeksi 558"
+    ],
+    "hybrid": [
+     "Mehnat kodeksi 474",
+     "Mehnat kodeksi 359",
+     "Qonun OʻRQ-407: Ichki ishlar organlari toʻgʻrisida 21"
+    ]
+   }
+  },
+  "ok-01": {
+   "question": "Nikoh yoshi necha yosh?",
+   "ranks": {
+    "fts": 1,
+    "vector": 1,
+    "hybrid": 1
+   },
+   "top3": {
+    "fts": [
+     "Oila kodeksi 15",
+     "Maʼmuriy javobgarlik toʻgʻrisidagi kodeksi 47³",
+     "Oila kodeksi 51"
+    ],
+    "vector": [
+     "Oila kodeksi 15",
+     "Jinoyat kodeksi 118",
+     "Maʼmuriy javobgarlik toʻgʻrisidagi kodeksi 47³"
+    ],
+    "hybrid": [
+     "Oila kodeksi 15",
+     "Maʼmuriy javobgarlik toʻgʻrisidagi kodeksi 47³",
+     "Oila kodeksi 51"
+    ]
+   }
+  },
+  "ok-02": {
+   "question": "Aliment miqdori qancha boʻladi, bitta bola uchun?",
+   "ranks": {
+    "fts": 2,
+    "vector": 3,
+    "hybrid": 2
+   },
+   "top3": {
+    "fts": [
+     "Oila kodeksi 101",
+     "Oila kodeksi 99",
+     "Oila kodeksi 102"
+    ],
+    "vector": [
+     "Qonun OʻRQ-996: Bolalarni zoʻravonlikning barcha shakllaridan himoya qilish toʻgʻrisida 48",
+     "Oila kodeksi 102",
+     "Oila kodeksi 99"
+    ],
+    "hybrid": [
+     "Oila kodeksi 102",
+     "Oila kodeksi 99",
+     "Oila kodeksi 110"
+    ]
+   }
+  },
+  "ok-03": {
+   "question": "Ajrashganda er-xotinning mol-mulki qanday boʻlinadi?",
+   "ranks": {
+    "fts": 8,
+    "vector": null,
+    "hybrid": 10
+   },
+   "top3": {
+    "fts": [
+     "Qonun 343-I: Notariat toʻgʻrisida 62",
+     "Oila kodeksi 36",
+     "Oila kodeksi 31"
+    ],
+    "vector": [
+     "Soliq kodeksi 114",
+     "Soliq kodeksi 242",
+     "Qonun OʻRQ-763: Toʻlovga qobiliyatsizlik toʻgʻrisida 220"
+    ],
+    "hybrid": [
+     "Qonun OʻRQ-763: Toʻlovga qobiliyatsizlik toʻgʻrisida 220",
+     "Qonun 343-I: Notariat toʻgʻrisida 63",
+     "Oila kodeksi 34"
+    ]
+   }
+  },
+  "ok-04": {
+   "question": "FHDYO orqali ajrashish mumkinmi yoki faqat sud orqalimi?",
+   "ranks": {
+    "fts": null,
+    "vector": null,
+    "hybrid": null
+   },
+   "top3": {
+    "fts": [
+     "Maʼmuriy sud ishlarini yuritish toʻgʻrisidagi kodeksi 8",
+     "Jinoyat-protsessual kodeksi 12",
+     "Iqtisodiy protsessual kodeksi 6"
+    ],
+    "vector": [
+     "Maʼmuriy sud ishlarini yuritish toʻgʻrisidagi kodeksi 284",
+     "Jinoyat-protsessual kodeksi 529",
+     "Fuqarolik protsessual kodeksi 419¹⁷"
+    ],
+    "hybrid": [
+     "Maʼmuriy sud ishlarini yuritish toʻgʻrisidagi kodeksi 8",
+     "Maʼmuriy sud ishlarini yuritish toʻgʻrisidagi kodeksi 284",
+     "Jinoyat-protsessual kodeksi 529"
+    ]
+   }
+  },
+  "ok-05": {
+   "question": "Xotinim homilador boʻlsa ajrashish uchun ariza bera olamanmi?",
+   "ranks": {
+    "fts": null,
+    "vector": null,
+    "hybrid": null
+   },
+   "top3": {
+    "fts": [
+     "Mehnat kodeksi 408",
+     "Fuqarolik protsessual kodeksi 122",
+     "Jinoyat-protsessual kodeksi 99"
+    ],
+    "vector": [
+     "Mehnat kodeksi 408",
+     "Mehnat kodeksi 392",
+     "Mehnat kodeksi 403"
+    ],
+    "hybrid": [
+     "Mehnat kodeksi 408",
+     "Fuqarolik protsessual kodeksi 122",
+     "Mehnat kodeksi 403"
+    ]
+   }
+  },
+  "ok-06": {
+   "question": "Nikoh shartnomasini qachon tuzish mumkin?",
+   "ranks": {
+    "fts": 2,
+    "vector": 3,
+    "hybrid": 2
+   },
+   "top3": {
+    "fts": [
+     "Oila kodeksi 31",
+     "Oila kodeksi 30",
+     "Oila kodeksi 35"
+    ],
+    "vector": [
+     "Oila kodeksi 31",
+     "Oila kodeksi 32",
+     "Oila kodeksi 30"
+    ],
+    "hybrid": [
+     "Oila kodeksi 31",
+     "Oila kodeksi 30",
+     "Oila kodeksi 35"
+    ]
+   }
+  },
+  "ok-07": {
+   "question": "Nikohdan oldin tibbiy koʻrikdan oʻtish majburiymi?",
+   "ranks": {
+    "fts": 3,
+    "vector": null,
+    "hybrid": null
+   },
+   "top3": {
+    "fts": [
+     "Mehnat kodeksi 360",
+     "Qonun 436-II: Umumiy harbiy majburiyat va harbiy xizmat toʻgʻrisida 20¹",
+     "Oila kodeksi 17"
+    ],
+    "vector": [
+     "Jinoyat-protsessual kodeksi 265",
+     "Jinoyat-protsessual kodeksi 267",
+     "Fuqarolik protsessual kodeksi 117"
+    ],
+    "hybrid": [
+     "Mehnat kodeksi 360",
+     "Mehnat kodeksi 476",
+     "Jinoyat-protsessual kodeksi 265"
+    ]
+   }
+  },
+  "ok-08": {
+   "question": "otalikni sud orqali aniqlash",
+   "ranks": {
+    "fts": 3,
+    "vector": 4,
+    "hybrid": 2
+   },
+   "top3": {
+    "fts": [
+     "Oila kodeksi 209",
+     "Fuqarolik protsessual kodeksi 295",
+     "Oila kodeksi 62"
+    ],
+    "vector": [
+     "Fuqarolik protsessual kodeksi 295",
+     "Jinoyat-protsessual kodeksi 434",
+     "Jinoyat-protsessual kodeksi 98"
+    ],
+    "hybrid": [
+     "Fuqarolik protsessual kodeksi 295",
+     "Oila kodeksi 62",
+     "Oila kodeksi 61"
+    ]
+   }
+  },
+  "ok-09": {
+   "question": "Soxta nikoh deganda nima tushuniladi?",
+   "ranks": {
+    "fts": 2,
+    "vector": null,
+    "hybrid": 5
+   },
+   "top3": {
+    "fts": [
+     "Soliq kodeksi 36",
+     "Oila kodeksi 54",
+     "Oila kodeksi 49"
+    ],
+    "vector": [
+     "Fuqarolik kodeksi (ikkinchi qism) 401",
+     "Jinoyat kodeksi 64",
+     "Fuqarolik kodeksi (ikkinchi qism) 416"
+    ],
+    "hybrid": [
+     "Fuqarolik kodeksi (ikkinchi qism) 401",
+     "Soliq kodeksi 36",
+     "Jinoyat kodeksi 64"
+    ]
+   }
+  },
+  "fk-01": {
+   "question": "Daʼvo muddati umumiy holda necha yil?",
+   "ranks": {
+    "fts": 4,
+    "vector": 2,
+    "hybrid": 1
+   },
+   "top3": {
+    "fts": [
+     "Mehnat kodeksi 116",
+     "Oila kodeksi 115",
+     "Jinoyat-protsessual kodeksi 584"
+    ],
+    "vector": [
+     "Fuqarolik kodeksi (birinchi qism) 158",
+     "Fuqarolik kodeksi (birinchi qism) 150",
+     "Fuqarolik kodeksi (birinchi qism) 159"
+    ],
+    "hybrid": [
+     "Fuqarolik kodeksi (birinchi qism) 150",
+     "Fuqarolik protsessual kodeksi 129",
+     "Fuqarolik kodeksi (birinchi qism) 158"
+    ]
+   }
+  },
+  "fk-02": {
+   "question": "Necha yoshdan boshlab inson toʻliq muomalaga layoqatli boʻladi?",
+   "ranks": {
+    "fts": 9,
+    "vector": null,
+    "hybrid": null
+   },
+   "top3": {
+    "fts": [
+     "Fuqarolik protsessual kodeksi 326",
+     "Fuqarolik protsessual kodeksi 324",
+     "Maʼmuriy sud ishlarini yuritish toʻgʻrisidagi kodeksi 36"
+    ],
+    "vector": [
+     "Soliq kodeksi 374",
+     "Maʼmuriy javobgarlik toʻgʻrisidagi kodeksi 271",
+     "Jinoyat-protsessual kodeksi 533"
+    ],
+    "hybrid": [
+     "Fuqarolik kodeksi (birinchi qism) 28",
+     "Fuqarolik kodeksi (birinchi qism) 27",
+     "Jinoyat kodeksi 133"
+    ]
+   }
+  },
+  "fk-03": {
+   "question": "15 yoshli bola oʻzi bitim tuza oladimi?",
+   "ranks": {
+    "fts": null,
+    "vector": 2,
+    "hybrid": 3
+   },
+   "top3": {
+    "fts": [
+     "Qonun OʻRQ-765: Nobank kredit tashkilotlari va mikromoliyalashtirish faoliyati toʻgʻrisida 15",
+     "Qonun 343-I: Notariat toʻgʻrisida 34",
+     "Qonun OʻRQ-64: Hakamlik sudlari toʻgʻrisida 15"
+    ],
+    "vector": [
+     "Qonun OʻRQ-996: Bolalarni zoʻravonlikning barcha shakllaridan himoya qilish toʻgʻrisida 48",
+     "Fuqarolik kodeksi (birinchi qism) 27",
+     "Fuqarolik kodeksi (birinchi qism) 29"
+    ],
+    "hybrid": [
+     "Qonun OʻRQ-765: Nobank kredit tashkilotlari va mikromoliyalashtirish faoliyati toʻgʻrisida 15",
+     "Qonun OʻRQ-996: Bolalarni zoʻravonlikning barcha shakllaridan himoya qilish toʻgʻrisida 48",
+     "Fuqarolik kodeksi (birinchi qism) 27"
+    ]
+   }
+  },
+  "fk-04": {
+   "question": "Qarz berdim, tilxat bor, qaytarmayapti. Qarz shartnomasi qanday shaklda tuziladi?",
+   "ranks": {
+    "fts": 1,
+    "vector": null,
+    "hybrid": 4
+   },
+   "top3": {
+    "fts": [
+     "Fuqarolik kodeksi (ikkinchi qism) 733",
+     "Mehnat kodeksi 256",
+     "Soliq kodeksi 325"
+    ],
+    "vector": [
+     "Qonun OʻRQ-763: Toʻlovga qobiliyatsizlik toʻgʻrisida 80",
+     "Fuqarolik kodeksi (birinchi qism) 383",
+     "OʻRQ-600: Davlat boji toʻgʻrisida 18"
+    ],
+    "hybrid": [
+     "Fuqarolik kodeksi (ikkinchi qism) 737",
+     "Qonun OʻRQ-763: Toʻlovga qobiliyatsizlik toʻgʻrisida 80",
+     "Fuqarolik kodeksi (birinchi qism) 383"
+    ]
+   }
+  },
+  "fk-05": {
+   "question": "Qarzni vaqtida qaytarmasa qanday oqibat boʻladi?",
+   "ranks": {
+    "fts": 4,
+    "vector": 5,
+    "hybrid": 2
+   },
+   "top3": {
+    "fts": [
+     "Qonun OʻRQ-763: Toʻlovga qobiliyatsizlik toʻgʻrisida 205",
+     "Qonun OʻRQ-763: Toʻlovga qobiliyatsizlik toʻgʻrisida 213",
+     "Oila kodeksi 142"
+    ],
+    "vector": [
+     "Qonun OʻRQ-763: Toʻlovga qobiliyatsizlik toʻgʻrisida 217",
+     "Mehnat kodeksi 210",
+     "Maʼmuriy javobgarlik toʻgʻrisidagi kodeksi 324⁴⁶"
+    ],
+    "hybrid": [
+     "Qonun OʻRQ-763: Toʻlovga qobiliyatsizlik toʻgʻrisida 205",
+     "Fuqarolik kodeksi (ikkinchi qism) 736",
+     "Mehnat kodeksi 269"
+    ]
+   }
+  },
+  "fk-06": {
+   "question": "Neustoyka nima?",
+   "ranks": {
+    "fts": 7,
+    "vector": 1,
+    "hybrid": 4
+   },
+   "top3": {
+    "fts": [
+     "Fuqarolik kodeksi (birinchi qism) 262",
+     "Fuqarolik kodeksi (birinchi qism) 263",
+     "Fuqarolik kodeksi (ikkinchi qism) 454"
+    ],
+    "vector": [
+     "Fuqarolik kodeksi (birinchi qism) 260",
+     "Fuqarolik kodeksi (birinchi qism) 263",
+     "Fuqarolik kodeksi (birinchi qism) 261"
+    ],
+    "hybrid": [
+     "Fuqarolik kodeksi (birinchi qism) 263",
+     "Fuqarolik kodeksi (birinchi qism) 262",
+     "Fuqarolik kodeksi (birinchi qism) 261"
+    ]
+   }
+  },
+  "fk-07": {
+   "question": "Hadya qilingan narsani qaytarib olish mumkinmi?",
+   "ranks": {
+    "fts": null,
+    "vector": null,
+    "hybrid": null
+   },
+   "top3": {
+    "fts": [
+     "Jinoyat-protsessual kodeksi 202",
+     "Fuqarolik kodeksi (ikkinchi qism) 505",
+     "Fuqarolik kodeksi (ikkinchi qism) 502"
+    ],
+    "vector": [
+     "OʻRQ-600: Davlat boji toʻgʻrisida 18",
+     "Maʼmuriy sud ishlarini yuritish toʻgʻrisidagi kodeksi 284",
+     "Iqtisodiy protsessual kodeksi 343"
+    ],
+    "hybrid": [
+     "OʻRQ-600: Davlat boji toʻgʻrisida 18",
+     "Jinoyat-protsessual kodeksi 202",
+     "Fuqarolik kodeksi (ikkinchi qism) 505"
+    ]
+   }
+  },
+  "fk-08": {
+   "question": "Ota-onadan qolgan merosni birinchi navbatda kimlar oladi?",
+   "ranks": {
+    "fts": 1,
+    "vector": null,
+    "hybrid": 9
+   },
+   "top3": {
+    "fts": [
+     "Fuqarolik kodeksi (ikkinchi qism) 1135",
+     "Fuqarolik kodeksi (ikkinchi qism) 1136",
+     "Fuqarolik kodeksi (ikkinchi qism) 1119"
+    ],
+    "vector": [
+     "Maʼmuriy javobgarlik toʻgʻrisidagi kodeksi 313¹²",
+     "Oila kodeksi 83",
+     "Oila kodeksi 84"
+    ],
+    "hybrid": [
+     "Oila kodeksi 84",
+     "Oila kodeksi 81",
+     "Oila kodeksi 75"
+    ]
+   }
+  },
+  "fk-09": {
+   "question": "Vasiyatnomada nomi boʻlmasa ham merosdan majburiy ulush oladiganlar kimlar?",
+   "ranks": {
+    "fts": 2,
+    "vector": null,
+    "hybrid": 8
+   },
+   "top3": {
+    "fts": [
+     "Fuqarolik kodeksi (ikkinchi qism) 1132",
+     "Fuqarolik kodeksi (ikkinchi qism) 1142",
+     "OʻRQ-600: Davlat boji toʻgʻrisida 20"
+    ],
+    "vector": [
+     "Fuqarolik kodeksi (ikkinchi qism) 1131",
+     "Maʼmuriy sud ishlarini yuritish toʻgʻrisidagi kodeksi 64",
+     "Fuqarolik protsessual kodeksi 70"
+    ],
+    "hybrid": [
+     "Fuqarolik kodeksi (ikkinchi qism) 1131",
+     "Fuqarolik kodeksi (ikkinchi qism) 1132",
+     "Fuqarolik kodeksi (ikkinchi qism) 1151"
+    ]
+   }
+  },
+  "fk-10": {
+   "question": "Vasiyatnoma notarius orqali tasdiqlanishi shartmi?",
+   "ranks": {
+    "fts": 10,
+    "vector": 6,
+    "hybrid": 4
+   },
+   "top3": {
+    "fts": [
+     "Qonun 343-I: Notariat toʻgʻrisida 26",
+     "Fuqarolik kodeksi (ikkinchi qism) 1128",
+     "Fuqarolik kodeksi (ikkinchi qism) 1126"
+    ],
+    "vector": [
+     "Qonun 343-I: Notariat toʻgʻrisida 26",
+     "Qonun 343-I: Notariat toʻgʻrisida 15³",
+     "Qonun 343-I: Notariat toʻgʻrisida 18"
+    ],
+    "hybrid": [
+     "Qonun 343-I: Notariat toʻgʻrisida 26",
+     "Qonun 343-I: Notariat toʻgʻrisida 45",
+     "Qonun 343-I: Notariat toʻgʻrisida 18"
+    ]
+   }
+  },
+  "fk-11": {
+   "question": "merosdan voz kechsa boladimi",
+   "ranks": {
+    "fts": 6,
+    "vector": 4,
+    "hybrid": 1
+   },
+   "top3": {
+    "fts": [
+     "Fuqarolik protsessual kodeksi 394",
+     "Fuqarolik protsessual kodeksi 419²⁴",
+     "Fuqarolik protsessual kodeksi 414"
+    ],
+    "vector": [
+     "Qonun OʻRQ-996: Bolalarni zoʻravonlikning barcha shakllaridan himoya qilish toʻgʻrisida 48",
+     "Qonun 343-I: Notariat toʻgʻrisida 56",
+     "Qonun 343-I: Notariat toʻgʻrisida 53"
+    ],
+    "hybrid": [
+     "Fuqarolik kodeksi (ikkinchi qism) 1147",
+     "Fuqarolik kodeksi (ikkinchi qism) 1148",
+     "Fuqarolik kodeksi (ikkinchi qism) 1149"
+    ]
+   }
+  },
+  "fk-12": {
+   "question": "Kvartirani ijaraga berish shartnomasi yozma boʻlishi kerakmi?",
+   "ranks": {
+    "fts": null,
+    "vector": null,
+    "hybrid": null
+   },
+   "top3": {
+    "fts": [
+     "Uy-joy kodeksi 35",
+     "Uy-joy kodeksi 25",
+     "Fuqarolik kodeksi (ikkinchi qism) 602"
+    ],
+    "vector": [
+     "Yer kodeksi 24⁴",
+     "Qonun 258-II: Sud hujjatlari va boshqa organlar hujjatlarini ijro etish toʻgʻrisida 34",
+     "Soliq kodeksi 65"
+    ],
+    "hybrid": [
+     "Uy-joy kodeksi 25",
+     "Fuqarolik kodeksi (ikkinchi qism) 579",
+     "Jinoyat-protsessual kodeksi 457"
+    ]
+   }
+  },
+  "fk-13": {
+   "question": "Ijarachi muddatidan oldin chiqib ketmoqchi boʻlsa shartnoma qanday bekor qilinadi?",
+   "ranks": {
+    "fts": 7,
+    "vector": null,
+    "hybrid": 2
+   },
+   "top3": {
+    "fts": [
+     "Fuqarolik kodeksi (ikkinchi qism) 542",
+     "Mehnat kodeksi 160",
+     "Mehnat kodeksi 158"
+    ],
+    "vector": [
+     "Yer kodeksi 24⁴",
+     "Soliq kodeksi 65",
+     "Fuqarolik kodeksi (birinchi qism) 383"
+    ],
+    "hybrid": [
+     "Uy-joy kodeksi 60",
+     "Fuqarolik kodeksi (ikkinchi qism) 551",
+     "Yer kodeksi 24"
+    ]
+   }
+  },
+  "fk-14": {
+   "question": "Doʻkondan olgan tovarim sifatsiz chiqdi, kafolat muddati qanday hisoblanadi?",
+   "ranks": {
+    "fts": null,
+    "vector": null,
+    "hybrid": null
+   },
+   "top3": {
+    "fts": [
+     "Qonun OʻRQ-684: Davlat xaridlari toʻgʻrisida 51",
+     "Qonun OʻRQ-684: Davlat xaridlari toʻgʻrisida 50",
+     "Jinoyat kodeksi 276¹²"
+    ],
+    "vector": [
+     "Fuqarolik kodeksi (ikkinchi qism) 416",
+     "Fuqarolik protsessual kodeksi 129",
+     "Fuqarolik kodeksi (ikkinchi qism) 434"
+    ],
+    "hybrid": [
+     "Fuqarolik kodeksi (ikkinchi qism) 410",
+     "Qonun OʻRQ-684: Davlat xaridlari toʻgʻrisida 51",
+     "Qonun OʻRQ-684: Davlat xaridlari toʻgʻrisida 50"
+    ]
+   }
+  },
+  "fk-15": {
+   "question": "13 yoshli bola birovning mashinasini sindirdi, zararni kim toʻlaydi?",
+   "ranks": {
+    "fts": null,
+    "vector": 2,
+    "hybrid": 7
+   },
+   "top3": {
+    "fts": [
+     "Qonun OʻRQ-703: Sudlar toʻgʻrisida 84",
+     "Yer kodeksi 87",
+     "Jinoyat kodeksi 277"
+    ],
+    "vector": [
+     "Qonun OʻRQ-155: Transport vositalari egalarining fuqarolik javobgarligini majburiy sugʻurta qilish toʻgʻrisida 21",
+     "Fuqarolik kodeksi (ikkinchi qism) 993",
+     "Jinoyat kodeksi 73"
+    ],
+    "hybrid": [
+     "Qonun OʻRQ-996: Bolalarni zoʻravonlikning barcha shakllaridan himoya qilish toʻgʻrisida 48",
+     "Qonun OʻRQ-155: Transport vositalari egalarining fuqarolik javobgarligini majburiy sugʻurta qilish toʻgʻrisida 23",
+     "Jinoyat kodeksi 298"
+    ]
+   }
+  },
+  "jk-01": {
+   "question": "Firibgarlik uchun qanday jazo bor?",
+   "ranks": {
+    "fts": 1,
+    "vector": 1,
+    "hybrid": 1
+   },
+   "top3": {
+    "fts": [
+     "Jinoyat kodeksi 168",
+     "Jinoyat-ijroiya kodeksi 130",
+     "Jinoyat kodeksi 73"
+    ],
+    "vector": [
+     "Jinoyat kodeksi 168",
+     "Jinoyat-protsessual kodeksi 457",
+     "Soliq kodeksi 369"
+    ],
+    "hybrid": [
+     "Jinoyat kodeksi 168",
+     "Jinoyat-protsessual kodeksi 457",
+     "Soliq kodeksi 369"
+    ]
+   }
+  },
+  "jk-02": {
+   "question": "Oʻgʻrilik qilgan odam qanday javobgarlikka tortiladi?",
+   "ranks": {
+    "fts": 1,
+    "vector": null,
+    "hybrid": 2
+   },
+   "top3": {
+    "fts": [
+     "Jinoyat kodeksi 169",
+     "Qonun OʻRQ-763: Toʻlovga qobiliyatsizlik toʻgʻrisida 208",
+     "Qonun 221-I: Isteʼmolchilarning huquqlarini himoya qilish toʻgʻrisida 27"
+    ],
+    "vector": [
+     "Jinoyat-protsessual kodeksi 84",
+     "Fuqarolik kodeksi (birinchi qism) 48",
+     "Soliq kodeksi 212"
+    ],
+    "hybrid": [
+     "Qonun OʻRQ-763: Toʻlovga qobiliyatsizlik toʻgʻrisida 208",
+     "Jinoyat kodeksi 169",
+     "Jinoyat-protsessual kodeksi 84"
+    ]
+   }
+  },
+  "jk-03": {
+   "question": "Pora berganlik uchun jazo",
+   "ranks": {
+    "fts": 10,
+    "vector": null,
+    "hybrid": null
+   },
+   "top3": {
+    "fts": [
+     "Jinoyat kodeksi 213",
+     "Jinoyat kodeksi 192¹⁰",
+     "Jinoyat kodeksi 192⁹"
+    ],
+    "vector": [
+     "Soliq kodeksi 369",
+     "Jinoyat kodeksi 58",
+     "Soliq kodeksi 300"
+    ],
+    "hybrid": [
+     "Jinoyat kodeksi 73",
+     "Jinoyat kodeksi 213",
+     "Jinoyat kodeksi 192¹⁰"
+    ]
+   }
+  },
+  "jk-04": {
+   "question": "Mansabdor shaxs pora olsa necha yil qamaladi?",
+   "ranks": {
+    "fts": 4,
+    "vector": 3,
+    "hybrid": 2
+   },
+   "top3": {
+    "fts": [
+     "Jinoyat kodeksi 192⁹",
+     "Jinoyat kodeksi 213",
+     "Jinoyat kodeksi 192¹⁰"
+    ],
+    "vector": [
+     "Jinoyat kodeksi 211",
+     "Jinoyat kodeksi 301",
+     "Jinoyat kodeksi 210"
+    ],
+    "hybrid": [
+     "Jinoyat kodeksi 211",
+     "Jinoyat kodeksi 210",
+     "Jinoyat kodeksi 213"
+    ]
+   }
+  },
+  "jk-05": {
+   "question": "Necha yoshdan jinoiy javobgarlikka tortiladi?",
+   "ranks": {
+    "fts": null,
+    "vector": 2,
+    "hybrid": 6
+   },
+   "top3": {
+    "fts": [
+     "Jinoyat-protsessual kodeksi 601",
+     "Qonun OʻRQ-701: Litsenziyalash, ruxsat berish va xabardor qilish tartib-taomillari toʻgʻrisida 52",
+     "Jinoyat-protsessual kodeksi 546⁵"
+    ],
+    "vector": [
+     "Jinoyat kodeksi 64",
+     "Jinoyat kodeksi 17",
+     "Jinoyat kodeksi 50"
+    ],
+    "hybrid": [
+     "Jinoyat-protsessual kodeksi 601",
+     "Qonun OʻRQ-701: Litsenziyalash, ruxsat berish va xabardor qilish tartib-taomillari toʻgʻrisida 52",
+     "Jinoyat-protsessual kodeksi 546⁵"
+    ]
+   }
+  },
+  "jk-06": {
+   "question": "Internetda tuhmat qilsa jinoyat boʻladimi?",
+   "ranks": {
+    "fts": 1,
+    "vector": null,
+    "hybrid": 7
+   },
+   "top3": {
+    "fts": [
+     "Jinoyat kodeksi 139",
+     "Jinoyat kodeksi 158",
+     "Jinoyat kodeksi 140"
+    ],
+    "vector": [
+     "Jinoyat-protsessual kodeksi 84",
+     "Qonun OʻRQ-776: Reklama toʻgʻrisida 2",
+     "Jinoyat kodeksi 22"
+    ],
+    "hybrid": [
+     "Jinoyat kodeksi 66¹",
+     "Jinoyat kodeksi 103¹",
+     "Jinoyat kodeksi 130"
+    ]
+   }
+  },
+  "jk-07": {
+   "question": "Aliment toʻlamaslik jinoyatmi?",
+   "ranks": {
+    "fts": 2,
+    "vector": null,
+    "hybrid": null
+   },
+   "top3": {
+    "fts": [
+     "Jinoyat kodeksi 123",
+     "Jinoyat kodeksi 122",
+     "Maʼmuriy javobgarlik toʻgʻrisidagi kodeksi 47⁴"
+    ],
+    "vector": [
+     "Oila kodeksi 141",
+     "Oila kodeksi 142",
+     "Oila kodeksi 146"
+    ],
+    "hybrid": [
+     "Oila kodeksi 141",
+     "Oila kodeksi 146",
+     "Oila kodeksi 142"
+    ]
+   }
+  },
+  "jk-08": {
+   "question": "jabrlanuvchi bilan yarashsa jinoiy ish yopiladimi",
+   "ranks": {
+    "fts": 4,
+    "vector": null,
+    "hybrid": 9
+   },
+   "top3": {
+    "fts": [
+     "Jinoyat-protsessual kodeksi 417",
+     "Jinoyat-protsessual kodeksi 416",
+     "Jinoyat-protsessual kodeksi 546⁵"
+    ],
+    "vector": [
+     "Jinoyat-protsessual kodeksi 84",
+     "Jinoyat-protsessual kodeksi 405¹²",
+     "Jinoyat-protsessual kodeksi 41"
+    ],
+    "hybrid": [
+     "Jinoyat-protsessual kodeksi 84",
+     "Jinoyat-protsessual kodeksi 417",
+     "Jinoyat-protsessual kodeksi 173"
+    ]
+   }
+  },
+  "mjk-01": {
+   "question": "Mast holda mashina haydaganlik uchun jarima qancha?",
+   "ranks": {
+    "fts": 2,
+    "vector": 9,
+    "hybrid": 5
+   },
+   "top3": {
+    "fts": [
+     "Maʼmuriy javobgarlik toʻgʻrisidagi kodeksi 132",
+     "Maʼmuriy javobgarlik toʻgʻrisidagi kodeksi 136",
+     "Maʼmuriy javobgarlik toʻgʻrisidagi kodeksi 138"
+    ],
+    "vector": [
+     "Maʼmuriy javobgarlik toʻgʻrisidagi kodeksi 125",
+     "Maʼmuriy javobgarlik toʻgʻrisidagi kodeksi 133",
+     "Maʼmuriy javobgarlik toʻgʻrisidagi kodeksi 344"
+    ],
+    "hybrid": [
+     "Maʼmuriy javobgarlik toʻgʻrisidagi kodeksi 132",
+     "Maʼmuriy javobgarlik toʻgʻrisidagi kodeksi 125",
+     "Maʼmuriy javobgarlik toʻgʻrisidagi kodeksi 138"
+    ]
+   }
+  },
+  "mjk-02": {
+   "question": "Jamoat joyida pivo ichish uchun jarima bormi?",
+   "ranks": {
+    "fts": null,
+    "vector": null,
+    "hybrid": null
+   },
+   "top3": {
+    "fts": [
+     "Qonun OʻRQ-776: Reklama toʻgʻrisida 39",
+     "Qonun OʻRQ-701: Litsenziyalash, ruxsat berish va xabardor qilish tartib-taomillari toʻgʻrisida None",
+     "Soliq kodeksi 460"
+    ],
+    "vector": [
+     "Qonun OʻRQ-701: Litsenziyalash, ruxsat berish va xabardor qilish tartib-taomillari toʻgʻrisida None",
+     "Soliq kodeksi 369",
+     "Soliq kodeksi 460"
+    ],
+    "hybrid": [
+     "Qonun OʻRQ-776: Reklama toʻgʻrisida 39",
+     "Soliq kodeksi 460",
+     "Qonun OʻRQ-701: Litsenziyalash, ruxsat berish va xabardor qilish tartib-taomillari toʻgʻrisida None"
+    ]
+   }
+  },
+  "mjk-03": {
+   "question": "Mayda bezorilik uchun nima jazo beriladi?",
+   "ranks": {
+    "fts": 2,
+    "vector": 3,
+    "hybrid": 1
+   },
+   "top3": {
+    "fts": [
+     "Jinoyat kodeksi 277",
+     "Maʼmuriy javobgarlik toʻgʻrisidagi kodeksi 183",
+     "Maʼmuriy javobgarlik toʻgʻrisidagi kodeksi 21²"
+    ],
+    "vector": [
+     "Soliq kodeksi 369",
+     "Maʼmuriy javobgarlik toʻgʻrisidagi kodeksi 271",
+     "Maʼmuriy javobgarlik toʻgʻrisidagi kodeksi 183"
+    ],
+    "hybrid": [
+     "Maʼmuriy javobgarlik toʻgʻrisidagi kodeksi 183",
+     "Jinoyat kodeksi 277",
+     "Soliq kodeksi 369"
+    ]
+   }
+  },
+  "mjk-04": {
+   "question": "Haydovchilik guvohnomasisiz mashina haydash",
+   "ranks": {
+    "fts": null,
+    "vector": 2,
+    "hybrid": 9
+   },
+   "top3": {
+    "fts": [
+     "Qonun OʻRQ-900: Yoʻl harakati toʻgʻrisida None",
+     "Maʼmuriy javobgarlik toʻgʻrisidagi kodeksi 223",
+     "Maʼmuriy javobgarlik toʻgʻrisidagi kodeksi 112"
+    ],
+    "vector": [
+     "Maʼmuriy javobgarlik toʻgʻrisidagi kodeksi 125",
+     "Maʼmuriy javobgarlik toʻgʻrisidagi kodeksi 135",
+     "Maʼmuriy javobgarlik toʻgʻrisidagi kodeksi 17¹"
+    ],
+    "hybrid": [
+     "Qonun OʻRQ-900: Yoʻl harakati toʻgʻrisida None",
+     "Maʼmuriy javobgarlik toʻgʻrisidagi kodeksi 125",
+     "Maʼmuriy javobgarlik toʻgʻrisidagi kodeksi 341"
+    ]
+   }
+  },
+  "mjk-05": {
+   "question": "Qizil chiroqda oʻtib ketsa jarima",
+   "ranks": {
+    "fts": null,
+    "vector": null,
+    "hybrid": null
+   },
+   "top3": {
+    "fts": [
+     "Qonun OʻRQ-701: Litsenziyalash, ruxsat berish va xabardor qilish tartib-taomillari toʻgʻrisida None",
+     "Maʼmuriy javobgarlik toʻgʻrisidagi kodeksi 128⁵",
+     "Jinoyat kodeksi 64"
+    ],
+    "vector": [
+     "Jinoyat-ijroiya kodeksi 82",
+     "Maʼmuriy javobgarlik toʻgʻrisidagi kodeksi 128⁵",
+     "Fuqarolik kodeksi (birinchi qism) 337"
+    ],
+    "hybrid": [
+     "Maʼmuriy javobgarlik toʻgʻrisidagi kodeksi 128⁵",
+     "Jinoyat kodeksi 64",
+     "Maʼmuriy javobgarlik toʻgʻrisidagi kodeksi 138"
+    ]
+   }
+  },
+  "mjk-06": {
+   "question": "Piyoda yoʻl qoidasini buzsa jarima bormi?",
+   "ranks": {
+    "fts": null,
+    "vector": 1,
+    "hybrid": 1
+   },
+   "top3": {
+    "fts": [
+     "Maʼmuriy javobgarlik toʻgʻrisidagi kodeksi 116",
+     "Jinoyat kodeksi 268",
+     "Qonun OʻRQ-900: Yoʻl harakati toʻgʻrisida 4"
+    ],
+    "vector": [
+     "Maʼmuriy javobgarlik toʻgʻrisidagi kodeksi 138",
+     "Maʼmuriy javobgarlik toʻgʻrisidagi kodeksi 128",
+     "Jinoyat kodeksi 66¹"
+    ],
+    "hybrid": [
+     "Maʼmuriy javobgarlik toʻgʻrisidagi kodeksi 138",
+     "Maʼmuriy javobgarlik toʻgʻrisidagi kodeksi 116",
+     "Maʼmuriy javobgarlik toʻgʻrisidagi kodeksi 128"
+    ]
+   }
+  },
+  "mjk-07": {
+   "question": "Kamera orqali yozilgan jarimaga qanday eʼtiroz bildiriladi?",
+   "ranks": {
+    "fts": null,
+    "vector": 2,
+    "hybrid": 4
+   },
+   "top3": {
+    "fts": [
+     "Jinoyat-protsessual kodeksi 515",
+     "Oila kodeksi 63",
+     "Maʼmuriy javobgarlik toʻgʻrisidagi kodeksi 142"
+    ],
+    "vector": [
+     "Qonun OʻRQ-42: Mualliflik huquqi va turdosh huquqlar toʻgʻrisida 53",
+     "Maʼmuriy javobgarlik toʻgʻrisidagi kodeksi 17¹",
+     "Maʼmuriy javobgarlik toʻgʻrisidagi kodeksi 309¹"
+    ],
+    "hybrid": [
+     "Qonun OʻRQ-42: Mualliflik huquqi va turdosh huquqlar toʻgʻrisida 53",
+     "Jinoyat-protsessual kodeksi 244",
+     "Jinoyat-protsessual kodeksi 106"
+    ]
+   }
+  },
+  "mjk-08": {
+   "question": "Necha yoshdan maʼmuriy javobgarlik boshlanadi?",
+   "ranks": {
+    "fts": 3,
+    "vector": 3,
+    "hybrid": 1
+   },
+   "top3": {
+    "fts": [
+     "Maʼmuriy javobgarlik toʻgʻrisidagi kodeksi 34",
+     "Iqtisodiy protsessual kodeksi 44",
+     "Maʼmuriy javobgarlik toʻgʻrisidagi kodeksi 13"
+    ],
+    "vector": [
+     "Maʼmuriy javobgarlik toʻgʻrisidagi kodeksi 271",
+     "Maʼmuriy javobgarlik toʻgʻrisidagi kodeksi 313¹³",
+     "Maʼmuriy javobgarlik toʻgʻrisidagi kodeksi 13"
+    ],
+    "hybrid": [
+     "Maʼmuriy javobgarlik toʻgʻrisidagi kodeksi 13",
+     "Maʼmuriy javobgarlik toʻgʻrisidagi kodeksi 271",
+     "Maʼmuriy javobgarlik toʻgʻrisidagi kodeksi 14"
+    ]
+   }
+  },
+  "mjk-09": {
+   "question": "Jarimani necha kun ichida toʻlash kerak?",
+   "ranks": {
+    "fts": null,
+    "vector": 5,
+    "hybrid": 8
+   },
+   "top3": {
+    "fts": [
+     "Mehnat kodeksi 116",
+     "Qonun 938-XII: Fuqarolarning davlat pensiya taʼminoti toʻgʻrisida 63",
+     "Qonun OʻRQ-792: Elektron tijorat toʻgʻrisida 16"
+    ],
+    "vector": [
+     "Jinoyat-protsessual kodeksi 484",
+     "Jinoyat kodeksi 64",
+     "Jinoyat-ijroiya kodeksi 19"
+    ],
+    "hybrid": [
+     "Mehnat kodeksi 116",
+     "Jinoyat-protsessual kodeksi 484",
+     "Jinoyat kodeksi 64"
+    ]
+   }
+  },
+  "sk-01": {
+   "question": "Ish haqidan olinadigan daromad soligʻi necha foiz?",
+   "ranks": {
+    "fts": 8,
+    "vector": null,
+    "hybrid": null
+   },
+   "top3": {
+    "fts": [
+     "Soliq kodeksi 378",
+     "Soliq kodeksi 380",
+     "Soliq kodeksi 369"
+    ],
+    "vector": [
+     "Soliq kodeksi 369",
+     "Soliq kodeksi 378",
+     "Soliq kodeksi 337"
+    ],
+    "hybrid": [
+     "Soliq kodeksi 378",
+     "Soliq kodeksi 369",
+     "Soliq kodeksi 380"
+    ]
+   }
+  },
+  "sk-02": {
+   "question": "QQS stavkasi qancha?",
+   "ranks": {
+    "fts": 9,
+    "vector": null,
+    "hybrid": 4
+   },
+   "top3": {
+    "fts": [
+     "OʻRQ-600: Davlat boji toʻgʻrisida None",
+     "Soliq kodeksi 357",
+     "Soliq kodeksi 338"
+    ],
+    "vector": [
+     "OʻRQ-600: Davlat boji toʻgʻrisida None",
+     "Soliq kodeksi 445",
+     "Soliq kodeksi 452"
+    ],
+    "hybrid": [
+     "OʻRQ-600: Davlat boji toʻgʻrisida None",
+     "Soliq kodeksi 452",
+     "Soliq kodeksi 445"
+    ]
+   }
+  },
+  "sk-03": {
+   "question": "Uy-joy uchun mol-mulk soligʻi stavkasi",
+   "ranks": {
+    "fts": 1,
+    "vector": 6,
+    "hybrid": 1
+   },
+   "top3": {
+    "fts": [
+     "Soliq kodeksi 422",
+     "Soliq kodeksi 417",
+     "Soliq kodeksi 356"
+    ],
+    "vector": [
+     "Uy-joy kodeksi 134",
+     "Uy-joy kodeksi 5",
+     "Uy-joy kodeksi 137"
+    ],
+    "hybrid": [
+     "Soliq kodeksi 422",
+     "Uy-joy kodeksi 134",
+     "Soliq kodeksi 437"
+    ]
+   }
+  },
+  "sk-04": {
+   "question": "Aylanmadan olinadigan soliq stavkalari",
+   "ranks": {
+    "fts": 6,
+    "vector": null,
+    "hybrid": null
+   },
+   "top3": {
+    "fts": [
+     "Soliq kodeksi 462",
+     "Soliq kodeksi 463",
+     "Soliq kodeksi 263"
+    ],
+    "vector": [
+     "Soliq kodeksi 337",
+     "Soliq kodeksi 462",
+     "Soliq kodeksi 378"
+    ],
+    "hybrid": [
+     "Soliq kodeksi 462",
+     "Soliq kodeksi 337",
+     "Soliq kodeksi 483"
+    ]
+   }
+  },
+  "sk-05": {
+   "question": "Jismoniy shaxslar yer soligʻini qancha toʻlaydi?",
+   "ranks": {
+    "fts": null,
+    "vector": null,
+    "hybrid": null
+   },
+   "top3": {
+    "fts": [
+     "Soliq kodeksi 483",
+     "Yer kodeksi 28",
+     "Soliq kodeksi 398"
+    ],
+    "vector": [
+     "Soliq kodeksi 374",
+     "Jinoyat kodeksi 197",
+     "Soliq kodeksi 369"
+    ],
+    "hybrid": [
+     "Soliq kodeksi 483",
+     "Yer kodeksi 28",
+     "Soliq kodeksi 374"
+    ]
+   }
+  },
+  "sk-06": {
+   "question": "Korxona foyda soligʻi necha foiz?",
+   "ranks": {
+    "fts": 1,
+    "vector": 3,
+    "hybrid": 1
+   },
+   "top3": {
+    "fts": [
+     "Soliq kodeksi 337",
+     "Soliq kodeksi 310",
+     "Soliq kodeksi 317"
+    ],
+    "vector": [
+     "Soliq kodeksi 369",
+     "Soliq kodeksi 331",
+     "Soliq kodeksi 337"
+    ],
+    "hybrid": [
+     "Soliq kodeksi 337",
+     "Soliq kodeksi 369",
+     "Soliq kodeksi 336"
+    ]
+   }
+  },
+  "kon-01": {
+   "question": "Prezident necha yilga saylanadi?",
+   "ranks": {
+    "fts": 2,
+    "vector": null,
+    "hybrid": 5
+   },
+   "top3": {
+    "fts": [
+     "Saylov kodeksi 61",
+     "Oʻzbekiston Respublikasi Konstitutsiyasi 106",
+     "Saylov kodeksi 75"
+    ],
+    "vector": [
+     "Jinoyat kodeksi 158",
+     "Jinoyat kodeksi 213",
+     "Fuqarolik protsessual kodeksi 129"
+    ],
+    "hybrid": [
+     "Jinoyat kodeksi 158",
+     "Saylov kodeksi 61",
+     "Jinoyat kodeksi 213"
+    ]
+   }
+  },
+  "kon-02": {
+   "question": "Oʻzbekistonda oʻlim jazosi bormi?",
+   "ranks": {
+    "fts": 3,
+    "vector": null,
+    "hybrid": 8
+   },
+   "top3": {
+    "fts": [
+     "Jinoyat-protsessual kodeksi 457",
+     "Jinoyat kodeksi 73",
+     "Oʻzbekiston Respublikasi Konstitutsiyasi 25"
+    ],
+    "vector": [
+     "Jinoyat-protsessual kodeksi 603",
+     "Jinoyat-protsessual kodeksi 613",
+     "Jinoyat-protsessual kodeksi 601"
+    ],
+    "hybrid": [
+     "Jinoyat-protsessual kodeksi 601",
+     "Jinoyat-protsessual kodeksi 603",
+     "Jinoyat kodeksi 73"
+    ]
+   }
+  },
+  "kon-03": {
+   "question": "Davlat tili qaysi til?",
+   "ranks": {
+    "fts": null,
+    "vector": 3,
+    "hybrid": 6
+   },
+   "top3": {
+    "fts": [
+     "Qonun OʻRQ-776: Reklama toʻgʻrisida 6",
+     "Qonun OʻRQ-684: Davlat xaridlari toʻgʻrisida 35",
+     "Maʼmuriy javobgarlik toʻgʻrisidagi kodeksi 42"
+    ],
+    "vector": [
+     "Maʼmuriy javobgarlik toʻgʻrisidagi kodeksi 42",
+     "Qonun OʻRQ-637: Taʼlim toʻgʻrisida 3",
+     "Oʻzbekiston Respublikasi Konstitutsiyasi 4"
+    ],
+    "hybrid": [
+     "Maʼmuriy javobgarlik toʻgʻrisidagi kodeksi 42",
+     "Qonun OʻRQ-684: Davlat xaridlari toʻgʻrisida 35",
+     "Qonun OʻRQ-637: Taʼlim toʻgʻrisida 33"
+    ]
+   }
+  },
+  "kon-04": {
+   "question": "Uy-joyimdan sud qarorisiz chiqarib yuborishlari mumkinmi?",
+   "ranks": {
+    "fts": null,
+    "vector": null,
+    "hybrid": null
+   },
+   "top3": {
+    "fts": [
+     "Qonun OʻRQ-692: Oʻzbekiston Respublikasida chet el fuqarolarining va fuqaroligi boʻlmagan shaxslarning huquqiy holati toʻgʻrisida 35",
+     "Fuqarolik protsessual kodeksi 145",
+     "Maʼmuriy javobgarlik toʻgʻrisidagi kodeksi 163¹"
+    ],
+    "vector": [
+     "Maʼmuriy sud ishlarini yuritish toʻgʻrisidagi kodeksi 189",
+     "Jinoyat-protsessual kodeksi 542",
+     "Jinoyat-protsessual kodeksi 541"
+    ],
+    "hybrid": [
+     "Jinoyat-protsessual kodeksi 572",
+     "Qonun OʻRQ-692: Oʻzbekiston Respublikasida chet el fuqarolarining va fuqaroligi boʻlmagan shaxslarning huquqiy holati toʻgʻrisida 35",
+     "Maʼmuriy sud ishlarini yuritish toʻgʻrisidagi kodeksi 189"
+    ]
+   }
+  },
+  "kon-05": {
+   "question": "Bepul taʼlim olish huquqi kafolatlanganmi?",
+   "ranks": {
+    "fts": 8,
+    "vector": null,
+    "hybrid": null
+   },
+   "top3": {
+    "fts": [
+     "Qonun OʻRQ-641: Nogironligi boʻlgan shaxslarning huquqlari toʻgʻrisida 38",
+     "Qonun OʻRQ-637: Taʼlim toʻgʻrisida 47",
+     "Qonun OʻRQ-637: Taʼlim toʻgʻrisida 5"
+    ],
+    "vector": [
+     "Qonun OʻRQ-901: Pedagogning maqomi toʻgʻrisida 6",
+     "Qonun OʻRQ-901: Pedagogning maqomi toʻgʻrisida 18",
+     "Qonun OʻRQ-139: Bola huquqlarining kafolatlari toʻgʻrisida 23"
+    ],
+    "hybrid": [
+     "Qonun OʻRQ-901: Pedagogning maqomi toʻgʻrisida 6",
+     "Qonun OʻRQ-637: Taʼlim toʻgʻrisida 47",
+     "Qonun OʻRQ-139: Bola huquqlarining kafolatlari toʻgʻrisida 23"
+    ]
+   }
+  },
+  "kon-06": {
+   "question": "soz erkinligi konstitutsiyada",
+   "ranks": {
+    "fts": 1,
+    "vector": null,
+    "hybrid": 2
+   },
+   "top3": {
+    "fts": [
+     "Oʻzbekiston Respublikasi Konstitutsiyasi 33",
+     "Qonun OʻRQ-139: Bola huquqlarining kafolatlari toʻgʻrisida 17",
+     "Qonun OʻRQ-139: Bola huquqlarining kafolatlari toʻgʻrisida 3"
+    ],
+    "vector": [
+     "Jinoyat-protsessual kodeksi 267",
+     "Jinoyat-protsessual kodeksi 501",
+     "Jinoyat-protsessual kodeksi 268"
+    ],
+    "hybrid": [
+     "Jinoyat-protsessual kodeksi 267",
+     "Oʻzbekiston Respublikasi Konstitutsiyasi 33",
+     "Qonun OʻRQ-139: Bola huquqlarining kafolatlari toʻgʻrisida 17"
+    ]
+   }
+  },
+  "kon-07": {
+   "question": "Qariganda pensiya olish huquqi",
+   "ranks": {
+    "fts": 4,
+    "vector": null,
+    "hybrid": null
+   },
+   "top3": {
+    "fts": [
+     "Qonun 938-XII: Fuqarolarning davlat pensiya taʼminoti toʻgʻrisida 12",
+     "Qonun 938-XII: Fuqarolarning davlat pensiya taʼminoti toʻgʻrisida 19",
+     "Qonun 938-XII: Fuqarolarning davlat pensiya taʼminoti toʻgʻrisida None"
+    ],
+    "vector": [
+     "Qonun 938-XII: Fuqarolarning davlat pensiya taʼminoti toʻgʻrisida 55",
+     "Qonun 938-XII: Fuqarolarning davlat pensiya taʼminoti toʻgʻrisida 43",
+     "Qonun 938-XII: Fuqarolarning davlat pensiya taʼminoti toʻgʻrisida 43¹"
+    ],
+    "hybrid": [
+     "Qonun 938-XII: Fuqarolarning davlat pensiya taʼminoti toʻgʻrisida 19",
+     "Qonun 702-II: Fuqarolarning jamgʻarib boriladigan pensiya taʼminoti toʻgʻrisida 19",
+     "Qonun 702-II: Fuqarolarning jamgʻarib boriladigan pensiya taʼminoti toʻgʻrisida 21"
+    ]
+   }
+  },
+  "kon-08": {
+   "question": "Advokat yollashga pulim boʻlmasa davlat bepul yuridik yordam beradimi?",
+   "ranks": {
+    "fts": null,
+    "vector": null,
+    "hybrid": null
+   },
+   "top3": {
+    "fts": [
+     "Qonun OʻRQ-848: Davlat hisobidan yuridik yordam koʻrsatish toʻgʻrisida 20",
+     "Qonun OʻRQ-848: Davlat hisobidan yuridik yordam koʻrsatish toʻgʻrisida 24",
+     "Mehnat kodeksi 325"
+    ],
+    "vector": [
+     "Qonun OʻRQ-848: Davlat hisobidan yuridik yordam koʻrsatish toʻgʻrisida 24",
+     "Qonun OʻRQ-848: Davlat hisobidan yuridik yordam koʻrsatish toʻgʻrisida 20",
+     "Qonun OʻRQ-848: Davlat hisobidan yuridik yordam koʻrsatish toʻgʻrisida 17"
+    ],
+    "hybrid": [
+     "Qonun OʻRQ-848: Davlat hisobidan yuridik yordam koʻrsatish toʻgʻrisida 24",
+     "Qonun OʻRQ-848: Davlat hisobidan yuridik yordam koʻrsatish toʻgʻrisida 20",
+     "Qonun OʻRQ-848: Davlat hisobidan yuridik yordam koʻrsatish toʻgʻrisida 22"
+    ]
+   }
+  },
+  "q-01": {
+   "question": "Pensiyaga chiqish uchun necha yil ish staji kerak?",
+   "ranks": {
+    "fts": null,
+    "vector": 5,
+    "hybrid": 9
+   },
+   "top3": {
+    "fts": [
+     "Qonun 938-XII: Fuqarolarning davlat pensiya taʼminoti toʻgʻrisida 37",
+     "Qonun 938-XII: Fuqarolarning davlat pensiya taʼminoti toʻgʻrisida 27",
+     "Qonun 938-XII: Fuqarolarning davlat pensiya taʼminoti toʻgʻrisida 12"
+    ],
+    "vector": [
+     "Qonun 938-XII: Fuqarolarning davlat pensiya taʼminoti toʻgʻrisida 12",
+     "Qonun 938-XII: Fuqarolarning davlat pensiya taʼminoti toʻgʻrisida 37",
+     "Qonun 938-XII: Fuqarolarning davlat pensiya taʼminoti toʻgʻrisida 10"
+    ],
+    "hybrid": [
+     "Qonun 938-XII: Fuqarolarning davlat pensiya taʼminoti toʻgʻrisida 37",
+     "Qonun 938-XII: Fuqarolarning davlat pensiya taʼminoti toʻgʻrisida 12",
+     "Qonun 938-XII: Fuqarolarning davlat pensiya taʼminoti toʻgʻrisida 27"
+    ]
+   }
+  },
+  "q-02": {
+   "question": "Ish staji yetmasa ham pensiya beriladimi?",
+   "ranks": {
+    "fts": 2,
+    "vector": null,
+    "hybrid": 5
+   },
+   "top3": {
+    "fts": [
+     "Qonun 938-XII: Fuqarolarning davlat pensiya taʼminoti toʻgʻrisida 37",
+     "Qonun 938-XII: Fuqarolarning davlat pensiya taʼminoti toʻgʻrisida 18",
+     "Qonun 938-XII: Fuqarolarning davlat pensiya taʼminoti toʻgʻrisida 41"
+    ],
+    "vector": [
+     "Qonun 938-XII: Fuqarolarning davlat pensiya taʼminoti toʻgʻrisida 37",
+     "Qonun 938-XII: Fuqarolarning davlat pensiya taʼminoti toʻgʻrisida 29",
+     "Qonun 938-XII: Fuqarolarning davlat pensiya taʼminoti toʻgʻrisida 49"
+    ],
+    "hybrid": [
+     "Qonun 938-XII: Fuqarolarning davlat pensiya taʼminoti toʻgʻrisida 37",
+     "Qonun 938-XII: Fuqarolarning davlat pensiya taʼminoti toʻgʻrisida 41",
+     "Qonun 938-XII: Fuqarolarning davlat pensiya taʼminoti toʻgʻrisida 29"
+    ]
+   }
+  },
+  "q-03": {
+   "question": "Pensiya tayinlash uchun qayerga murojaat qilinadi?",
+   "ranks": {
+    "fts": 4,
+    "vector": 5,
+    "hybrid": 5
+   },
+   "top3": {
+    "fts": [
+     "Qonun 938-XII: Fuqarolarning davlat pensiya taʼminoti toʻgʻrisida 43",
+     "Qonun 938-XII: Fuqarolarning davlat pensiya taʼminoti toʻgʻrisida 47",
+     "Qonun 938-XII: Fuqarolarning davlat pensiya taʼminoti toʻgʻrisida 43¹"
+    ],
+    "vector": [
+     "Qonun 938-XII: Fuqarolarning davlat pensiya taʼminoti toʻgʻrisida 43",
+     "Qonun 938-XII: Fuqarolarning davlat pensiya taʼminoti toʻgʻrisida 45",
+     "Qonun 938-XII: Fuqarolarning davlat pensiya taʼminoti toʻgʻrisida 47"
+    ],
+    "hybrid": [
+     "Qonun 938-XII: Fuqarolarning davlat pensiya taʼminoti toʻgʻrisida 43",
+     "Qonun 938-XII: Fuqarolarning davlat pensiya taʼminoti toʻgʻrisida 47",
+     "Qonun 938-XII: Fuqarolarning davlat pensiya taʼminoti toʻgʻrisida 45"
+    ]
+   }
+  },
+  "q-04": {
+   "question": "Sifatsiz telefon sotib oldim, doʻkon almashtirib berishi shartmi?",
+   "ranks": {
+    "fts": 10,
+    "vector": null,
+    "hybrid": null
+   },
+   "top3": {
+    "fts": [
+     "Qonun OʻRQ-792: Elektron tijorat toʻgʻrisida 26",
+     "Qonun OʻRQ-684: Davlat xaridlari toʻgʻrisida 51",
+     "Jinoyat kodeksi 276¹²"
+    ],
+    "vector": [
+     "Jinoyat-protsessual kodeksi 169",
+     "Soliq kodeksi 65",
+     "Soliq kodeksi 300"
+    ],
+    "hybrid": [
+     "Qonun OʻRQ-792: Elektron tijorat toʻgʻrisida 26",
+     "Jinoyat-protsessual kodeksi 169",
+     "Qonun OʻRQ-684: Davlat xaridlari toʻgʻrisida 51"
+    ]
+   }
+  },
+  "q-05": {
+   "question": "Sifatli kiyimni ham qaytarib berish mumkinmi, oʻlchami toʻgʻri kelmasa?",
+   "ranks": {
+    "fts": 2,
+    "vector": null,
+    "hybrid": 7
+   },
+   "top3": {
+    "fts": [
+     "Fuqarolik kodeksi (ikkinchi qism) 433",
+     "Qonun 221-I: Isteʼmolchilarning huquqlarini himoya qilish toʻgʻrisida 18",
+     "Fuqarolik kodeksi (ikkinchi qism) 585"
+    ],
+    "vector": [
+     "Qonun OʻRQ-763: Toʻlovga qobiliyatsizlik toʻgʻrisida 223",
+     "Maʼmuriy sud ishlarini yuritish toʻgʻrisidagi kodeksi 284",
+     "Qonun OʻRQ-763: Toʻlovga qobiliyatsizlik toʻgʻrisida 205"
+    ],
+    "hybrid": [
+     "Maʼmuriy sud ishlarini yuritish toʻgʻrisidagi kodeksi 78",
+     "Iqtisodiy protsessual kodeksi 79",
+     "Qonun OʻRQ-763: Toʻlovga qobiliyatsizlik toʻgʻrisida 223"
+    ]
+   }
+  },
+  "q-06": {
+   "question": "Bank bankrot boʻlsa omonatimni kim qaytaradi va qancha?",
+   "ranks": {
+    "fts": null,
+    "vector": null,
+    "hybrid": null
+   },
+   "top3": {
+    "fts": [
+     "Qonun OʻRQ-763: Toʻlovga qobiliyatsizlik toʻgʻrisida 218",
+     "Iqtisodiy protsessual kodeksi 155",
+     "Qonun OʻRQ-763: Toʻlovga qobiliyatsizlik toʻgʻrisida 92"
+    ],
+    "vector": [
+     "Qonun OʻRQ-763: Toʻlovga qobiliyatsizlik toʻgʻrisida 218",
+     "Fuqarolik kodeksi (ikkinchi qism) 762",
+     "Qonun OʻRQ-763: Toʻlovga qobiliyatsizlik toʻgʻrisida 216"
+    ],
+    "hybrid": [
+     "Qonun OʻRQ-763: Toʻlovga qobiliyatsizlik toʻgʻrisida 218",
+     "Qonun OʻRQ-763: Toʻlovga qobiliyatsizlik toʻgʻrisida 219",
+     "Qonun OʻRQ-763: Toʻlovga qobiliyatsizlik toʻgʻrisida 143"
+    ]
+   }
+  },
+  "q-07": {
+   "question": "Kreditni muddatidan oldin yopsam jarima olishadimi?",
+   "ranks": {
+    "fts": null,
+    "vector": null,
+    "hybrid": 6
+   },
+   "top3": {
+    "fts": [
+     "Qonun OʻRQ-765: Nobank kredit tashkilotlari va mikromoliyalashtirish faoliyati toʻgʻrisida 35",
+     "Fuqarolik kodeksi (ikkinchi qism) 746¹",
+     "Fuqarolik kodeksi (ikkinchi qism) 738"
+    ],
+    "vector": [
+     "Soliq kodeksi 378",
+     "Fuqarolik kodeksi (ikkinchi qism) 746¹",
+     "Soliq kodeksi 118"
+    ],
+    "hybrid": [
+     "Fuqarolik kodeksi (ikkinchi qism) 746¹",
+     "Fuqarolik kodeksi (birinchi qism) 248",
+     "Fuqarolik kodeksi (ikkinchi qism) 736"
+    ]
+   }
+  },
+  "q-08": {
+   "question": "Isteʼmol krediti olish uchun qanday hujjatlar kerak?",
+   "ranks": {
+    "fts": 3,
+    "vector": 2,
+    "hybrid": 2
+   },
+   "top3": {
+    "fts": [
+     "Qonun OʻRQ-765: Nobank kredit tashkilotlari va mikromoliyalashtirish faoliyati toʻgʻrisida 41",
+     "Qonun OʻRQ-33: Isteʼmol krediti toʻgʻrisida 14",
+     "Qonun OʻRQ-33: Isteʼmol krediti toʻgʻrisida 8"
+    ],
+    "vector": [
+     "Qonun OʻRQ-33: Isteʼmol krediti toʻgʻrisida 14",
+     "Qonun OʻRQ-33: Isteʼmol krediti toʻgʻrisida 8",
+     "Qonun OʻRQ-33: Isteʼmol krediti toʻgʻrisida 10"
+    ],
+    "hybrid": [
+     "Qonun OʻRQ-33: Isteʼmol krediti toʻgʻrisida 14",
+     "Qonun OʻRQ-33: Isteʼmol krediti toʻgʻrisida 8",
+     "Qonun OʻRQ-33: Isteʼmol krediti toʻgʻrisida 13"
+    ]
+   }
+  },
+  "q-09": {
+   "question": "Armiyaga chaqiruvni oʻqish sababli kechiktirsa boʻladimi?",
+   "ranks": {
+    "fts": 2,
+    "vector": 1,
+    "hybrid": 1
+   },
+   "top3": {
+    "fts": [
+     "Qonun 258-II: Sud hujjatlari va boshqa organlar hujjatlarini ijro etish toʻgʻrisida 22¹",
+     "Qonun 436-II: Umumiy harbiy majburiyat va harbiy xizmat toʻgʻrisida 21",
+     "Fuqarolik protsessual kodeksi 160"
+    ],
+    "vector": [
+     "Qonun 436-II: Umumiy harbiy majburiyat va harbiy xizmat toʻgʻrisida 21",
+     "Qonun 436-II: Umumiy harbiy majburiyat va harbiy xizmat toʻgʻrisida 19",
+     "Qonun 436-II: Umumiy harbiy majburiyat va harbiy xizmat toʻgʻrisida 48¹"
+    ],
+    "hybrid": [
+     "Qonun 436-II: Umumiy harbiy majburiyat va harbiy xizmat toʻgʻrisida 21",
+     "Qonun 436-II: Umumiy harbiy majburiyat va harbiy xizmat toʻgʻrisida 19",
+     "Maʼmuriy javobgarlik toʻgʻrisidagi kodeksi 235"
+    ]
+   }
+  },
+  "q-10": {
+   "question": "Kimlar harbiy xizmatdan ozod qilinadi?",
+   "ranks": {
+    "fts": 4,
+    "vector": 3,
+    "hybrid": 2
+   },
+   "top3": {
+    "fts": [
+     "Jinoyat-ijroiya kodeksi 151",
+     "Qonun 436-II: Umumiy harbiy majburiyat va harbiy xizmat toʻgʻrisida 46",
+     "Qonun 436-II: Umumiy harbiy majburiyat va harbiy xizmat toʻgʻrisida 33"
+    ],
+    "vector": [
+     "OʻRQ-600: Davlat boji toʻgʻrisida 8",
+     "OʻRQ-600: Davlat boji toʻgʻrisida 10",
+     "Qonun 436-II: Umumiy harbiy majburiyat va harbiy xizmat toʻgʻrisida 22"
+    ],
+    "hybrid": [
+     "OʻRQ-600: Davlat boji toʻgʻrisida 8",
+     "Qonun 436-II: Umumiy harbiy majburiyat va harbiy xizmat toʻgʻrisida 22",
+     "OʻRQ-600: Davlat boji toʻgʻrisida 10"
+    ]
+   }
+  },
+  "q-11": {
+   "question": "Muddatli harbiy xizmat necha oy?",
+   "ranks": {
+    "fts": 3,
+    "vector": 3,
+    "hybrid": 1
+   },
+   "top3": {
+    "fts": [
+     "Qonun 436-II: Umumiy harbiy majburiyat va harbiy xizmat toʻgʻrisida 19",
+     "Qonun 436-II: Umumiy harbiy majburiyat va harbiy xizmat toʻgʻrisida 21",
+     "Qonun 436-II: Umumiy harbiy majburiyat va harbiy xizmat toʻgʻrisida 5"
+    ],
+    "vector": [
+     "Jinoyat kodeksi 287",
+     "Qonun 436-II: Umumiy harbiy majburiyat va harbiy xizmat toʻgʻrisida 45",
+     "Qonun 436-II: Umumiy harbiy majburiyat va harbiy xizmat toʻgʻrisida 5"
+    ],
+    "hybrid": [
+     "Qonun 436-II: Umumiy harbiy majburiyat va harbiy xizmat toʻgʻrisida 5",
+     "Qonun 436-II: Umumiy harbiy majburiyat va harbiy xizmat toʻgʻrisida 21",
+     "Qonun 436-II: Umumiy harbiy majburiyat va harbiy xizmat toʻgʻrisida 19"
+    ]
+   }
+  },
+  "q-12": {
+   "question": "Sudga daʼvo berishda davlat bojidan kimlar ozod?",
+   "ranks": {
+    "fts": 1,
+    "vector": 1,
+    "hybrid": 1
+   },
+   "top3": {
+    "fts": [
+     "OʻRQ-600: Davlat boji toʻgʻrisida 8",
+     "OʻRQ-600: Davlat boji toʻgʻrisida 9",
+     "OʻRQ-600: Davlat boji toʻgʻrisida 10"
+    ],
+    "vector": [
+     "OʻRQ-600: Davlat boji toʻgʻrisida 8",
+     "OʻRQ-600: Davlat boji toʻgʻrisida 10",
+     "OʻRQ-600: Davlat boji toʻgʻrisida 9"
+    ],
+    "hybrid": [
+     "OʻRQ-600: Davlat boji toʻgʻrisida 8",
+     "OʻRQ-600: Davlat boji toʻgʻrisida 9",
+     "OʻRQ-600: Davlat boji toʻgʻrisida 10"
+    ]
+   }
+  },
+  "q-13": {
+   "question": "Davlat boji ortiqcha toʻlangan boʻlsa qaytarib olsa boʻladimi?",
+   "ranks": {
+    "fts": 4,
+    "vector": 1,
+    "hybrid": 1
+   },
+   "top3": {
+    "fts": [
+     "Soliq kodeksi 104",
+     "Soliq kodeksi 105",
+     "OʻRQ-600: Davlat boji toʻgʻrisida 8"
+    ],
+    "vector": [
+     "OʻRQ-600: Davlat boji toʻgʻrisida 18",
+     "OʻRQ-600: Davlat boji toʻgʻrisida 8",
+     "Qonun OʻRQ-1161: Davlat organining yoki uning mansabdor shaxsining qonunga xilof qarori, harakati yoxud harakatsizligi tufayli yetkazilgan zararning oʻrnini qoplash toʻgʻrisida 20"
+    ],
+    "hybrid": [
+     "OʻRQ-600: Davlat boji toʻgʻrisida 18",
+     "Soliq kodeksi 104",
+     "OʻRQ-600: Davlat boji toʻgʻrisida 8"
+    ]
+   }
+  },
+  "q-14": {
+   "question": "OSAGO polisi necha muddatga beriladi?",
+   "ranks": {
+    "fts": null,
+    "vector": null,
+    "hybrid": null
+   },
+   "top3": {
+    "fts": [
+     "Mehnat kodeksi 116",
+     "Jinoyat kodeksi 59",
+     "Uy-joy kodeksi 99"
+    ],
+    "vector": [
+     "Jinoyat kodeksi 64",
+     "Jinoyat kodeksi 73",
+     "Jinoyat kodeksi 69"
+    ],
+    "hybrid": [
+     "Mehnat kodeksi 116",
+     "Jinoyat kodeksi 59",
+     "Jinoyat kodeksi 64"
+    ]
+   }
+  },
+  "q-15": {
+   "question": "Avariyada mashinam urildi, sugʻurta qancha toʻlaydi?",
+   "ranks": {
+    "fts": null,
+    "vector": 1,
+    "hybrid": 2
+   },
+   "top3": {
+    "fts": [
+     "Qonun OʻRQ-155: Transport vositalari egalarining fuqarolik javobgarligini majburiy sugʻurta qilish toʻgʻrisida 23",
+     "Qonun OʻRQ-703: Sudlar toʻgʻrisida 84",
+     "Qonun OʻRQ-155: Transport vositalari egalarining fuqarolik javobgarligini majburiy sugʻurta qilish toʻgʻrisida 13"
+    ],
+    "vector": [
+     "Qonun OʻRQ-155: Transport vositalari egalarining fuqarolik javobgarligini majburiy sugʻurta qilish toʻgʻrisida 21",
+     "OʻRQ-600: Davlat boji toʻgʻrisida None",
+     "Maʼmuriy javobgarlik toʻgʻrisidagi kodeksi 125"
+    ],
+    "hybrid": [
+     "Qonun OʻRQ-155: Transport vositalari egalarining fuqarolik javobgarligini majburiy sugʻurta qilish toʻgʻrisida 23",
+     "Qonun OʻRQ-155: Transport vositalari egalarining fuqarolik javobgarligini majburiy sugʻurta qilish toʻgʻrisida 21",
+     "Qonun OʻRQ-703: Sudlar toʻgʻrisida 84"
+    ]
+   }
+  },
+  "q-16": {
+   "question": "Oʻzbekiston fuqaroligini qanday olish mumkin?",
+   "ranks": {
+    "fts": 4,
+    "vector": null,
+    "hybrid": 2
+   },
+   "top3": {
+    "fts": [
+     "Qonun OʻRQ-610: fuqaroligi toʻgʻrisida 43",
+     "Fuqarolik protsessual kodeksi 300",
+     "Qonun OʻRQ-610: fuqaroligi toʻgʻrisida 15"
+    ],
+    "vector": [
+     "Qonun OʻRQ-610: fuqaroligi toʻgʻrisida 55",
+     "Qonun OʻRQ-610: fuqaroligi toʻgʻrisida 43",
+     "Qonun OʻRQ-610: fuqaroligi toʻgʻrisida 4"
+    ],
+    "hybrid": [
+     "Qonun OʻRQ-610: fuqaroligi toʻgʻrisida 43",
+     "Qonun OʻRQ-610: fuqaroligi toʻgʻrisida 13",
+     "Qonun OʻRQ-610: fuqaroligi toʻgʻrisida 34"
+    ]
+   }
+  },
+  "q-17": {
+   "question": "Ikki fuqarolikka ruxsat bormi?",
+   "ranks": {
+    "fts": null,
+    "vector": null,
+    "hybrid": null
+   },
+   "top3": {
+    "fts": [
+     "Fuqarolik kodeksi (ikkinchi qism) 1168",
+     "Bojxona kodeksi 229",
+     "Jinoyat-protsessual kodeksi 396"
+    ],
+    "vector": [
+     "OʻRQ-600: Davlat boji toʻgʻrisida None",
+     "Qonun OʻRQ-610: fuqaroligi toʻgʻrisida 55",
+     "Soliq kodeksi 6"
+    ],
+    "hybrid": [
+     "OʻRQ-600: Davlat boji toʻgʻrisida None",
+     "Qonun OʻRQ-610: fuqaroligi toʻgʻrisida 55",
+     "Fuqarolik kodeksi (ikkinchi qism) 1168"
+    ]
+   }
+  },
+  "q-18": {
+   "question": "Notarius qanday hollarda notarial harakatni rad etadi?",
+   "ranks": {
+    "fts": 2,
+    "vector": 3,
+    "hybrid": 3
+   },
+   "top3": {
+    "fts": [
+     "Qonun 343-I: Notariat toʻgʻrisida 23",
+     "Qonun 343-I: Notariat toʻgʻrisida 38",
+     "Qonun 343-I: Notariat toʻgʻrisida 82"
+    ],
+    "vector": [
+     "Qonun 343-I: Notariat toʻgʻrisida 18",
+     "Qonun 343-I: Notariat toʻgʻrisida 23",
+     "Qonun 343-I: Notariat toʻgʻrisida 38"
+    ],
+    "hybrid": [
+     "Qonun 343-I: Notariat toʻgʻrisida 18",
+     "Qonun 343-I: Notariat toʻgʻrisida 23",
+     "Qonun 343-I: Notariat toʻgʻrisida 38"
+    ]
+   }
+  },
+  "q-19": {
+   "question": "Kompaniya mening shaxsiy maʼlumotlarimni boshqalarga bera oladimi?",
+   "ranks": {
+    "fts": null,
+    "vector": null,
+    "hybrid": null
+   },
+   "top3": {
+    "fts": [
+     "Soliq kodeksi 208",
+     "Soliq kodeksi 40",
+     "Soliq kodeksi 331"
+    ],
+    "vector": [
+     "Mehnat kodeksi 176",
+     "Mehnat kodeksi 178",
+     "Mehnat kodeksi 179"
+    ],
+    "hybrid": [
+     "Soliq kodeksi 208",
+     "Soliq kodeksi 40",
+     "Soliq kodeksi 331"
+    ]
+   }
+  },
+  "q-20": {
+   "question": "Bepul advokatdan kimlar foydalana oladi?",
+   "ranks": {
+    "fts": null,
+    "vector": null,
+    "hybrid": null
+   },
+   "top3": {
+    "fts": [
+     "Qonun 221-I: Isteʼmolchilarning huquqlarini himoya qilish toʻgʻrisida 15",
+     "Qonun 349-I: Advokatura toʻgʻrisida 12²",
+     "Fuqarolik protsessual kodeksi 95"
+    ],
+    "vector": [
+     "Qonun 349-I: Advokatura toʻgʻrisida 7",
+     "Qonun OʻRQ-848: Davlat hisobidan yuridik yordam koʻrsatish toʻgʻrisida 20",
+     "Jinoyat-protsessual kodeksi 50"
+    ],
+    "hybrid": [
+     "Qonun 349-I: Advokatura toʻgʻrisida 7¹",
+     "Qonun 349-I: Advokatura toʻgʻrisida 7",
+     "Qonun 221-I: Isteʼmolchilarning huquqlarini himoya qilish toʻgʻrisida 15"
+    ]
+   }
+  }
+ },
+ "settings": {
+  "model": "e5-small-int8",
+  "stem": true,
+  "alt": false,
+  "questions": "eval/questions.yaml"
+ }
+}

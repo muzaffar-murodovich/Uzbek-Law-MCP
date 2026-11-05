@@ -230,7 +230,7 @@
   alt: ["ijara shartnomasini muddatidan oldin bekor qilish ijaraga oluvchi talabi bilan"]
 - id: fk-14
   question: Doʻkondan olgan tovarim sifatsiz chiqdi, kafolat muddati qanday hisoblanadi?
-  expected: [{document: -180552, article: "404"}, {document: -180552, article: "403"}]
+  expected: [{document: -180552, article: "404"}, {document: -180552, article: "403"}, {document: -4704, article: "11"}]
   tags: [fuqarolik, sozlashuv]
   alt: ["tovarning kafolat muddati va sifat kafolati"]
 - id: fk-15
@@ -398,6 +398,109 @@
   alt: ["ijtimoiy taʼminot huquqi qariganda Konstitutsiya"]
 - id: kon-08
   question: Advokat yollashga pulim boʻlmasa davlat bepul yuridik yordam beradimi?
-  expected: [{document: -6445145, article: "29"}]
+  expected: [{document: -6445145, article: "29"}, {document: -6502543, article: "9"}, {document: -6502543, article: "10"}]
   tags: [konstitutsiya, sozlashuv]
   alt: ["malakali yuridik yordam olish huquqi davlat hisobidan Konstitutsiya"]
+
+# --- Qonunlar (eval/corpus/laws.txt) ---
+- id: q-01
+  question: Pensiyaga chiqish uchun necha yil ish staji kerak?
+  expected: [{document: -112314, article: "7"}, {document: -112314, article: "17"}]
+  tags: [qonun, pensiya, sozlashuv]
+  alt: ["yoshga doir pensiya olish huquqi va talab qilinadigan ish staji"]
+- id: q-02
+  question: Ish staji yetmasa ham pensiya beriladimi?
+  expected: [{document: -112314, article: "8"}, {document: -112314, article: "18"}]
+  tags: [qonun, pensiya, sozlashuv]
+  alt: ["ish staji toʻliq boʻlmagan holda pensiya tayinlash"]
+- id: q-03
+  question: Pensiya tayinlash uchun qayerga murojaat qilinadi?
+  expected: [{document: -112314, article: "3"}]
+  tags: [qonun, pensiya, sozlashuv]
+  alt: ["pensiya tayinlashni soʻrab murojaat etish tartibi"]
+- id: q-04
+  question: Sifatsiz telefon sotib oldim, doʻkon almashtirib berishi shartmi?
+  expected: [{document: -4704, article: "13"}, {document: -4704, article: "14"}]
+  tags: [qonun, istemolchi, sozlashuv]
+  alt: ["nuqsonli tovar sotilganda isteʼmolchining huquqlari, tovarni almashtirish"]
+- id: q-05
+  question: Sifatli kiyimni ham qaytarib berish mumkinmi, oʻlchami toʻgʻri kelmasa?
+  expected: [{document: -4704, article: "18"}]
+  tags: [qonun, istemolchi, sozlashuv]
+  alt: ["maqbul sifatli tovarni almashtirib olish huquqi"]
+- id: q-06
+  question: Bank bankrot boʻlsa omonatimni kim qaytaradi va qancha?
+  expected: [{document: -7389404, article: "26"}]
+  tags: [qonun, bank, sozlashuv]
+  alt: ["bank omonatlari boʻyicha kafolatlangan kompensatsiya miqdori"]
+- id: q-07
+  question: Kreditni muddatidan oldin yopsam jarima olishadimi?
+  expected: [{document: -1004687, article: "16"}]
+  tags: [qonun, kredit, sozlashuv]
+  alt: ["isteʼmol kreditini muddatidan ilgari qaytarish"]
+- id: q-08
+  question: Isteʼmol krediti olish uchun qanday hujjatlar kerak?
+  expected: [{document: -1004687, article: "8"}]
+  tags: [qonun, kredit, rasmiy]
+  alt: ["isteʼmol krediti olish uchun taqdim etiladigan hujjatlar roʻyxati"]
+- id: q-09
+  question: Armiyaga chaqiruvni oʻqish sababli kechiktirsa boʻladimi?
+  expected: [{document: -78717, article: "21"}]
+  tags: [qonun, harbiy, sozlashuv]
+  alt: ["muddatli harbiy xizmatga chaqirilishni kechiktirish asoslari"]
+- id: q-10
+  question: Kimlar harbiy xizmatdan ozod qilinadi?
+  expected: [{document: -78717, article: "22"}]
+  tags: [qonun, harbiy, sozlashuv]
+  alt: ["muddatli harbiy xizmatga chaqirilishdan ozod etish"]
+- id: q-11
+  question: Muddatli harbiy xizmat necha oy?
+  expected: [{document: -78717, article: "5"}]
+  tags: [qonun, harbiy, sozlashuv]
+  alt: ["muddatli harbiy xizmat muddati"]
+- id: q-12
+  question: Sudga daʼvo berishda davlat bojidan kimlar ozod?
+  expected: [{document: -4680944, article: "8"}, {document: -4680944, article: "15"}]
+  tags: [qonun, davlat-boji, sozlashuv]
+  alt: ["fuqarolik ishlari boʻyicha sudlarda davlat bojini toʻlashdan ozod qilish"]
+- id: q-13
+  question: Davlat boji ortiqcha toʻlangan boʻlsa qaytarib olsa boʻladimi?
+  expected: [{document: -4680944, article: "18"}]
+  tags: [qonun, davlat-boji, sozlashuv]
+  alt: ["davlat bojini qaytarish tartibi"]
+- id: q-14
+  question: OSAGO polisi necha muddatga beriladi?
+  expected: [{document: -1342474, article: "9"}]
+  tags: [qonun, sugurta, sozlashuv]
+  alt: ["transport vositasi egalarining majburiy sugʻurta shartnomasining amal qilish muddati"]
+- id: q-15
+  question: Avariyada mashinam urildi, sugʻurta qancha toʻlaydi?
+  expected: [{document: -1342474, article: "22"}, {document: -1342474, article: "21"}]
+  tags: [qonun, sugurta, sozlashuv]
+  alt: ["majburiy sugʻurta boʻyicha sugʻurta tovoni miqdori yoʻl-transport hodisasida"]
+- id: q-16
+  question: Oʻzbekiston fuqaroligini qanday olish mumkin?
+  expected: [{document: -4761984, article: "13"}, {document: -4761984, article: "19"}, {document: -4761984, article: "18"}]
+  tags: [qonun, fuqarolik-instituti, sozlashuv]
+  alt: ["Oʻzbekiston Respublikasi fuqaroligiga qabul qilish asoslari va tartibi"]
+- id: q-17
+  question: Ikki fuqarolikka ruxsat bormi?
+  expected: [{document: -4761984, article: "12"}]
+  tags: [qonun, fuqarolik-instituti, sozlashuv]
+  alt: ["Oʻzbekiston fuqarosining chet davlat fuqaroligiga ega boʻlishi"]
+- id: q-18
+  question: Notarius qanday hollarda notarial harakatni rad etadi?
+  expected: [{document: -54458, article: "38"}]
+  tags: [qonun, notariat, rasmiy]
+  alt: ["notarial harakatni amalga oshirishni rad etish asoslari"]
+- id: q-19
+  question: Kompaniya mening shaxsiy maʼlumotlarimni boshqalarga bera oladimi?
+  expected: [{document: -4396419, article: "13"}, {document: -4396419, article: "14"}]
+  tags: [qonun, malumot, sozlashuv]
+  alt: ["shaxsga doir maʼlumotlarni uchinchi shaxslarga berish va tarqatish"]
+- id: q-20
+  question: Bepul advokatdan kimlar foydalana oladi?
+  expected: [{document: -6502543, article: "9"}, {document: -6502543, article: "10"}]
+  tags: [qonun, yuridik-yordam, sozlashuv]
+  alt: ["davlat hisobidan yuridik yordam olish huquqiga ega boʻlgan shaxslar"]
+
