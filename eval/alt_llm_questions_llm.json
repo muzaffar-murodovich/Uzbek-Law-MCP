@@ -1,0 +1,330 @@
+{
+ "llm-001": [
+  "g'ayriqonuniy ravishda ishdan chetlatilgan xodimga majburiy progul vaqti uchun o'rtacha ish haqi to'lash",
+  "ishdan chetlatish qonunga xilof deb topilganda ishlamagan vaqt uchun ish haqi undirish"
+ ],
+ "llm-002": [
+  "tashqi reklama obyektini joylashtirish ruxsatnomasining amal qilish muddati va auksionsiz qayta o‘rnatish",
+  "reklama konstruksiyasini joylashtirish uchun elektron onlayn-auksion va amaldagi ruxsatnoma shartlari"
+ ],
+ "llm-003": [
+  "davlat boji va yig‘imni qaytarish asoslari",
+  "ruxsatnoma berilmaganda to‘langan to‘lovni qaytarish tartibi"
+ ],
+ "llm-004": [
+  "sud chaqiruv qog‘ozi topshirish yashash joyida bo‘lmaganda voyaga yetgan oila a’zosiga berish",
+  "protsessual hujjatlarni yetkazish adresat yo‘qligida qo‘shni fuqarolar yig‘ini ish joyi ma’muriyatiga topshirish"
+ ],
+ "llm-005": [
+  "masofaviy ish xodimni ishdan bo‘shatish elektron hujjat xabarnoma yuborish",
+  "mehnat shartnomasini bekor qilish to‘g‘risidagi buyruq nusxasini yuborish pochta orqali berish"
+ ],
+ "llm-006": [
+  "ipoteka bilan yuklangan ko‘chmas mulkni boshqa shaxsga o‘tkazish",
+  "ko‘chmas mulkka taqiq qo‘yilganda oldi-sotdi bitimini tuzish"
+ ],
+ "llm-007": [
+  "korxona mulkdori o‘zgarganda mehnat shartlari saqlanishi",
+  "mulkdor almashganda xodimlar uchun mehnat shartlari va kafolatlar"
+ ],
+ "llm-008": [
+  "ipoteka bilan ta’minlangan majburiyatni undirish sud muhokamasi davrida garov predmetini realizatsiya qilish",
+  "bankning garovga qo‘yilgan uy-joyni sud tartibida va suddan tashqari tartibda undiruvga qaratishi"
+ ],
+ "llm-009": [
+  "qarzdorning umumiy ulushli mulkdagi ulushiga undiruv qaratish",
+  "umumiy mulkdagi ulushni ajratish va realizatsiya qilish"
+ ],
+ "llm-010": [
+  "radioaktiv materiallarni saqlash yoki tashish qoidalarini buzish badanga og'ir shikast yetkazish javobgarlik",
+  "ionlashtiruvchi nurlanish manbalaridan ehtiyotsizlik bilan foydalanish odam sog'lig'iga zarar yetkazish jazo"
+ ],
+ "llm-011": [
+  "fuqaroni vafot etgan deb e'lon qilish bedarak yo'qolgan",
+  "bedarak yo'qolgan fuqaro vafot etgan deb e'lon qilinishi muddatlari"
+ ],
+ "llm-012": [
+  "noqulay va alohida noqulay iqlim sharoitida ishlaganlik uchun har yilgi qo‘shimcha ta’til",
+  "og‘ir va noqulay mehnat sharoitlari uchun qo‘shimcha ta’til kunlari"
+ ],
+ "llm-013": [
+  "O‘zbekiston fuqaroligiga qabul qilish shartlari davlat tilini bilish qonuniy daromad manbai",
+  "ajdodlari O‘zbekiston fuqarosi bo‘lgan chet el fuqarosini fuqarolikka qabul qilish talablar"
+ ],
+ "llm-014": [
+  "kam miqdordagi pul summasini undirish bo‘yicha ishlarni soddalashtirilgan ish yuritish tartibida ko‘rish",
+  "talab summasi kichik bo‘lgan da’volar yuzasidan soddalashtirilgan tartibda sud ishini yuritish"
+ ],
+ "llm-015": [
+  "mehnatga haq to‘lash bo‘yicha qarzdorlikni undirish da’vo muddati",
+  "ish haqini undirish va xodimning pul talablari bo‘yicha muddatlar"
+ ],
+ "llm-016": [
+  "jinoyat sodir etilgan vaqtda shaxsning aqli rasoligi va o‘z harakatlarini anglash hamda boshqarish qobiliyatini aniqlash",
+  "jinoyat protsessida shaxsning ruhiy holatini va ko‘rsatuv berish qobiliyatini aniqlash uchun sud-psixiatriya ekspertizasi tayinlash"
+ ],
+ "llm-017": [
+  "xodimga nisbatan xizmat tekshiruvi materiallari bilan tanishish va nusxa olish huquqi",
+  "ichki tekshiruv o‘tkazish asoslari to‘g‘risida xodimni xabardor qilish tartibi"
+ ],
+ "llm-018": [
+  "mehnatga haq to‘lash tizimlari va shakllari ish beruvchi tomonidan belgilanishi",
+  "xodimlarning ayrim toifalari uchun mehnatga haq to‘lash shartlarini differensial belgilash"
+ ],
+ "llm-019": [
+  "garov bilan ta'minlangan majburiyat hajmi foiz neустoyka zarar undirish xarajatlari",
+  "ipoteka predmetidan talablarni qanoatlantirish asosiy qarz foiz penya sud xarajatlari"
+ ],
+ "llm-020": [
+  "gaz ballon uskunalaridan foydalanish qoidalarini buzish badanga og'ir shikast yetkazish javobgarlik",
+  "transport vositasiga o'rnatilgan gaz uskunasi xavfsizlik talablarini buzish odamga og'ir tan jarohati yetkazish jazo"
+ ],
+ "llm-021": [
+  "transport vositasini ijaraga oluvchining javobgarligi zarar uchun",
+  "ijara shartnomasida transport vositasi shikastlanganda zararni qoplash"
+ ],
+ "llm-022": [
+  "savdolarda yagona ishtirokchi bo‘lgan taqdirda savdoni o‘tkazish tartibi",
+  "elektron onlayn auksionda bitta talabgor ishtirok etganda savdo natijalari"
+ ],
+ "llm-023": [
+  "dalillarni taqdim etish tartibi sudga taqdim etiladigan hujjatlar va elektron ma'lumotlar",
+  "ishtirokchining tashabbusi bilan dalillarni taqdim etish telefon yozishmalari va elektron fayllar"
+ ],
+ "llm-024": [
+  "xodimni g‘ayriqonuniy ravishda ishdan bo‘shatish oqibatida to‘langan zarar aybdor mansabdor shaxsdan undirish",
+  "ishga tiklangan xodimga to‘langan haq va kompensatsiyani aybdor rahbar zimmasiga yuklash regress javobgarligi"
+ ],
+ "llm-025": [
+  "mavsumiy ishlarda xodimning tashabbusiga ko'ra mehnat shartnomasini bekor qilish muddati",
+  "mavsumiy xodim ishdan bo'shashi haqida ish beruvchini oldindan ogohlantirish muddati"
+ ],
+ "llm-026": [
+  "favqulodda holat sharoitida aholini tayyorgarlikka jalb etish ishlab chiqarishdan ajralgan holda yoki ajralmagan holda",
+  "fuqarolarni favqulodda vaziyatlardan muhofaza qilish bo‘yicha tayyorgarlik ish yoki o‘qish joyida o‘tkazilishi"
+ ],
+ "llm-027": [
+  "tovar belgisidan huquq egasining roziligisiz foydalanish",
+  "boshqa shaxsning firma nomi va logotipidan foydalanish tartibi"
+ ],
+ "llm-028": [
+  "pudrat shartnomasi bo‘yicha bajarilgan ishning kamchiliklari uchun pudratchining javobgarligi",
+  "qurilish-ta’mirlash ishlarining sifatsiz bajarilishi oqibatida yetkazilgan zarar uchun javobgarlik"
+ ],
+ "llm-029": [
+  "o‘rmon fondi yerlarida pichan o‘rish uchun ruxsatnoma va javobgarlik",
+  "o‘rmonlarda ruxsatsiz pichan tayyorlash uchun ma’muriy jarima"
+ ],
+ "llm-030": [
+  "homilador xotin ta'minoti aliment undirish",
+  "er-xotin o'rtasida ta'minot berish majburiyati homiladorlik davrida"
+ ],
+ "llm-031": [
+  "taraflarning tortishuvi va teng huquqliligi prinsipi",
+  "sudning xolisligi va taraflarga nisbatan betarafligi"
+ ],
+ "llm-032": [
+  "oldi-sotdi shartnomasida tovarni butligi va but to‘plamda topshirish majburiyati",
+  "sotuvchining tovarni komplektligi va butligi bo‘yicha topshirish talabi"
+ ],
+ "llm-033": [
+  "bojxona nazorati ostidagi tovarlar tranziti va tashish davrida nazorat",
+  "tovarlar boshqa davlat hududi orqali olib o‘tilganda bojxona nazorati ostida bo‘lishi"
+ ],
+ "llm-034": [
+  "ma'muriy organ vakilining sud majlisiga kelmasligi ishni ko‘rish",
+  "sud majlisida taraf vakili hozir bo‘lmaganda ishni ko‘rib chiqish"
+ ],
+ "llm-035": [
+  "bojxona hududiga olib kirilgan tovarlarni reeksport bojxona rejimiga joylashtirish muddati",
+  "reeksport bojxona rejimi tovarlarni qayta olib chiqish muddatlari"
+ ],
+ "llm-036": [
+  "chakana oldi-sotdi shartnomasi bo‘yicha tovar haqini to‘lash muddati",
+  "tovarni kreditga sotish va to‘lovni kechiktirib to‘lash shartlari"
+ ],
+ "llm-037": [
+  "harbiy xizmatga yaroqlilik bo‘yicha zaxiraga o‘tkazish",
+  "harbiy hisobdan chiqarish va zaxirada turish tartibi"
+ ],
+ "llm-038": [
+  "er-xotinning umumiy mulkini tasarruf etishda ikkinchi turmush o‘rtog‘ining notarial tasdiqlangan roziligi",
+  "nikoh davrida orttirilgan uy-joyni ikkinchi turmush o‘rtog‘ining roziligisiz sotish haqiqiy emas deb topish"
+ ],
+ "llm-039": [
+  "hakamlik muhokamasi bo‘yicha da’voni ta’minlash choralari sudga murojaat qilish",
+  "hakamlik sudida ko‘rilayotgan nizoda ta’minot choralarini qaysi sud qo‘llaydi"
+ ],
+ "llm-040": [
+  "fuqaroviy va xizmat qurolini reklama qilish talablari",
+  "qurol savdosi obyektida reklama va e'lonlarni joylashtirish tartibi"
+ ],
+ "llm-041": [
+  "nogironligi bo‘lgan shaxsning sog‘lig‘i to‘g‘risidagi ma’lumotlarning maxfiyligi va oshkor etilishi",
+  "shaxsga doir ma’lumotlar va tibbiy sirni uchinchi shaxslarga berishni taqiqlash"
+ ],
+ "llm-042": [
+  "qarzdorlikni majburiy ijro etish maxsus hisob raqamiga pul mablag'larini o'tkazish mol-mulkni tasarruf etishni cheklashni bekor qilish ijro ishini to'xtatib turish",
+  "ijro hujjati bo'yicha undirish summasini ijro organining depozit hisobvarag'iga to'lash transport vositasiga taqiqni olib tashlash ijro harakatlarini to'xtatib turish"
+ ],
+ "llm-043": [
+  "o‘ta xavfli moddalarni talon-toroj qilish yoki firibgarlik yo‘li bilan egallash",
+  "zaharlovchi, portlovchi yoki radioaktiv moddalarni o‘g‘irlash uchun javobgarlik"
+ ],
+ "llm-044": [
+  "saylovchilar ro‘yxatidagi xatolarni tuzatish va arizani ko‘rib chiqish muddati",
+  "saylovchilar ro‘yxatiga aniqlik kiritish yoki tuzatishni rad etish sabablari haqida xabardor qilish"
+ ],
+ "llm-045": [
+  "jamoat ishlari o‘tash joyi bo‘yicha probatsiya organida ro‘yxatdan o‘tish muddati",
+  "sudning jamoat ishlari jazosi ijrosini tashkil etish va nazorat organiga kelish muddati"
+ ],
+ "llm-046": [
+  "homiladorlik va tug‘ish ta’tilidagi xodim o‘rniga muddatli mehnat shartnomasi",
+  "vaqtincha yo‘q bo‘lgan xodimning o‘rniga ishga qabul qilish muddatli shartnoma"
+ ],
+ "llm-047": [
+  "to‘lovga qobiliyatsizlik to‘g‘risidagi arizani qabul qilish muddati",
+  "sud arizani ish yuritishga qabul qilish masalasini hal etish muddati"
+ ],
+ "llm-048": [
+  "pudrat buyurtmachining yordam ko‘rsatish majburiyati materiallar energiya ta’minoti tashish",
+  "maishiy pudrat ishni bajarish uchun shart-sharoit yaratish buyurtmachining majburiyatlari"
+ ],
+ "llm-049": [
+  "vasiylikdagi bolaning aliment va nafaqa olish huquqi",
+  "vasiylikdagi bolaning yaqin qarindoshlari bilan ko‘rishish huquqi"
+ ],
+ "llm-050": [
+  "intizomiy jazo qo‘llash muddati xodimning nojo‘ya xatti-harakati aniqlangan kundan e’tiboran",
+  "mehnat intizomini buzganlik uchun intizomiy jazo chorasi qo‘llashning muddatlari"
+ ],
+ "llm-051": [
+  "ruxsat etish xususiyatiga ega hujjatni berish uchun taqdim etiladigan hujjatlar va arizani ko‘rib chiqish muddati",
+  "ruxsat berish tartibi zarur hujjatlar ro‘yxati hamda arizani ko‘rib chiqish muddatlari"
+ ],
+ "llm-052": [
+  "diniy mazmundagi materiallarni tayyorlash saqlash olib kirish va tarqatish uchun javobgarlik",
+  "diniy materiallarni noqonuniy ko‘paytirish olib kirish va boshqalarga tarqatish maʼmuriy javobgarlik"
+ ],
+ "llm-053": [
+  "masofadan turib oldi-sotdi shartnomasida iste'molchiga tovar ishlab chiqaruvchisi va sotib olish shartlari haqida axborot berish majburiyati",
+  "elektron tijoratda sotuvchi tomonidan tovar to'g'risida to'liq va ishonchli ma'lumot taqdim etish talablari"
+ ],
+ "llm-054": [
+  "chet el fuqarolarining mehnat munosabatlari doimiy yashash guvohnomasi bilan teng huquqlilik",
+  "O‘zbekiston Respublikasida doimiy yashovchi chet el fuqarolarini ishga qabul qilish mehnat huquqlari"
+ ],
+ "llm-055": [
+  "mulkni ijaraga berishda topshirish muddati va butligi uchun javobgarlik",
+  "ijara obyektining yetkazib berilishi kechiktirilishi va but emasligi oqibatlari"
+ ],
+ "llm-056": [
+  "turar joy ijarasi muddati tugagandan keyin ijaraga oluvchi foydalanishda davom etishi va ijaraga beruvchining e'tirozi bo'lmasa shartnomaning uzaytirilishi",
+  "ijara shartnomasi muddati tugaganidan so'ng mol-mulkdan foydalanish davom ettirilganda ijaraga beruvchi e'tiroz bildirmasa shartnoma noma'lum muddatga uzaytirilishi"
+ ],
+ "llm-057": [
+  "sud majlisida voyaga yetmagan shaxsning ishtiroki tartibi",
+  "sud binosiga voyaga yetmaganlarni kiritish cheklovlari"
+ ],
+ "llm-058": [
+  "homilador ayollarni saqlash sharoitlari ozodlikdan mahrum etish joylari",
+  "emizikli bolasi bor ayollarni alohida saqlash yengillashtirilgan sharoitlar"
+ ],
+ "llm-059": [
+  "tamaki mahsulotlari va alkogol mahsulotlarini voyaga yetmaganlarga realizatsiya qilish taqiqlanishi",
+  "alkogol va tamaki mahsulotlarini sotishda xaridorning yoshi bo‘yicha cheklovlar"
+ ],
+ "llm-060": [
+  "tibbiy sirni oshkor etganlik uchun javobgarlik",
+  "bemorning sog'lig'i to'g'risidagi ma'lumotlarni oshkor qilish taqiqlanishi"
+ ],
+ "llm-061": [
+  "harbiy forma kiyish tartibi farqlovchi belgilar bilan",
+  "harbiy kiyim-boshni qonunga xilof ravishda kiyib yurish javobgarligi"
+ ],
+ "llm-062": [
+  "zararli va xavfli mehnat sharoitida ish vaqtidan tashqari ishga jalb etish cheklovlari",
+  "qo‘shimcha ishning eng ko‘p davomiyligi bir kunda va yiliga jami mehnat qonunchiligi"
+ ],
+ "llm-063": [
+  "sudga da'vo arizasiga ilova qilinadigan hujjatlar",
+  "arizaga ilova qilinadigan hujjatlar va dalillar"
+ ],
+ "llm-064": [
+  "aniqlashtirilgan soliq hisoboti ixtiyoriy ravishda taqdim etish penya va jarima qo‘llanilmasligi",
+  "soliq hisobotidagi xatoni mustaqil aniqlash qo‘shimcha soliq summasini to‘lashda javobgarlikdan ozod etish"
+ ],
+ "llm-065": [
+  "saqlash muddati cheklangan tovarni bojxona omboridan chiqarish muddati",
+  "chetdan olib kirilgan tovarning yaroqlilik muddati tugashiga qolgan muddat bojxona ombori"
+ ],
+ "llm-066": [
+  "qarzni bo‘lib-bo‘lib to‘lash muddatini o‘zgartirish to‘g‘risida murojaat qilish muddati",
+  "pul majburiyatini bajarish muddatini kechiktirish yoki bo‘lib-bo‘lib to‘lashni so‘rash tartibi"
+ ],
+ "llm-067": [
+  "saylovchilar ro‘yxatiga kiritilmagan fuqaroni ro‘yxatga kiritish va ovoz berish tartibi",
+  "saylov kuni saylovchi pasport bilan shaxsini tasdiqlab ovoz berishi tartibi"
+ ],
+ "llm-068": [
+  "nikoh shartnomasini o‘zgartirish va bekor qilish taraflarning o‘zaro roziligi",
+  "er-xotinning kelishuvi bilan nikoh shartnomasiga o‘zgartirish kiritish yoki uni bekor qilish"
+ ],
+ "llm-069": [
+  "voyaga yetmaganlik davrida sodir etilgan jinoyat uchun sudlanganlikni hisobga olish",
+  "takroran qasddan jinoyat sodir etishda avvalgi sudlanganlikning huquqiy ahamiyati"
+ ],
+ "llm-070": [
+  "turar joyni ijaraga berish va tekin foydalanishga topshirish",
+  "mulkdorning uy-joydan foydalanish huquqi va boshqalarga berishi"
+ ],
+ "llm-071": [
+  "soliq hisobotini taqdim etish muddati",
+  "hisobot davridan keyingi oyning 20 sanasiga qadar soliq hisoboti"
+ ],
+ "llm-072": [
+  "ma'muriy nazoratdagi shaxs yashash joyidan ichki ishlar organining ruxsatisiz chiqib ketishi takroran",
+  "ma'muriy nazorat qoidalarini buzish oldin ma'muriy jazo qo'llanilganidan keyin yana sodir etish"
+ ],
+ "llm-073": [
+  "arizani ko‘rmasdan qoldirish asoslari va kamchiliklarni bartaraf etib takroran murojaat qilish",
+  "imzo qo‘yilmagan da'vo arizasini qaytarish yoki ko‘rmasdan qoldirish va qayta topshirish"
+ ],
+ "llm-074": [
+  "ipoteka predmetini realizatsiya qilishdan tushgan mablag‘ kredit majburiyatini to‘liq qoplamagan taqdirda qarzdorning qolgan qarzdorligi",
+  "garovga qo‘yilgan uy-joy sotilgandan keyin yetishmayotgan qarz summasini qarzdordan undirish tartibi"
+ ],
+ "llm-075": [
+  "dalillarni ta'minlash to'g'risida ariza",
+  "sudgacha dalillarni oldindan ta'minlash"
+ ],
+ "llm-076": [
+  "murojaatni ko‘rib chiqishni rad etish ustidan shikoyat qilish",
+  "Oliy sudga murojaatni ko‘rmaslik to‘g‘risidagi javobni bekor qilish"
+ ],
+ "llm-077": [
+  "sud qarorini darhol ijro etish va qonuniy kuchga kirishi",
+  "sud hujjatlarini ijro etish muddati va qonuniy kuchga kirganidan keyin"
+ ],
+ "llm-078": [
+  "sud qarori ustidan shikoyat qaysi sud orqali beriladi",
+  "apellyatsiya shikoyati qaror chiqargan sud orqali yuborish tartibi"
+ ],
+ "llm-079": [
+  "tovar belgisiga doir huquqlarni himoya qilish bojxona organiga ariza ta'minot summasi",
+  "intellektual mulk obyekti bojxona reyestri ariza mazmuni oldindan to'lanadigan mablag'"
+ ],
+ "llm-080": [
+  "transport vositasini alkogolli mastlik holatida boshqarish takroran sodir etilganligi uchun javobgarlik",
+  "mastlik holatini aniqlash uchun tibbiy tekshiruvdan o‘tishdan bo‘yin tovlagan shaxsning javobgarligi"
+ ],
+ "llm-081": [
+  "turar joyda tintuv o‘tkazish to‘g‘risidagi qarorni ko‘rsatish va tanishtirish",
+  "tintuv bayonnomasi va protsessual hujjatlar bilan tanishtirish hamda imzo qo‘ydirish tartibi"
+ ],
+ "llm-082": [
+  "bank omonat hisobvarag‘ini uchinchi shaxs tomonidan to‘ldirish tartibi",
+  "omonat hisobvarag‘iga boshqa shaxs tomonidan pul mablag‘larini kiritish"
+ ]
+}

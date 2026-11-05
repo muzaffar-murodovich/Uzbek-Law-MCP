@@ -1,13 +1,17 @@
 """Minimal OpenAI chat client (httpx) for offline tooling: evaluation data, rephrasing.
 
-Keys come from ``OPENAI_API_KEY`` and ``OPENAI_API_KEY_2`` (two accounts with separate daily
-free-token quotas); on a rate-limit or quota error the next key is tried.
+Keys: ``OPENAI_API_KEY_2`` first, then ``OPENAI_API_KEY`` (two accounts, each with a daily
+free-token allowance). When the free allowance is used up OpenAI does **not** return an
+error, it starts billing. So every call is checked against a local per-key, per-day (UTC)
+ledger in ``data/llm_usage.json`` and refused before the allowance would be exceeded.
 """
 
 import json
 import logging
 import os
 import time
+from datetime import UTC, datetime
+from pathlib import Path
 
 import httpx
 
@@ -16,23 +20,80 @@ from qonunshunos.config import load_dotenv
 log = logging.getLogger(__name__)
 
 API_URL = "https://api.openai.com/v1/chat/completions"
-KEY_VARS = ("OPENAI_API_KEY", "OPENAI_API_KEY_2")
+KEY_VARS = ("OPENAI_API_KEY_2", "OPENAI_API_KEY")
+LEDGER = Path("data/llm_usage.json")
+
+# Free daily allowance per account, with a safety margin (250k and 2.5M tokens).
+BIG_MODELS = {"gpt-5.4", "gpt-5.2", "gpt-5.1", "gpt-5", "gpt-4.1", "gpt-4o", "o1", "o3"}
+SMALL_MODELS = {
+    "gpt-5.4-mini", "gpt-5.4-nano", "gpt-5-mini", "gpt-5-nano", "gpt-4.1-mini",
+    "gpt-4.1-nano", "gpt-4o-mini", "o3-mini", "o4-mini",
+}  # fmt: skip
+DAILY_LIMIT = {"big": 240_000, "small": 2_400_000}
+CALL_RESERVE = 8_000  # tokens kept free for the next call (its size is unknown upfront)
 
 
 class LLMError(Exception):
     pass
 
 
+class BudgetExhausted(LLMError):
+    pass
+
+
+def tier_of(model: str) -> str:
+    if model in BIG_MODELS:
+        return "big"
+    if model in SMALL_MODELS:
+        return "small"
+    raise LLMError(f"{model} is not in the free-token list; refusing to call it")
+
+
+class Ledger:
+    """Tokens used today per key variable and tier (``data/llm_usage.json``)."""
+
+    def __init__(self, path: Path = LEDGER) -> None:
+        self.path = path
+
+    def _load(self) -> dict:
+        return json.loads(self.path.read_text(encoding="utf-8")) if self.path.exists() else {}
+
+    @staticmethod
+    def today() -> str:
+        return datetime.now(UTC).strftime("%Y-%m-%d")
+
+    def used(self, key_var: str, tier: str) -> int:
+        return self._load().get(self.today(), {}).get(key_var, {}).get(tier, 0)
+
+    def add(self, key_var: str, tier: str, tokens: int) -> None:
+        data = self._load()
+        day = data.setdefault(self.today(), {}).setdefault(key_var, {})
+        day[tier] = day.get(tier, 0) + tokens
+        self.path.parent.mkdir(parents=True, exist_ok=True)
+        self.path.write_text(json.dumps(data, indent=1), encoding="utf-8")
+
+
 class OpenAIChat:
     def __init__(self, model: str = "gpt-5.4", timeout: float = 120.0) -> None:
         load_dotenv()
-        self.keys = [os.environ[v] for v in KEY_VARS if os.environ.get(v)]
+        self.tier = tier_of(model)
+        self.keys = [(v, os.environ[v]) for v in KEY_VARS if os.environ.get(v)]
         if not self.keys:
-            raise LLMError("no OPENAI_API_KEY in the environment / .env")
+            raise LLMError("no OPENAI_API_KEY_2 / OPENAI_API_KEY in the environment / .env")
         self.model = model
-        self.key_index = 0
+        self.ledger = Ledger()
         self.usage = {"prompt_tokens": 0, "completion_tokens": 0}
         self._http = httpx.Client(timeout=timeout)
+
+    def _pick_key(self) -> tuple[str, str]:
+        limit = DAILY_LIMIT[self.tier] - CALL_RESERVE
+        for var, key in self.keys:
+            if self.ledger.used(var, self.tier) < limit:
+                return var, key
+        raise BudgetExhausted(
+            f"free {self.tier}-model tokens for today are used up on all keys "
+            f"(see {self.ledger.path}); try tomorrow (UTC) or a smaller model"
+        )
 
     def json(self, system: str, user: str, retries: int = 3) -> dict:
         """One chat completion that must return a JSON object."""
@@ -43,21 +104,20 @@ class OpenAIChat:
         }
         attempt = 0
         while True:
-            key = self.keys[self.key_index]
+            var, key = self._pick_key()
             response = self._http.post(
                 API_URL, headers={"Authorization": f"Bearer {key}"}, json=payload
             )
             if response.status_code == 200:
                 data = response.json()
+                usage = data.get("usage", {})
                 for k in self.usage:
-                    self.usage[k] += data.get("usage", {}).get(k, 0)
+                    self.usage[k] += usage.get(k, 0)
+                self.ledger.add(var, self.tier, usage.get("total_tokens", 0))
                 return json.loads(data["choices"][0]["message"]["content"])
-            if response.status_code == 429 and self.key_index + 1 < len(self.keys):
-                log.warning("key %d limited, switching", self.key_index + 1)
-                self.key_index += 1
-                continue
-            if response.status_code >= 500 and attempt < retries:
+            retryable = response.status_code == 429 or response.status_code >= 500
+            if retryable and attempt < retries:
                 attempt += 1
-                time.sleep(2 * attempt)
+                time.sleep(5 * attempt)
                 continue
             raise LLMError(f"HTTP {response.status_code}: {response.text[:300]}")
