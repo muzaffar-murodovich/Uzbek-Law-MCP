@@ -40,6 +40,9 @@ Batafsil: [docs/research/lexuz.md](docs/research/lexuz.md). Qisqacha:
   "qaysi hujjat bilan o'zgartirilgan" ma'lumoti sahifaning o'zida bor.
 - **Yangilanishlar:** RSS (`/uz/rss`) va "bugun e'lon qilinganlar" ro'yxati orqali kuzatiladi.
 - `robots.txt` va sitemap yo'q. Ro'yxatlar 20 tadan, ASP.NET postback bilan sahifalanadi.
+- Eng yangi hujjatlar dastlab faqat PDF ko'rinishida chiqadi, HTML matn keyinroq qo'shiladi.
+  Farmon va qarorlarda modda yo'q: asosiy birlik — band, ilovalar (nizom, ro'yxat) alohida
+  bloklar bilan ajratilgan. Amaldagi kodekslar — 20 ta (lotin).
 - **Hajm:** MVP qamrovida ≈34 ming lotin hujjat, shundan ≈22 mingtasi amalda (taxmin).
   Yuklab olish 1–1,5 sutka (2 soniyada 1 so'rov tezligida), embedding 2 vCPU'da 4–8 soat. Demak,
   boshlang'ich indekslashni Hetzner serverning o'zida bajarsa bo'ladi.

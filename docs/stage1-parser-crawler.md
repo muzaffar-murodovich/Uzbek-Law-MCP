@@ -1,14 +1,14 @@
 # 1-bosqich: parser va crawler
 
-Holat (2026-11-05): dizayn tayyor, kod hali yozilmagan.
+Holat (2026-11-05): dizayn tayyor, qolgan tadqiqot bajarildi ([lexuz.md, 8-bo'lim](research/lexuz.md)).
 Tegishli hujjatlar: [PLAN.md](../PLAN.md), [lex.uz tadqiqoti](research/lexuz.md).
 
 ## Maqsad
 
 lex.uz'dagi lotin hujjat sahifasini (`/docs/-{id}`) va rekvizitlar kartochkasini yuklab olish,
 ularni xom holda diskda saqlash va 2-bosqich (indekslash) uchun tuzilgan JSON'ga aylantirish.
-Avval namunaviy to'plamda ishlanadi: Konstitutsiya va barcha amaldagi kodekslar (lotin, ≈29 ta
-hujjat).
+Avval namunaviy to'plamda ishlanadi: Konstitutsiya va barcha amaldagi kodekslar (lotin, 21 ta
+hujjat: 20 ta kodeks + Konstitutsiya).
 
 ## Tayyor bo'lish mezonlari
 
@@ -22,12 +22,9 @@ hujjat).
 
 ## Ishlar tartibi
 
-1. **Qolgan tadqiqot** (bir necha so'rov bilan):
-   - 2–3 ta qaror va farmon: moddasiz tuzilish, ilovalar ("1-ilova", "NIZOM"), jadvallar.
-     RSS'dan olingan namunalar: `-8571898` (Prezident qarori), `-8569965` (nizomni tasdiqlagan qaror).
-   - `/actinfo/card1/{id}` HTML'i va qaysi URL varianti barqaror qiymat berishi
-     (`/actinfo/card1/-{id}` yoki `/uz/actinfo/card1/-{id}`).
-   - Kodekslar ro'yxati: "Kodeks" shaklining `form_id`si va ASP.NET postback bilan sahifalash.
+1. ✅ **Qolgan tadqiqot** — [lexuz.md, 8-bo'lim](research/lexuz.md): qaror va farmonlar
+   tuzilishi, ilovalar, jadvallar, faqat PDF'li yangi hujjatlar, card1, kodekslar ro'yxati
+   (`fform_id=3964`) va postback bilan sahifalash.
 2. **Loyiha karkasi:** `pyproject.toml` (uv), `src/qonunshunos/`, `tests/`, ruff, `.gitignore`
    (`data/`), qisqa README.
 3. `text/normalize.py` + testlar.
@@ -74,8 +71,15 @@ class Unit:
     okoz: list[str]
     comments: list[str]        # "LexUZ sharhi"lar ("Oldingi tahrirga qarang"siz)
 
+class Table:      elem_id: int; rows: list[list[str]]
+
+class Unit:  # qo'shimcha: kind "band" | "ilova_matn" ham; tables: list[Table]; appendix: str | None
+
 class ParsedDocument:
     lex_id: int                # lotin sahifa ID'si (manfiy)
+    content: str               # "html" | "pdf_only" (8.1-bo'lim)
+    signature: str | None      # SIGNATURE
+    place: str | None; signed_date: str | None; signed_number: str | None  # ACT_ESSENTIAL_ELEMENTS*
     lang: str                  # "uz-Latn"
     url: str
     title: str                 # <title>dan
@@ -118,7 +122,14 @@ xaritalanadi. Sanalar `dd.mm.yyyy` → ISO.
    | `CHANGES_ORIGINS` | joriy unitning `changes`iga |
    | `COMMENT` | "Oldingi tahrirga qarang" tashlanadi, qolgani joriy unitning `comments`iga |
    | `PUBLICATION_ORIGIN` | hujjatning `publication_origin`iga |
-   | `ACT_FORM`, `BY_DEFAULT`, `NEW_EDITION` | o'tkazib yuboriladi |
+   | `ACCEPTING_BODY` | hujjat darajasidagi ma'lumot (organ) |
+   | `SIGNATURE`, `ACT_ESSENTIAL_ELEMENTS`, `ACT_ESSENTIAL_ELEMENTS_NUM` | hujjatning `signature`, `place`, `signed_date`, `signed_number` maydonlari |
+   | `APPL_BANNER_LANDSCAPE_TITLE` | yangi ilova: sarlavhalar stack'i tozalanadi, 1-darajali sarlavha "4-ILOVA" |
+   | `ACT_TITLE_APPL` + keyingi `ACT_FORM` | ilova nomi ("… toʻgʻrisida NIZOM"), 1-darajali sarlavha matniga qo'shiladi |
+   | `TABLE_STD2`, jadvalli `BY_DEFAULT` | `Table` (qatorlar × kataklar) joriy unitga; unit bo'lmasa ilova uchun `ilova_matn` unit |
+   | `FOOTNOTE` | joriy unitga paragraf |
+   | `TEXT_CENTER` | sarlavha (5-daraja) |
+   | `ACT_FORM` (ilovadan tashqari), bo'sh `BY_DEFAULT`, `NEW_EDITION` | o'tkazib yuboriladi |
    | boshqa class | `warnings`ga yoziladi |
 
 4. Sarlavha darajasi:
@@ -132,8 +143,11 @@ xaritalanadi. Sanalar `dd.mm.yyyy` → ISO.
    Unitning `path`i shu stack'dan olinadi.
 5. Modda sarlavhasi: `^(\d+)(<sup>(\d+)</sup>)?-modda\.?\s*(.*)$` → `number="126¹"`, `title`.
    Sarlavhasiz moddalar ham bor, masalan Konstitutsiyada: "1-modda.".
-6. Moddasiz hujjatlarda (qaror, farmon) matn sarlavhalar bo'yicha bo'linadi, `1.`, `2.` bilan
-   boshlanadigan xatboshilar `band` bo'ladi. Bu qoida 1-qadamdagi tadqiqotdan keyin aniqlashtiriladi.
+6. Moddasiz hujjatlarda (qaror, farmon, nizom) `^\d+(<sup>\d+</sup>)?\.\s` bilan boshlanadigan
+   `ACT_TEXT` yangi `Unit(kind="band")` ochadi. "a)", "b)" kichik bandlar va oddiy xatboshilar shu
+   bandga qo'shiladi. Hujjatda `CLAUSE_DEFAULT` bo'lsa, band qoidasi o'chiriladi (kodekslarda "1."
+   modda ichidagi qism raqami). Band OKOZ kodi band matnidan oldin keladi, shuning uchun
+   `INDEXES_ON_REF` moddasiz hujjatda keyingi unitga biriktiriladi.
 7. Matnni tozalash: `<sup>N</sup>` yuqori indeksga aylanadi, bo'shliqlar bitta probelga
    keltiriladi, apostroflar kanonik shaklga o'tkaziladi: `o`/`g`dan keyin `ʻ` (U+02BB), boshqa
    harfdan keyin `ʼ` (U+02BC). So'z boshidagi qo'shtirnoq o'zgartirilmaydi.
@@ -148,18 +162,22 @@ xaritalanadi. Sanalar `dd.mm.yyyy` → ISO.
 - **Saqlash:** `data/raw/docs/{id}.html.gz`, `data/raw/cards/{id}.html.gz` va har birining
   yonida `.meta.json` (url, fetched_at, sha256, HTTP status). `--force` berilmasa qayta
   yuklanmaydi. `data/` git'ga qo'shilmaydi.
-- **Ro'yxatlar:** `/uz/search/nat?lang=4&sort_id=…&form_id=…`, sahifada 20 ta natija. Keyingi
-  sahifa `__doPostBack` orqali olinadi: `__VIEWSTATE`, `__VIEWSTATEGENERATOR`,
-  `__EVENTVALIDATION` va `__EVENTTARGET` ("Keyingisi" tugmasi, masalan
-  `ucFoundActsControl$LinkButton1`) bilan POST yuboriladi. Aniq maydonlar tadqiqotda tekshiriladi.
-- **Namunaviy to'plam** kodekslar ro'yxatidan olinadi. Ro'yxatni olish qiyin bo'lsa, qo'lda
-  yozilgan ID ro'yxati ishlatiladi va har bir ID `<title>` bo'yicha tekshiriladi.
+- **Ro'yxatlar:** `/uz/search/nat?lang=4&fform_id=…[&fyear=…]`, sahifada 20 ta natija. Keyingi
+  sahifa: `#Form1` dagi `__VIEWSTATE`, `__VIEWSTATEGENERATOR` va
+  `__EVENTTARGET=ucFoundActsControl$LinkButton1` bilan shu URL'ga POST. "Keyingisi" havolasi
+  bo'lmasa yoki natijalar soni ("N hujjat topildi") yig'ilsa to'xtaydi.
+- **Faqat PDF'li hujjat** (`#divCont` yo'q, `#pdfBody` bor): `content="pdf_only"` bilan saqlanadi
+  va keyingi yangilashda qayta tekshiriladi.
+- **Kartochka:** `/actinfo/card1/-{id}` (yorliqlar kirill, qiymatlar rus).
+- **Namunaviy to'plam** kodekslar ro'yxatidan (`fform_id=3964`, faqat `status_code_y`) va
+  Konstitutsiyadan (`-6445145`) olinadi.
 
 ## Testlar
 
 - `tests/fixtures/lexuz/`da haqiqiy sahifalarning qisqartirilgan nusxalari bo'ladi (har biri
   100 KB dan kichik): Konstitutsiya (boshi), Mehnat kodeksi (1–5 va 161-moddalar, o'zgartirish
-  manbasi, `5¹)` bandi), bitta qaror, card1, ro'yxat sahifasi. Qisqartirish uchun
+  manbasi, `5¹)` bandi), PF-60 (moddasiz farmon), VM 897-son qaror (ilovalar, nizom, jadval),
+  faqat PDF'li sahifa, card1 (amalda va kuchini yo'qotgan), ro'yxat sahifasi. Qisqartirish uchun
   `scripts/make_fixture.py`.
 - Nimalar tekshiriladi:
   - normalizatsiya;

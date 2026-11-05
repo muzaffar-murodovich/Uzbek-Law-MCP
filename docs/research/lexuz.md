@@ -118,16 +118,17 @@ shaklga keltiriladi.
   `lxOpenUrl('/docs/{id}?ONDATE=…')`.
 - Til tugmalari: `Рус` → `openUrl('/docs/6445147')`, `Eng` → `openUrl('/docs/6451070')`,
   `Ўзб` / `O’zb` → kirill / lotin versiya. Joriy versiya tugmasida `onclick` bo'lmaydi.
-- Hujjatlar ichidagi havolalarda uchragan ID'lar (nomi hali tekshirilmagan): `111453` (Jinoyat
-  kodeksi bo'lsa kerak), `97664` (Ma'muriy javobgarlik to'g'risidagi kodeks bo'lsa kerak), `111460`.
-- Statistika sahifasida ro'yxatlarga havola yo'q, shuning uchun "Kodeks" shaklining `form_id`si
-  hali topilmagan. Bosh sahifadagi havolalar: `sort_id=3975&form_id=3968` — "Qonun" shakli
-  (1 590 ta lotin hujjat), `sort_id=3985` — Prezident hujjatlari (5 612 ta).
+- Hujjatlar ichidagi havolalarda uchragan ID'lar: `111453` — Jinoyat kodeksi, `97664` — Ma'muriy
+  javobgarlik to'g'risidagi kodeks, `111460` — Jinoyat-protsessual kodeksi (8-bo'limda tasdiqlandi).
+- "Kodeks" shaklining ID'si — `3964` (8-bo'lim). Bosh sahifadagi havolalar:
+  `sort_id=3975&form_id=3968` — "Qonun" shakli (1 590 ta lotin hujjat), `sort_id=3985` — Prezident
+  hujjatlari (5 612 ta).
 
 ## 5. Hujjatlar ro'yxati va yangilanishlar
 
-- Qidiruv ro'yxatlari: `/uz/search/nat?lang=4&sort_id=…[&form_id=…]`. Sahifada 20 ta natija.
-  Sahifalash ASP.NET `__doPostBack` orqali bo'ladi, ya'ni `__VIEWSTATE` bilan POST so'rov kerak.
+- Qidiruv ro'yxatlari: `/uz/search/nat?lang=4&sort_id=…[&fform_id=…]`. Sahifada 20 ta natija.
+  Sahifalash ASP.NET `__doPostBack` orqali bo'ladi, ya'ni `__VIEWSTATE` bilan POST so'rov kerak
+  (tafsilotlar 8-bo'limda).
 - `lang` kodlari (kuzatilgan): `1` rus, `2` ingliz, `3` o'zbek kirill, `4` o'zbek lotin.
 - Boshqa bo'limlar: `/uz/search/oliy`, `/loc` (mahalliy), `/int` (xalqaro), `/tech`, `/court`.
 - Yangi hujjatlar: **RSS** `/uz/rss` (lotin hujjat havolalari bilan) va
@@ -194,3 +195,126 @@ O'zbekiston Respublikasi Adliya vazirligi qoshidagi "Adolat" milliy huquqiy axbo
 davlat muassasasi. Manzil: Toshkent sh., Mirobod tumani, Amir Temur shohko'chasi, 19-uy.
 Tel.: (55) 510-47-87. E-mail: info@adolatmarkazi.uz. Sayt: adolatmarkazi.uz.
 Telegram: t.me/lexuzofficial.
+
+## 8. Qo'shimcha tadqiqot (1-bosqich boshida, 2026-11-05)
+
+~17 ta so'rov (orasida ≥2,5 soniya). Xom sahifalar `data/research/`da (git'ga qo'shilmaydi).
+
+### 8.1. Yangi hujjatlar faqat PDF bo'lib chiqadi
+
+RSS'dagi eng yangi hujjatlar (`-8571898`, PQ-392, 04.11.2026; `-8569965`, VM 606-son,
+03.11.2026) sahifasida `#divCont` yo'q. O'rniga `<div id="pdfBody">` va
+`PDFObject.embed("/pdffile/-{id}", "#pdfBody")` bor. HTML matn keyinroq qo'shilsa kerak (2024-yil
+hujjatlarida bor). Crawler uchun xulosa:
+
+- `#divCont` yo'q, `pdfBody` bor bo'lsa — hujjat holati `pdf_only`. U keyingi kunlarda qayta
+  tekshiriladi, PDF'dan matn olinmaydi (hozircha).
+- Bunday sahifada ham `<title>`dan raqam, sana va nom olinadi, card1 ham ishlaydi.
+
+### 8.2. Farmon va qarorlar tuzilishi
+
+Namunalar: PF-60 (`-5841063`), VM 897-son (`-7283178`, 4 ta ilova, shu jumladan nizom),
+VM 916-son (`-7308091`, jadvalli ro'yxatlar), PQ-465 (`-7286187`).
+
+```
+INDEXES_ON_REF (id="onLBC-{id}", "onLS-{id}")  hujjat OKOZ / TSZ kodlari
+ACCEPTING_BODY       "Oʻzbekiston Respublikasi Vazirlar Mahkamasining"
+ACT_FORM             "qarori" / "Farmoni"
+ACT_TITLE            nomi
+ACT_TEXT             preambula, keyin "1. Quyidagilar:", "a) …", oddiy xatboshilar, "2. …"
+INDEXES_ON_REF       band OKOZ kodlari (id="onLBC-{elem}", band boshlanishidan OLDIN keladi)
+COMMENT (id="edi-…") "Oldingi tahrirga qarang."
+CHANGES_ORIGINS      "(2-band “v” kichik bandining ikkinchi xatboshisi … tahririda …)"
+SIGNATURE            "Oʻzbekiston Respublikasining Bosh vaziri A. ARIPOV"
+ACT_ESSENTIAL_ELEMENTS      "Toshkent sh.,", "2024-yil 27-dekabr,"
+ACT_ESSENTIAL_ELEMENTS_NUM  "897-son"
+--- har bir ilova uchun ---
+APPL_BANNER_LANDSCAPE_TITLE "Vazirlar Mahkamasining 2024-yil 27-dekabrdagi 897-son qaroriga 4-ILOVA"
+ACT_TITLE_APPL       ilova nomi ("Oʻzbekiston Respublikasining ijtimoiy kartasi toʻgʻrisida")
+ACT_FORM             "NIZOM" / "ROʻYXATI" / "TARKIBI"
+TEXT_HEADER_DEFAULT  "1-bob. Umumiy qoidalar" yoki "I. …"
+ACT_TEXT             "1. Ushbu Nizom …", "2. …" — bandlar
+TABLE_STD2           jadval (<table class="Table">)
+FOOTNOTE             "Izoh. …", "* …"
+TEXT_CENTER, TEXT_BOLD_CENTER  markazlashtirilgan sarlavhalar (ko'pincha o'zgartirish matnida “…”)
+--- oxirida ---
+PUBLICATION_ORIGIN
+```
+
+- Moddalar yo'q. Asosiy birlik — **band**: `^\d+(<sup>\d+</sup>)?\.` bilan boshlanadigan
+  `ACT_TEXT`. Keyingi "a)", "b)" kichik bandlar va oddiy xatboshilar shu bandga tegishli.
+- Band OKOZ kodi (`INDEXES_ON_REF`) band matnidan **oldin** keladi (kodekslarda modda
+  sarlavhasidan keyin). Parser uni keyingi bandga biriktirishi kerak.
+- `BY_DEFAULT` har doim bo'sh emas: 897-son qarorning 1-ilovasidagi ro'yxat `BY_DEFAULT` ichidagi
+  jadvalda turibdi. Qoida: bo'sh bo'lsa tashlanadi, jadval bo'lsa jadval sifatida o'qiladi.
+- Jadvallar matnga "katak | katak" qatorlari ko'rinishida aylantiriladi. Ba'zi jadvallar juda
+  katta (916-son qaror ~1 MB HTML), ularning bo'laklari 2-bosqichda alohida chegaralanadi.
+- Ilovada boshqa hujjatlarga kiritilgan o'zgartirishlar matni ham bo'lishi mumkin ("“3-bob. …”" —
+  qo'shtirnoq ichida). Bu matn ilova birligi sifatida saqlanadi, alohida belgilanmaydi.
+- Kuchini yo'qotgan band yoki ilova o'rnida faqat `COMMENT` + `CHANGES_ORIGINS` qoladi
+  (masalan PF-60da 1-band va 1–4-ilovalar).
+- Har bir `lx_elem` ichida interfeys tugmalari (`<img>` + matn) bor, ular `lx_elem2`da.
+
+### 8.3. card1
+
+`/actinfo/card1/{id}`, `/uz/actinfo/card1/{id}` va musbat ID bilan solishtirildi:
+
+- HTML tuzilishi bir xil: `td.lbl` (yorliq) va undan keyingi `td.codL`/`td.codR` (qiymat). Organlar
+  jadvali — `#bodyTBody` (organ, lavozim, F.I.Sh., sana, raqam, joy).
+- **Yorliqlar** interfeys tiliga bog'liq: prefikssiz — o'zbek kirill ("Ҳужжат ҳолати"), `/uz/` —
+  rus ("Статус акта"). **Qiymatlar** hamma variantda ruscha: "Действующий", "Утративший силу",
+  "Постановление", "Кодекс", "Решения Правительства", "Законодательные акты", "Бессрочный".
+- Manfiy ID — nom lotincha, til "Узбекский (Л)"; musbat ID — kirill, "Узбекский (к)".
+- **Qaror:** `/actinfo/card1/-{id}` ishlatiladi. Parser yorliqlarni kirill va rus variantlarida
+  taniydi, qiymatlarni ruschadan kanonik qiymatga xaritalaydi.
+- Kuchini yo'qotgan hujjat (eski Mehnat kodeksi, `-142859`): holat "Утративший силу",
+  "Кучини йўқотган санаси" = 30.04.2023, sabab bo'sh bo'lishi mumkin.
+
+### 8.4. Ro'yxatlar va sahifalash
+
+- Filtrlar GET parametrlari bilan: `fform_id` (shakl), `fbody_id` (organ), `fyear`, `fmonth`.
+  Masalan kodekslar: `/uz/search/nat?lang=4&fform_id=3964` → "28 hujjat topildi".
+  Ba'zi shakl ID'lari: `3964` Kodeks, `3968` Qonun, `3972` Qaror, `3973` Farmon, `4131`
+  Konstitutsiya, `487` Nizom, `588` Farmoyish.
+- Natija qatori: `tr.dd-table__main-item` → `.dd-table__main-item_number` (tartib raqami),
+  `.dd-table__main-left-desc a` (`href="/uz/docs/-{id}"`, nomi), `.badge` ("Oʻzbekiston
+  Respublikasi Vazirlar Mahkamasining qarori, 30.12.2024 yildagi 916-son"; kodekslarda faqat nomi
+  yoki umuman yo'q), `.lx_act_state i` — `status_code_y` (amalda) yoki `status_code_r` (kuchini
+  yo'qotgan).
+- Sahifalash: forma `#Form1` (`action` = joriy URL). Yashirin maydonlar faqat `__VIEWSTATE` va
+  `__VIEWSTATEGENERATOR` (`__EVENTVALIDATION` yo'q). Keyingi sahifa:
+  `__EVENTTARGET=ucFoundActsControl$LinkButton1`, `__EVENTARGUMENT=` bilan POST. Tekshirildi:
+  kodekslarning 2-sahifasi (21–28) to'g'ri keldi. Raqamli tugmalar:
+  `ucFoundActsControl$rptPaging$ctl0N$lbPaging`, joriy sahifa `a.aspNetDisabled`.
+- Har bir keyingi sahifa uchun oldingi javobdagi `__VIEWSTATE` ishlatiladi.
+
+### 8.5. Kodekslar (lotin, 2026-11-05)
+
+28 ta, shundan 20 tasi amalda:
+
+| ID | Kodeks |
+|---|---|
+| -7655343 | Suv kodeksi |
+| -6257288 | Mehnat kodeksi |
+| -5307951 | Shaharsozlik kodeksi |
+| -4674902 | Soliq kodeksi |
+| -4386848 | Saylov kodeksi |
+| -3527353 | Maʼmuriy sud ishlarini yuritish toʻgʻrisidagi kodeks |
+| -3523891 | Iqtisodiy protsessual kodeks |
+| -3517337 | Fuqarolik protsessual kodeksi |
+| -2876354 | Bojxona kodeksi |
+| -2304138 | Budjet kodeksi |
+| -106136 | Uy-joy kodeksi |
+| -104720 | Oila kodeksi |
+| -152653 | Yer kodeksi |
+| -163629 | Jinoyat-ijroiya kodeksi |
+| -111189 | Fuqarolik kodeksi (birinchi qism) |
+| -180552 | Fuqarolik kodeksi (ikkinchi qism) |
+| -111460 | Jinoyat-protsessual kodeksi |
+| -111453 | Jinoyat kodeksi |
+| -97664 | Maʼmuriy javobgarlik toʻgʻrisidagi kodeks |
+| -55594 | Havo kodeksi |
+
+Kuchini yo'qotganlar: `-1286558`, `-152637` (Soliq), `-46868` (Shaharsozlik), `-184746`
+(Bojxona), `-186105` (FPK), `-185986`, `-195760` (Xo'jalik protsessual), `-142859` (Mehnat).
+Namunaviy to'plam: shu 20 ta kodeks + Konstitutsiya (`-6445145`) = 21 ta hujjat.
