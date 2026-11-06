@@ -264,7 +264,7 @@ Bularni men qila olmayman (akkauntlar sizniki):
 4. ✅ `google.py` + testlar. Google'ni localhost'da haqiqiy akkaunt bilan sinash.
 5. ✅ Limitlarni `Services.run`ga ulash, admin CLI.
 6. ✅ `/`, `/maxfiylik`, `/shartlar` sahifalari.
-7. `myserver`ga sinov deploy'i (ruxsat bilan), haqiqiy mijozlar bilan sinov,
+7. ✅ `myserver`ga sinov deploy'i. ⏳ claude.ai va ChatGPT bilan sinov,
    "Natija" bo'limi, PLAN.md yangilanadi.
 
 ## Bajarilganlar va dizayndan farqlar (2026-11-06)
@@ -315,6 +315,27 @@ Bularni men qila olmayman (akkauntlar sizniki):
 - **Deploy'dan oldin:** uvicorn access log'i so'rov qatorini to'liq yozadi. Unga Google'ning bir
   martalik `code`i ham tushadi. Production'da access log o'chiriladi yoki so'rov parametrlarisiz
   yoziladi (nginx log'i yetarli).
+
+### `myserver`ga sinov deploy'i (2026-11-06)
+
+- `deploy/root-setup.sh` (sudo bilan bir marta, foydalanuvchi ishga tushiradi), `deploy/deploy.sh`
+  (kod, bog'liqliklar, migratsiya, restart), `deploy/qonunshunos.service`,
+  `deploy/nginx-qonunshunos.conf`. Ilova `/home/deploy/qonunshunos`da, `127.0.0.1:8100`da
+  ishlaydi, ≈540 MB RAM oladi (`MemoryMax=1200M`).
+- **pgvector:** PGDG paketi PGDG'ning PostgreSQL build'ini talab qiladi
+  (`Breaks: postgresql-16-jit-llvm`), bu esa boshqa ilovalar bilan umumiy klasterni yangilab,
+  qayta ishga tushirgan bo'lardi. Shuning uchun 0.8.7 manba kodidan, Ubuntu'ning
+  `postgresql-server-dev-16` bilan yig'ildi. Arxiv SHA-256 bilan tekshiriladi.
+- **TLS va proksi:** UFW 80/443 portlarni faqat Cloudflare'ga ochgan, shuning uchun Let's
+  Encrypt HTTP-01 ishlamadi. Sayt boshqa saytlar kabi Cloudflare proksisi ortida ishlaydi:
+  `*.muzaffar.zip` Origin sertifikati, "Full (strict)". nginx mijoz IP'sini
+  `CF-Connecting-IP`dan oladi (faqat shu saytda), log'ga faqat yo'l yoziladi.
+  Proksi 6-bosqich o'rniga hozir yoqildi.
+- **Korpus:** Mac'da hisoblanib, SSH tunnel orqali yozildi: 86 ta hujjat, 16 657 ta bo'lak.
+- **Tashqi tekshiruv:** `/`, `/maxfiylik`, `/shartlar`, metama'lumot — 200; tokensiz `/mcp` — 401
+  va `WWW-Authenticate`.
+- SSH: ko'p yangi ulanishdan keyin server ulanishni bir muddat rad etadi (fail2ban yoki UFW
+  limit). `deploy.sh` shuning uchun bitta umumiy ulanish (ControlMaster) ishlatadi.
 
 ## Xavflar
 
