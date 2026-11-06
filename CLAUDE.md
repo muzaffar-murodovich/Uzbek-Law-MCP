@@ -19,6 +19,7 @@ Dasturlash tili — Python.
 | `docs/research/lexuz.md` | lex.uz tadqiqoti: URL'lar, endpoint'lar, HTML tuzilishi, hajm, huquqiy holat |
 | `docs/stage1-parser-crawler.md` | 1-bosqich (parser + crawler) dizayni va ishlar tartibi |
 | `docs/stage2-index-search.md` | 2-bosqich (indekslash, qidiruv, baholash) dizayni va ishlar tartibi |
+| `docs/stage3-mcp-server.md` | 3-bosqich (MCP server, tool'lar) dizayni va ishlar tartibi |
 | `docs/stage2-experiments.md` | 2-bosqich tajribalari jurnali: raqamlar, xulosalar (portfolio uchun ham) |
 | `docs/adolat-markazi-xat.md` | "Adolat" markaziga xat loyihasi |
 
