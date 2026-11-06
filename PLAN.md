@@ -19,7 +19,7 @@ O'zbekiston Respublikasi qonunchiligiga oid savollarga javob topishda yordam ber
 | Yangilash | Har kuni tunda avtomatik |
 | Stek | Python: MCP Python SDK (FastMCP) + Starlette/FastAPI |
 | Joylashuv | Gibrid (2026-11-05). Xizmat `myserver`da (Hetzner, 2 vCPU / 3,7 GB, ochiq IP) Dockersiz ishlaydi: systemd + mavjud nginx + mavjud PostgreSQL 16 + pgvector. Og'ir ish (to'liq yuklab olish, boshlang'ich embedding) `home` serverda (i5-1235U, 12 oqim, 7,4 GB) bajariladi va natija SSH tunnel orqali to'g'ridan-to'g'ri `myserver` bazasiga yoziladi. Kunlik yangilash `myserver`ning o'zida. Docker hech qayerda ishlatilmaydi (2026-11-05) |
-| Domen | `qonunshunos.muzaffar.zip` (MCP manzili: `https://qonunshunos.muzaffar.zip/mcp`). DNS A yozuvi spaceship.com'da `myserver` IP'siga qo'shiladi |
+| Domen | `qonunshunos.muzaffar.zip` (MCP manzili: `https://qonunshunos.muzaffar.zip/mcp`). Domen spaceship.com'da ro'yxatdan o'tgan, lekin DNS'ini Cloudflare boshqaradi (nameserverlar Cloudflare'da). A yozuvi Cloudflare'da `myserver`ga (46.62.145.27) qo'shilgan, proksisiz ("DNS only", 2026-11-06). Proksi 6-bosqichda yoqiladi |
 | Transport | Streamable HTTP (remote MCP) |
 | Mijozlar | claude.ai, Claude Desktop, Claude Code, ChatGPT, Cursor — OAuth 2.1 orqali |
 | Kirish | Google (Gmail) va Telegram orqali |
@@ -192,7 +192,7 @@ Tamoyillar:
 | 3 | MCP server va tool'lar | 3–4 kun | ✅ bajarildi (Claude Code sinovi: 10/10 savolda kerakli modda o'qildi va to'g'ri havola berildi) |
 | 4 | OAuth, Google/Telegram kirish, limitlar | 1 hafta | domen: `qonunshunos.muzaffar.zip` |
 | 5 | `myserver`ga deploy, zaxira nusxa, monitoring, kunlik yangilash | 2–3 kun | |
-| 6 | To'liq yuklab olish va bepul ommaga ochish | 1–2 kun | |
+| 6 | To'liq yuklab olish va bepul ommaga ochish | 1–2 kun | ochishdan oldin: Cloudflare proksisi va SSL "Full (strict)" |
 | 7 | Pullik tariflar | — | avval "Adolat" markaziga xat va yozma rozilik |
 
 ### 1-bosqich. Parser va crawler
@@ -255,11 +255,10 @@ docs/           tadqiqot, xatlar
 ## 10. Ochiq savollar
 
 Hal qilinganlar: domen, joylashuv va bepul davrdagi limitlar (2026-11-05, 1-bo'lim);
-embedding modeli (2026-11-06, MVP uchun e5-small, `docs/stage2-index-search.md`, "Natija").
+embedding modeli (2026-11-06, MVP uchun e5-small, `docs/stage2-index-search.md`, "Natija");
+DNS A yozuvi (2026-11-06, Cloudflare'da, 1-bo'lim).
 
 Kutilayotgan ishlar:
 
-1. **DNS:** spaceship.com'da `qonunshunos.muzaffar.zip` uchun `myserver`ga (46.62.145.27) A
-   yozuvi. Bu ishni foydalanuvchi bajaradi, 4-bosqichdan oldin kerak.
-2. **Baholash to'plami:** farmon va qarorlar bo'yicha savollar, haqiqiy foydalanuvchi savollari
+1. **Baholash to'plami:** farmon va qarorlar bo'yicha savollar, haqiqiy foydalanuvchi savollari
    (xizmat ishga tushgach).
