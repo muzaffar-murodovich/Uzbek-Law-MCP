@@ -160,7 +160,7 @@ users            id, display_name, email, plan ('free'), limits_override jsonb,
                  created_at, last_seen_at, blocked_at, blocked_reason
 user_identities  user_id, provider ('google'|'telegram'), subject, email, username,
                  created_at;  UNIQUE (provider, subject)
-oauth_clients    client_id, client_secret_hash, info jsonb (DCR metama'lumoti),
+oauth_clients    client_id, info jsonb (DCR metama'lumoti va mijoz siri: SDK uni ochiq solishtiradi),
                  created_at, last_used_at
 auth_requests    id, client_id, params jsonb, created_at, expires_at   -- 10 daqiqa
 oauth_codes      code_hash, client_id, user_id, params jsonb, expires_at   -- 5 daqiqa

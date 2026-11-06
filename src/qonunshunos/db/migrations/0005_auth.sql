@@ -1,5 +1,6 @@
 -- Users, OAuth 2.1 authorization server state and per-user limits (stage 4).
--- Secrets (client secrets, codes, tokens) are stored as SHA-256 hex digests only.
+-- Codes and tokens are stored as SHA-256 hex digests only. DCR client secrets stay in `info`:
+-- the SDK compares them in plain text, and PKCE protects the flow anyway.
 
 CREATE TABLE users (
     id              bigserial PRIMARY KEY,
@@ -25,11 +26,10 @@ CREATE TABLE user_identities (
 CREATE INDEX user_identities_user ON user_identities (user_id);
 
 CREATE TABLE oauth_clients (
-    client_id          text PRIMARY KEY,
-    client_secret_hash text,
-    info               jsonb NOT NULL,  -- RFC 7591 metadata as registered
-    created_at         timestamptz NOT NULL DEFAULT now(),
-    last_used_at       timestamptz
+    client_id    text PRIMARY KEY,
+    info         jsonb NOT NULL,  -- RFC 7591 client information, incl. the DCR client secret
+    created_at   timestamptz NOT NULL DEFAULT now(),
+    last_used_at timestamptz
 );
 
 -- A pending /authorize request while the user signs in (10 minutes).
