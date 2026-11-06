@@ -57,12 +57,29 @@ Dasturlash tili — Python.
 
 ## Joriy holat
 
-Bosqichlar holati `PLAN.md`ning 8-bo'limida. 1-bosqich bajarildi
-(`docs/stage1-parser-crawler.md`, "Natija"), 2-bosqich ham bajarildi (`docs/stage2-index-search.md`,
-"Natija"; tajribalar `docs/stage2-experiments.md`da), 3-bosqich ham bajarildi
-(`docs/stage3-mcp-server.md`, "Natija"). Keyingi ish — 4-bosqich: OAuth, Google/Telegram orqali
-kirish, limitlar.
+Bosqichlar holati `PLAN.md`ning 8-bo'limida. 1–3-bosqichlar bajarildi (har birining hujjatida
+"Natija" bo'limi bor, tajribalar `docs/stage2-experiments.md`da). 4-bosqichning kodi tayyor
+(`docs/stage4-auth-limits.md`): OAuth 2.1, Google orqali kirish (Telegram keyinroq), limitlar,
+admin CLI. Xizmat `https://qonunshunos.muzaffar.zip`da ishlayapti (sinov deploy'i, namunaviy
+korpus). Qolgani: claude.ai va ChatGPT konnektori bilan sinov va "Natija" bo'limi. Keyin
+5-bosqich: zaxira nusxa, monitoring, kunlik yangilash, `auth-cleanup` timer'i.
 
-CLI: `uv run qonunshunos fetch|parse|crawl-sample|crawl|listing|db-migrate|index|search|eval|serve|tool`
-(`--data-dir`, standart `./data`). LLM (OpenAI) faqat `qonunshunos.llm.OpenAIChat` orqali: u bepul
-kunlik limitni `data/llm_usage.json` bo'yicha nazorat qiladi.
+CLI: `uv run qonunshunos fetch|parse|crawl-sample|crawl|listing|db-migrate|index|search|eval|serve|tool|user|auth-cleanup`
+(`--data-dir`, standart `./data`). `serve` standart holatda OAuth talab qiladi: mahalliy
+ishlab chiqishda `.env`da `QONUNSHUNOS_DEV_LOGIN=1` yoki `--no-auth` (faqat loopback'da). Mahalliy
+OAuth uchun manzil `http://localhost:8000` (`127.0.0.1` emas: Google redirect shunday yozilgan).
+LLM (OpenAI) faqat `qonunshunos.llm.OpenAIChat` orqali ishlatiladi: u bepul kunlik limitni
+`data/llm_usage.json` bo'yicha nazorat qiladi.
+
+## Server (`myserver`)
+
+- Ilova `/home/deploy/qonunshunos`da, `qonunshunos.service`, `127.0.0.1:8100`. nginx sayti
+  `deploy/nginx-qonunshunos.conf`. Server `.env` git'ga qo'shilmaydi va sinxronlanmaydi.
+- Yangilash: `deploy/deploy.sh` (sudo kerak emas). Root talab qiladigan ishlar
+  `deploy/root-setup.sh`da, uni foydalanuvchi o'zi ishga tushiradi:
+  `ssh -t myserver 'sudo bash …'`. Sudo parolini hech qachon ishlatma.
+- Sayt Cloudflare proksisi ortida ("Full (strict)", `*.muzaffar.zip` Origin sertifikati).
+  UFW 80/443 portlarni faqat Cloudflare'ga ochgan, shuning uchun Let's Encrypt ishlamaydi.
+- pgvector 0.8.7 manba kodidan yig'ilgan. PGDG paketi umumiy PostgreSQL'ni yangilab yuborardi.
+- Ko'p yangi SSH ulanishdan keyin server ulanishni bir muddat rad etadi: bitta umumiy ulanish
+  (ControlMaster) ishlat.
