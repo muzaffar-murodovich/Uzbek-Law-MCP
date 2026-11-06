@@ -1,0 +1,23 @@
+[Unit]
+Description=Qonunshunos MCP server (Uzbek legislation search)
+After=network.target postgresql.service
+Wants=postgresql.service
+
+[Service]
+Type=simple
+User=deploy
+Group=deploy
+WorkingDirectory=/home/deploy/qonunshunos
+# Settings (DSN, public URL, Google client) come from /home/deploy/qonunshunos/.env.
+ExecStart=/home/deploy/qonunshunos/venv/bin/qonunshunos serve --host 127.0.0.1 --port 8100 --no-access-log
+Restart=on-failure
+RestartSec=5
+# One process holds the embedding model (~250 MB); keep it from starving the other apps.
+MemoryMax=1200M
+Environment=OMP_NUM_THREADS=1
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=full
+
+[Install]
+WantedBy=multi-user.target

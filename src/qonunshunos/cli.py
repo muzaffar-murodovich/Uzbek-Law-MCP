@@ -75,6 +75,11 @@ def build_parser() -> argparse.ArgumentParser:
     p.add_argument(
         "--no-auth", action="store_true", help="no OAuth and no limits (loopback hosts only)"
     )
+    p.add_argument(
+        "--no-access-log",
+        action="store_true",
+        help="do not log request lines (they carry one-time OAuth codes); nginx logs them",
+    )
 
     p = sub.add_parser("user", help="list users, change limits, block (admin)")
     user_sub = p.add_subparsers(dest="user_command", required=True)
@@ -191,6 +196,7 @@ def _serve(args: argparse.Namespace) -> int:
         host=args.host,
         port=args.port,
         log_level="info",
+        access_log=not args.no_access_log,
         proxy_headers=True,
         forwarded_allow_ips="127.0.0.1",
     )
