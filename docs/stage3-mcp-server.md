@@ -83,9 +83,9 @@ Kuzatuvlar:
   Farmonlar 6-bosqichdagi to'liq yuklashda qo'shiladi.
 - **Tartiblash:** birinchi o'rinda ba'zan unchalik mos bo'lmagan modda chiqadi (masalan, ishdan
   bo'shatish haqidagi savolga 511-modda). Ro'yxat oxirida esa aloqasiz moddalar uchraydi. AI
-  ularni o'zi chetlab o'tdi, lekin ular tokenni behuda sarflaydi. Taklif: eng yaxshi natijadan
-  ancha past ballga ega natijalarni kesib tashlash. Bu tajriba baholash to'plamida alohida
-  o'lchanadi.
+  ularni o'zi chetlab o'tdi, lekin ular tokenni behuda sarflaydi. Past ballga ega natijalarni
+  kesib tashlash sinab ko'rildi va foyda bermadi
+  ([stage2-experiments.md](stage2-experiments.md), 6b-bo'lim). Yechim — reranker.
 - MCP Inspector ishlatilmadi. Uning o'rniga protokol SDK mijozi bilan HTTP orqali tekshirildi
   (tool'lar ro'yxati, sxemalar, chaqiruvlar, resurs, prompt).
 - Dizayndan farqlar: `list_codes` keshlanmaydi. `short_title` ustuni `display_title` deb qayta

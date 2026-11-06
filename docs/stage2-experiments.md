@@ -285,6 +285,46 @@ Natija sezilarli o'zgarmadi:
 
 Natija: `eval/results/2026-11-06-stage3-display-title.json`.
 
+## 6b. Shovqinni kesish: past ballga ega natijalarni tashlash (2026-11-06)
+
+**Savol.** 3-bosqichdagi Claude Code sinovida qidiruv ro'yxatining oxirida aloqasiz moddalar
+chiqdi. Masalan, ishga tiklash muddati haqidagi savolga Jinoyat-protsessual kodeksidagi tergov
+muddatlari chiqqan. Har bir ortiqcha natija ≈140 token oladi. Ularni ball bo'yicha olib tashlab,
+to'g'ri moddani yo'qotmaslik mumkinmi?
+
+**Usul** (`scripts/bench_cutoff.py`). Har bir savol uchun gibrid qidiruv bir marta bajarildi
+(top 10). Keyin kesish qoidalari shu natijalar ustida hisoblandi. Tool odatda 8 ta natija
+qaytaradi, shuning uchun ko'rsatkich R@8 va natijalar soni. Ikki qoida sinaldi:
+
+- **A:** RRF bali eng yaxshi natija balining X foizidan past bo'lsa, natija tashlanadi.
+- **B:** natija faqat bitta ro'yxatda va undagi o'rni pastda bo'lsa (>10, >20, >30), tashlanadi.
+
+| To'plam | Kesishsiz R@8 | A 50 %: R@8 / natijalar soni / yo'qotilgan | A 60 % | A 70 % |
+|---|---|---|---|---|
+| Qo'lda yozilgan 97 ta, LLM `alt` | 0,85 | 0,84 / 7,4 / 1 | 0,84 / 6,4 / 1 | 0,80 / 4,9 / 4 |
+| LLM yaratgan 100 ta, `alt` bilan | 0,87 | 0,87 / 7,4 / 0 | 0,84 / 6,5 / 3 | 0,82 / 4,7 / 5 |
+| Qo'lda yozilgan 97 ta, xom | 0,64 | 0,64 / 7,4 / 0 | 0,62 / 6,5 / 2 | 0,57 / 5,6 / 7 |
+
+B qoidasi deyarli hech narsani kesmadi. Birinchi 8 ta natijaning deyarli hammasi bir nechta
+ro'yxatda chiqadi, shuning uchun natijalar soni 7,7–8,0 bo'lib qoldi.
+
+Odatiy `limit`ni kamaytirish ham sinaldi:
+
+| To'plam | R@5 | R@6 | R@8 | R@10 |
+|---|---|---|---|---|
+| Qo'lda yozilgan 97 ta, LLM `alt` | 0,78 | 0,80 | 0,85 | 0,90 |
+| LLM yaratgan 100 ta, `alt` bilan | 0,82 | 0,84 | 0,87 | 0,88 |
+
+**Xulosa: kesish foyda bermaydi, kod o'zgarmadi.**
+
+- **Sababi.** Birinchi 8 ta natijaning RRF ballari bir-biriga juda yaqin, shuning uchun "shovqin"
+  ballari bo'yicha boshqalaridan ajralib turmaydi. 50 % chegara atigi ≈7 % tokenni tejaydi va
+  baribir bitta to'g'ri moddani yo'qotadi.
+- **`limit`.** Uni 8 dan 6 ga tushirish R@ ni 0,05 ga kamaytiradi. Demak, hozirgi 8 to'g'ri.
+  Sinovda shovqin aynan AI o'zi `limit=10` so'raganida ro'yxat oxirida chiqqan.
+- **Haqiqiy yechim tartiblashni yaxshilash:** reranker modeli (masalan, `bge-reranker-v2-m3`)
+  yoki kuchliroq embedding. Bu kuchliroq serverga o'tganda ko'riladi.
+
 ## 7. Ochiq masalalar
 
 - **Model tanlovi.** 4.7-bo'lim: sifat bo'yicha bge-m3 birinchi, lekin `myserver` uchun og'ir.
