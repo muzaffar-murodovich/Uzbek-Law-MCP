@@ -22,6 +22,10 @@ class Settings:
     dsn: str
     data_dir: Path
     model_dir: Path
+    public_url: str = ""  # e.g. https://qonunshunos.muzaffar.zip: OAuth issuer and resource
+    google_client_id: str = ""
+    google_client_secret: str = ""
+    dev_login: bool = False  # "test user" sign-in button, only for loopback servers
 
     @classmethod
     def from_env(cls, data_dir: Path | None = None) -> "Settings":
@@ -31,4 +35,8 @@ class Settings:
             dsn=os.environ.get("QONUNSHUNOS_DSN", ""),
             data_dir=data,
             model_dir=Path(os.environ.get("QONUNSHUNOS_MODEL_DIR", str(data / "models"))),
+            public_url=os.environ.get("QONUNSHUNOS_PUBLIC_URL", "").rstrip("/"),
+            google_client_id=os.environ.get("GOOGLE_CLIENT_ID", ""),
+            google_client_secret=os.environ.get("GOOGLE_CLIENT_SECRET", ""),
+            dev_login=os.environ.get("QONUNSHUNOS_DEV_LOGIN", "") in ("1", "true", "yes"),
         )

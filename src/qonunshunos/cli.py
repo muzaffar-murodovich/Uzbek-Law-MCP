@@ -72,6 +72,26 @@ def build_parser() -> argparse.ArgumentParser:
     p.add_argument("--port", type=int, default=8000)
     p.add_argument("--stdio", action="store_true", help="talk MCP over stdin/stdout instead")
     p.add_argument("--model", default=DEFAULT_MODEL, choices=sorted(MODELS))
+    p.add_argument(
+        "--no-auth", action="store_true", help="no OAuth and no limits (loopback hosts only)"
+    )
+
+    p = sub.add_parser("user", help="list users, change limits, block (admin)")
+    user_sub = p.add_subparsers(dest="user_command", required=True)
+    q = user_sub.add_parser("list", help="users seen most recently, with today's calls")
+    q.add_argument("--limit", type=int, default=50)
+    q = user_sub.add_parser("show", help="one user: identities, limits, usage today")
+    q.add_argument("user", help="id or e-mail")
+    q = user_sub.add_parser("limit", help="override daily/minute limits: search=100 other=-")
+    q.add_argument("user", help="id or e-mail")
+    q.add_argument("changes", nargs="+", help="search=N, other=N, per_minute=N; '-' removes")
+    q = user_sub.add_parser("block", help="block a user and revoke their tokens")
+    q.add_argument("user", help="id or e-mail")
+    q.add_argument("--reason")
+    q = user_sub.add_parser("unblock")
+    q.add_argument("user", help="id or e-mail")
+
+    sub.add_parser("auth-cleanup", help="drop expired OAuth rows and query texts over 12 months")
 
     p = sub.add_parser("tool", help="call one MCP tool directly and print its answer")
     p.add_argument("name", help="search_law, get_article, get_document, ...")
@@ -117,18 +137,128 @@ def _eval(args: argparse.Namespace) -> int:
     return 0
 
 
+LOOPBACK = ("127.0.0.1", "localhost", "::1")
+
+
 def _serve(args: argparse.Namespace) -> int:
+    from urllib.parse import urlparse
+
+    from mcp.server.transport_security import TransportSecuritySettings
+
+    from qonunshunos.auth.google import GoogleConfig
+    from qonunshunos.auth.pages import AuthConfig
     from qonunshunos.mcp.server import Services, create_server
 
     settings = Settings.from_env(args.data_dir)
-    server = create_server(Services(settings.dsn, settings.model_dir, args.model))
-    if args.stdio:
-        server.run("stdio")
+    services = Services(settings.dsn, settings.model_dir, args.model)
+    if args.stdio:  # a local subprocess of the client: nobody else can reach it
+        create_server(services).run("stdio")
         return 0
+    loopback = args.host in LOOPBACK
+    if args.no_auth and not loopback:
+        print("error: --no-auth is only allowed on a loopback host")
+        return 2
+    auth = None
+    public_url = settings.public_url or f"http://localhost:{args.port}"
+    if not args.no_auth:
+        google = None
+        if settings.google_client_id and settings.google_client_secret:
+            google = GoogleConfig(settings.google_client_id, settings.google_client_secret)
+        dev_login = settings.dev_login and loopback and public_url.startswith("http://localhost")
+        if google is None and not dev_login:
+            print("error: set GOOGLE_CLIENT_ID/SECRET, or QONUNSHUNOS_DEV_LOGIN=1, or --no-auth")
+            return 2
+        auth = AuthConfig(public_url=public_url, google=google, dev_login=dev_login)
+    server = create_server(services, auth)
+
+    # DNS-rebinding protection: accept the public host name that nginx forwards.
+    public = urlparse(public_url)
+    hosts = ["127.0.0.1:*", "localhost:*", "[::1]:*", public.netloc]
+    origins = ["http://127.0.0.1:*", "http://localhost:*", "http://[::1]:*"]
+    origins.append(f"{public.scheme}://{public.netloc}")
+    security = TransportSecuritySettings(
+        enable_dns_rebinding_protection=True, allowed_hosts=hosts, allowed_origins=origins
+    )
     import uvicorn
 
-    app = server.streamable_http_app(stateless_http=True, json_response=True, host=args.host)
-    uvicorn.run(app, host=args.host, port=args.port, log_level="info")
+    app = server.streamable_http_app(
+        stateless_http=True, json_response=True, host=args.host, transport_security=security
+    )
+    log_mode = "no auth" if auth is None else f"OAuth issuer {public_url}"
+    print(f"Qonunshunos MCP at http://{args.host}:{args.port}/mcp ({log_mode})", flush=True)
+    uvicorn.run(
+        app,
+        host=args.host,
+        port=args.port,
+        log_level="info",
+        proxy_headers=True,
+        forwarded_allow_ips="127.0.0.1",
+    )
+    return 0
+
+
+def _parse_limit_changes(items: list[str]) -> dict:
+    changes = {}
+    for item in items:
+        key, sep, value = item.partition("=")
+        if not sep or key not in ("search", "other", "per_minute"):
+            raise ValueError(f"expected search=N, other=N or per_minute=N, got {item!r}")
+        changes[key] = None if value in ("-", "") else int(value)
+    return changes
+
+
+def _user(args: argparse.Namespace) -> int:
+    from datetime import datetime
+
+    from qonunshunos.auth import limits, users
+
+    settings = Settings.from_env(args.data_dir)
+    now = datetime.now(limits.TASHKENT)
+    with connect(settings.dsn, vector=False) as conn:
+        if args.user_command == "list":
+            rows = users.overview(conn, limits.day_start(now), args.limit)
+            print(f"{'id':>5}  {'via':<8} {'today':>5} {'search':>6}  {'last seen':<16} user")
+            for user, providers, calls, searches in rows:
+                seen = user.last_seen_at.astimezone(limits.TASHKENT) if user.last_seen_at else None
+                flag = "  [BLOCKED]" if user.blocked else ""
+                print(
+                    f"{user.id:>5}  {providers:<8} {calls:>5} {searches:>6}  "
+                    f"{seen.strftime('%Y-%m-%d %H:%M') if seen else '-':<16} "
+                    f"{user.email or user.display_name or ''}{flag}"
+                )
+            return 0
+        user = users.find(conn, args.user)
+        if user is None:
+            print(f"no such user: {args.user}")
+            return 1
+        if args.user_command == "limit":
+            try:
+                changes = _parse_limit_changes(args.changes)
+            except ValueError as exc:
+                print(f"error: {exc}")
+                return 2
+            user = users.set_limits(conn, user.id, changes)
+        elif args.user_command == "block":
+            users.block(conn, user.id, args.reason)
+        elif args.user_command == "unblock":
+            users.unblock(conn, user.id)
+        user = users.get(conn, user.id)
+        identities = conn.execute(
+            "SELECT provider, coalesce(email, username, subject) FROM user_identities"
+            " WHERE user_id = %s ORDER BY created_at",
+            (user.id,),
+        ).fetchall()
+        used = {g: limits.count_today(conn, user.id, g, now) for g in ("search", "other")}
+        lim = user.limits
+        print(f"user {user.id}: {user.display_name or '-'} <{user.email or '-'}>")
+        print("  via      " + ", ".join(f"{p}:{s}" for p, s in identities))
+        print(f"  plan     {user.plan}  overrides {user.limits_override or '-'}")
+        print(
+            f"  today    search {used['search']}/{lim.search}, other {used['other']}/{lim.other},"
+            f" {lim.per_minute}/min"
+        )
+        if user.blocked:
+            print(f"  BLOCKED  {user.blocked_at:%Y-%m-%d %H:%M} {user.blocked_reason or ''}")
     return 0
 
 
@@ -277,6 +407,17 @@ def main(argv: list[str] | None = None) -> int:
 
     if args.command == "serve":
         return _serve(args)
+
+    if args.command == "user":
+        return _user(args)
+
+    if args.command == "auth-cleanup":
+        from qonunshunos.auth.provider import cleanup
+
+        with connect(Settings.from_env(args.data_dir).dsn, vector=False) as conn:
+            counts = cleanup(conn)
+        print(", ".join(f"{k}: {v}" for k, v in counts.items()))
+        return 0
 
     if args.command == "tool":
         return _tool(args)

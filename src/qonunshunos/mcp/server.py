@@ -2,10 +2,13 @@
 
 import logging
 import time
-from collections.abc import AsyncIterator, Callable
-from contextlib import asynccontextmanager
+from collections.abc import AsyncIterator, Callable, Iterator
+from contextlib import asynccontextmanager, contextmanager
 from typing import Annotated, Literal
 
+import psycopg
+from mcp.server.auth.middleware.auth_context import get_access_token
+from mcp.server.auth.settings import AuthSettings, ClientRegistrationOptions, RevocationOptions
 from mcp.server.mcpserver import MCPServer
 from mcp.types import ToolAnnotations
 from psycopg.types.json import Jsonb
@@ -15,6 +18,10 @@ from starlette.requests import Request
 from starlette.responses import JSONResponse
 
 from qonunshunos import __version__
+from qonunshunos.auth import limits, users
+from qonunshunos.auth.pages import AuthConfig
+from qonunshunos.auth.pages import routes as auth_routes
+from qonunshunos.auth.provider import SCOPE, Provider
 from qonunshunos.index.embed import DEFAULT_MODEL, Embed, Embedder
 from qonunshunos.mcp import tools
 from qonunshunos.mcp.tools import Result
@@ -65,6 +72,7 @@ class Services:
         self.model = model
         self.embedder: Embed | None = embedder
         self.pool: ConnectionPool | None = None
+        self.window = limits.MinuteWindow()
 
     def open(self) -> None:
         if self.pool is None:
@@ -81,39 +89,70 @@ class Services:
         if self.embedder is None:
             self.embedder = Embedder(self.model_dir, self.model)
 
+    @contextmanager
+    def connection(self) -> Iterator[psycopg.Connection]:
+        self.open()
+        with self.pool.connection() as conn:
+            yield conn
+
     def close(self) -> None:
         if self.pool is not None:
             self.pool.close()
             self.pool = None
 
     def run(self, name: str, args: dict, fn: Callable[..., Result], *, embed: bool = False) -> str:
-        """Run one tool with a pooled connection and record it in ``usage_events``."""
+        """Run one tool with a pooled connection and record it in ``usage_events``.
+
+        With OAuth on, the caller comes from the access token and the call must fit the user's
+        limits; a refused call returns an explanation (not an error) and is not counted.
+        """
         self.open()
+        token = get_access_token()
+        user_id = int(token.subject) if token and token.subject else None
         started = time.perf_counter()
         result: Result | None = None
+        refusal: str | None = None
         try:
             with self.pool.connection() as conn:
+                if user_id is not None:
+                    user = users.get(conn, user_id)
+                    user_limits = user.limits if user else limits.PLANS["free"]
+                    refusal = limits.check(conn, user_id, name, user_limits, self.window)
+                    if refusal:
+                        return refusal
                 extra = (self.embedder,) if embed else ()
                 result = fn(conn, *extra, **args)
                 return result.text
         finally:
             elapsed = int((time.perf_counter() - started) * 1000)
-            self._log(name, args, elapsed, result)
+            self._log(name, args, elapsed, result, user_id, refused=refusal is not None)
 
-    def _log(self, name: str, args: dict, elapsed: int, result: Result | None) -> None:
+    def _log(
+        self,
+        name: str,
+        args: dict,
+        elapsed: int,
+        result: Result | None,
+        user_id: int | None,
+        *,
+        refused: bool = False,
+    ) -> None:
         logged = {
             k: (v[:300] if isinstance(v, str) else v) for k, v in args.items() if v is not None
         }
         try:
             with self.pool.connection() as conn:
                 conn.execute(
-                    "INSERT INTO usage_events (tool, latency_ms, result_count, ok, args)"
-                    " VALUES (%s, %s, %s, %s, %s)",
+                    "INSERT INTO usage_events"
+                    " (user_id, tool, latency_ms, result_count, ok, counted, args)"
+                    " VALUES (%s, %s, %s, %s, %s, %s, %s)",
                     (
+                        user_id,
                         name,
                         elapsed,
                         result.count if result else None,
-                        result is not None,
+                        result is not None or refused,
+                        not refused,
                         Jsonb(logged),
                     ),
                 )
@@ -121,7 +160,24 @@ class Services:
             log.exception("could not record usage of %s", name)
 
 
-def create_server(services: Services) -> MCPServer:
+def auth_settings(public_url: str) -> AuthSettings:
+    base = public_url.rstrip("/")
+    return AuthSettings(
+        issuer_url=base,
+        resource_server_url=f"{base}/mcp",
+        validate_token_resource=True,
+        required_scopes=[SCOPE],
+        client_registration_options=ClientRegistrationOptions(
+            enabled=True, valid_scopes=[SCOPE], default_scopes=[SCOPE]
+        ),
+        revocation_options=RevocationOptions(enabled=True),
+        service_documentation_url=f"{base}/",
+    )
+
+
+def create_server(services: Services, auth: AuthConfig | None = None) -> MCPServer:
+    """The MCP server; with ``auth`` it is also an OAuth 2.1 authorization server."""
+
     @asynccontextmanager
     async def lifespan(_server: MCPServer) -> AsyncIterator[None]:
         services.open()
@@ -130,6 +186,7 @@ def create_server(services: Services) -> MCPServer:
         finally:
             services.close()
 
+    provider = Provider(services.connection, auth.public_url) if auth else None
     server = MCPServer(
         "Qonunshunos",
         title="Qonunshunos — Oʻzbekiston qonunchiligi",
@@ -137,7 +194,12 @@ def create_server(services: Services) -> MCPServer:
         website_url="https://lex.uz",
         version=__version__,
         lifespan=lifespan,
+        auth=auth_settings(auth.public_url) if auth else None,
+        auth_server_provider=provider,
     )
+    if auth:
+        for path, methods, handler in auth_routes(provider, auth, services.connection):
+            server.custom_route(path, methods=methods, include_in_schema=False)(handler)
     run = services.run
 
     @server.tool(annotations=READ_ONLY, title="Qonunchilikdan qidirish")

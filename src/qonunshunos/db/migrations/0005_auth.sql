@@ -32,11 +32,15 @@ CREATE TABLE oauth_clients (
     last_used_at timestamptz
 );
 
--- A pending /authorize request while the user signs in (10 minutes).
+-- A pending /authorize request while the user signs in (10 minutes). After sign-in the user is
+-- bound to it server-side; the consent form must carry a one-time token shown only to them.
 CREATE TABLE auth_requests (
-    id         text PRIMARY KEY,
-    client_id  text NOT NULL REFERENCES oauth_clients (client_id) ON DELETE CASCADE,
-    params     jsonb NOT NULL,
+    id           text PRIMARY KEY,
+    client_id    text NOT NULL REFERENCES oauth_clients (client_id) ON DELETE CASCADE,
+    params       jsonb NOT NULL,
+    login        jsonb,                -- upstream sign-in state (Google PKCE verifier, nonce)
+    user_id      bigint REFERENCES users (id) ON DELETE CASCADE,
+    consent_hash text,
     created_at timestamptz NOT NULL DEFAULT now(),
     expires_at timestamptz NOT NULL
 );

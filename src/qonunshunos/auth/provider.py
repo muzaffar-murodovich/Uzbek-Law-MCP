@@ -73,6 +73,7 @@ class Provider:
     def __init__(self, connect: Connect, public_url: str):
         self.connect = connect
         self.public_url = public_url.rstrip("/")
+        self.resource_url = f"{self.public_url}/mcp"
 
     # ---- SDK interface (async, the work runs in a thread) ----
 
@@ -142,6 +143,8 @@ class Provider:
         self, client: OAuthClientInformationFull, params: AuthorizationParams
     ) -> str:
         request_id = secrets.token_urlsafe(24)
+        if params.resource is None:  # clients that skip RFC 8707 still get a token for /mcp
+            params = params.model_copy(update={"resource": self.resource_url})
         with self.connect() as conn:
             conn.execute(
                 "INSERT INTO auth_requests (id, client_id, params, expires_at)"
@@ -165,6 +168,41 @@ class Provider:
             client=OAuthClientInformationFull.model_validate(row[1]),
             params=AuthorizationParams.model_validate(row[0]),
         )
+
+    def set_login(self, request_id: str, login: dict) -> None:
+        """Remember upstream sign-in state (e.g. Google PKCE verifier and nonce)."""
+        with self.connect() as conn:
+            conn.execute(
+                "UPDATE auth_requests SET login = %s WHERE id = %s", (Jsonb(login), request_id)
+            )
+
+    def get_login(self, request_id: str) -> dict | None:
+        with self.connect() as conn:
+            row = conn.execute(
+                "SELECT login FROM auth_requests WHERE id = %s AND expires_at > now()",
+                (request_id,),
+            ).fetchone()
+        return row[0] if row else None
+
+    def bind_user(self, request_id: str, user_id: int) -> str:
+        """Bind the signed-in user to the request; returns a one-time consent form token."""
+        token = secrets.token_urlsafe(24)
+        with self.connect() as conn:
+            conn.execute(
+                "UPDATE auth_requests SET user_id = %s, consent_hash = %s WHERE id = %s",
+                (user_id, digest(token), request_id),
+            )
+        return token
+
+    def consent_user(self, request_id: str, token: str) -> int | None:
+        """The user bound to the request, if the consent form token matches."""
+        with self.connect() as conn:
+            row = conn.execute(
+                "SELECT user_id FROM auth_requests WHERE id = %s AND consent_hash = %s"
+                " AND expires_at > now()",
+                (request_id, digest(token)),
+            ).fetchone()
+        return row[0] if row else None
 
     def has_consent(self, user_id: int, client_id: str) -> bool:
         with self.connect() as conn:

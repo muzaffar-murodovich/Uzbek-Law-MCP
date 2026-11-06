@@ -1,7 +1,7 @@
 #!/bin/zsh
 # End-to-end check: ask Claude Code (headless) each question with only the Qonunshunos MCP
 # server available, and keep the stream-json transcripts for scripts/e2e_analyze.py.
-#   uv run qonunshunos serve &            # http://127.0.0.1:8000/mcp
+#   uv run qonunshunos serve --no-auth &  # http://127.0.0.1:8000/mcp, no OAuth
 #   scripts/e2e_claude.sh eval/e2e/questions.tsv data/e2e
 # Runs count against the Claude plan of whoever runs them (≈0.1 USD-equivalent per question).
 set -u
