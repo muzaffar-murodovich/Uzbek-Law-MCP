@@ -270,6 +270,21 @@ Testlar bilan himoyalangan.
 
   Hozir 86 ta hujjat ogohlantirishsiz parse bo'ladi.
 
+## 6a. 3-bosqich: bo'lak sarlavhalaridagi hujjat nomi (2026-11-06)
+
+3-bosqichda hujjat nomi bir xil ko'rinishga keltirildi (`display_title`): "Qonun OʻRQ-637:
+Taʼlim toʻgʻrisida" o'rniga endi "Taʼlim toʻgʻrisidagi Qonun (OʻRQ-637)" yoziladi. Nom har bir
+bo'lak sarlavhasiga kiradi, shuning uchun 16 657 bo'lak qayta hisoblandi (Mac'da 8,5 daqiqa).
+Natija sezilarli o'zgarmadi:
+
+| To'plam | Oldin R@10 / MRR | Keyin R@10 / MRR |
+|---|---|---|
+| Qo'lda yozilgan 97 ta savol, LLM `alt` bilan | 0,91 / 0,56 | 0,90 / 0,57 |
+| LLM yaratgan 100 ta savol, `alt` bilan | 0,88 / 0,63 | 0,88 / 0,63 |
+| Qo'lda yozilgan 97 ta savol, xom | 0,70 / 0,36 | 0,71 / 0,37 |
+
+Natija: `eval/results/2026-11-06-stage3-display-title.json`.
+
 ## 7. Ochiq masalalar
 
 - **Model tanlovi.** 4.7-bo'lim: sifat bo'yicha bge-m3 birinchi, lekin `myserver` uchun og'ir.

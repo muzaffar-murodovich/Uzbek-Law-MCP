@@ -50,7 +50,7 @@ def _filters(statuses: Sequence[str], doc_types: Sequence[str] | None) -> tuple[
     sql = " AND d.status = ANY(%s)"
     params: list = [list(statuses)]
     if doc_types:
-        sql += " AND d.doc_type = ANY(%s)"
+        sql += " AND d.doc_kind = ANY(%s)"
         params.append(list(doc_types))
     return sql, params
 
@@ -177,7 +177,7 @@ def search(
 
     rows = conn.execute(
         """
-        SELECT c.id, c.section_id, c.text, d.id, d.short_title, d.number, d.status,
+        SELECT c.id, c.section_id, c.text, d.id, d.display_title, d.number, d.status,
                d.last_change_date, s.kind, s.number, s.title, s.path, s.elem_id
         FROM chunks c
         JOIN documents d ON d.id = c.document_id

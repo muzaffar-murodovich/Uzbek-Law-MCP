@@ -3,13 +3,13 @@
 import hashlib
 import json
 import logging
-import re
 from dataclasses import dataclass, field
 
 import numpy as np
 import psycopg
 from psycopg.types.json import Jsonb
 
+from qonunshunos.index.doctype import display_title, doc_kind
 from qonunshunos.index.embed import Embed
 from qonunshunos.parser.card import DocumentCard
 from qonunshunos.parser.models import Heading, ParsedDocument, Unit
@@ -19,35 +19,27 @@ from qonunshunos.text.normalize import fold
 
 log = logging.getLogger(__name__)
 
-# card1 "form" values (always Russian) → Uzbek name used in chunk headings.
-FORM_UZ = {
-    "Конституция": "Konstitutsiya",
-    "Кодекс": "Kodeks",
-    "Закон": "Qonun",
-    "Указ": "Prezident farmoni",
-    "Постановление": "Qaror",
-    "Распоряжение": "Farmoyish",
-    "Приказ": "Buyruq",
-    "Положение": "Nizom",
-}
-
-_COUNTRY_PREFIX_RE = re.compile(r"^Oʻzbekiston Respublikasining\s+")
+# Bumped when the writer changes what it stores (headings, kinds), so documents are rewritten.
+INDEX_VERSION = 2
 
 
-def short_title(document: ParsedDocument, card: DocumentCard | None) -> str:
-    """Name used inside chunk headings: "Mehnat kodeksi", "Prezident farmoni PF-60: ..."."""
-    title = _COUNTRY_PREFIX_RE.sub("", document.title).strip()
-    lowered = title.lower()
-    if "kodeks" in lowered or "konstitutsiya" in lowered:
-        return title[:1].upper() + title[1:]
-    form = FORM_UZ.get(card.form or "", "") if card else ""
-    label = " ".join(p for p in (form, document.number) if p)
-    title = title if len(title) <= 160 else title[:157].rstrip() + "…"
-    return f"{label}: {title}" if label else title
+def kind_and_title(document: ParsedDocument, card: DocumentCard | None) -> tuple[str, str]:
+    """Normalized kind and the display title used in tool output and chunk headings."""
+    bodies = " ".join(
+        [document.accepting_body or "", *(b.organ or "" for b in (card.bodies if card else []))]
+    )
+    form = card.form if card else None
+    if form is None and "kodeks" in document.title.lower():
+        form = "kodeks"
+    if form is None and "konstitutsiya" in document.title.lower():
+        form = "konstitutsiya"
+    kind = doc_kind(form, document.number, bodies)
+    return kind, display_title(document.title, kind, document.number)
 
 
 def content_hash(document: ParsedDocument, card: DocumentCard | None) -> str:
     payload = {
+        "index_version": INDEX_VERSION,
         "document": document.model_dump(mode="json"),
         "card": card.model_dump(mode="json") if card else None,
     }
@@ -153,7 +145,7 @@ def index_document(
         return None
 
     status = card.status if card else "unknown"
-    name = short_title(document, card)
+    kind, name = kind_and_title(document, card)
     searchable = status == "in_force" and document.content == "html"
     sections = build_sections(document) if searchable else []
     chunks: list[tuple[int, Chunk]] = []
@@ -185,16 +177,18 @@ def index_document(
         conn.execute("DELETE FROM documents WHERE id = %s", (document.lex_id,))
         conn.execute(
             """
-            INSERT INTO documents (id, title, short_title, doc_type, number, adopted_at, status,
+            INSERT INTO documents (id, title, display_title, doc_type, doc_kind, number,
+                adopted_at, status,
                 accepting_body, url, content, edition_date, last_change_date, content_hash,
                 card, meta, title_norm)
-            VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+            VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
             """,
             (
                 document.lex_id,
                 document.title,
                 name,
                 card.form if card else None,
+                kind,
                 document.number,
                 _date(document.date),
                 status,

@@ -1,38 +1,16 @@
-import hashlib
-
-import numpy as np
 import pytest
+from fakes import FakeEmbedder
 
 from qonunshunos.db import connect
 from qonunshunos.index.writer import (
     build_sections,
     index_document,
+    kind_and_title,
     refresh_fts_stats,
-    short_title,
 )
 from qonunshunos.parser.card import parse_card
 from qonunshunos.parser.document import parse_document
 from qonunshunos.search.hybrid import rrf, search
-from qonunshunos.text.fts import terms
-
-
-class FakeEmbedder:
-    """Bag-of-terms hashed into 384 dims: deterministic, no model needed."""
-
-    name = "fake"
-
-    def _vec(self, text: str) -> np.ndarray:
-        v = np.zeros(384, dtype=np.float32)
-        for term in terms(text):
-            v[int(hashlib.md5(term.encode()).hexdigest(), 16) % 384] += 1.0
-        norm = np.linalg.norm(v)
-        return v / norm if norm else v + 1 / np.sqrt(384)
-
-    def passages(self, texts):
-        return np.stack([self._vec(t) for t in texts]) if texts else np.zeros((0, 384))
-
-    def query(self, text):
-        return self._vec(text)
 
 
 def test_rrf_sums_reciprocal_ranks():
@@ -53,16 +31,20 @@ def test_build_sections_interleaves_headings(fixture_html):
     assert bob.elem_id is not None and bob.level == 3
 
 
-def test_short_title(fixture_html):
+def test_kind_and_title(fixture_html):
     code = parse_document(fixture_html("doc_mehnat_kodeksi.html"), -6257288)
-    assert short_title(code, None) == "Mehnat kodeksi"
+    assert kind_and_title(code, None) == ("kodeks", "Mehnat kodeksi")
     decree = parse_document(fixture_html("doc_pf60.html"), -5841063)
     card = parse_card(fixture_html("card1_in_force.html"), -5841063)
-    card.form = "Указ"
-    assert short_title(decree, card) == (
-        "Prezident farmoni PF-60: 2022-2026-yillarga moʻljallangan Yangi Oʻzbekistonning "
-        "taraqqiyot strategiyasi toʻgʻrisida"
+    card.form, card.bodies = "Указ", []
+    assert kind_and_title(decree, card) == (
+        "farmon",
+        "2022-2026-yillarga moʻljallangan Yangi Oʻzbekistonning taraqqiyot strategiyasi "
+        "toʻgʻrisidagi Prezident farmoni (PF-60)",
     )
+    resolution = parse_document(fixture_html("doc_vm897.html"), -7300000)
+    card.form = "Постановление"
+    assert kind_and_title(resolution, card)[0] == "vm_qarori"
 
 
 @pytest.mark.db
