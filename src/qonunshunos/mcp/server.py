@@ -17,7 +17,7 @@ from pydantic import Field
 from starlette.requests import Request
 from starlette.responses import JSONResponse
 
-from qonunshunos import __version__
+from qonunshunos import __version__, site
 from qonunshunos.auth import limits, users
 from qonunshunos.auth.pages import AuthConfig
 from qonunshunos.auth.pages import routes as auth_routes
@@ -175,7 +175,13 @@ def auth_settings(public_url: str) -> AuthSettings:
     )
 
 
-def create_server(services: Services, auth: AuthConfig | None = None) -> MCPServer:
+def create_server(
+    services: Services,
+    auth: AuthConfig | None = None,
+    *,
+    public_url: str = "http://localhost:8000",
+    contact: str = "",
+) -> MCPServer:
     """The MCP server; with ``auth`` it is also an OAuth 2.1 authorization server."""
 
     @asynccontextmanager
@@ -197,9 +203,11 @@ def create_server(services: Services, auth: AuthConfig | None = None) -> MCPServ
         auth=auth_settings(auth.public_url) if auth else None,
         auth_server_provider=provider,
     )
+    pages = site.routes(auth.public_url if auth else public_url, contact)
     if auth:
-        for path, methods, handler in auth_routes(provider, auth, services.connection):
-            server.custom_route(path, methods=methods, include_in_schema=False)(handler)
+        pages += auth_routes(provider, auth, services.connection)
+    for path, methods, handler in pages:
+        server.custom_route(path, methods=methods, include_in_schema=False)(handler)
     run = services.run
 
     @server.tool(annotations=READ_ONLY, title="Qonunchilikdan qidirish")

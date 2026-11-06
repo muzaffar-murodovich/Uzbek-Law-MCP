@@ -26,6 +26,7 @@ class Settings:
     google_client_id: str = ""
     google_client_secret: str = ""
     dev_login: bool = False  # "test user" sign-in button, only for loopback servers
+    contact: str = ""  # e-mail or URL shown on the privacy and terms pages
 
     @classmethod
     def from_env(cls, data_dir: Path | None = None) -> "Settings":
@@ -39,4 +40,5 @@ class Settings:
             google_client_id=os.environ.get("GOOGLE_CLIENT_ID", ""),
             google_client_secret=os.environ.get("GOOGLE_CLIENT_SECRET", ""),
             dev_login=os.environ.get("QONUNSHUNOS_DEV_LOGIN", "") in ("1", "true", "yes"),
+            contact=os.environ.get("QONUNSHUNOS_CONTACT", ""),
         )

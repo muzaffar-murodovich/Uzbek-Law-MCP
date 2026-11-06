@@ -175,3 +175,16 @@ def test_denied_consent_gives_no_token(app):
             assert storage.tokens is None
 
     anyio.run(scenario)
+
+
+def test_public_pages(app):
+    async def scenario():
+        http = httpx2.AsyncClient(transport=httpx2.ASGITransport(app=app), base_url=BASE)
+        async with http:
+            home = await http.get("/")
+            assert home.status_code == 200 and f"{BASE}/mcp" in home.text
+            privacy = (await http.get("/maxfiylik")).text
+            assert "12 oy" in privacy and "Germaniyada" in privacy and "15-moddasiga" in privacy
+            assert "yuridik maslahat emas" in (await http.get("/shartlar")).text
+
+    anyio.run(scenario)

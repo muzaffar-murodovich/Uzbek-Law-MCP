@@ -1,6 +1,6 @@
 # 4-bosqich: OAuth, Google orqali kirish, limitlar
 
-Holat (2026-11-06): 📝 dizayn, ko'rib chiqilmoqda. Tegishli hujjatlar: [PLAN.md](../PLAN.md)
+Holat (2026-11-06): 🔨 kod tayyor (1–6-qadamlar), Google sozlamalari va `myserver`dagi sinov kutilmoqda. Tegishli hujjatlar: [PLAN.md](../PLAN.md)
 (1-, 5- va 7-bo'limlar), [3-bosqich](stage3-mcp-server.md).
 
 ## Maqsad
@@ -192,7 +192,7 @@ havolalari kerak.
 
 ```
 QONUNSHUNOS_PUBLIC_URL=https://qonunshunos.muzaffar.zip   # issuer va resource shundan
-QONUNSHUNOS_SECRET=...            # auth_requests ID va CSRF uchun
+QONUNSHUNOS_CONTACT=...           # /maxfiylik va /shartlar'dagi murojaat manzili
 GOOGLE_CLIENT_ID=... / GOOGLE_CLIENT_SECRET=...
 ```
 
@@ -257,15 +257,45 @@ Bularni men qila olmayman (akkauntlar sizniki):
 
 ## Ishlar tartibi
 
-1. `0005` migratsiyasi, `users.py`, `limits.py` + testlar (tashqi xizmatlarsiz).
-2. `provider.py` (DCR, kodlar, tokenlar) + `-m db` testlari.
-3. `pages.py`: kirish va rozilik sahifalari, dev login; `server.py`ga ulash; SDK mijozi bilan
+1. ✅ `0005` migratsiyasi, `users.py`, `limits.py` + testlar (tashqi xizmatlarsiz).
+2. ✅ `provider.py` (DCR, kodlar, tokenlar) + `-m db` testlari.
+3. ✅ `pages.py`: kirish va rozilik sahifalari, dev login; `server.py`ga ulash; SDK mijozi bilan
    to'liq oqim testi.
-4. `google.py` + testlar. Google'ni localhost'da haqiqiy akkaunt bilan sinash.
-5. Limitlarni `Services.run`ga ulash, admin CLI.
-6. `/`, `/maxfiylik`, `/shartlar` sahifalari.
+4. ✅ `google.py` + testlar. ⏳ Google'ni localhost'da haqiqiy akkaunt bilan sinash
+   (Google Cloud'dagi OAuth client kutilmoqda).
+5. ✅ Limitlarni `Services.run`ga ulash, admin CLI.
+6. ✅ `/`, `/maxfiylik`, `/shartlar` sahifalari.
 7. `myserver`ga sinov deploy'i (ruxsat bilan), haqiqiy mijozlar bilan sinov,
    "Natija" bo'limi, PLAN.md yangilanadi.
+
+## Bajarilganlar va dizayndan farqlar (2026-11-06)
+
+- 1–6-qadamlar bajarildi: `auth/` (`users`, `limits`, `provider`, `google`, `pages`),
+  `site.py` (`/`, `/maxfiylik`, `/shartlar`), `0005` migratsiyasi, `serve` OAuth bilan,
+  `qonunshunos user list|show|limit|block|unblock` va `qonunshunos auth-cleanup`. Testlar:
+  157 ta. Ular orasida SDK'ning OAuth mijozi bilan to'liq oqim testi (ro'yxatdan o'tish → dev
+  login → rozilik → token → tool → limit) va soxta Google bilan callback testi bor.
+- **Mijoz siri** xesh qilinmaydi: SDK uni ochiq matn bilan solishtiradi. Bu xavfli emas, chunki
+  oqimni baribir PKCE himoya qiladi. Kodlar va tokenlar esa faqat xesh ko'rinishida saqlanadi.
+- **Rozilikni soxtalashtirishdan himoya:** kirgandan keyin foydalanuvchi `auth_requests`ga
+  server tomonida bog'lanadi. Rozilik formasi esa faqat o'sha sahifada ko'rsatilgan bir
+  martalik token bilan qabul qilinadi. Google callback'i `qs_req` cookie orqali kirish
+  boshlangan brauzerga bog'langan (login CSRF'dan himoya).
+- `QONUNSHUNOS_SECRET` kerak bo'lmadi: hamma holat bazada saqlanadi.
+- `resource` yubormaydigan mijozlar uchun `resource` avtomatik `<public_url>/mcp` qilib
+  qo'yiladi, aks holda `validate_token_resource` ularning tokenini rad etardi.
+- `serve` endi standart holatda OAuth talab qiladi. `--no-auth` faqat loopback'da ishlaydi
+  (`scripts/e2e_claude.sh` shu bilan ishlaydi), `--stdio` esa doim auth'siz. Nginx ortidagi
+  Host uchun SDK'ning DNS-rebinding himoyasiga ommaviy host qo'shiladi.
+- **Shaxsiy ma'lumotlar qayerda saqlanishi** (o'z serverimiz orqali tekshirildi):
+  "Shaxsga doir maʼlumotlar toʻgʻrisida"gi Qonunning 27¹-moddasi (OʻRQ-1125, 26.03.2026
+  tahriri) O'zbekiston hududida saqlashni faqat biometrik, genetik va telekom operatorlari
+  ma'lumotlari uchun majburiy qiladi. Qolgan ma'lumotlar chet elda shartlar bilan saqlanishi
+  mumkin: davlat "bir xil himoya" ro'yxatida bo'lishi, standart shartnoma shartlari yoki xalqaro
+  standartlar. 15-modda bo'yicha esa subyektning roziligi bilan ham uzatish mumkin. Shuning uchun
+  kirish sahifasida va `/maxfiylik`da ma'lumot Germaniyada saqlanishi ochiq yoziladi va kirish
+  shunga rozilik deb hisoblanadi. Germaniya Vazirlar Mahkamasi ro'yxatida bormi, tekshirilmagan.
+  Ommaga ochishdan oldin buni yurist bilan tasdiqlash kerak (6-bosqich).
 
 ## Xavflar
 

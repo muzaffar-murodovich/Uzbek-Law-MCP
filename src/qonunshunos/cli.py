@@ -169,7 +169,7 @@ def _serve(args: argparse.Namespace) -> int:
             print("error: set GOOGLE_CLIENT_ID/SECRET, or QONUNSHUNOS_DEV_LOGIN=1, or --no-auth")
             return 2
         auth = AuthConfig(public_url=public_url, google=google, dev_login=dev_login)
-    server = create_server(services, auth)
+    server = create_server(services, auth, public_url=public_url, contact=settings.contact)
 
     # DNS-rebinding protection: accept the public host name that nginx forwards.
     public = urlparse(public_url)

@@ -56,6 +56,10 @@ PAGE = Template("""<!doctype html>
 body { margin: 0; background: var(--bg); color: var(--text);
   font: 16px/1.5 system-ui, -apple-system, "Segoe UI", sans-serif; }
 main { max-width: 440px; margin: 10vh auto; padding: 0 16px; }
+main.wide { max-width: 720px; margin-top: 6vh; }
+h2 { font-size: 1.05rem; margin: 22px 0 8px; }
+ul, ol { margin: 0 0 14px; padding-left: 22px; }
+code { font-size: .9em; background: var(--bg); padding: 1px 5px; border-radius: 4px; }
 .card { background: var(--card); border: 1px solid var(--line); border-radius: 12px;
   padding: 28px 24px; }
 h1 { font-size: 1.3rem; margin: 0 0 12px; }
@@ -72,7 +76,7 @@ a { color: var(--accent); }
 </style>
 </head>
 <body>
-<main>
+<main class="$main_class">
 <div class="card">
 $body
 </div>
@@ -84,8 +88,9 @@ $body
 """)
 
 
-def page(title: str, body: str, status: int = 200) -> HTMLResponse:
-    return HTMLResponse(PAGE.substitute(title=escape(title), body=body), status_code=status)
+def page(title: str, body: str, status: int = 200, *, wide: bool = False) -> HTMLResponse:
+    html = PAGE.substitute(title=escape(title), body=body, main_class="wide" if wide else "")
+    return HTMLResponse(html, status_code=status)
 
 
 def error_page(message: str, status: int = 400) -> HTMLResponse:
@@ -127,7 +132,9 @@ def login_page(pending: PendingRequest, config: AuthConfig) -> HTMLResponse:
         "Qonunshunos'ga ulanmoqchi.</p>"
         "<p class='muted'>Xizmat bepul. Kirish faqat kunlik limitlarni hisoblash uchun kerak: "
         "parolingiz bizga kelmaydi, biz faqat ismingiz va emailingizni koʻramiz.</p>"
-        + "".join(buttons)
+        "<p class='muted'>Kirish orqali siz <a href='/maxfiylik'>maxfiylik siyosati</a> va "
+        "<a href='/shartlar'>foydalanish shartlari</a>ga, jumladan maʼlumotlaringiz "
+        "Germaniyadagi serverda saqlanishiga rozilik bildirasiz.</p>" + "".join(buttons)
     )
     return page("Kirish", body)
 
