@@ -67,6 +67,16 @@ def build_parser() -> argparse.ArgumentParser:
     p.add_argument("--no-stem", action="store_true")
     p.add_argument("--model", default=DEFAULT_MODEL, choices=sorted(MODELS))
 
+    p = sub.add_parser("serve", help="run the MCP server (Streamable HTTP at /mcp)")
+    p.add_argument("--host", default="127.0.0.1")
+    p.add_argument("--port", type=int, default=8000)
+    p.add_argument("--stdio", action="store_true", help="talk MCP over stdin/stdout instead")
+    p.add_argument("--model", default=DEFAULT_MODEL, choices=sorted(MODELS))
+
+    p = sub.add_parser("tool", help="call one MCP tool directly and print its answer")
+    p.add_argument("name", help="search_law, get_article, get_document, ...")
+    p.add_argument("params", nargs="*", help="key=value; repeat alt_queries=... for a list")
+
     p = sub.add_parser("eval", help="run the retrieval evaluation set")
     p.add_argument("--questions", type=Path, default=Path("eval/questions.yaml"))
     p.add_argument("--modes", default="fts,vector,hybrid")
@@ -104,6 +114,50 @@ def _eval(args: argparse.Namespace) -> int:
     print(format_report(report))
     if args.save:
         print(f"saved {save_report(report, args.questions.parent / 'results', args.save)}")
+    return 0
+
+
+def _serve(args: argparse.Namespace) -> int:
+    from qonunshunos.mcp.server import Services, create_server
+
+    settings = Settings.from_env(args.data_dir)
+    server = create_server(Services(settings.dsn, settings.model_dir, args.model))
+    if args.stdio:
+        server.run("stdio")
+        return 0
+    import uvicorn
+
+    app = server.streamable_http_app(stateless_http=True, json_response=True, host=args.host)
+    uvicorn.run(app, host=args.host, port=args.port, log_level="info")
+    return 0
+
+
+LIST_PARAMS = {"alt_queries", "doc_types"}
+
+
+def _tool(args: argparse.Namespace) -> int:
+    from qonunshunos.mcp import tools
+    from qonunshunos.mcp.server import Services
+
+    fn = getattr(tools, args.name, None)
+    if fn is None or args.name.startswith("_"):
+        print(f"unknown tool {args.name}")
+        return 2
+    params: dict = {}
+    for item in args.params:
+        name, _, value = item.partition("=")
+        if name in LIST_PARAMS:
+            params.setdefault(name, []).append(value)
+        else:
+            params[name] = (
+                int(value) if value.lstrip("-").isdigit() and name != "document" else value
+            )
+    settings = Settings.from_env(args.data_dir)
+    services = Services(settings.dsn, settings.model_dir)
+    try:
+        print(services.run(args.name, params, fn, embed=args.name == "search_law"))
+    finally:
+        services.close()
     return 0
 
 
@@ -220,6 +274,12 @@ def main(argv: list[str] | None = None) -> int:
 
     if args.command == "eval":
         return _eval(args)
+
+    if args.command == "serve":
+        return _serve(args)
+
+    if args.command == "tool":
+        return _tool(args)
 
     if args.command == "parse":
         document, card = parse(ws, args.lex_id)

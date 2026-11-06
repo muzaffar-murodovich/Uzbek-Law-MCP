@@ -1,6 +1,6 @@
 # 3-bosqich: MCP server va tool'lar
 
-Holat (2026-11-06): 📝 dizayn, ko'rib chiqilmoqda. Tegishli hujjatlar: [PLAN.md](../PLAN.md)
+Holat (2026-11-06): 🔧 ishlanmoqda (dizayn tasdiqlangan). Tegishli hujjatlar: [PLAN.md](../PLAN.md)
 (6-bo'lim), [2-bosqich](stage2-index-search.md).
 
 ## Maqsad
@@ -31,13 +31,13 @@ OAuth, limitlar va ommaviy manzil keyingi bosqichlarda qo'shiladi (4- va 5-bosqi
 
 ## Ishlar tartibi
 
-1. Ma'lumotni tozalash: `0004` migratsiyasi (`doc_kind`, `display_title`, `usage_events`),
+1. ✅ Ma'lumotni tozalash: `0004` migratsiyasi (`doc_kind`, `display_title`, `usage_events`),
    `writer` va qayta indekslash (embedding qayta hisoblanmaydi).
-2. `mcp/resolve.py`: hujjat va modda havolalarini aniqlash + testlar.
-3. `mcp/format.py`: javob matnlari, sahifalash + snapshot testlar.
-4. `mcp/tools.py` + `mcp/server.py`: `MCPServer`, lifespan (pool, embedder), tool'lar, prompt,
+2. ✅ `mcp/resolve.py`: hujjat va modda havolalarini aniqlash + testlar.
+3. ✅ `mcp/format.py`: javob matnlari, sahifalash + snapshot testlar.
+4. ✅ `mcp/tools.py` + `mcp/server.py`: `MCPServer`, lifespan (pool, embedder), tool'lar, prompt,
    resurslar, `serve` CLI.
-5. `-m db` testlari: tool'larni SDK'ning xotiradagi mijozi orqali chaqirish.
+5. ✅ `-m db` testlari: tool'larni SDK'ning xotiradagi mijozi orqali chaqirish.
 6. MCP Inspector va Claude Code bilan sinov, tool tavsiflarini sozlash, "Natija" bo'limi.
 
 ## Texnologiyalar
@@ -68,7 +68,8 @@ Bazada hozir ikkita muammo bor. Tool'lar ularga tayanadi, shuning uchun avval sh
 2. **Qisqa nom notekis.** Hozirgi `short_title`ning ko'rinishi har xil: "Qonun OʻRQ-641:
    Nogironligi …", "OʻRQ-642: Aholi bandligi toʻgʻrisida", "Qonun OʻRQ-610: fuqaroligi
    toʻgʻrisida" (bunda sarlavha boshidan kerakli so'z tushib qolgan). Yangi `display_title`
-   odam o'qiydigan shaklda bo'ladi: "Aholi bandligi toʻgʻrisidagi Qonun (OʻRQ-642)",
+   (eski `short_title` ustuni shu nomga o'zgartirildi, ikkita ustun saqlanmaydi) odam o'qiydigan
+   shaklda bo'ladi: "Aholi bandligi toʻgʻrisidagi Qonun (OʻRQ-642)",
    "Mehnat kodeksi", "Konstitutsiya". Chunk sarlavhalari ham shu nomdan quriladi. Sarlavhalar
    o'zgargani uchun ular uchun FTS va embedding qayta hisoblanadi. Bu 16 ming bo'lak uchun
    mahalliy kompyuterda bir necha daqiqa oladi. Keyin baholash qayta ishga tushiriladi va R@10
@@ -174,8 +175,8 @@ bazada saqlanadi.
 
 ### `list_codes()`
 
-Amaldagi kodekslar ro'yxati: nomi, ID, tahrir sanasi va qisqartmasi. Bu ma'lumot kam
-o'zgaradi, shuning uchun server xotirasida 1 soat saqlanadi.
+Amaldagi kodekslar ro'yxati: nomi, ID, tahrir sanasi va qisqartmasi. So'rov arzon (≈21 qator),
+shuning uchun keshlanmaydi: har bir chaqiruv `usage_events`ga yozilishi kerak.
 
 ## Server yo'riqnomasi, prompt va resurslar
 
