@@ -1,6 +1,6 @@
 # 3-bosqich: MCP server va tool'lar
 
-Holat (2026-11-06): 🔧 ishlanmoqda (dizayn tasdiqlangan). Tegishli hujjatlar: [PLAN.md](../PLAN.md)
+Holat (2026-11-06): ✅ bajarildi. Tegishli hujjatlar: [PLAN.md](../PLAN.md)
 (6-bo'lim), [2-bosqich](stage2-index-search.md).
 
 ## Maqsad
@@ -32,13 +32,65 @@ OAuth, limitlar va ommaviy manzil keyingi bosqichlarda qo'shiladi (4- va 5-bosqi
 ## Ishlar tartibi
 
 1. ✅ Ma'lumotni tozalash: `0004` migratsiyasi (`doc_kind`, `display_title`, `usage_events`),
-   `writer` va qayta indekslash (embedding qayta hisoblanmaydi).
+   `writer` va qayta indekslash (sarlavhalar o'zgargani uchun embedding ham qayta hisoblandi).
 2. ✅ `mcp/resolve.py`: hujjat va modda havolalarini aniqlash + testlar.
 3. ✅ `mcp/format.py`: javob matnlari, sahifalash + snapshot testlar.
 4. ✅ `mcp/tools.py` + `mcp/server.py`: `MCPServer`, lifespan (pool, embedder), tool'lar, prompt,
    resurslar, `serve` CLI.
 5. ✅ `-m db` testlari: tool'larni SDK'ning xotiradagi mijozi orqali chaqirish.
-6. MCP Inspector va Claude Code bilan sinov, tool tavsiflarini sozlash, "Natija" bo'limi.
+6. ✅ HTTP orqali SDK mijozi va Claude Code bilan sinov, "Natija" bo'limi.
+
+## Natija (2026-11-06)
+
+- **Server:** `qonunshunos serve` (Streamable HTTP, `/mcp`, `/healthz`) va `--stdio`. 6 ta tool,
+  `yuridik_savol` prompti, `lex://` resurslari. Har bir chaqiruv `usage_events`ga yoziladi.
+  Qo'lda tekshirish uchun: `qonunshunos tool <nom> key=value ...`.
+- **Kechikish** (HTTP orqali, Mac): `search_law` 45–66 ms, qolganlari 1–7 ms (mezon 300 / 50 ms).
+- **Javob hajmi:** 8 ta qidiruv natijasi ≈4,5 ming belgi (≈1100 token).
+- **Testlar:** 134 ta, shundan 9 tasi bazali (`-m db`), ular orasida SDK'ning xotiradagi mijozi
+  bilan MCP protokoli testi ham bor.
+- **Qidiruv sifati qayta indekslashdan keyin o'zgarmadi:** R@10 0,90 / 0,88
+  ([stage2-experiments.md](stage2-experiments.md), 6a-bo'lim).
+
+### Claude Code bilan sinov
+
+10 ta savol berildi: bittasi qo'lda, `/yuridik_savol` prompti bilan ("Ishdan bo'shatishsa nima
+qilaman?"), 9 tasi avtomatik, promptsiz, oddiy savol sifatida (`scripts/e2e_claude.sh`,
+`eval/e2e/questions.tsv`). Avtomatik sinovda Claude Code'ga faqat Qonunshunos serveri berildi:
+o'rnatilgan tool'lar, veb-qidiruv va loyiha `CLAUDE.md`si yo'q edi. Tahlil:
+`scripts/e2e_analyze.py`, natija: `eval/results/2026-11-06-e2e-claude-code.jsonl`.
+
+| Mezon | Natija |
+|---|---|
+| `search_law` `alt_queries` bilan chaqirildi | 10/10 |
+| Kutilgan modda `get_article` bilan o'qildi | 10/10 |
+| Javobdagi havolalar bazadagi moddaga olib boradi | 34/35. Qolgan bittasi "LexUZ sharhi"dagi Oliy sud Plenumi qaroriga havola: u lex.uz'da bor, korpusda yo'q |
+| "Yuridik maslahat emas" ogohlantirishi | 10/10 |
+| Tool chaqiruvlari, bitta savolga | 3–8 (o'rtacha 5,0) |
+| Vaqt / narx (API ekvivalenti) | 19–61 s, ≈0,07–0,21 USD |
+
+Bir nechta savolni alohida ta'kidlash kerak. Ruscha savolga ("Какой штраф … за проезд на
+красный свет?") AI o'zi o'zbekcha qidirdi va ruscha javob berdi. Baholashda qiyin chiqqan "Ikki
+fuqarolikka ruxsat bormi?" savoli ham topildi: AI qo'shimcha qidiruv bilan Konstitutsiyaning
+22-moddasini va fuqarolik qonunini o'qidi. Javoblardagi raqamlar o'qilgan moddalar matniga mos
+keladi: 21 kun ta'til, aliment ¼, 40 BHM va 3 yil, 12 %, 25/20 yil staj, 200 mln so'm.
+
+Kuzatuvlar:
+
+- **BHM va eng kam ish haqining so'mdagi miqdori bazada yo'q.** Bu miqdorlar Prezident farmonlari
+  bilan belgilanadi, farmonlar esa korpusga hali kiritilmagan. Bitta javobda AI raqamni o'z
+  bilimidan aytdi, lekin buni ochiq belgiladi va lex.uz'da tekshirishni maslahat berdi.
+  Farmonlar 6-bosqichdagi to'liq yuklashda qo'shiladi.
+- **Tartiblash:** birinchi o'rinda ba'zan unchalik mos bo'lmagan modda chiqadi (masalan, ishdan
+  bo'shatish haqidagi savolga 511-modda). Ro'yxat oxirida esa aloqasiz moddalar uchraydi. AI
+  ularni o'zi chetlab o'tdi, lekin ular tokenni behuda sarflaydi. Taklif: eng yaxshi natijadan
+  ancha past ballga ega natijalarni kesib tashlash. Bu tajriba baholash to'plamida alohida
+  o'lchanadi.
+- MCP Inspector ishlatilmadi. Uning o'rniga protokol SDK mijozi bilan HTTP orqali tekshirildi
+  (tool'lar ro'yxati, sxemalar, chaqiruvlar, resurs, prompt).
+- Dizayndan farqlar: `list_codes` keshlanmaydi. `short_title` ustuni `display_title` deb qayta
+  nomlandi. So'rov hujjat raqamiga o'xshasa ("PF-60") va raqam bo'yicha topilmasa, nom bo'yicha
+  noaniq qidiruv qilinmaydi: aks holda "OʻRQ-600" kabi boshqa hujjat chiqib qolardi.
 
 ## Texnologiyalar
 

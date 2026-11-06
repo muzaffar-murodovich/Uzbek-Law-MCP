@@ -20,7 +20,7 @@ Dasturlash tili — Python.
 | `docs/stage1-parser-crawler.md` | 1-bosqich (parser + crawler) dizayni va ishlar tartibi |
 | `docs/stage2-index-search.md` | 2-bosqich (indekslash, qidiruv, baholash) dizayni va ishlar tartibi |
 | `docs/stage3-mcp-server.md` | 3-bosqich (MCP server, tool'lar) dizayni va ishlar tartibi |
-| `docs/stage2-experiments.md` | 2-bosqich tajribalari jurnali: raqamlar, xulosalar (portfolio uchun ham) |
+| `docs/stage2-experiments.md` | Qidiruv tajribalari jurnali: raqamlar, xulosalar (portfolio uchun ham) |
 | `docs/adolat-markazi-xat.md` | "Adolat" markaziga xat loyihasi |
 
 ## Asosiy qarorlar
@@ -56,8 +56,10 @@ Dasturlash tili — Python.
 
 Bosqichlar holati `PLAN.md`ning 8-bo'limida. 1-bosqich bajarildi
 (`docs/stage1-parser-crawler.md`, "Natija"), 2-bosqich ham bajarildi (`docs/stage2-index-search.md`,
-"Natija"; tajribalar `docs/stage2-experiments.md`da). Keyingi ish — 3-bosqich: MCP server va tool'lar.
+"Natija"; tajribalar `docs/stage2-experiments.md`da), 3-bosqich ham bajarildi
+(`docs/stage3-mcp-server.md`, "Natija"). Keyingi ish — 4-bosqich: OAuth, Google/Telegram orqali
+kirish, limitlar.
 
-CLI: `uv run qonunshunos fetch|parse|crawl-sample|crawl|listing|db-migrate|index|search|eval`
+CLI: `uv run qonunshunos fetch|parse|crawl-sample|crawl|listing|db-migrate|index|search|eval|serve|tool`
 (`--data-dir`, standart `./data`). LLM (OpenAI) faqat `qonunshunos.llm.OpenAIChat` orqali: u bepul
 kunlik limitni `data/llm_usage.json` bo'yicha nazorat qiladi.
