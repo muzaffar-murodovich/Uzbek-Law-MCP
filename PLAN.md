@@ -254,5 +254,12 @@ docs/           tadqiqot, xatlar
 
 ## 10. Ochiq savollar
 
-Hozircha yo'q. Hal qilinganlar (2026-11-05): domen va joylashuv (1-bo'lim), bepul davrdagi
-limitlar (1-bo'lim).
+Hal qilinganlar: domen, joylashuv va bepul davrdagi limitlar (2026-11-05, 1-bo'lim);
+embedding modeli (2026-11-06, MVP uchun e5-small, `docs/stage2-index-search.md`, "Natija").
+
+Kutilayotgan ishlar:
+
+1. **DNS:** spaceship.com'da `qonunshunos.muzaffar.zip` uchun `myserver`ga (46.62.145.27) A
+   yozuvi. Bu ishni foydalanuvchi bajaradi, 4-bosqichdan oldin kerak.
+2. **Baholash to'plami:** farmon va qarorlar bo'yicha savollar, haqiqiy foydalanuvchi savollari
+   (xizmat ishga tushgach).
