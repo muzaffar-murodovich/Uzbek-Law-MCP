@@ -174,6 +174,8 @@ Tamoyillar:
 - **Telegram:** Telegram Login Widget. BotFather'da bot ochiladi va `/setdomain` bilan domenga
   bog'lanadi. Server javobni bot tokeni bilan HMAC-SHA256 orqali tekshiradi.
 - Bitta akkauntga Google va Telegram ikkalasini ham ulash mumkin.
+- 2026-11-06 qarori: 4-bosqichda faqat Google. Telegram va akkauntlarni ulash keyinroq.
+  So'rovlar matni (`usage_events.args`) 12 oy saqlanadi.
 - **Limitlar:** bepul davrda kuniga 30 ta `search_law` va 200 ta boshqa chaqiruv, daqiqasiga 10 ta
   (pullik tariflar kelganda bepul tarif kuniga 3 ta `search_law`ga tushiriladi). Hisoblagich har
   kuni 00:00 da (Toshkent vaqti) nolga tushadi. Limit tugaganda vosita xato emas, o'zbekcha xabar
@@ -190,7 +192,7 @@ Tamoyillar:
 | 1 | Parser + crawler (avval namunaviy to'plamda) | 1 hafta | ✅ bajarildi (namunaviy to'plam) |
 | 2 | Indekslash, gibrid qidiruv, baholash to'plami | 1 hafta | ✅ bajarildi (R@10 0,88–0,91, AI qayta yozganda) |
 | 3 | MCP server va tool'lar | 3–4 kun | ✅ bajarildi (Claude Code sinovi: 10/10 savolda kerakli modda o'qildi va to'g'ri havola berildi) |
-| 4 | OAuth, Google/Telegram kirish, limitlar | 1 hafta | domen: `qonunshunos.muzaffar.zip` |
+| 4 | OAuth, Google orqali kirish, limitlar | 1 hafta | 📝 dizayn (`docs/stage4-auth-limits.md`). Telegram keyinroq (2026-11-06). Oxirida `myserver`ga sinov deploy'i |
 | 5 | `myserver`ga deploy, zaxira nusxa, monitoring, kunlik yangilash | 2–3 kun | |
 | 6 | To'liq yuklab olish va bepul ommaga ochish | 1–2 kun | ochishdan oldin: Cloudflare proksisi va SSL "Full (strict)" |
 | 7 | Pullik tariflar | — | avval "Adolat" markaziga xat va yozma rozilik |
