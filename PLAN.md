@@ -188,7 +188,7 @@ Tamoyillar:
 |---|---|---|---|
 | 0 | lex.uz tadqiqoti | 1–2 kun | ✅ bajarildi |
 | 1 | Parser + crawler (avval namunaviy to'plamda) | 1 hafta | ✅ bajarildi (namunaviy to'plam) |
-| 2 | Indekslash, gibrid qidiruv, baholash to'plami | 1 hafta | |
+| 2 | Indekslash, gibrid qidiruv, baholash to'plami | 1 hafta | ✅ bajarildi (R@10 0,88–0,91, AI qayta yozganda) |
 | 3 | MCP server va tool'lar | 3–4 kun | |
 | 4 | OAuth, Google/Telegram kirish, limitlar | 1 hafta | domen: `qonunshunos.muzaffar.zip` |
 | 5 | `myserver`ga deploy, zaxira nusxa, monitoring, kunlik yangilash | 2–3 kun | |

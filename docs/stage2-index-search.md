@@ -1,6 +1,6 @@
 # 2-bosqich: indekslash, gibrid qidiruv, baholash to'plami
 
-Holat (2026-11-05): dizayn. Tegishli hujjatlar: [PLAN.md](../PLAN.md) (4–6-bo'limlar),
+Holat (2026-11-06): ✅ bajarildi. Tajribalar va raqamlar: [stage2-experiments.md](stage2-experiments.md). Tegishli hujjatlar: [PLAN.md](../PLAN.md) (4–6-bo'limlar),
 [1-bosqich](stage1-parser-crawler.md).
 
 ## Maqsad
@@ -30,13 +30,29 @@ kutubxona va CLI bor. MCP server 3-bosqichda shu kutubxona ustiga quriladi.
 
 1. ✅ Mahalliy muhit: Homebrew `postgresql@17` + `pgvector` (port 5433), DSN `.env` orqali
    beriladi. Docker ishlatilmaydi.
-2. `db/`: sxema, migratsiyalar, `db-migrate`.
-3. `text/chunk.py` (bo'lish) va `text/fts.py` (FTS normalizatsiyasi) + testlar.
-4. `index/embed.py` (ONNX model) + `index/writer.py` + `index` CLI.
-5. `search/` (FTS, vektor, RRF, filtrlar) + `search` CLI.
-6. `eval/`: savollar to'plami + `eval` CLI. Birinchi o'lchov.
-7. Sozlash: stemming, bo'lak hajmi, RRF `k`, sarlavha og'irligi va hokazo. Har bir tajriba
-   natijasi shu hujjatga yoziladi.
+2. ✅ `db/`: sxema, migratsiyalar (`0001`–`0003`), `db-migrate`.
+3. ✅ `text/chunk.py` (bo'lish) va `text/fts.py` (FTS normalizatsiyasi) + testlar.
+4. ✅ `index/embed.py` (ONNX model) + `index/writer.py` + `index` CLI.
+5. ✅ `search/` (IDF og'irlikli FTS, vektor, RRF, filtrlar) + `search` CLI.
+6. ✅ `eval/`: savollar to'plamlari + `eval` CLI.
+7. ✅ Sozlash va embedding modellarini solishtirish:
+   [stage2-experiments.md](stage2-experiments.md).
+
+## Natija (2026-11-06)
+
+- Korpus: 86 ta hujjat (Konstitutsiya, 20 ta kodeks, 65 ta qonun), 16 657 ta bo'lak.
+- **Gibrid R@10, AI qayta yozganda** (LLM `alt`): qo'lda yozilgan 97 ta savolda **0,91**, LLM
+  yaratgan 100 ta savolda **0,88**. Mezon (≥ 0,80) bajarildi. Xom so'zlashuv savollarida esa
+  0,70.
+- Kechikish: bitta so'rov 20–50 ms (embedding + SQL), mezon 300 ms.
+- **Model:** hozircha `multilingual-e5-small` (int8 ONNX) qoladi (2026-11-06 qarori). Sifat
+  bo'yicha bge-m3 birinchi (MRR +0,1), lekin `myserver`ning 3,7 GB RAM'iga og'ir. Kuchliroq
+  serverga o'tganda almashtiriladi (`--model`, `index --force`).
+- Dizayndan farqlar: bo'lak chegarasi 1500/1100 belgi (token o'lchovi: ≈4,5 belgi = 1 token).
+  FTS'da `ts_rank_cd` o'rniga IDF og'irligi ishlatiladi (`fts_stats`). HNSW parametrlari
+  `m=32`, `ef_construction=200`. Mahalliy baza Docker'siz.
+- Ochiq: farmon va qarorlar baholash to'plamida yo'q. Haqiqiy foydalanuvchi savollari
+  xizmat ishga tushgach yig'iladi.
 
 ## Korpus
 

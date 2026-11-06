@@ -54,7 +54,9 @@ Dasturlash tili — Python.
 ## Joriy holat
 
 Bosqichlar holati `PLAN.md`ning 8-bo'limida. 1-bosqich bajarildi
-(`docs/stage1-parser-crawler.md`, "Natija"). Keyingi ish — 2-bosqich: indekslash, gibrid qidiruv,
-baholash to'plami.
+(`docs/stage1-parser-crawler.md`, "Natija"), 2-bosqich ham bajarildi (`docs/stage2-index-search.md`,
+"Natija"; tajribalar `docs/stage2-experiments.md`da). Keyingi ish — 3-bosqich: MCP server va tool'lar.
 
-CLI: `uv run qonunshunos fetch|parse|crawl-sample` (`--data-dir`, standart `./data`).
+CLI: `uv run qonunshunos fetch|parse|crawl-sample|crawl|listing|db-migrate|index|search|eval`
+(`--data-dir`, standart `./data`). LLM (OpenAI) faqat `qonunshunos.llm.OpenAIChat` orqali: u bepul
+kunlik limitni `data/llm_usage.json` bo'yicha nazorat qiladi.
