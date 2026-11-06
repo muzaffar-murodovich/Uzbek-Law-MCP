@@ -114,7 +114,20 @@ def main() -> None:
             doc_vecs = np.load(path).astype(np.float32)
             encode_s = None
         else:
-            doc_vecs = encode(model, passages, cand.doc_prompt, is_query=False)
+            parts, step = [], 1024
+            for start in range(0, len(passages), step):
+                parts.append(
+                    encode(model, passages[start : start + step], cand.doc_prompt, is_query=False)
+                )
+                done = min(start + step, len(passages))
+                spent = time.perf_counter() - started
+                eta = spent / done * (len(passages) - done)
+                print(
+                    f"   {done}/{len(passages)} passages, {spent / 60:.1f} min, "
+                    f"~{eta / 60:.1f} min left",
+                    flush=True,
+                )
+            doc_vecs = np.concatenate(parts)
             np.save(path, doc_vecs.astype(np.float16))
             encode_s = round(time.perf_counter() - started, 1)
 

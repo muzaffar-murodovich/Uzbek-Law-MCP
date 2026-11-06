@@ -172,9 +172,8 @@ To'plam: qo'lda yozilgan 97 ta savol, qo'lda yozilgan `alt`.
 | granite-311m-multilingual-r2 | 311M | 768 | 0,52 | 0,67 | 0,81 | 0,99 | 0,74 | 19 daq. |
 | **harrier-oss-v1-270m** | 268M | 640 | **0,80** | **0,83** | **0,94** | **0,99** | **0,79** | 20 daq. |
 | embeddinggemma-300m | 300M | 768 | — | — | — | — | — | gated, yuklab bo'lmadi |
-| bge-m3 | 568M | 1024 | *hisoblanmoqda* | | | | | |
+| bge-m3 | 568M | 1024 | **0,90** | **0,85** | 0,94 | 0,98 | **0,80** | 27 daq. |
 
-LLM `alt` va LLM savollari bilan natijalar: *hisoblanmoqda*, 4.7-bo'limga qo'shiladi.
 
 Ishlab chiqarish narxi. Server 2 vCPU, GPU yo'q, shuning uchun o'lchov Mac protsessorida 2 ta
 oqim bilan qilindi:
@@ -183,6 +182,7 @@ oqim bilan qilindi:
 |---|---|---|---|
 | e5-small | 6 ms | 21 ms | ≈0,5 GB |
 | harrier-270m (fp32) | 30 ms | 136 ms | ≈1,1 GB |
+| bge-m3 (fp32) | 55 ms | 186 ms | ≈2,3 GB (int8 ONNX'da ≈0,6 GB) |
 
 Kuzatuvlar:
 
@@ -194,10 +194,48 @@ Kuzatuvlar:
   narxda, lekin `alt` bilan vektor qidiruvda aniq yaxshiroq (0,88, e5-small'da 0,77).
 - **granite-97m o'zbek tilida zaif chiqdi**, garchi o'zbek tili uning o'qitilgan tillari
   ro'yxatida bo'lsa ham.
+- **bge-m3 xom savollarda eng kuchli** (vektor R@10 0,90).
 
 ### 4.7. Yakuniy solishtirish (LLM `alt`, ikkala to'plam)
 
-*Hisoblanmoqda.*
+Real sharoitga eng yaqin o'lchov: `alt` ifodalarni moddani ko'rmagan LLM yozgan. Vektor qidiruv
+aniq usulda o'tkazilgan.
+
+| Model | Qo'lda yozilgan savollar (97): vektor / gibrid R@10, xom | Qo'lda yozilgan savollar: gibrid R@10 / MRR, `alt` bilan | LLM savollari (100): vektor / gibrid R@10, xom | LLM savollari: gibrid R@10 / MRR, `alt` bilan |
+|---|---|---|---|---|
+| e5-small | 0,57 / 0,70 | 0,92 / 0,65 | 0,49 / 0,65 | 0,90 / 0,68 |
+| uzbek-e5-small | 0,60 / 0,71 | 0,97 / 0,68 | 0,28 / 0,58 | 0,89 / 0,61 |
+| e5-base | 0,73 / 0,75 | 0,95 / 0,68 | 0,49 / 0,64 | 0,91 / 0,73 |
+| granite-97m | 0,40 / 0,64 | 0,92 / 0,66 | 0,15 / 0,50 | 0,88 / 0,61 |
+| granite-311m | 0,52 / 0,67 | 0,93 / 0,70 | 0,20 / 0,55 | 0,88 / 0,67 |
+| harrier-270m | 0,80 / 0,83 | 0,92 / 0,70 | 0,58 / 0,66 | **0,96** / 0,72 |
+| **bge-m3** | **0,90 / 0,85** | **0,98 / 0,80** | **0,75 / 0,78** | 0,95 / **0,76** |
+
+Xulosalar:
+
+- **bge-m3 umuman eng yaxshi.** Ikkala to'plamda ham xom savollarda birinchi, `alt` bilan esa
+  R@10 bo'yicha birinchi yoki ikkinchi. MRR bo'yicha (to'g'ri modda qanchalik yuqorida turishi)
+  e5-small'dan 0,08–0,15 yuqori.
+- **uzbek-e5-small'ning 1-to'plamdagi ustunligi tasodif edi.** 2-to'plamda u e5-small'dan
+  yomonroq. Bu natija bitta, muallif yozgan savollar to'plamiga ishonib bo'lmasligini
+  ko'rsatadi.
+- **2-to'plamdagi hakam e5-small natijalarini tekshirgan** (4.5). Shunga qaramay bge-m3 va
+  harrier e5-small'dan yuqori chiqdi, demak ularning ustunligi haqiqiy.
+- **AI qayta yozganda farq kichrayadi:** R@10 bo'yicha 0,88–0,98. Ammo natijalar tartibida (MRR)
+  farq saqlanadi, bu esa AI'ga beriladigan birinchi 3–5 ta natija sifatiga bevosita ta'sir
+  qiladi.
+
+To'liq korpus uchun narx. Taxmin: ≈22 ming hujjat, 300–700 ming bo'lak. Vektorlar `halfvec`da
+saqlanadi, HNSW indeksi ustidan alohida joy oladi.
+
+| Model | Vektorlar hajmi | Boshlang'ich embedding |
+|---|---|---|
+| e5-small (384) | 0,2–0,5 GB | Mac GPU ≈1 soat, `home` CPU (int8 ONNX) 4–8 soat |
+| harrier-270m (640) | 0,4–0,9 GB | Mac GPU 6–14 soat |
+| bge-m3 (1024) | 0,6–1,4 GB | Mac GPU 8–19 soat |
+
+`myserver`da (3,7 GB RAM, boshqa ilovalar bilan umumiy) bge-m3 va uning indeksi xotiraga sig'ishi
+qiyin. Bu model kuchliroq serverga o'tganda ma'qul keladi.
 
 ## 5. LLM'dan foydalanish
 
@@ -234,8 +272,7 @@ Testlar bilan himoyalangan.
 
 ## 7. Ochiq masalalar
 
-- **Model tanlovi.** 4.7-bo'lim natijasiga qarab qaror qilinadi: harrier sifati yoki
-  uzbek-e5-small arzonligi.
+- **Model tanlovi.** 4.7-bo'lim: sifat bo'yicha bge-m3 birinchi, lekin `myserver` uchun og'ir.
 - **Haqiqiy foydalanuvchi savollari** hali yo'q. Xizmat ishga tushgach, so'rovlar anonim holda
   yig'ilib, baholash to'plamiga qo'shiladi.
 - **Farmon va qarorlar** baholash to'plamida hali yo'q.
