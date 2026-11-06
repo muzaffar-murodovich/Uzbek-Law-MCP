@@ -261,8 +261,7 @@ Bularni men qila olmayman (akkauntlar sizniki):
 2. ✅ `provider.py` (DCR, kodlar, tokenlar) + `-m db` testlari.
 3. ✅ `pages.py`: kirish va rozilik sahifalari, dev login; `server.py`ga ulash; SDK mijozi bilan
    to'liq oqim testi.
-4. ✅ `google.py` + testlar. ⏳ Google'ni localhost'da haqiqiy akkaunt bilan sinash
-   (Google Cloud'dagi OAuth client kutilmoqda).
+4. ✅ `google.py` + testlar. Google'ni localhost'da haqiqiy akkaunt bilan sinash.
 5. ✅ Limitlarni `Services.run`ga ulash, admin CLI.
 6. ✅ `/`, `/maxfiylik`, `/shartlar` sahifalari.
 7. `myserver`ga sinov deploy'i (ruxsat bilan), haqiqiy mijozlar bilan sinov,
@@ -296,6 +295,26 @@ Bularni men qila olmayman (akkauntlar sizniki):
   kirish sahifasida va `/maxfiylik`da ma'lumot Germaniyada saqlanishi ochiq yoziladi va kirish
   shunga rozilik deb hisoblanadi. Germaniya Vazirlar Mahkamasi ro'yxatida bormi, tekshirilmagan.
   Ommaga ochishdan oldin buni yurist bilan tasdiqlash kerak (6-bosqich).
+
+### Mahalliy sinov: haqiqiy Google va Claude Code (2026-11-06)
+
+- **Google Cloud:** OAuth client (Web application), redirect URI'lar domendagi va
+  `localhost:8000`dagi `/auth/google/callback`. Ilova **In production** holatida. Google
+  "Publish app"ni Branding'dagi bosh sahifa, maxfiylik va shartlar havolalari to'ldirilmaguncha
+  o'chiq ushlab turgan edi. Logotip va nozik ruxsatlar yo'q, shuning uchun tekshiruv talab
+  qilinmadi. Havolalar server deploy qilingandan keyin ochiladi (7-qadam).
+- **Claude Code** (`/mcp` → Authenticate) `http://localhost:8000/mcp`ga ulandi. Oqim:
+  `401` → `/register` → `/authorize` → Google → rozilik sahifasi → `/token`. Foydalanuvchi
+  Google ismi va emaili bilan yaratildi, tokenga `resource=http://localhost:8000/mcp` yozildi.
+- Headless Claude Code saqlangan token bilan "Mehnat ta'tili necha kun?" savoliga javob berdi:
+  MK 217- va 218-moddalarga havola qilib, 21 kun. `usage_events`ga 4 ta chaqiruv (1 ta qidiruv,
+  3 ta modda) foydalanuvchi bilan yozildi. `qonunshunos user show 1`: search 1/30, other 3/200.
+- Mahalliy sinovda `public_url` `http://localhost:8000` bo'lishi kerak: Google'dagi redirect
+  shunday yozilgan. MCP konnektori ham `localhost` bilan qo'shiladi (`127.0.0.1` emas), aks holda
+  `resource` mos kelmaydi.
+- **Deploy'dan oldin:** uvicorn access log'i so'rov qatorini to'liq yozadi. Unga Google'ning bir
+  martalik `code`i ham tushadi. Production'da access log o'chiriladi yoki so'rov parametrlarisiz
+  yoziladi (nginx log'i yetarli).
 
 ## Xavflar
 
