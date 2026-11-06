@@ -65,26 +65,13 @@ if ! grep -qF "$RULE" "$SUDOERS"; then
 fi
 echo "sudoers: $(grep -c "$SERVICE" "$SUDOERS") rule(s) for $SERVICE"
 
-step "4/5 Let's Encrypt certificate for $DOMAIN (DNS only, HTTP-01 over port 80)"
-install -d /var/www/letsencrypt
-if [ ! -d /etc/letsencrypt/live/$DOMAIN ]; then
-    cat > /etc/nginx/sites-available/$SERVICE <<EOF
-server {
-    listen 80;
-    listen [::]:80;
-    server_name $DOMAIN;
-    location /.well-known/acme-challenge/ { root /var/www/letsencrypt; }
-    location / { return 404; }
-}
-EOF
-    ln -sf /etc/nginx/sites-available/$SERVICE /etc/nginx/sites-enabled/$SERVICE
-    nginx -t && systemctl reload nginx
-    certbot certonly --webroot -w /var/www/letsencrypt -d $DOMAIN \
-        --non-interactive --agree-tos --keep-until-expiring \
-        --deploy-hook 'systemctl reload nginx'
-fi
+step "4/5 certificate: the existing *.muzaffar.zip Cloudflare Origin CA (proxied site)"
+# 80/443 are open to Cloudflare only, so Let's Encrypt HTTP-01 cannot reach us; the site
+# runs behind the Cloudflare proxy like muzaffar.zip and xorazmcha.muzaffar.zip.
+openssl x509 -in /etc/ssl/certs/muzaffar.crt -noout -subject -enddate
+rm -rf /var/www/letsencrypt
 
-step "5/5 nginx site"
+step "5/5 nginx site (replaces the temporary ACME-only one)"
 install -m 644 "$APP/deploy/nginx-qonunshunos.conf" /etc/nginx/sites-available/$SERVICE
 ln -sf /etc/nginx/sites-available/$SERVICE /etc/nginx/sites-enabled/$SERVICE
 nginx -t && systemctl reload nginx
