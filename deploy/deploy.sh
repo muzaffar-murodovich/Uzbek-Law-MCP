@@ -8,6 +8,10 @@ HOST=${QONUNSHUNOS_HOST:-myserver}
 APP=/home/deploy/qonunshunos
 MODEL=data/models/Xenova__multilingual-e5-small
 cd ${0:A:h}/..
+# One shared connection: myserver refuses SSH after a burst of new connections.
+SSH_OPTS=(-o ControlMaster=auto -o ControlPath=/tmp/qs-ssh-%r@%h -o ControlPersist=10m)
+ssh() { command ssh $SSH_OPTS "$@"; }
+export RSYNC_RSH="ssh ${SSH_OPTS[*]}"
 
 print "== export locked dependencies"
 uv export --frozen --no-dev --no-hashes --no-emit-project -q -o deploy/requirements.txt
