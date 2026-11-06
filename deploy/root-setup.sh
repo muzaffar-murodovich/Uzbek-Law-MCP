@@ -7,32 +7,34 @@ set -euo pipefail
 APP=/home/deploy/qonunshunos
 DOMAIN=qonunshunos.muzaffar.zip
 SERVICE=qonunshunos
+PGVECTOR=0.8.7
+PGVECTOR_SHA256=cac0b10c360f05b2d521200105ba3697e773d4cd3731f5a915a7e37ebe0bea85
 
 step() { printf '\n== %s\n' "$*"; }
 
 [ "$(id -u)" -eq 0 ] || { echo "run with sudo"; exit 1; }
 [ -f "$APP/.env" ] || { echo "$APP/.env is missing: run deploy/deploy.sh first"; exit 1; }
 
-step "1/5 pgvector >= 0.8 from apt.postgresql.org (only this package comes from there)"
-install -d /usr/share/postgresql-common/pgdg
-curl -fsS -o /usr/share/postgresql-common/pgdg/apt.postgresql.org.asc \
-    https://www.postgresql.org/media/keys/ACCC4CF8.asc
-echo "deb [signed-by=/usr/share/postgresql-common/pgdg/apt.postgresql.org.asc]" \
-    "https://apt.postgresql.org/pub/repos/apt noble-pgdg main" > /etc/apt/sources.list.d/pgdg.list
-# Low priority for everything from PGDG, so PostgreSQL itself keeps coming from Ubuntu
-# (no surprise upgrade of the cluster the other apps use); pgvector alone is preferred.
-cat > /etc/apt/preferences.d/pgdg-pgvector-only <<'EOF'
-Package: *
-Pin: origin apt.postgresql.org
-Pin-Priority: 100
-
-Package: postgresql-16-pgvector
-Pin: origin apt.postgresql.org
-Pin-Priority: 600
-EOF
-apt-get update -qq
-apt-get install -y -qq postgresql-16-pgvector
-dpkg-query -W -f='installed: ${Package} ${Version}\n' postgresql-16-pgvector postgresql-16
+step "1/5 pgvector $PGVECTOR built from source against Ubuntu's PostgreSQL 16"
+# PGDG's pgvector package requires PGDG's PostgreSQL build (it breaks Ubuntu's
+# postgresql-16-jit-llvm), which would upgrade and restart the cluster the other apps use.
+# Building the extension against the installed server touches nothing else.
+rm -f /etc/apt/sources.list.d/pgdg.list /etc/apt/preferences.d/pgdg-pgvector-only
+rm -rf /usr/share/postgresql-common/pgdg
+if [ "$(cat /usr/share/postgresql/16/extension/vector.control 2>/dev/null \
+        | sed -n "s/^default_version = '\(.*\)'/\1/p")" != "$PGVECTOR" ]; then
+    apt-get update -qq
+    apt-get install -y -qq postgresql-server-dev-16 build-essential
+    BUILD=$(mktemp -d)
+    curl -fsSL -o "$BUILD/src.tar.gz" \
+        "https://github.com/pgvector/pgvector/archive/refs/tags/v$PGVECTOR.tar.gz"
+    echo "$PGVECTOR_SHA256  $BUILD/src.tar.gz" | sha256sum -c -
+    tar -xzf "$BUILD/src.tar.gz" -C "$BUILD"
+    make -s -C "$BUILD/pgvector-$PGVECTOR" OPTFLAGS="" PG_CONFIG=/usr/lib/postgresql/16/bin/pg_config
+    make -s -C "$BUILD/pgvector-$PGVECTOR" install PG_CONFIG=/usr/lib/postgresql/16/bin/pg_config
+    rm -rf "$BUILD"
+fi
+grep default_version /usr/share/postgresql/16/extension/vector.control
 
 step "2/5 database and role 'qonunshunos'"
 DSN=$(grep '^QONUNSHUNOS_DSN=' "$APP/.env" | cut -d= -f2-)
