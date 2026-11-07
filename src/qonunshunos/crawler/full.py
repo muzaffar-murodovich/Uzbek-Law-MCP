@@ -29,7 +29,7 @@ from qonunshunos.crawler.pipeline import Workspace, fetch, parse
 log = logging.getLogger(__name__)
 
 NAT_LISTING = "/uz/search/nat?lang=4&status=Y"
-FIRST_YEAR = 1990
+FIRST_YEAR = 1920  # 16 acts in force are older than 1990 (oldest: 1961)
 MINOR_ORDER = ("N", "Y")  # self-contained acts first, then amending acts
 
 PAUSE_UNITS = ("qonunshunos-update.service",)  # same IP: never crawl while these run

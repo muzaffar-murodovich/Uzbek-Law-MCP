@@ -6,6 +6,7 @@ from qonunshunos.crawler.client import LexClient
 from qonunshunos.crawler.full import (
     ERROR_PAUSE,
     ERRORS_PER_HOUR,
+    FIRST_YEAR,
     ScopeItem,
     build_scope,
     crawl_scope,
@@ -54,7 +55,7 @@ def test_build_scope_lists_each_year_once(tmp_path, fixture_html):
     ws = Workspace(tmp_path)
     fake = FakeTime()
     report = build_scope(make_client(handler, fake), ws, last_year=2026, say=lambda s: None)
-    years = 2026 - 1990 + 1
+    years = 2026 - FIRST_YEAR + 1
     assert report.files == 2 * years
     assert report.listed == 28
     assert report.total == 28
