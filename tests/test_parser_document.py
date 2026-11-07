@@ -261,3 +261,17 @@ def test_law_parliament_stamp_and_quoted_article(fixture_html):
     # an article quoted inside an amending provision stays text of article 47
     assert any(p.text.startswith("“67²-modda.") for p in last.paragraphs)
     assert "67²" not in [u.number for u in doc.units]
+
+
+def test_pending_change_banner(fixture_html):
+    doc = parse_document(fixture_html("doc_mjtk_pending.html"), -97664)
+    [pending] = doc.pending_changes
+    assert pending.text == (
+        "Hujjatga oʻzgartirish kiritilmoqda. Asos: Oʻzbekiston Respublikasining Qonuni, "
+        "02.11.2026 yildagi OʻRQ-1186-son"
+    )
+    assert [link.doc_id for link in pending.basis] == [-8569963]
+
+
+def test_no_pending_change_banner(mehnat):
+    assert mehnat.pending_changes == []

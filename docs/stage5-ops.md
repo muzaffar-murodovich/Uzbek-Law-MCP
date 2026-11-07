@@ -57,18 +57,32 @@ kesib olish.
 lex.uz'da "o'zgargan hujjatlar ro'yxati" yo'q. Qonunga o'zgartirish alohida hujjat sifatida
 chiqadi, masalan "Mehnat kodeksiga o'zgartirish kiritish to'g'risida"gi Qonun. Uning matnida
 o'zgartirilgan hujjatga havola bo'ladi. Shundan keyin lex.uz asl hujjatning joriy tahririni
-yangilaydi. Bu ba'zan bir necha kun kechikadi. Shuning uchun ikki yo'l birga ishlatiladi:
+yangilaydi. Bu ba'zan bir necha kun, ba'zan oylar kechikadi.
+
+**Haqiqiy misol (2026-11-07 da tekshirildi).** O'RQ-1186 (yong'in xavfsizligi) 02.11.2026 da
+qabul qilingan, 05.02.2027 da kuchga kiradi. Uning matnida bazamizdagi uchta kodeksga havola bor:
+MJtK (8 ta), JK va JPK. lex.uz'dagi MJtK sahifasining tepasida hozir banner turibdi:
+**"Hujjatga o'zgartirish kiritilmoqda. Asos: O'RQ-1186"** (`div.lx_strip`). Matnning o'zi esa
+hali eski. 05.11 da yuklangan 86 ta hujjatning hech birida bunday banner yo'q edi.
+
+Demak lex.uz o'zgarish kelayotganini o'zi ko'rsatadi. Shuning uchun uch yo'l birga ishlatiladi:
 
 1. **Yangi hujjatlar orqali (asosiy yo'l).** RSS o'qiladi, oldin ko'rilmagan har bir hujjat
    yuklab olinadi (kuniga ≈4 so'rov). Uning matnidagi havolalar orasida bizning bazamizdagi
-   hujjat bo'lsa, o'sha hujjat **7 kun davomida har kecha** qayta tekshiriladi. Shu bilan lex.uz
-   tahrirni kechiktirib kiritsa ham, o'zgarish o'tkazib yuborilmaydi. Yangi hujjatning o'zi
-   qamrovga kirsa (hozir: Konstitutsiya va kodekslar; 6-bosqichda qonun, farmon va qarorlar),
-   u bazaga qo'shiladi.
-2. **Navbat bilan aylanib chiqish (zaxira yo'l).** Har kecha eng uzoq vaqt tekshirilmagan
+   hujjat bo'lsa, o'sha hujjat **7 kun davomida har kecha** qayta tekshiriladi. Shu muddat
+   ichida lex.uz yo matnni yangilaydi, yo banner qo'yadi. Yangi hujjatning o'zi qamrovga kirsa
+   (hozir: Konstitutsiya va kodekslar; 6-bosqichda qonun, farmon va qarorlar), u bazaga
+   qo'shiladi.
+2. **Banner orqali.** Parser `lx_strip` bannerini o'qiydi: `pending_changes` (asos hujjat ID'si,
+   nomi, sanasi). Banner turgan hujjat banner yo'qolguncha **har 2 kunda** qayta tekshiriladi.
+   Banner kuchga kirish sanasigacha oylar turishi mumkin, shuning uchun har kecha emas.
+   Banner foydalanuvchiga ham ko'rsatiladi: `get_article` va `get_document` javobida "⚠ lex.uz:
+   hujjatga o'zgartirish kiritilmoqda (asos: O'RQ-1186, 02.11.2026), matn hali yangilanmagan"
+   degan qator chiqadi. AI shuni hisobga olib javob beradi.
+3. **Navbat bilan aylanib chiqish (zaxira yo'l).** Har kecha eng uzoq vaqt tekshirilmagan
    hujjatlar qayta yuklanadi. Bir kechada eng ko'pi bilan 400 ta so'rov yuboriladi (≈15 daqiqa).
    Hozirgi 86 ta hujjat har kecha to'liq tekshiriladi. To'liq korpusda (≈22 ming hujjat) bitta
-   aylanish ≈110 kun oladi. Bu yo'l faqat 1-yo'l o'tkazib yuborgan holatlar uchun kerak:
+   aylanish ≈110 kun oladi. Bu yo'l faqat 1- va 2-yo'l o'tkazib yuborgan holatlar uchun kerak:
    masalan, hujjat kuchini yo'qotgani boshqa hujjat orqali emas, kartochkada ko'rsatilgan bo'lsa.
 
 Hujjatni qayta tekshirish: sahifa va kartochka yuklanadi, parse qilinadi, `index_document`
@@ -76,6 +90,13 @@ chaqiriladi. Mazmun o'zgarmagan bo'lsa (`content_hash` bir xil), baza o'zgartiri
 embedding qayta hisoblanmaydi. Hujjat kuchini yo'qotgan bo'lsa, uning faqat rekvizitlari qoladi.
 Bu `index_document`da allaqachon bor. Hujjat bitta tranzaksiyada almashtiriladi, shuning uchun
 yangilash paytida ham qidiruv ishlab turadi.
+
+`pending_changes` `content_hash`ga kirmaydi va alohida `UPDATE` bilan yoziladi. Aks holda banner
+paydo bo'lishi yoki yo'qolishi butun kodeksni (minglab bo'lak) qayta embedding qildirardi.
+
+Matn haqiqatan o'zgarsa, hujjat to'liq qayta indekslanadi. Lekin matni o'zgarmagan bo'laklarning
+vektorlari eski qatorlardan olinadi (bo'lak matni bo'yicha). Kodeksga kiritilgan o'zgartirish
+odatda bir necha moddaga tegadi, shuning uchun embedding soniyalarda tugaydi.
 
 Holat yangi `crawl_state` jadvalida saqlanadi (migratsiya `0006`):
 
@@ -144,7 +165,8 @@ lex.uz'dan 86 ta hujjat qayta yuklanmaydi.
 
 ## Ishlar tartibi
 
-1. `rss.py` + testlar (`tests/fixtures`dagi qisqartirilgan RSS).
+1. `rss.py` + testlar (`tests/fixtures`dagi qisqartirilgan RSS). Parser: `pending_changes`
+   (`lx_strip`) + MJtK sahifasidan olingan fixture. `get_article`/`get_document`da ogohlantirish.
 2. `0006` migratsiyasi, `update.py` + testlar (soxta `LexClient`, `-m db`).
 3. `notify.py`, `qonunshunos notify` va `report` + testlar.
 4. `deploy/` fayllari: zaxira skripti, systemd unit'lari, `home` skriptlari.

@@ -24,6 +24,7 @@ from qonunshunos.parser.models import (
     HeadingKind,
     Paragraph,
     ParsedDocument,
+    PendingChange,
     Table,
     Unit,
     UnitKind,
@@ -332,6 +333,18 @@ def _alternates(soup: BeautifulSoup) -> dict[str, int]:
     return result
 
 
+def _pending_changes(soup: BeautifulSoup) -> list[PendingChange]:
+    """Banners above the text that announce amendments lex.uz has not merged yet."""
+    result = []
+    for strip in soup.select(".lx_strip"):
+        body = strip.select_one(".lx_strip-text") or strip
+        parts = (text_of(part).rstrip(". ") for part in body.find_all(recursive=False))
+        text = ". ".join(p for p in parts if p)
+        if text:
+            result.append(PendingChange(text=text, basis=links_of(body)))
+    return result
+
+
 def parse_document(html: str, lex_id: int, url: str | None = None) -> ParsedDocument:
     soup = BeautifulSoup(html, "lxml")
     title_tag = soup.find("title")
@@ -348,6 +361,7 @@ def parse_document(html: str, lex_id: int, url: str | None = None) -> ParsedDocu
         number=number,
         date=adopted,
         alternates=_alternates(soup),
+        pending_changes=_pending_changes(soup),
     )
     edition = soup.select_one("#lx_var_t .lx_date_selected")
     if edition is not None:

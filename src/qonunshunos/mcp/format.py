@@ -77,6 +77,25 @@ class Page:
         return line
 
 
+def pending_note(pending: list[dict]) -> str | None:
+    """Warning for lex.uz's "Hujjatga oʻzgartirish kiritilmoqda" banner."""
+    if not pending:
+        return None
+    bases = []
+    for item in pending:
+        links = item.get("basis") or []
+        if links:
+            bases += [f"{link['text']} ({url(link['doc_id'])})" for link in links]
+        else:
+            bases.append(item.get("text", ""))
+    return (
+        "⚠ lex.uz: hujjatga oʻzgartirish kiritilmoqda, asos: "
+        + "; ".join(b for b in bases if b)
+        + ". Bu matnga oʻzgartirish hali kiritilmagan boʻlishi mumkin:"
+        " javob berishda asos hujjatni ham hisobga oling."
+    )
+
+
 def paginate(text: str, page: int = 1, size: int = PAGE_SIZE) -> Page:
     """Split at line boundaries into pages of at most ``size`` characters (long lines are cut)."""
     pages: list[str] = []

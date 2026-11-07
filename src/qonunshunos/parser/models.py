@@ -39,6 +39,13 @@ class Comment(BaseModel):
     links: list[Link] = Field(default_factory=list)
 
 
+class PendingChange(BaseModel):
+    """lex.uz banner "Hujjatga o'zgartirish kiritilmoqda": an amendment not yet in the text."""
+
+    text: str  # "Hujjatga oʻzgartirish kiritilmoqda. Asos: … 02.11.2026 yildagi OʻRQ-1186-son"
+    basis: list[Link] = Field(default_factory=list)
+
+
 class Table(BaseModel):
     elem_id: int | None
     rows: list[list[str]]
@@ -90,5 +97,6 @@ class ParsedDocument(BaseModel):
     comments: list[Comment] = Field(default_factory=list)  # not attached to any unit
     headings: list[Heading] = Field(default_factory=list)
     units: list[Unit] = Field(default_factory=list)
+    pending_changes: list[PendingChange] = Field(default_factory=list)  # lx_strip banners
     warnings: list[str] = Field(default_factory=list)
     parser_version: str = PARSER_VERSION

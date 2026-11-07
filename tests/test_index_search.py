@@ -72,3 +72,41 @@ def test_index_and_search(db_dsn, fixture_html):
         index_document(conn, doc, card, embedder)
         assert conn.execute("SELECT count(*) FROM chunks").fetchone()[0] == 0
         assert search(conn, embedder, unit.title) == []
+
+
+class CountingEmbedder(FakeEmbedder):
+    def __init__(self):
+        self.embedded = 0
+
+    def passages(self, texts):
+        self.embedded += len(texts)
+        return super().passages(texts)
+
+
+@pytest.mark.db
+def test_reindex_reuses_vectors_and_stores_banners(db_dsn, fixture_html):
+    from qonunshunos.parser.models import Link, PendingChange
+
+    doc = parse_document(fixture_html("doc_mehnat_kodeksi.html"), -6257288)
+    card = parse_card(fixture_html("card1_in_force.html"), -6257288)
+    card.status = "in_force"
+    embedder = CountingEmbedder()
+    with connect(db_dsn) as conn:
+        total = index_document(conn, doc, card, embedder)
+        assert embedder.embedded == total
+
+        # A banner alone does not rewrite the document.
+        banner = PendingChange(text="Hujjatga oʻzgartirish kiritilmoqda", basis=[Link(doc_id=-1)])
+        doc.pending_changes = [banner]
+        assert index_document(conn, doc, card, embedder) is None
+        stored = conn.execute("SELECT pending_changes FROM documents").fetchone()[0]
+        assert stored[0]["basis"][0]["doc_id"] == -1
+
+        # An amended article: only its chunks are embedded again.
+        unit = next(u for u in doc.units if u.kind == "modda" and u.paragraphs)
+        unit.paragraphs[0].text += " Qoʻshimcha jumla."
+        embedder.embedded = 0
+        assert index_document(conn, doc, card, embedder) == total
+        assert 1 <= embedder.embedded <= 3
+        stored = conn.execute("SELECT pending_changes FROM documents").fetchone()[0]
+        assert len(stored) == 1

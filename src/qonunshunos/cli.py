@@ -98,6 +98,11 @@ def build_parser() -> argparse.ArgumentParser:
 
     sub.add_parser("auth-cleanup", help="drop expired OAuth rows and query texts over 12 months")
 
+    p = sub.add_parser("update", help="nightly: new and amended acts from lex.uz → index")
+    p.add_argument("--budget", type=int, default=400, help="max lex.uz requests (default 400)")
+    p.add_argument("--dry-run", action="store_true", help="read the RSS feed only, write nothing")
+    p.add_argument("--model", default=DEFAULT_MODEL, choices=sorted(MODELS))
+
     p = sub.add_parser("tool", help="call one MCP tool directly and print its answer")
     p.add_argument("name", help="search_law, get_article, get_document, ...")
     p.add_argument("params", nargs="*", help="key=value; repeat alt_queries=... for a list")
@@ -332,6 +337,47 @@ def _crawl(client: LexClient, ws: Workspace, ids: list[int], force: bool) -> int
     return 1 if failed else 0
 
 
+class _LazyEmbedder:
+    """Loads the ONNX model (≈300 MB) only when a changed document needs embeddings."""
+
+    def __init__(self, model_dir: Path, model: str) -> None:
+        self.model_dir, self.model, self._real = model_dir, model, None
+        self.name = MODELS[model].name
+
+    def _get(self):
+        if self._real is None:
+            from qonunshunos.index.embed import Embedder
+
+            self._real = Embedder(self.model_dir, self.model)
+        return self._real
+
+    def passages(self, texts):
+        return self._get().passages(texts)
+
+    def query(self, text):
+        return self._get().query(text)
+
+
+def _update(args: argparse.Namespace, ws: Workspace) -> int:
+    from qonunshunos.crawler.update import run_update
+
+    settings = Settings.from_env(args.data_dir)
+    embedder = _LazyEmbedder(settings.model_dir, args.model)
+    with connect(settings.dsn) as conn, LexClient() as client:
+        report = run_update(conn, client, ws, embedder, budget=args.budget, dry_run=args.dry_run)
+    print(report.summary())
+    for name in ("added", "changed", "lost_force", "pending"):
+        for item in getattr(report, name):
+            print(f"  {name:<10} {item['id']:>9}  {item['title'][:70]}")
+    for item in report.rss_new:
+        if item["links"]:
+            print(f"  rss        {item['id']:>9}  {item['title'][:60]} → {item['links']}")
+    for item in report.errors:
+        print(f"  error      {item['id']:>9}  {item['error'][:90]}")
+    # Errors on single documents are retried in their next turn; a failed RSS read raises.
+    return 0
+
+
 def _index(args: argparse.Namespace, ws: Workspace) -> int:
     from qonunshunos.index.embed import Embedder
     from qonunshunos.index.writer import index_document, rebuild_fts, refresh_fts_stats
@@ -427,6 +473,9 @@ def main(argv: list[str] | None = None) -> int:
 
     if args.command == "tool":
         return _tool(args)
+
+    if args.command == "update":
+        return _update(args, ws)
 
     if args.command == "parse":
         document, card = parse(ws, args.lex_id)

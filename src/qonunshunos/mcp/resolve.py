@@ -42,7 +42,7 @@ def abbreviation(text: str) -> str | None:
 
 DOC_COLUMNS = (
     "id, title, display_title, doc_kind, number, adopted_at, status, accepting_body, url,"
-    " content, edition_date, last_change_date, card"
+    " content, edition_date, last_change_date, card, pending_changes"
 )
 
 
@@ -61,6 +61,7 @@ class DocumentRow:
     edition_date: object
     last_change_date: object
     card: dict | None
+    pending_changes: list[dict]
 
     @property
     def in_force(self) -> bool:

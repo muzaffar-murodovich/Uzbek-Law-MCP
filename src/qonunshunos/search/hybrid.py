@@ -34,6 +34,7 @@ class Hit:
     url: str
     snippet: str
     score: float
+    pending_changes: bool = False  # lex.uz banner: an amendment is not merged into the text yet
     ranks: dict[str, int] = field(default_factory=dict)  # best rank per list, for debugging
 
 
@@ -178,7 +179,8 @@ def search(
     rows = conn.execute(
         """
         SELECT c.id, c.section_id, c.text, d.id, d.display_title, d.number, d.status,
-               d.last_change_date, s.kind, s.number, s.title, s.path, s.elem_id
+               d.last_change_date, s.kind, s.number, s.title, s.path, s.elem_id,
+               d.pending_changes <> '[]'
         FROM chunks c
         JOIN documents d ON d.id = c.document_id
         JOIN sections s ON s.id = c.section_id
@@ -208,6 +210,7 @@ def search(
             url=f"{LEX_BASE}/{doc_id}" + (f"#{elem_id}" if elem_id is not None else ""),
             snippet=text if len(text) <= SNIPPET else text[:SNIPPET].rsplit(" ", 1)[0] + " …",
             score=scores[chunk_id],
+            pending_changes=bool(row[13]),
             ranks=ranks.get(chunk_id, {}),
         )
     return sorted(best.values(), key=lambda h: -h.score)[:limit]

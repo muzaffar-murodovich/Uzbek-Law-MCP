@@ -40,7 +40,8 @@ def kind_and_title(document: ParsedDocument, card: DocumentCard | None) -> tuple
 def content_hash(document: ParsedDocument, card: DocumentCard | None) -> str:
     payload = {
         "index_version": INDEX_VERSION,
-        "document": document.model_dump(mode="json"),
+        # Banners come and go without the text changing; they are written separately.
+        "document": document.model_dump(mode="json", exclude={"pending_changes"}),
         "card": card.model_dump(mode="json") if card else None,
     }
     raw = json.dumps(payload, ensure_ascii=False, sort_keys=True).encode("utf-8")
@@ -130,6 +131,31 @@ def stored_hash(conn: psycopg.Connection, lex_id: int) -> str | None:
     return row[0] if row else None
 
 
+def write_pending_changes(conn: psycopg.Connection, document: ParsedDocument) -> bool:
+    """Store the document's "amendment pending" banners. Returns True if they changed."""
+    pending = Jsonb([p.model_dump(mode="json") for p in document.pending_changes])
+    cur = conn.execute(
+        "UPDATE documents SET pending_changes = %s WHERE id = %s AND pending_changes <> %s",
+        (pending, document.lex_id, pending),
+    )
+    return cur.rowcount > 0
+
+
+def stored_vectors(conn: psycopg.Connection, lex_id: int, model: str) -> dict[tuple, np.ndarray]:
+    """Embeddings already in the database for this document, by (heading, text) of the chunk.
+
+    When an amendment touches a few articles of a code, only those chunks are embedded again.
+    """
+    row = conn.execute("SELECT meta->>'embed_model' FROM documents WHERE id = %s", (lex_id,))
+    found = row.fetchone()
+    if found is None or found[0] != model:
+        return {}
+    rows = conn.execute(
+        "SELECT heading, text, embedding::vector FROM chunks WHERE document_id = %s", (lex_id,)
+    ).fetchall()
+    return {(heading, text): vec.to_numpy().astype(np.float32) for heading, text, vec in rows}
+
+
 def index_document(
     conn: psycopg.Connection,
     document: ParsedDocument,
@@ -142,6 +168,7 @@ def index_document(
     """(Re)write one document. Returns the number of chunks, or ``None`` if unchanged."""
     digest = content_hash(document, card)
     if not force and stored_hash(conn, document.lex_id) == digest:
+        write_pending_changes(conn, document)
         return None
 
     status = card.status if card else "unknown"
@@ -152,11 +179,22 @@ def index_document(
     for index, row in enumerate(sections):
         if row.unit is not None:
             chunks.extend((index, c) for c in chunk_unit(name, row.unit))
-    vectors = (
-        embedder.passages([c.passage for _, c in chunks])
-        if chunks
-        else np.zeros((0, 384), dtype=np.float32)
-    )
+    model = getattr(embedder, "name", "unknown")
+    known = stored_vectors(conn, document.lex_id, model) if chunks and not force else {}
+    vectors = np.zeros((len(chunks), 384), dtype=np.float32)
+    missing = [i for i, (_, c) in enumerate(chunks) if (c.heading, c.text) not in known]
+    for i, (_, c) in enumerate(chunks):
+        if (c.heading, c.text) in known:
+            vectors[i] = known[(c.heading, c.text)]
+    if missing:
+        vectors[missing] = embedder.passages([chunks[i][1].passage for i in missing])
+    if known:
+        log.info(
+            "%s: %d chunks embedded, %d reused",
+            document.lex_id,
+            len(missing),
+            len(chunks) - len(missing),
+        )
 
     meta = {
         "alternates": document.alternates,
@@ -168,7 +206,7 @@ def index_document(
         "publication_origin": document.publication_origin,
         "notes": document.notes,
         "parser_version": document.parser_version,
-        "embed_model": getattr(embedder, "name", "unknown"),
+        "embed_model": model,
         "fts_stem": use_stem,
     }
     title_norm = fold(" ".join(p for p in (document.title, document.number or "") if p))
@@ -180,8 +218,8 @@ def index_document(
             INSERT INTO documents (id, title, display_title, doc_type, doc_kind, number,
                 adopted_at, status,
                 accepting_body, url, content, edition_date, last_change_date, content_hash,
-                card, meta, title_norm)
-            VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+                card, meta, title_norm, pending_changes)
+            VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
             """,
             (
                 document.lex_id,
@@ -201,6 +239,7 @@ def index_document(
                 Jsonb(card.model_dump(mode="json")) if card else None,
                 Jsonb(meta),
                 title_norm,
+                Jsonb([p.model_dump(mode="json") for p in document.pending_changes]),
             ),
         )
         section_ids: list[int] = []

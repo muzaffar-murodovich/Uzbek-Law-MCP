@@ -1,7 +1,8 @@
 """Shrink a saved lex.uz page into a small test fixture.
 
-Document pages keep <title>, the language buttons, the edition dropdown and selected children of
-#divCont. Every heading before the last kept child is also kept so that heading paths stay right.
+Document pages keep <title>, the language buttons, "amendment pending" banners, the edition
+dropdown and selected children of #divCont. Every heading before the last kept child is also
+kept so that heading paths stay right.
 
     uv run python scripts/make_fixture.py data/raw/doc.html tests/fixtures/lexuz/x.html \
         --range 0:74 --range 1556:1599 --range -1:
@@ -35,6 +36,7 @@ def shrink_document(soup: BeautifulSoup, ranges: list[str]) -> str:
     for link in soup.select(".docContentHeader__item-link"):
         if link.get("id") != "dd3":
             parts.append(str(link))
+    parts.extend(str(strip) for strip in soup.select(".lx_strip"))
     dates = soup.find(id="lx_var_t")
     if dates is not None:
         parts.append(str(dates))

@@ -124,3 +124,16 @@ def test_mcp_protocol(corpus, db_dsn):
     anyio.run(scenario)
     count = corpus.execute("SELECT count(*) FROM usage_events WHERE tool = 'get_article'")
     assert count.fetchone()[0] == 1
+
+
+def test_pending_change_banner_is_shown(corpus):
+    pending = '[{"text": "Hujjatga oʻzgartirish kiritilmoqda", "basis": [{"doc_id": -8569963,'
+    pending += ' "elem_id": null, "ondate": null, "text": "02.11.2026 yildagi OʻRQ-1186-son"}]}]'
+    corpus.execute("UPDATE documents SET pending_changes = %s WHERE id = %s", (pending, MK))
+    article = tools.get_article(corpus, "MK", "161").text
+    assert "⚠ lex.uz: hujjatga oʻzgartirish kiritilmoqda" in article
+    assert "OʻRQ-1186-son (https://lex.uz/docs/-8569963)" in article
+    assert "⚠" in tools.get_document(corpus, "MK").text
+    found = tools.search_law(corpus, FakeEmbedder(), "mehnat shartnomasini bekor qilish").text
+    assert "⚠ hujjatga oʻzgartirish kiritilmoqda" in found
+    assert "⚠" not in tools.get_article(corpus, "Konstitutsiya", "1").text

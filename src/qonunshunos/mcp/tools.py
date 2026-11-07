@@ -178,6 +178,8 @@ def search_law(
         meta = [" > ".join(fmt.clip(p, 50) for p in hit.path[-2:]), fmt.status_uz(hit.status)]
         if hit.last_change_date:
             meta.append(f"hujjat tahriri {fmt.date_uz(hit.last_change_date)}")
+        if hit.pending_changes:
+            meta.append("⚠ hujjatga oʻzgartirish kiritilmoqda")
         lines.append("   " + " · ".join(m for m in meta if m))
         lines.append(f"   {hit.url}")
         lines.append("   > " + fmt.clip(hit.snippet.replace("\n", " ").rstrip(" …"), SNIPPET))
@@ -232,6 +234,8 @@ def get_article(conn: psycopg.Connection, document: str, article: str, page: int
     if change := fmt.last_change(unit.extra):
         status += f". Oxirgi oʻzgarish: {change}"
     header += [status, f"Havola: {fmt.url(doc.id, unit.elem_id)}"]
+    if note := fmt.pending_note(doc.pending_changes):
+        header.append(note)
     last = body.number == body.total
     return Result(
         fmt.join(
@@ -315,6 +319,8 @@ def get_document(conn: psycopg.Connection, document: str, page: int = 1) -> Resu
         return _candidates(document, resolved)
     doc = resolved.document
     header = [f"# {doc.display_title}", f"Toʻliq nomi: {doc.title}", *_requisites(doc)]
+    if note := fmt.pending_note(doc.pending_changes):
+        header.append(note)
     if not doc.in_force or doc.content != "html":
         return Result(fmt.join("\n".join(header), "Bu hujjatning matni bazada yoʻq.", fmt.SOURCE))
     sections = _sections(conn, doc.id)
@@ -401,6 +407,7 @@ def get_section(conn: psycopg.Connection, document: str, section: str, page: int
     return Result(
         fmt.join(
             f"# {doc.display_title}: {title}\nHavola: {fmt.url(doc.id, heading.elem_id)}",
+            fmt.pending_note(doc.pending_changes),
             body.text,
             body.footer(call),
             fmt.SOURCE,
