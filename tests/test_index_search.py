@@ -110,3 +110,20 @@ def test_reindex_reuses_vectors_and_stores_banners(db_dsn, fixture_html):
         assert 1 <= embedder.embedded <= 3
         stored = conn.execute("SELECT pending_changes FROM documents").fetchone()[0]
         assert len(stored) == 1
+
+
+def test_content_hash_ignores_card_language(fixture_html):
+    from qonunshunos.index.writer import content_hash
+
+    doc = parse_document(fixture_html("doc_mehnat_kodeksi.html"), -6257288)
+    card = parse_card(fixture_html("card1_in_force.html"), -6257288)
+    russian = card.model_copy(
+        update={"form": "Кодекс", "status_raw": "Действующий", "validity": "Бессрочный"}
+    )
+    latin = card.model_copy(
+        update={"form": "Kodeks", "status_raw": "Amalda", "validity": "Muddatsiz"}
+    )
+    assert content_hash(doc, russian) == content_hash(doc, latin)
+    assert content_hash(doc, card) != content_hash(
+        doc, card.model_copy(update={"status": "lost_force"})
+    )

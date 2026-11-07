@@ -37,12 +37,25 @@ def kind_and_title(document: ParsedDocument, card: DocumentCard | None) -> tuple
     return kind, display_title(document.title, kind, document.number)
 
 
+# card1 arrives in Uzbek Cyrillic, Uzbek Latin or Russian from one request to the next, so only
+# fields that read the same in every language take part in the hash.
+CARD_HASH_FIELDS = {
+    "status",
+    "entry_into_force",
+    "lost_force_at",
+    "registration_number",
+    "registration_date",
+    "moj_registration_number",
+    "moj_registration_date",
+}
+
+
 def content_hash(document: ParsedDocument, card: DocumentCard | None) -> str:
     payload = {
         "index_version": INDEX_VERSION,
         # Banners come and go without the text changing; they are written separately.
         "document": document.model_dump(mode="json", exclude={"pending_changes"}),
-        "card": card.model_dump(mode="json") if card else None,
+        "card": card.model_dump(mode="json", include=CARD_HASH_FIELDS) if card else None,
     }
     raw = json.dumps(payload, ensure_ascii=False, sort_keys=True).encode("utf-8")
     return hashlib.sha256(raw).hexdigest()
