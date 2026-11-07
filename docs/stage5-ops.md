@@ -1,6 +1,6 @@
 # 5-bosqich: zaxira nusxa, monitoring, kunlik yangilash
 
-Holat (2026-11-07): 🔨 dizayn tasdiqlandi, kod yozilmoqda. Tegishli hujjatlar:
+Holat (2026-11-07): 🔨 kod tayyor (1–4-qadamlar, 170 test), Telegram bot va serverga o'rnatish kutilmoqda. Tegishli hujjatlar:
 [PLAN.md](../PLAN.md) (1-, 5- va 8-bo'limlar), [4-bosqich](stage4-auth-limits.md),
 [lex.uz tadqiqoti](research/lexuz.md) (5-bo'lim).
 
@@ -165,11 +165,11 @@ lex.uz'dan 86 ta hujjat qayta yuklanmaydi.
 
 ## Ishlar tartibi
 
-1. `rss.py` + testlar (`tests/fixtures`dagi qisqartirilgan RSS). Parser: `pending_changes`
+1. ✅ `rss.py` + testlar (`tests/fixtures`dagi qisqartirilgan RSS). Parser: `pending_changes`
    (`lx_strip`) + MJtK sahifasidan olingan fixture. `get_article`/`get_document`da ogohlantirish.
-2. `0006` migratsiyasi, `update.py` + testlar (soxta `LexClient`, `-m db`).
-3. `notify.py`, `qonunshunos notify` va `report` + testlar.
-4. `deploy/` fayllari: zaxira skripti, systemd unit'lari, `home` skriptlari.
+2. ✅ `0006` migratsiyasi, `update.py` + testlar (soxta `LexClient`, `-m db`).
+3. ✅ `notify.py`, `qonunshunos notify` va `report` + testlar.
+4. ✅ `deploy/` fayllari: zaxira skripti, systemd unit'lari, `home` skriptlari.
 5. Siz: Telegram bot yaratib, token va chat ID'ni berasiz.
 6. Server: `deploy.sh`, `data/` rsync, `root-setup.sh` (sudo bilan, siz ishga tushirasiz).
    `home`: user unit'larni o'rnatish. Har bir qadamdan oldin sizdan so'rayman.
