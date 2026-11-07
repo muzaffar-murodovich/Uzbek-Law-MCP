@@ -50,6 +50,13 @@ def build_parser() -> argparse.ArgumentParser:
     p.add_argument("--ids-file", type=Path, help="text file with one lex id per line")
     p.add_argument("--force", action="store_true")
 
+    p = sub.add_parser("scope", help="stage 6: list every Latin act in force (by minor and year)")
+    p.add_argument("--last-year", type=int, help="default: this year")
+
+    p = sub.add_parser("crawl-full", help="stage 6: fetch and parse every act listed by scope")
+    p.add_argument("--limit", type=int, help="stop after this many listed acts (a trial run)")
+    p.add_argument("--no-notify", action="store_true", help="no Telegram progress messages")
+
     sub.add_parser("db-migrate", help="create or upgrade the database schema (QONUNSHUNOS_DSN)")
 
     p = sub.add_parser("index", help="write parsed documents into the database")
@@ -343,6 +350,52 @@ def _crawl(client: LexClient, ws: Workspace, ids: list[int], force: bool) -> int
     return 1 if failed else 0
 
 
+def _full(args: argparse.Namespace, ws: Workspace) -> int:
+    from qonunshunos.crawler.full import build_scope, crawl_scope, load_scope
+    from qonunshunos.notify import NotifyError, send
+
+    settings = Settings.from_env(args.data_dir)
+
+    def notify(text: str) -> None:
+        if getattr(args, "no_notify", False) or not settings.telegram_token:
+            return
+        try:
+            send(settings.telegram_token, settings.telegram_chat_id, text)
+        except NotifyError as exc:
+            print(f"notify failed: {exc}")
+
+    with LexClient() as client:
+        if args.command == "scope":
+            report = build_scope(client, ws, last_year=args.last_year)
+            print(
+                f"{report.listed} acts in {report.files} files "
+                f"({report.fetched_files} fetched now); lex.uz says {report.total}"
+            )
+            for name in report.short:
+                print(f"  short listing: {name}")
+            return 0
+
+        items = load_scope(ws)
+        if not items:
+            print("no scope listings: run `qonunshunos scope` first")
+            return 1
+        if args.limit:
+            items = items[: args.limit]
+        notify(f"Qonunshunos crawl boshlandi: {len(items)} ta hujjat")
+        stats = crawl_scope(
+            client,
+            ws,
+            items,
+            total=len(items),
+            notify=notify,
+            say=lambda line: print(line, flush=True),
+            state_file=ws.data_dir / "crawl-full.json",
+        )
+    print(stats.summary())
+    notify(f"Qonunshunos crawl tugadi: {stats.summary()}")
+    return 1 if stats.stopped else 0
+
+
 class _LazyEmbedder:
     """Loads the ONNX model (≈300 MB) only when a changed document needs embeddings."""
 
@@ -510,6 +563,9 @@ def main(argv: list[str] | None = None) -> int:
         for warning in document.warnings:
             print(f"  ! {warning}")
         return 0
+
+    if args.command in ("scope", "crawl-full"):
+        return _full(args, ws)
 
     with LexClient() as client:
         if args.command == "fetch":

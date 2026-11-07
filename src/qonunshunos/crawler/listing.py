@@ -75,14 +75,31 @@ def parse_listing(html: str) -> ListingPage:
     return ListingPage(rows=rows, total=total, has_next=next_link is not None, form=form)
 
 
-def iter_listing(client: LexClient, path: str, max_pages: int = 10_000) -> Iterator[ListingRow]:
-    """Yield every row of a listing, following "Keyingisi" postbacks."""
+def iter_pages(client: LexClient, path: str, max_pages: int = 10_000) -> Iterator[ListingPage]:
+    """Yield every page of a listing, following "Keyingisi" postbacks."""
     page = parse_listing(client.get(path).text)
     seen = 0
     for _ in range(max_pages):
-        yield from page.rows
+        yield page
         seen += len(page.rows)
         if not page.has_next or not page.rows or (page.total is not None and seen >= page.total):
             return
         data = {**page.form, "__EVENTTARGET": NEXT_PAGE_TARGET, "__EVENTARGUMENT": ""}
         page = parse_listing(client.post(path, data).text)
+
+
+def iter_listing(client: LexClient, path: str, max_pages: int = 10_000) -> Iterator[ListingRow]:
+    """Yield every row of a listing."""
+    for page in iter_pages(client, path, max_pages):
+        yield from page.rows
+
+
+def read_listing(
+    client: LexClient, path: str, max_pages: int = 10_000
+) -> tuple[list[ListingRow], int | None]:
+    """All rows of a listing and the number of documents lex.uz says it has."""
+    rows, total = [], None
+    for page in iter_pages(client, path, max_pages):
+        rows.extend(page.rows)
+        total = page.total if total is None else total
+    return rows, total
