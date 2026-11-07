@@ -22,6 +22,7 @@ Dasturlash tili — Python.
 | `docs/stage3-mcp-server.md` | 3-bosqich (MCP server, tool'lar) dizayni va ishlar tartibi |
 | `docs/stage4-auth-limits.md` | 4-bosqich (OAuth, Google orqali kirish, limitlar) dizayni va ishlar tartibi |
 | `docs/stage5-ops.md` | 5-bosqich (zaxira nusxa, monitoring, kunlik yangilash) dizayni va ishlar tartibi |
+| `docs/stage6-full-crawl.md` | 6-bosqich (to'liq yuklab olish, ommaga ochish) dizayni va ishlar tartibi |
 | `docs/stage2-experiments.md` | Qidiruv tajribalari jurnali: raqamlar, xulosalar (portfolio uchun ham) |
 | `docs/adolat-markazi-xat.md` | "Adolat" markaziga xat loyihasi |
 
