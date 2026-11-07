@@ -7,8 +7,8 @@ zaxira nusxa).
 
 ## Maqsad
 
-Hozir bazada 86 ta hujjat bor: Konstitutsiya, kodekslar, ≈60 ta qonun va bir nechta farmon.
-Odamlar esa ko'pincha farmon, qaror va idoralar hujjatlarida yozilgan narsalarni so'raydi:
+Hozir bazada 86 ta hujjat bor: Konstitutsiya, 20 ta kodeks va 65 ta qonun. Farmon va qarorlar
+yo'q. Odamlar esa ko'pincha farmon, qaror va idoralar hujjatlarida yozilgan narsalarni so'raydi:
 BHM miqdori, pensiya tartibi, litsenziya, davlat boji. Bu bosqichda:
 
 1. **To'liq yuklab olish.** MVP qamrovidagi barcha amaldagi hujjatlar (≈22 ming) lex.uz'dan
