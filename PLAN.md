@@ -193,7 +193,7 @@ Tamoyillar:
 | 2 | Indekslash, gibrid qidiruv, baholash to'plami | 1 hafta | ✅ bajarildi (R@10 0,88–0,91, AI qayta yozganda) |
 | 3 | MCP server va tool'lar | 3–4 kun | ✅ bajarildi (Claude Code sinovi: 10/10 savolda kerakli modda o'qildi va to'g'ri havola berildi) |
 | 4 | OAuth, Google orqali kirish, limitlar | 1 hafta | ✅ bajarildi (Claude Code, claude.ai va ChatGPT production'da Google orqali kirib, savolga javob oldi, 2026-11-07). Telegram keyinroq |
-| 5 | `myserver`ga deploy, zaxira nusxa, monitoring, kunlik yangilash | 2–3 kun | |
+| 5 | `myserver`ga deploy, zaxira nusxa, monitoring, kunlik yangilash | 2–3 kun | 🔨 dizayn tasdiqlandi (`docs/stage5-ops.md`, 2026-11-07) |
 | 6 | To'liq yuklab olish va bepul ommaga ochish | 1–2 kun | Cloudflare proksisi 2026-11-06 da yoqildi |
 | 7 | Pullik tariflar | — | avval "Adolat" markaziga xat va yozma rozilik |
 
