@@ -137,3 +137,15 @@ def test_pending_change_banner_is_shown(corpus):
     found = tools.search_law(corpus, FakeEmbedder(), "mehnat shartnomasini bekor qilish").text
     assert "⚠ hujjatga oʻzgartirish kiritilmoqda" in found
     assert "⚠" not in tools.get_article(corpus, "Konstitutsiya", "1").text
+
+
+def test_positive_latin_id_and_cyrillic_link(corpus, fixture_html):
+    # Some Latin pages (ministry orders) have positive ids; a positive id we do not have is
+    # tried as negative, the usual Cyrillic twin of a Latin act.
+    positive = 8575165
+    card = parse_card(fixture_html("card1_in_force.html"), positive)
+    document = parse_document(fixture_html("doc_vm897.html"), positive)
+    index_document(corpus, document, card.model_copy(update={"form": "Приказ"}), FakeEmbedder())
+    assert str(positive) in tools.get_document(corpus, str(positive)).text
+    assert str(positive) in tools.get_document(corpus, f"https://lex.uz/docs/{positive}").text
+    assert "Mehnat kodeksi" in tools.get_document(corpus, str(-MK)).text

@@ -117,17 +117,23 @@ NAME_MARGIN = 0.1  # the best match must beat the next one by this much
 CANDIDATE_MIN = 0.3  # weaker matches are not even offered as candidates
 
 
+def _by_id(conn: psycopg.Connection, lex_id: int, elem: int | None = None) -> Resolved | None:
+    """Most Latin pages have negative ids, but some (ministry orders) are positive. A positive id
+    we do not have is tried as negative: it is usually the Cyrillic page of a Latin act."""
+    for candidate in dict.fromkeys((lex_id, -abs(lex_id))):
+        if found := _one(fetch_documents(conn, "id = %s", [candidate]), elem):
+            return found
+    return None
+
+
 def resolve_document(conn: psycopg.Connection, ref: str | int) -> Resolved:
     """Document by id, lex.uz URL, number, abbreviation or (fuzzy) name."""
     text = str(ref).strip()
     if match := _URL_RE.search(text):
-        lex_id = -abs(int(match[1]))
         elem = int(match[2]) if match[2] else None
-        return _one(fetch_documents(conn, "id = %s", [lex_id]), elem) or Resolved(None, [])
-    if match := _ID_RE.match(text):
-        lex_id = -abs(int(match[1]))
-        if found := _one(fetch_documents(conn, "id = %s", [lex_id])):
-            return found
+        return _by_id(conn, int(match[1]), elem) or Resolved(None, [])
+    if (match := _ID_RE.match(text)) and (found := _by_id(conn, int(match[1]))):
+        return found
     number = key(text)
     if number and any(c.isdigit() for c in number):
         found = fetch_documents(
