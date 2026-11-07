@@ -1,0 +1,16 @@
+[Unit]
+Description=Qonunshunos: database dump to ~/backups
+After=network-online.target postgresql.service
+Wants=network-online.target
+OnFailure=qonunshunos-alert@%n.service
+
+[Service]
+Type=oneshot
+User=deploy
+Group=deploy
+WorkingDirectory=/home/deploy/qonunshunos
+ExecStart=/home/deploy/qonunshunos/deploy/backup.sh
+Nice=10
+NoNewPrivileges=true
+PrivateTmp=true
+TimeoutStartSec=30min

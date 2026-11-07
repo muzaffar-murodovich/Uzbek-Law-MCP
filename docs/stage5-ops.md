@@ -159,8 +159,8 @@ lex.uz'dan 86 ta hujjat qayta yuklanmaydi.
 | `src/qonunshunos/db/migrations/0006_crawl_state.sql` | `crawl_state`, `rss_seen` |
 | `src/qonunshunos/notify.py` | Telegram'ga yuborish, ertalabki hisobot |
 | `deploy/systemd/*.service`, `*.timer` | `update`, `cleanup`, `backup`, `report`, `alert@` |
-| `deploy/backup.sh` | `pg_dump -Fc`, tekshirish, 14 kunlik tozalash |
-| `deploy/home/` | `backup-pull` va `qonunshunos-watch` user unit'lari va skriptlari |
+| `deploy/backup.sh` | `pg_dump -Fc`, tarkibini tekshirish, 14 kunlik tozalash. Parol argv'ga emas, `PGPASSWORD`ga |
+| `deploy/home/` | `backup-pull`, `qonunshunos-watch` user unit'lari, `telegram.sh`, `install.sh` (Mac'dan ishga tushiriladi) |
 | `deploy/root-setup.sh` | yangi unit'larni o'rnatish (siz sudo bilan ishga tushirasiz) |
 
 ## Ishlar tartibi
@@ -175,6 +175,21 @@ lex.uz'dan 86 ta hujjat qayta yuklanmaydi.
    `home`: user unit'larni o'rnatish. Har bir qadamdan oldin sizdan so'rayman.
 7. Sinov: `update --dry-run`, keyin haqiqiy `update`. Zaxiradan tiklash sinovi. Saytni bir daqiqaga
    to'xtatib, ogohlantirish kelishini tekshirish. "Natija" bo'limi.
+
+## Zaxiradan tiklash
+
+2026-11-07 da Mac'da sinaldi: 41 MB dump 9 soniyada tiklandi, 86 hujjat, 16 657 bo'lak,
+`search` ishladi.
+
+```
+createdb qonunshunos_restore
+pg_restore --no-owner --dbname=qonunshunos_restore qonunshunos_YYYYmmdd_HHMMSS.dump
+QONUNSHUNOS_DSN=postgresql://…/qonunshunos_restore uv run qonunshunos search "yillik taʼtil"
+```
+
+Serverda to'liq tiklash: `qonunshunos` xizmatini to'xtatish, bazani `dropdb`/`createdb` bilan
+qayta yaratish (`root-setup.sh` 2-qadami: rol, `vector` va `pg_trgm` kengaytmalari),
+`pg_restore`, xizmatni ishga tushirish. Bitta jadvalni tiklash: `pg_restore -t users …`.
 
 ## Xavflar
 

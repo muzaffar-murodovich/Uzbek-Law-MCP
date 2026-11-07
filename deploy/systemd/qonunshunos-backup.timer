@@ -1,0 +1,10 @@
+[Unit]
+Description=Qonunshunos: database dump to ~/backups (*-*-* 04:40 Asia/Tashkent)
+
+[Timer]
+OnCalendar=*-*-* 04:40 Asia/Tashkent
+Persistent=true
+RandomizedDelaySec=2min
+
+[Install]
+WantedBy=timers.target

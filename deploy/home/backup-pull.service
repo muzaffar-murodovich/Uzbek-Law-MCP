@@ -1,0 +1,9 @@
+[Unit]
+Description=Copy myserver:~/backups to home
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=oneshot
+ExecStart=%h/qonunshunos-ops/backup-pull.sh
+TimeoutStartSec=1h

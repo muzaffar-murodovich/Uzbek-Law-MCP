@@ -1,0 +1,20 @@
+[Unit]
+Description=Qonunshunos: new and amended acts from lex.uz
+After=network-online.target postgresql.service
+Wants=network-online.target
+OnFailure=qonunshunos-alert@%n.service
+
+[Service]
+Type=oneshot
+User=deploy
+Group=deploy
+WorkingDirectory=/home/deploy/qonunshunos
+ExecStart=/home/deploy/qonunshunos/venv/bin/qonunshunos update
+Nice=10
+NoNewPrivileges=true
+PrivateTmp=true
+# Polite crawling takes ~15 min at most (400 requests); the model loads only when needed.
+TimeoutStartSec=2h
+MemoryMax=900M
+CPUQuota=50%
+Environment=OMP_NUM_THREADS=1

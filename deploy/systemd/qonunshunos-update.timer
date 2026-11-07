@@ -1,0 +1,10 @@
+[Unit]
+Description=Qonunshunos: new and amended acts from lex.uz (*-*-* 03:30 Asia/Tashkent)
+
+[Timer]
+OnCalendar=*-*-* 03:30 Asia/Tashkent
+Persistent=true
+RandomizedDelaySec=2min
+
+[Install]
+WantedBy=timers.target

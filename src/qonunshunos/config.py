@@ -27,6 +27,9 @@ class Settings:
     google_client_secret: str = ""
     dev_login: bool = False  # "test user" sign-in button, only for loopback servers
     contact: str = ""  # e-mail or URL shown on the privacy and terms pages
+    telegram_token: str = ""  # operator alerts and the morning report (stage 5)
+    telegram_chat_id: str = ""
+    backups_dir: Path = Path.home() / "backups"
 
     @classmethod
     def from_env(cls, data_dir: Path | None = None) -> "Settings":
@@ -41,4 +44,9 @@ class Settings:
             google_client_secret=os.environ.get("GOOGLE_CLIENT_SECRET", ""),
             dev_login=os.environ.get("QONUNSHUNOS_DEV_LOGIN", "") in ("1", "true", "yes"),
             contact=os.environ.get("QONUNSHUNOS_CONTACT", ""),
+            telegram_token=os.environ.get("TELEGRAM_BOT_TOKEN", ""),
+            telegram_chat_id=os.environ.get("TELEGRAM_CHAT_ID", ""),
+            backups_dir=Path(
+                os.environ.get("QONUNSHUNOS_BACKUPS_DIR", str(Path.home() / "backups"))
+            ),
         )

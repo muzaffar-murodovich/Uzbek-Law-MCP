@@ -1,0 +1,10 @@
+[Unit]
+Description=Copy myserver:~/backups to home every night
+
+[Timer]
+OnCalendar=*-*-* 05:30 Asia/Tashkent
+Persistent=true
+RandomizedDelaySec=5min
+
+[Install]
+WantedBy=timers.target

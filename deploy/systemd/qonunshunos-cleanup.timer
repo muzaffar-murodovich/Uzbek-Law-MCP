@@ -1,0 +1,10 @@
+[Unit]
+Description=Qonunshunos: expired OAuth rows and old query texts (*-*-* 04:30 Asia/Tashkent)
+
+[Timer]
+OnCalendar=*-*-* 04:30 Asia/Tashkent
+Persistent=true
+RandomizedDelaySec=2min
+
+[Install]
+WantedBy=timers.target

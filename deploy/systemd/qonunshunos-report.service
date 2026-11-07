@@ -1,0 +1,16 @@
+[Unit]
+Description=Qonunshunos: morning report to Telegram
+After=network-online.target postgresql.service
+Wants=network-online.target
+OnFailure=qonunshunos-alert@%n.service
+
+[Service]
+Type=oneshot
+User=deploy
+Group=deploy
+WorkingDirectory=/home/deploy/qonunshunos
+ExecStart=/home/deploy/qonunshunos/venv/bin/qonunshunos report --send
+Nice=10
+NoNewPrivileges=true
+PrivateTmp=true
+TimeoutStartSec=5min

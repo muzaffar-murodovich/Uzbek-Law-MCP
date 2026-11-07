@@ -1,0 +1,6 @@
+[Unit]
+Description=Qonunshunos: is the public site up?
+
+[Service]
+Type=oneshot
+ExecStart=%h/qonunshunos-ops/qonunshunos-watch.sh

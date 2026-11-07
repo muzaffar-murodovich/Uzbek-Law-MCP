@@ -98,6 +98,12 @@ def build_parser() -> argparse.ArgumentParser:
 
     sub.add_parser("auth-cleanup", help="drop expired OAuth rows and query texts over 12 months")
 
+    p = sub.add_parser("notify", help="send a Telegram message to the operator")
+    p.add_argument("text", nargs="?", help="message; read from stdin when omitted")
+
+    p = sub.add_parser("report", help="morning report: last update, users, backups, disk")
+    p.add_argument("--send", action="store_true", help="send to Telegram instead of printing")
+
     p = sub.add_parser("update", help="nightly: new and amended acts from lex.uz → index")
     p.add_argument("--budget", type=int, default=400, help="max lex.uz requests (default 400)")
     p.add_argument("--dry-run", action="store_true", help="read the RSS feed only, write nothing")
@@ -358,6 +364,24 @@ class _LazyEmbedder:
         return self._get().query(text)
 
 
+def _notify(args: argparse.Namespace) -> int:
+    import sys
+
+    from qonunshunos.notify import morning_report, send
+
+    settings = Settings.from_env(args.data_dir)
+    if args.command == "notify":
+        text = args.text if args.text is not None else sys.stdin.read()
+    else:
+        with connect(settings.dsn, vector=False) as conn:
+            text = morning_report(conn, settings.backups_dir, settings.data_dir)
+        if not args.send:
+            print(text)
+            return 0
+    send(settings.telegram_token, settings.telegram_chat_id, text.strip() or "(boʻsh xabar)")
+    return 0
+
+
 def _update(args: argparse.Namespace, ws: Workspace) -> int:
     from qonunshunos.crawler.update import run_update
 
@@ -476,6 +500,9 @@ def main(argv: list[str] | None = None) -> int:
 
     if args.command == "update":
         return _update(args, ws)
+
+    if args.command in ("notify", "report"):
+        return _notify(args)
 
     if args.command == "parse":
         document, card = parse(ws, args.lex_id)

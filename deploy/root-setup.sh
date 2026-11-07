@@ -1,6 +1,6 @@
 #!/bin/bash
 # One-time root setup of Qonunshunos on myserver. Idempotent: safe to run again.
-# Run after deploy/deploy.sh has copied the code and .env:
+# Run after deploy/deploy.sh has copied the code and .env (and again when deploy/systemd changes):
 #   ssh -t myserver 'sudo bash /home/deploy/qonunshunos/deploy/root-setup.sh'
 set -euo pipefail
 
@@ -15,7 +15,7 @@ step() { printf '\n== %s\n' "$*"; }
 [ "$(id -u)" -eq 0 ] || { echo "run with sudo"; exit 1; }
 [ -f "$APP/.env" ] || { echo "$APP/.env is missing: run deploy/deploy.sh first"; exit 1; }
 
-step "1/5 pgvector $PGVECTOR built from source against Ubuntu's PostgreSQL 16"
+step "1/6 pgvector $PGVECTOR built from source against Ubuntu's PostgreSQL 16"
 # PGDG's pgvector package requires PGDG's PostgreSQL build (it breaks Ubuntu's
 # postgresql-16-jit-llvm), which would upgrade and restart the cluster the other apps use.
 # Building the extension against the installed server touches nothing else.
@@ -36,7 +36,7 @@ if [ "$(cat /usr/share/postgresql/16/extension/vector.control 2>/dev/null \
 fi
 grep default_version /usr/share/postgresql/16/extension/vector.control
 
-step "2/5 database and role 'qonunshunos'"
+step "2/6 database and role 'qonunshunos'"
 DSN=$(grep '^QONUNSHUNOS_DSN=' "$APP/.env" | cut -d= -f2-)
 PASS=$(python3 -c 'import sys, urllib.parse as u; print(u.unquote(u.urlparse(sys.argv[1]).password))' "$DSN")
 sudo -u postgres psql -q -v ON_ERROR_STOP=1 -v pass="$PASS" <<'SQL'
@@ -50,7 +50,7 @@ sudo -u postgres psql -q -v ON_ERROR_STOP=1 -d qonunshunos \
     -c 'CREATE EXTENSION IF NOT EXISTS vector' -c 'CREATE EXTENSION IF NOT EXISTS pg_trgm' \
     -c "SELECT extname, extversion FROM pg_extension WHERE extname IN ('vector', 'pg_trgm')"
 
-step "3/5 systemd service and sudo rule for restarts"
+step "3/6 systemd service and sudo rule for restarts"
 install -m 644 "$APP/deploy/qonunshunos.service" /etc/systemd/system/$SERVICE.service
 systemctl daemon-reload
 systemctl enable $SERVICE >/dev/null
@@ -65,16 +65,26 @@ if ! grep -qF "$RULE" "$SUDOERS"; then
 fi
 echo "sudoers: $(grep -c "$SERVICE" "$SUDOERS") rule(s) for $SERVICE"
 
-step "4/5 certificate: the existing *.muzaffar.zip Cloudflare Origin CA (proxied site)"
+step "4/6 certificate: the existing *.muzaffar.zip Cloudflare Origin CA (proxied site)"
 # 80/443 are open to Cloudflare only, so Let's Encrypt HTTP-01 cannot reach us; the site
 # runs behind the Cloudflare proxy like muzaffar.zip and xorazmcha.muzaffar.zip.
 openssl x509 -in /etc/ssl/certs/muzaffar.crt -noout -subject -enddate
 rm -rf /var/www/letsencrypt
 
-step "5/5 nginx site (replaces the temporary ACME-only one)"
+step "5/6 nginx site (replaces the temporary ACME-only one)"
 install -m 644 "$APP/deploy/nginx-qonunshunos.conf" /etc/nginx/sites-available/$SERVICE
 ln -sf /etc/nginx/sites-available/$SERVICE /etc/nginx/sites-enabled/$SERVICE
 nginx -t && systemctl reload nginx
+
+step "6/6 nightly jobs: update, auth-cleanup, backup, morning report (+ Telegram alerts)"
+# Run again whenever deploy/systemd/ changes.
+install -m 644 "$APP"/deploy/systemd/qonunshunos-*.service "$APP"/deploy/systemd/qonunshunos-*.timer \
+    /etc/systemd/system/
+systemctl daemon-reload
+for timer in update cleanup backup report; do
+    systemctl enable --now "qonunshunos-$timer.timer" >/dev/null
+done
+systemctl list-timers --no-pager 'qonunshunos-*'
 
 echo
 echo "done. Start the app with: sudo systemctl restart $SERVICE (deploy/deploy.sh does it)"
