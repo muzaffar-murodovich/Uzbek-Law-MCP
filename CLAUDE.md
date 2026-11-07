@@ -57,12 +57,12 @@ Dasturlash tili — Python.
 
 ## Joriy holat
 
-Bosqichlar holati `PLAN.md`ning 8-bo'limida. 1–3-bosqichlar bajarildi (har birining hujjatida
-"Natija" bo'limi bor, tajribalar `docs/stage2-experiments.md`da). 4-bosqichning kodi tayyor
+Bosqichlar holati `PLAN.md`ning 8-bo'limida. 1–4-bosqichlar bajarildi (har birining hujjatida
+"Natija" bo'limi bor, tajribalar `docs/stage2-experiments.md`da). 4-bosqich
 (`docs/stage4-auth-limits.md`): OAuth 2.1, Google orqali kirish (Telegram keyinroq), limitlar,
-admin CLI. Xizmat `https://qonunshunos.muzaffar.zip`da ishlayapti (sinov deploy'i, namunaviy
-korpus). Qolgani: claude.ai va ChatGPT konnektori bilan sinov va "Natija" bo'limi. Keyin
-5-bosqich: zaxira nusxa, monitoring, kunlik yangilash, `auth-cleanup` timer'i.
+admin CLI. Claude Code, claude.ai va ChatGPT production'da sinaldi. Xizmat
+`https://qonunshunos.muzaffar.zip`da ishlayapti (namunaviy korpus). Keyingisi 5-bosqich: zaxira
+nusxa, monitoring, kunlik yangilash, `auth-cleanup` timer'i.
 
 CLI: `uv run qonunshunos fetch|parse|crawl-sample|crawl|listing|db-migrate|index|search|eval|serve|tool|user|auth-cleanup`
 (`--data-dir`, standart `./data`). `serve` standart holatda OAuth talab qiladi: mahalliy

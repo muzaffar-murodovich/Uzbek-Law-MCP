@@ -1,6 +1,6 @@
 # 4-bosqich: OAuth, Google orqali kirish, limitlar
 
-Holat (2026-11-06): 🔨 kod tayyor (1–6-qadamlar), Google sozlamalari va `myserver`dagi sinov kutilmoqda. Tegishli hujjatlar: [PLAN.md](../PLAN.md)
+Holat (2026-11-07): ✅ bajarildi. Claude Code, claude.ai va ChatGPT production serverga ulanib, savollarga javob oldi (pastda "Natija"). Tegishli hujjatlar: [PLAN.md](../PLAN.md)
 (1-, 5- va 7-bo'limlar), [3-bosqich](stage3-mcp-server.md).
 
 ## Maqsad
@@ -264,8 +264,42 @@ Bularni men qila olmayman (akkauntlar sizniki):
 4. ✅ `google.py` + testlar. Google'ni localhost'da haqiqiy akkaunt bilan sinash.
 5. ✅ Limitlarni `Services.run`ga ulash, admin CLI.
 6. ✅ `/`, `/maxfiylik`, `/shartlar` sahifalari.
-7. ✅ `myserver`ga sinov deploy'i. ⏳ claude.ai va ChatGPT bilan sinov,
-   "Natija" bo'limi, PLAN.md yangilanadi.
+7. ✅ `myserver`ga sinov deploy'i, claude.ai va ChatGPT bilan sinov, "Natija" bo'limi.
+
+## Natija (2026-11-07)
+
+Uchala mijoz ham `https://qonunshunos.muzaffar.zip/mcp`ga Google orqali kirib, savolga javob
+oldi. Server kodiga hech qanday o'zgartirish kiritish kerak bo'lmadi. Ma'lumotlar nginx log'i va
+`usage_events` jadvalidan olindi.
+
+| Mijoz | Ro'yxatdan o'tish (DCR) | Kirish | Savol | Chaqiruvlar |
+|---|---|---|---|---|
+| Claude Code (VS Code) | ✅ | Google → rozilik → `/token` | "Yillik ta'til necha kun?" | 1 ta qidiruv |
+| claude.ai (custom connector) | ✅ 06.11 18:34 | Google → rozilik → `/token` | Ichki ishlar xodimi telefonga ilova o'rnatishga majburlay oladimi? | 2 ta `search_law`, 4 ta `get_article` |
+| ChatGPT (developer mode) | ✅ 07.11 04:51 | Google → rozilik → `/token` | Xuddi shu savol | 2 ta `search_law`, 6 ta `get_article` |
+
+- **Oqim** mijozlarning hammasida bir xil: tokensiz `/mcp` → `401` → `/register` →
+  `/authorize` → kirish sahifasi → Google → rozilik → `/token` → `/mcp`. `resource`
+  parametri, PKCE va redirect bo'yicha mijozlarga moslashtirish kerak bo'lmadi.
+- **Refresh token** claude.ai'da ishladi: u 02:00 va 04:44 da (`python-httpx`) qayta kirishsiz
+  yangi token oldi.
+- **Tezlik:** `search_law` 48–378 ms, `get_article` 1–8 ms. Hamma chaqiruvlar `ok`.
+- **Havolalarni aniqlash** amalda kerak bo'ldi: ChatGPT `get_article`ni ID bilan emas, nom
+  ("Oʻzbekiston Respublikasi Konstitutsiyasi") va raqam (`OʻRQ-547`) bilan chaqirdi. Ikkalasi
+  ham topildi.
+- Javoblarda tool'lar o'qigan moddalar lex.uz havolalari bilan keltirildi. Foydalanuvchining
+  bahosi: "yaxshi ishladi".
+
+Kuzatuvlar (foydalanuvchiga ta'siri yo'q, 5-bosqichdagi monitoringda kuzatiladi):
+
+- claude.ai (`Claude-User`) ba'zan `POST /mcp` so'rovini ≈240 soniya ochiq ushlab turadi
+  (414 bayt, 200). Bunday so'rovlar 04:51–05:11 oralig'ida ketma-ket kelgan. Ular tool
+  chaqiruvi emas: `usage_events`da yo'q. Mahalliy serverda `ping`, `tools/list`,
+  `resources/*`, `prompts/list` va bildirishnomalar 5 ms ichida javob qaytardi. Sabab
+  aniqlanmadi. Taxmin: kechikish mijoz yoki Cloudflare tomonida.
+- `/auth/login` va `/auth/google/callback` to'g'ridan-to'g'ri ochilsa (kirish so'rovisiz yoki
+  eskirgan so'rov bilan) `400` qaytadi. Bu kutilgan holat.
+- `robots.txt` yo'q (`404`). 6-bosqichda ommaga ochishdan oldin qo'shiladi.
 
 ## Bajarilganlar va dizayndan farqlar (2026-11-06)
 
