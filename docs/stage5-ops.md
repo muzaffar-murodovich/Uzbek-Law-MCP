@@ -1,6 +1,6 @@
 # 5-bosqich: zaxira nusxa, monitoring, kunlik yangilash
 
-Holat (2026-11-07): 🔨 kod tayyor (1–4-qadamlar, 170 test), Telegram bot va serverga o'rnatish kutilmoqda. Tegishli hujjatlar:
+Holat (2026-11-07): ✅ bajarildi, `myserver` va `home`da ishlayapti (pastda "Natija"). Tegishli hujjatlar:
 [PLAN.md](../PLAN.md) (1-, 5- va 8-bo'limlar), [4-bosqich](stage4-auth-limits.md),
 [lex.uz tadqiqoti](research/lexuz.md) (5-bo'lim).
 
@@ -170,11 +170,58 @@ lex.uz'dan 86 ta hujjat qayta yuklanmaydi.
 2. ✅ `0006` migratsiyasi, `update.py` + testlar (soxta `LexClient`, `-m db`).
 3. ✅ `notify.py`, `qonunshunos notify` va `report` + testlar.
 4. ✅ `deploy/` fayllari: zaxira skripti, systemd unit'lari, `home` skriptlari.
-5. Siz: Telegram bot yaratib, token va chat ID'ni berasiz.
-6. Server: `deploy.sh`, `data/` rsync, `root-setup.sh` (sudo bilan, siz ishga tushirasiz).
+5. ✅ Siz: Telegram bot yaratib, token va chat ID'ni berasiz.
+6. ✅ Server: `deploy.sh`, `data/` rsync, `root-setup.sh` (sudo bilan, siz ishga tushirasiz).
    `home`: user unit'larni o'rnatish. Har bir qadamdan oldin sizdan so'rayman.
-7. Sinov: `update --dry-run`, keyin haqiqiy `update`. Zaxiradan tiklash sinovi. Saytni bir daqiqaga
+7. ✅ Sinov: `update --dry-run`, keyin haqiqiy `update`. Zaxiradan tiklash sinovi. Saytni
    to'xtatib, ogohlantirish kelishini tekshirish. "Natija" bo'limi.
+
+## Natija (2026-11-07)
+
+**O'rnatildi.** `myserver`: `qonunshunos-update` (03:30), `-cleanup` (04:30), `-backup` (04:40),
+`-report` (08:00) timer'lari, har biri xato bilan tugasa `qonunshunos-alert@` Telegram'ga
+yozadi. `home`: `qonunshunos-watch` (har 5 daqiqa) va `backup-pull` (05:30) user timer'lari.
+Bot: @qonunshunosbot, xabarlar faqat operatorning shaxsiy chatiga keladi.
+
+**Birinchi haqiqiy yangilash** (`myserver`, 294 so'rov, ≈10 daqiqa, xatosiz):
+
+- RSS'dagi 120 ta yangi hujjatdan 34 tasi bizdagi hujjatlarga havola qiladi. Eng ko'p
+  bog'langan hujjat O'RQ-1180 (bolalarni zo'ravonlikdan himoya qilish): 8 ta hujjatimizga,
+  jumladan MK, JK, JPK va MJtK'ga havola qiladi.
+- **5 ta hujjatda "o'zgartirish kiritilmoqda" banneri** topildi: MJtK, JPK, Aholi bandligi,
+  Ta'lim, Huquqbuzarliklar profilaktikasi to'g'risidagi qonunlar. 05.11 dagi yuklashda ularning
+  birortasida ham banner yo'q edi. Endi bu hujjatlarning moddalarida ogohlantirish chiqadi.
+- **Topilgan xato:** 11 ta hujjat "o'zgardi" deb chiqdi, lekin ularning matni o'zgarmagan edi
+  (embedding: Jinoyat kodeksida 5 ta, qolganlarida 0 ta bo'lak qayta hisoblandi). Sababi:
+  lex.uz kartochkani har safar boshqa tilda beradi (o'zbek kirill, lotin yoki rus:
+  `Кодекс`/`Kodeks`, `Амалда`/`Действующий`). Endi `content_hash` kartochkadan faqat tilga
+  bog'liq bo'lmagan maydonlarni oladi (`CARD_HASH_FIELDS`). Saqlangan hash'lar serverda
+  `qonunshunos index` bilan bir marta yangilandi: 46 soniya, birorta bo'lak qayta hisoblanmadi.
+- **Ikkinchi xato:** kodeksga o'xshagan, lekin qamrovdan tashqaridagi yangi hujjatning
+  (VM qarori 585) parse fayli `data/parsed`da qolib ketgan, `index` esa uni bazaga qo'shgan.
+  Endi bunday fayl o'chiriladi, qaror bazadan olib tashlandi.
+
+**Zaxira:** 41 MB dump, tarkibi tekshiriladi. `home`ga birinchi ko'chirish 109 MB (boshqa
+ilovalarning 14 kunlik nusxalari bilan), keyin serverga `.pulled` belgisi qo'yildi. Tiklash
+sinovi yuqorida ("Zaxiradan tiklash").
+
+**Monitoring sinovi:** ilova 07:50:44 da to'xtatildi. `home` ikki marta ketma-ket `502` oldi va
+2-xatoda (08:00) "🔴 ishlamayapti" deb yozdi. Ilova qayta ishga tushirildi, keyingi tekshiruvda
+"✅ yana ishlayapti" xabari keldi. Ertalabki hisobot va xato ogohlantirishi namunasi ham
+Telegram'ga yuborildi.
+
+**O'rnatishda chiqqan muammolar:**
+
+- macOS'dagi `openrsync` bir nechta manba faylni berganda ba'zilarini jimgina tashlab
+  ketdi. `deploy/home/install.sh` endi `tar` ishlatadi va fayllar joyidaligini tekshiradi.
+- `home`ning SSH sozlamalarida `myserver` nomi yo'q. Server manzili `watch.env`da
+  (`MYSERVER_SSH`), repoda emas.
+- Claude Code'ning avtomatik rejimi production deploy'ni blokladi, birinchi `deploy.sh`ni
+  foydalanuvchi o'zi ishga tushirdi.
+
+**Keyin kuzatiladi:** birinchi tungi ishlar (xotira, vaqt), ertalabki hisobotda "oʻzgardi"
+soni (endi faqat haqiqiy o'zgarishlar bo'lishi kerak), claude.ai'ning ≈240 soniyalik
+so'rovlari (4-bosqich "Natija").
 
 ## Zaxiradan tiklash
 

@@ -58,14 +58,14 @@ Dasturlash tili — Python.
 
 ## Joriy holat
 
-Bosqichlar holati `PLAN.md`ning 8-bo'limida. 1–4-bosqichlar bajarildi (har birining hujjatida
-"Natija" bo'limi bor, tajribalar `docs/stage2-experiments.md`da). 4-bosqich
-(`docs/stage4-auth-limits.md`): OAuth 2.1, Google orqali kirish (Telegram keyinroq), limitlar,
-admin CLI. Claude Code, claude.ai va ChatGPT production'da sinaldi. Xizmat
-`https://qonunshunos.muzaffar.zip`da ishlayapti (namunaviy korpus). Keyingisi 5-bosqich: zaxira
-nusxa, monitoring, kunlik yangilash, `auth-cleanup` timer'i.
+Bosqichlar holati `PLAN.md`ning 8-bo'limida. 1–5-bosqichlar bajarildi (har birining hujjatida
+"Natija" bo'limi bor, tajribalar `docs/stage2-experiments.md`da). Xizmat
+`https://qonunshunos.muzaffar.zip`da ishlayapti (namunaviy korpus, 86 hujjat). Har kecha
+`qonunshunos update` lex.uz'dan yangilaydi, zaxira `home`ga ko'chiriladi, xatolar va ertalabki
+hisobot Telegram'ga (@qonunshunosbot) keladi (`docs/stage5-ops.md`). Keyingisi 6-bosqich: to'liq
+yuklab olish va bepul ommaga ochish.
 
-CLI: `uv run qonunshunos fetch|parse|crawl-sample|crawl|listing|db-migrate|index|search|eval|serve|tool|user|auth-cleanup`
+CLI: `uv run qonunshunos fetch|parse|crawl-sample|crawl|listing|db-migrate|index|search|eval|serve|tool|user|auth-cleanup|update|report|notify`
 (`--data-dir`, standart `./data`). `serve` standart holatda OAuth talab qiladi: mahalliy
 ishlab chiqishda `.env`da `QONUNSHUNOS_DEV_LOGIN=1` yoki `--no-auth` (faqat loopback'da). Mahalliy
 OAuth uchun manzil `http://localhost:8000` (`127.0.0.1` emas: Google redirect shunday yozilgan).
@@ -84,3 +84,6 @@ LLM (OpenAI) faqat `qonunshunos.llm.OpenAIChat` orqali ishlatiladi: u bepul kunl
 - pgvector 0.8.7 manba kodidan yig'ilgan. PGDG paketi umumiy PostgreSQL'ni yangilab yuborardi.
 - Ko'p yangi SSH ulanishdan keyin server ulanishni bir muddat rad etadi: bitta umumiy ulanish
   (ControlMaster) ishlat.
+- Tungi timer'lar `deploy/systemd/`da, `root-setup.sh` 6-qadami o'rnatadi (unit o'zgarsa qayta
+  ishga tushiriladi). `home`dagi user timer'lar: `deploy/home/install.sh` (Mac'dan).
+  Telegram token va chat ID: server `.env` va `home`dagi `~/.config/qonunshunos/watch.env`.
