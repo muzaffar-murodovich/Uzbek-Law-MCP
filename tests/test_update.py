@@ -81,6 +81,7 @@ def test_first_night(setup):
     assert links[AMENDING] == [MJTK]
     assert report.checked == 2 and report.errors == []
     assert report.changed == [] and report.added == []  # the VM decision is not a code
+    assert not ws.parsed_path(VM_ABOUT_CODE).exists()  # so `index` will not pick it up
     assert [p["id"] for p in report.pending] == [MJTK]
     stored = conn.execute("SELECT pending_changes FROM documents WHERE id = %s", (MJTK,))
     assert stored.fetchone()[0][0]["basis"][0]["doc_id"] == AMENDING

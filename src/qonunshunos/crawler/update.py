@@ -209,6 +209,8 @@ def _check(
         document, card = parse(ws, doc_id)
         kind, title = kind_and_title(document, card)
         if new and kind not in SCOPE_KINDS:
+            # Keep the raw page, but not a parsed file: `qonunshunos index` indexes all of them.
+            ws.parsed_path(doc_id).unlink(missing_ok=True)
             return
         chunks = index_document(conn, document, card, embedder)
     except NotFound:
