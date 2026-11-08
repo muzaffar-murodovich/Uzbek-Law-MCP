@@ -12,6 +12,7 @@ from qonunshunos.crawler.full import (
     crawl_scope,
     load_scope,
     scope_dir,
+    unit_active,
 )
 from qonunshunos.crawler.pipeline import Workspace
 
@@ -146,3 +147,19 @@ def test_crawl_scope_pauses_after_error_streak_and_stops_on_error_flood(tmp_path
     # 10 errors take ≈20 s, then a 10-minute pause: the 51st error within an hour stops the crawl.
     assert stats.stopped is not None
     assert len(stats.failed) == ERRORS_PER_HOUR + 1
+
+
+def test_unit_active_counts_a_running_oneshot_service():
+    import subprocess
+
+    def fake(state):
+        return lambda *a, **k: subprocess.CompletedProcess(a, 0, stdout=f"{state}\n")
+
+    assert unit_active("x.service", run=fake("activating"))  # oneshot while it runs
+    assert unit_active("x.service", run=fake("active"))
+    assert not unit_active("x.service", run=fake("inactive"))
+
+    def missing(*a, **k):
+        raise FileNotFoundError("systemctl")
+
+    assert not unit_active("x.service", run=missing)

@@ -113,14 +113,22 @@ def load_scope(ws: Workspace) -> list[ScopeItem]:
     return items
 
 
-def unit_active(unit: str) -> bool:
+RUNNING_STATES = frozenset({"active", "activating", "reloading", "deactivating"})
+
+
+def unit_active(
+    unit: str, run: Callable[..., subprocess.CompletedProcess] = subprocess.run
+) -> bool:
+    """True while the unit runs. A oneshot service (the nightly update) stays "activating" for
+    its whole run, so ``systemctl is-active``'s exit code alone would miss it."""
     try:
-        result = subprocess.run(
-            ["systemctl", "is-active", "--quiet", unit], check=False, timeout=10
-        )
+        result = run(
+            ["systemctl", "show", "-p", "ActiveState", "--value", unit],
+            check=False, capture_output=True, text=True, timeout=10,
+        )  # fmt: skip
     except (OSError, subprocess.TimeoutExpired):
         return False  # no systemd here (a laptop): nothing to wait for
-    return result.returncode == 0
+    return result.stdout.strip() in RUNNING_STATES
 
 
 @dataclass
