@@ -4,7 +4,7 @@ from typing import Literal
 
 from pydantic import BaseModel, Field
 
-PARSER_VERSION = "1"
+PARSER_VERSION = "2"
 
 UnitKind = Literal["modda", "band", "kirish", "matn"]
 HeadingKind = Literal["ilova", "qism", "boʻlim", "bob", "paragraf", "sarlavha"]

@@ -56,6 +56,7 @@ def test_classify_heading(text, expected):
         ("599- modda. Lizing", "599", "Lizing"),
         ("184<sup>3</sup> -modda. Milliy", "184³", "Milliy"),
         ("126<sup>1</sup>-modda.", "126¹", None),
+        ("27-1-modda. Xususiylashtirish", "27-1", "Xususiylashtirish"),
     ],
 )
 def test_article_heading_variants(html, number, title):
@@ -79,6 +80,42 @@ def test_empty_article_heading_and_table_std_are_handled():
     assert len(doc.units) == 1
     assert doc.units[0].tables[0].rows == [["a", "b"]]
     assert doc.warnings == []
+
+
+def _page(*blocks):
+    body = "".join(
+        f'<div class="{cls} lx_elem"><div id="-{i}">{html}</div></div>'
+        for i, (cls, html) in enumerate(blocks, start=2)
+    )
+    return f'<title>x</title><div id="divCont">{body}</div>'
+
+
+def test_departmental_blocks_become_notes_and_text():
+    page = _page(
+        ("UNOFFIAL", "Norasmiy tarjima"),
+        ("DEPARTMENTAL", "[Adliya vazirligi tomonidan roʻyxatdan oʻtkazildi, raqami 3233-3]"),
+        ("signCont", "“TASDIQLANGAN” Mehnat vazirligi"),
+        ("DSP_ELEMENT", ""),
+        ("CLAUSE_DEFAULT", "1-modda. A"),
+        ("TEXT_BOLD", "“18<sup>1</sup>-modda. B"),
+        ("TEXT_15_LEFT", "1-rasm. C"),
+        ("APPL_BANNER_PORTRAIT_TEXT", "“Nizomga 4-ilova"),
+        ("APPL_BANNER_PORTRAIT_TITLE", "Qarorga 2-ilova"),
+        ("ACT_TEXT", "D"),
+    )
+    doc = parse_document(page, -1)
+    assert doc.warnings == []
+    assert doc.notes[0] == "Norasmiy tarjima"
+    assert "raqami 3233-3" in doc.notes[1]
+    assert len(doc.notes) == 3
+    article = doc.units[0]
+    assert [p.text for p in article.paragraphs] == [
+        "“18¹-modda. B",
+        "1-rasm. C",
+        "“Nizomga 4-ilova",
+    ]
+    assert doc.headings[-1].text == "2-ilova"
+    assert doc.units[-1].path == ["2-ilova"]
 
 
 def test_parse_link():

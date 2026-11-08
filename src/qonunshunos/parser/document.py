@@ -37,7 +37,8 @@ class ParseError(ValueError):
 
 
 _SUP = "⁰¹²³⁴⁵⁶⁷⁸⁹"
-_ARTICLE_RE = re.compile(rf"^(\d+[{_SUP}]*)\s*-\s*modda\.?\s*(.*)$")
+# "27-1-modda" is an older way to write "27¹-modda".
+_ARTICLE_RE = re.compile(rf"^(\d+[{_SUP}]*(?:-\d+)?)\s*-\s*modda\.?\s*(.*)$")
 _BAND_RE = re.compile(rf"^(\d+[{_SUP}]*)\.\s+\S")
 _TITLE_RE = re.compile(
     r"^(?:(?P<number>\S+?)-сон\s+)?(?P<date>\d{2}\.\d{2}\.\d{4})\.\s*(?P<title>.+)$"
@@ -48,12 +49,28 @@ _INDEX_ID_RE = re.compile(r"^on(LBC|LS)(-?\d+)$")
 _APPENDIX_RE = re.compile(r"(?:(\w+ga)\s+)?(\d+)\s*-\s*ilova\b", re.IGNORECASE)
 _MAIN_ACT_OWNERS = ("qaror", "farmon", "farmoyish", "qonun", "buyrugʻ", "kodeks")
 
-_SKIP = {"NEW_EDITION", "OFFICIAL_SOUR_TEXT"}  # the latter: link to a PDF
+_SKIP = {"NEW_EDITION", "OFFICIAL_SOUR_TEXT", "DSP_ELEMENT"}  # OFFICIAL_SOUR_TEXT: link to a PDF
 _HEADINGS = {"TEXT_HEADER_DEFAULT", "TEXT_BOLD_CENTER", "TEXT_CENTER", "TEXT_HEADER_AFTER_SRC"}
 # Adoption stamps of laws ("Qonunchilik palatasi tomonidan ... qabul qilingan").
-_NOTES = {"GRIF_PARLAMENT", "TEXT_RIGHT"}
+# Ministry of Justice registration, "Norasmiy tarjima", "[Koʻchirma]", "Hujjat matni rus tilida
+# berilgan", approval stamps of departmental acts.
+_NOTES = {
+    "GRIF_PARLAMENT",
+    "TEXT_RIGHT",
+    "DEPARTMENTAL",
+    "UNOFFIAL",
+    "EXTRACT",
+    "COMMENT_FOR_WARNING",
+    "signCont",
+}
+_APPENDIX_BANNERS = {
+    "APPL_BANNER_LANDSCAPE_TITLE",
+    "APPL_BANNER_PORTRAIT_TITLE",
+    "APPL_BANNER_LANDSCAPE_TEXT",
+    "APPL_BANNER_PORTRAIT_TEXT",
+}
 _QUOTES = "“”\"«„'"
-_CONTENT = {"ACT_TEXT", "FOOTNOTE"}
+_CONTENT = {"ACT_TEXT", "FOOTNOTE", "TEXT_BOLD", "TEXT_BOLD_RIGHT", "TEXT_ITALIC", "TEXT_SUD"}
 
 # (regex on folded heading text, level, kind)
 _HEADING_LEVELS: list[tuple[re.Pattern[str], int, HeadingKind]] = [
@@ -240,8 +257,12 @@ def _handle_block(state: _State, cls: str, block: Tag, no_select: bool) -> None:
         state.unit = None
         return
 
-    if cls == "APPL_BANNER_LANDSCAPE_TITLE":
-        state.push_heading(_appendix_heading(text, elem_id))
+    if cls in _APPENDIX_BANNERS:
+        if text and text[0] in _QUOTES and state.unit is not None:
+            # An appendix banner quoted inside an amending provision is text.
+            state.unit.paragraphs.append(Paragraph(elem_id=elem_id, text=text))
+        elif text:
+            state.push_heading(_appendix_heading(text, elem_id))
         return
 
     if cls == "ACT_TITLE_APPL":
@@ -304,7 +325,7 @@ def _handle_block(state: _State, cls: str, block: Tag, no_select: bool) -> None:
             )
         return
 
-    if cls in _CONTENT:
+    if cls in _CONTENT or re.fullmatch(r"TEXT_\d+_LEFT", cls):
         if not text:
             return
         m = _BAND_RE.match(text) if cls == "ACT_TEXT" and not state.has_articles else None
