@@ -149,3 +149,15 @@ def test_positive_latin_id_and_cyrillic_link(corpus, fixture_html):
     assert str(positive) in tools.get_document(corpus, str(positive)).text
     assert str(positive) in tools.get_document(corpus, f"https://lex.uz/docs/{positive}").text
     assert "Mehnat kodeksi" in tools.get_document(corpus, str(-MK)).text
+
+
+def test_amending_act_keeps_requisites_only(corpus, fixture_html):
+    amending = -888001
+    card = parse_card(fixture_html("card1_in_force.html"), amending)
+    document = parse_document(fixture_html("doc_law_omonatlar.html"), amending)
+    count = index_document(corpus, document, card, FakeEmbedder(), requisites_only=True)
+    assert count == 0
+    result = tools.get_article(corpus, str(amending), "1")
+    assert "oʻzgartish kiritadi" in result.text and "1-modda" not in result.text
+    hits = tools.search_law(corpus, FakeEmbedder(), "omonat")
+    assert str(amending) not in hits.text

@@ -456,6 +456,7 @@ def _update(args: argparse.Namespace, ws: Workspace) -> int:
 
 
 def _index(args: argparse.Namespace, ws: Workspace) -> int:
+    from qonunshunos.crawler.full import requisites_only_ids
     from qonunshunos.index.embed import Embedder
     from qonunshunos.index.writer import index_document, rebuild_fts, refresh_fts_stats
 
@@ -467,11 +468,18 @@ def _index(args: argparse.Namespace, ws: Workspace) -> int:
             return 0
         embedder = Embedder(settings.model_dir, args.model)
         ids = args.lex_ids or parsed_ids(ws)
+        amending = requisites_only_ids(ws)
         total = 0
         for lex_id in ids:
             document, card = load_parsed(ws, lex_id)
             count = index_document(
-                conn, document, card, embedder, use_stem=not args.no_stem, force=args.force
+                conn,
+                document,
+                card,
+                embedder,
+                use_stem=not args.no_stem,
+                force=args.force,
+                requisites_only=lex_id in amending,
             )
             state = "unchanged" if count is None else f"{count} chunks"
             print(f"{lex_id:>9}  {state:<12} {document.title[:70]}", flush=True)

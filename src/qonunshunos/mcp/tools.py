@@ -95,6 +95,11 @@ def _lost_force(doc: DocumentRow) -> Result:
         lines.append(f"Asos: {card['lost_force_reason']}")
     if doc.content == "pdf_only" and doc.in_force:
         lines[1] = "Bu hujjatning matni lex.uz'da hozircha faqat PDF koʻrinishida bor."
+    if doc.content == "requisites" and doc.in_force:
+        lines[1] = (
+            "Bu hujjat boshqa hujjatlarga oʻzgartish kiritadi. Oʻzgartishlar ular kiritilgan "
+            "hujjatlarning amaldagi tahririda bor, bu hujjatning oʻz matni bazada saqlanmaydi."
+        )
     lines += ["", f"Havola: {doc.url}", fmt.SOURCE]
     return Result("\n".join(lines))
 

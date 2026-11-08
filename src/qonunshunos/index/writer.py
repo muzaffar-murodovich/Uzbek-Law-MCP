@@ -50,13 +50,17 @@ CARD_HASH_FIELDS = {
 }
 
 
-def content_hash(document: ParsedDocument, card: DocumentCard | None) -> str:
+def content_hash(
+    document: ParsedDocument, card: DocumentCard | None, requisites_only: bool = False
+) -> str:
     payload = {
         "index_version": INDEX_VERSION,
         # Banners come and go without the text changing; they are written separately.
         "document": document.model_dump(mode="json", exclude={"pending_changes"}),
         "card": card.model_dump(mode="json", include=CARD_HASH_FIELDS) if card else None,
     }
+    if requisites_only:  # only when set, so the hashes of indexed documents stay the same
+        payload["requisites_only"] = True
     raw = json.dumps(payload, ensure_ascii=False, sort_keys=True).encode("utf-8")
     return hashlib.sha256(raw).hexdigest()
 
@@ -177,16 +181,22 @@ def index_document(
     *,
     use_stem: bool = True,
     force: bool = False,
+    requisites_only: bool = False,
 ) -> int | None:
-    """(Re)write one document. Returns the number of chunks, or ``None`` if unchanged."""
-    digest = content_hash(document, card)
+    """(Re)write one document. Returns the number of chunks, or ``None`` if unchanged.
+
+    ``requisites_only`` keeps an amending act's requisites but not its text: its amendments
+    are already part of the current editions of the acts it amends.
+    """
+    digest = content_hash(document, card, requisites_only)
     if not force and stored_hash(conn, document.lex_id) == digest:
         write_pending_changes(conn, document)
         return None
 
     status = card.status if card else "unknown"
     kind, name = kind_and_title(document, card)
-    searchable = status == "in_force" and document.content == "html"
+    content = "requisites" if requisites_only else document.content
+    searchable = status == "in_force" and content == "html"
     sections = build_sections(document) if searchable else []
     chunks: list[tuple[int, Chunk]] = []
     for index, row in enumerate(sections):
@@ -245,7 +255,7 @@ def index_document(
                 status,
                 document.accepting_body,
                 document.url,
-                document.content,
+                content,
                 _date(document.edition_date),
                 _date(document.last_change_date),
                 digest,

@@ -11,6 +11,7 @@ from qonunshunos.crawler.full import (
     build_scope,
     crawl_scope,
     load_scope,
+    requisites_only_ids,
     scope_dir,
     unit_active,
 )
@@ -89,6 +90,23 @@ def test_load_scope_orders_self_contained_acts_first_newest_first(tmp_path):
     items = load_scope(ws)
     assert [i.lex_id for i in items] == [-1, -2, -3, -4, -9]
     assert items[0].minor == "N" and items[-1].minor == "Y"
+
+
+def test_requisites_only_ids_are_amending_titles_among_minor_y(tmp_path):
+    ws = Workspace(tmp_path)
+    folder = scope_dir(ws)
+    folder.mkdir(parents=True)
+    titles = {
+        ("N", -1): "Mehnat kodeksiga oʻzgartish kiritish toʻgʻrisida",  # minor=N: kept
+        ("Y", -2): "Ayrim qarorlariga oʻzgartishlar kiritish toʻgʻrisida",
+        ("Y", -3): "Nizomga qoʻshimchalar kiritish haqida",
+        ("Y", -4): "Suv kodeksini tasdiqlash toʻgʻrisida",  # rules of its own: kept
+    }
+    for minor in ("N", "Y"):
+        rows = [{"lex_id": i, "title": t} for (m, i), t in titles.items() if m == minor]
+        payload = {"minor": minor, "year": 2020, "expected": len(rows), "rows": rows}
+        (folder / f"{minor}-2020.json").write_text(json.dumps(payload, ensure_ascii=False))
+    assert requisites_only_ids(ws) == {-2, -3}
 
 
 def _doc_handler(fixture_html, fail: set[int] | None = None):

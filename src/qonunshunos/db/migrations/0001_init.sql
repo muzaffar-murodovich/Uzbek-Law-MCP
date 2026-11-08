@@ -13,7 +13,7 @@ CREATE TABLE documents (
     status           text NOT NULL,          -- in_force | lost_force | not_in_force | ...
     accepting_body   text,
     url              text NOT NULL,
-    content          text NOT NULL,          -- html | pdf_only
+    content          text NOT NULL,          -- html | pdf_only | requisites
     edition_date     date,
     last_change_date date,
     content_hash     text NOT NULL,

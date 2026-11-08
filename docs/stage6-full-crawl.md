@@ -241,8 +241,8 @@ eval/questions.yaml                  ≈30 ta yangi savol
    yuklamasdan qayta parse qilinadi. Parser ogohlantirishlari to'liq yuklashdan keyin ko'riladi.
 4. ⏳ To'liq yuklab olish (`qonunshunos crawl-full`) `myserver`da, 2026-11-07 22:25 dan (Toshkent).
 5. Zaxira nusxa muddatlarini o'zgartirish (serverda o'zgarish: avval foydalanuvchidan so'raladi).
-6. Indekslash: HNSW'siz yozish → indeksni qurish → rekvizitlar. Avval qaror: o'zgartirish
-   kirituvchi hujjatlar (`minor=Y`) indekslanadimi.
+6. Indekslash: HNSW'siz yozish → indeksni qurish → rekvizitlar. `minor=Y` bo'yicha qaror
+   qabul qilindi (pastda, "O'zgartirish kirituvchi hujjatlar").
 7. Baholash: yangi savollar, R@10 va javob vaqti, kerak bo'lsa hujjat turi og'irligi.
 8. Tungi `update`ni kengaytirish (musbat ID'li lotin hujjatlar ham), bir kecha kuzatish.
 9. `robots.txt`, bosh sahifa, huquqshunosga savol → ochish.
@@ -274,6 +274,23 @@ eval/questions.yaml                  ≈30 ta yangi savol
   tushgani 4 ta so'rov. Tuzatildi (`ActiveState` o'qiladi), keyingi deploy bilan ishga tushadi.
 - **Oraliq natija (2026-11-08 09:30 UTC):** 13 856 ta hujjat saqlandi, 0 xato, 1 tasi topilmadi,
   parser 4 450 ta ogohlantirish berdi (ko'rib chiqiladi). `data/raw` 537 MB, `data/parsed` 848 MB.
+- **Parser ogohlantirishlari (14 045 hujjatdan 4 414 tasida).** Deyarli hammasi parser
+  tanimagan blok turlari: `DEPARTMENTAL` (Adliya vazirligida ro'yxatdan o'tkazilgani, 3 267),
+  `UNOFFIAL` ("Norasmiy tarjima", 576), `EXTRACT` ("[Ko'chirma]", 427), `COMMENT_FOR_WARNING`
+  ("Hujjat matni rus tilida berilgan", 199), `APPL_BANNER_PORTRAIT_*` (ilova sarlavhalari),
+  `TEXT_BOLD`, `TEXT_ITALIC`, `TEXT_SUD`, `TEXT_15_LEFT` (oddiy matn), `signCont`
+  (tasdiqlash muhrlari). Ilova sarlavhalari va matn bloklari tashlab yuborilayotgan edi.
+  Tuzatildi: belgilar `notes`ga, ilova bannerlari sarlavhaga, qolganlari matnga; "27-1-modda"
+  ham tanildi. Ogohlantirishli 400 ta tasodifiy hujjat qayta parse qilindi: ogohlantirish 0.
+  `PARSER_VERSION` = 2, hamma hujjat indekslashdan oldin xom sahifadan qayta parse qilinadi.
+- **O'zgartirish kirituvchi hujjatlar (foydalanuvchi qarori, 2026-11-08): aralash.** 5 406 ta
+  `minor=Y` hujjatdan 5 357 tasining nomi "…ga o'zgartish (qo'shimcha) kiritish to'g'risida",
+  "…kuchini yo'qotgan deb topish", "…munosabati bilan" kabi. Ularning o'zgartirishlari asosiy
+  hujjatlarning amaldagi tahririda bor, to'liq indekslansa qidiruvda bir qoida ikki marta
+  chiqadi. Shuning uchun ulardan faqat rekvizitlar olinadi (`content = 'requisites'`,
+  `find_document` topadi, `get_*` buni tushuntiradi). Qolgan 49 tasi (masalan, "Suv kodeksini
+  tasdiqlash to'g'risida", uchuvchisiz apparatlar tartibi) to'liq indekslanadi. Qoida:
+  `crawler/full.py`dagi `AMENDING_TITLE_RE`, `index` buyrug'i uni qamrov ro'yxatidan oladi.
 
 ## Xavflar
 

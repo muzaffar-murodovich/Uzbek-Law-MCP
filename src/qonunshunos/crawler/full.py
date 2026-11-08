@@ -15,6 +15,7 @@ live in other sections. Two steps:
 
 import json
 import logging
+import re
 import subprocess
 import time
 from collections.abc import Callable, Iterable
@@ -111,6 +112,24 @@ def load_scope(ws: Workspace) -> list[ScopeItem]:
             seen.add(row["lex_id"])
             items.append(ScopeItem(row["lex_id"], payload["minor"], payload["year"], row["title"]))
     return items
+
+
+# Titles of acts that only amend others ("... oʻzgartish va qoʻshimchalar kiritish toʻgʻrisida").
+# 5 357 of the 5 406 minor=Y acts match; the rest (codes approved by a decree, rules of their
+# own) are indexed in full.
+AMENDING_TITLE_RE = re.compile(
+    r"oʻzgarti?r?ish|qoʻshimcha|kuchini yoʻqotgan|reyestridan chiqarish|munosabati bilan",
+    re.IGNORECASE,
+)
+
+
+def requisites_only_ids(ws: Workspace) -> set[int]:
+    """Amending acts (minor=Y with an amending title) whose text is not indexed."""
+    return {
+        item.lex_id
+        for item in load_scope(ws)
+        if item.minor == "Y" and AMENDING_TITLE_RE.search(item.title)
+    }
 
 
 RUNNING_STATES = frozenset({"active", "activating", "reloading", "deactivating"})
