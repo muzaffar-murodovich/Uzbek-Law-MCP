@@ -274,6 +274,10 @@ eval/questions.yaml                  ≈30 ta yangi savol
   tushgani 4 ta so'rov. Tuzatildi (`ActiveState` o'qiladi), keyingi deploy bilan ishga tushadi.
 - **Oraliq natija (2026-11-08 09:30 UTC):** 13 856 ta hujjat saqlandi, 0 xato, 1 tasi topilmadi,
   parser 4 450 ta ogohlantirish berdi (ko'rib chiqiladi). `data/raw` 537 MB, `data/parsed` 848 MB.
+- **Yuklab olish tugadi (2026-11-08 11:47 UTC, 18 soat 22 daqiqa):** 15 811 tadan 15 810 tasi
+  saqlandi, 0 xato. Topilmagani bitta: `-4648958` (VM qarori, 17.12.2019, 1009-son), ro'yxatda
+  bor, lekin sahifasi lex.uz'da 404 (qayta urinildi). Tungi pauza ishlamagani uchun
+  ustma-ust tushgan so'rovlar 4 ta.
 - **Parser ogohlantirishlari (14 045 hujjatdan 4 414 tasida).** Deyarli hammasi parser
   tanimagan blok turlari: `DEPARTMENTAL` (Adliya vazirligida ro'yxatdan o'tkazilgani, 3 267),
   `UNOFFIAL` ("Norasmiy tarjima", 576), `EXTRACT` ("[Ko'chirma]", 427), `COMMENT_FOR_WARNING`

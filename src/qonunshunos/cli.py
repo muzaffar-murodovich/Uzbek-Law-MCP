@@ -35,7 +35,12 @@ def build_parser() -> argparse.ArgumentParser:
     p.add_argument("--force", action="store_true", help="download again even if stored")
 
     p = sub.add_parser("parse", help="parse a stored document into data/parsed/<id>.json")
-    p.add_argument("lex_id", type=int)
+    p.add_argument("lex_id", type=int, nargs="?")
+    p.add_argument(
+        "--all",
+        action="store_true",
+        help="re-parse every parsed document and every stored page in the scope listings",
+    )
 
     p = sub.add_parser("crawl-sample", help="Constitution + codes in force: fetch, parse, report")
     p.add_argument("--force", action="store_true")
@@ -455,6 +460,32 @@ def _update(args: argparse.Namespace, ws: Workspace) -> int:
     return 0
 
 
+def _parse_all(ws: Workspace) -> int:
+    """Re-parse from stored pages, e.g. after a parser change. Raw pages of RSS acts outside
+    the scope are left alone, so `index` does not pick them up."""
+    from collections import Counter
+
+    from qonunshunos.crawler.full import load_scope
+
+    ids = set(parsed_ids(ws)) | {i.lex_id for i in load_scope(ws) if ws.raw.has("docs", i.lex_id)}
+    warnings: Counter[str] = Counter()
+    failed = 0
+    for n, lex_id in enumerate(sorted(ids), start=1):
+        try:
+            document, _ = parse(ws, lex_id)
+        except Exception as exc:  # report and go on
+            failed += 1
+            print(f"{lex_id:>9}  {type(exc).__name__}: {exc}", flush=True)
+            continue
+        warnings.update(w.split(":")[0].split(" ×")[0] for w in document.warnings)
+        if n % 1000 == 0:
+            print(f"{n}/{len(ids)}", flush=True)
+    print(f"{len(ids)} documents, {failed} failed, {sum(warnings.values())} warnings")
+    for text, count in warnings.most_common(20):
+        print(f"  {count:>6}  {text}")
+    return 1 if failed else 0
+
+
 def _index(args: argparse.Namespace, ws: Workspace) -> int:
     from qonunshunos.crawler.full import requisites_only_ids
     from qonunshunos.index.embed import Embedder
@@ -568,7 +599,12 @@ def main(argv: list[str] | None = None) -> int:
     if args.command in ("notify", "report"):
         return _notify(args)
 
+    if args.command == "parse" and args.all:
+        return _parse_all(ws)
+
     if args.command == "parse":
+        if args.lex_id is None:
+            parser.error("parse: give a lex_id or --all")
         document, card = parse(ws, args.lex_id)
         print(_report_line(args.lex_id, document, card))
         for warning in document.warnings:
