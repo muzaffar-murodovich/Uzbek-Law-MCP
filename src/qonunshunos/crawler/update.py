@@ -230,8 +230,10 @@ def _check(
     requisites_only: bool = False,
 ) -> None:
     before = conn.execute(
-        "SELECT status, pending_changes FROM documents WHERE id = %s", (doc_id,)
+        "SELECT status, pending_changes, content FROM documents WHERE id = %s", (doc_id,)
     ).fetchone()
+    if before and before[2] == "requisites":  # an amending act stays requisites-only
+        requisites_only = True
     try:
         fetch(client, ws, doc_id, force=not new)  # a new act's page may be saved by _read_rss
         document, card = parse(ws, doc_id)
