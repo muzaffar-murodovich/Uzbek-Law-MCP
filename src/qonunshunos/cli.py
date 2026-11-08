@@ -468,7 +468,10 @@ def _index(args: argparse.Namespace, ws: Workspace) -> int:
             return 0
         embedder = Embedder(settings.model_dir, args.model)
         ids = args.lex_ids or parsed_ids(ws)
-        amending = requisites_only_ids(ws)
+        # Amending acts from the scope listings, and those the nightly update added as such.
+        amending = requisites_only_ids(ws) | {
+            r[0] for r in conn.execute("SELECT id FROM documents WHERE content = 'requisites'")
+        }
         total = 0
         for lex_id in ids:
             document, card = load_parsed(ws, lex_id)

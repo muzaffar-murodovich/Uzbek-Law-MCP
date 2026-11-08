@@ -5,9 +5,13 @@ acts it changes; lex.uz merges it into their current edition later, sometimes mo
 meanwhile shows a banner "Hujjatga oʻzgartirish kiritilmoqda" (see docs/stage5-ops.md). So:
 
 1. New acts from the RSS feed are fetched once; documents of ours they link to are rechecked
-   every night for ``RECHECK_DAYS``. A new act in scope is added to the index.
-2. Documents with a banner are rechecked every ``PENDING_EVERY`` until it disappears.
-3. The rest are rechecked in turn, oldest check first and at most weekly, while the request
+   every night for ``RECHECK_DAYS``.
+2. New acts in scope come from the newest ``LISTING_PAGES`` pages of the scope listings (the
+   same ``/uz/search/nat`` listings as the full crawl, newest first): a Latin version can appear
+   weeks after the act, so more than the first page is read. Amending acts keep only their
+   requisites.
+3. Documents with a banner are rechecked every ``PENDING_EVERY`` until it disappears.
+4. The rest are rechecked in turn, oldest check first and at most weekly, while the request
    budget lasts.
 """
 
@@ -21,6 +25,8 @@ import psycopg
 from psycopg.types.json import Jsonb
 
 from qonunshunos.crawler.client import LexClient, NotFound, document_path
+from qonunshunos.crawler.full import AMENDING_TITLE_RE, MINOR_ORDER, NAT_LISTING
+from qonunshunos.crawler.listing import iter_pages
 from qonunshunos.crawler.pipeline import Workspace, fetch, parse
 from qonunshunos.crawler.rss import RSS_PATH, RssItem, parse_rss
 from qonunshunos.index.embed import Embed
@@ -40,7 +46,7 @@ _AMENDS_RE = re.compile(
     r"oʻzgartirish|qoʻshimcha(lar)? kiritish|kuchini yoʻqotgan|munosabati bilan|tahrirda",
     re.IGNORECASE,
 )
-SCOPE_KINDS = frozenset({"konstitutsiya", "kodeks"})  # new acts added to the index
+LISTING_PAGES = 3  # per scope listing (minor=N and minor=Y) every night
 
 
 @dataclass
@@ -104,6 +110,10 @@ class Budget:
         self.used += n
         return True
 
+    def give_back(self, n: int) -> None:
+        self.left += n
+        self.used -= n
+
 
 def _queue(conn: psycopg.Connection, now: datetime) -> Iterator[tuple[int, str]]:
     """Documents to recheck, most urgent first: linked by a new act, banner, oldest check."""
@@ -147,11 +157,10 @@ def _read_rss(
     report: Report,
     now: datetime,
     dry_run: bool,
-) -> list[int]:
-    """Fetch acts not seen before; returns new acts that may belong to the index."""
+) -> None:
+    """Fetch acts not seen before and schedule rechecks of the documents they link to."""
     seen = {r[0] for r in conn.execute("SELECT doc_id FROM rss_seen").fetchall()}
     ours = known_ids(conn)
-    candidates = []
     for item in items:
         if item.lex_id in seen or item.lex_id in ours:
             continue
@@ -185,9 +194,27 @@ def _read_rss(
                 {"id": target, "until": now + timedelta(days=days)},
             )
         report.rss_new.append({"id": item.lex_id, "title": item.title, "links": targets})
-        if item.lex_id < 0 and "kodeks" in f"{item.title} {item.info}".lower():
-            candidates.append(item.lex_id)
-    return candidates
+
+
+def _listed_new(conn: psycopg.Connection, client: LexClient, budget: Budget) -> dict[int, bool]:
+    """Acts in force on the newest pages of the scope listings that we do not have yet.
+
+    Returns lex id → whether to keep only the requisites (an amending act).
+    """
+    ours = known_ids(conn)
+    found: dict[int, bool] = {}
+    for minor in MINOR_ORDER:
+        pages = iter_pages(client, f"{NAT_LISTING}&minor={minor}", max_pages=LISTING_PAGES)
+        while budget.take(1):
+            page = next(pages, None)
+            if page is None:  # no request was made
+                budget.give_back(1)
+                break
+            for row in page.rows:
+                if row.lex_id not in ours and row.in_force is not False:
+                    amending = minor == "Y" and bool(AMENDING_TITLE_RE.search(row.title))
+                    found.setdefault(row.lex_id, amending)
+    return found
 
 
 def _check(
@@ -200,19 +227,16 @@ def _check(
     now: datetime,
     *,
     new: bool = False,
+    requisites_only: bool = False,
 ) -> None:
     before = conn.execute(
         "SELECT status, pending_changes FROM documents WHERE id = %s", (doc_id,)
     ).fetchone()
     try:
-        fetch(client, ws, doc_id, force=not new)  # a new act's page was saved by _read_rss
+        fetch(client, ws, doc_id, force=not new)  # a new act's page may be saved by _read_rss
         document, card = parse(ws, doc_id)
-        kind, title = kind_and_title(document, card)
-        if new and kind not in SCOPE_KINDS:
-            # Keep the raw page, but not a parsed file: `qonunshunos index` indexes all of them.
-            ws.parsed_path(doc_id).unlink(missing_ok=True)
-            return
-        chunks = index_document(conn, document, card, embedder)
+        _, title = kind_and_title(document, card)
+        chunks = index_document(conn, document, card, embedder, requisites_only=requisites_only)
     except NotFound:
         report.errors.append({"id": doc_id, "error": "lex.uz: sahifa topilmadi"})
         _mark(conn, doc_id, now, False, "not found")
@@ -252,14 +276,28 @@ def run_update(
     left.take(1)
     items = parse_rss(client.get(RSS_PATH).text)
     report.rss_items = len(items)
-    candidates = _read_rss(conn, client, ws, items, left, report, started, dry_run)
+    _read_rss(conn, client, ws, items, left, report, started, dry_run)
+    listed = _listed_new(conn, client, left)
 
     if dry_run:
+        report.added = [{"id": i, "title": ""} for i in listed]
         report.checked = sum(1 for _ in _queue(conn, started))
     else:
-        for doc_id in candidates:
-            if left.take(1):  # the card; the page is already stored
-                _check(conn, client, ws, embedder, doc_id, report, now(), new=True)
+        for doc_id, requisites_only in listed.items():
+            cost = sum(not ws.raw.has(kind, doc_id) for kind in ("docs", "cards"))
+            if not left.take(cost):
+                break
+            _check(
+                conn,
+                client,
+                ws,
+                embedder,
+                doc_id,
+                report,
+                now(),
+                new=True,
+                requisites_only=requisites_only,
+            )
         for doc_id, _title in _queue(conn, started):
             if not left.take(2):
                 break

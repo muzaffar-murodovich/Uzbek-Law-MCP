@@ -291,6 +291,14 @@ eval/questions.yaml                  ≈30 ta yangi savol
   `find_document` topadi, `get_*` buni tushuntiradi). Qolgan 49 tasi (masalan, "Suv kodeksini
   tasdiqlash to'g'risida", uchuvchisiz apparatlar tartibi) to'liq indekslanadi. Qoida:
   `crawler/full.py`dagi `AMENDING_TITLE_RE`, `index` buyrug'i uni qamrov ro'yxatidan oladi.
+- **Tungi `update`dagi yangi hujjatlar endi RSS'dan emas, qamrov ro'yxatidan.** Turi va organi
+  bo'yicha qamrovni aniqlash ishonchsiz (hokim farmoyishi ham "farmoyish"). Shuning uchun har
+  kecha `/uz/search/nat` ro'yxatlarining (`minor=N` va `minor=Y`, eng yangisi birinchi)
+  dastlabki 3 sahifasi o'qiladi (≈6 so'rov), bizda yo'q amaldagi hujjatlar qo'shiladi,
+  o'zgartirish kirituvchilari faqat rekvizitlar bilan. Lotin tarjimasi hujjatdan bir necha
+  hafta keyin chiqishi mumkin, shuning uchun bitta sahifa emas, uchtasi. Musbat ID'li lotin
+  hujjatlar ham shu yo'l bilan keladi. `SCOPE_KINDS` olib tashlandi; RSS faqat havola
+  qilingan hujjatlarni qayta tekshirish uchun qoldi.
 
 ## Xavflar
 
