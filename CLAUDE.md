@@ -35,11 +35,13 @@ Dasturlash tili — Python.
 - Stek: Python 3.12+, uv, MCP Python SDK (FastMCP), PostgreSQL 16 + pgvector,
   `multilingual-e5-small` (ONNX, int8).
 - Joylashuv: xizmat `myserver`da (`ssh myserver`, Hetzner, systemd + nginx). Og'ir bir martalik
-  ishlar (to'liq yuklab olish, embedding) `home`da (`ssh home`, Tailscale): natija SSH tunnel orqali
-  to'g'ridan-to'g'ri `myserver` bazasiga yoziladi. Docker ishlatilmaydi.
+  ishlar (embedding) `home`da (`ssh home`, Tailscale): natija SSH tunnel orqali to'g'ridan-to'g'ri
+  `myserver` bazasiga yoziladi. `home` — foydalanuvchining ishxonadagi kompyuteri, IP'si butun
+  ishxona bilan umumiy: lex.uz'ga ko'p so'rov (to'liq yuklab olish) `myserver`dan yuboriladi.
+  Docker ishlatilmaydi.
 - Mahalliy baza (Mac): Homebrew `postgresql@17` + `pgvector`, port 5433 (`.env.example`).
   Domen: `qonunshunos.muzaffar.zip`. DNS'ni Spaceship emas, Cloudflare boshqaradi: A yozuvi
-  Cloudflare'da, proksisiz ("DNS only"), Spaceship'dagi yozuvlar ishlatilmaydi.
+  Cloudflare'da, proksi yoqilgan (2026-11-06 dan), Spaceship'dagi yozuvlar ishlatilmaydi.
   Serverlarda o'zgarish qilishdan oldin foydalanuvchidan so'ra.
 - Bepul davr limitlari: kuniga 30 ta qidiruv, 200 ta boshqa chaqiruv, daqiqasiga 10 ta.
 
@@ -47,7 +49,7 @@ Dasturlash tili — Python.
 
 - So'rovlar orasida kamida 2 soniya, parallel so'rov yo'q. User-Agent: `QonunshunosBot/0.1`,
   unga shaxsiy ma'lumot (email) qo'yilmaydi.
-- Lotin versiya: `https://lex.uz/docs/-{id}` (manfiy ID).
+- Lotin versiya: `https://lex.uz/docs/-{id}` (odatda manfiy ID; 402 ta lotin hujjatda ID musbat).
 - Yuklab olingan sahifalar `data/`ga saqlanadi va git'ga qo'shilmaydi.
 - Testlar tarmoqqa chiqmaydi, `tests/fixtures/`dagi qisqartirilgan haqiqiy sahifalar ishlatiladi.
 
@@ -63,10 +65,12 @@ Bosqichlar holati `PLAN.md`ning 8-bo'limida. 1–5-bosqichlar bajarildi (har bir
 "Natija" bo'limi bor, tajribalar `docs/stage2-experiments.md`da). Xizmat
 `https://qonunshunos.muzaffar.zip`da ishlayapti (namunaviy korpus, 86 hujjat). Har kecha
 `qonunshunos update` lex.uz'dan yangilaydi, zaxira `home`ga ko'chiriladi, xatolar va ertalabki
-hisobot Telegram'ga (@qonunshunosbot) keladi (`docs/stage5-ops.md`). Keyingisi 6-bosqich: to'liq
-yuklab olish va bepul ommaga ochish.
+hisobot Telegram'ga (@qonunshunosbot) keladi (`docs/stage5-ops.md`). 6-bosqich jarayonda
+(`docs/stage6-full-crawl.md`): `scope` 15 811 ta amaldagi lotin hujjatni ro'yxatga oldi,
+`crawl-full` ularni `myserver`da yuklab olyapti (`systemd-run --user`, unit
+`qonunshunos-crawl-full`). Keyin indekslash, baholash va ommaga ochish.
 
-CLI: `uv run qonunshunos fetch|parse|crawl-sample|crawl|listing|db-migrate|index|search|eval|serve|tool|user|auth-cleanup|update|report|notify`
+CLI: `uv run qonunshunos fetch|parse|crawl-sample|crawl|listing|scope|crawl-full|db-migrate|index|search|eval|serve|tool|user|auth-cleanup|update|report|notify`
 (`--data-dir`, standart `./data`). `serve` standart holatda OAuth talab qiladi: mahalliy
 ishlab chiqishda `.env`da `QONUNSHUNOS_DEV_LOGIN=1` yoki `--no-auth` (faqat loopback'da). Mahalliy
 OAuth uchun manzil `http://localhost:8000` (`127.0.0.1` emas: Google redirect shunday yozilgan).
@@ -77,8 +81,9 @@ LLM (OpenAI) faqat `qonunshunos.llm.OpenAIChat` orqali ishlatiladi: u bepul kunl
 
 - Ilova `/home/deploy/qonunshunos`da, `qonunshunos.service`, `127.0.0.1:8100`. nginx sayti
   `deploy/nginx-qonunshunos.conf`. Server `.env` git'ga qo'shilmaydi va sinxronlanmaydi.
-- Yangilash: `deploy/deploy.sh` (sudo kerak emas). Root talab qiladigan ishlar
-  `deploy/root-setup.sh`da, uni foydalanuvchi o'zi ishga tushiradi:
+- Yangilash: `bash deploy/deploy.sh` (sudo kerak emas, `home`da server manzilini `watch.env`dan
+  oladi). Auto mode deploy'ni to'xtatadi: uni foydalanuvchi oddiy terminalda ishga tushiradi.
+  Root talab qiladigan ishlar `deploy/root-setup.sh`da, uni ham foydalanuvchi o'zi ishga tushiradi:
   `ssh -t myserver 'sudo bash …'`. Sudo parolini hech qachon ishlatma.
 - Sayt Cloudflare proksisi ortida ("Full (strict)", `*.muzaffar.zip` Origin sertifikati).
   UFW 80/443 portlarni faqat Cloudflare'ga ochgan, shuning uchun Let's Encrypt ishlamaydi.

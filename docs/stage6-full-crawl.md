@@ -1,9 +1,10 @@
 # 6-bosqich: to'liq yuklab olish va bepul ommaga ochish
 
-Holat (2026-11-07): dizayn, ishlar boshlanmagan. Tegishli hujjatlar: [PLAN.md](../PLAN.md)
-(1-, 2- va 8-bo'limlar), [lex.uz tadqiqoti](research/lexuz.md) (6- va 8.4-bo'limlar),
-[1-bosqich](stage1-parser-crawler.md) (crawler), [5-bosqich](stage5-ops.md) (tungi yangilash,
-zaxira nusxa).
+Holat (2026-11-08): to'liq yuklab olish `myserver`da ketyapti (pastda "Bajarilganlar va
+dizayndan farqlar"). Indekslash, baholash va ommaga ochish hali oldinda. Tegishli hujjatlar:
+[PLAN.md](../PLAN.md) (1-, 2- va 8-bo'limlar), [lex.uz tadqiqoti](research/lexuz.md) (6-, 8.4- va
+9-bo'limlar), [1-bosqich](stage1-parser-crawler.md) (crawler), [5-bosqich](stage5-ops.md) (tungi
+yangilash, zaxira nusxa).
 
 ## Maqsad
 
@@ -233,17 +234,46 @@ eval/questions.yaml                  ≈30 ta yangi savol
 
 ## Ishlar tartibi
 
-1. Toifa filtri bo'yicha kichik tadqiqot (≈30 so'rov) → `docs/research/lexuz.md`.
-2. Ro'yxatlar toifa/yil bo'yicha + testlar → barcha ro'yxatlarni yuklash (≈1 soat), sonlarni
-   statistika bilan solishtirish.
-3. Sinov to'plami (300 ta hujjat) → parser hisoboti → parser tuzatishlari va fixture'lar.
-4. `crawl` uzoq ishga moslashtiriladi (pauza, Telegram holati) → `home`da to'liq yuklab olish
-   (≈25 soat).
+1. ✅ Qamrov filtri bo'yicha tadqiqot: toifa filtri o'rniga `/uz/search/nat` bo'limi
+   (`docs/research/lexuz.md`, 9-bo'lim).
+2. ✅ Ro'yxatlar `minor`/yil bo'yicha (`qonunshunos scope`): 15 811 ta, lex.uz soni bilan aynan mos.
+3. ⏭ Sinov to'plami alohida qilinmadi: xom sahifalar saqlanadi, parser keyin tuzatilib, qayta
+   yuklamasdan qayta parse qilinadi. Parser ogohlantirishlari to'liq yuklashdan keyin ko'riladi.
+4. ⏳ To'liq yuklab olish (`qonunshunos crawl-full`) `myserver`da, 2026-11-07 22:25 dan (Toshkent).
 5. Zaxira nusxa muddatlarini o'zgartirish (serverda o'zgarish: avval foydalanuvchidan so'raladi).
-6. Indekslash: HNSW'siz yozish → indeksni qurish → rekvizitlar.
+6. Indekslash: HNSW'siz yozish → indeksni qurish → rekvizitlar. Avval qaror: o'zgartirish
+   kirituvchi hujjatlar (`minor=Y`) indekslanadimi.
 7. Baholash: yangi savollar, R@10 va javob vaqti, kerak bo'lsa hujjat turi og'irligi.
-8. Tungi `update`ni kengaytirish, bir kecha kuzatish.
+8. Tungi `update`ni kengaytirish (musbat ID'li lotin hujjatlar ham), bir kecha kuzatish.
 9. `robots.txt`, bosh sahifa, huquqshunosga savol → ochish.
+
+## Bajarilganlar va dizayndan farqlar (2026-11-08)
+
+- **Qamrov — `/uz/search/nat`.** lex.uz qidiruvida milliy qonunchilik alohida bo'lim: unda
+  Konstitutsiya, kodekslar, qonunlar, Prezident va hukumat hujjatlari, vazirlik va idoralar
+  buyruqlari bor. Mahalliy hokimiyat (`loc`), xalqaro (`int`), texnik (`tech`), sud (`court`)
+  va Oliy Majlis kengashlari (`oliy`) hujjatlari boshqa bo'limlarda. Filtrlar: `lang=4` (lotin),
+  `status=Y|R|N`, `minor=N|Y`, `form_id`, `fyear`.
+- **Hajm taxmindan kichik:** amaldagi lotin hujjatlar **15 811** ta (≈22 ming emas): 10 405 ta
+  yaxlit (`minor=N`) va 5 406 ta faqat o'zgartirish kirituvchi (`minor=Y`). Kuchini yo'qotganlar
+  12 700 ta. So'rovlar ≈31 600 ta, ya'ni ≈18 soat.
+- **Ro'yxatlar yil bo'yicha** (`data/listings/scope/{N|Y}-{yil}.json`, 1920–2026). 16 ta hujjat
+  1990-yildan oldingi (eng eskisi 1961). Har bir faylda lex.uz ko'rsatgan son (`expected`) bilan
+  solishtirildi: hammasi mos.
+- **Joy — `myserver`.** `home` ishxonadagi kompyuter va uning IP'si butun ishxona uchun umumiy,
+  shuning uchun yuklab olish serverdan ishlaydi (foydalanuvchi qarori, 2026-11-07). Embedding
+  keyin `home`da yoki serverda qilinadi.
+- **Ishga tushirish:** `systemd-run --user --unit=qonunshunos-crawl-full … qonunshunos crawl-full`
+  (log: `journalctl --user -u qonunshunos-crawl-full`, holat: `data/crawl-full.json`).
+  20 ta hujjatlik sinov (`--limit 20`) xatosiz o'tdi.
+- **Musbat ID'li lotin hujjatlar:** 402 ta (asosan Markaziy bank va vazirliklar buyruqlari).
+  Kartochkasida til "Узбекский (Л)". `resolve.py` tuzatildi, tungi `update` hali faqat manfiy
+  ID'li yangi hujjatlarni qamrovga oladi.
+- **Tungi yangilash bilan pauza.** Birinchi kecha crawler pauza qilmadi: `oneshot` xizmat ishlab
+  turganda holati `activating`, `systemctl is-active` esa faqat `active`ni tan oladi. Ustma-ust
+  tushgani 4 ta so'rov. Tuzatildi (`ActiveState` o'qiladi), keyingi deploy bilan ishga tushadi.
+- **Oraliq natija (2026-11-08 09:30 UTC):** 13 856 ta hujjat saqlandi, 0 xato, 1 tasi topilmadi,
+  parser 4 450 ta ogohlantirish berdi (ko'rib chiqiladi). `data/raw` 537 MB, `data/parsed` 848 MB.
 
 ## Xavflar
 

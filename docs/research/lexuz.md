@@ -318,3 +318,29 @@ PUBLICATION_ORIGIN
 Kuchini yo'qotganlar: `-1286558`, `-152637` (Soliq), `-46868` (Shaharsozlik), `-184746`
 (Bojxona), `-186105` (FPK), `-185986`, `-195760` (Xo'jalik protsessual), `-142859` (Mehnat).
 Namunaviy to'plam: shu 20 ta kodeks + Konstitutsiya (`-6445145`) = 21 ta hujjat.
+
+## 9. Qamrov ro'yxatlari (6-bosqich, 2026-11-07)
+
+So'rovlar `myserver`dan yuborildi (≈160 ta, 2,5 soniya oraliq bilan).
+
+- **Qidiruv bo'limlari.** `/uz/search/nat` — milliy qonunchilik (Konstitutsiya, kodekslar,
+  qonunlar, Prezident va hukumat hujjatlari, vazirlik va idoralar buyruqlari). Qolganlari
+  alohida: `/uz/search/loc` (mahalliy hokimiyat), `int` (xalqaro), `tech` (texnik), `court`
+  (sud), `oliy` (Oliy Majlis kengashlari).
+- **Filtrlar** (sahifadagi `goSearch()` skriptidan): `lang` (4 — lotin, 3 — kirill, 1 — rus,
+  2 — ingliz), `status` (Y amaldagi, R kuchini yo'qotgan, N amalda emas), `minor` (N — yaxlit
+  hujjat, Y — o'zgartirish va qo'shimchalar kirituvchi), `nature` (1 normativ-huquqiy, 2 operativ,
+  3 o'zgartirishlar), `form_id` (eski `fform_id` ham ishlaydi), `fyear`, `from`/`to`
+  (`dd.mm.yyyy`). Sahifada 20 ta natija, sahifalash 8.4-bo'limdagidek.
+- **Sonlar** (`/uz/search/nat?lang=4`, 2026-11-07): jami 28 511; amaldagi 15 811
+  (`minor=N` 10 405, `minor=Y` 5 406); kuchini yo'qotgan 12 700; amalda emas 56. Amaldagi yaxlit
+  hujjatlar shakl bo'yicha: Qaror 8 005, Farmon 837, Buyruq 785, Qonun 573, Farmoyish 136,
+  Kodeks 20, Konstitutsiya 1 va boshqalar.
+- **`fyear`** qabul qilingan yil bo'yicha ishlaydi. `from`/`to` bilan son biroz farq qiladi
+  (2024-yil qarorlari: 550 va 552). Amaldagi 16 ta hujjat 1990-yildan oldingi (1961–1989).
+- **Musbat ID'li lotin sahifalar.** "Manfiy ID = lotin" qoidasi doim to'g'ri emas: `lang=4`
+  ro'yxatidagi 402 ta hujjatning ID'si musbat (asosan Markaziy bank va vazirlik buyruqlari),
+  kartochkasida til "Узбекский (Л)". Masalan, `8575165` (atom elektr stansiyalari reaktorlarining
+  yadroviy xavfsizlik qoidalari).
+- **`minor=Y` belgisi har doim aniq emas:** o'zgartirish kirituvchilar orasida nomiga ko'ra yangi
+  qoida o'rnatadigan hujjatlar ham uchraydi.
