@@ -194,7 +194,7 @@ Tamoyillar:
 | 3 | MCP server va tool'lar | 3–4 kun | ✅ bajarildi (Claude Code sinovi: 10/10 savolda kerakli modda o'qildi va to'g'ri havola berildi) |
 | 4 | OAuth, Google orqali kirish, limitlar | 1 hafta | ✅ bajarildi (Claude Code, claude.ai va ChatGPT production'da Google orqali kirib, savolga javob oldi, 2026-11-07). Telegram keyinroq |
 | 5 | `myserver`ga deploy, zaxira nusxa, monitoring, kunlik yangilash | 2–3 kun | ✅ bajarildi (2026-11-07, `docs/stage5-ops.md`): tungi yangilash (RSS + lex.uz "o'zgartirish kiritilmoqda" banneri), zaxira `home`ga, Telegram ogohlantirishlari va ertalabki hisobot |
-| 6 | To'liq yuklab olish va bepul ommaga ochish | 1–2 kun | ⏳ jarayonda (`docs/stage6-full-crawl.md`): 15 811 ta amaldagi lotin hujjat ro'yxatga olindi, to'liq yuklab olish `myserver`da ketyapti (2026-11-08). Keyin indekslash, baholash, ochish |
+| 6 | To'liq yuklab olish va bepul ommaga ochish | 1–2 kun | ⏳ jarayonda (`docs/stage6-full-crawl.md`): 15 810 hujjat yuklab olindi va qayta parse qilindi (2026-11-08), to'liq indekslash ketyapti. Keyin HNSW, baholash, ochish |
 | 7 | Pullik tariflar | — | avval "Adolat" markaziga xat va yozma rozilik |
 
 ### 1-bosqich. Parser va crawler

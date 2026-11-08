@@ -66,11 +66,13 @@ Bosqichlar holati `PLAN.md`ning 8-bo'limida. 1–5-bosqichlar bajarildi (har bir
 `https://qonunshunos.muzaffar.zip`da ishlayapti (namunaviy korpus, 86 hujjat). Har kecha
 `qonunshunos update` lex.uz'dan yangilaydi, zaxira `home`ga ko'chiriladi, xatolar va ertalabki
 hisobot Telegram'ga (@qonunshunosbot) keladi (`docs/stage5-ops.md`). 6-bosqich jarayonda
-(`docs/stage6-full-crawl.md`): `scope` 15 811 ta amaldagi lotin hujjatni ro'yxatga oldi,
-`crawl-full` ularni `myserver`da yuklab olyapti (`systemd-run --user`, unit
-`qonunshunos-crawl-full`). Keyin indekslash, baholash va ommaga ochish.
+(`docs/stage6-full-crawl.md`): 15 810 ta amaldagi lotin hujjat yuklab olindi va parser v2 bilan
+parse qilindi. To'liq indekslash 2026-11-08 kechqurun boshlandi (`home`dagi user unit'lar
+`qonunshunos-tunnel`, `qonunshunos-index`, `qonunshunos-index-watch`; yordamchi instabox
+box'lar `qidx-1..4`). Server bazasida HNSW indeksi vaqtincha o'chirilgan, tungi update timer'i
+to'xtatilgan. Keyin: HNSW qurish, timer'ni yoqish, baholash, ommaga ochish.
 
-CLI: `uv run qonunshunos fetch|parse|crawl-sample|crawl|listing|scope|crawl-full|db-migrate|index|search|eval|serve|tool|user|auth-cleanup|update|report|notify`
+CLI: `uv run qonunshunos fetch|parse [--all]|crawl-sample|crawl|listing|scope|crawl-full|db-migrate|index|search|eval|serve|tool|user|auth-cleanup|update|report|notify`
 (`--data-dir`, standart `./data`). `serve` standart holatda OAuth talab qiladi: mahalliy
 ishlab chiqishda `.env`da `QONUNSHUNOS_DEV_LOGIN=1` yoki `--no-auth` (faqat loopback'da). Mahalliy
 OAuth uchun manzil `http://localhost:8000` (`127.0.0.1` emas: Google redirect shunday yozilgan).

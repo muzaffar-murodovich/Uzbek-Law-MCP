@@ -239,9 +239,9 @@ eval/questions.yaml                  ≈30 ta yangi savol
 2. ✅ Ro'yxatlar `minor`/yil bo'yicha (`qonunshunos scope`): 15 811 ta, lex.uz soni bilan aynan mos.
 3. ⏭ Sinov to'plami alohida qilinmadi: xom sahifalar saqlanadi, parser keyin tuzatilib, qayta
    yuklamasdan qayta parse qilinadi. Parser ogohlantirishlari to'liq yuklashdan keyin ko'riladi.
-4. ⏳ To'liq yuklab olish (`qonunshunos crawl-full`) `myserver`da, 2026-11-07 22:25 dan (Toshkent).
+4. ✅ To'liq yuklab olish (`qonunshunos crawl-full`) `myserver`da: 2026-11-07 22:25 – 11-08 16:47 (Toshkent).
 5. Zaxira nusxa muddatlarini o'zgartirish (serverda o'zgarish: avval foydalanuvchidan so'raladi).
-6. Indekslash: HNSW'siz yozish → indeksni qurish → rekvizitlar. `minor=Y` bo'yicha qaror
+6. ⏳ Indekslash: HNSW'siz yozish → indeksni qurish → rekvizitlar. `minor=Y` bo'yicha qaror
    qabul qilindi (pastda, "O'zgartirish kirituvchi hujjatlar").
 7. Baholash: yangi savollar, R@10 va javob vaqti, kerak bo'lsa hujjat turi og'irligi.
 8. Tungi `update`ni kengaytirish (musbat ID'li lotin hujjatlar ham), bir kecha kuzatish.
@@ -295,6 +295,21 @@ eval/questions.yaml                  ≈30 ta yangi savol
   `find_document` topadi, `get_*` buni tushuntiradi). Qolgan 49 tasi (masalan, "Suv kodeksini
   tasdiqlash to'g'risida", uchuvchisiz apparatlar tartibi) to'liq indekslanadi. Qoida:
   `crawler/full.py`dagi `AMENDING_TITLE_RE`, `index` buyrug'i uni qamrov ro'yxatidan oladi.
+- **Qayta parse va indekslash (2026-11-08).** `parse --all` 15 810 hujjatni 15 daqiqada qayta
+  parse qildi: 0 xato, 1 ogohlantirish (lex.uz jadval sarlavhasini modda deb belgilagan), 34 tasi
+  faqat PDF. To'liq indekslanadigan 10 432 hujjatdan ≈492 ming bo'lak chiqadi (hozirgi 16 657
+  ta o'rniga). `home`da embedding sekundiga ≈11 bo'lak (uzun bo'laklar tufayli benchmark'dagi
+  27 dan past), ya'ni ≈12–13 soat. Zaxira nusxa olindi (`qonunshunos_20261108_122857.dump`), HNSW
+  indeksi o'chirildi (oxirida 0003-migratsiyadagi parametrlar bilan qayta quriladi), tungi
+  update timer'i bir kechaga to'xtatildi. Tunnel orqali bo'limlar bittadan yozilsa ≈8 soat
+  qo'shardi (72 ms kechikish): endi bitta paket (`cf771c8`).
+- **Instabox yordamchilari.** Ishning bir qismi 4 ta instabox box'ga (4 vCPU, har biri ≈10
+  bo'lak/s) berildi: hujjatlar ro'yxatining oxiridan ikki ulushdan (≈55 ming bo'lak). Box'lar
+  bazaga faqat tunnel ochishga ruxsat beruvchi kalit bilan ulanadi (`restrict,port-forwarding,
+  permitopen="127.0.0.1:5432",command="/bin/false"`, `deploy`ning `authorized_keys`ida, izohi
+  `qidx-N`). Bepul tarifda box 120 daqiqa ishlab pauzaga tushadi. Umumiy tezlik ≈52 bo'lak/s.
+  `home` butun ro'yxatni aylanadi va box'lar yozganini (xesh bir xil) o'tkazib yuboradi.
+  Ish tugagach kalitlar serverdan o'chiriladi, box'lar o'chiriladi.
 - **Tungi `update`dagi yangi hujjatlar endi RSS'dan emas, qamrov ro'yxatidan.** Turi va organi
   bo'yicha qamrovni aniqlash ishonchsiz (hokim farmoyishi ham "farmoyish"). Shuning uchun har
   kecha `/uz/search/nat` ro'yxatlarining (`minor=N` va `minor=Y`, eng yangisi birinchi)
