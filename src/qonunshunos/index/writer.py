@@ -265,15 +265,16 @@ def index_document(
                 Jsonb([p.model_dump(mode="json") for p in document.pending_changes]),
             ),
         )
-        section_ids: list[int] = []
         with conn.cursor() as cur:
-            for ord_, row in enumerate(sections):
-                cur.execute(
-                    """
-                    INSERT INTO sections (document_id, ord, kind, level, number, title, path,
-                        elem_id, text, extra)
-                    VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s) RETURNING id
-                    """,
+            # executemany is pipelined: one round trip per batch, not per row (the database
+            # may sit behind an SSH tunnel during bulk indexing).
+            cur.executemany(
+                """
+                INSERT INTO sections (document_id, ord, kind, level, number, title, path,
+                    elem_id, text, extra)
+                VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+                """,
+                [
                     (
                         document.lex_id,
                         ord_,
@@ -285,9 +286,17 @@ def index_document(
                         row.elem_id,
                         row.text,
                         Jsonb(row.extra),
-                    ),
-                )
-                section_ids.append(cur.fetchone()[0])
+                    )
+                    for ord_, row in enumerate(sections)
+                ],
+            )
+            section_ids = [
+                r[0]
+                for r in cur.execute(
+                    "SELECT id FROM sections WHERE document_id = %s ORDER BY ord",
+                    (document.lex_id,),
+                ).fetchall()
+            ]
             cur.executemany(
                 """
                 INSERT INTO chunks (document_id, section_id, ord, heading, text, tsv, embedding)
