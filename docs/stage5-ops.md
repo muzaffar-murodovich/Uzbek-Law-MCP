@@ -119,8 +119,8 @@ lex.uz'dan 86 ta hujjat qayta yuklanmaydi.
 |---|---|---|---|
 | 03:30 | `myserver` | `qonunshunos update` | `qonunshunos-update.timer` |
 | 04:30 | `myserver` | `qonunshunos auth-cleanup` | `qonunshunos-cleanup.timer` |
-| 04:40 | `myserver` | `pg_dump -Fc` → `~/backups/qonunshunos_*.dump` | `qonunshunos-backup.timer` |
-| 05:30 | `home` | `rsync myserver:~/backups/ → ~/backups/myserver/` | `backup-pull.timer` (user) |
+| 04:40 | `myserver` | `pg_dump -Fc` → `~/backups/qonunshunos_*.dump` (3 kun) va `qonunshunos-auth_*.dump` (30 kun) | `qonunshunos-backup.timer` |
+| 05:30 | `home` | `rsync myserver:~/backups/ → /media/muzaffar/Data/backups/myserver/` | `backup-pull.timer` (user) |
 | 08:00 | `myserver` | ertalabki hisobot Telegram'ga | `qonunshunos-report.timer` |
 | har 5 daq. | `home` | `/healthz` tekshiruvi | `qonunshunos-watch.timer` (user) |
 
@@ -132,6 +132,11 @@ lex.uz'dan 86 ta hujjat qayta yuklanmaydi.
 - `home` nusxani tortib olgandan keyin serverga `~/backups/.pulled` belgisini qo'yadi.
   Ertalabki hisobot shu belgiga qarab "oxirgi off-site nusxa: N soat oldin" deb yozadi. Shunday
   qilib, `home` o'chib qolsa ham bilinadi.
+- **Saqlash muddatlari (2026-11-09, to'liq bazadan keyin).** To'liq dump ≈1 GB. Serverda 3 kun,
+  `home`da 14 kun saqlanadi. Foydalanuvchilar, OAuth va `usage_events` jadvallari har kecha
+  alohida kichik dump'ga (`qonunshunos-auth_*.dump`, ≈25 KB) ham yoziladi va 30 kun saqlanadi:
+  ularni lex.uz'dan qayta tiklab bo'lmaydi. `home`da nusxalar asosiy diskda emas,
+  `/media/muzaffar/Data/backups/myserver`da (boshqa ilovalarning nusxalari 30 kun).
 
 ## Telegram xabarlari
 
@@ -159,7 +164,7 @@ lex.uz'dan 86 ta hujjat qayta yuklanmaydi.
 | `src/qonunshunos/db/migrations/0006_crawl_state.sql` | `crawl_state`, `rss_seen` |
 | `src/qonunshunos/notify.py` | Telegram'ga yuborish, ertalabki hisobot |
 | `deploy/systemd/*.service`, `*.timer` | `update`, `cleanup`, `backup`, `report`, `alert@` |
-| `deploy/backup.sh` | `pg_dump -Fc`, tarkibini tekshirish, 14 kunlik tozalash. Parol argv'ga emas, `PGPASSWORD`ga |
+| `deploy/backup.sh` | `pg_dump -Fc`, tarkibini tekshirish, auth jadvallarining alohida dump'i, tozalash (3 / 30 kun). Parol argv'ga emas, `PGPASSWORD`ga |
 | `deploy/home/` | `backup-pull`, `qonunshunos-watch` user unit'lari, `telegram.sh`, `install.sh` (Mac'dan ishga tushiriladi) |
 | `deploy/root-setup.sh` | yangi unit'larni o'rnatish (siz sudo bilan ishga tushirasiz) |
 

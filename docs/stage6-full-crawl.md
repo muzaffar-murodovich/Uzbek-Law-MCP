@@ -240,7 +240,8 @@ eval/questions.yaml                  ≈30 ta yangi savol
 3. ⏭ Sinov to'plami alohida qilinmadi: xom sahifalar saqlanadi, parser keyin tuzatilib, qayta
    yuklamasdan qayta parse qilinadi. Parser ogohlantirishlari to'liq yuklashdan keyin ko'riladi.
 4. ✅ To'liq yuklab olish (`qonunshunos crawl-full`) `myserver`da: 2026-11-07 22:25 – 11-08 16:47 (Toshkent).
-5. Zaxira nusxa muddatlarini o'zgartirish (serverda o'zgarish: avval foydalanuvchidan so'raladi).
+5. ✅ Zaxira nusxa muddatlari (2026-11-09, foydalanuvchi ma'qulladi): serverda 3 kun, `home`da
+   14 kun (`/media/muzaffar/Data`), auth jadvallari alohida dump'da 30 kun. To'liq dump ≈1 GB.
 6. ⏳ Indekslash: ✅ HNSW'siz yozish (2026-11-09) → ⏳ indeksni qurish → rekvizitlar. `minor=Y` bo'yicha qaror
    qabul qilindi (pastda, "O'zgartirish kirituvchi hujjatlar").
 7. Baholash: yangi savollar, R@10 va javob vaqti, kerak bo'lsa hujjat turi og'irligi.
@@ -322,10 +323,15 @@ eval/questions.yaml                  ≈30 ta yangi savol
   birgalikda ishladi. Server bazasida 15 810 hujjat, 491 947 bo'lak, embedding'siz bo'lak yo'q.
   Box'lar o'chirildi, ularning kalitlari `authorized_keys`dan olib tashlandi (nusxasi
   `authorized_keys.bak-qidx`), `home`dagi tunnel va indekslash unit'lari to'xtatildi.
-- **HNSW qayta qurilmoqda (2026-11-09 18:21 UTC).** Oddiy `CREATE INDEX` (yozuvchi yo'q, timer
+- **HNSW qayta qurildi (2026-11-09 18:21–18:28 UTC, 7,5 daqiqa, 640 MB).** Oddiy `CREATE INDEX` (yozuvchi yo'q, timer
   to'xtatilgan), `maintenance_work_mem = 1GB`, 2 ta parallel worker, parametrlar 0003-migratsiyadagidek
   (m = 32, ef_construction = 200). Server auto mode'da to'xtatilgani uchun buyruqni foydalanuvchi
   ishga tushirdi. Qurish paytida bo'sh RAM ≈1,5 GB.
+- **Qidiruv tezligi (issiq kesh, 8 ta savol, har biri 1 ta muqobil ifoda bilan):** mediana 0,69 s,
+  eng sekini 0,94 s. Vaqtning asosiy qismi FTS'da: umumiy so'z ko'p bo'lakka mos keladi
+  ("ajrimdan keyin aliment" → 15 773 bo'lak), har biri baholanadi. `tsv`ni bir marta o'qish
+  (MATERIALIZED CTE, `unnest(tsv)`) va har bir so'zni alohida indeksdan olish sinab ko'rildi:
+  tezlik oshmadi. Faqat `count(*) FROM chunks` (≈70 ms) 10 daqiqaga keshlanadi.
 
 ## Xavflar
 
