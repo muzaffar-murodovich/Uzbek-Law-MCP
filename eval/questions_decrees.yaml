@@ -1,0 +1,178 @@
+# Retrieval evaluation on by-laws: government (VM) decisions, Presidential decrees and
+# resolutions, ministry orders. None of these acts is in questions.yaml (codes and laws only).
+# Written by the assistant from the full corpus (2026-11-09) by reading the acts; the expected
+# band was chosen from the text, not from search results.
+# Decrees repeat band numbers (the decree itself and each attached Nizom), so ``within`` names
+# the part of the heading path the band must sit in; "" means the decree's own bands.
+# Style tags: rasmiy (formal), sozlashuv (colloquial), xatoli (typos / no apostrophes).
+
+# --- VM qarori 272: haydovchilik guvohnomasi imtihonlari (-5409444) ---
+- id: dr-01
+  question: Haydovchilik guvohnomasi uchun nazariy imtihonda nechta savol beriladi?
+  expected: [{document: -5409444, article: "24", within: "1-§. Nazariy imtihonni oʻtkazish tartibi"}]
+  tags: [vm_qarori, sozlashuv]
+  alt: ["nazariy imtihon elektron test savollari soni va javob variantlari"]
+- id: dr-02
+  question: Nazariydan oʻtdim, amaliy imtihonni qancha vaqt ichida topshirishim kerak?
+  expected: [{document: -5409444, article: "17", within: "3-bob. Imtihonlarni oʻtkazish tartibi"}]
+  tags: [vm_qarori, sozlashuv]
+  alt: ["nazariy imtihonda olingan ijobiy bahoning amal qilish muddati"]
+- id: dr-03
+  question: avtomaktab imtihonidan yiqilsam tolagan pulim qaytariladimi
+  expected: [{document: -5409444, article: "52", within: "4-bob. Yakunlovchi qoidalar"}]
+  tags: [vm_qarori, xatoli]
+  alt: ["haydovchilik imtihoni uchun toʻlov imtihon natijasidan qatʼi nazar qaytarilmaydi"]
+
+# --- VM qarori 38: yashash joyi manzilini tahrirlash (-8024805) ---
+- id: dr-04
+  question: Propiskadagi manzilim xato yozilgan ekan, tuzattirish pullikmi?
+  expected: [{document: -8024805, article: "4", within: "1-bob. Umumiy qoidalar"}]
+  tags: [vm_qarori, sozlashuv]
+  alt: ["yashash joyi manzili toʻgʻrisidagi maʼlumotni tahrirlash davlat xizmati uchun toʻlov"]
+- id: dr-05
+  question: Yashash joyi manzilini tahrirlash soʻrovnomasi necha kunda koʻrib chiqiladi?
+  expected: [{document: -8024805, article: "11", within: "2-bob"}]
+  tags: [vm_qarori, rasmiy]
+  alt: ["vakolatli organga kelib tushgan soʻrovnomani koʻrib chiqish muddati ish kuni"]
+
+# --- Adliya vazirligi buyrugʻi 3743: nikoh shartnomasini tasdiqlash (-7973712) ---
+- id: dr-06
+  question: Nikoh shartnomasini ishonchnoma bilan vakil orqali tuzsa boʻladimi?
+  expected: [{document: -7973712, article: "7", within: "1-bob. Umumiy qoidalar"}]
+  tags: [buyruq, sozlashuv]
+  alt: ["nikoh shartnomasini vakil tomonidan tuzishga yoʻl qoʻyilmaydi"]
+- id: dr-07
+  question: Nikoh shartnomasini notariusda tuzdik, lekin ZAGSda roʻyxatdan oʻtmadik. Shartnoma kuchdami?
+  expected: [{document: -7973712, article: "8", within: "1-bob. Umumiy qoidalar"}]
+  tags: [buyruq, sozlashuv]
+  alt: ["taraflar oʻrtasida nikoh qayd etilmasa nikoh shartnomasining yuridik oqibatlari"]
+- id: dr-08
+  question: Notarius nikoh shartnomasini tasdiqlashdan bosh tortsa, toʻlagan pulim qaytariladimi?
+  expected: [{document: -7973712, article: "47"}, {document: -7973712, article: "46"}]
+  tags: [buyruq, sozlashuv]
+  alt: ["notarial harakatni amalga oshirish rad etilganda toʻlovlarni qaytarish"]
+
+# --- Shaxsga doir maʼlumotlar agentligi buyrugʻi 3478: namunaviy tartib (-6663967) ---
+- id: dr-09
+  question: Maqsadga erishilgandan keyin shaxsga doir maʼlumotlar necha kun ichida yoʻq qilinishi kerak?
+  expected: [{document: -6663967, article: "23", within: "3-bob"}]
+  tags: [buyruq, rasmiy]
+  alt: ["shaxsga doir maʼlumotlarga ishlov berish maqsadiga erishilganda ularni yoʻq qilish muddati"]
+- id: dr-10
+  question: Sogʻligʻim haqidagi maʼlumotga ishlov berish uchun roziligim qanday shaklda olinishi kerak?
+  expected: [{document: -6663967, article: "9", within: "3-bob"}]
+  tags: [buyruq, sozlashuv]
+  alt: ["shaxsga doir maxsus maʼlumotlarga ishlov berish uchun subyektning yozma roziligi"]
+- id: dr-11
+  question: Shaxsiy maʼlumotlarimni qayta ishlashga bergan roziligimni qaytarib olsam boʻladimi?
+  expected: [{document: -6663967, article: "10", within: "3-bob"}]
+  tags: [buyruq, sozlashuv]
+  alt: ["subyektning shaxsga doir maʼlumotlarga ishlov berishga roziligini qaytarib olishi"]
+
+# --- SSV buyrugʻi 3355: chet el fuqarolariga tibbiy yordam (-5928366) ---
+- id: dr-12
+  question: Chet el fuqarosiga tez tibbiy yordam bepul koʻrsatiladimi?
+  expected: [{document: -5928366, article: "5", within: "3-bob"}, {document: -5928366, article: "3", within: "2-bob"}]
+  tags: [buyruq, sozlashuv]
+  alt: ["chet el fuqarolariga shoshilinch va tez tibbiy yordamni bepul koʻrsatish"]
+- id: dr-13
+  question: Xorijlik bemor klinikada davolanish uchun dollarda toʻlay oladimi?
+  expected: [{document: -5928366, article: "7", within: "3-bob"}]
+  tags: [buyruq, sozlashuv]
+  alt: ["chet el fuqarolari tibbiy xizmatlarga haqni milliy valyutada toʻlaydi"]
+
+# --- VM qarori 170: davlat uy-joy fondidagi turar joylarni ijaraga berish (-4216319) ---
+- id: dr-14
+  question: Davlat uy-joy fondidagi kvartirani ijaraga olish shartnomasi necha yilga tuziladi?
+  expected: [{document: -4216319, article: "5", within: "1-bob. Umumiy qoidalar"}]
+  tags: [vm_qarori, sozlashuv]
+  alt: ["davlat uy-joy fondidagi turar joyni ijaraga olish shartnomasining muddati"]
+- id: dr-15
+  question: Toshkentda davlat uyi uchun ijara haqi qanday hisoblanadi?
+  expected: [{document: -4216319, article: "21", within: "4-bob. Ijara haqi"}]
+  tags: [vm_qarori, sozlashuv]
+  alt: ["davlat uy-joyidan foydalanganlik uchun ijara haqi 1 kv.m. uchun bazaviy hisoblash miqdori"]
+- id: dr-16
+  question: Davlatdan ijaraga olingan uyni garovga qoʻysa boʻladimi?
+  expected: [{document: -4216319, article: "3", within: "1-bob. Umumiy qoidalar"}]
+  tags: [vm_qarori, sozlashuv]
+  alt: ["ijaraga berilgan turar joyni garovga qoʻyish yoki uchinchi shaxslarga oʻtkazish taqiqi"]
+
+# --- Prezident farmoni PF-81: oliy taʼlimga qabul (-6937332) ---
+- id: dr-17
+  question: Magistraturaga kirish uchun ingliz tili sertifikati qaysi darajada boʻlishi kerak?
+  expected: [{document: -6937332, article: "4", within: ""}]
+  tags: [farmon, sozlashuv]
+  alt: ["magistraturaga qabul qilishda xorijiy tilni bilish darajasini belgilovchi sertifikat talablari"]
+- id: dr-18
+  question: Oliygohga qabulda avval test soʻng tanlov tamoyili qachondan qoʻllanadi?
+  expected: [{document: -6937332, article: "5", within: ""}]
+  tags: [farmon, rasmiy]
+  alt: ["davlat oliy taʼlim tashkilotlariga qabul imtihonlari avval test, soʻng tanlov tamoyili"]
+
+# --- VM qarori 596: kam taʼminlangan oilalar, Ijtimoiy himoya yagona reyestri (-6663873) ---
+- id: dr-19
+  question: Kam taʼminlangan oila bolalar nafaqasiga onlayn ariza bera oladimi?
+  expected: [{document: -6663873, article: "1", within: ""}]
+  tags: [vm_qarori, sozlashuv]
+  alt: ["kam taʼminlangan oilalarga bolalar nafaqasi va moddiy yordam tayinlash uchun onlayn ariza"]
+
+# --- Prezident qarori PQ-4829: mehnat migratsiyasi (-4997972) ---
+- id: dr-20
+  question: Rossiyada hujjatsiz va pulsiz qolib ketgan mehnat migrantiga davlat yordam beradimi?
+  expected: [{document: -4997972, article: "14", within: ""}]
+  tags: [pq, sozlashuv]
+  alt: ["chet davlatlarda murakkab moliyaviy ahvolga tushgan fuqarolarga bir martalik moddiy yordam"]
+- id: dr-21
+  question: Xorijdagi mehnat migrantlari muammolari boʻyicha qaysi qisqa raqamga qoʻngʻiroq qilinadi?
+  expected: [{document: -4997972, article: "20", within: ""}]
+  tags: [pq, sozlashuv]
+  alt: ["xorijda vaqtincha mehnat faoliyati masalalari boʻyicha murojaatlarni qabul qiluvchi qisqa raqam"]
+
+# --- VM qarori 417: chet el fuqarolarining viza muddatini uzaytirish (-7617018) ---
+- id: dr-22
+  question: Chet ellik mehmonimning vizasini uzaytirish uchun qachongacha murojaat qilish kerak?
+  expected: [{document: -7617018, article: "4", within: "1-ilova"}]
+  tags: [vm_qarori, sozlashuv]
+  alt: ["viza muddatini uzaytirish uchun viza muddati tugashiga kamida necha kun qolganda murojaat"]
+- id: dr-23
+  question: viza muddatini uzaytirish arizasi necha kunda korib chiqiladi
+  expected: [{document: -7617018, article: "15²¹"}]
+  tags: [vm_qarori, xatoli]
+  alt: ["chet el fuqarolarining viza muddatini uzaytirish talabnomasini koʻrib chiqish muddati"]
+
+# --- Prezident farmoni PF-6065: ID-karta (-5015098) ---
+- id: dr-24
+  question: Yangi tugʻilgan bolaga ID-karta necha yilga beriladi?
+  expected: [{document: -5015098, article: "4", within: "ID-kartasi toʻgʻrisida NIZOM > 1-bob"}]
+  tags: [farmon, sozlashuv]
+  alt: ["ID-kartaning amal qilish muddatlari fuqaroning yoshiga qarab"]
+- id: dr-25
+  question: Familiyam oʻzgardi, ID-kartani qancha muddat ichida almashtirishim kerak?
+  expected: [{document: -5015098, article: "10", within: "fuqarosining identifikatsiya ID-kartasi toʻgʻrisida NIZOM"}]
+  tags: [farmon, sozlashuv]
+  alt: ["familiyasi, ismi oʻzgargandan soʻng ID-kartani almashtirish muddati"]
+
+# --- Prezident qarori PQ-4079: xorijga chiqish biometrik pasporti (-4162591) ---
+- id: dr-26
+  question: Zagran pasport 25 yoshgacha boʻlganlarga necha yilga beriladi?
+  expected: [{document: -4162591, article: "7", within: "xorijga chiqish tartibi toʻgʻrisidagi NIZOM"}]
+  tags: [pq, sozlashuv]
+  alt: ["xorijga chiqish biometrik pasportining amal qilish muddatlari yoshga qarab"]
+- id: dr-27
+  question: Xorijga chiqish pasportini muddati tugamasdan oldin almashtirsa boʻladimi?
+  expected: [{document: -4162591, article: "40⁴", within: "xorijga chiqish tartibi toʻgʻrisidagi NIZOM"}]
+  tags: [pq, sozlashuv]
+  alt: ["xorijga chiqish biometrik pasportini amal qilish muddatidan qatʼi nazar almashtirish"]
+- id: dr-28
+  question: Armiyaga chaqirilgan yigitning xorijga chiqish pasportini olib qoʻyishadimi?
+  expected: [{document: -4162591, article: "14", within: "xorijga chiqish tartibi toʻgʻrisidagi NIZOM"}]
+  tags: [pq, sozlashuv]
+  alt: ["muddatli harbiy xizmatga chaqirilgan fuqarolardan xorijga chiqish pasportini olib qoʻyish"]
+
+# --- VM qarori 272 (Nizom), qoʻshimcha ---
+- id: dr-29
+  question: Haydovchilik nazariy imtihonida savollarga javob berish uchun qancha vaqt beriladi?
+  expected: [{document: -5409444, article: "27", within: "1-§. Nazariy imtihonni oʻtkazish tartibi"}]
+  tags: [vm_qarori, rasmiy]
+  alt: ["nazariy imtihon savollariga javob berish uchun ajratilgan vaqt daqiqa"]

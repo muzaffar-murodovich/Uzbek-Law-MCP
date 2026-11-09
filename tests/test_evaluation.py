@@ -4,8 +4,8 @@ from qonunshunos.evaluation import Expected, Question, first_rank, load_question
 from qonunshunos.search.hybrid import Hit
 
 
-def _hit(doc: int, number: str) -> Hit:
-    return Hit(doc, "D", None, "in_force", None, 0, "modda", number, None, [], "", "", 0.0)
+def _hit(doc: int, number: str, path: list[str] | None = None) -> Hit:
+    return Hit(doc, "D", None, "in_force", None, 0, "modda", number, None, path or [], "", "", 0.0)
 
 
 def test_first_rank_and_metrics():
@@ -15,6 +15,16 @@ def test_first_rank_and_metrics():
     m = metrics([1, 3, None, 12])
     assert (m.recall_at_1, m.recall_at_5, m.recall_at_10) == (0.25, 0.5, 0.5)
     assert m.mrr == pytest.approx((1 + 1 / 3) / 4)
+
+
+def test_within_tells_repeated_band_numbers_apart():
+    decree = _hit(-1, "4")
+    nizom = _hit(
+        -1, "4", ["1-ilova. Fuqaro ID-kartasi toʻgʻrisida NIZOM", "1-bob. Umumiy qoidalar"]
+    )
+    assert first_rank([decree, nizom], [Expected(-1, "4", "ID-kartasi toʻgʻrisida NIZOM")]) == 2
+    assert first_rank([nizom, decree], [Expected(-1, "4", "")]) == 2
+    assert first_rank([nizom], [Expected(-1, "4", "2-ilova")]) is None
 
 
 def test_run_reports_per_mode():

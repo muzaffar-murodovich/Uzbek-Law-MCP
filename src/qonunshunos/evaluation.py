@@ -16,6 +16,18 @@ from qonunshunos.search.hybrid import Hit
 class Expected:
     document: int
     article: str  # unit number: "161", "126¹", band "5"
+    # Decrees repeat band numbers (the decree itself, each attached Nizom). ``within`` must occur
+    # in the unit's heading path; "" means the decree's own bands (empty path).
+    within: str | None = None
+
+    def matches(self, document: int, article: str | None, path: Sequence[str]) -> bool:
+        if (document, article) != (self.document, self.article):
+            return False
+        if self.within is None:
+            return True
+        if self.within == "":
+            return not path
+        return self.within in " > ".join(path)
 
 
 @dataclass
@@ -42,7 +54,8 @@ def load_questions(path: Path, alt_file: Path | None = None) -> list[Question]:
                 id=str(item["id"]),
                 question=item["question"],
                 expected=[
-                    Expected(int(e["document"]), str(e["article"])) for e in item["expected"]
+                    Expected(int(e["document"]), str(e["article"]), e.get("within"))
+                    for e in item["expected"]
                 ],
                 tags=list(item.get("tags", [])),
                 alt=list(
@@ -56,9 +69,8 @@ def load_questions(path: Path, alt_file: Path | None = None) -> list[Question]:
 
 
 def first_rank(hits: Sequence[Hit], expected: Sequence[Expected]) -> int | None:
-    wanted = {(e.document, e.article) for e in expected}
     for rank, hit in enumerate(hits, start=1):
-        if (hit.document_id, hit.unit_number) in wanted:
+        if any(e.matches(hit.document_id, hit.unit_number, hit.path) for e in expected):
             return rank
     return None
 
