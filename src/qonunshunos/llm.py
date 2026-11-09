@@ -65,7 +65,8 @@ class Ledger:
         return datetime.now(UTC).strftime("%Y-%m-%d")
 
     def used(self, key_var: str, tier: str) -> int:
-        return self._load().get(self.today(), {}).get(key_var, {}).get(tier, 0)
+        with self._lock:
+            return self._load().get(self.today(), {}).get(key_var, {}).get(tier, 0)
 
     _lock = threading.Lock()  # parallel callers share one file: read-modify-write under a lock
 
@@ -75,7 +76,10 @@ class Ledger:
             day = data.setdefault(self.today(), {}).setdefault(key_var, {})
             day[tier] = day.get(tier, 0) + tokens
             self.path.parent.mkdir(parents=True, exist_ok=True)
-            self.path.write_text(json.dumps(data, indent=1), encoding="utf-8")
+            # Write-then-rename: a reader in another process never sees a half-written file.
+            tmp = self.path.with_suffix(f".{os.getpid()}.tmp")
+            tmp.write_text(json.dumps(data, indent=1), encoding="utf-8")
+            tmp.replace(self.path)
 
 
 class OpenAIChat:
