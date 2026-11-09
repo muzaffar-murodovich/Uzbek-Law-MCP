@@ -1,9 +1,10 @@
 """Minimal OpenAI chat client (httpx) for offline tooling: evaluation data, rephrasing.
 
-Keys: ``OPENAI_API_KEY_2`` first, then ``OPENAI_API_KEY`` (two accounts, each with a daily
-free-token allowance). When the free allowance is used up OpenAI does **not** return an
-error, it starts billing. So every call is checked against a local per-key, per-day (UTC)
-ledger in ``data/llm_usage.json`` and refused before the allowance would be exceeded.
+Keys: ``OPENAI_API_KEY_2``, ``OPENAI_API_KEY_3``, then ``OPENAI_API_KEY`` (three accounts, each
+with a daily free-token allowance). When the free allowance is used up OpenAI does **not**
+return an error, it starts billing. So every call is checked against a local per-key, per-day
+(UTC) ledger in ``data/llm_usage.json`` and refused before the allowance would be exceeded,
+unless the caller explicitly allows paid tokens (``allow_paid``).
 """
 
 import json
@@ -20,7 +21,7 @@ from qonunshunos.config import load_dotenv
 log = logging.getLogger(__name__)
 
 API_URL = "https://api.openai.com/v1/chat/completions"
-KEY_VARS = ("OPENAI_API_KEY_2", "OPENAI_API_KEY")
+KEY_VARS = ("OPENAI_API_KEY_2", "OPENAI_API_KEY_3", "OPENAI_API_KEY")
 LEDGER = Path("data/llm_usage.json")
 
 # Free daily allowance per account, with a safety margin (250k and 2.5M tokens).
@@ -74,13 +75,16 @@ class Ledger:
 
 
 class OpenAIChat:
-    def __init__(self, model: str = "gpt-5.4", timeout: float = 120.0) -> None:
+    def __init__(
+        self, model: str = "gpt-5.4", timeout: float = 120.0, *, allow_paid: bool = False
+    ) -> None:
         load_dotenv()
         self.tier = tier_of(model)
         self.keys = [(v, os.environ[v]) for v in KEY_VARS if os.environ.get(v)]
         if not self.keys:
-            raise LLMError("no OPENAI_API_KEY_2 / OPENAI_API_KEY in the environment / .env")
+            raise LLMError(f"none of {', '.join(KEY_VARS)} in the environment / .env")
         self.model = model
+        self.allow_paid = allow_paid  # past every free allowance, keep going on paid tokens
         self.ledger = Ledger()
         self.usage = {"prompt_tokens": 0, "completion_tokens": 0}
         self._http = httpx.Client(timeout=timeout)
@@ -90,6 +94,9 @@ class OpenAIChat:
         for var, key in self.keys:
             if self.ledger.used(var, self.tier) < limit:
                 return var, key
+        if self.allow_paid:
+            # Spread the paid part over the accounts: the least used one today.
+            return min(self.keys, key=lambda vk: self.ledger.used(vk[0], self.tier))
         raise BudgetExhausted(
             f"free {self.tier}-model tokens for today are used up on all keys "
             f"(see {self.ledger.path}); try tomorrow (UTC) or a smaller model"
