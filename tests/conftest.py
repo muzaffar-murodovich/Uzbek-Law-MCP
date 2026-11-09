@@ -39,3 +39,11 @@ def db_dsn():
         pytest.skip(f"test database is not reachable: {exc}")
     migrate(dsn)
     return dsn
+
+
+@pytest.fixture(autouse=True)
+def _fresh_chunk_total(monkeypatch):
+    """Each test sees its own corpus size, not one cached by an earlier test."""
+    from qonunshunos.search import hybrid
+
+    monkeypatch.setattr(hybrid, "_total", None)

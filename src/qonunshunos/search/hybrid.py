@@ -1,6 +1,7 @@
 """Hybrid search: full-text (FTS) and vector candidates merged with Reciprocal Rank Fusion."""
 
 import math
+import time
 from collections.abc import Sequence
 from dataclasses import dataclass, field
 from typing import Literal
@@ -60,11 +61,24 @@ HEADING_BONUS = 0.5  # extra weight when a term occurs in the chunk heading
 COMMON_DF = 0.05  # terms in more than 5 % of chunks only score, they do not select
 
 
+TOTAL_TTL = 600.0  # seconds; the count only drifts with the nightly update
+_total: tuple[float, int] | None = None
+
+
+def chunk_total(conn: psycopg.Connection) -> int:
+    """``count(*)`` of chunks, cached: on the full corpus it costs ~70 ms per query."""
+    global _total
+    now = time.monotonic()
+    if _total is None or now - _total[0] > TOTAL_TTL:
+        _total = (now, conn.execute("SELECT count(*) FROM chunks").fetchone()[0])
+    return _total[1]
+
+
 def idf_weights(
     conn: psycopg.Connection, words: Sequence[str]
 ) -> tuple[dict[str, float], dict[str, float]]:
     """BM25-style IDF and document share of each query term; unknown terms are dropped."""
-    total = conn.execute("SELECT count(*) FROM chunks").fetchone()[0]
+    total = chunk_total(conn)
     rows = conn.execute(
         "SELECT word, ndoc FROM fts_stats WHERE word = ANY(%s)", (list(words),)
     ).fetchall()
