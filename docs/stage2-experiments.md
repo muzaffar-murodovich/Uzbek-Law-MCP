@@ -325,6 +325,79 @@ Odatiy `limit`ni kamaytirish ham sinaldi:
 - **Haqiqiy yechim tartiblashni yaxshilash:** reranker modeli (masalan, `bge-reranker-v2-m3`)
   yoki kuchliroq embedding. Bu kuchliroq serverga o'tganda ko'riladi.
 
+## 6c. To'liq bazada birinchi baholash (6-bosqich, 2026-11-10)
+
+Baza: 15 810 amaldagi hujjat, shundan 10 432 tasi matni bilan indekslangan, 491 947 bo'lak
+(avval 86 hujjat, 16 657 bo'lak). Model o'sha: `e5-small-int8`, HNSW m=32, ef_construction=200,
+ef_search=100. Baholash Mac'dan SSH tunnel orqali server bazasida o'tkazildi (yangi kod:
+`count(*)` keshi, `within`). Tunneldagi kechikish tufayli `ms` ustuni tezlikni ko'rsatmaydi.
+Natija fayllari: `eval/results/2026-11-10-full-corpus-*.json`.
+
+### Savollar to'plamlari
+
+| Fayl | Savol | Qanday yaratilgan | `alt` |
+|---|---:|---|---|
+| `eval/questions.yaml` | 97 | qo'lda, kodeks va qonunlar (86 hujjat davri) | qo'lda yozilgan |
+| `eval/questions_llm.yaml` | 100 | gpt-5.4, 86 hujjatdan, judged | yo'q (xom) |
+| `eval/questions_decrees.yaml` | 29 | qo'lda, 11 ta qaror/farmon/buyruq, matnni o'qib | qo'lda yozilgan |
+| `eval/questions_llm_full.yaml` | 300 | gpt-5.4, butun bazadan turlar bo'yicha, judged | yo'q (xom) |
+
+`questions_llm_full`: tasodifiy hujjatdan bitta modda/band, hujjatlar turlar bo'yicha bazadagi
+ulushiga qarab (`llm_eval.py generate --by-kind`). 1 355 ta band sinaldi, ≈75 %ini model
+"oddiy fuqaro so'ramaydi" deb tashladi (tashkiliy bandlar). `judge` 175 ta savolga 231 ta
+qo'shimcha to'g'ri javob qo'shdi. Turlar: vm_qarori 135, qaror 45, buyruq 36, boshqa 33,
+qonun 25, farmon 19, kodeks 6, konstitutsiya 1. Kamchilik: ≈15 % savolda matndagi aniq raqam
+yoki so'z bor (natijani biroz oshiradi). Tokenlar: generate ≈0,9 mln, judge ≈0,64 mln
+(3 kalit bepul limiti tugagach `--allow-paid`).
+
+`within`: qarorlarda band raqami takrorlanadi (qarorning o'zi va har bir Nizom), shuning uchun
+kutilgan javob sarlavha yo'lining bir qismi bilan aniqlanadi (`evaluation.Expected.within`).
+
+### Natijalar (R@10; qavsda 86 hujjatdagi qiymat)
+
+| To'plam | FTS | Vektor | Gibrid | Gibrid R@1 | Gibrid MRR |
+|---|---:|---:|---:|---:|---:|
+| questions, `alt` bilan (97) | 0,77 | 0,34 | **0,75** (0,92) | 0,34 | 0,47 |
+| questions_llm, xom (100) | 0,29 | 0,08 | **0,26** (0,65) | 0,04 | 0,09 |
+| questions_decrees, `alt` bilan (29) | 0,93 | 0,17 | **0,72** | 0,21 | 0,35 |
+| questions_llm_full, xom (300) | 0,45 | 0,19 | **0,53** | 0,12 | 0,24 |
+
+`questions_llm_full` gibrid R@10 turlar bo'yicha: vm_qarori 0,59 (135), buyruq 0,58 (36),
+farmon 0,53 (19), boshqa 0,52 (33), qonun 0,48 (25), qaror 0,44 (45), **kodeks 0,00 (6)**,
+konstitutsiya 0,00 (1). `questions` teglari bo'yicha: mehnat 0,73, oila 0,70, qonun 0,65,
+soliq 0,67, pensiya 0,33, fuqarolik 0,87, jinoyat 0,75.
+
+### Tashxis
+
+- **Vektor qidiruv to'liq bazada deyarli ishlamaydi.** 8 ta `questions_llm` savolida HNSW va
+  aniq (indekssiz) qidiruv solishtirildi: kerakli modda top-50 da ikkalasida ham faqat 1 tasida
+  (19- va 22-o'rin). Demak sabab indeks emas, model: e5-small 490 ming o'xshash bo'lak
+  ("…chora-tadbirlari toʻgʻrisida") orasida ma'noni ajrata olmaydi. HNSW aniq top-50 ning
+  34–50 tasini topdi (kichik qo'shimcha yo'qotish).
+- **Vektor shovqini gibridni pasaytiradi:** `questions_llm`da gibrid 0,26 < FTS 0,29;
+  `questions_decrees`da gibrid 0,72 < FTS 0,93.
+- **Kodekslar siqib chiqariladi:** kodeks moddalarini yuzlab qarorlardagi o'xshash bandlar
+  ortga suradi (`questions_llm_full`da kodeks 0/6).
+- Xom LLM savollarida `alt` yo'q; xizmatda AI qayta yozadi (86 hujjatda bu 0,65 → 0,90 bergan).
+
+### Tezlik (serverda, issiq kesh, 8 savol, 1 ta `alt` bilan)
+
+Gibrid: mediana 0,69 s, maksimum 0,94 s. Vektor ≈0,01 s, FTS 0,1–0,65 s (umumiy so'z ko'p bo'lakka
+mos keladi, masalan 15 773 bo'lak). HNSW qurish: 7,5 daqiqa, 640 MB. Bo'sh RAM qurilgandan keyin
+≈2,7 GB; tungi update'da 900 MB peak + ≈1 GB swap.
+
+### Tuzatish variantlari (muhokama qilinadi, qaror qabul qilinmagan)
+
+1. `rephrase` bilan 300 ta savolga AI `alt`ini yozish va real sharoitga yaqin o'lchash
+   (≈0,3 mln token).
+2. Hujjat turiga og'irlik: Konstitutsiya va kodekslar yuqoriroq, qonunlar o'rtada.
+3. Gibridda vektor og'irligini kamaytirish, FTS nomzodlarini ko'paytirish (RRF parametrlari).
+4. Qayta saralovchi model (reranker) top-50 da: sifat katta, lekin server CPU va javob vaqti.
+5. Kuchliroq embedding (bge-m3: 86 hujjatda MRR +0,1): server RAM'ini oshirish kerak.
+
+Tavsiya: 1 → 2 → 3, har biridan keyin to'rtala to'plamni qayta o'lchash; 0,85 ga yetmasa 4/5.
+Ommaga ochish shu ish tugaguncha kechiktiriladi.
+
 ## 7. Ochiq masalalar
 
 - **Model tanlovi.** 4.7-bo'lim: sifat bo'yicha bge-m3 birinchi, lekin `myserver` uchun og'ir.
@@ -342,4 +415,9 @@ uv run qonunshunos db-migrate && uv run qonunshunos index
 uv run qonunshunos eval --alt-file eval/alt_llm.json
 uv run qonunshunos eval --questions eval/questions_llm.yaml --alt-file eval/alt_llm_questions_llm.json
 uv run --group bench python scripts/bench_embeddings.py --alt-file eval/alt_llm.json
+# To'liq baza (6c): server bazasiga tunnel orqali, QONUNSHUNOS_DSN tunnelga qaratilgan
+uv run python scripts/llm_eval.py generate --by-kind --sample 450 --limit 300 \
+    --out eval/questions_llm_full.yaml --id-prefix lf --workers 6
+uv run python scripts/llm_eval.py judge --questions eval/questions_llm_full.yaml --workers 6
+uv run qonunshunos eval --questions eval/questions_llm_full.yaml --save full-corpus-questions_llm_full
 ```

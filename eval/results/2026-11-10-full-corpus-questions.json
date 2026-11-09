@@ -1,0 +1,2998 @@
+{
+ "modes": {
+  "fts": {
+   "overall": {
+    "n": 97,
+    "recall_at_1": 0.32989690721649484,
+    "recall_at_5": 0.6494845360824743,
+    "recall_at_10": 0.7731958762886598,
+    "mrr": 0.4636434298805433
+   },
+   "by_tag": {
+    "bank": {
+     "n": 1,
+     "recall_at_1": 0.0,
+     "recall_at_5": 0.0,
+     "recall_at_10": 0.0,
+     "mrr": 0.0
+    },
+    "davlat-boji": {
+     "n": 2,
+     "recall_at_1": 1.0,
+     "recall_at_5": 1.0,
+     "recall_at_10": 1.0,
+     "mrr": 1.0
+    },
+    "fuqarolik": {
+     "n": 15,
+     "recall_at_1": 0.5333333333333333,
+     "recall_at_5": 0.7333333333333333,
+     "recall_at_10": 0.8666666666666667,
+     "mrr": 0.6314814814814814
+    },
+    "fuqarolik-instituti": {
+     "n": 2,
+     "recall_at_1": 0.0,
+     "recall_at_5": 0.0,
+     "recall_at_10": 0.0,
+     "mrr": 0.0
+    },
+    "harbiy": {
+     "n": 3,
+     "recall_at_1": 0.3333333333333333,
+     "recall_at_5": 0.6666666666666666,
+     "recall_at_10": 1.0,
+     "mrr": 0.5416666666666666
+    },
+    "istemolchi": {
+     "n": 2,
+     "recall_at_1": 0.0,
+     "recall_at_5": 1.0,
+     "recall_at_10": 1.0,
+     "mrr": 0.225
+    },
+    "jinoyat": {
+     "n": 8,
+     "recall_at_1": 0.375,
+     "recall_at_5": 0.75,
+     "recall_at_10": 0.875,
+     "mrr": 0.5260416666666666
+    },
+    "konstitutsiya": {
+     "n": 8,
+     "recall_at_1": 0.0,
+     "recall_at_5": 0.625,
+     "recall_at_10": 0.75,
+     "mrr": 0.21597222222222223
+    },
+    "kredit": {
+     "n": 2,
+     "recall_at_1": 0.5,
+     "recall_at_5": 1.0,
+     "recall_at_10": 1.0,
+     "mrr": 0.625
+    },
+    "malumot": {
+     "n": 1,
+     "recall_at_1": 0.0,
+     "recall_at_5": 0.0,
+     "recall_at_10": 0.0,
+     "mrr": 0.0
+    },
+    "mamuriy": {
+     "n": 9,
+     "recall_at_1": 0.4444444444444444,
+     "recall_at_5": 0.6666666666666666,
+     "recall_at_10": 0.7777777777777778,
+     "mrr": 0.5714285714285715
+    },
+    "mehnat": {
+     "n": 22,
+     "recall_at_1": 0.3181818181818182,
+     "recall_at_5": 0.5909090909090909,
+     "recall_at_10": 0.7727272727272727,
+     "mrr": 0.4433080808080808
+    },
+    "meros": {
+     "n": 4,
+     "recall_at_1": 0.5,
+     "recall_at_5": 0.75,
+     "recall_at_10": 1.0,
+     "mrr": 0.6527777777777778
+    },
+    "notariat": {
+     "n": 1,
+     "recall_at_1": 0.0,
+     "recall_at_5": 0.0,
+     "recall_at_10": 1.0,
+     "mrr": 0.1111111111111111
+    },
+    "oila": {
+     "n": 10,
+     "recall_at_1": 0.4,
+     "recall_at_5": 0.7,
+     "recall_at_10": 0.7,
+     "mrr": 0.52
+    },
+    "pensiya": {
+     "n": 3,
+     "recall_at_1": 0.3333333333333333,
+     "recall_at_5": 0.6666666666666666,
+     "recall_at_10": 0.6666666666666666,
+     "mrr": 0.4444444444444444
+    },
+    "qonun": {
+     "n": 20,
+     "recall_at_1": 0.25,
+     "recall_at_5": 0.6,
+     "recall_at_10": 0.75,
+     "mrr": 0.3884722222222222
+    },
+    "rasmiy": {
+     "n": 12,
+     "recall_at_1": 0.3333333333333333,
+     "recall_at_5": 0.6666666666666666,
+     "recall_at_10": 0.8333333333333334,
+     "mrr": 0.4530092592592592
+    },
+    "soliq": {
+     "n": 6,
+     "recall_at_1": 0.3333333333333333,
+     "recall_at_5": 0.6666666666666666,
+     "recall_at_10": 0.6666666666666666,
+     "mrr": 0.45
+    },
+    "sozlashuv": {
+     "n": 79,
+     "recall_at_1": 0.3291139240506329,
+     "recall_at_5": 0.6455696202531646,
+     "recall_at_10": 0.7721518987341772,
+     "mrr": 0.4624974884468555
+    },
+    "sugurta": {
+     "n": 2,
+     "recall_at_1": 0.0,
+     "recall_at_5": 0.5,
+     "recall_at_10": 1.0,
+     "mrr": 0.3333333333333333
+    },
+    "uy-joy": {
+     "n": 2,
+     "recall_at_1": 0.0,
+     "recall_at_5": 1.0,
+     "recall_at_10": 1.0,
+     "mrr": 0.29166666666666663
+    },
+    "xatoli": {
+     "n": 6,
+     "recall_at_1": 0.3333333333333333,
+     "recall_at_5": 0.6666666666666666,
+     "recall_at_10": 0.6666666666666666,
+     "mrr": 0.5
+    },
+    "yol": {
+     "n": 5,
+     "recall_at_1": 0.4,
+     "recall_at_5": 0.4,
+     "recall_at_10": 0.6,
+     "mrr": 0.42857142857142855
+    },
+    "yuridik-yordam": {
+     "n": 1,
+     "recall_at_1": 0.0,
+     "recall_at_5": 1.0,
+     "recall_at_10": 1.0,
+     "mrr": 0.3333333333333333
+    }
+   },
+   "ms_per_query": 1549.6
+  },
+  "vector": {
+   "overall": {
+    "n": 97,
+    "recall_at_1": 0.030927835051546393,
+    "recall_at_5": 0.17525773195876287,
+    "recall_at_10": 0.3402061855670103,
+    "mrr": 0.1074251350024546
+   },
+   "by_tag": {
+    "bank": {
+     "n": 1,
+     "recall_at_1": 0.0,
+     "recall_at_5": 0.0,
+     "recall_at_10": 1.0,
+     "mrr": 0.1111111111111111
+    },
+    "davlat-boji": {
+     "n": 2,
+     "recall_at_1": 0.5,
+     "recall_at_5": 1.0,
+     "recall_at_10": 1.0,
+     "mrr": 0.6666666666666666
+    },
+    "fuqarolik": {
+     "n": 15,
+     "recall_at_1": 0.0,
+     "recall_at_5": 0.2,
+     "recall_at_10": 0.5333333333333333,
+     "mrr": 0.10007936507936507
+    },
+    "fuqarolik-instituti": {
+     "n": 2,
+     "recall_at_1": 0.0,
+     "recall_at_5": 0.0,
+     "recall_at_10": 0.0,
+     "mrr": 0.0
+    },
+    "harbiy": {
+     "n": 3,
+     "recall_at_1": 0.0,
+     "recall_at_5": 0.3333333333333333,
+     "recall_at_10": 0.3333333333333333,
+     "mrr": 0.16666666666666666
+    },
+    "istemolchi": {
+     "n": 2,
+     "recall_at_1": 0.0,
+     "recall_at_5": 0.0,
+     "recall_at_10": 0.0,
+     "mrr": 0.0
+    },
+    "jinoyat": {
+     "n": 8,
+     "recall_at_1": 0.0,
+     "recall_at_5": 0.0,
+     "recall_at_10": 0.25,
+     "mrr": 0.03333333333333333
+    },
+    "konstitutsiya": {
+     "n": 8,
+     "recall_at_1": 0.0,
+     "recall_at_5": 0.125,
+     "recall_at_10": 0.25,
+     "mrr": 0.057291666666666664
+    },
+    "kredit": {
+     "n": 2,
+     "recall_at_1": 0.0,
+     "recall_at_5": 0.5,
+     "recall_at_10": 0.5,
+     "mrr": 0.25
+    },
+    "malumot": {
+     "n": 1,
+     "recall_at_1": 0.0,
+     "recall_at_5": 0.0,
+     "recall_at_10": 0.0,
+     "mrr": 0.0
+    },
+    "mamuriy": {
+     "n": 9,
+     "recall_at_1": 0.0,
+     "recall_at_5": 0.2222222222222222,
+     "recall_at_10": 0.3333333333333333,
+     "mrr": 0.07716049382716049
+    },
+    "mehnat": {
+     "n": 22,
+     "recall_at_1": 0.045454545454545456,
+     "recall_at_5": 0.22727272727272727,
+     "recall_at_10": 0.4090909090909091,
+     "mrr": 0.16008297258297258
+    },
+    "meros": {
+     "n": 4,
+     "recall_at_1": 0.0,
+     "recall_at_5": 0.25,
+     "recall_at_10": 0.5,
+     "mrr": 0.125
+    },
+    "notariat": {
+     "n": 1,
+     "recall_at_1": 1.0,
+     "recall_at_5": 1.0,
+     "recall_at_10": 1.0,
+     "mrr": 1.0
+    },
+    "oila": {
+     "n": 10,
+     "recall_at_1": 0.0,
+     "recall_at_5": 0.1,
+     "recall_at_10": 0.1,
+     "mrr": 0.02
+    },
+    "pensiya": {
+     "n": 3,
+     "recall_at_1": 0.0,
+     "recall_at_5": 0.0,
+     "recall_at_10": 0.0,
+     "mrr": 0.0
+    },
+    "qonun": {
+     "n": 20,
+     "recall_at_1": 0.1,
+     "recall_at_5": 0.25,
+     "recall_at_10": 0.35,
+     "mrr": 0.18055555555555555
+    },
+    "rasmiy": {
+     "n": 12,
+     "recall_at_1": 0.16666666666666666,
+     "recall_at_5": 0.4166666666666667,
+     "recall_at_10": 0.5,
+     "mrr": 0.2611111111111111
+    },
+    "soliq": {
+     "n": 6,
+     "recall_at_1": 0.0,
+     "recall_at_5": 0.0,
+     "recall_at_10": 0.16666666666666666,
+     "mrr": 0.027777777777777776
+    },
+    "sozlashuv": {
+     "n": 79,
+     "recall_at_1": 0.012658227848101266,
+     "recall_at_5": 0.12658227848101267,
+     "recall_at_10": 0.3037974683544304,
+     "mrr": 0.08253465943339361
+    },
+    "sugurta": {
+     "n": 2,
+     "recall_at_1": 0.0,
+     "recall_at_5": 0.0,
+     "recall_at_10": 0.0,
+     "mrr": 0.0
+    },
+    "uy-joy": {
+     "n": 2,
+     "recall_at_1": 0.0,
+     "recall_at_5": 0.0,
+     "recall_at_10": 0.0,
+     "mrr": 0.0
+    },
+    "xatoli": {
+     "n": 6,
+     "recall_at_1": 0.0,
+     "recall_at_5": 0.3333333333333333,
+     "recall_at_10": 0.5,
+     "mrr": 0.12777777777777777
+    },
+    "yol": {
+     "n": 5,
+     "recall_at_1": 0.0,
+     "recall_at_5": 0.2,
+     "recall_at_10": 0.4,
+     "mrr": 0.08888888888888888
+    },
+    "yuridik-yordam": {
+     "n": 1,
+     "recall_at_1": 0.0,
+     "recall_at_5": 0.0,
+     "recall_at_10": 1.0,
+     "mrr": 0.16666666666666666
+    }
+   },
+   "ms_per_query": 824.2
+  },
+  "hybrid": {
+   "overall": {
+    "n": 97,
+    "recall_at_1": 0.3402061855670103,
+    "recall_at_5": 0.6288659793814433,
+    "recall_at_10": 0.7525773195876289,
+    "mrr": 0.4682539682539682
+   },
+   "by_tag": {
+    "bank": {
+     "n": 1,
+     "recall_at_1": 0.0,
+     "recall_at_5": 1.0,
+     "recall_at_10": 1.0,
+     "mrr": 0.25
+    },
+    "davlat-boji": {
+     "n": 2,
+     "recall_at_1": 1.0,
+     "recall_at_5": 1.0,
+     "recall_at_10": 1.0,
+     "mrr": 1.0
+    },
+    "fuqarolik": {
+     "n": 15,
+     "recall_at_1": 0.4666666666666667,
+     "recall_at_5": 0.7333333333333333,
+     "recall_at_10": 0.8666666666666667,
+     "mrr": 0.6050793650793651
+    },
+    "fuqarolik-instituti": {
+     "n": 2,
+     "recall_at_1": 0.0,
+     "recall_at_5": 0.0,
+     "recall_at_10": 0.0,
+     "mrr": 0.0
+    },
+    "harbiy": {
+     "n": 3,
+     "recall_at_1": 0.6666666666666666,
+     "recall_at_5": 1.0,
+     "recall_at_10": 1.0,
+     "mrr": 0.8333333333333334
+    },
+    "istemolchi": {
+     "n": 2,
+     "recall_at_1": 0.0,
+     "recall_at_5": 0.0,
+     "recall_at_10": 0.5,
+     "mrr": 0.08333333333333333
+    },
+    "jinoyat": {
+     "n": 8,
+     "recall_at_1": 0.25,
+     "recall_at_5": 0.625,
+     "recall_at_10": 0.75,
+     "mrr": 0.4097222222222222
+    },
+    "konstitutsiya": {
+     "n": 8,
+     "recall_at_1": 0.125,
+     "recall_at_5": 0.75,
+     "recall_at_10": 0.875,
+     "mrr": 0.37083333333333335
+    },
+    "kredit": {
+     "n": 2,
+     "recall_at_1": 0.5,
+     "recall_at_5": 0.5,
+     "recall_at_10": 1.0,
+     "mrr": 0.5833333333333334
+    },
+    "malumot": {
+     "n": 1,
+     "recall_at_1": 0.0,
+     "recall_at_5": 0.0,
+     "recall_at_10": 0.0,
+     "mrr": 0.0
+    },
+    "mamuriy": {
+     "n": 9,
+     "recall_at_1": 0.3333333333333333,
+     "recall_at_5": 0.8888888888888888,
+     "recall_at_10": 0.8888888888888888,
+     "mrr": 0.5277777777777778
+    },
+    "mehnat": {
+     "n": 22,
+     "recall_at_1": 0.5,
+     "recall_at_5": 0.6363636363636364,
+     "recall_at_10": 0.7272727272727273,
+     "mrr": 0.5708333333333333
+    },
+    "meros": {
+     "n": 4,
+     "recall_at_1": 0.5,
+     "recall_at_5": 0.75,
+     "recall_at_10": 0.75,
+     "mrr": 0.625
+    },
+    "notariat": {
+     "n": 1,
+     "recall_at_1": 1.0,
+     "recall_at_5": 1.0,
+     "recall_at_10": 1.0,
+     "mrr": 1.0
+    },
+    "oila": {
+     "n": 10,
+     "recall_at_1": 0.1,
+     "recall_at_5": 0.5,
+     "recall_at_10": 0.7,
+     "mrr": 0.30333333333333334
+    },
+    "pensiya": {
+     "n": 3,
+     "recall_at_1": 0.0,
+     "recall_at_5": 0.3333333333333333,
+     "recall_at_10": 0.3333333333333333,
+     "mrr": 0.08333333333333333
+    },
+    "qonun": {
+     "n": 20,
+     "recall_at_1": 0.3,
+     "recall_at_5": 0.5,
+     "recall_at_10": 0.65,
+     "mrr": 0.38958333333333334
+    },
+    "rasmiy": {
+     "n": 12,
+     "recall_at_1": 0.5,
+     "recall_at_5": 0.75,
+     "recall_at_10": 0.8333333333333334,
+     "mrr": 0.5944444444444444
+    },
+    "soliq": {
+     "n": 6,
+     "recall_at_1": 0.3333333333333333,
+     "recall_at_5": 0.5,
+     "recall_at_10": 0.6666666666666666,
+     "mrr": 0.3833333333333333
+    },
+    "sozlashuv": {
+     "n": 79,
+     "recall_at_1": 0.2911392405063291,
+     "recall_at_5": 0.6075949367088608,
+     "recall_at_10": 0.7215189873417721,
+     "mrr": 0.43148483021900746
+    },
+    "sugurta": {
+     "n": 2,
+     "recall_at_1": 0.0,
+     "recall_at_5": 0.0,
+     "recall_at_10": 0.5,
+     "mrr": 0.0625
+    },
+    "uy-joy": {
+     "n": 2,
+     "recall_at_1": 0.0,
+     "recall_at_5": 0.5,
+     "recall_at_10": 1.0,
+     "mrr": 0.23809523809523808
+    },
+    "xatoli": {
+     "n": 6,
+     "recall_at_1": 0.6666666666666666,
+     "recall_at_5": 0.6666666666666666,
+     "recall_at_10": 1.0,
+     "mrr": 0.7000000000000001
+    },
+    "yol": {
+     "n": 5,
+     "recall_at_1": 0.4,
+     "recall_at_5": 0.8,
+     "recall_at_10": 0.8,
+     "mrr": 0.5166666666666667
+    },
+    "yuridik-yordam": {
+     "n": 1,
+     "recall_at_1": 0.0,
+     "recall_at_5": 1.0,
+     "recall_at_10": 1.0,
+     "mrr": 0.3333333333333333
+    }
+   },
+   "ms_per_query": 2575.4
+  }
+ },
+ "questions": {
+  "mk-01": {
+   "question": "Ish beruvchi meni sababsiz ishdan boʻshatishi mumkinmi?",
+   "ranks": {
+    "fts": 4,
+    "vector": 8,
+    "hybrid": 1
+   },
+   "top3": {
+    "fts": [
+     "Mehnat kodeksi 173",
+     "Mehnat kodeksi 506",
+     "Mehnat kodeksi 499"
+    ],
+    "vector": [
+     "Buyruq 2169: Budjet tashkilotlarida buxgalteriya hisobi toʻgʻrisidagi yoʻriqnomani tasdiqlash haqida None",
+     "Buyruq 2169: Budjet tashkilotlarida buxgalteriya hisobi toʻgʻrisidagi yoʻriqnomani tasdiqlash haqida None",
+     "Sudlar tomonidan mehnat shartnomasini bekor qilishni tartibga soluvchi qonunchilikni qoʻllash amaliyoti toʻgʻrisidagi Hujjat (26) 29"
+    ],
+    "hybrid": [
+     "Mehnat kodeksi 161",
+     "Mehnat kodeksi 173",
+     "Sudlar tomonidan mehnat shartnomasini bekor qilishni tartibga soluvchi qonunchilikni qoʻllash amaliyoti toʻgʻrisidagi Hujjat (26) 25"
+    ]
+   }
+  },
+  "mk-02": {
+   "question": "Yillik taʼtil necha kun boʻladi?",
+   "ranks": {
+    "fts": null,
+    "vector": null,
+    "hybrid": null
+   },
+   "top3": {
+    "fts": [
+     "Mehnat bozorida mehnat munosabatlarini tartibga solishga doir qoʻshimcha chora-tadbirlar toʻgʻrisidagi Vazirlar Mahkamasi qarori (743) None",
+     "Mehnat bozorida mehnat munosabatlarini tartibga solishga doir qoʻshimcha chora-tadbirlar toʻgʻrisidagi Vazirlar Mahkamasi qarori (743) 17",
+     "Qonun OʻRQ-502: “Davlat bojxona xizmati toʻgʻrisida”gi Oʻzbekiston Respublikasi Qonuniga oʻzgartish va qoʻshimchalar kiritish haqida 22"
+    ],
+    "vector": [
+     "Vazirlar Mahkamasi qarori 742: Shaxslarni kundalik hayotdagi faolligi va ishtirokini baholash uchun yoʻllash hamda baholashdan oʻtkazish tartibi toʻgʻrisidagi… None",
+     "Ichki ishlar organlari uchun professional kadrlarni tayyorlash tizimini transformatsiya qilish chora-tadbirlari toʻgʻrisidagi Prezident qarori (PQ-303) None",
+     "Davlat oliy taʼlim tashkilotlariga oʻqishga qabul qilishning davlat buyurtmasi parametrlarini tasdiqlash toʻgʻrisidagi Farmoyish (F-43) None"
+    ],
+    "hybrid": [
+     "Vazirlar Mahkamasi qarori 742: Shaxslarni kundalik hayotdagi faolligi va ishtirokini baholash uchun yoʻllash hamda baholashdan oʻtkazish tartibi toʻgʻrisidagi… None",
+     "Buyruq 3881: Mehnat munosabatlarida qonunchilikka rioya etilishi ustidan nazoratni amalga oshirishda “Xavfni tahlil qilish” elektron tizimini joriy etish tarti… None",
+     "Mehnat bozorida mehnat munosabatlarini tartibga solishga doir qoʻshimcha chora-tadbirlar toʻgʻrisidagi Vazirlar Mahkamasi qarori (743) None"
+    ]
+   }
+  },
+  "mk-03": {
+   "question": "Sinov muddati eng koʻpi bilan qancha boʻlishi mumkin?",
+   "ranks": {
+    "fts": null,
+    "vector": null,
+    "hybrid": null
+   },
+   "top3": {
+    "fts": [
+     "Mehnat kodeksi 129",
+     "Mehnat kodeksi 132",
+     "Buyruq 2192: Charm-galantereya mahsulotlari ishlab chiqarish xodimlari uchun mehnatni muhofaza qilish qoidalarini tasdiqlash haqida 244"
+    ],
+    "vector": [
+     "Buyruq 2938: Oliy taʼlim tashkilotlarining rahbar va pedagog kadrlarini qayta tayyorlash va ularning malakasini oshirish kurslarida pedagogik (malakaviy) amali… None",
+     "Vazirlar Mahkamasi qarori 572: Maktabgacha, umumiy oʻrta, oʻrta maxsus, professional va maktabdan tashqari taʼlim tashkilotlari pedagog kadrlarini attestatsiya… None",
+     "Buyruq 2938: Oliy taʼlim tashkilotlarining rahbar va pedagog kadrlarini qayta tayyorlash va ularning malakasini oshirish kurslarida pedagogik (malakaviy) amali… None"
+    ],
+    "hybrid": [
+     "Mehnat kodeksi 129",
+     "Buyruq 3342: Oʻzbekiston Respublikasi Ichki ishlar vazirligi Malaka oshirish institutining kasbiy tayyorgarlik fakultetiga qabul qilish tartibi toʻgʻrisidagi n… 23",
+     "Buyruq 2938: Oliy taʼlim tashkilotlarining rahbar va pedagog kadrlarini qayta tayyorlash va ularning malakasini oshirish kurslarida pedagogik (malakaviy) amali… None"
+    ]
+   }
+  },
+  "mk-04": {
+   "question": "Oʻz xohishim bilan ishdan ketmoqchiman, necha kun oldin ariza berishim kerak?",
+   "ranks": {
+    "fts": 1,
+    "vector": 9,
+    "hybrid": 2
+   },
+   "top3": {
+    "fts": [
+     "Mehnat kodeksi 160",
+     "Mehnat kodeksi 132",
+     "Mehnat kodeksi 165"
+    ],
+    "vector": [
+     "Sudlar tomonidan mehnat shartnomasini bekor qilishni tartibga soluvchi qonunchilikni qoʻllash amaliyoti toʻgʻrisidagi Hujjat (26) 23",
+     "Vazirlar Mahkamasi qarori 22: Qishloq xoʻjaligiga moʻljallangan yerlarda monitoring ishlarini amalga oshirish, yerlarni muhofaza qilish va yer tuzish faoliyati… None",
+     "Buyruq 2169: Budjet tashkilotlarida buxgalteriya hisobi toʻgʻrisidagi yoʻriqnomani tasdiqlash haqida None"
+    ],
+    "hybrid": [
+     "Mehnat kodeksi 165",
+     "Mehnat kodeksi 160",
+     "Sudlar tomonidan mehnat shartnomasini bekor qilishni tartibga soluvchi qonunchilikni qoʻllash amaliyoti toʻgʻrisidagi Hujjat (26) 20"
+    ]
+   }
+  },
+  "mk-05": {
+   "question": "Ishdan boʻshatilganda qanday nafaqa toʻlanadi?",
+   "ranks": {
+    "fts": 1,
+    "vector": 7,
+    "hybrid": 1
+   },
+   "top3": {
+    "fts": [
+     "Mehnat kodeksi 173",
+     "Mehnat kodeksi 442",
+     "Vazirlar Mahkamasi qarori 519: Mehnat shartnomasi alohida asoslarga koʻra bekor qilinganda, moddiy jihatdan qoʻllab-quvvatlash boʻyicha qoʻshimcha kafolatlarda… 15"
+    ],
+    "vector": [
+     "Vazirlar Mahkamasi qarori 460: Ish beruvchilarga ular tomonidan 25 yoshdan oshmagan xodimlar uchun toʻlangan ijtimoiy soliq summasini Davlat budjetidan toʻliq… None",
+     "Vazirlar Mahkamasi qarori 965: Ijtimoiy muhofazaga muhtoj, ish topishda qiynalayotgan va mehnat bozorida teng shartlarda raqobatlasha olmaydigan shaxslarni ish… None",
+     "Vazirlar Mahkamasi qarori 505: Mehnat faoliyati bilan bogʻliq baxtsiz hodisalar toʻgʻrisida xabar berish, ularni tekshirish va hisobga olish hamda ularning oqi… 30"
+    ],
+    "hybrid": [
+     "Mehnat kodeksi 173",
+     "Vazirlar Mahkamasi qarori 460: Ish beruvchilarga ular tomonidan 25 yoshdan oshmagan xodimlar uchun toʻlangan ijtimoiy soliq summasini Davlat budjetidan toʻliq… None",
+     "Vazirlar Mahkamasi qarori 965: Ijtimoiy muhofazaga muhtoj, ish topishda qiynalayotgan va mehnat bozorida teng shartlarda raqobatlasha olmaydigan shaxslarni ish… None"
+    ]
+   }
+  },
+  "mk-06": {
+   "question": "Haftasiga necha soat ishlash normal hisoblanadi?",
+   "ranks": {
+    "fts": 1,
+    "vector": 2,
+    "hybrid": 1
+   },
+   "top3": {
+    "fts": [
+     "Mehnat kodeksi 182",
+     "Buyruq 3650: Ishi bevosita poyezdlar harakati bilan bogʻliq boʻlgan temir yoʻl transporti ayrim toifadagi xodimlarining ish vaqti va dam olish vaqti rejimlari… 4",
+     "Mehnat kodeksi 198"
+    ],
+    "vector": [
+     "Vazirlar Mahkamasi qarori 742: Shaxslarni kundalik hayotdagi faolligi va ishtirokini baholash uchun yoʻllash hamda baholashdan oʻtkazish tartibi toʻgʻrisidagi… None",
+     "Mehnat kodeksi 182",
+     "Vazirlar Mahkamasi qarori 636: Uzoq masofada joylashgan va muhim ahamiyatga ega boʻlgan obyektlarda qurilish-montaj ishlarini amalga oshirishning vaxta usuli t… 21"
+    ],
+    "hybrid": [
+     "Mehnat kodeksi 182",
+     "Mehnat kodeksi 198",
+     "Oʻzbekiston Respublikasining Mehnat kodeksini amalga oshirishga oid normativ-huquqiy hujjatlarni tasdiqlash toʻgʻrisidagi Vazirlar Mahkamasi qarori (758) None"
+    ]
+   }
+  },
+  "mk-07": {
+   "question": "Ish vaqtidan tashqari ishlash uchun qancha haq toʻlanadi va necha soatgacha ruxsat?",
+   "ranks": {
+    "fts": 4,
+    "vector": 2,
+    "hybrid": 1
+   },
+   "top3": {
+    "fts": [
+     "Mehnat kodeksi 262",
+     "Vazirlar Mahkamasi qarori 297: Oʻrindoshlik asosida hamda bir necha kasbda va lavozimda ishlash tartibi toʻgʻrisidagi nizomni tasdiqlash haqida 6",
+     "Vazirlar Mahkamasi qarori 920: Oʻzbekiston Respublikasi sogʻliqni saqlash davlat tizimi tashkilotlarini kadrlar bilan taʼminlashni yaxshilashga doir qoʻshimcha… 6"
+    ],
+    "vector": [
+     "Vazirlar Mahkamasi qarori 742: Shaxslarni kundalik hayotdagi faolligi va ishtirokini baholash uchun yoʻllash hamda baholashdan oʻtkazish tartibi toʻgʻrisidagi… None",
+     "Mehnat kodeksi 189",
+     "Vazirlar Mahkamasi qarori 636: Uzoq masofada joylashgan va muhim ahamiyatga ega boʻlgan obyektlarda qurilish-montaj ishlarini amalga oshirishning vaxta usuli t… 39"
+    ],
+    "hybrid": [
+     "Mehnat kodeksi 189",
+     "Mehnat kodeksi 262",
+     "Vazirlar Mahkamasi qarori 742: Shaxslarni kundalik hayotdagi faolligi va ishtirokini baholash uchun yoʻllash hamda baholashdan oʻtkazish tartibi toʻgʻrisidagi… None"
+    ]
+   }
+  },
+  "mk-08": {
+   "question": "Homiladorlik va tugʻish taʼtili necha kun beriladi?",
+   "ranks": {
+    "fts": 4,
+    "vector": 1,
+    "hybrid": 1
+   },
+   "top3": {
+    "fts": [
+     "Prezident qarori PQ-4447: Oʻzbekiston Respublikasi fuqarolarining harbiy xizmatni oʻtash tartibi toʻgʻrisidagi nizomni tasdiqlash haqida 281",
+     "Prezident qarori PQ-4447: Oʻzbekiston Respublikasi fuqarolarining harbiy xizmatni oʻtash tartibi toʻgʻrisidagi nizomni tasdiqlash haqida 285",
+     "Prezident qarori PQ-4447: Oʻzbekiston Respublikasi fuqarolarining harbiy xizmatni oʻtash tartibi toʻgʻrisidagi nizomni tasdiqlash haqida 284"
+    ],
+    "vector": [
+     "Mehnat kodeksi 404",
+     "Buyruq 3274: Homiladorlikni sunʼiy ravishda toʻxtatishni amalga oshirish tartibi toʻgʻrisidagi nizomni tasdiqlash haqida None",
+     "Tugʻruqni qabul qilishda kesarcha kesish amaliyotini oʻtkazish uchun tibbiy koʻrsatmalar roʻyxatini tasdiqlash toʻgʻrisidagi Buyruq (3945) None"
+    ],
+    "hybrid": [
+     "Mehnat kodeksi 404",
+     "Buyruq 2667: Mehnatga layoqatsizlik varaqalarini berish tartibi toʻgʻrisidagi yoʻriqnomani tasdiqlash haqida 27",
+     "Ayrim turdagi nafaqalarni tayinlash va toʻlashni tartibga solish chora-tadbirlari toʻgʻrisidagi Vazirlar Mahkamasi qarori (314) 33"
+    ]
+   }
+  },
+  "mk-09": {
+   "question": "Bola parvarishi boʻyicha dekret taʼtili necha yoshgacha?",
+   "ranks": {
+    "fts": null,
+    "vector": null,
+    "hybrid": null
+   },
+   "top3": {
+    "fts": [
+     "Vazirlar Mahkamasi qarori 539: Odam savdosidan jabrlangan shaxslarga ijtimoiy xizmatlar koʻrsatish tizimini samarali yoʻlga qoʻyish chora-tadbirlari toʻgʻrisida 6",
+     "Vazirlar Mahkamasi qarori 539: Odam savdosidan jabrlangan shaxslarga ijtimoiy xizmatlar koʻrsatish tizimini samarali yoʻlga qoʻyish chora-tadbirlari toʻgʻrisida 3",
+     "Prezident qarori PQ-4447: Oʻzbekiston Respublikasi fuqarolarining harbiy xizmatni oʻtash tartibi toʻgʻrisidagi nizomni tasdiqlash haqida 287"
+    ],
+    "vector": [
+     "Vazirlar Mahkamasi qarori 119: Ijtimoiy himoyaga muhtoj ayrim toifadagi shaxslarga nafaqa va moddiy yordamlarni tayinlash hamda toʻlash tartibi toʻgʻrisidagi n… None",
+     "Goʻdaklar va kichik yoshdagi bolalarni ona suti bilan oziqlantirishni qoʻllab-quvvatlash dasturini tasdiqlash toʻgʻrisidagi Vazirlar Mahkamasi qarori (636) None",
+     "Goʻdaklar va kichik yoshdagi bolalarni ona suti bilan oziqlantirishni qoʻllab-quvvatlash dasturini tasdiqlash toʻgʻrisidagi Vazirlar Mahkamasi qarori (636) None"
+    ],
+    "hybrid": [
+     "Vazirlar Mahkamasi qarori 539: Odam savdosidan jabrlangan shaxslarga ijtimoiy xizmatlar koʻrsatish tizimini samarali yoʻlga qoʻyish chora-tadbirlari toʻgʻrisida 6",
+     "Vazirlar Mahkamasi qarori 119: Ijtimoiy himoyaga muhtoj ayrim toifadagi shaxslarga nafaqa va moddiy yordamlarni tayinlash hamda toʻlash tartibi toʻgʻrisidagi n… None",
+     "Goʻdaklar va kichik yoshdagi bolalarni ona suti bilan oziqlantirishni qoʻllab-quvvatlash dasturini tasdiqlash toʻgʻrisidagi Vazirlar Mahkamasi qarori (636) None"
+    ]
+   }
+  },
+  "mk-10": {
+   "question": "Ish haqi oyiga necha marta toʻlanishi kerak?",
+   "ranks": {
+    "fts": 1,
+    "vector": null,
+    "hybrid": 1
+   },
+   "top3": {
+    "fts": [
+     "Mehnat kodeksi 253",
+     "Prezident qarori PQ-3463: ““Quyi Boʻzsuv GES Kaskadi” (GES-14), “Toshkent GES Kaskadi” (GES-9), “Shaxrixon GES Kaskadlari” (YUFK-2)ni modernizatsiya qilish” in… None",
+     "Vazirlar Mahkamasi qarori 297: Oʻrindoshlik asosida hamda bir necha kasbda va lavozimda ishlash tartibi toʻgʻrisidagi nizomni tasdiqlash haqida 7"
+    ],
+    "vector": [
+     "Vazirlar Mahkamasi qarori 505: Mehnat faoliyati bilan bogʻliq baxtsiz hodisalar toʻgʻrisida xabar berish, ularni tekshirish va hisobga olish hamda ularning oqi… 14",
+     "Vazirlar Mahkamasi qarori 460: Ish beruvchilarga ular tomonidan 25 yoshdan oshmagan xodimlar uchun toʻlangan ijtimoiy soliq summasini Davlat budjetidan toʻliq… None",
+     "Vazirlar Mahkamasi qarori 742: Shaxslarni kundalik hayotdagi faolligi va ishtirokini baholash uchun yoʻllash hamda baholashdan oʻtkazish tartibi toʻgʻrisidagi… None"
+    ],
+    "hybrid": [
+     "Mehnat kodeksi 253",
+     "Vazirlar Mahkamasi qarori 426: Maktabgacha taʼlim sohasida davlat-xususiy sheriklik munosabatlarini zamonaviy raqamli texnologiyalar yordamida soddalashtirish… None",
+     "Vazirlar Mahkamasi qarori 426: Maktabgacha taʼlim sohasida davlat-xususiy sheriklik munosabatlarini zamonaviy raqamli texnologiyalar yordamida soddalashtirish… None"
+    ]
+   }
+  },
+  "mk-11": {
+   "question": "ish haqimdan qancha foizini ushlab qolishlari mumkin",
+   "ranks": {
+    "fts": 1,
+    "vector": null,
+    "hybrid": 1
+   },
+   "top3": {
+    "fts": [
+     "Mehnat kodeksi 269",
+     "Mehnat kodeksi 270",
+     "Buyruq 1980: Qarzdor jismoniy shaxsga ish haqi yoki unga tenglashtirilgan boshqa toʻlovlarni toʻlayotgan tashkilotlar yoki boshqa shaxslar tomonidan ijro hujja… 9"
+    ],
+    "vector": [
+     "Vazirlar Mahkamasi qarori 742: Shaxslarni kundalik hayotdagi faolligi va ishtirokini baholash uchun yoʻllash hamda baholashdan oʻtkazish tartibi toʻgʻrisidagi… None",
+     "Vazirlar Mahkamasi qarori 965: Ijtimoiy muhofazaga muhtoj, ish topishda qiynalayotgan va mehnat bozorida teng shartlarda raqobatlasha olmaydigan shaxslarni ish… None",
+     "Ichki ishlar organlari uchun professional kadrlarni tayyorlash tizimini transformatsiya qilish chora-tadbirlari toʻgʻrisidagi Prezident qarori (PQ-303) None"
+    ],
+    "hybrid": [
+     "Mehnat kodeksi 269",
+     "Vazirlar Mahkamasi qarori 742: Shaxslarni kundalik hayotdagi faolligi va ishtirokini baholash uchun yoʻllash hamda baholashdan oʻtkazish tartibi toʻgʻrisidagi… None",
+     "Vazirlar Mahkamasi qarori 965: Ijtimoiy muhofazaga muhtoj, ish topishda qiynalayotgan va mehnat bozorida teng shartlarda raqobatlasha olmaydigan shaxslarni ish… None"
+    ]
+   }
+  },
+  "mk-12": {
+   "question": "Ish beruvchi ish haqini kechiktirsa javobgarligi qanday?",
+   "ranks": {
+    "fts": 2,
+    "vector": null,
+    "hybrid": 8
+   },
+   "top3": {
+    "fts": [
+     "Mehnat kodeksi 331",
+     "Mehnat kodeksi 333",
+     "Vazirlar Mahkamasi qarori 177: Ish beruvchining fuqarolik javobgarligini majburiy sugʻurta qilish toʻgʻrisidagi Oʻzbekiston Respublikasi Qonunini amalga oshiri… 44"
+    ],
+    "vector": [
+     "Vazirlar Mahkamasi qarori 177: Ish beruvchining fuqarolik javobgarligini majburiy sugʻurta qilish toʻgʻrisidagi Oʻzbekiston Respublikasi Qonunini amalga oshiri… 2",
+     "Hujjat 18: Mehnat vazifalarini bajarishi munosabati bilan xodimning hayoti va sogʻligʻiga yetkazilgan zararni qoplashga oid nizolar boʻyicha sud amaliyoti haqi… 14",
+     "Vazirlar Mahkamasi qarori 177: Ish beruvchining fuqarolik javobgarligini majburiy sugʻurta qilish toʻgʻrisidagi Oʻzbekiston Respublikasi Qonunini amalga oshiri… None"
+    ],
+    "hybrid": [
+     "Mehnat kodeksi 324",
+     "Hujjat 163: Majburiyatlarni bajarmaganlik yoki lozim darajada bajarmaganlik uchun mulkiy javobgarlik toʻgʻrisidagi fuqarolik qonun hujjatlarini qoʻllashning ay… 13",
+     "Vazirlar Mahkamasi qarori 177: Ish beruvchining fuqarolik javobgarligini majburiy sugʻurta qilish toʻgʻrisidagi Oʻzbekiston Respublikasi Qonunini amalga oshiri… None"
+    ]
+   }
+  },
+  "mk-13": {
+   "question": "Ishdan boʻshatishdan oldin ish beruvchi necha kun oldin ogohlantirishi shart?",
+   "ranks": {
+    "fts": 1,
+    "vector": null,
+    "hybrid": 1
+   },
+   "top3": {
+    "fts": [
+     "Mehnat kodeksi 165",
+     "Mehnat kodeksi 160",
+     "Mehnat kodeksi 494"
+    ],
+    "vector": [
+     "Buyruq 3895: Oʻzbekiston Respublikasidan tashqarida ish qidirayotgan shaxslarni ishga joylashtirish boʻyicha faoliyat ustidan nazoratni amalga oshirishda “Xavf… None",
+     "Vazirlar Mahkamasi qarori 636: Uzoq masofada joylashgan va muhim ahamiyatga ega boʻlgan obyektlarda qurilish-montaj ishlarini amalga oshirishning vaxta usuli t… 39",
+     "Vazirlar Mahkamasi qarori 965: Ijtimoiy muhofazaga muhtoj, ish topishda qiynalayotgan va mehnat bozorida teng shartlarda raqobatlasha olmaydigan shaxslarni ish… None"
+    ],
+    "hybrid": [
+     "Mehnat kodeksi 165",
+     "Mehnat kodeksi 160",
+     "Buyruq 3895: Oʻzbekiston Respublikasidan tashqarida ish qidirayotgan shaxslarni ishga joylashtirish boʻyicha faoliyat ustidan nazoratni amalga oshirishda “Xavf… None"
+    ]
+   }
+  },
+  "mk-14": {
+   "question": "Homilador ayolni ishdan boʻshatish mumkinmi?",
+   "ranks": {
+    "fts": 2,
+    "vector": null,
+    "hybrid": 2
+   },
+   "top3": {
+    "fts": [
+     "Mehnat kodeksi 408",
+     "Mehnat kodeksi 392",
+     "Mehnat kodeksi 396"
+    ],
+    "vector": [
+     "Vazirlar Mahkamasi qarori 919: Xotin-qizlarni ish bilan taʼminlash, ular oʻrtasida tadbirkorlikni rivojlantirish tizimini yanada takomillashtirish chora-tadbir… None",
+     "Vazirlar Mahkamasi qarori 737: Uy-joyga muhtoj xotin-qizlarni uy-joy bilan taʼminlash hamda Toshkent shahrida boshpanasiz, ogʻir turmush sharoitiga tushib qolg… None",
+     "Vazirlar Mahkamasi qarori 625: Zoʻrlik ishlatishdan jabr koʻrgan xotin-qizlarni reabilitatsiya qilish va moslashtirish hamda oʻz joniga qasd qilishning oldini… None"
+    ],
+    "hybrid": [
+     "Mehnat kodeksi 408",
+     "Mehnat kodeksi 392",
+     "Mehnat kodeksi 394"
+    ]
+   }
+  },
+  "mk-15": {
+   "question": "Taʼtil oʻrniga pul olsa boʻladimi?",
+   "ranks": {
+    "fts": 9,
+    "vector": null,
+    "hybrid": null
+   },
+   "top3": {
+    "fts": [
+     "Vazirlar Mahkamasi qarori 505: Mehnat faoliyati bilan bogʻliq baxtsiz hodisalar toʻgʻrisida xabar berish, ularni tekshirish va hisobga olish hamda ularning oqi… 13",
+     "Mehnat kodeksi 401",
+     "Sudlar tomonidan mehnat shartnomasini bekor qilishni tartibga soluvchi qonunchilikni qoʻllash amaliyoti toʻgʻrisidagi Hujjat (26) 24"
+    ],
+    "vector": [
+     "Vazirlar Mahkamasi qarori 460: Ish beruvchilarga ular tomonidan 25 yoshdan oshmagan xodimlar uchun toʻlangan ijtimoiy soliq summasini Davlat budjetidan toʻliq… None",
+     "Buyruq 2169: Budjet tashkilotlarida buxgalteriya hisobi toʻgʻrisidagi yoʻriqnomani tasdiqlash haqida None",
+     "Elektr energiyasidan foydalanganlik uchun hisob-kitob qilish mexanizmini tubdan takomillashtirish chora-tadbirlari toʻgʻrisidagi Vazirlar Mahkamasi qarori (511) None"
+    ],
+    "hybrid": [
+     "Vazirlar Mahkamasi qarori 505: Mehnat faoliyati bilan bogʻliq baxtsiz hodisalar toʻgʻrisida xabar berish, ularni tekshirish va hisobga olish hamda ularning oqi… 13",
+     "Mehnat kodeksi 401",
+     "Sudlar tomonidan mehnat shartnomasini bekor qilishni tartibga soluvchi qonunchilikni qoʻllash amaliyoti toʻgʻrisidagi Hujjat (26) 24"
+    ]
+   }
+  },
+  "mk-16": {
+   "question": "Oʻz hisobimdan taʼtil olish huquqim bormi?",
+   "ranks": {
+    "fts": 6,
+    "vector": null,
+    "hybrid": null
+   },
+   "top3": {
+    "fts": [
+     "Mehnat kodeksi 213",
+     "Mehnat kodeksi 240",
+     "Mehnat kodeksi 430"
+    ],
+    "vector": [
+     "Buyruq 2169: Budjet tashkilotlarida buxgalteriya hisobi toʻgʻrisidagi yoʻriqnomani tasdiqlash haqida None",
+     "Vazirlar Mahkamasi qarori 965: Ijtimoiy muhofazaga muhtoj, ish topishda qiynalayotgan va mehnat bozorida teng shartlarda raqobatlasha olmaydigan shaxslarni ish… None",
+     "Buyruq 2169: Budjet tashkilotlarida buxgalteriya hisobi toʻgʻrisidagi yoʻriqnomani tasdiqlash haqida None"
+    ],
+    "hybrid": [
+     "Mehnat kodeksi 213",
+     "Mehnat kodeksi 240",
+     "Mehnat kodeksi 430"
+    ]
+   }
+  },
+  "mk-17": {
+   "question": "Xizmat safari xarajatlari qoplanadimi?",
+   "ranks": {
+    "fts": null,
+    "vector": 7,
+    "hybrid": 1
+   },
+   "top3": {
+    "fts": [
+     "Vazirlar Mahkamasi qarori 354: Oʻzbekiston Respublikasi ichki ishlar organlari va Milliy gvardiyasining shaxsiy tarkibi hamda ularning oila aʼzolarini ijtimoiy… 149",
+     "Vazirlar Mahkamasi qarori 354: Oʻzbekiston Respublikasi ichki ishlar organlari va Milliy gvardiyasining shaxsiy tarkibi hamda ularning oila aʼzolarini ijtimoiy… 152",
+     "Vazirlar Mahkamasi qarori 354: Oʻzbekiston Respublikasi ichki ishlar organlari va Milliy gvardiyasining shaxsiy tarkibi hamda ularning oila aʼzolarini ijtimoiy… 159"
+    ],
+    "vector": [
+     "Vazirlar Mahkamasi qarori 910: Davlat organlari va tashkilotlarining ochiqlikni taʼminlash sohasidagi normativ-huquqiy hujjatlarda belgilangan majburiyatlarga… None",
+     "Hujjat 1834: Oʻzbekiston Respublikasi banklarida buxgalteriya hisobini yuritish va buxgalteriya ishlarini tashkil qilish tartibi toʻgʻrisidagi yoʻriqnomani tas… 109",
+     "Vazirlar Mahkamasi qarori 425: Ichki qatnovlarda harakatlanuvchi poyezdlarda yoʻlovchi tashish xizmatlarini koʻrsatishdan koʻrilgan zararlarni Davlat budjeti h… None"
+    ],
+    "hybrid": [
+     "Mehnat kodeksi 287",
+     "Vazirlar Mahkamasi qarori 910: Davlat organlari va tashkilotlarining ochiqlikni taʼminlash sohasidagi normativ-huquqiy hujjatlarda belgilangan majburiyatlarga… None",
+     "Vazirlar Mahkamasi qarori 354: Oʻzbekiston Respublikasi ichki ishlar organlari va Milliy gvardiyasining shaxsiy tarkibi hamda ularning oila aʼzolarini ijtimoiy… 149"
+    ]
+   }
+  },
+  "mk-18": {
+   "question": "Dam olish kuni ishga chaqirishsa nima boʻladi?",
+   "ranks": {
+    "fts": 1,
+    "vector": 2,
+    "hybrid": 1
+   },
+   "top3": {
+    "fts": [
+     "Mehnat kodeksi 209",
+     "Mehnat kodeksi 263",
+     "Mehnat kodeksi 204"
+    ],
+    "vector": [
+     "Vazirlar Mahkamasi qarori 742: Shaxslarni kundalik hayotdagi faolligi va ishtirokini baholash uchun yoʻllash hamda baholashdan oʻtkazish tartibi toʻgʻrisidagi… None",
+     "Mehnat kodeksi 211",
+     "Mehnat kodeksi 210"
+    ],
+    "hybrid": [
+     "Mehnat kodeksi 209",
+     "Mehnat kodeksi 211",
+     "Mehnat kodeksi 212"
+    ]
+   }
+  },
+  "mk-19": {
+   "question": "Ishga qabul qilishda mehnat daftarchasi talab qilinadimi?",
+   "ranks": {
+    "fts": 10,
+    "vector": null,
+    "hybrid": null
+   },
+   "top3": {
+    "fts": [
+     "Mehnat daftarchalarini yuritish tartibi toʻgʻrisidagi Hujjat (402) None",
+     "Vazirlar Mahkamasi qarori 971: “Yagona milliy mehnat tizimi” idoralararo dasturiy-apparat kompleksi joriy qilinishini va uning ishlashini taʼminlashga doir tas… 57",
+     "Vazirlar Mahkamasi qarori 971: “Yagona milliy mehnat tizimi” idoralararo dasturiy-apparat kompleksi joriy qilinishini va uning ishlashini taʼminlashga doir tas… 10"
+    ],
+    "vector": [
+     "Mehnat daftarchalarini yuritish tartibi toʻgʻrisidagi Hujjat (402) None",
+     "Mehnat daftarchalarini yuritish tartibi toʻgʻrisidagi Hujjat (402) None",
+     "Vazirlar Mahkamasi qarori 971: “Yagona milliy mehnat tizimi” idoralararo dasturiy-apparat kompleksi joriy qilinishini va uning ishlashini taʼminlashga doir tas… None"
+    ],
+    "hybrid": [
+     "Mehnat daftarchalarini yuritish tartibi toʻgʻrisidagi Hujjat (402) None",
+     "Mehnat daftarchalarini yuritish tartibi toʻgʻrisidagi Hujjat (402) None",
+     "Mehnat kodeksi 124"
+    ]
+   }
+  },
+  "mk-20": {
+   "question": "Xodim ish beruvchiga zarar yetkazsa toʻliq qoplashi kerakmi?",
+   "ranks": {
+    "fts": 8,
+    "vector": 2,
+    "hybrid": 1
+   },
+   "top3": {
+    "fts": [
+     "Mehnat kodeksi 343",
+     "Mehnat kodeksi 334",
+     "Mehnat kodeksi 341"
+    ],
+    "vector": [
+     "Vazirlar Mahkamasi qarori 177: Ish beruvchining fuqarolik javobgarligini majburiy sugʻurta qilish toʻgʻrisidagi Oʻzbekiston Respublikasi Qonunini amalga oshiri… None",
+     "Mehnat kodeksi 337",
+     "Hujjat 18: Mehnat vazifalarini bajarishi munosabati bilan xodimning hayoti va sogʻligʻiga yetkazilgan zararni qoplashga oid nizolar boʻyicha sud amaliyoti haqi… 14"
+    ],
+    "hybrid": [
+     "Mehnat kodeksi 337",
+     "Mehnat kodeksi 341",
+     "Mehnat kodeksi 346"
+    ]
+   }
+  },
+  "mk-21": {
+   "question": "Ishdan noqonuniy boʻshatilsam majburiy progul uchun pul olamanmi?",
+   "ranks": {
+    "fts": 2,
+    "vector": null,
+    "hybrid": 3
+   },
+   "top3": {
+    "fts": [
+     "Sudlar tomonidan mehnat shartnomasini bekor qilishni tartibga soluvchi qonunchilikni qoʻllash amaliyoti toʻgʻrisidagi Hujjat (26) 62",
+     "Mehnat kodeksi 174",
+     "Mehnat kodeksi 561"
+    ],
+    "vector": [
+     "Buyruq 2169: Budjet tashkilotlarida buxgalteriya hisobi toʻgʻrisidagi yoʻriqnomani tasdiqlash haqida None",
+     "Buyruq 2169: Budjet tashkilotlarida buxgalteriya hisobi toʻgʻrisidagi yoʻriqnomani tasdiqlash haqida None",
+     "Buyruq 2169: Budjet tashkilotlarida buxgalteriya hisobi toʻgʻrisidagi yoʻriqnomani tasdiqlash haqida None"
+    ],
+    "hybrid": [
+     "Sudlar tomonidan mehnat shartnomasini bekor qilishni tartibga soluvchi qonunchilikni qoʻllash amaliyoti toʻgʻrisidagi Hujjat (26) 62",
+     "Sudlar tomonidan mehnat shartnomasini bekor qilishni tartibga soluvchi qonunchilikni qoʻllash amaliyoti toʻgʻrisidagi Hujjat (26) 39",
+     "Mehnat kodeksi 174"
+    ]
+   }
+  },
+  "mk-22": {
+   "question": "ishlab chiqarishda jarohat olsam ish beruvchi zararni toʻlaydimi",
+   "ranks": {
+    "fts": null,
+    "vector": null,
+    "hybrid": 10
+   },
+   "top3": {
+    "fts": [
+     "Qonun OʻRQ-410: “Mehnatni muhofaza qilish toʻgʻrisida”gi Oʻzbekiston Respublikasi Qonuniga oʻzgartish va qoʻshimchalar kiritish haqida 33",
+     "Vazirlar Mahkamasi qarori 505: Mehnat faoliyati bilan bogʻliq baxtsiz hodisalar toʻgʻrisida xabar berish, ularni tekshirish va hisobga olish hamda ularning oqi… 56",
+     "Hujjat 18: Mehnat vazifalarini bajarishi munosabati bilan xodimning hayoti va sogʻligʻiga yetkazilgan zararni qoplashga oid nizolar boʻyicha sud amaliyoti haqi… 7"
+    ],
+    "vector": [
+     "Vazirlar Mahkamasi qarori 177: Ish beruvchining fuqarolik javobgarligini majburiy sugʻurta qilish toʻgʻrisidagi Oʻzbekiston Respublikasi Qonunini amalga oshiri… None",
+     "Vazirlar Mahkamasi qarori 747: Tabiiy ofatlar oqibatida aholiga yetkazilgan zararni qoplash tartibi toʻgʻrisidagi nizomni tasdiqlash haqida None",
+     "Vazirlar Mahkamasi qarori 293: Favqulodda holat joriy etilgan hududda uy-joy fondini tiklash, jismoniy va yuridik shaxslarga yetkazilgan zararning oʻrnini qopl… None"
+    ],
+    "hybrid": [
+     "Vazirlar Mahkamasi qarori 177: Ish beruvchining fuqarolik javobgarligini majburiy sugʻurta qilish toʻgʻrisidagi Oʻzbekiston Respublikasi Qonunini amalga oshiri… None",
+     "Hujjat 18: Mehnat vazifalarini bajarishi munosabati bilan xodimning hayoti va sogʻligʻiga yetkazilgan zararni qoplashga oid nizolar boʻyicha sud amaliyoti haqi… 7",
+     "Vazirlar Mahkamasi qarori 747: Tabiiy ofatlar oqibatida aholiga yetkazilgan zararni qoplash tartibi toʻgʻrisidagi nizomni tasdiqlash haqida None"
+    ]
+   }
+  },
+  "ok-01": {
+   "question": "Nikoh yoshi necha yosh?",
+   "ranks": {
+    "fts": 1,
+    "vector": null,
+    "hybrid": 2
+   },
+   "top3": {
+    "fts": [
+     "Oila kodeksi 15",
+     "Prezident farmoni PF-33: Ayollar va bolalar huquqlarining himoyasini kuchaytirish hamda ularga nisbatan tazyiq va zoʻravonlik holatlarining oldini olish boʻyic… None",
+     "Fuqarolikni rasmiylashtirish sohasida ayrim davlat xizmatlari koʻrsatishning maʼmuriy reglamentlarini tasdiqlash toʻgʻrisidagi Vazirlar Mahkamasi qarori (8) None"
+    ],
+    "vector": [
+     "Vazirlar Mahkamasi qarori 460: Ish beruvchilarga ular tomonidan 25 yoshdan oshmagan xodimlar uchun toʻlangan ijtimoiy soliq summasini Davlat budjetidan toʻliq… None",
+     "Prezident farmoni PF-33: Ayollar va bolalar huquqlarining himoyasini kuchaytirish hamda ularga nisbatan tazyiq va zoʻravonlik holatlarining oldini olish boʻyic… None",
+     "Vazirlar Mahkamasi qarori 550: Nikoh, oila va fuqarolik holati dalolatnomalarini qayd etish sohasidagi normativ-huquqiy hujjatlarni tizimlashtirish toʻgʻrisida None"
+    ],
+    "hybrid": [
+     "Prezident farmoni PF-33: Ayollar va bolalar huquqlarining himoyasini kuchaytirish hamda ularga nisbatan tazyiq va zoʻravonlik holatlarining oldini olish boʻyic… None",
+     "Oila kodeksi 15",
+     "“Aziz-ayol.uz” yagona interaktiv milliy platformasini joriy etish chora-tadbirlari toʻgʻrisidagi Vazirlar Mahkamasi qarori (507) None"
+    ]
+   }
+  },
+  "ok-02": {
+   "question": "Aliment miqdori qancha boʻladi, bitta bola uchun?",
+   "ranks": {
+    "fts": 1,
+    "vector": null,
+    "hybrid": 2
+   },
+   "top3": {
+    "fts": [
+     "Oila kodeksi 99",
+     "Oila kodeksi 102",
+     "Hujjat 11: Sudlar tomonidan voyaga yetmagan va voyaga yetgan mehnatga layoqatsiz bolalar taʼminoti uchun aliment undirishga oid ishlar boʻyicha qonunchilikni q… 11"
+    ],
+    "vector": [
+     "Vazirlar Mahkamasi qarori 893: Yetim bolalar va ota-ona qaramogʻidan mahrum boʻlgan bolalarni joylashtirish shakllari boʻyicha ayrim normativ-huquqiy hujjatlar… None",
+     "Goʻdaklar va kichik yoshdagi bolalarni ona suti bilan oziqlantirishni qoʻllab-quvvatlash dasturini tasdiqlash toʻgʻrisidagi Vazirlar Mahkamasi qarori (636) None",
+     "Voyaga yetmaganlarga ijtimoiy-huquqiy yordam koʻrsatishni yanada takomillashtirish chora-tadbirlari toʻgʻrisidagi Vazirlar Mahkamasi qarori (490) None"
+    ],
+    "hybrid": [
+     "Oila kodeksi 102",
+     "Oila kodeksi 99",
+     "Hujjat 11: Sudlar tomonidan voyaga yetmagan va voyaga yetgan mehnatga layoqatsiz bolalar taʼminoti uchun aliment undirishga oid ishlar boʻyicha qonunchilikni q… 8"
+    ]
+   }
+  },
+  "ok-03": {
+   "question": "Ajrashganda er-xotinning mol-mulki qanday boʻlinadi?",
+   "ranks": {
+    "fts": null,
+    "vector": null,
+    "hybrid": null
+   },
+   "top3": {
+    "fts": [
+     "Hujjat 2191: Oʻzbekiston Respublikasi konsullik muassasalarining konsullari tomonidan notarial harakatlarni amalga oshirish tartibi toʻgʻrisidagi yoʻriqnomani… 149",
+     "Buyruq 3113: Notariuslar tomonidan notarial harakatlarni amalga oshirish tartibi toʻgʻrisida yoʻriqnomani tasdiqlash haqida 149",
+     "Hujjat 2191: Oʻzbekiston Respublikasi konsullik muassasalarining konsullari tomonidan notarial harakatlarni amalga oshirish tartibi toʻgʻrisidagi yoʻriqnomani… 147"
+    ],
+    "vector": [
+     "Buyruq 2556: Qon va uning tarkibiy qismlarini topshirish tartibi toʻgʻrisidagi nizomni tasdiqlash haqida None",
+     "Buyruq 2232: Veterinariya tadbirlari uchun qoʻllaniladigan mikroorganizmlar va viruslar shtammlari, hayvonot va oʻsimliklarga mansub toksinlar hamda zaharlarni… None",
+     "Hujjat 3173: Toshkent davlat yuridik universitetining Ixtisoslashtirilgan filialida taʼlim oluvchilarning bilimini nazorat qilish tartibi va baholash mezonlari… None"
+    ],
+    "hybrid": [
+     "Buyruq 2556: Qon va uning tarkibiy qismlarini topshirish tartibi toʻgʻrisidagi nizomni tasdiqlash haqida None",
+     "Buyruq 2232: Veterinariya tadbirlari uchun qoʻllaniladigan mikroorganizmlar va viruslar shtammlari, hayvonot va oʻsimliklarga mansub toksinlar hamda zaharlarni… None",
+     "Hujjat 3173: Toshkent davlat yuridik universitetining Ixtisoslashtirilgan filialida taʼlim oluvchilarning bilimini nazorat qilish tartibi va baholash mezonlari… None"
+    ]
+   }
+  },
+  "ok-04": {
+   "question": "FHDYO orqali ajrashish mumkinmi yoki faqat sud orqalimi?",
+   "ranks": {
+    "fts": null,
+    "vector": null,
+    "hybrid": null
+   },
+   "top3": {
+    "fts": [
+     "Oʻzbekiston Respublikasida oila institutini mustahkamlash konsepsiyasini tasdiqlash toʻgʻrisidagi Prezident qarori (PQ-3808) None",
+     "Fuqarolik holati dalolatnomalarini yozish tartiblarini yanada takomillashtirish chora-tadbirlari toʻgʻrisidagi Vazirlar Mahkamasi qarori (540) 33",
+     "Prezident farmoni PF-157: Davlat xizmatlarini koʻrsatish tizimini takomillashtirish hamda sohada byurokratik tartibotlarni tubdan qisqartirishga doir qoʻshimch… None"
+    ],
+    "vector": [
+     "Buyruq 2547: Fuqarolik holati dalolatnomalarini yozish organlarida ish yuritish tartibi toʻgʻrisidagi yoʻriqnomani tasdiqlash haqida None",
+     "Fuqarolik holati dalolatnomalarini yozish tartiblarini yanada takomillashtirish chora-tadbirlari toʻgʻrisidagi Vazirlar Mahkamasi qarori (540) None",
+     "Fuqarolik holati dalolatnomalarini yozish tartiblarini yanada takomillashtirish chora-tadbirlari toʻgʻrisidagi Vazirlar Mahkamasi qarori (540) None"
+    ],
+    "hybrid": [
+     "Fuqarolik holati dalolatnomalarini yozish tartiblarini yanada takomillashtirish chora-tadbirlari toʻgʻrisidagi Vazirlar Mahkamasi qarori (540) None",
+     "Sudlar tomonidan nikohdan ajratishga oid ishlar boʻyicha qonunchilikni qoʻllash amaliyoti toʻgʻrisidagi Hujjat (06) 5",
+     "Buyruq 2547: Fuqarolik holati dalolatnomalarini yozish organlarida ish yuritish tartibi toʻgʻrisidagi yoʻriqnomani tasdiqlash haqida None"
+    ]
+   }
+  },
+  "ok-05": {
+   "question": "Xotinim homilador boʻlsa ajrashish uchun ariza bera olamanmi?",
+   "ranks": {
+    "fts": 2,
+    "vector": null,
+    "hybrid": 10
+   },
+   "top3": {
+    "fts": [
+     "Vazirlar Mahkamasi qarori 550: Nikoh, oila va fuqarolik holati dalolatnomalarini qayd etish sohasidagi normativ-huquqiy hujjatlarni tizimlashtirish toʻgʻrisida 101",
+     "Oila kodeksi 39",
+     "Prezident qarori PQ-4513: Reproduktiv yoshdagi ayollar, homiladorlar va bolalarga koʻrsatiladigan tibbiy yordam sifatini oshirish va koʻlamini yanada kengaytir… None"
+    ],
+    "vector": [
+     "Vazirlar Mahkamasi qarori 737: Uy-joyga muhtoj xotin-qizlarni uy-joy bilan taʼminlash hamda Toshkent shahrida boshpanasiz, ogʻir turmush sharoitiga tushib qolg… None",
+     "Buyruq 3274: Homiladorlikni sunʼiy ravishda toʻxtatishni amalga oshirish tartibi toʻgʻrisidagi nizomni tasdiqlash haqida None",
+     "Vazirlar Mahkamasi qarori 21: Ichki ishlar organlarining xotin-qizlar masalalari boʻyicha boʻlinmalari huzuridagi “Toʻmaris izdoshlari” jamoaviy guruhlari faol… None"
+    ],
+    "hybrid": [
+     "Vazirlar Mahkamasi qarori 737: Uy-joyga muhtoj xotin-qizlarni uy-joy bilan taʼminlash hamda Toshkent shahrida boshpanasiz, ogʻir turmush sharoitiga tushib qolg… None",
+     "Buyruq 3274: Homiladorlikni sunʼiy ravishda toʻxtatishni amalga oshirish tartibi toʻgʻrisidagi nizomni tasdiqlash haqida None",
+     "Vazirlar Mahkamasi qarori 21: Ichki ishlar organlarining xotin-qizlar masalalari boʻyicha boʻlinmalari huzuridagi “Toʻmaris izdoshlari” jamoaviy guruhlari faol… None"
+    ]
+   }
+  },
+  "ok-06": {
+   "question": "Nikoh shartnomasini qachon tuzish mumkin?",
+   "ranks": {
+    "fts": 1,
+    "vector": 5,
+    "hybrid": 2
+   },
+   "top3": {
+    "fts": [
+     "Oila kodeksi 30",
+     "Oila kodeksi 35",
+     "Oila kodeksi 56"
+    ],
+    "vector": [
+     "Oila kodeksi 31",
+     "Oila kodeksi 32",
+     "Oila kodeksi 35"
+    ],
+    "hybrid": [
+     "Oila kodeksi 35",
+     "Oila kodeksi 30",
+     "Oila kodeksi 31"
+    ]
+   }
+  },
+  "ok-07": {
+   "question": "Nikohdan oldin tibbiy koʻrikdan oʻtish majburiymi?",
+   "ranks": {
+    "fts": 5,
+    "vector": null,
+    "hybrid": null
+   },
+   "top3": {
+    "fts": [
+     "Vazirlar Mahkamasi qarori 365: Nikohlanuvchi shaxslarni tibbiy koʻrikdan oʻtkazish toʻgʻrisidagi nizomni tasdiqlash haqida 3¹",
+     "Vazirlar Mahkamasi qarori 550: Nikoh, oila va fuqarolik holati dalolatnomalarini qayd etish sohasidagi normativ-huquqiy hujjatlarni tizimlashtirish toʻgʻrisida 95",
+     "Vazirlar Mahkamasi qarori 365: Nikohlanuvchi shaxslarni tibbiy koʻrikdan oʻtkazish toʻgʻrisidagi nizomni tasdiqlash haqida 30"
+    ],
+    "vector": [
+     "Vazirlar Mahkamasi qarori 365: Nikohlanuvchi shaxslarni tibbiy koʻrikdan oʻtkazish toʻgʻrisidagi nizomni tasdiqlash haqida None",
+     "Vazirlar Mahkamasi qarori 365: Nikohlanuvchi shaxslarni tibbiy koʻrikdan oʻtkazish toʻgʻrisidagi nizomni tasdiqlash haqida None",
+     "Vazirlar Mahkamasi qarori 62: Tibbiy-ijtimoiy ekspertiza xizmati tashkiliy tuzilmasini va faoliyatini tashkil etishga oid normativ-huquqiy hujjatlarni tasdiqla… None"
+    ],
+    "hybrid": [
+     "Vazirlar Mahkamasi qarori 365: Nikohlanuvchi shaxslarni tibbiy koʻrikdan oʻtkazish toʻgʻrisidagi nizomni tasdiqlash haqida None",
+     "Vazirlar Mahkamasi qarori 365: Nikohlanuvchi shaxslarni tibbiy koʻrikdan oʻtkazish toʻgʻrisidagi nizomni tasdiqlash haqida None",
+     "Vazirlar Mahkamasi qarori 62: Tibbiy-ijtimoiy ekspertiza xizmati tashkiliy tuzilmasini va faoliyatini tashkil etishga oid normativ-huquqiy hujjatlarni tasdiqla… None"
+    ]
+   }
+  },
+  "ok-08": {
+   "question": "otalikni sud orqali aniqlash",
+   "ranks": {
+    "fts": null,
+    "vector": null,
+    "hybrid": 10
+   },
+   "top3": {
+    "fts": [
+     "Sudlar tomonidan otalikni belgilashga oid ishlarni koʻrishda qonunchilikning qoʻllanilishi toʻgʻrisidagi Hujjat (8) 3",
+     "Sudlar tomonidan otalikni belgilashga oid ishlarni koʻrishda qonunchilikning qoʻllanilishi toʻgʻrisidagi Hujjat (8) 2",
+     "Sudlar tomonidan otalikni belgilashga oid ishlarni koʻrishda qonunchilikning qoʻllanilishi toʻgʻrisidagi Hujjat (8) 11"
+    ],
+    "vector": [
+     "Sudlar tomonidan otalikni belgilashga oid ishlarni koʻrishda qonunchilikning qoʻllanilishi toʻgʻrisidagi Hujjat (8) 1",
+     "Sudlar tomonidan otalikni belgilashga oid ishlarni koʻrishda qonunchilikning qoʻllanilishi toʻgʻrisidagi Hujjat (8) 13",
+     "Sudlar tomonidan otalikni belgilashga oid ishlarni koʻrishda qonunchilikning qoʻllanilishi toʻgʻrisidagi Hujjat (8) 3"
+    ],
+    "hybrid": [
+     "Sudlar tomonidan otalikni belgilashga oid ishlarni koʻrishda qonunchilikning qoʻllanilishi toʻgʻrisidagi Hujjat (8) 3",
+     "Sudlar tomonidan otalikni belgilashga oid ishlarni koʻrishda qonunchilikning qoʻllanilishi toʻgʻrisidagi Hujjat (8) 1",
+     "Sudlar tomonidan otalikni belgilashga oid ishlarni koʻrishda qonunchilikning qoʻllanilishi toʻgʻrisidagi Hujjat (8) 13"
+    ]
+   }
+  },
+  "ok-09": {
+   "question": "Soxta nikoh deganda nima tushuniladi?",
+   "ranks": {
+    "fts": 2,
+    "vector": null,
+    "hybrid": 1
+   },
+   "top3": {
+    "fts": [
+     "Sudlar tomonidan nikohdan ajratishga oid ishlar boʻyicha qonunchilikni qoʻllash amaliyoti toʻgʻrisidagi Hujjat (06) 34",
+     "Oila kodeksi 54",
+     "Oila kodeksi 49"
+    ],
+    "vector": [
+     "Hujjat 3173: Toshkent davlat yuridik universitetining Ixtisoslashtirilgan filialida taʼlim oluvchilarning bilimini nazorat qilish tartibi va baholash mezonlari… None",
+     "Vazirlar Mahkamasi qarori 742: Shaxslarni kundalik hayotdagi faolligi va ishtirokini baholash uchun yoʻllash hamda baholashdan oʻtkazish tartibi toʻgʻrisidagi… None",
+     "Hujjat 3173: Toshkent davlat yuridik universitetining Ixtisoslashtirilgan filialida taʼlim oluvchilarning bilimini nazorat qilish tartibi va baholash mezonlari… None"
+    ],
+    "hybrid": [
+     "Oila kodeksi 54",
+     "Sudlar tomonidan nikohdan ajratishga oid ishlar boʻyicha qonunchilikni qoʻllash amaliyoti toʻgʻrisidagi Hujjat (06) 34",
+     "Oila kodeksi 49"
+    ]
+   }
+  },
+  "fk-01": {
+   "question": "Daʼvo muddati umumiy holda necha yil?",
+   "ranks": {
+    "fts": 1,
+    "vector": 10,
+    "hybrid": 1
+   },
+   "top3": {
+    "fts": [
+     "Fuqarolik kodeksi (birinchi qism) 150",
+     "Soliq kodeksi 88",
+     "Hujjat 282: Iqtisodiy sudlar tomonidan fuqarolik qonun hujjatlarining daʼvo muddatiga oid normalarini qoʻllashning ayrim masalalari haqida 15"
+    ],
+    "vector": [
+     "Hujjat 282: Iqtisodiy sudlar tomonidan fuqarolik qonun hujjatlarining daʼvo muddatiga oid normalarini qoʻllashning ayrim masalalari haqida 16",
+     "Hujjat 4-2102-2201/479: 4-2102-2201/479-sonli iqtisodiy ish 4",
+     "Buyruq 2169: Budjet tashkilotlarida buxgalteriya hisobi toʻgʻrisidagi yoʻriqnomani tasdiqlash haqida None"
+    ],
+    "hybrid": [
+     "Fuqarolik kodeksi (birinchi qism) 150",
+     "Hujjat 282: Iqtisodiy sudlar tomonidan fuqarolik qonun hujjatlarining daʼvo muddatiga oid normalarini qoʻllashning ayrim masalalari haqida 15",
+     "Soliq kodeksi 88"
+    ]
+   }
+  },
+  "fk-02": {
+   "question": "Necha yoshdan boshlab inson toʻliq muomalaga layoqatli boʻladi?",
+   "ranks": {
+    "fts": 9,
+    "vector": null,
+    "hybrid": null
+   },
+   "top3": {
+    "fts": [
+     "Maʼmuriy sud ishlarini yuritish toʻgʻrisidagi kodeks 36",
+     "Sudlar tomonidan fuqaroni muomala layoqati cheklangan yoki muomalaga layoqatsiz deb topish haqidagi ishlarni koʻrish amaliyoti toʻgʻrisidagi Hujjat (18) 1",
+     "Mehnat kodeksi 23"
+    ],
+    "vector": [
+     "Vazirlar Mahkamasi qarori 460: Ish beruvchilarga ular tomonidan 25 yoshdan oshmagan xodimlar uchun toʻlangan ijtimoiy soliq summasini Davlat budjetidan toʻliq… None",
+     "Vazirlar Mahkamasi qarori 177: Ish beruvchining fuqarolik javobgarligini majburiy sugʻurta qilish toʻgʻrisidagi Oʻzbekiston Respublikasi Qonunini amalga oshiri… None",
+     "Vazirlar Mahkamasi qarori 285: Ogʻir ijtimoiy vaziyatga tushib qolgan xotin-qizlarga, nogironligi boʻlgan, Ijtimoiy reyestrga kiritilgan oilalardagi, farzandla… None"
+    ],
+    "hybrid": [
+     "Vazirlar Mahkamasi qarori 460: Ish beruvchilarga ular tomonidan 25 yoshdan oshmagan xodimlar uchun toʻlangan ijtimoiy soliq summasini Davlat budjetidan toʻliq… None",
+     "Vazirlar Mahkamasi qarori 177: Ish beruvchining fuqarolik javobgarligini majburiy sugʻurta qilish toʻgʻrisidagi Oʻzbekiston Respublikasi Qonunini amalga oshiri… None",
+     "Maʼmuriy sud ishlarini yuritish toʻgʻrisidagi kodeks 36"
+    ]
+   }
+  },
+  "fk-03": {
+   "question": "15 yoshli bola oʻzi bitim tuza oladimi?",
+   "ranks": {
+    "fts": 2,
+    "vector": 10,
+    "hybrid": 1
+   },
+   "top3": {
+    "fts": [
+     "Prezident farmoni PF-6155: 2017-2021-yillarda Oʻzbekiston Respublikasini rivojlantirishning beshta ustuvor yoʻnalishi boʻyicha Harakatlar strategiyasini “Yoshl… None",
+     "Fuqarolik kodeksi (birinchi qism) 27",
+     "Maktabgacha taʼlim va tarbiyaning davlat standartini tasdiqlash toʻgʻrisidagi Vazirlar Mahkamasi qarori (802) None"
+    ],
+    "vector": [
+     "Vazirlar Mahkamasi qarori 572: Maktabgacha, umumiy oʻrta, oʻrta maxsus, professional va maktabdan tashqari taʼlim tashkilotlari pedagog kadrlarini attestatsiya… None",
+     "Vazirlar Mahkamasi qarori 460: Ish beruvchilarga ular tomonidan 25 yoshdan oshmagan xodimlar uchun toʻlangan ijtimoiy soliq summasini Davlat budjetidan toʻliq… None",
+     "Vazirlar Mahkamasi qarori 652: Musiqa madaniyati fani va jismoniy tarbiya fani oʻqituvchilarining bilim darajasi hamda kasbiy mahoratini aniqlash boʻyicha mill… None"
+    ],
+    "hybrid": [
+     "Fuqarolik kodeksi (birinchi qism) 27",
+     "Vazirlar Mahkamasi qarori 572: Maktabgacha, umumiy oʻrta, oʻrta maxsus, professional va maktabdan tashqari taʼlim tashkilotlari pedagog kadrlarini attestatsiya… None",
+     "Vazirlar Mahkamasi qarori 460: Ish beruvchilarga ular tomonidan 25 yoshdan oshmagan xodimlar uchun toʻlangan ijtimoiy soliq summasini Davlat budjetidan toʻliq… None"
+    ]
+   }
+  },
+  "fk-04": {
+   "question": "Qarz berdim, tilxat bor, qaytarmayapti. Qarz shartnomasi qanday shaklda tuziladi?",
+   "ranks": {
+    "fts": 1,
+    "vector": 5,
+    "hybrid": 1
+   },
+   "top3": {
+    "fts": [
+     "Fuqarolik kodeksi (ikkinchi qism) 733",
+     "Firibgarlikka oid ishlar boʻyicha sud amaliyoti toʻgʻrisidagi Hujjat (17) 10",
+     "Mehnat kodeksi 256"
+    ],
+    "vector": [
+     "Buyruq 2169: Budjet tashkilotlarida buxgalteriya hisobi toʻgʻrisidagi yoʻriqnomani tasdiqlash haqida None",
+     "Buyruq 2169: Budjet tashkilotlarida buxgalteriya hisobi toʻgʻrisidagi yoʻriqnomani tasdiqlash haqida None",
+     "Buyruq 3443: Xodim bilan toʻliq yakka tartibdagi moddiy javobgarlik yoki jamoaning (brigadaning) toʻliq moddiy javobgarligi toʻgʻrisida shartnoma tuzish boʻyic… None"
+    ],
+    "hybrid": [
+     "Fuqarolik kodeksi (ikkinchi qism) 733",
+     "Firibgarlikka oid ishlar boʻyicha sud amaliyoti toʻgʻrisidagi Hujjat (17) 10",
+     "Mehnat kodeksi 256"
+    ]
+   }
+  },
+  "fk-05": {
+   "question": "Qarzni vaqtida qaytarmasa qanday oqibat boʻladi?",
+   "ranks": {
+    "fts": 1,
+    "vector": null,
+    "hybrid": 2
+   },
+   "top3": {
+    "fts": [
+     "Fuqarolik kodeksi (ikkinchi qism) 736",
+     "Oila kodeksi 142",
+     "Hujjat 3283: Bir qarz oluvchi, oʻzaro aloqador qarz oluvchilar guruhi, shu jumladan bankka aloqador shaxslar uchun tavakkalchilikning eng koʻp miqdori toʻgʻris… 36"
+    ],
+    "vector": [
+     "Hujjat 13/150: Kredit shartnomalaridan kelib chiqadigan majburiyatlar bajarilishini taʼminlash toʻgʻrisidagi fuqarolik qonun hujjatlarini qoʻllashning ayrim ma… 4",
+     "Hujjat 269: Iqtisodiy sudlar tomonidan bitimlarni haqiqiy emas deb topish toʻgʻrisidagi fuqarolik qonun hujjatlari normalarini qoʻllashning ayrim masalalari to… 8",
+     "Hujjat 163: Majburiyatlarni bajarmaganlik yoki lozim darajada bajarmaganlik uchun mulkiy javobgarlik toʻgʻrisidagi fuqarolik qonun hujjatlarini qoʻllashning ay… 17"
+    ],
+    "hybrid": [
+     "Hujjat 13/150: Kredit shartnomalaridan kelib chiqadigan majburiyatlar bajarilishini taʼminlash toʻgʻrisidagi fuqarolik qonun hujjatlarini qoʻllashning ayrim ma… 4",
+     "Fuqarolik kodeksi (ikkinchi qism) 736",
+     "Oila kodeksi 142"
+    ]
+   }
+  },
+  "fk-06": {
+   "question": "Neustoyka nima?",
+   "ranks": {
+    "fts": null,
+    "vector": 3,
+    "hybrid": 3
+   },
+   "top3": {
+    "fts": [
+     "Fuqarolik kodeksi (birinchi qism) 261",
+     "Vazirlar Mahkamasi qarori 206: Ijtimoiy va ishlab chiqarish infratuzilmasini rivojlantirish dasturlarini shakllantirish va davlat investitsiyalarini boshqarish… 24",
+     "Vazirlar Mahkamasi qarori 206: Ijtimoiy va ishlab chiqarish infratuzilmasini rivojlantirish dasturlarini shakllantirish va davlat investitsiyalarini boshqarish… 23"
+    ],
+    "vector": [
+     "Fuqarolik kodeksi (birinchi qism) 261",
+     "Xoʻjalik yurituvchi subyektlar faoliyatining shartnomaviy-huquqiy bazasi toʻgʻrisidagi Qonun (670-I) 34",
+     "Fuqarolik kodeksi (birinchi qism) 260"
+    ],
+    "hybrid": [
+     "Fuqarolik kodeksi (birinchi qism) 261",
+     "Hujjat 163: Majburiyatlarni bajarmaganlik yoki lozim darajada bajarmaganlik uchun mulkiy javobgarlik toʻgʻrisidagi fuqarolik qonun hujjatlarini qoʻllashning ay… 2",
+     "Fuqarolik kodeksi (birinchi qism) 260"
+    ]
+   }
+  },
+  "fk-07": {
+   "question": "Hadya qilingan narsani qaytarib olish mumkinmi?",
+   "ranks": {
+    "fts": null,
+    "vector": 7,
+    "hybrid": 2
+   },
+   "top3": {
+    "fts": [
+     "Vazirlar Mahkamasi qarori 559: Yer uchastkalarini onlayn-auksion orqali realizatsiya qilish va kadastr sohasida davlat xizmatlari koʻrsatish tartib-taomillarin… 23",
+     "Fuqarolik kodeksi (ikkinchi qism) 503",
+     "Hujjat 2174: Tergovga qadar tekshiruv, surishtiruv, dastlabki tergov va sud muhokamasi davomida ashyoviy dalillar, moddiy qimmatliklar va boshqa mol-mulkni oli… 27"
+    ],
+    "vector": [
+     "Qurilish sohasiga oid yagona maʼmuriy qurilish reglamentlarini tasdiqlash toʻgʻrisidagi Vazirlar Mahkamasi qarori (200) None",
+     "Buyruq 2169: Budjet tashkilotlarida buxgalteriya hisobi toʻgʻrisidagi yoʻriqnomani tasdiqlash haqida None",
+     "Vazirlar Mahkamasi qarori 908: Tashkilotni qayta tiklanadigan manbalardan energiya ishlab chiqarish qurilmalari tayyorlashga ixtisoslashayotgan tashkilot sifat… None"
+    ],
+    "hybrid": [
+     "Fuqarolik kodeksi (ikkinchi qism) 503",
+     "Fuqarolik kodeksi (ikkinchi qism) 507",
+     "Qurilish sohasiga oid yagona maʼmuriy qurilish reglamentlarini tasdiqlash toʻgʻrisidagi Vazirlar Mahkamasi qarori (200) None"
+    ]
+   }
+  },
+  "fk-08": {
+   "question": "Ota-onadan qolgan merosni birinchi navbatda kimlar oladi?",
+   "ranks": {
+    "fts": 1,
+    "vector": null,
+    "hybrid": 2
+   },
+   "top3": {
+    "fts": [
+     "Fuqarolik kodeksi (ikkinchi qism) 1135",
+     "Hujjat 2191: Oʻzbekiston Respublikasi konsullik muassasalarining konsullari tomonidan notarial harakatlarni amalga oshirish tartibi toʻgʻrisidagi yoʻriqnomani… 120",
+     "Sudlar tomonidan meros huquqiga oid qonunchilikning qoʻllanilishi toʻgʻrisidagi Hujjat (05) 11"
+    ],
+    "vector": [
+     "Vazirlar Mahkamasi qarori 294: Yetim va ota-ona qaramogʻidan mahrum boʻlgan bolalarni har tomonlama qoʻllab-quvvatlash hamda ularga ijtimoiy yordam koʻrsatish… None",
+     "Vazirlar Mahkamasi qarori 294: Yetim va ota-ona qaramogʻidan mahrum boʻlgan bolalarni har tomonlama qoʻllab-quvvatlash hamda ularga ijtimoiy yordam koʻrsatish… None",
+     "Maʼmuriy javobgarlik toʻgʻrisidagi kodeks 248"
+    ],
+    "hybrid": [
+     "Hujjat 2191: Oʻzbekiston Respublikasi konsullik muassasalarining konsullari tomonidan notarial harakatlarni amalga oshirish tartibi toʻgʻrisidagi yoʻriqnomani… 120",
+     "Fuqarolik kodeksi (ikkinchi qism) 1135",
+     "Sudlar tomonidan meros huquqiga oid qonunchilikning qoʻllanilishi toʻgʻrisidagi Hujjat (05) 11"
+    ]
+   }
+  },
+  "fk-09": {
+   "question": "Vasiyatnomada nomi boʻlmasa ham merosdan majburiy ulush oladiganlar kimlar?",
+   "ranks": {
+    "fts": 1,
+    "vector": 6,
+    "hybrid": 1
+   },
+   "top3": {
+    "fts": [
+     "Fuqarolik kodeksi (ikkinchi qism) 1142",
+     "Fuqarolik kodeksi (ikkinchi qism) 1132",
+     "Vazirlar Mahkamasi qarori 726: Notariuslar tomonidan ayrim notarial harakatlarni amalga oshirish tartibi toʻgʻrisidagi maʼmuriy reglamentlarni tasdiqlash haqida 27"
+    ],
+    "vector": [
+     "Sudlar tomonidan meros huquqiga oid qonunchilikning qoʻllanilishi toʻgʻrisidagi Hujjat (05) 9",
+     "Hujjat 3252: Bank faoliyatiga ruxsat berish tartibi va shartlari toʻgʻrisidagi nizomni tasdiqlash haqida None",
+     "Soliq kodeksi 94"
+    ],
+    "hybrid": [
+     "Fuqarolik kodeksi (ikkinchi qism) 1142",
+     "Fuqarolik kodeksi (ikkinchi qism) 1132",
+     "Fuqarolik kodeksi (ikkinchi qism) 1140¹"
+    ]
+   }
+  },
+  "fk-10": {
+   "question": "Vasiyatnoma notarius orqali tasdiqlanishi shartmi?",
+   "ranks": {
+    "fts": 9,
+    "vector": null,
+    "hybrid": null
+   },
+   "top3": {
+    "fts": [
+     "Vazirlar Mahkamasi qarori 726: Notariuslar tomonidan ayrim notarial harakatlarni amalga oshirish tartibi toʻgʻrisidagi maʼmuriy reglamentlarni tasdiqlash haqida 23",
+     "Buyruq 2231: Notarial tasdiqlangan hujjatlarga tenglashtiriladigan vasiyatnomalar, ishonchnomalar va arizalarni tasdiqlash tartibi toʻgʻrisidagi yoʻriqnomani t… 14",
+     "Buyruq 2231: Notarial tasdiqlangan hujjatlarga tenglashtiriladigan vasiyatnomalar, ishonchnomalar va arizalarni tasdiqlash tartibi toʻgʻrisidagi yoʻriqnomani t… 10"
+    ],
+    "vector": [
+     "Buyruq 2231: Notarial tasdiqlangan hujjatlarga tenglashtiriladigan vasiyatnomalar, ishonchnomalar va arizalarni tasdiqlash tartibi toʻgʻrisidagi yoʻriqnomani t… None",
+     "Buyruq 2231: Notarial tasdiqlangan hujjatlarga tenglashtiriladigan vasiyatnomalar, ishonchnomalar va arizalarni tasdiqlash tartibi toʻgʻrisidagi yoʻriqnomani t… None",
+     "Buyruq 2231: Notarial tasdiqlangan hujjatlarga tenglashtiriladigan vasiyatnomalar, ishonchnomalar va arizalarni tasdiqlash tartibi toʻgʻrisidagi yoʻriqnomani t… 14"
+    ],
+    "hybrid": [
+     "Buyruq 2231: Notarial tasdiqlangan hujjatlarga tenglashtiriladigan vasiyatnomalar, ishonchnomalar va arizalarni tasdiqlash tartibi toʻgʻrisidagi yoʻriqnomani t… 14",
+     "Buyruq 2231: Notarial tasdiqlangan hujjatlarga tenglashtiriladigan vasiyatnomalar, ishonchnomalar va arizalarni tasdiqlash tartibi toʻgʻrisidagi yoʻriqnomani t… 10",
+     "Buyruq 2231: Notarial tasdiqlangan hujjatlarga tenglashtiriladigan vasiyatnomalar, ishonchnomalar va arizalarni tasdiqlash tartibi toʻgʻrisidagi yoʻriqnomani t… 16"
+    ]
+   }
+  },
+  "fk-11": {
+   "question": "merosdan voz kechsa boladimi",
+   "ranks": {
+    "fts": 2,
+    "vector": 3,
+    "hybrid": 1
+   },
+   "top3": {
+    "fts": [
+     "Notariat toʻgʻrisidagi Qonun (343-I) 50",
+     "Fuqarolik kodeksi (ikkinchi qism) 1147",
+     "Fuqarolik kodeksi (ikkinchi qism) 1149"
+    ],
+    "vector": [
+     "Vazirlar Mahkamasi qarori 726: Notariuslar tomonidan ayrim notarial harakatlarni amalga oshirish tartibi toʻgʻrisidagi maʼmuriy reglamentlarni tasdiqlash haqida 23",
+     "Buyruq 3137: Gimnastika boʻyicha ixtisoslashtirilgan respublika bolalar-oʻsmirlar olimpiya zaxirasi sport maktabiga oʻquvchi-sportchilarni konkurs asosida tanl… None",
+     "Fuqarolik kodeksi (ikkinchi qism) 1147"
+    ],
+    "hybrid": [
+     "Fuqarolik kodeksi (ikkinchi qism) 1147",
+     "Fuqarolik kodeksi (ikkinchi qism) 1148",
+     "Fuqarolik kodeksi (ikkinchi qism) 1149"
+    ]
+   }
+  },
+  "fk-12": {
+   "question": "Kvartirani ijaraga berish shartnomasi yozma boʻlishi kerakmi?",
+   "ranks": {
+    "fts": 4,
+    "vector": null,
+    "hybrid": 7
+   },
+   "top3": {
+    "fts": [
+     "Uy-joy kodeksi 35",
+     "Uy-joy kodeksi 25",
+     "Vazirlar Mahkamasi qarori 170: Davlat uy-joy fondidagi turar joylarni taqsimlash va fuqarolarga ijara shartnomasi shartlari asosida berishni tartibga solishga… 29"
+    ],
+    "vector": [
+     "Vazirlar Mahkamasi qarori 656: Yetim bolalar va ota-ona qaramogʻidan mahrum boʻlgan bolalarni ijtimoiy qoʻllab-quvvatlashga doir qoʻshimcha chora-tadbirlar toʻ… None",
+     "Vazirlar Mahkamasi qarori 280: Qishloq joylarda namunaviy loyihalar asosida “Qishloq qurilish invest” injiniring kompaniyasi ishtirokida uy-joylar qurishni tas… 44",
+     "Vazirlar Mahkamasi qarori 170: Davlat uy-joy fondidagi turar joylarni taqsimlash va fuqarolarga ijara shartnomasi shartlari asosida berishni tartibga solishga… None"
+    ],
+    "hybrid": [
+     "Uy-joy kodeksi 35",
+     "Uy-joy kodeksi 25",
+     "Vazirlar Mahkamasi qarori 170: Davlat uy-joy fondidagi turar joylarni taqsimlash va fuqarolarga ijara shartnomasi shartlari asosida berishni tartibga solishga… None"
+    ]
+   }
+  },
+  "fk-13": {
+   "question": "Ijarachi muddatidan oldin chiqib ketmoqchi boʻlsa shartnoma qanday bekor qilinadi?",
+   "ranks": {
+    "fts": 1,
+    "vector": null,
+    "hybrid": 10
+   },
+   "top3": {
+    "fts": [
+     "Fuqarolik kodeksi (ikkinchi qism) 552",
+     "Fuqarolik kodeksi (ikkinchi qism) 627",
+     "Fuqarolik kodeksi (ikkinchi qism) 579"
+    ],
+    "vector": [
+     "Yer kodeksi 24⁴",
+     "Hujjat 13/150: Kredit shartnomalaridan kelib chiqadigan majburiyatlar bajarilishini taʼminlash toʻgʻrisidagi fuqarolik qonun hujjatlarini qoʻllashning ayrim ma… 4",
+     "Vazirlar Mahkamasi qarori 478: Tadbirkorlik subyektlariga tutash hududlardan mavsumiy foydalanishni tashkil etishni yanada soddalashtirish chora-tadbirlari toʻ… 5"
+    ],
+    "hybrid": [
+     "Vazirlar Mahkamasi qarori 441: Suv fondi yer uchastkalarini tadbirkorlik subyektlariga “E-auksion” elektron savdo platformasi orqali ijaraga berish tartibi toʻ… 25",
+     "Vazirlar Mahkamasi qarori 170: Davlat uy-joy fondidagi turar joylarni taqsimlash va fuqarolarga ijara shartnomasi shartlari asosida berishni tartibga solishga… 13",
+     "Vazirlar Mahkamasi qarori 441: Suv fondi yer uchastkalarini tadbirkorlik subyektlariga “E-auksion” elektron savdo platformasi orqali ijaraga berish tartibi toʻ… 31"
+    ]
+   }
+  },
+  "fk-14": {
+   "question": "Doʻkondan olgan tovarim sifatsiz chiqdi, kafolat muddati qanday hisoblanadi?",
+   "ranks": {
+    "fts": 1,
+    "vector": 8,
+    "hybrid": 1
+   },
+   "top3": {
+    "fts": [
+     "Fuqarolik kodeksi (ikkinchi qism) 404",
+     "Vazirlar Mahkamasi qarori 519: Mehnat shartnomasi alohida asoslarga koʻra bekor qilinganda, moddiy jihatdan qoʻllab-quvvatlash boʻyicha qoʻshimcha kafolatlarda… 10",
+     "Fuqarolik kodeksi (ikkinchi qism) 403"
+    ],
+    "vector": [
+     "Vazirlar Mahkamasi qarori 716: Ijtimoiy ahamiyatga ega mahsulotlar narxlari barqarorligini taʼminlash hamda mahsulotlar xavfsizligi va sifatini tizimli nazorat… None",
+     "Vazirlar Mahkamasi qarori 76: Tovarlar (ishlar, xizmatlar)ni import qilishda qoʻshilgan qiymat soligʻi toʻlovchilar uchun qoʻshilgan qiymat soligʻini toʻlash m… None",
+     "Tegishli darajada sifatli boʻlmagan mahsulotlar (tovarlar)ni yetkazib berish bilan bogʻliq boʻlgan nizolarni hal qilish tartibi toʻgʻrisidagi Hujjat (174) 15"
+    ],
+    "hybrid": [
+     "Fuqarolik kodeksi (ikkinchi qism) 403",
+     "Vazirlar Mahkamasi qarori 716: Ijtimoiy ahamiyatga ega mahsulotlar narxlari barqarorligini taʼminlash hamda mahsulotlar xavfsizligi va sifatini tizimli nazorat… None",
+     "Vazirlar Mahkamasi qarori 76: Tovarlar (ishlar, xizmatlar)ni import qilishda qoʻshilgan qiymat soligʻi toʻlovchilar uchun qoʻshilgan qiymat soligʻini toʻlash m… None"
+    ]
+   }
+  },
+  "fk-15": {
+   "question": "13 yoshli bola birovning mashinasini sindirdi, zararni kim toʻlaydi?",
+   "ranks": {
+    "fts": 1,
+    "vector": null,
+    "hybrid": 1
+   },
+   "top3": {
+    "fts": [
+     "Fuqarolik kodeksi (ikkinchi qism) 993",
+     "Fuqarolik kodeksi (birinchi qism) 27",
+     "Fuqarolik kodeksi (birinchi qism) 29"
+    ],
+    "vector": [
+     "Hujjat 11: Sudlar tomonidan voyaga yetmagan va voyaga yetgan mehnatga layoqatsiz bolalar taʼminoti uchun aliment undirishga oid ishlar boʻyicha qonunchilikni q… 2",
+     "Hujjat 18: Mehnat vazifalarini bajarishi munosabati bilan xodimning hayoti va sogʻligʻiga yetkazilgan zararni qoplashga oid nizolar boʻyicha sud amaliyoti haqi… 14",
+     "Vazirlar Mahkamasi qarori 484: Aholining ehtiyojmand qatlamlari uchun davlat tomonidan kafolatlangan ijtimoiy xizmatlarni koʻrsatish chora-tadbirlari toʻgʻrisi… None"
+    ],
+    "hybrid": [
+     "Fuqarolik kodeksi (ikkinchi qism) 993",
+     "Fuqarolik kodeksi (ikkinchi qism) 994",
+     "Hujjat 11: Sudlar tomonidan voyaga yetmagan va voyaga yetgan mehnatga layoqatsiz bolalar taʼminoti uchun aliment undirishga oid ishlar boʻyicha qonunchilikni q… 2"
+    ]
+   }
+  },
+  "jk-01": {
+   "question": "Firibgarlik uchun qanday jazo bor?",
+   "ranks": {
+    "fts": 1,
+    "vector": null,
+    "hybrid": 1
+   },
+   "top3": {
+    "fts": [
+     "Jinoyat kodeksi 168",
+     "Jinoyat kodeksi 73",
+     "Hujjat 4: Jazolarni liberallashtirish toʻgʻrisidagi qonunni iqtisodiyot sohasidagi jinoyatlarga nisbatan qoʻllashning ayrim masalalari haqida 2"
+    ],
+    "vector": [
+     "Vazirlar Mahkamasi qarori 742: Shaxslarni kundalik hayotdagi faolligi va ishtirokini baholash uchun yoʻllash hamda baholashdan oʻtkazish tartibi toʻgʻrisidagi… None",
+     "Buyruq 2170: Notarial idoralarda notarial ish yuritish qoidalarini tasdiqlash haqida None",
+     "Buyruq 2169: Budjet tashkilotlarida buxgalteriya hisobi toʻgʻrisidagi yoʻriqnomani tasdiqlash haqida None"
+    ],
+    "hybrid": [
+     "Jinoyat kodeksi 168",
+     "Jinoyat kodeksi 73",
+     "Vazirlar Mahkamasi qarori 742: Shaxslarni kundalik hayotdagi faolligi va ishtirokini baholash uchun yoʻllash hamda baholashdan oʻtkazish tartibi toʻgʻrisidagi… None"
+    ]
+   }
+  },
+  "jk-02": {
+   "question": "Oʻgʻrilik qilgan odam qanday javobgarlikka tortiladi?",
+   "ranks": {
+    "fts": 3,
+    "vector": null,
+    "hybrid": 3
+   },
+   "top3": {
+    "fts": [
+     "Oʻzgalar mulkini oʻgʻrilik, talonchilik va bosqinchilik bilan talon-toroj qilish jinoyat ishlari boʻyicha sud amaliyoti toʻgʻrisidagi Hujjat (6) 9",
+     "Oʻzgalar mulkini oʻgʻrilik, talonchilik va bosqinchilik bilan talon-toroj qilish jinoyat ishlari boʻyicha sud amaliyoti toʻgʻrisidagi Hujjat (6) 9¹",
+     "Jinoyat kodeksi 169"
+    ],
+    "vector": [
+     "Hujjat 18: Mehnat vazifalarini bajarishi munosabati bilan xodimning hayoti va sogʻligʻiga yetkazilgan zararni qoplashga oid nizolar boʻyicha sud amaliyoti haqi… 2",
+     "Vazirlar Mahkamasi qarori 177: Ish beruvchining fuqarolik javobgarligini majburiy sugʻurta qilish toʻgʻrisidagi Oʻzbekiston Respublikasi Qonunini amalga oshiri… None",
+     "Vazirlar Mahkamasi qarori 505: Mehnat faoliyati bilan bogʻliq baxtsiz hodisalar toʻgʻrisida xabar berish, ularni tekshirish va hisobga olish hamda ularning oqi… 40"
+    ],
+    "hybrid": [
+     "Oʻzgalar mulkini oʻgʻrilik, talonchilik va bosqinchilik bilan talon-toroj qilish jinoyat ishlari boʻyicha sud amaliyoti toʻgʻrisidagi Hujjat (6) 9",
+     "Oʻzgalar mulkini oʻgʻrilik, talonchilik va bosqinchilik bilan talon-toroj qilish jinoyat ishlari boʻyicha sud amaliyoti toʻgʻrisidagi Hujjat (6) 9¹",
+     "Jinoyat kodeksi 169"
+    ]
+   }
+  },
+  "jk-03": {
+   "question": "Pora berganlik uchun jazo",
+   "ranks": {
+    "fts": 8,
+    "vector": null,
+    "hybrid": null
+   },
+   "top3": {
+    "fts": [
+     "Jinoyat kodeksi 213",
+     "Jinoyat kodeksi 192¹⁰",
+     "Jinoyat kodeksi 192⁹"
+    ],
+    "vector": [
+     "Buyruq 3443: Xodim bilan toʻliq yakka tartibdagi moddiy javobgarlik yoki jamoaning (brigadaning) toʻliq moddiy javobgarligi toʻgʻrisida shartnoma tuzish boʻyic… 6",
+     "Hujjat 11: Sudlar tomonidan voyaga yetmagan va voyaga yetgan mehnatga layoqatsiz bolalar taʼminoti uchun aliment undirishga oid ishlar boʻyicha qonunchilikni q… 23",
+     "Hujjat 13/150: Kredit shartnomalaridan kelib chiqadigan majburiyatlar bajarilishini taʼminlash toʻgʻrisidagi fuqarolik qonun hujjatlarini qoʻllashning ayrim ma… 26"
+    ],
+    "hybrid": [
+     "Poraxoʻrlik ishlari boʻyicha sud amaliyoti toʻgʻrisidagi Hujjat (19) 16",
+     "Jinoyat kodeksi 213",
+     "Jinoyat kodeksi 192¹⁰"
+    ]
+   }
+  },
+  "jk-04": {
+   "question": "Mansabdor shaxs pora olsa necha yil qamaladi?",
+   "ranks": {
+    "fts": 4,
+    "vector": null,
+    "hybrid": 9
+   },
+   "top3": {
+    "fts": [
+     "Jinoyat kodeksi 192⁹",
+     "Jinoyat kodeksi 213",
+     "Jinoyat kodeksi 192¹⁰"
+    ],
+    "vector": [
+     "Vazirlar Mahkamasi qarori 46: Fuqarolarning oʻzini oʻzi boshqarish organlari majmualarini tashkil etish boʻyicha 2021-2022-yillarga moʻljallangan manzilli dast… None",
+     "Vazirlar Mahkamasi qarori 1042: Oʻzbekiston Respublikasi Suv xoʻjaligi vazirligi tizimidagi tashkilotlarning jismonan eskirgan va oʻz xizmatini oʻtab boʻlgan n… None",
+     "Prezident qarori PQ-2916: 2017-2021-yillarda maishiy chiqindilar bilan bogʻliq ishlarni amalga oshirish tizimini tubdan takomillashtirish va rivojlantirish cho… None"
+    ],
+    "hybrid": [
+     "Poraxoʻrlik ishlari boʻyicha sud amaliyoti toʻgʻrisidagi Hujjat (19) 9",
+     "Poraxoʻrlik ishlari boʻyicha sud amaliyoti toʻgʻrisidagi Hujjat (19) 8",
+     "Poraxoʻrlik ishlari boʻyicha sud amaliyoti toʻgʻrisidagi Hujjat (19) 5"
+    ]
+   }
+  },
+  "jk-05": {
+   "question": "Necha yoshdan jinoiy javobgarlikka tortiladi?",
+   "ranks": {
+    "fts": null,
+    "vector": 6,
+    "hybrid": null
+   },
+   "top3": {
+    "fts": [
+     "Jinoyat-protsessual kodeksi 601",
+     "Jinoyat-protsessual kodeksi 546⁵",
+     "Jinoyat-protsessual kodeksi 599"
+    ],
+    "vector": [
+     "Jinoyat kodeksi 64",
+     "Vazirlar Mahkamasi qarori 460: Ish beruvchilarga ular tomonidan 25 yoshdan oshmagan xodimlar uchun toʻlangan ijtimoiy soliq summasini Davlat budjetidan toʻliq… None",
+     "Vazirlar Mahkamasi qarori 177: Ish beruvchining fuqarolik javobgarligini majburiy sugʻurta qilish toʻgʻrisidagi Oʻzbekiston Respublikasi Qonunini amalga oshiri… None"
+    ],
+    "hybrid": [
+     "Vazirlar Mahkamasi qarori 484: Aholining ehtiyojmand qatlamlari uchun davlat tomonidan kafolatlangan ijtimoiy xizmatlarni koʻrsatish chora-tadbirlari toʻgʻrisi… None",
+     "Jinoyat-protsessual kodeksi 84",
+     "Hujjat 18: Reabilitatsiya etilgan shaxsga yetkazilgan ziyonni qoplash va uning boshqa huquqlarini tiklash boʻyicha sud amaliyotining ayrim masalalari toʻgʻrisi… 4"
+    ]
+   }
+  },
+  "jk-06": {
+   "question": "Internetda tuhmat qilsa jinoyat boʻladimi?",
+   "ranks": {
+    "fts": 2,
+    "vector": null,
+    "hybrid": 2
+   },
+   "top3": {
+    "fts": [
+     "Jinoyat kodeksi 66¹",
+     "Maʼmuriy javobgarlik toʻgʻrisidagi kodeks 40",
+     "Jinoyat kodeksi 139"
+    ],
+    "vector": [
+     "Buyruq 2169: Budjet tashkilotlarida buxgalteriya hisobi toʻgʻrisidagi yoʻriqnomani tasdiqlash haqida None",
+     "Buyruq 2495: Oʻzbekiston Respublikasi Ichki ishlar vazirligi ozodlikdan mahrum qilish turidagi jazoni ijro etish muassasalarining ichki tartib qoidalarini tasd… None",
+     "Buyruq 2169: Budjet tashkilotlarida buxgalteriya hisobi toʻgʻrisidagi yoʻriqnomani tasdiqlash haqida None"
+    ],
+    "hybrid": [
+     "Jinoyat kodeksi 66¹",
+     "Maʼmuriy javobgarlik toʻgʻrisidagi kodeks 40",
+     "Jinoyat kodeksi 139"
+    ]
+   }
+  },
+  "jk-07": {
+   "question": "Aliment toʻlamaslik jinoyatmi?",
+   "ranks": {
+    "fts": 1,
+    "vector": null,
+    "hybrid": 3
+   },
+   "top3": {
+    "fts": [
+     "Maʼmuriy javobgarlik toʻgʻrisidagi kodeks 47⁴",
+     "Jinoyat kodeksi 123",
+     "Maʼmuriy javobgarlik toʻgʻrisidagi kodeks 47⁵"
+    ],
+    "vector": [
+     "Buyruq 2169: Budjet tashkilotlarida buxgalteriya hisobi toʻgʻrisidagi yoʻriqnomani tasdiqlash haqida None",
+     "Buyruq 2169: Budjet tashkilotlarida buxgalteriya hisobi toʻgʻrisidagi yoʻriqnomani tasdiqlash haqida None",
+     "Buyruq 2169: Budjet tashkilotlarida buxgalteriya hisobi toʻgʻrisidagi yoʻriqnomani tasdiqlash haqida None"
+    ],
+    "hybrid": [
+     "Hujjat 7: Sud hujjatlarini bajarishdan boʻyin tovlash hamda sud hujjatlari va boshqa organlar hujjatlarini majburiy ijro etish jarayoniga aralashganlik uchun j… 15",
+     "Hujjat 11: Sudlar tomonidan voyaga yetmagan va voyaga yetgan mehnatga layoqatsiz bolalar taʼminoti uchun aliment undirishga oid ishlar boʻyicha qonunchilikni q… 23",
+     "Maʼmuriy javobgarlik toʻgʻrisidagi kodeks 47⁴"
+    ]
+   }
+  },
+  "jk-08": {
+   "question": "jabrlanuvchi bilan yarashsa jinoiy ish yopiladimi",
+   "ranks": {
+    "fts": 1,
+    "vector": 10,
+    "hybrid": 1
+   },
+   "top3": {
+    "fts": [
+     "Jinoyat kodeksi 66¹",
+     "Maʼmuriy javobgarlik toʻgʻrisidagi kodeks 21²",
+     "Xotin-qizlarni tazyiq va zoʻravonlikdan himoya qilish tizimini takomillashtirish chora-tadbirlari toʻgʻrisidagi Vazirlar Mahkamasi qarori (3) None"
+    ],
+    "vector": [
+     "Maʼnaviy zararni qoplash haqidagi qonunlarni qoʻllashning ayrim masalalari toʻgʻrisidagi Hujjat (7) 9",
+     "Hujjat 3423: Nobank kredit tashkilotlari faoliyati sohasidagi ruxsat berish va xabardor qilish tartib-taomillaridan oʻtish tartibi toʻgʻrisidagi nizomni tasdiq… None",
+     "Jinoyat ishlarini nazorat tartibida koʻrish boʻyicha sud amaliyoti toʻgʻrisidagi Hujjat (11) 30"
+    ],
+    "hybrid": [
+     "Jinoyat kodeksi 66¹",
+     "Jinoyat-protsessual kodeksi 173",
+     "Maʼmuriy javobgarlik toʻgʻrisidagi kodeks 21²"
+    ]
+   }
+  },
+  "mjk-01": {
+   "question": "Mast holda mashina haydaganlik uchun jarima qancha?",
+   "ranks": {
+    "fts": 1,
+    "vector": null,
+    "hybrid": 1
+   },
+   "top3": {
+    "fts": [
+     "Maʼmuriy javobgarlik toʻgʻrisidagi kodeks 136",
+     "Hujjat 3099: Transport vositalari haydovchilarining mast holatda ekanligini aniqlash tartibi toʻgʻrisidagi nizomni tasdiqlash haqida 7",
+     "Hujjat 3099: Transport vositalari haydovchilarining mast holatda ekanligini aniqlash tartibi toʻgʻrisidagi nizomni tasdiqlash haqida 5"
+    ],
+    "vector": [
+     "Vazirlar Mahkamasi qarori 829: Kon qazib olish korxonalarining yoʻl transportidan foydalanishda ishlarning xavfsizligi qoidalarini va Kon qoldiqlaridan foydala… 82",
+     "Vazirlar Mahkamasi qarori 222: Transport vositalari egalarining fuqarolik javobgarligini majburiy sugʻurta qilishni yanada takomillashtirish chora-tadbirlari t… 4",
+     "Yoʻl xoʻjaligi sohasini yanada takomillashtirish chora-tadbirlari toʻgʻrisidagi Prezident qarori (PQ-330) None"
+    ],
+    "hybrid": [
+     "Maʼmuriy javobgarlik toʻgʻrisidagi kodeks 136",
+     "Maʼmuriy javobgarlik toʻgʻrisidagi kodeks 292",
+     "Vazirlar Mahkamasi qarori 829: Kon qazib olish korxonalarining yoʻl transportidan foydalanishda ishlarning xavfsizligi qoidalarini va Kon qoldiqlaridan foydala… 82"
+    ]
+   }
+  },
+  "mjk-02": {
+   "question": "Jamoat joyida pivo ichish uchun jarima bormi?",
+   "ranks": {
+    "fts": 2,
+    "vector": null,
+    "hybrid": 3
+   },
+   "top3": {
+    "fts": [
+     "Maʼmuriy javobgarlik toʻgʻrisidagi kodeks 187¹",
+     "Maʼmuriy javobgarlik toʻgʻrisidagi kodeks 187",
+     "Maʼmuriy javobgarlik toʻgʻrisidagi kodeks 56¹"
+    ],
+    "vector": [
+     "Buyruq 2169: Budjet tashkilotlarida buxgalteriya hisobi toʻgʻrisidagi yoʻriqnomani tasdiqlash haqida None",
+     "Prezident qarori PQ-4891: Tibbiy profilaktika ishlari samaradorligini yanada oshirish orqali jamoat salomatligini taʼminlashga oid qoʻshimcha chora-tadbirlar t… None",
+     "Buyruq 2169: Budjet tashkilotlarida buxgalteriya hisobi toʻgʻrisidagi yoʻriqnomani tasdiqlash haqida None"
+    ],
+    "hybrid": [
+     "Jinoyat-ijroiya kodeksi 25⁴",
+     "Maʼmuriy javobgarlik toʻgʻrisidagi kodeks 187¹",
+     "Maʼmuriy javobgarlik toʻgʻrisidagi kodeks 187"
+    ]
+   }
+  },
+  "mjk-03": {
+   "question": "Mayda bezorilik uchun nima jazo beriladi?",
+   "ranks": {
+    "fts": 2,
+    "vector": null,
+    "hybrid": 2
+   },
+   "top3": {
+    "fts": [
+     "Jinoyat kodeksi 277",
+     "Maʼmuriy javobgarlik toʻgʻrisidagi kodeks 183",
+     "Hujjat 30: Xotin-qizlar va bolalar huquqlari, erkinliklari hamda qonuniy manfaatlarini ishonchli himoya qilish tizimi yanada takomillashtirilishi natijasida Oʻ… 7"
+    ],
+    "vector": [
+     "Vazirlar Mahkamasi qarori 402: “Jinoiy faoliyatdan olingan daromadlarni legallashtirishga, terrorizmni moliyalashtirishga va ommaviy qirgʻin qurolini tarqatish… None",
+     "Vazirlar Mahkamasi qarori 46: Fuqarolarning oʻzini oʻzi boshqarish organlari majmualarini tashkil etish boʻyicha 2021-2022-yillarga moʻljallangan manzilli dast… None",
+     "Buyruq 2169: Budjet tashkilotlarida buxgalteriya hisobi toʻgʻrisidagi yoʻriqnomani tasdiqlash haqida None"
+    ],
+    "hybrid": [
+     "Jinoyat kodeksi 277",
+     "Maʼmuriy javobgarlik toʻgʻrisidagi kodeks 183",
+     "Hujjat 30: Xotin-qizlar va bolalar huquqlari, erkinliklari hamda qonuniy manfaatlarini ishonchli himoya qilish tizimi yanada takomillashtirilishi natijasida Oʻ… 7"
+    ]
+   }
+  },
+  "mjk-04": {
+   "question": "Haydovchilik guvohnomasisiz mashina haydash",
+   "ranks": {
+    "fts": null,
+    "vector": null,
+    "hybrid": null
+   },
+   "top3": {
+    "fts": [
+     "Vazirlar Mahkamasi qarori 464: Notariat toʻgʻrisidagi qonunchilik hujjatlariga notariuslar tomonidan rioya etilishi ustidan nazorat qilish tartibi toʻgʻrisidag… 8",
+     "Vazirlar Mahkamasi qarori 384: Oʻzbekiston Respublikasida yangi barpo etilayotgan koʻchmas mulk obyektlarini fuqarolari sotib olish huquqiga ega boʻlgan xoriji… None",
+     "Yoʻl harakati toʻgʻrisidagi Qonun (OʻRQ-900) None"
+    ],
+    "vector": [
+     "Vazirlar Mahkamasi qarori 222: Transport vositalari egalarining fuqarolik javobgarligini majburiy sugʻurta qilishni yanada takomillashtirish chora-tadbirlari t… 4",
+     "Vazirlar Mahkamasi qarori 658: Oʻzbekiston Respublikasida uchuvchisiz uchadigan apparatlardan foydalanishni tartibga solish boʻyicha qoʻshimcha chora-tadbirlar… None",
+     "Transport vositalarini majburiy tarzda texnik koʻrikdan oʻtkazish tartibini takomillashtirish chora-tadbirlari toʻgʻrisidagi Vazirlar Mahkamasi qarori (272) 11"
+    ],
+    "hybrid": [
+     "Vazirlar Mahkamasi qarori 222: Transport vositalari egalarining fuqarolik javobgarligini majburiy sugʻurta qilishni yanada takomillashtirish chora-tadbirlari t… 4",
+     "Vazirlar Mahkamasi qarori 658: Oʻzbekiston Respublikasida uchuvchisiz uchadigan apparatlardan foydalanishni tartibga solish boʻyicha qoʻshimcha chora-tadbirlar… None",
+     "Transport vositalarini majburiy tarzda texnik koʻrikdan oʻtkazish tartibini takomillashtirish chora-tadbirlari toʻgʻrisidagi Vazirlar Mahkamasi qarori (272) 11"
+    ]
+   }
+  },
+  "mjk-05": {
+   "question": "Qizil chiroqda oʻtib ketsa jarima",
+   "ranks": {
+    "fts": 7,
+    "vector": 9,
+    "hybrid": 3
+   },
+   "top3": {
+    "fts": [
+     "Yoʻl harakati qoidabuzarliklarini jarima ballari asosida baholash tizimini joriy etish toʻgʻrisidagi Vazirlar Mahkamasi qarori (296) None",
+     "Temir yoʻl kesishmalaridan foydalanish qoidalarini tasdiqlash toʻgʻrisidagi Buyruq (3363) 2",
+     "Maʼmuriy javobgarlik toʻgʻrisidagi kodeks 128⁵"
+    ],
+    "vector": [
+     "Ichki ishlar organlari uchun professional kadrlarni tayyorlash tizimini transformatsiya qilish chora-tadbirlari toʻgʻrisidagi Prezident qarori (PQ-303) None",
+     "Yoʻlovchining havo kemasi ichidagi yurish-turish qoidalarini tasdiqlash toʻgʻrisidagi Buyruq (2416) None",
+     "Prezident qarori PQ-69: Osiyo taraqqiyot banki ishtirokida “Perinatal xizmatlarni takomillashtirish” investitsiya loyihasini amalga oshirish chora-tadbirlari t… None"
+    ],
+    "hybrid": [
+     "Ichki ishlar organlari uchun professional kadrlarni tayyorlash tizimini transformatsiya qilish chora-tadbirlari toʻgʻrisidagi Prezident qarori (PQ-303) None",
+     "Buyruq 3376: Temir yoʻl transporti hamda metropolitenda harakat va tashishlar xavfsizligi talablarining buzilishi bilan bogʻliq hodisalarni tasniflash, xizmat… None",
+     "Maʼmuriy javobgarlik toʻgʻrisidagi kodeks 128⁴"
+    ]
+   }
+  },
+  "mjk-06": {
+   "question": "Piyoda yoʻl qoidasini buzsa jarima bormi?",
+   "ranks": {
+    "fts": 1,
+    "vector": 3,
+    "hybrid": 1
+   },
+   "top3": {
+    "fts": [
+     "Maʼmuriy javobgarlik toʻgʻrisidagi kodeks 138",
+     "Vazirlar Mahkamasi qarori 148: Yoʻl harakati qoidalari buzilganligini maxsus avtomatlashtirilgan foto va video qayd etish dasturiy-texnik vositalari orqali qay… 2¹",
+     "Vazirlar Mahkamasi qarori 415: Yoʻl harakati xavfsizligi sohasini ilmiy-metodik taʼminlash, yoʻllarda ekspluatatsiya-montaj faoliyatini tartibga solish hamda “… None"
+    ],
+    "vector": [
+     "Vazirlar Mahkamasi qarori 901: Avtomobil yoʻllarini qurish, rekonstruksiya qilish, taʼmirlash va ulardan foydalanish ishlarini tashkil etish chora-tadbirlari t… 11",
+     "Maʼmuriy javobgarlik toʻgʻrisidagi kodeks 128",
+     "Maʼmuriy javobgarlik toʻgʻrisidagi kodeks 138"
+    ],
+    "hybrid": [
+     "Maʼmuriy javobgarlik toʻgʻrisidagi kodeks 138",
+     "Maʼmuriy javobgarlik toʻgʻrisidagi kodeks 128",
+     "Maʼmuriy javobgarlik toʻgʻrisidagi kodeks 149"
+    ]
+   }
+  },
+  "mjk-07": {
+   "question": "Kamera orqali yozilgan jarimaga qanday eʼtiroz bildiriladi?",
+   "ranks": {
+    "fts": null,
+    "vector": null,
+    "hybrid": 4
+   },
+   "top3": {
+    "fts": [
+     "Oʻzbekiston Respublikasining ichki suv transporti ustavini tasdiqlash toʻgʻrisidagi Vazirlar Mahkamasi qarori (106) 63",
+     "Oʻzbekiston Respublikasining ichki suv transporti ustavini tasdiqlash toʻgʻrisidagi Vazirlar Mahkamasi qarori (106) 61",
+     "Yoʻl harakati xavfsizligini taʼminlash sohasiga xususiy sektorni jalb etishga doir qoʻshimcha chora-tadbirlar toʻgʻrisidagi Vazirlar Mahkamasi qarori (232) 16"
+    ],
+    "vector": [
+     "Vazirlar Mahkamasi qarori 223: Sanoat, radiatsiya va yadro xavfsizligi qoidalarini buzish bilan bogʻliq huquqbuzarliklarning oldini olishga doir qoʻshimcha cho… None",
+     "Vazirlar Mahkamasi qarori 541: Elektr, issiqlik energiyasi, gazdan foydalanish qoidalarini buzish bilan bogʻliq huquqbuzarliklar toʻgʻrisidagi fotosuratlar va… None",
+     "Vazirlar Mahkamasi qarori 148: Yoʻl harakati qoidalari buzilganligini maxsus avtomatlashtirilgan foto va video qayd etish dasturiy-texnik vositalari orqali qay… None"
+    ],
+    "hybrid": [
+     "Vazirlar Mahkamasi qarori 596: Yoʻl harakati qoidalari buzilganligini maxsus avtomatlashtirilgan foto va video qayd etish dasturiy-texnik vositalari orqali qay… 9¹",
+     "Vazirlar Mahkamasi qarori 223: Sanoat, radiatsiya va yadro xavfsizligi qoidalarini buzish bilan bogʻliq huquqbuzarliklarning oldini olishga doir qoʻshimcha cho… None",
+     "Vazirlar Mahkamasi qarori 541: Elektr, issiqlik energiyasi, gazdan foydalanish qoidalarini buzish bilan bogʻliq huquqbuzarliklar toʻgʻrisidagi fotosuratlar va… None"
+    ]
+   }
+  },
+  "mjk-08": {
+   "question": "Necha yoshdan maʼmuriy javobgarlik boshlanadi?",
+   "ranks": {
+    "fts": 1,
+    "vector": 4,
+    "hybrid": 1
+   },
+   "top3": {
+    "fts": [
+     "Maʼmuriy javobgarlik toʻgʻrisidagi kodeks 13",
+     "Soliqlar va yigʻimlarni toʻlashdan boʻyin tovlaganlik uchun javobgarlikka oid qonunchilikning sudlar tomonidan qoʻllanilishi toʻgʻrisidagi Hujjat (08) 8",
+     "Maʼmuriy javobgarlik toʻgʻrisidagi kodeks 34"
+    ],
+    "vector": [
+     "Vazirlar Mahkamasi qarori 177: Ish beruvchining fuqarolik javobgarligini majburiy sugʻurta qilish toʻgʻrisidagi Oʻzbekiston Respublikasi Qonunini amalga oshiri… None",
+     "Vazirlar Mahkamasi qarori 460: Ish beruvchilarga ular tomonidan 25 yoshdan oshmagan xodimlar uchun toʻlangan ijtimoiy soliq summasini Davlat budjetidan toʻliq… None",
+     "Maʼmuriy javobgarlik toʻgʻrisidagi kodeks 271"
+    ],
+    "hybrid": [
+     "Maʼmuriy javobgarlik toʻgʻrisidagi kodeks 13",
+     "Maʼmuriy javobgarlik toʻgʻrisidagi kodeks 271",
+     "Vazirlar Mahkamasi qarori 177: Ish beruvchining fuqarolik javobgarligini majburiy sugʻurta qilish toʻgʻrisidagi Oʻzbekiston Respublikasi Qonunini amalga oshiri… None"
+    ]
+   }
+  },
+  "mjk-09": {
+   "question": "Jarimani necha kun ichida toʻlash kerak?",
+   "ranks": {
+    "fts": 1,
+    "vector": null,
+    "hybrid": 3
+   },
+   "top3": {
+    "fts": [
+     "Maʼmuriy javobgarlik toʻgʻrisidagi kodeks 332",
+     "Maʼmuriy javobgarlik toʻgʻrisidagi kodeks 332¹",
+     "Maʼmuriy javobgarlik toʻgʻrisidagi kodeks 309²"
+    ],
+    "vector": [
+     "Jinoyat-ijroiya kodeksi 19",
+     "Ijro intizomini mustahkamlash chora-tadbirlari toʻgʻrisidagi Vazirlar Mahkamasi qarori (12) None",
+     "Vazirlar Mahkamasi qarori 742: Shaxslarni kundalik hayotdagi faolligi va ishtirokini baholash uchun yoʻllash hamda baholashdan oʻtkazish tartibi toʻgʻrisidagi… None"
+    ],
+    "hybrid": [
+     "Jinoyat-ijroiya kodeksi 19",
+     "Maʼmuriy javobgarlik toʻgʻrisidagi kodeks 332¹",
+     "Maʼmuriy javobgarlik toʻgʻrisidagi kodeks 332"
+    ]
+   }
+  },
+  "sk-01": {
+   "question": "Ish haqidan olinadigan daromad soligʻi necha foiz?",
+   "ranks": {
+    "fts": null,
+    "vector": null,
+    "hybrid": null
+   },
+   "top3": {
+    "fts": [
+     "Oʻzbekiston Respublikasining 2015-yilgi asosiy makroiqtisodiy koʻrsatkichlari prognozi va Davlat budjeti parametrlari toʻgʻrisidagi Prezident qarori (PQ-2270) None",
+     "Oʻzbekiston Respublikasining 2016-yilgi asosiy makroiqtisodiy koʻrsatkichlari prognozi va Davlat budjeti parametrlari toʻgʻrisidagi Prezident qarori (PQ-2455) None",
+     "Soliq kodeksi 373"
+    ],
+    "vector": [
+     "Vazirlar Mahkamasi qarori 460: Ish beruvchilarga ular tomonidan 25 yoshdan oshmagan xodimlar uchun toʻlangan ijtimoiy soliq summasini Davlat budjetidan toʻliq… None",
+     "“20 ming tadbirkor-500 ming malakali mutaxassis” dasturini amalga oshirish boʻyicha chora-tadbirlar toʻgʻrisidagi Vazirlar Mahkamasi qarori (279) 28",
+     "Soliq kodeksi 369"
+    ],
+    "hybrid": [
+     "Soliq kodeksi 369",
+     "Vazirlar Mahkamasi qarori 460: Ish beruvchilarga ular tomonidan 25 yoshdan oshmagan xodimlar uchun toʻlangan ijtimoiy soliq summasini Davlat budjetidan toʻliq… None",
+     "Oʻzbekiston Respublikasining 2015-yilgi asosiy makroiqtisodiy koʻrsatkichlari prognozi va Davlat budjeti parametrlari toʻgʻrisidagi Prezident qarori (PQ-2270) None"
+    ]
+   }
+  },
+  "sk-02": {
+   "question": "QQS stavkasi qancha?",
+   "ranks": {
+    "fts": null,
+    "vector": null,
+    "hybrid": null
+   },
+   "top3": {
+    "fts": [
+     "Hujjat 3905: Qoʻshilgan qiymat soligʻining “nol” stavkasi qoʻllaniladigan qishloq xoʻjaligi mahsulotlari (bundan paxta va gʻalla mustasno) roʻyxatini tasdiqlas… None",
+     "Buyruq 3686: Idoraviy normativ-huquqiy hujjatlarni tayyorlash, qabul qilish, huquqiy ekspertiza va davlat roʻyxatidan oʻtkazish qoidalarini tasdiqlash toʻgʻris… 5",
+     "Buyruq 3686: Idoraviy normativ-huquqiy hujjatlarni tayyorlash, qabul qilish, huquqiy ekspertiza va davlat roʻyxatidan oʻtkazish qoidalarini tasdiqlash toʻgʻris… 7"
+    ],
+    "vector": [
+     "Vazirlar Mahkamasi qarori 489: Qoʻshilgan qiymat soligʻi hamda chet el yuridik shaxslari bilan bogʻliq soliq maʼmurchiligini takomillashtirish chora-tadbirlari… None",
+     "Vazirlar Mahkamasi qarori 489: Qoʻshilgan qiymat soligʻi hamda chet el yuridik shaxslari bilan bogʻliq soliq maʼmurchiligini takomillashtirish chora-tadbirlari… None",
+     "Vazirlar Mahkamasi qarori 489: Qoʻshilgan qiymat soligʻi hamda chet el yuridik shaxslari bilan bogʻliq soliq maʼmurchiligini takomillashtirish chora-tadbirlari… None"
+    ],
+    "hybrid": [
+     "Buyruq 3686: Idoraviy normativ-huquqiy hujjatlarni tayyorlash, qabul qilish, huquqiy ekspertiza va davlat roʻyxatidan oʻtkazish qoidalarini tasdiqlash toʻgʻris… 1",
+     "Hujjat 3905: Qoʻshilgan qiymat soligʻining “nol” stavkasi qoʻllaniladigan qishloq xoʻjaligi mahsulotlari (bundan paxta va gʻalla mustasno) roʻyxatini tasdiqlas… None",
+     "Buyruq 3686: Idoraviy normativ-huquqiy hujjatlarni tayyorlash, qabul qilish, huquqiy ekspertiza va davlat roʻyxatidan oʻtkazish qoidalarini tasdiqlash toʻgʻris… 10"
+    ]
+   }
+  },
+  "sk-03": {
+   "question": "Uy-joy uchun mol-mulk soligʻi stavkasi",
+   "ranks": {
+    "fts": 1,
+    "vector": null,
+    "hybrid": 1
+   },
+   "top3": {
+    "fts": [
+     "Soliq kodeksi 422",
+     "Soliq kodeksi 421",
+     "Oʻzbekiston Respublikasining 2017-yilgi asosiy makroiqtisodiy koʻrsatkichlari prognozi va Davlat budjeti parametrlari toʻgʻrisidagi Prezident qarori (PQ-2699) None"
+    ],
+    "vector": [
+     "Oʻzbekiston Respublikasining 2016-yilgi asosiy makroiqtisodiy koʻrsatkichlari prognozi va Davlat budjeti parametrlari toʻgʻrisidagi Prezident qarori (PQ-2455) None",
+     "Soliq kodeksi 375",
+     "Vazirlar Mahkamasi qarori 1043: Soliq solish maqsadida jismoniy shaxslarga tegishli boʻlgan koʻchmas mulk obyektlarining, turar joy fondining kadastr qiymatini… 1"
+    ],
+    "hybrid": [
+     "Soliq kodeksi 422",
+     "Oʻzbekiston Respublikasining 2017-yilgi asosiy makroiqtisodiy koʻrsatkichlari prognozi va Davlat budjeti parametrlari toʻgʻrisidagi Prezident qarori (PQ-2699) None",
+     "Oʻzbekiston Respublikasining 2015-yilgi asosiy makroiqtisodiy koʻrsatkichlari prognozi va Davlat budjeti parametrlari toʻgʻrisidagi Prezident qarori (PQ-2270) None"
+    ]
+   }
+  },
+  "sk-04": {
+   "question": "Aylanmadan olinadigan soliq stavkalari",
+   "ranks": {
+    "fts": 5,
+    "vector": null,
+    "hybrid": 10
+   },
+   "top3": {
+    "fts": [
+     "Soliq kodeksi 462",
+     "Soliq kodeksi 463",
+     "Soliq kodeksi 465"
+    ],
+    "vector": [
+     "Vazirlar Mahkamasi qarori 489: Qoʻshilgan qiymat soligʻi hamda chet el yuridik shaxslari bilan bogʻliq soliq maʼmurchiligini takomillashtirish chora-tadbirlari… None",
+     "Vazirlar Mahkamasi qarori 460: Ish beruvchilarga ular tomonidan 25 yoshdan oshmagan xodimlar uchun toʻlangan ijtimoiy soliq summasini Davlat budjetidan toʻliq… None",
+     "Vazirlar Mahkamasi qarori 111: Transfert narxini belgilashda soliq nazoratini va norezidentlarning soliq solish maʼmuriyatchiligini tartibga soluvchi ayrim qon… None"
+    ],
+    "hybrid": [
+     "Soliq kodeksi 462",
+     "Soliq kodeksi 464",
+     "Soliq kodeksi 337"
+    ]
+   }
+  },
+  "sk-05": {
+   "question": "Jismoniy shaxslar yer soligʻini qancha toʻlaydi?",
+   "ranks": {
+    "fts": 2,
+    "vector": null,
+    "hybrid": 5
+   },
+   "top3": {
+    "fts": [
+     "Oʻzbekiston Respublikasining 2015-yilgi asosiy makroiqtisodiy koʻrsatkichlari prognozi va Davlat budjeti parametrlari toʻgʻrisidagi Prezident qarori (PQ-2270) None",
+     "Soliq kodeksi 437",
+     "Oʻzbekiston Respublikasining 2018-yilgi asosiy makroiqtisodiy koʻrsatkichlari prognozi va Davlat budjeti parametrlari toʻgʻrisidagi Prezident qarori (PQ-3454) None"
+    ],
+    "vector": [
+     "Aholi punktlarini obodonlashtirish sohasida ishlar samaradorligini oshirishga doir qoʻshimcha chora-tadbirlar toʻgʻrisidagi Prezident qarori (PQ-4351) None",
+     "Vazirlar Mahkamasi qarori 742: Shaxslarni kundalik hayotdagi faolligi va ishtirokini baholash uchun yoʻllash hamda baholashdan oʻtkazish tartibi toʻgʻrisidagi… None",
+     "Vazirlar Mahkamasi qarori 535: Maʼmuriy qamoqqa olingan shaxslarni maxsus qabulxonada saqlash bilan bogʻliq xarajatlarni undirish tartibi toʻgʻrisidagi nizomni… None"
+    ],
+    "hybrid": [
+     "Oʻzbekiston Respublikasining 2016-yilgi asosiy makroiqtisodiy koʻrsatkichlari prognozi va Davlat budjeti parametrlari toʻgʻrisidagi Prezident qarori (PQ-2455) None",
+     "Oʻzbekiston Respublikasining 2016-yilgi asosiy makroiqtisodiy koʻrsatkichlari prognozi va Davlat budjeti parametrlari toʻgʻrisidagi Prezident qarori (PQ-2455) None",
+     "Oʻzbekiston Respublikasining 2015-yilgi asosiy makroiqtisodiy koʻrsatkichlari prognozi va Davlat budjeti parametrlari toʻgʻrisidagi Prezident qarori (PQ-2270) None"
+    ]
+   }
+  },
+  "sk-06": {
+   "question": "Korxona foyda soligʻi necha foiz?",
+   "ranks": {
+    "fts": 1,
+    "vector": 6,
+    "hybrid": 1
+   },
+   "top3": {
+    "fts": [
+     "Soliq kodeksi 337",
+     "Oʻzbekiston Respublikasining 2017-yilgi asosiy makroiqtisodiy koʻrsatkichlari prognozi va Davlat budjeti parametrlari toʻgʻrisidagi Prezident qarori (PQ-2699) None",
+     "Oʻzbekiston Respublikasining 2016-yilgi asosiy makroiqtisodiy koʻrsatkichlari prognozi va Davlat budjeti parametrlari toʻgʻrisidagi Prezident qarori (PQ-2455) None"
+    ],
+    "vector": [
+     "Soliq kodeksi 331",
+     "Soliq kodeksi 369",
+     "Prezident qarori PQ-2922: 2017-2021-yillarda koʻp xonadonli uy-joy fondini saqlash va undan foydalanish tizimini yanada takomillashtirish chora-tadbirlari toʻg… None"
+    ],
+    "hybrid": [
+     "Soliq kodeksi 337",
+     "Soliq kodeksi 353",
+     "Oʻzbekiston Respublikasining 2017-yilgi asosiy makroiqtisodiy koʻrsatkichlari prognozi va Davlat budjeti parametrlari toʻgʻrisidagi Prezident qarori (PQ-2699) None"
+    ]
+   }
+  },
+  "kon-01": {
+   "question": "Prezident necha yilga saylanadi?",
+   "ranks": {
+    "fts": null,
+    "vector": null,
+    "hybrid": null
+   },
+   "top3": {
+    "fts": [
+     "Hujjat KSQ-4: Oʻzbekiston Respublikasi Oliy Majlisi Qonunchilik palatasining “Oʻzbekiston Respublikasi Konstitutsiyasi toʻgʻrisida”gi Oʻzbekiston Respublikasi… 3",
+     "Hujjat: Qoraqalpogʻiston Respublikasining Konstitutsiyasi None",
+     "Yangi tahrirdagi Oʻzbekiston Respublikasi Konstitutsiyasini amalga oshirish boʻyicha birinchi navbatdagi chora-tadbirlar toʻgʻrisidagi Prezident farmoni (PF-67) 18"
+    ],
+    "vector": [
+     "Oʻzbekiston Respublikasi Konstitutsiyasi qabul qilinganligining oʻn ikki yilligi munosabati bilan amnistiya toʻgʻrisidagi Prezident farmoni (PF-3515) 9",
+     "Prezident qarori PQ-4551: Konstitutsiya va qonun ustuvorligini taʼminlash, bu borada jamoatchilik nazoratini kuchaytirish hamda jamiyatda huquqiy madaniyatni y… None",
+     "Prezident farmoni PF-46: Respublikada koʻkalamzorlashtirish ishlarini jadallashtirish, daraxtlar muhofazasini yanada samarali tashkil etish chora-tadbirlari to… None"
+    ],
+    "hybrid": [
+     "Prezident qarori PQ-4551: Konstitutsiya va qonun ustuvorligini taʼminlash, bu borada jamoatchilik nazoratini kuchaytirish hamda jamiyatda huquqiy madaniyatni y… None",
+     "Oʻzbekiston Respublikasi Konstitutsiyasi 112",
+     "Oʻzbekiston Respublikasi Konstitutsiyasi qabul qilinganligining oʻn ikki yilligi munosabati bilan amnistiya toʻgʻrisidagi Prezident farmoni (PF-3515) 9"
+    ]
+   }
+  },
+  "kon-02": {
+   "question": "Oʻzbekistonda oʻlim jazosi bormi?",
+   "ranks": {
+    "fts": 5,
+    "vector": null,
+    "hybrid": 10
+   },
+   "top3": {
+    "fts": [
+     "Oʻzbekiston Respublikasida oʻlim jazosini bekor qilish toʻgʻrisidagi Prezident farmoni (PF-3641) None",
+     "Qonun OʻRQ-185: Oʻzbekiston Respublikasining Fuqaroviy va siyosiy huquqlar toʻgʻrisidagi xalqaro paktga doir, oʻlim jazosini bekor qilishga qaratilgan ikkinchi… None",
+     "Umrbod ozodlikdan mahrum qilish tariqasidagi jazoni qoʻllashning ayrim masalalari toʻgʻrisidagi Hujjat (15) None"
+    ],
+    "vector": [
+     "Buyruq 2495: Oʻzbekiston Respublikasi Ichki ishlar vazirligi ozodlikdan mahrum qilish turidagi jazoni ijro etish muassasalarining ichki tartib qoidalarini tasd… None",
+     "Buyruq 2495: Oʻzbekiston Respublikasi Ichki ishlar vazirligi ozodlikdan mahrum qilish turidagi jazoni ijro etish muassasalarining ichki tartib qoidalarini tasd… None",
+     "Buyruq 2495: Oʻzbekiston Respublikasi Ichki ishlar vazirligi ozodlikdan mahrum qilish turidagi jazoni ijro etish muassasalarining ichki tartib qoidalarini tasd… None"
+    ],
+    "hybrid": [
+     "Oʻzbekiston Respublikasida oʻlim jazosini bekor qilish toʻgʻrisidagi Prezident farmoni (PF-3641) None",
+     "Buyruq 2495: Oʻzbekiston Respublikasi Ichki ishlar vazirligi ozodlikdan mahrum qilish turidagi jazoni ijro etish muassasalarining ichki tartib qoidalarini tasd… None",
+     "Buyruq 2495: Oʻzbekiston Respublikasi Ichki ishlar vazirligi ozodlikdan mahrum qilish turidagi jazoni ijro etish muassasalarining ichki tartib qoidalarini tasd… None"
+    ]
+   }
+  },
+  "kon-03": {
+   "question": "Davlat tili qaysi til?",
+   "ranks": {
+    "fts": null,
+    "vector": null,
+    "hybrid": 2
+   },
+   "top3": {
+    "fts": [
+     "Sunʼiy intellekt texnologiyalarini yanada rivojlantirishga oid qoʻshimcha chora-tadbirlar toʻgʻrisidagi Prezident farmoni (PF-189) 1",
+     "Sunʼiy intellekt texnologiyalarini yanada rivojlantirishga oid qoʻshimcha chora-tadbirlar toʻgʻrisidagi Prezident farmoni (PF-189) 4",
+     "Sunʼiy intellekt texnologiyalarini yanada rivojlantirishga oid qoʻshimcha chora-tadbirlar toʻgʻrisidagi Prezident farmoni (PF-189) 6"
+    ],
+    "vector": [
+     "“Oʻzbekiston Respublikasining Davlat tili haqida”gi Qonunga oʻzgartishlar va qoʻshimchalar kiritish toʻgʻrisidagi Qonun (167-I) 2",
+     "Oʻzbek tilining davlat tili sifatidagi nufuzi va mavqeyini tubdan oshirish chora-tadbirlari toʻgʻrisidagi Prezident farmoni (PF-5850) None",
+     "“Oʻzbekiston Respublikasining Davlat tili haqida”gi Qonunga oʻzgartishlar va qoʻshimchalar kiritish toʻgʻrisidagi Qonun (167-I) 1"
+    ],
+    "hybrid": [
+     "“Oʻzbekiston Respublikasining Davlat tili haqida”gi Qonunga oʻzgartishlar va qoʻshimchalar kiritish toʻgʻrisidagi Qonun (167-I) 1",
+     "Oʻzbekiston Respublikasi Konstitutsiyasi 4",
+     "“Oʻzbekiston Respublikasining Davlat tili haqida”gi Qonunga oʻzgartishlar va qoʻshimchalar kiritish toʻgʻrisidagi Qonun (167-I) 2"
+    ]
+   }
+  },
+  "kon-04": {
+   "question": "Uy-joyimdan sud qarorisiz chiqarib yuborishlari mumkinmi?",
+   "ranks": {
+    "fts": 3,
+    "vector": null,
+    "hybrid": 3
+   },
+   "top3": {
+    "fts": [
+     "Hujjat 22: Uy-joy nizolari boʻyicha sud amaliyoti haqida 1",
+     "Shaharsozlik renovatsiyasi toʻgʻrisidagi Qonun (OʻRQ-1149) 12",
+     "Oʻzbekiston Respublikasi Konstitutsiyasi 47"
+    ],
+    "vector": [
+     "Vazirlar Mahkamasi qarori 601: Aholiga ipoteka krediti va uy-joy sotib olish uchun subsidiya ajratish jarayonlarini soddalashtirish chora-tadbirlari toʻgʻrisida 1",
+     "Vazirlar Mahkamasi qarori 182: Uy-joy sotib olish uchun fuqarolarga subsidiya toʻlash tartibi toʻgʻrisidagi nizomni tasdiqlash haqida None",
+     "Vazirlar Mahkamasi qarori 737: Uy-joyga muhtoj xotin-qizlarni uy-joy bilan taʼminlash hamda Toshkent shahrida boshpanasiz, ogʻir turmush sharoitiga tushib qolg… None"
+    ],
+    "hybrid": [
+     "Hujjat 22: Uy-joy nizolari boʻyicha sud amaliyoti haqida 1",
+     "Vazirlar Mahkamasi qarori 601: Aholiga ipoteka krediti va uy-joy sotib olish uchun subsidiya ajratish jarayonlarini soddalashtirish chora-tadbirlari toʻgʻrisida 1",
+     "Oʻzbekiston Respublikasi Konstitutsiyasi 47"
+    ]
+   }
+  },
+  "kon-05": {
+   "question": "Bepul taʼlim olish huquqi kafolatlanganmi?",
+   "ranks": {
+    "fts": 9,
+    "vector": 8,
+    "hybrid": 2
+   },
+   "top3": {
+    "fts": [
+     "Hujjat KCQ-5: Oʻzbekiston Respublikasi Konstitutsiyaviy sudining mamlakatdagi konstitutsiyaviy qonuniylikning holati toʻgʻrisidagi axborotini tasdiqlash haqida None",
+     "Prezident qarori PQ-4551: Konstitutsiya va qonun ustuvorligini taʼminlash, bu borada jamoatchilik nazoratini kuchaytirish hamda jamiyatda huquqiy madaniyatni y… None",
+     "Sunʼiy intellektga oid amaliy loyihalarni yanada qoʻllab-quvvatlash chora-tadbirlari toʻgʻrisidagi Vazirlar Mahkamasi qarori (581) 26"
+    ],
+    "vector": [
+     "Buyruq 3889: Nodavlat maktabgacha, umumiy oʻrta va qoʻshimcha taʼlim xizmatlarini koʻrsatish sohasida nazoratni amalga oshirishda “Xavfni tahlil qilish” elektr… None",
+     "Vazirlar Mahkamasi qarori 88: Faoliyatni boshlash yoki tugatish uchun vakolatli organni xabardor qilish tartibi toʻgʻrisidagi yagona nizomni tasdiqlash haqida None",
+     "Vazirlar Mahkamasi qarori 532: Davlat taʼlim muassasalarida yuridik taʼlimning uzluksiz tizimini joriy etish hamda voyaga yetmagan yoshlarning huquqiy madaniya… None"
+    ],
+    "hybrid": [
+     "Prezident qarori PQ-4551: Konstitutsiya va qonun ustuvorligini taʼminlash, bu borada jamoatchilik nazoratini kuchaytirish hamda jamiyatda huquqiy madaniyatni y… None",
+     "Oʻzbekiston Respublikasi Konstitutsiyasi 50",
+     "Taʼlim toʻgʻrisidagi Qonun (OʻRQ-637) 5"
+    ]
+   }
+  },
+  "kon-06": {
+   "question": "soz erkinligi konstitutsiyada",
+   "ranks": {
+    "fts": 2,
+    "vector": 3,
+    "hybrid": 1
+   },
+   "top3": {
+    "fts": [
+     "Hujjat: Qoraqalpogʻiston Respublikasining Konstitutsiyasi None",
+     "Oʻzbekiston Respublikasi Konstitutsiyasi 33",
+     "Qonun OʻRQ-1037: Oʻzbekiston Respublikasida fuqarolarning vijdon erkinligini taʼminlash va diniy sohadagi davlat siyosati konsepsiyasini tasdiqlash toʻgʻrisida 5"
+    ],
+    "vector": [
+     "Prezident qarori PQ-4551: Konstitutsiya va qonun ustuvorligini taʼminlash, bu borada jamoatchilik nazoratini kuchaytirish hamda jamiyatda huquqiy madaniyatni y… None",
+     "Oʻzbekiston Respublikasi Konstitutsiyasi 27",
+     "Oʻzbekiston Respublikasi Konstitutsiyasi 33"
+    ],
+    "hybrid": [
+     "Oʻzbekiston Respublikasi Konstitutsiyasi 33",
+     "Oʻzbekiston Respublikasi Konstitutsiyasi 27",
+     "Oʻzbekiston Respublikasi Konstitutsiyasi 54"
+    ]
+   }
+  },
+  "kon-07": {
+   "question": "Qariganda pensiya olish huquqi",
+   "ranks": {
+    "fts": 4,
+    "vector": null,
+    "hybrid": 5
+   },
+   "top3": {
+    "fts": [
+     "Hujjat: “Davlat ijtimoiy sugʻurtasi boʻyicha nafaqalarni tayinlash va toʻlash tartibi toʻgʻrisidagi nizom”ning 17-bandi beshinchi qismining konstitutsiyaga muv… None",
+     "Hujjat: Qoraqalpogʻiston Respublikasining Konstitutsiyasi None",
+     "Davlat pensiya taʼminoti bilan bogʻliq ishlar boʻyicha sud amaliyoti toʻgʻrisidagi Hujjat (44) 1"
+    ],
+    "vector": [
+     "Prezident qarori PQ-4551: Konstitutsiya va qonun ustuvorligini taʼminlash, bu borada jamoatchilik nazoratini kuchaytirish hamda jamiyatda huquqiy madaniyatni y… None",
+     "Vazirlar Mahkamasi qarori 119: Ijtimoiy himoyaga muhtoj ayrim toifadagi shaxslarga nafaqa va moddiy yordamlarni tayinlash hamda toʻlash tartibi toʻgʻrisidagi n… 196⁵",
+     "Prezident qarori PQ-4551: Konstitutsiya va qonun ustuvorligini taʼminlash, bu borada jamoatchilik nazoratini kuchaytirish hamda jamiyatda huquqiy madaniyatni y… None"
+    ],
+    "hybrid": [
+     "Hujjat: “Davlat ijtimoiy sugʻurtasi boʻyicha nafaqalarni tayinlash va toʻlash tartibi toʻgʻrisidagi nizom”ning 17-bandi beshinchi qismining konstitutsiyaga muv… None",
+     "Prezident qarori PQ-4551: Konstitutsiya va qonun ustuvorligini taʼminlash, bu borada jamoatchilik nazoratini kuchaytirish hamda jamiyatda huquqiy madaniyatni y… None",
+     "Hujjat: Qoraqalpogʻiston Respublikasining Konstitutsiyasi None"
+    ]
+   }
+  },
+  "kon-08": {
+   "question": "Advokat yollashga pulim boʻlmasa davlat bepul yuridik yordam beradimi?",
+   "ranks": {
+    "fts": 3,
+    "vector": null,
+    "hybrid": 3
+   },
+   "top3": {
+    "fts": [
+     "Vazirlar Mahkamasi qarori 774: Davlat hisobidan yuridik yordam koʻrsatadigan advokatlarni jalb etish va ularga haq toʻlash tartibi toʻgʻrisidagi nizomni tasdiq… 43",
+     "Vazirlar Mahkamasi qarori 774: Davlat hisobidan yuridik yordam koʻrsatadigan advokatlarni jalb etish va ularga haq toʻlash tartibi toʻgʻrisidagi nizomni tasdiq… 21",
+     "Davlat hisobidan yuridik yordam koʻrsatish toʻgʻrisidagi Qonun (OʻRQ-848) 9"
+    ],
+    "vector": [
+     "Vazirlar Mahkamasi qarori 600: “Favqulodda holat toʻgʻrisida”gi Oʻzbekiston Respublikasi Konstitutsiyaviy Qonunini amalga oshirish chora-tadbirlari toʻgʻrisida None",
+     "Vazirlar Mahkamasi qarori 600: “Favqulodda holat toʻgʻrisida”gi Oʻzbekiston Respublikasi Konstitutsiyaviy Qonunini amalga oshirish chora-tadbirlari toʻgʻrisida None",
+     "Vazirlar Mahkamasi qarori 600: “Favqulodda holat toʻgʻrisida”gi Oʻzbekiston Respublikasi Konstitutsiyaviy Qonunini amalga oshirish chora-tadbirlari toʻgʻrisida None"
+    ],
+    "hybrid": [
+     "Vazirlar Mahkamasi qarori 600: “Favqulodda holat toʻgʻrisida”gi Oʻzbekiston Respublikasi Konstitutsiyaviy Qonunini amalga oshirish chora-tadbirlari toʻgʻrisida None",
+     "Vazirlar Mahkamasi qarori 600: “Favqulodda holat toʻgʻrisida”gi Oʻzbekiston Respublikasi Konstitutsiyaviy Qonunini amalga oshirish chora-tadbirlari toʻgʻrisida None",
+     "Oʻzbekiston Respublikasi Konstitutsiyasi 29"
+    ]
+   }
+  },
+  "q-01": {
+   "question": "Pensiyaga chiqish uchun necha yil ish staji kerak?",
+   "ranks": {
+    "fts": null,
+    "vector": null,
+    "hybrid": null
+   },
+   "top3": {
+    "fts": [
+     "Vazirlar Mahkamasi qarori 592: Davlat pensiyalarini tayinlash va toʻlash tartibi toʻgʻrisidagi nizomni tasdiqlash haqida 27",
+     "Vazirlar Mahkamasi qarori 592: Davlat pensiyalarini tayinlash va toʻlash tartibi toʻgʻrisidagi nizomni tasdiqlash haqida 36",
+     "Fuqarolarning davlat pensiya taʼminoti toʻgʻrisidagi Qonun (938-XII) 39"
+    ],
+    "vector": [
+     "Xodimlar mehnatini muhofaza qilish chora-tadbirlarini yanada takomillashtirish toʻgʻrisidagi Vazirlar Mahkamasi qarori (263) None",
+     "Vazirlar Mahkamasi qarori 460: Ish beruvchilarga ular tomonidan 25 yoshdan oshmagan xodimlar uchun toʻlangan ijtimoiy soliq summasini Davlat budjetidan toʻliq… None",
+     "Hujjat 2337: Imtiyozli shartlarda pensiya olish huquqini beradigan ishlab chiqarishlar, muassasalar, ishlar, kasblar, lavozimlar va koʻrsatkichlar roʻyxatlarin… None"
+    ],
+    "hybrid": [
+     "Hujjat 2337: Imtiyozli shartlarda pensiya olish huquqini beradigan ishlab chiqarishlar, muassasalar, ishlar, kasblar, lavozimlar va koʻrsatkichlar roʻyxatlarin… None",
+     "Hujjat 2337: Imtiyozli shartlarda pensiya olish huquqini beradigan ishlab chiqarishlar, muassasalar, ishlar, kasblar, lavozimlar va koʻrsatkichlar roʻyxatlarin… None",
+     "Hujjat 2337: Imtiyozli shartlarda pensiya olish huquqini beradigan ishlab chiqarishlar, muassasalar, ishlar, kasblar, lavozimlar va koʻrsatkichlar roʻyxatlarin… None"
+    ]
+   }
+  },
+  "q-02": {
+   "question": "Ish staji yetmasa ham pensiya beriladimi?",
+   "ranks": {
+    "fts": 1,
+    "vector": null,
+    "hybrid": 4
+   },
+   "top3": {
+    "fts": [
+     "Fuqarolarning davlat pensiya taʼminoti toʻgʻrisidagi Qonun (938-XII) 18",
+     "Vazirlar Mahkamasi qarori 592: Davlat pensiyalarini tayinlash va toʻlash tartibi toʻgʻrisidagi nizomni tasdiqlash haqida 2",
+     "Fuqarolarning davlat pensiya taʼminoti toʻgʻrisidagi Qonun (938-XII) 22"
+    ],
+    "vector": [
+     "Davlat pensiya taʼminotiga oid zamonaviy xizmatlarni joriy etishning qoʻshimcha chora-tadbirlari toʻgʻrisidagi Prezident qarori (PQ-355) None",
+     "Vazirlar Mahkamasi qarori 460: Ish beruvchilarga ular tomonidan 25 yoshdan oshmagan xodimlar uchun toʻlangan ijtimoiy soliq summasini Davlat budjetidan toʻliq… None",
+     "Xodimlar mehnatini muhofaza qilish chora-tadbirlarini yanada takomillashtirish toʻgʻrisidagi Vazirlar Mahkamasi qarori (263) None"
+    ],
+    "hybrid": [
+     "Davlat pensiya taʼminotiga oid zamonaviy xizmatlarni joriy etishning qoʻshimcha chora-tadbirlari toʻgʻrisidagi Prezident qarori (PQ-355) None",
+     "Vazirlar Mahkamasi qarori 460: Ish beruvchilarga ular tomonidan 25 yoshdan oshmagan xodimlar uchun toʻlangan ijtimoiy soliq summasini Davlat budjetidan toʻliq… None",
+     "Xodimlar mehnatini muhofaza qilish chora-tadbirlarini yanada takomillashtirish toʻgʻrisidagi Vazirlar Mahkamasi qarori (263) None"
+    ]
+   }
+  },
+  "q-03": {
+   "question": "Pensiya tayinlash uchun qayerga murojaat qilinadi?",
+   "ranks": {
+    "fts": 3,
+    "vector": null,
+    "hybrid": null
+   },
+   "top3": {
+    "fts": [
+     "Fuqarolarning davlat pensiya taʼminoti toʻgʻrisidagi Qonun (938-XII) 43",
+     "Vazirlar Mahkamasi qarori 592: Davlat pensiyalarini tayinlash va toʻlash tartibi toʻgʻrisidagi nizomni tasdiqlash haqida 6",
+     "Fuqarolarning davlat pensiya taʼminoti toʻgʻrisidagi Qonun (938-XII) 3"
+    ],
+    "vector": [
+     "Prezident qarori PQ-353: Aholiga pensiya tayinlash boʻyicha koʻrsatiladigan davlat xizmatlari sifatini yanada oshirishga qaratilgan qoʻshimcha chora-tadbirlar… 4",
+     "Prezident qarori PQ-353: Aholiga pensiya tayinlash boʻyicha koʻrsatiladigan davlat xizmatlari sifatini yanada oshirishga qaratilgan qoʻshimcha chora-tadbirlar… None",
+     "Prezident qarori PQ-353: Aholiga pensiya tayinlash boʻyicha koʻrsatiladigan davlat xizmatlari sifatini yanada oshirishga qaratilgan qoʻshimcha chora-tadbirlar… None"
+    ],
+    "hybrid": [
+     "Fuqarolarning davlat pensiya taʼminoti toʻgʻrisidagi Qonun (938-XII) 43",
+     "Prezident qarori PQ-353: Aholiga pensiya tayinlash boʻyicha koʻrsatiladigan davlat xizmatlari sifatini yanada oshirishga qaratilgan qoʻshimcha chora-tadbirlar… 4",
+     "Prezident qarori PQ-353: Aholiga pensiya tayinlash boʻyicha koʻrsatiladigan davlat xizmatlari sifatini yanada oshirishga qaratilgan qoʻshimcha chora-tadbirlar… None"
+    ]
+   }
+  },
+  "q-04": {
+   "question": "Sifatsiz telefon sotib oldim, doʻkon almashtirib berishi shartmi?",
+   "ranks": {
+    "fts": 4,
+    "vector": null,
+    "hybrid": 6
+   },
+   "top3": {
+    "fts": [
+     "Elektron tijorat toʻgʻrisidagi Qonun (OʻRQ-792) 26",
+     "Isteʼmolchilarning huquqlarini himoya qilish toʻgʻrisidagi Qonun (221-I) 18",
+     "Elektron tijorat toʻgʻrisidagi Qonun (OʻRQ-792) 25"
+    ],
+    "vector": [
+     "Soliq toʻlovchilarga ayrim interaktiv davlat xizmatlarini koʻrsatish boʻyicha maʼmuriy reglamentlarni tasdiqlash toʻgʻrisidagi Vazirlar Mahkamasi qarori (150) None",
+     "Vazirlar Mahkamasi qarori 18: Elektron onlayn-auksion va tanlovlarni tashkil etish hamda oʻtkazish tartibini takomillashtirish boʻyicha qoʻshimcha chora-tadbir… None",
+     "Buyruq 2169: Budjet tashkilotlarida buxgalteriya hisobi toʻgʻrisidagi yoʻriqnomani tasdiqlash haqida None"
+    ],
+    "hybrid": [
+     "Hujjat 3861: Raqobat sohasidagi vakolatli davlat organining tadbirkorlik subyektlarida tekshiruvlar oʻtkazish borasidagi faoliyatida “Xavfni tahlil etish” elek… None",
+     "Elektron tijorat toʻgʻrisidagi Qonun (OʻRQ-792) 26",
+     "Isteʼmolchilarning huquqlarini himoya qilish toʻgʻrisidagi Qonun (221-I) 18"
+    ]
+   }
+  },
+  "q-05": {
+   "question": "Sifatli kiyimni ham qaytarib berish mumkinmi, oʻlchami toʻgʻri kelmasa?",
+   "ranks": {
+    "fts": 5,
+    "vector": null,
+    "hybrid": null
+   },
+   "top3": {
+    "fts": [
+     "Fuqarolik kodeksi (ikkinchi qism) 433",
+     "Prezident qarori PQ-393: Aholini xalqaro brendlarning sifatli mahsulotlari bilan taʼminlash va mahalliy korxonalarning global qoʻshilgan qiymat zanjirlariga ki… None",
+     "Elektron tijorat toʻgʻrisidagi Qonun (OʻRQ-792) 26"
+    ],
+    "vector": [
+     "Vazirlar Mahkamasi qarori 318: Oʻzgalarning parvarishiga muhtoj boʻlgan ayrim shaxslarga qarab turishning haqiqiy holatini tekshirish dalolatnomasini rasmiylas… None",
+     "Vazirlar Mahkamasi qarori 109: Qadoqlar va qadoqlarni yopish vositalari xavfsizligi toʻgʻrisidagi texnik reglamentni tasdiqlash haqida None",
+     "Buyruq 2169: Budjet tashkilotlarida buxgalteriya hisobi toʻgʻrisidagi yoʻriqnomani tasdiqlash haqida None"
+    ],
+    "hybrid": [
+     "Hujjat 3861: Raqobat sohasidagi vakolatli davlat organining tadbirkorlik subyektlarida tekshiruvlar oʻtkazish borasidagi faoliyatida “Xavfni tahlil etish” elek… None",
+     "Fuqarolik kodeksi (ikkinchi qism) 433",
+     "Prezident qarori PQ-393: Aholini xalqaro brendlarning sifatli mahsulotlari bilan taʼminlash va mahalliy korxonalarning global qoʻshilgan qiymat zanjirlariga ki… None"
+    ]
+   }
+  },
+  "q-06": {
+   "question": "Bank bankrot boʻlsa omonatimni kim qaytaradi va qancha?",
+   "ranks": {
+    "fts": null,
+    "vector": 9,
+    "hybrid": 4
+   },
+   "top3": {
+    "fts": [
+     "Toʻlovga qobiliyatsizlik toʻgʻrisidagi Qonun (OʻRQ-763) 218",
+     "Banklardagi omonatlarni himoya qilish kafolatlari toʻgʻrisidagi Qonun (OʻRQ-1031) 27",
+     "Banklardagi omonatlarni himoya qilish kafolatlari toʻgʻrisidagi Qonun (OʻRQ-1031) 28"
+    ],
+    "vector": [
+     "Hujjat 3618: Banklarga oʻrnatiladigan makroprudensial normativlar hamda ular tomonidan beriladigan kreditlar (mikroqarzlar) boʻyicha toʻlovlarning eng yuqori q… 21",
+     "Buyruq 2169: Budjet tashkilotlarida buxgalteriya hisobi toʻgʻrisidagi yoʻriqnomani tasdiqlash haqida None",
+     "Hujjat 3252: Bank faoliyatiga ruxsat berish tartibi va shartlari toʻgʻrisidagi nizomni tasdiqlash haqida None"
+    ],
+    "hybrid": [
+     "Banklardagi omonatlarni himoya qilish kafolatlari toʻgʻrisidagi Qonun (OʻRQ-1031) 27",
+     "Banklardagi omonatlarni himoya qilish kafolatlari toʻgʻrisidagi Qonun (OʻRQ-1031) 29",
+     "Banklardagi omonatlarni himoya qilish kafolatlari toʻgʻrisidagi Qonun (OʻRQ-1031) 47"
+    ]
+   }
+  },
+  "q-07": {
+   "question": "Kreditni muddatidan oldin yopsam jarima olishadimi?",
+   "ranks": {
+    "fts": 4,
+    "vector": null,
+    "hybrid": 6
+   },
+   "top3": {
+    "fts": [
+     "Hujjat 3492: Banklar, nobank kredit tashkilotlari va kredit byurolariga nisbatan choralar va sanksiyalar qoʻllash tartibi toʻgʻrisidagi nizomni tasdiqlash haqi… None",
+     "Vazirlar Mahkamasi qarori 252: Oʻzbekiston Respublikasi fuqarolarini xorijda tashkillashtirilgan tartibda ishga joylashtirish tizimini yanada takomillashtirish… 52",
+     "Fuqarolik kodeksi (ikkinchi qism) 746¹"
+    ],
+    "vector": [
+     "Hujjat 13/150: Kredit shartnomalaridan kelib chiqadigan majburiyatlar bajarilishini taʼminlash toʻgʻrisidagi fuqarolik qonun hujjatlarini qoʻllashning ayrim ma… 4",
+     "Hujjat 3030: Bank xizmatlari isteʼmolchilari bilan oʻzaro munosabatlarni amalga oshirishda tijorat banklarining faoliyatiga qoʻyiladigan minimal talablar toʻgʻ… None",
+     "Elektr energiyasidan foydalanganlik uchun hisob-kitob qilish mexanizmini tubdan takomillashtirish chora-tadbirlari toʻgʻrisidagi Vazirlar Mahkamasi qarori (511) None"
+    ],
+    "hybrid": [
+     "Hujjat 13/150: Kredit shartnomalaridan kelib chiqadigan majburiyatlar bajarilishini taʼminlash toʻgʻrisidagi fuqarolik qonun hujjatlarini qoʻllashning ayrim ma… 4",
+     "Hujjat 3030: Bank xizmatlari isteʼmolchilari bilan oʻzaro munosabatlarni amalga oshirishda tijorat banklarining faoliyatiga qoʻyiladigan minimal talablar toʻgʻ… None",
+     "Hujjat 3492: Banklar, nobank kredit tashkilotlari va kredit byurolariga nisbatan choralar va sanksiyalar qoʻllash tartibi toʻgʻrisidagi nizomni tasdiqlash haqi… None"
+    ]
+   }
+  },
+  "q-08": {
+   "question": "Isteʼmol krediti olish uchun qanday hujjatlar kerak?",
+   "ranks": {
+    "fts": 1,
+    "vector": 2,
+    "hybrid": 1
+   },
+   "top3": {
+    "fts": [
+     "Isteʼmol krediti toʻgʻrisidagi Qonun (OʻRQ-33) 8",
+     "Isteʼmol krediti toʻgʻrisidagi Qonun (OʻRQ-33) 13",
+     "Ijtimoiy himoyaga muhtoj yoshlarni qoʻllab-quvvatlashning qoʻshimcha chora-tadbirlari toʻgʻrisidagi Vazirlar Mahkamasi qarori (617) 2"
+    ],
+    "vector": [
+     "Hujjat 3384: Moliyaviy xizmatlar isteʼmolchilari bilan oʻzaro munosabatlarni amalga oshirishda mikromoliya tashkilotlari va lombardlarning faoliyatiga qoʻyilad… None",
+     "Isteʼmol krediti toʻgʻrisidagi Qonun (OʻRQ-33) 8",
+     "Hujjat 3030: Bank xizmatlari isteʼmolchilari bilan oʻzaro munosabatlarni amalga oshirishda tijorat banklarining faoliyatiga qoʻyiladigan minimal talablar toʻgʻ… 27"
+    ],
+    "hybrid": [
+     "Isteʼmol krediti toʻgʻrisidagi Qonun (OʻRQ-33) 8",
+     "Isteʼmol krediti toʻgʻrisidagi Qonun (OʻRQ-33) 14",
+     "Isteʼmol krediti toʻgʻrisidagi Qonun (OʻRQ-33) 13"
+    ]
+   }
+  },
+  "q-09": {
+   "question": "Armiyaga chaqiruvni oʻqish sababli kechiktirsa boʻladimi?",
+   "ranks": {
+    "fts": 1,
+    "vector": null,
+    "hybrid": 1
+   },
+   "top3": {
+    "fts": [
+     "Umumiy harbiy majburiyat va harbiy xizmat toʻgʻrisidagi Qonun (436-II) 21",
+     "Umumiy harbiy majburiyat va harbiy xizmat toʻgʻrisidagi Qonun (436-II) 19",
+     "Vazirlar Mahkamasi qarori 292: Oʻzbekiston Respublikasi Mudofaa vazirligida armiya sportini yanada rivojlantirish va ommalashtirish chora-tadbirlari toʻgʻrisida None"
+    ],
+    "vector": [
+     "Vazirlar Mahkamasi qarori 508: “Temurbeklar maktabi” harbiy-akademik litseylariga oʻqishga kirayotgan (tahsil olayotgan) nomzodlarni (oʻquvchilarni) tibbiy koʻ… None",
+     "Oʻzbekiston Respublikasi fuqarolarini harbiy xizmatga chaqirish tartibini yanada takomillashtirish chora-tadbirlari toʻgʻrisidagi Prezident qarori (PQ-4630) 4",
+     "Vazirlar Mahkamasi qarori 775: Oʻzbekiston Respublikasi oliy harbiy taʼlim muassasalarida oʻqishga nomzodlarni saralab olish va qabul qilish, kursantlarni oʻqi… None"
+    ],
+    "hybrid": [
+     "Umumiy harbiy majburiyat va harbiy xizmat toʻgʻrisidagi Qonun (436-II) 21",
+     "Umumiy harbiy majburiyat va harbiy xizmat toʻgʻrisidagi Qonun (436-II) 19",
+     "Vazirlar Mahkamasi qarori 508: “Temurbeklar maktabi” harbiy-akademik litseylariga oʻqishga kirayotgan (tahsil olayotgan) nomzodlarni (oʻquvchilarni) tibbiy koʻ… None"
+    ]
+   }
+  },
+  "q-10": {
+   "question": "Kimlar harbiy xizmatdan ozod qilinadi?",
+   "ranks": {
+    "fts": 2,
+    "vector": null,
+    "hybrid": 2
+   },
+   "top3": {
+    "fts": [
+     "Umumiy harbiy majburiyat va harbiy xizmat toʻgʻrisidagi Qonun (436-II) 46",
+     "Umumiy harbiy majburiyat va harbiy xizmat toʻgʻrisidagi Qonun (436-II) 22",
+     "Davlat xizmatlarini koʻrsatishni tartibga soluvchi normativ-huquqiy hujjatlarni tizimlashtirish chora-tadbirlari toʻgʻrisidagi Vazirlar Mahkamasi qarori (612) None"
+    ],
+    "vector": [
+     "Vazirlar Mahkamasi qarori 543: Ozodlikdan mahrum etish joylaridan ozod qilingan shaxslarni ijtimoiy-maishiy taʼminlash va ishga joylashtirish tizimini yanada t… None",
+     "Jazoni oʻtashdan muddatidan ilgari ozod qilish va jazoni yengilrogʻi bilan almashtirish boʻyicha sud amaliyoti toʻgʻrisidagi Hujjat (28) 26",
+     "Jinoyat kodeksi 287"
+    ],
+    "hybrid": [
+     "Davlat xizmatlarini koʻrsatishni tartibga soluvchi normativ-huquqiy hujjatlarni tizimlashtirish chora-tadbirlari toʻgʻrisidagi Vazirlar Mahkamasi qarori (612) None",
+     "Umumiy harbiy majburiyat va harbiy xizmat toʻgʻrisidagi Qonun (436-II) 22",
+     "Vazirlar Mahkamasi qarori 543: Ozodlikdan mahrum etish joylaridan ozod qilingan shaxslarni ijtimoiy-maishiy taʼminlash va ishga joylashtirish tizimini yanada t… None"
+    ]
+   }
+  },
+  "q-11": {
+   "question": "Muddatli harbiy xizmat necha oy?",
+   "ranks": {
+    "fts": 8,
+    "vector": 2,
+    "hybrid": 1
+   },
+   "top3": {
+    "fts": [
+     "Prezident qarori PQ-4447: Oʻzbekiston Respublikasi fuqarolarining harbiy xizmatni oʻtash tartibi toʻgʻrisidagi nizomni tasdiqlash haqida 46",
+     "Vazirlar Mahkamasi qarori 923: Muddatli harbiy xizmatni oʻtayotgan harbiy xizmatchilar va rezervchilarning harbiy yigʻinlarda qatnashish davrida xatlarni joʻna… 11",
+     "Vazirlar Mahkamasi qarori 681: Oʻzbekiston Respublikasi Qurolli Kuchlari safida muddatli harbiy xizmatni oʻtab, harbiy qism qoʻmondonligining tavsiyanomalariga… 3"
+    ],
+    "vector": [
+     "Vazirlar Mahkamasi qarori 398: Harbiy xizmatchilarni oliy harbiy taʼlim muassasalarida oʻqitishga sarflangan budjet mablagʻlarini undirish tartibi toʻgʻrisidag… None",
+     "Umumiy harbiy majburiyat va harbiy xizmat toʻgʻrisidagi Qonun (436-II) 5",
+     "Hujjat 3215: Muddatli harbiy xizmatni oʻtayotgan harbiy xizmatchilarga Oʻzbekiston Respublikasi oliy taʼlim muassasalariga oʻqishga kirish uchun tavsiyanomalar… None"
+    ],
+    "hybrid": [
+     "Umumiy harbiy majburiyat va harbiy xizmat toʻgʻrisidagi Qonun (436-II) 5",
+     "Vazirlar Mahkamasi qarori 398: Harbiy xizmatchilarni oliy harbiy taʼlim muassasalarida oʻqitishga sarflangan budjet mablagʻlarini undirish tartibi toʻgʻrisidag… None",
+     "Hujjat 3878: Oʻzbekiston Respublikasi Qurolli Kuchlarida muddatli harbiy xizmatni oʻtayotgan harbiy xizmatchilarni kasbga oʻqitish xarajatlarini Bandlikka koʻm… 12"
+    ]
+   }
+  },
+  "q-12": {
+   "question": "Sudga daʼvo berishda davlat bojidan kimlar ozod?",
+   "ranks": {
+    "fts": 1,
+    "vector": 1,
+    "hybrid": 1
+   },
+   "top3": {
+    "fts": [
+     "Davlat boji toʻgʻrisidagi Qonun (OʻRQ-600) 8",
+     "Davlat boji toʻgʻrisidagi Qonun (OʻRQ-600) 9",
+     "Vazirlar Mahkamasi qarori 218: “Oʻzagrosugʻurta” davlat-aksiyadorlik sugʻurta kompaniyasini iqtisodiy sudga murojaat qilganda davlat boji toʻlashdan ozod qilis… 1"
+    ],
+    "vector": [
+     "Davlat boji toʻgʻrisidagi Qonun (OʻRQ-600) 8",
+     "Davlat boji toʻgʻrisidagi Qonun (OʻRQ-600) 10",
+     "Jinoyat-protsessual kodeksi 529"
+    ],
+    "hybrid": [
+     "Davlat boji toʻgʻrisidagi Qonun (OʻRQ-600) 8",
+     "Davlat boji toʻgʻrisidagi Qonun (OʻRQ-600) 9",
+     "Davlat boji toʻgʻrisidagi Qonun (OʻRQ-600) 10"
+    ]
+   }
+  },
+  "q-13": {
+   "question": "Davlat boji ortiqcha toʻlangan boʻlsa qaytarib olsa boʻladimi?",
+   "ranks": {
+    "fts": 1,
+    "vector": 3,
+    "hybrid": 1
+   },
+   "top3": {
+    "fts": [
+     "Davlat boji toʻgʻrisidagi Qonun (OʻRQ-600) 18",
+     "Soliq kodeksi 104",
+     "Hujjat 2771: Budjet tizimi budjetlari daromadlarining kassa ijrosi toʻgʻrisidagi yoʻriqnomani tasdiqlash haqida 31²"
+    ],
+    "vector": [
+     "Aholi punktlarini obodonlashtirish sohasida ishlar samaradorligini oshirishga doir qoʻshimcha chora-tadbirlar toʻgʻrisidagi Prezident qarori (PQ-4351) None",
+     "Vazirlar Mahkamasi qarori 46: Fuqarolarning oʻzini oʻzi boshqarish organlari majmualarini tashkil etish boʻyicha 2021-2022-yillarga moʻljallangan manzilli dast… None",
+     "Davlat boji toʻgʻrisidagi Qonun (OʻRQ-600) 18"
+    ],
+    "hybrid": [
+     "Davlat boji toʻgʻrisidagi Qonun (OʻRQ-600) 18",
+     "Aholi punktlarini obodonlashtirish sohasida ishlar samaradorligini oshirishga doir qoʻshimcha chora-tadbirlar toʻgʻrisidagi Prezident qarori (PQ-4351) None",
+     "Vazirlar Mahkamasi qarori 792: Aholi va tadbirkorlik subyektlariga davlat xizmatlarini koʻrsatish sohasidagi ayrim normativ-huquqiy hujjatlarni tasdiqlash toʻg… 3"
+    ]
+   }
+  },
+  "q-14": {
+   "question": "OSAGO polisi necha muddatga beriladi?",
+   "ranks": {
+    "fts": 2,
+    "vector": null,
+    "hybrid": 8
+   },
+   "top3": {
+    "fts": [
+     "Transport vositalari egalarining fuqarolik javobgarligini majburiy sugʻurta qilish toʻgʻrisidagi Qonun (OʻRQ-155) 21",
+     "Transport vositalari egalarining fuqarolik javobgarligini majburiy sugʻurta qilish toʻgʻrisidagi Qonun (OʻRQ-155) 9",
+     "Vazirlar Mahkamasi qarori 772: Qishloq xoʻjaligi tavakkalchiliklarini sugʻurta qilish tizimini joriy etishning tashkiliy chora-tadbirlari haqida 45"
+    ],
+    "vector": [
+     "Vazirlar Mahkamasi qarori 222: Transport vositalari egalarining fuqarolik javobgarligini majburiy sugʻurta qilishni yanada takomillashtirish chora-tadbirlari t… 4",
+     "Vazirlar Mahkamasi qarori 141: “Transport vositalari egalarining fuqarolik javobgarligini majburiy sugʻurta qilish toʻgʻrisida”gi Oʻzbekiston Respublikasi Qonu… 12",
+     "Vazirlar Mahkamasi qarori 460: Ish beruvchilarga ular tomonidan 25 yoshdan oshmagan xodimlar uchun toʻlangan ijtimoiy soliq summasini Davlat budjetidan toʻliq… None"
+    ],
+    "hybrid": [
+     "Vazirlar Mahkamasi qarori 141: “Transport vositalari egalarining fuqarolik javobgarligini majburiy sugʻurta qilish toʻgʻrisida”gi Oʻzbekiston Respublikasi Qonu… 12",
+     "Vazirlar Mahkamasi qarori 141: “Transport vositalari egalarining fuqarolik javobgarligini majburiy sugʻurta qilish toʻgʻrisida”gi Oʻzbekiston Respublikasi Qonu… 9",
+     "Vazirlar Mahkamasi qarori 222: Transport vositalari egalarining fuqarolik javobgarligini majburiy sugʻurta qilishni yanada takomillashtirish chora-tadbirlari t… 4"
+    ]
+   }
+  },
+  "q-15": {
+   "question": "Avariyada mashinam urildi, sugʻurta qancha toʻlaydi?",
+   "ranks": {
+    "fts": 6,
+    "vector": null,
+    "hybrid": null
+   },
+   "top3": {
+    "fts": [
+     "Vazirlar Mahkamasi qarori 271: “Xavfli ishlab chiqarish obyektlarining sanoat xavfsizligi toʻgʻrisida”gi Oʻzbekiston Respublikasi qonunini amalga oshirishga do… 24",
+     "Vazirlar Mahkamasi qarori 271: “Xavfli ishlab chiqarish obyektlarining sanoat xavfsizligi toʻgʻrisida”gi Oʻzbekiston Respublikasi qonunini amalga oshirishga do… 29",
+     "Vazirlar Mahkamasi qarori 271: “Xavfli ishlab chiqarish obyektlarining sanoat xavfsizligi toʻgʻrisida”gi Oʻzbekiston Respublikasi qonunini amalga oshirishga do… 25"
+    ],
+    "vector": [
+     "Vazirlar Mahkamasi qarori 222: Transport vositalari egalarining fuqarolik javobgarligini majburiy sugʻurta qilishni yanada takomillashtirish chora-tadbirlari t… 4",
+     "Buyruq 2169: Budjet tashkilotlarida buxgalteriya hisobi toʻgʻrisidagi yoʻriqnomani tasdiqlash haqida None",
+     "Vazirlar Mahkamasi qarori 141: “Transport vositalari egalarining fuqarolik javobgarligini majburiy sugʻurta qilish toʻgʻrisida”gi Oʻzbekiston Respublikasi Qonu… None"
+    ],
+    "hybrid": [
+     "Vazirlar Mahkamasi qarori 141: “Transport vositalari egalarining fuqarolik javobgarligini majburiy sugʻurta qilish toʻgʻrisida”gi Oʻzbekiston Respublikasi Qonu… None",
+     "Vazirlar Mahkamasi qarori 141: “Transport vositalari egalarining fuqarolik javobgarligini majburiy sugʻurta qilish toʻgʻrisida”gi Oʻzbekiston Respublikasi Qonu… 47¹⁰",
+     "Transport vositalari egalarining fuqarolik javobgarligini majburiy sugʻurta qilish toʻgʻrisidagi Qonun (OʻRQ-155) 20²"
+    ]
+   }
+  },
+  "q-16": {
+   "question": "Oʻzbekiston fuqaroligini qanday olish mumkin?",
+   "ranks": {
+    "fts": null,
+    "vector": null,
+    "hybrid": null
+   },
+   "top3": {
+    "fts": [
+     "Ilk rivojlanish markazlari faoliyatini bosqichma-bosqich yoʻlga qoʻyish chora-tadbirlari toʻgʻrisidagi Vazirlar Mahkamasi qarori (439) None",
+     "Vazirlar Mahkamasi qarori 592: Oʻzbekiston Respublikasining fuqaroligiga qabul qilishda davlat tilini bilish darajasini aniqlash tartibi toʻgʻrisidagi nizomni… None",
+     "Vazirlar Mahkamasi qarori 336: Oʻzbekiston Respublikasi fuqarolarini, chet el fuqarolari va fuqaroligi boʻlmagan shaxslarni Toshkent shahri va Toshkent viloyat… 42"
+    ],
+    "vector": [
+     "Oʻzbekiston Respublikasi fuqaroligiga oid masalalarni koʻrib chiqishning yangilangan tartibini belgilash toʻgʻrisidagi Prezident farmoni (PF-6185) None",
+     "Oʻzbekiston Respublikasi fuqaroligiga oid masalalarni koʻrib chiqishning yangilangan tartibini belgilash toʻgʻrisidagi Prezident farmoni (PF-6185) None",
+     "Oʻzbekiston Respublikasi fuqaroligiga oid masalalarni koʻrib chiqishning yangilangan tartibini belgilash toʻgʻrisidagi Prezident farmoni (PF-6185) None"
+    ],
+    "hybrid": [
+     "Oʻzbekiston Respublikasi fuqaroligiga oid masalalarni koʻrib chiqishning yangilangan tartibini belgilash toʻgʻrisidagi Prezident farmoni (PF-6185) 1",
+     "Oʻzbekiston Respublikasi fuqaroligiga oid masalalarni koʻrib chiqishning yangilangan tartibini belgilash toʻgʻrisidagi Prezident farmoni (PF-6185) 29",
+     "Oʻzbekiston Respublikasi fuqaroligiga oid masalalarni koʻrib chiqishning yangilangan tartibini belgilash toʻgʻrisidagi Prezident farmoni (PF-6185) None"
+    ]
+   }
+  },
+  "q-17": {
+   "question": "Ikki fuqarolikka ruxsat bormi?",
+   "ranks": {
+    "fts": null,
+    "vector": null,
+    "hybrid": null
+   },
+   "top3": {
+    "fts": [
+     "Vazirlar Mahkamasi qarori 408: Chet el fuqarolari va fuqaroligi boʻlmagan shaxslarning Oʻzbekiston Respublikasiga kelishlari, ketishlari, bu yerda boʻlishlari… None",
+     "Vazirlar Mahkamasi qarori 408: Chet el fuqarolari va fuqaroligi boʻlmagan shaxslarning Oʻzbekiston Respublikasiga kelishlari, ketishlari, bu yerda boʻlishlari… 15¹⁷",
+     "Vazirlar Mahkamasi qarori 417: Oʻzbekiston Respublikasida vaqtincha boʻlib turgan chet el fuqarolari va fuqaroligi boʻlmagan shaxslarning viza muddatini uzayti… 15¹⁷"
+    ],
+    "vector": [
+     "Hujjat: “Oʻzbekiston Respublikasining fuqaroligi toʻgʻrisida”gi Oʻzbekiston Respublikasi Qonuni 21-moddasi birinchi qismining 2-bandini sharhlash haqida 1",
+     "Vazirlar Mahkamasi qarori 49: Konsullik roʻyxatida turuvchi Oʻzbekiston Respublikasi fuqarolariga Oʻzbekiston Respublikasining xorijdagi konsullik muassasalari… None",
+     "Vazirlar Mahkamasi qarori 321: Migratsiya va fuqarolikni rasmiylashtirish, shuningdek, avtomototransport vositalarini davlat roʻyxatidan oʻtkazish va roʻyxatda… 2"
+    ],
+    "hybrid": [
+     "Hujjat: “Oʻzbekiston Respublikasining fuqaroligi toʻgʻrisida”gi Oʻzbekiston Respublikasi Qonuni 21-moddasi birinchi qismining 2-bandini sharhlash haqida 1",
+     "Fuqarolikni rasmiylashtirish sohasida ayrim davlat xizmatlari koʻrsatishning maʼmuriy reglamentlarini tasdiqlash toʻgʻrisidagi Vazirlar Mahkamasi qarori (8) 1",
+     "Vazirlar Mahkamasi qarori 408: Chet el fuqarolari va fuqaroligi boʻlmagan shaxslarning Oʻzbekiston Respublikasiga kelishlari, ketishlari, bu yerda boʻlishlari… None"
+    ]
+   }
+  },
+  "q-18": {
+   "question": "Notarius qanday hollarda notarial harakatni rad etadi?",
+   "ranks": {
+    "fts": 9,
+    "vector": 1,
+    "hybrid": 1
+   },
+   "top3": {
+    "fts": [
+     "Vazirlar Mahkamasi qarori 726: Notariuslar tomonidan ayrim notarial harakatlarni amalga oshirish tartibi toʻgʻrisidagi maʼmuriy reglamentlarni tasdiqlash haqida 64",
+     "Vazirlar Mahkamasi qarori 726: Notariuslar tomonidan ayrim notarial harakatlarni amalga oshirish tartibi toʻgʻrisidagi maʼmuriy reglamentlarni tasdiqlash haqida 51",
+     "Vazirlar Mahkamasi qarori 726: Notariuslar tomonidan ayrim notarial harakatlarni amalga oshirish tartibi toʻgʻrisidagi maʼmuriy reglamentlarni tasdiqlash haqida 46"
+    ],
+    "vector": [
+     "Notariat toʻgʻrisidagi Qonun (343-I) 38",
+     "Buyruq 3113: Notariuslar tomonidan notarial harakatlarni amalga oshirish tartibi toʻgʻrisida yoʻriqnomani tasdiqlash haqida 4",
+     "Buyruq 3113: Notariuslar tomonidan notarial harakatlarni amalga oshirish tartibi toʻgʻrisida yoʻriqnomani tasdiqlash haqida 21"
+    ],
+    "hybrid": [
+     "Notariat toʻgʻrisidagi Qonun (343-I) 38",
+     "Buyruq 3113: Notariuslar tomonidan notarial harakatlarni amalga oshirish tartibi toʻgʻrisida yoʻriqnomani tasdiqlash haqida 21",
+     "Buyruq 3113: Notariuslar tomonidan notarial harakatlarni amalga oshirish tartibi toʻgʻrisida yoʻriqnomani tasdiqlash haqida 4"
+    ]
+   }
+  },
+  "q-19": {
+   "question": "Kompaniya mening shaxsiy maʼlumotlarimni boshqalarga bera oladimi?",
+   "ranks": {
+    "fts": null,
+    "vector": null,
+    "hybrid": null
+   },
+   "top3": {
+    "fts": [
+     "Koʻp kvartirali uylarni boshqarish tizimini yanada takomillashtirish boʻyicha qoʻshimcha chora-tadbirlar toʻgʻrisidagi Prezident qarori (PQ-48) None",
+     "Mehnat kodeksi 176",
+     "Buyruq 3478: Shaxsga doir maʼlumotlarga ishlov berishning namunaviy tartibini tasdiqlash haqida 1"
+    ],
+    "vector": [
+     "Buyruq 3477: Shaxsga doir maʼlumotlar bazasining mulkdori va (yoki) operatorining shaxsga doir maʼlumotlarga ishlov berilishini hamda ularning himoya qilinishi… 8",
+     "Buyruq 3478: Shaxsga doir maʼlumotlarga ishlov berishning namunaviy tartibini tasdiqlash haqida 30",
+     "Buyruq 2169: Budjet tashkilotlarida buxgalteriya hisobi toʻgʻrisidagi yoʻriqnomani tasdiqlash haqida None"
+    ],
+    "hybrid": [
+     "Buyruq 3478: Shaxsga doir maʼlumotlarga ishlov berishning namunaviy tartibini tasdiqlash haqida 30",
+     "Mehnat kodeksi 176",
+     "Buyruq 3478: Shaxsga doir maʼlumotlarga ishlov berishning namunaviy tartibini tasdiqlash haqida 1"
+    ]
+   }
+  },
+  "q-20": {
+   "question": "Bepul advokatdan kimlar foydalana oladi?",
+   "ranks": {
+    "fts": 3,
+    "vector": 6,
+    "hybrid": 3
+   },
+   "top3": {
+    "fts": [
+     "Vazirlar Mahkamasi qarori 774: Davlat hisobidan yuridik yordam koʻrsatadigan advokatlarni jalb etish va ularga haq toʻlash tartibi toʻgʻrisidagi nizomni tasdiq… 46",
+     "Davlat hisobidan yuridik yordam koʻrsatish toʻgʻrisidagi Qonun (OʻRQ-848) 17",
+     "Davlat hisobidan yuridik yordam koʻrsatish toʻgʻrisidagi Qonun (OʻRQ-848) 9"
+    ],
+    "vector": [
+     "Vazirlar Mahkamasi qarori 774: Davlat hisobidan yuridik yordam koʻrsatadigan advokatlarni jalb etish va ularga haq toʻlash tartibi toʻgʻrisidagi nizomni tasdiq… 21",
+     "Vazirlar Mahkamasi qarori 774: Davlat hisobidan yuridik yordam koʻrsatadigan advokatlarni jalb etish va ularga haq toʻlash tartibi toʻgʻrisidagi nizomni tasdiq… 26",
+     "Davlat hisobidan yuridik yordam koʻrsatish toʻgʻrisidagi Qonun (OʻRQ-848) 17"
+    ],
+    "hybrid": [
+     "Vazirlar Mahkamasi qarori 774: Davlat hisobidan yuridik yordam koʻrsatadigan advokatlarni jalb etish va ularga haq toʻlash tartibi toʻgʻrisidagi nizomni tasdiq… 46",
+     "Davlat hisobidan yuridik yordam koʻrsatish toʻgʻrisidagi Qonun (OʻRQ-848) 17",
+     "Davlat hisobidan yuridik yordam koʻrsatish toʻgʻrisidagi Qonun (OʻRQ-848) 9"
+    ]
+   }
+  }
+ },
+ "settings": {
+  "model": "e5-small-int8",
+  "stem": true,
+  "alt": "questions",
+  "questions": "eval/questions.yaml"
+ }
+}

@@ -1,0 +1,920 @@
+{
+ "modes": {
+  "fts": {
+   "overall": {
+    "n": 29,
+    "recall_at_1": 0.27586206896551724,
+    "recall_at_5": 0.7931034482758621,
+    "recall_at_10": 0.9310344827586207,
+    "mrr": 0.4839080459770115
+   },
+   "by_tag": {
+    "buyruq": {
+     "n": 8,
+     "recall_at_1": 0.375,
+     "recall_at_5": 1.0,
+     "recall_at_10": 1.0,
+     "mrr": 0.6083333333333333
+    },
+    "farmon": {
+     "n": 4,
+     "recall_at_1": 0.25,
+     "recall_at_5": 0.5,
+     "recall_at_10": 0.75,
+     "mrr": 0.33125
+    },
+    "pq": {
+     "n": 5,
+     "recall_at_1": 0.0,
+     "recall_at_5": 0.6,
+     "recall_at_10": 1.0,
+     "mrr": 0.29166666666666663
+    },
+    "rasmiy": {
+     "n": 4,
+     "recall_at_1": 0.5,
+     "recall_at_5": 1.0,
+     "recall_at_10": 1.0,
+     "mrr": 0.6333333333333333
+    },
+    "sozlashuv": {
+     "n": 23,
+     "recall_at_1": 0.2608695652173913,
+     "recall_at_5": 0.7391304347826086,
+     "recall_at_10": 0.9130434782608695,
+     "mrr": 0.46956521739130436
+    },
+    "vm_qarori": {
+     "n": 12,
+     "recall_at_1": 0.3333333333333333,
+     "recall_at_5": 0.8333333333333334,
+     "recall_at_10": 0.9166666666666666,
+     "mrr": 0.5319444444444444
+    },
+    "xatoli": {
+     "n": 2,
+     "recall_at_1": 0.0,
+     "recall_at_5": 1.0,
+     "recall_at_10": 1.0,
+     "mrr": 0.35
+    }
+   },
+   "ms_per_query": 2162.1
+  },
+  "vector": {
+   "overall": {
+    "n": 29,
+    "recall_at_1": 0.0,
+    "recall_at_5": 0.034482758620689655,
+    "recall_at_10": 0.1724137931034483,
+    "mrr": 0.022701149425287358
+   },
+   "by_tag": {
+    "buyruq": {
+     "n": 8,
+     "recall_at_1": 0.0,
+     "recall_at_5": 0.0,
+     "recall_at_10": 0.25,
+     "mrr": 0.027777777777777776
+    },
+    "farmon": {
+     "n": 4,
+     "recall_at_1": 0.0,
+     "recall_at_5": 0.0,
+     "recall_at_10": 0.0,
+     "mrr": 0.0
+    },
+    "pq": {
+     "n": 5,
+     "recall_at_1": 0.0,
+     "recall_at_5": 0.2,
+     "recall_at_10": 0.2,
+     "mrr": 0.04
+    },
+    "rasmiy": {
+     "n": 4,
+     "recall_at_1": 0.0,
+     "recall_at_5": 0.0,
+     "recall_at_10": 0.0,
+     "mrr": 0.0
+    },
+    "sozlashuv": {
+     "n": 23,
+     "recall_at_1": 0.0,
+     "recall_at_5": 0.043478260869565216,
+     "recall_at_10": 0.17391304347826086,
+     "mrr": 0.02318840579710145
+    },
+    "vm_qarori": {
+     "n": 12,
+     "recall_at_1": 0.0,
+     "recall_at_5": 0.0,
+     "recall_at_10": 0.16666666666666666,
+     "mrr": 0.019675925925925927
+    },
+    "xatoli": {
+     "n": 2,
+     "recall_at_1": 0.0,
+     "recall_at_5": 0.0,
+     "recall_at_10": 0.5,
+     "mrr": 0.0625
+    }
+   },
+   "ms_per_query": 859.6
+  },
+  "hybrid": {
+   "overall": {
+    "n": 29,
+    "recall_at_1": 0.20689655172413793,
+    "recall_at_5": 0.6551724137931034,
+    "recall_at_10": 0.7241379310344828,
+    "mrr": 0.34783798576902025
+   },
+   "by_tag": {
+    "buyruq": {
+     "n": 8,
+     "recall_at_1": 0.375,
+     "recall_at_5": 0.875,
+     "recall_at_10": 1.0,
+     "mrr": 0.5532738095238096
+    },
+    "farmon": {
+     "n": 4,
+     "recall_at_1": 0.0,
+     "recall_at_5": 0.5,
+     "recall_at_10": 0.5,
+     "mrr": 0.175
+    },
+    "pq": {
+     "n": 5,
+     "recall_at_1": 0.4,
+     "recall_at_5": 0.4,
+     "recall_at_10": 0.4,
+     "mrr": 0.4
+    },
+    "rasmiy": {
+     "n": 4,
+     "recall_at_1": 0.0,
+     "recall_at_5": 0.5,
+     "recall_at_10": 1.0,
+     "mrr": 0.23849206349206348
+    },
+    "sozlashuv": {
+     "n": 23,
+     "recall_at_1": 0.2608695652173913,
+     "recall_at_5": 0.6956521739130435,
+     "recall_at_10": 0.6956521739130435,
+     "mrr": 0.3826086956521739
+    },
+    "vm_qarori": {
+     "n": 12,
+     "recall_at_1": 0.08333333333333333,
+     "recall_at_5": 0.6666666666666666,
+     "recall_at_10": 0.75,
+     "mrr": 0.24675925925925926
+    },
+    "xatoli": {
+     "n": 2,
+     "recall_at_1": 0.0,
+     "recall_at_5": 0.5,
+     "recall_at_10": 0.5,
+     "mrr": 0.16666666666666666
+    }
+   },
+   "ms_per_query": 3409.1
+  }
+ },
+ "questions": {
+  "dr-01": {
+   "question": "Haydovchilik guvohnomasi uchun nazariy imtihonda nechta savol beriladi?",
+   "ranks": {
+    "fts": 1,
+    "vector": null,
+    "hybrid": 5
+   },
+   "top3": {
+    "fts": [
+     "Vazirlar Mahkamasi qarori 272: Avtomototransport vositalarini boshqarish huquqini beruvchi haydovchilik guvohnomalarini olish uchun imtihonlarni oʻtkazish soha… 24",
+     "Vazirlar Mahkamasi qarori 272: Avtomototransport vositalarini boshqarish huquqini beruvchi haydovchilik guvohnomalarini olish uchun imtihonlarni oʻtkazish soha… 27",
+     "Vazirlar Mahkamasi qarori 272: Avtomototransport vositalarini boshqarish huquqini beruvchi haydovchilik guvohnomalarini olish uchun imtihonlarni oʻtkazish soha… 18"
+    ],
+    "vector": [
+     "Hujjat 3173: Toshkent davlat yuridik universitetining Ixtisoslashtirilgan filialida taʼlim oluvchilarning bilimini nazorat qilish tartibi va baholash mezonlari… None",
+     "Vazirlar Mahkamasi qarori 60: Odam savdosidan jabrlangan yoki odam savdosidan jabrlangan deb taxmin qilinayotgan shaxslarni milliy darajadagi qayta yoʻnaltiris… None",
+     "Vazirlar Mahkamasi qarori 958: Oʻzbekiston Respublikasi Ichki ishlar vazirligi Akademiyasi bakalavriatining kunduzgi va masofaviy taʼlim shakllariga nomzodlarn… None"
+    ],
+    "hybrid": [
+     "Vazirlar Mahkamasi qarori 272: Avtomototransport vositalarini boshqarish huquqini beruvchi haydovchilik guvohnomalarini olish uchun imtihonlarni oʻtkazish soha… 2",
+     "Vazirlar Mahkamasi qarori 272: Avtomototransport vositalarini boshqarish huquqini beruvchi haydovchilik guvohnomalarini olish uchun imtihonlarni oʻtkazish soha… 28",
+     "Hujjat 3173: Toshkent davlat yuridik universitetining Ixtisoslashtirilgan filialida taʼlim oluvchilarning bilimini nazorat qilish tartibi va baholash mezonlari… None"
+    ]
+   }
+  },
+  "dr-02": {
+   "question": "Nazariydan oʻtdim, amaliy imtihonni qancha vaqt ichida topshirishim kerak?",
+   "ranks": {
+    "fts": null,
+    "vector": null,
+    "hybrid": null
+   },
+   "top3": {
+    "fts": [
+     "Vazirlar Mahkamasi qarori 408: Avtomototransport vositalari va shahar elektr transporti vositalari haydovchilarini tayyorlash hamda qayta tayyorlash boʻyicha n… None",
+     "Vazirlar Mahkamasi qarori 272: Avtomototransport vositalarini boshqarish huquqini beruvchi haydovchilik guvohnomalarini olish uchun imtihonlarni oʻtkazish soha… None",
+     "Vazirlar Mahkamasi qarori 408: Avtomototransport vositalari va shahar elektr transporti vositalari haydovchilarini tayyorlash hamda qayta tayyorlash boʻyicha n… 18"
+    ],
+    "vector": [
+     "Vazirlar Mahkamasi qarori 958: Oʻzbekiston Respublikasi Ichki ishlar vazirligi Akademiyasi bakalavriatining kunduzgi va masofaviy taʼlim shakllariga nomzodlarn… None",
+     "Vazirlar Mahkamasi qarori 958: Oʻzbekiston Respublikasi Ichki ishlar vazirligi Akademiyasi bakalavriatining kunduzgi va masofaviy taʼlim shakllariga nomzodlarn… None",
+     "Vazirlar Mahkamasi qarori 958: Oʻzbekiston Respublikasi Ichki ishlar vazirligi Akademiyasi bakalavriatining kunduzgi va masofaviy taʼlim shakllariga nomzodlarn… None"
+    ],
+    "hybrid": [
+     "Vazirlar Mahkamasi qarori 958: Oʻzbekiston Respublikasi Ichki ishlar vazirligi Akademiyasi bakalavriatining kunduzgi va masofaviy taʼlim shakllariga nomzodlarn… None",
+     "Vazirlar Mahkamasi qarori 958: Oʻzbekiston Respublikasi Ichki ishlar vazirligi Akademiyasi bakalavriatining kunduzgi va masofaviy taʼlim shakllariga nomzodlarn… None",
+     "Vazirlar Mahkamasi qarori 408: Avtomototransport vositalari va shahar elektr transporti vositalari haydovchilarini tayyorlash hamda qayta tayyorlash boʻyicha n… None"
+    ]
+   }
+  },
+  "dr-03": {
+   "question": "avtomaktab imtihonidan yiqilsam tolagan pulim qaytariladimi",
+   "ranks": {
+    "fts": 5,
+    "vector": null,
+    "hybrid": null
+   },
+   "top3": {
+    "fts": [
+     "Avtomobil yoʻllarida inson xavfsizligini ishonchli taʼminlash va oʻlim holatlarini keskin kamaytirish chora-tadbirlari toʻgʻrisidagi Prezident qarori (PQ-190) 3",
+     "Milliy haydovchilik guvohnomasini rasmiylashtirish tartibini soddalashtirishning qoʻshimcha chora-tadbirlari toʻgʻrisidagi Vazirlar Mahkamasi qarori (152) 10",
+     "Vazirlar Mahkamasi qarori 271: Yoʻl harakati xavfsizligi sohasida davlat xizmatlari koʻrsatish tartib-taomillarini soddalashtirish chora-tadbirlari toʻgʻrisida 10"
+    ],
+    "vector": [
+     "Vazirlar Mahkamasi qarori 191: “Avtotransport vositalari konstruksiyasining foydalanish shartlari boʻyicha xavfsizligi toʻgʻrisida”gi umumiy texnik reglamentni… None",
+     "Vazirlar Mahkamasi qarori 908: Tashkilotni qayta tiklanadigan manbalardan energiya ishlab chiqarish qurilmalari tayyorlashga ixtisoslashayotgan tashkilot sifat… None",
+     "Buyruq 3890: Favqulodda vaziyatlar yuzaga kelishining oldini olish hamda yongʻin xavfsizligi talablariga rioya qilinishi ustidan nazoratni amalga oshirishda “X… None"
+    ],
+    "hybrid": [
+     "Vazirlar Mahkamasi qarori 408: Avtomototransport vositalari va shahar elektr transporti vositalari haydovchilarini tayyorlash hamda qayta tayyorlash boʻyicha n… 52",
+     "Buyruq 2303: Roʻyxatdan oʻtkazish davlat raqami belgilarini va qatʼiy hisobdagi blankalarni berishda, avtomototransport vositalari, ularning tirkamalari (yarim… None",
+     "Vazirlar Mahkamasi qarori 191: “Avtotransport vositalari konstruksiyasining foydalanish shartlari boʻyicha xavfsizligi toʻgʻrisida”gi umumiy texnik reglamentni… None"
+    ]
+   }
+  },
+  "dr-04": {
+   "question": "Propiskadagi manzilim xato yozilgan ekan, tuzattirish pullikmi?",
+   "ranks": {
+    "fts": 2,
+    "vector": null,
+    "hybrid": 4
+   },
+   "top3": {
+    "fts": [
+     "Vazirlar Mahkamasi qarori 38: Oʻzbekiston Respublikasi fuqarolarining yashash joyi manzilini hamda ularga tegishli koʻchmas mulkda yashash joyi boʻyicha roʻyxa… None",
+     "Vazirlar Mahkamasi qarori 38: Oʻzbekiston Respublikasi fuqarolarining yashash joyi manzilini hamda ularga tegishli koʻchmas mulkda yashash joyi boʻyicha roʻyxa… 4",
+     "Buyruq 3538: Buxgalteriya hisobida hujjatlar va hujjatlar aylanishi toʻgʻrisidagi nizomni tasdiqlash haqida 18"
+    ],
+    "vector": [
+     "Vazirlar Mahkamasi qarori 22: Qishloq xoʻjaligiga moʻljallangan yerlarda monitoring ishlarini amalga oshirish, yerlarni muhofaza qilish va yer tuzish faoliyati… None",
+     "Vazirlar Mahkamasi qarori 293: Favqulodda holat joriy etilgan hududda uy-joy fondini tiklash, jismoniy va yuridik shaxslarga yetkazilgan zararning oʻrnini qopl… None",
+     "Buyruq 2169: Budjet tashkilotlarida buxgalteriya hisobi toʻgʻrisidagi yoʻriqnomani tasdiqlash haqida None"
+    ],
+    "hybrid": [
+     "Vazirlar Mahkamasi qarori 38: Oʻzbekiston Respublikasi fuqarolarining yashash joyi manzilini hamda ularga tegishli koʻchmas mulkda yashash joyi boʻyicha roʻyxa… None",
+     "Vazirlar Mahkamasi qarori 38: Oʻzbekiston Respublikasi fuqarolarining yashash joyi manzilini hamda ularga tegishli koʻchmas mulkda yashash joyi boʻyicha roʻyxa… 3",
+     "Vazirlar Mahkamasi qarori 38: Oʻzbekiston Respublikasi fuqarolarining yashash joyi manzilini hamda ularga tegishli koʻchmas mulkda yashash joyi boʻyicha roʻyxa… 1"
+    ]
+   }
+  },
+  "dr-05": {
+   "question": "Yashash joyi manzilini tahrirlash soʻrovnomasi necha kunda koʻrib chiqiladi?",
+   "ranks": {
+    "fts": 3,
+    "vector": null,
+    "hybrid": 9
+   },
+   "top3": {
+    "fts": [
+     "Vazirlar Mahkamasi qarori 579: Xorijda istiqomat qilayotgan vatandoshlar va ularning oila aʼzolarini Oʻzbekiston Respublikasiga taklif qilish hamda fuqaroligi… 9",
+     "Vazirlar Mahkamasi qarori 38: Oʻzbekiston Respublikasi fuqarolarining yashash joyi manzilini hamda ularga tegishli koʻchmas mulkda yashash joyi boʻyicha roʻyxa… None",
+     "Vazirlar Mahkamasi qarori 38: Oʻzbekiston Respublikasi fuqarolarining yashash joyi manzilini hamda ularga tegishli koʻchmas mulkda yashash joyi boʻyicha roʻyxa… 11"
+    ],
+    "vector": [
+     "Vazirlar Mahkamasi qarori 695: Aholi muammolarini hal qilishda davlat organlari va tashkilotlari faoliyati ustidan jamoatchilik nazorati tizimi samaradorligini… None",
+     "Vazirlar Mahkamasi qarori 742: Shaxslarni kundalik hayotdagi faolligi va ishtirokini baholash uchun yoʻllash hamda baholashdan oʻtkazish tartibi toʻgʻrisidagi… None",
+     "Vazirlar Mahkamasi qarori 600: Ayrim toifadagi obyektlarni loyihalashtirish, qurish rekonstruksiya qilish, mukammal va joriy taʼmirlashda davlat xaridlarini ta… None"
+    ],
+    "hybrid": [
+     "Vazirlar Mahkamasi qarori 695: Aholi muammolarini hal qilishda davlat organlari va tashkilotlari faoliyati ustidan jamoatchilik nazorati tizimi samaradorligini… None",
+     "Vazirlar Mahkamasi qarori 579: Xorijda istiqomat qilayotgan vatandoshlar va ularning oila aʼzolarini Oʻzbekiston Respublikasiga taklif qilish hamda fuqaroligi… 9",
+     "Vazirlar Mahkamasi qarori 742: Shaxslarni kundalik hayotdagi faolligi va ishtirokini baholash uchun yoʻllash hamda baholashdan oʻtkazish tartibi toʻgʻrisidagi… None"
+    ]
+   }
+  },
+  "dr-06": {
+   "question": "Nikoh shartnomasini ishonchnoma bilan vakil orqali tuzsa boʻladimi?",
+   "ranks": {
+    "fts": 3,
+    "vector": null,
+    "hybrid": 5
+   },
+   "top3": {
+    "fts": [
+     "Fuqarolik holati dalolatnomalarini yozish tartiblarini yanada takomillashtirish chora-tadbirlari toʻgʻrisidagi Vazirlar Mahkamasi qarori (540) 15",
+     "Buyruq 3743: Notariuslar tomonidan nikoh shartnomalarini tasdiqlash tartibi toʻgʻrisidagi nizomni tasdiqlash haqida 20",
+     "Buyruq 3743: Notariuslar tomonidan nikoh shartnomalarini tasdiqlash tartibi toʻgʻrisidagi nizomni tasdiqlash haqida 7"
+    ],
+    "vector": [
+     "Vazirlar Mahkamasi qarori 610: Koʻchmas mulkka boʻlgan huquqlarning hisobini yuritishda shaffoflikni taʼminlash, shuningdek, kadastr sohasidagi ayrim maʼmuriy… None",
+     "Vazirlar Mahkamasi qarori 550: Nikoh, oila va fuqarolik holati dalolatnomalarini qayd etish sohasidagi normativ-huquqiy hujjatlarni tizimlashtirish toʻgʻrisida None",
+     "Vazirlar Mahkamasi qarori 199: Xususiy amaliyot bilan shugʻullanuvchi notariuslarning fuqarolik javobgarligini majburiy sugʻurta qilish qoidalarini tasdiqlash… None"
+    ],
+    "hybrid": [
+     "Vazirlar Mahkamasi qarori 610: Koʻchmas mulkka boʻlgan huquqlarning hisobini yuritishda shaffoflikni taʼminlash, shuningdek, kadastr sohasidagi ayrim maʼmuriy… None",
+     "Fuqarolik holati dalolatnomalarini yozish tartiblarini yanada takomillashtirish chora-tadbirlari toʻgʻrisidagi Vazirlar Mahkamasi qarori (540) 15",
+     "Vazirlar Mahkamasi qarori 550: Nikoh, oila va fuqarolik holati dalolatnomalarini qayd etish sohasidagi normativ-huquqiy hujjatlarni tizimlashtirish toʻgʻrisida None"
+    ]
+   }
+  },
+  "dr-07": {
+   "question": "Nikoh shartnomasini notariusda tuzdik, lekin ZAGSda roʻyxatdan oʻtmadik. Shartnoma kuchdami?",
+   "ranks": {
+    "fts": 1,
+    "vector": null,
+    "hybrid": 1
+   },
+   "top3": {
+    "fts": [
+     "Buyruq 3743: Notariuslar tomonidan nikoh shartnomalarini tasdiqlash tartibi toʻgʻrisidagi nizomni tasdiqlash haqida 8",
+     "Buyruq 3743: Notariuslar tomonidan nikoh shartnomalarini tasdiqlash tartibi toʻgʻrisidagi nizomni tasdiqlash haqida 29",
+     "Buyruq 3743: Notariuslar tomonidan nikoh shartnomalarini tasdiqlash tartibi toʻgʻrisidagi nizomni tasdiqlash haqida 38"
+    ],
+    "vector": [
+     "Vazirlar Mahkamasi qarori 71: “Qishloq xoʻjaligiga moʻljallanmagan yer uchastkalarini xususiylashtirish toʻgʻrisida”gi Oʻzbekiston Respublikasi Qonunini amalga… None",
+     "Buyruq 2169: Budjet tashkilotlarida buxgalteriya hisobi toʻgʻrisidagi yoʻriqnomani tasdiqlash haqida None",
+     "Hujjat 2998: Ichki ishlar organlarida majburiy xizmatni oʻtash haqidagi shartnomalarni tuzish hamda shartnoma shartlari bajarilmaganda xarajatlarni qoplash tar… None"
+    ],
+    "hybrid": [
+     "Buyruq 3743: Notariuslar tomonidan nikoh shartnomalarini tasdiqlash tartibi toʻgʻrisidagi nizomni tasdiqlash haqida 8",
+     "Buyruq 3743: Notariuslar tomonidan nikoh shartnomalarini tasdiqlash tartibi toʻgʻrisidagi nizomni tasdiqlash haqida 29",
+     "Buyruq 3743: Notariuslar tomonidan nikoh shartnomalarini tasdiqlash tartibi toʻgʻrisidagi nizomni tasdiqlash haqida 38"
+    ]
+   }
+  },
+  "dr-08": {
+   "question": "Notarius nikoh shartnomasini tasdiqlashdan bosh tortsa, toʻlagan pulim qaytariladimi?",
+   "ranks": {
+    "fts": 1,
+    "vector": null,
+    "hybrid": 3
+   },
+   "top3": {
+    "fts": [
+     "Buyruq 3743: Notariuslar tomonidan nikoh shartnomalarini tasdiqlash tartibi toʻgʻrisidagi nizomni tasdiqlash haqida 47",
+     "Buyruq 3743: Notariuslar tomonidan nikoh shartnomalarini tasdiqlash tartibi toʻgʻrisidagi nizomni tasdiqlash haqida 46",
+     "Buyruq 3743: Notariuslar tomonidan nikoh shartnomalarini tasdiqlash tartibi toʻgʻrisidagi nizomni tasdiqlash haqida 5"
+    ],
+    "vector": [
+     "Vazirlar Mahkamasi qarori 199: Xususiy amaliyot bilan shugʻullanuvchi notariuslarning fuqarolik javobgarligini majburiy sugʻurta qilish qoidalarini tasdiqlash… None",
+     "Nodavlat notarial faoliyatni tartibga soluvchi normativ-huquqiy hujjatlarni tasdiqlash toʻgʻrisidagi Vazirlar Mahkamasi qarori (156) None",
+     "Vazirlar Mahkamasi qarori 199: Xususiy amaliyot bilan shugʻullanuvchi notariuslarning fuqarolik javobgarligini majburiy sugʻurta qilish qoidalarini tasdiqlash… None"
+    ],
+    "hybrid": [
+     "Vazirlar Mahkamasi qarori 199: Xususiy amaliyot bilan shugʻullanuvchi notariuslarning fuqarolik javobgarligini majburiy sugʻurta qilish qoidalarini tasdiqlash… None",
+     "Nodavlat notarial faoliyatni tartibga soluvchi normativ-huquqiy hujjatlarni tasdiqlash toʻgʻrisidagi Vazirlar Mahkamasi qarori (156) None",
+     "Buyruq 3743: Notariuslar tomonidan nikoh shartnomalarini tasdiqlash tartibi toʻgʻrisidagi nizomni tasdiqlash haqida 47"
+    ]
+   }
+  },
+  "dr-09": {
+   "question": "Maqsadga erishilgandan keyin shaxsga doir maʼlumotlar necha kun ichida yoʻq qilinishi kerak?",
+   "ranks": {
+    "fts": 5,
+    "vector": null,
+    "hybrid": 7
+   },
+   "top3": {
+    "fts": [
+     "Buyruq 3477: Shaxsga doir maʼlumotlar bazasining mulkdori va (yoki) operatorining shaxsga doir maʼlumotlarga ishlov berilishini hamda ularning himoya qilinishi… 8",
+     "Shaxsga doir maʼlumotlar toʻgʻrisidagi Qonun (OʻRQ-547) 31",
+     "Shaxsga doir maʼlumotlar toʻgʻrisidagi Qonun (OʻRQ-547) 17"
+    ],
+    "vector": [
+     "Vazirlar Mahkamasi qarori 742: Shaxslarni kundalik hayotdagi faolligi va ishtirokini baholash uchun yoʻllash hamda baholashdan oʻtkazish tartibi toʻgʻrisidagi… None",
+     "Vazirlar Mahkamasi qarori 542: Tadbirkorlik subyektlari boʻlmagan ayrim yuridik shaxslarni tashkil etish va tugatishga doir normativ-huquqiy hujjatlarni tasdiq… None",
+     "Vazirlar Mahkamasi qarori 341: Davlat organlarida, davlat muassasalarida va davlat ishtirokidagi tashkilotlarda jismoniy va yuridik shaxslarning murojaatlari b… 31"
+    ],
+    "hybrid": [
+     "Buyruq 3477: Shaxsga doir maʼlumotlar bazasining mulkdori va (yoki) operatorining shaxsga doir maʼlumotlarga ishlov berilishini hamda ularning himoya qilinishi… 8",
+     "Buyruq 3478: Shaxsga doir maʼlumotlarga ishlov berishning namunaviy tartibini tasdiqlash haqida 5",
+     "Vazirlar Mahkamasi qarori 742: Shaxslarni kundalik hayotdagi faolligi va ishtirokini baholash uchun yoʻllash hamda baholashdan oʻtkazish tartibi toʻgʻrisidagi… None"
+    ]
+   }
+  },
+  "dr-10": {
+   "question": "Sogʻligʻim haqidagi maʼlumotga ishlov berish uchun roziligim qanday shaklda olinishi kerak?",
+   "ranks": {
+    "fts": 2,
+    "vector": 9,
+    "hybrid": 1
+   },
+   "top3": {
+    "fts": [
+     "Mehnat kodeksi 176",
+     "Buyruq 3478: Shaxsga doir maʼlumotlarga ishlov berishning namunaviy tartibini tasdiqlash haqida 9",
+     "Shaxsga doir maʼlumotlar toʻgʻrisidagi Qonun (OʻRQ-547) 19"
+    ],
+    "vector": [
+     "Fuqarolik holati dalolatnomalarini yozish tartiblarini yanada takomillashtirish chora-tadbirlari toʻgʻrisidagi Vazirlar Mahkamasi qarori (540) None",
+     "Vazirlar Mahkamasi qarori 742: Shaxslarni kundalik hayotdagi faolligi va ishtirokini baholash uchun yoʻllash hamda baholashdan oʻtkazish tartibi toʻgʻrisidagi… None",
+     "Fuqarolik holati dalolatnomalarini yozish tartiblarini yanada takomillashtirish chora-tadbirlari toʻgʻrisidagi Vazirlar Mahkamasi qarori (540) None"
+    ],
+    "hybrid": [
+     "Buyruq 3478: Shaxsga doir maʼlumotlarga ishlov berishning namunaviy tartibini tasdiqlash haqida 9",
+     "Mehnat kodeksi 176",
+     "Shaxsga doir maʼlumotlar toʻgʻrisidagi Qonun (OʻRQ-547) 23"
+    ]
+   }
+  },
+  "dr-11": {
+   "question": "Shaxsiy maʼlumotlarimni qayta ishlashga bergan roziligimni qaytarib olsam boʻladimi?",
+   "ranks": {
+    "fts": 3,
+    "vector": null,
+    "hybrid": 4
+   },
+   "top3": {
+    "fts": [
+     "Shaxsga doir maʼlumotlar toʻgʻrisidagi Qonun (OʻRQ-547) 22",
+     "Shaxsga doir maʼlumotlar toʻgʻrisidagi Qonun (OʻRQ-547) 30",
+     "Buyruq 3478: Shaxsga doir maʼlumotlarga ishlov berishning namunaviy tartibini tasdiqlash haqida 10"
+    ],
+    "vector": [
+     "Vazirlar Mahkamasi qarori 35: Ijtimoiy reyestrga kiritilgan oilalarni qoʻllab-quvvatlash tizimini takomillashtirishning qoʻshimcha chora-tadbirlari toʻgʻrisida None",
+     "Buyruq 2169: Budjet tashkilotlarida buxgalteriya hisobi toʻgʻrisidagi yoʻriqnomani tasdiqlash haqida None",
+     "Vazirlar Mahkamasi qarori 516: Idoralararo elektron hamkorlik tizimi va maʼlumotlarning axborot almashinuvini yanada takomillashtirish chora-tadbirlari toʻgʻri… None"
+    ],
+    "hybrid": [
+     "Shaxsga doir maʼlumotlar toʻgʻrisidagi Qonun (OʻRQ-547) 22",
+     "Buyruq 3478: Shaxsga doir maʼlumotlarga ishlov berishning namunaviy tartibini tasdiqlash haqida 25",
+     "Vazirlar Mahkamasi qarori 35: Ijtimoiy reyestrga kiritilgan oilalarni qoʻllab-quvvatlash tizimini takomillashtirishning qoʻshimcha chora-tadbirlari toʻgʻrisida None"
+    ]
+   }
+  },
+  "dr-12": {
+   "question": "Chet el fuqarosiga tez tibbiy yordam bepul koʻrsatiladimi?",
+   "ranks": {
+    "fts": 1,
+    "vector": null,
+    "hybrid": 2
+   },
+   "top3": {
+    "fts": [
+     "Buyruq 3355: Chet el fuqarolari va fuqaroligi boʻlmagan shaxslarga tibbiy yordam koʻrsatish tartibi toʻgʻrisidagi nizomni tasdiqlash haqida 3",
+     "Buyruq 3355: Chet el fuqarolari va fuqaroligi boʻlmagan shaxslarga tibbiy yordam koʻrsatish tartibi toʻgʻrisidagi nizomni tasdiqlash haqida 1",
+     "Buyruq 3355: Chet el fuqarolari va fuqaroligi boʻlmagan shaxslarga tibbiy yordam koʻrsatish tartibi toʻgʻrisidagi nizomni tasdiqlash haqida 5"
+    ],
+    "vector": [
+     "Aholiga tez tibbiy yordam koʻrsatish tizimini takomillashtirish toʻgʻrisidagi Prezident qarori (PQ-283) None",
+     "Prezident qarori PQ-2838: Shoshilinch tibbiy yordam xizmatining faoliyatini tashkil etishni yanada takomillashtirish va moddiy-texnika bazasini mustahkamlash c… None",
+     "Prezident qarori PQ-3039: Toshkent shahri aholisiga birlamchi tibbiy-sanitariya yordami koʻrsatishni boshqarish tizimini yanada takomillashtirish hamda uning s… 1"
+    ],
+    "hybrid": [
+     "Buyruq 3355: Chet el fuqarolari va fuqaroligi boʻlmagan shaxslarga tibbiy yordam koʻrsatish tartibi toʻgʻrisidagi nizomni tasdiqlash haqida 1",
+     "Buyruq 3355: Chet el fuqarolari va fuqaroligi boʻlmagan shaxslarga tibbiy yordam koʻrsatish tartibi toʻgʻrisidagi nizomni tasdiqlash haqida 3",
+     "Buyruq 3355: Chet el fuqarolari va fuqaroligi boʻlmagan shaxslarga tibbiy yordam koʻrsatish tartibi toʻgʻrisidagi nizomni tasdiqlash haqida 5"
+    ]
+   }
+  },
+  "dr-13": {
+   "question": "Xorijlik bemor klinikada davolanish uchun dollarda toʻlay oladimi?",
+   "ranks": {
+    "fts": 2,
+    "vector": 9,
+    "hybrid": 1
+   },
+   "top3": {
+    "fts": [
+     "Vazirlar Mahkamasi qarori 892: Onkologik xizmatni yanada rivojlantirish va onkologik kasalliklarning kechki bosqichlarini boshidan oʻtkazayotgan bemorlarga tib… None",
+     "Buyruq 3355: Chet el fuqarolari va fuqaroligi boʻlmagan shaxslarga tibbiy yordam koʻrsatish tartibi toʻgʻrisidagi nizomni tasdiqlash haqida 7",
+     "Hujjat 1692: Oʻzbekiston Respublikasi hududida chet el valyutasidagi qimmatli qogʻozlar muomalasi, rezidentlar tomonidan chet el valyutasidagi qimmatli qogʻozl… 5"
+    ],
+    "vector": [
+     "Prezident qarori PQ-242: Islom taraqqiyot banki ishtirokidagi “Oʻzbekiston Respublikasi onkologiya muassasalarini modernizatsiya qilish (II bosqich)” loyihasin… None",
+     "Prezident farmoni PF-6195: Keksalar va nogironligi boʻlgan shaxslarni ijtimoiy qoʻllab-quvvatlash, Ijtimoiy qoʻllab-quvvatlash markazlari va “Gʻamxoʻrlik” mark… None",
+     "Prezident qarori PQ-252: Koreya eksport-import banki bilan hamkorlikda “Hududiy tibbiyot muassasalarini tibbiy asbob-uskunalar bilan jihozlash” loyihasini amal… None"
+    ],
+    "hybrid": [
+     "Buyruq 3355: Chet el fuqarolari va fuqaroligi boʻlmagan shaxslarga tibbiy yordam koʻrsatish tartibi toʻgʻrisidagi nizomni tasdiqlash haqida 7",
+     "Buyruq 1862: Oʻzbekiston Respublikasi taʼlim muassasalariga chet el fuqarolarini oʻqishga qabul qilish oldidan tibbiy koʻrikdan oʻtkazish haqidagi nizomni tasd… 3",
+     "Buyruq 3355: Chet el fuqarolari va fuqaroligi boʻlmagan shaxslarga tibbiy yordam koʻrsatish tartibi toʻgʻrisidagi nizomni tasdiqlash haqida 6"
+    ]
+   }
+  },
+  "dr-14": {
+   "question": "Davlat uy-joy fondidagi kvartirani ijaraga olish shartnomasi necha yilga tuziladi?",
+   "ranks": {
+    "fts": 1,
+    "vector": 9,
+    "hybrid": 1
+   },
+   "top3": {
+    "fts": [
+     "Vazirlar Mahkamasi qarori 170: Davlat uy-joy fondidagi turar joylarni taqsimlash va fuqarolarga ijara shartnomasi shartlari asosida berishni tartibga solishga… 5",
+     "Uy-joy kodeksi 36",
+     "Vazirlar Mahkamasi qarori 170: Davlat uy-joy fondidagi turar joylarni taqsimlash va fuqarolarga ijara shartnomasi shartlari asosida berishni tartibga solishga… 29"
+    ],
+    "vector": [
+     "Koʻp kvartirali uy-joylarni boshqarish tizimini yanada takomillashtirish toʻgʻrisidagi Prezident qarori (PQ-5152) None",
+     "Vazirlar Mahkamasi qarori 656: Yetim bolalar va ota-ona qaramogʻidan mahrum boʻlgan bolalarni ijtimoiy qoʻllab-quvvatlashga doir qoʻshimcha chora-tadbirlar toʻ… None",
+     "Vazirlar Mahkamasi qarori 182: Uy-joy sotib olish uchun fuqarolarga subsidiya toʻlash tartibi toʻgʻrisidagi nizomni tasdiqlash haqida None"
+    ],
+    "hybrid": [
+     "Vazirlar Mahkamasi qarori 170: Davlat uy-joy fondidagi turar joylarni taqsimlash va fuqarolarga ijara shartnomasi shartlari asosida berishni tartibga solishga… 5",
+     "Uy-joy kodeksi 36",
+     "Vazirlar Mahkamasi qarori 170: Davlat uy-joy fondidagi turar joylarni taqsimlash va fuqarolarga ijara shartnomasi shartlari asosida berishni tartibga solishga… 26"
+    ]
+   }
+  },
+  "dr-15": {
+   "question": "Toshkentda davlat uyi uchun ijara haqi qanday hisoblanadi?",
+   "ranks": {
+    "fts": 1,
+    "vector": null,
+    "hybrid": 5
+   },
+   "top3": {
+    "fts": [
+     "Vazirlar Mahkamasi qarori 170: Davlat uy-joy fondidagi turar joylarni taqsimlash va fuqarolarga ijara shartnomasi shartlari asosida berishni tartibga solishga… 21",
+     "Vazirlar Mahkamasi qarori 700: Oʻzbekiston Respublikasi davlat bojxona xizmati organlarining shaxsiy tarkibi hamda ularning oila aʼzolarini ijtimoiy himoya qil… 2",
+     "Vazirlar Mahkamasi qarori 312: Sudyalarga, sud organlari xodimlariga, Oʻzbekiston Respublikasi Hisob palatasi, prokuratura organlari, Oʻzbekiston Respublikasi… 2"
+    ],
+    "vector": [
+     "Soliq toʻlovchilarga ayrim interaktiv davlat xizmatlarini koʻrsatish boʻyicha maʼmuriy reglamentlarni tasdiqlash toʻgʻrisidagi Vazirlar Mahkamasi qarori (150) None",
+     "Vazirlar Mahkamasi qarori 737: Uy-joyga muhtoj xotin-qizlarni uy-joy bilan taʼminlash hamda Toshkent shahrida boshpanasiz, ogʻir turmush sharoitiga tushib qolg… 2",
+     "Vazirlar Mahkamasi qarori 737: Uy-joyga muhtoj xotin-qizlarni uy-joy bilan taʼminlash hamda Toshkent shahrida boshpanasiz, ogʻir turmush sharoitiga tushib qolg… 1"
+    ],
+    "hybrid": [
+     "Vazirlar Mahkamasi qarori 737: Uy-joyga muhtoj xotin-qizlarni uy-joy bilan taʼminlash hamda Toshkent shahrida boshpanasiz, ogʻir turmush sharoitiga tushib qolg… 2",
+     "Vazirlar Mahkamasi qarori 737: Uy-joyga muhtoj xotin-qizlarni uy-joy bilan taʼminlash hamda Toshkent shahrida boshpanasiz, ogʻir turmush sharoitiga tushib qolg… 1",
+     "Vazirlar Mahkamasi qarori 441: Suv fondi yer uchastkalarini tadbirkorlik subyektlariga “E-auksion” elektron savdo platformasi orqali ijaraga berish tartibi toʻ… None"
+    ]
+   }
+  },
+  "dr-16": {
+   "question": "Davlatdan ijaraga olingan uyni garovga qoʻysa boʻladimi?",
+   "ranks": {
+    "fts": 10,
+    "vector": null,
+    "hybrid": null
+   },
+   "top3": {
+    "fts": [
+     "Vazirlar Mahkamasi qarori 295: Paxta va bugʻdoy yetishtiruvchi qishloq xoʻjaligi subyektlarini qoʻllab-quvvatlash mexanizmlarini yanada kengaytirish chora-tadb… 15⁴",
+     "Vazirlar Mahkamasi qarori 613: Qishloq xoʻjaligiga moʻljallangan yer uchastkalariga ijara huquqini kredit taʼminoti sifatida garovga qoʻyish tartibi toʻgʻrisid… 2",
+     "Vazirlar Mahkamasi qarori 613: Qishloq xoʻjaligiga moʻljallangan yer uchastkalariga ijara huquqini kredit taʼminoti sifatida garovga qoʻyish tartibi toʻgʻrisid… 15⁴"
+    ],
+    "vector": [
+     "Vazirlar Mahkamasi qarori 742: Davlat foydasiga voz kechish bojxona rejimiga joylashtirilgan tovarlarni davlat mulkini boshqarish boʻyicha vakolatli organga to… None",
+     "Vazirlar Mahkamasi qarori 103: Ariza beruvchi-uy quruvchining 2017-2021-yillarda qishloq joylarda yangilangan namunaviy loyihalar boʻyicha arzon uy-joylar quri… None",
+     "Ichki ishlar organlari uchun professional kadrlarni tayyorlash tizimini transformatsiya qilish chora-tadbirlari toʻgʻrisidagi Prezident qarori (PQ-303) None"
+    ],
+    "hybrid": [
+     "Vazirlar Mahkamasi qarori 295: Paxta va bugʻdoy yetishtiruvchi qishloq xoʻjaligi subyektlarini qoʻllab-quvvatlash mexanizmlarini yanada kengaytirish chora-tadb… 15⁴",
+     "Vazirlar Mahkamasi qarori 613: Qishloq xoʻjaligiga moʻljallangan yer uchastkalariga ijara huquqini kredit taʼminoti sifatida garovga qoʻyish tartibi toʻgʻrisid… 2",
+     "Vazirlar Mahkamasi qarori 613: Qishloq xoʻjaligiga moʻljallangan yer uchastkalariga ijara huquqini kredit taʼminoti sifatida garovga qoʻyish tartibi toʻgʻrisid… 15⁴"
+    ]
+   }
+  },
+  "dr-17": {
+   "question": "Magistraturaga kirish uchun ingliz tili sertifikati qaysi darajada boʻlishi kerak?",
+   "ranks": {
+    "fts": null,
+    "vector": null,
+    "hybrid": null
+   },
+   "top3": {
+    "fts": [
+     "Hujjat 3515: Xorijiy tillar va umumtaʼlim fanlarini bilish darajasini belgilovchi milliy va xalqaro tan olingan sertifikatlar roʻyxatini tasdiqlash toʻgʻrisida None",
+     "Hujjat 3515: Xorijiy tillar va umumtaʼlim fanlarini bilish darajasini belgilovchi milliy va xalqaro tan olingan sertifikatlar roʻyxatini tasdiqlash toʻgʻrisida None",
+     "Hujjat 3515: Xorijiy tillar va umumtaʼlim fanlarini bilish darajasini belgilovchi milliy va xalqaro tan olingan sertifikatlar roʻyxatini tasdiqlash toʻgʻrisida None"
+    ],
+    "vector": [
+     "Prezident farmoni PF-77: Iqtidorli mutaxassislarning xorijda taʼlim olishini qoʻllab-quvvatlash, ularda kasbiy koʻnikmalarini rivojlantirish va ragʻbatlantiris… 12",
+     "Vazirlar Mahkamasi qarori 513: Toshkent davlat yuridik universiteti magistraturasiga oʻqishga qabul qilish tartibini takomillashtirish chora-tadbirlari toʻgʻri… None",
+     "Vazirlar Mahkamasi qarori 468: Oliy taʼlim muassasalariga oʻqishga kirish uchun hujjatlarni qabul qilish boʻyicha davlat xizmatlarini koʻrsatishning maʼmuriy r… None"
+    ],
+    "hybrid": [
+     "Hujjat 3515: Xorijiy tillar va umumtaʼlim fanlarini bilish darajasini belgilovchi milliy va xalqaro tan olingan sertifikatlar roʻyxatini tasdiqlash toʻgʻrisida None",
+     "Hujjat 3515: Xorijiy tillar va umumtaʼlim fanlarini bilish darajasini belgilovchi milliy va xalqaro tan olingan sertifikatlar roʻyxatini tasdiqlash toʻgʻrisida None",
+     "Hujjat 3515: Xorijiy tillar va umumtaʼlim fanlarini bilish darajasini belgilovchi milliy va xalqaro tan olingan sertifikatlar roʻyxatini tasdiqlash toʻgʻrisida None"
+    ]
+   }
+  },
+  "dr-18": {
+   "question": "Oliygohga qabulda avval test soʻng tanlov tamoyili qachondan qoʻllanadi?",
+   "ranks": {
+    "fts": 1,
+    "vector": null,
+    "hybrid": 2
+   },
+   "top3": {
+    "fts": [
+     "Oliy taʼlim tashkilotlariga oʻqishga qabul qilish va davlat buyurtmasini joylashtirish tizimini takomillashtirish toʻgʻrisidagi Prezident farmoni (PF-81) 5",
+     "2024/2025 oʻquv yili uchun davlat oliy taʼlim muassasalariga oʻqishga qabul qilishning davlat buyurtmasi parametrlari toʻgʻrisidagi Farmoyish (F-36) 1",
+     "Kasbiy taʼlim tizimini tartibga soluvchi normativ-huquqiy hujjatlarni tasdiqlash toʻgʻrisidagi Vazirlar Mahkamasi qarori (526) 23"
+    ],
+    "vector": [
+     "Vazirlar Mahkamasi qarori 468: Oliy taʼlim muassasalariga oʻqishga kirish uchun hujjatlarni qabul qilish boʻyicha davlat xizmatlarini koʻrsatishning maʼmuriy r… None",
+     "Vazirlar Mahkamasi qarori 322: Mutaxassisligi boʻyicha kamida besh yil mehnat stajiga ega boʻlgan xotin-qizlarni davlat oliy taʼlim muassasalariga oʻqishga qab… None",
+     "Buyruq 3748: Oliy taʼlimdan keyingi taʼlimni amalga oshiruvchi oliy taʼlim va ilmiy tashkilotlarni kompleks hamda maxsus davlat akkreditatsiyasidan oʻtkazishda… None"
+    ],
+    "hybrid": [
+     "Vazirlar Mahkamasi qarori 468: Oliy taʼlim muassasalariga oʻqishga kirish uchun hujjatlarni qabul qilish boʻyicha davlat xizmatlarini koʻrsatishning maʼmuriy r… None",
+     "Oliy taʼlim tashkilotlariga oʻqishga qabul qilish va davlat buyurtmasini joylashtirish tizimini takomillashtirish toʻgʻrisidagi Prezident farmoni (PF-81) 5",
+     "2024/2025 oʻquv yili uchun davlat oliy taʼlim muassasalariga oʻqishga qabul qilishning davlat buyurtmasi parametrlari toʻgʻrisidagi Farmoyish (F-36) 1"
+    ]
+   }
+  },
+  "dr-19": {
+   "question": "Kam taʼminlangan oila bolalar nafaqasiga onlayn ariza bera oladimi?",
+   "ranks": {
+    "fts": 2,
+    "vector": null,
+    "hybrid": 3
+   },
+   "top3": {
+    "fts": [
+     "Vazirlar Mahkamasi qarori 596: “Ijtimoiy himoya yagona reyestri” axborot tizimi orqali kam taʼminlangan oilalarni aniqlash va ularga ijtimoiy nafaqalar tayinla… 4",
+     "Vazirlar Mahkamasi qarori 596: “Ijtimoiy himoya yagona reyestri” axborot tizimi orqali kam taʼminlangan oilalarni aniqlash va ularga ijtimoiy nafaqalar tayinla… 1",
+     "Prezident farmoni PF-27: 2022-2026-yillarga moʻljallangan Yangi Oʻzbekistonning taraqqiyot strategiyasini “Insonga eʼtibor va sifatli taʼlim yili”da amalga osh… None"
+    ],
+    "vector": [
+     "Vazirlar Mahkamasi qarori 539: Aholining ijtimoiy himoya olish huquqlarini taʼminlash hamda davlat ijtimoiy yordami va xizmatlarini koʻrsatishga doir qoʻshimch… None",
+     "Vazirlar Mahkamasi qarori 656: Yetim bolalar va ota-ona qaramogʻidan mahrum boʻlgan bolalarni ijtimoiy qoʻllab-quvvatlashga doir qoʻshimcha chora-tadbirlar toʻ… None",
+     "Prezident qarori PQ-5216: Yetim bolalar va ota-ona qaramogʻidan mahrum boʻlgan bolalarni davlat tomonidan qoʻllab-quvvatlashning yangi tizimini joriy etish cho… 14"
+    ],
+    "hybrid": [
+     "Vazirlar Mahkamasi qarori 596: “Ijtimoiy himoya yagona reyestri” axborot tizimi orqali kam taʼminlangan oilalarni aniqlash va ularga ijtimoiy nafaqalar tayinla… 4",
+     "Vazirlar Mahkamasi qarori 539: Aholining ijtimoiy himoya olish huquqlarini taʼminlash hamda davlat ijtimoiy yordami va xizmatlarini koʻrsatishga doir qoʻshimch… None",
+     "Vazirlar Mahkamasi qarori 596: “Ijtimoiy himoya yagona reyestri” axborot tizimi orqali kam taʼminlangan oilalarni aniqlash va ularga ijtimoiy nafaqalar tayinla… 1"
+    ]
+   }
+  },
+  "dr-20": {
+   "question": "Rossiyada hujjatsiz va pulsiz qolib ketgan mehnat migrantiga davlat yordam beradimi?",
+   "ranks": {
+    "fts": 3,
+    "vector": null,
+    "hybrid": null
+   },
+   "top3": {
+    "fts": [
+     "Prezident qarori PQ-5205: Xorijga tashkillashtirilgan mehnat migratsiyasiga ketayotgan fuqarolarni ragʻbatlantirish boʻyicha qoʻshimcha chora-tadbirlar toʻgʻri… 3",
+     "Rostov-Don shahrida (Rossiya Federatsiyasi) Oʻzbekiston Respublikasining Bosh konsulxonasini ochish toʻgʻrisidagi Prezident qarori (PQ-3959) None",
+     "Xavfsiz, tartibli va qonuniy mehnat migratsiyasi tizimini joriy qilish chora-tadbirlari toʻgʻrisidagi Prezident qarori (PQ-4829) 14"
+    ],
+    "vector": [
+     "Buyruq 3341: Davlat maqsadli jamgʻarmalarining xarajatlar smetasi hamda moliyaviy hisobotlarini tuzish, tasdiqlash va taqdim etish tartibi toʻgʻrisidagi nizomn… None",
+     "Vazirlar Mahkamasi qarori 600: “Favqulodda holat toʻgʻrisida”gi Oʻzbekiston Respublikasi Konstitutsiyaviy Qonunini amalga oshirish chora-tadbirlari toʻgʻrisida None",
+     "Soliq toʻlovchilarga ayrim interaktiv davlat xizmatlarini koʻrsatish boʻyicha maʼmuriy reglamentlarni tasdiqlash toʻgʻrisidagi Vazirlar Mahkamasi qarori (150) None"
+    ],
+    "hybrid": [
+     "Buyruq 3341: Davlat maqsadli jamgʻarmalarining xarajatlar smetasi hamda moliyaviy hisobotlarini tuzish, tasdiqlash va taqdim etish tartibi toʻgʻrisidagi nizomn… None",
+     "Prezident qarori PQ-5205: Xorijga tashkillashtirilgan mehnat migratsiyasiga ketayotgan fuqarolarni ragʻbatlantirish boʻyicha qoʻshimcha chora-tadbirlar toʻgʻri… 3",
+     "Vazirlar Mahkamasi qarori 252: Oʻzbekiston Respublikasi fuqarolarini xorijda tashkillashtirilgan tartibda ishga joylashtirish tizimini yanada takomillashtirish… None"
+    ]
+   }
+  },
+  "dr-21": {
+   "question": "Xorijdagi mehnat migrantlari muammolari boʻyicha qaysi qisqa raqamga qoʻngʻiroq qilinadi?",
+   "ranks": {
+    "fts": 6,
+    "vector": null,
+    "hybrid": null
+   },
+   "top3": {
+    "fts": [
+     "Prezident qarori PQ-149: Xorijda vaqtincha mehnat faoliyatini amalga oshirayotgan Oʻzbekiston Respublikasi fuqarolarini va ularning oila aʼzolarini qoʻllab-quv… None",
+     "Xorijda mehnat faoliyatini amalga oshirish jarayonlarini tartibga solish boʻyicha qoʻshimcha chora-tadbirlar toʻgʻrisidagi Prezident qarori (PQ-367) None",
+     "Prezident farmoni PF-59: Mehnat migratsiyasi jarayonlarini takomillashtirish hamda xorijda vaqtincha mehnat faoliyatini amalga oshirayotgan shaxslarni qoʻllab-… None"
+    ],
+    "vector": [
+     "Prezident qarori PQ-5205: Xorijga tashkillashtirilgan mehnat migratsiyasiga ketayotgan fuqarolarni ragʻbatlantirish boʻyicha qoʻshimcha chora-tadbirlar toʻgʻri… 3",
+     "Vazirlar Mahkamasi qarori 965: Ijtimoiy muhofazaga muhtoj, ish topishda qiynalayotgan va mehnat bozorida teng shartlarda raqobatlasha olmaydigan shaxslarni ish… None",
+     "Vazirlar Mahkamasi qarori 965: Ijtimoiy muhofazaga muhtoj, ish topishda qiynalayotgan va mehnat bozorida teng shartlarda raqobatlasha olmaydigan shaxslarni ish… None"
+    ],
+    "hybrid": [
+     "Prezident farmoni PF-59: Mehnat migratsiyasi jarayonlarini takomillashtirish hamda xorijda vaqtincha mehnat faoliyatini amalga oshirayotgan shaxslarni qoʻllab-… None",
+     "Prezident qarori PQ-149: Xorijda vaqtincha mehnat faoliyatini amalga oshirayotgan Oʻzbekiston Respublikasi fuqarolarini va ularning oila aʼzolarini qoʻllab-quv… None",
+     "Xorijda mehnat faoliyatini amalga oshirish jarayonlarini tartibga solish boʻyicha qoʻshimcha chora-tadbirlar toʻgʻrisidagi Prezident qarori (PQ-367) None"
+    ]
+   }
+  },
+  "dr-22": {
+   "question": "Chet ellik mehmonimning vizasini uzaytirish uchun qachongacha murojaat qilish kerak?",
+   "ranks": {
+    "fts": 4,
+    "vector": null,
+    "hybrid": 3
+   },
+   "top3": {
+    "fts": [
+     "Vazirlar Mahkamasi qarori 417: Oʻzbekiston Respublikasida vaqtincha boʻlib turgan chet el fuqarolari va fuqaroligi boʻlmagan shaxslarning viza muddatini uzayti… None",
+     "Vazirlar Mahkamasi qarori 408: Chet el fuqarolari va fuqaroligi boʻlmagan shaxslarning Oʻzbekiston Respublikasiga kelishlari, ketishlari, bu yerda boʻlishlari… 15²",
+     "Vazirlar Mahkamasi qarori 417: Oʻzbekiston Respublikasida vaqtincha boʻlib turgan chet el fuqarolari va fuqaroligi boʻlmagan shaxslarning viza muddatini uzayti… 15²"
+    ],
+    "vector": [
+     "Vazirlar Mahkamasi qarori 417: Oʻzbekiston Respublikasida vaqtincha boʻlib turgan chet el fuqarolari va fuqaroligi boʻlmagan shaxslarning viza muddatini uzayti… 15²³",
+     "Prezident qarori PQ-332: Investitsiyaviy va infratuzilmaviy loyihalarning loyihaoldi, davlat xaridiga doir tender boʻyicha xarid qilish hujjatlari va texnik to… None",
+     "Vazirlar Mahkamasi qarori 742: Shaxslarni kundalik hayotdagi faolligi va ishtirokini baholash uchun yoʻllash hamda baholashdan oʻtkazish tartibi toʻgʻrisidagi… None"
+    ],
+    "hybrid": [
+     "Vazirlar Mahkamasi qarori 417: Oʻzbekiston Respublikasida vaqtincha boʻlib turgan chet el fuqarolari va fuqaroligi boʻlmagan shaxslarning viza muddatini uzayti… None",
+     "Vazirlar Mahkamasi qarori 417: Oʻzbekiston Respublikasida vaqtincha boʻlib turgan chet el fuqarolari va fuqaroligi boʻlmagan shaxslarning viza muddatini uzayti… 15²",
+     "Vazirlar Mahkamasi qarori 417: Oʻzbekiston Respublikasida vaqtincha boʻlib turgan chet el fuqarolari va fuqaroligi boʻlmagan shaxslarning viza muddatini uzayti… 4"
+    ]
+   }
+  },
+  "dr-23": {
+   "question": "viza muddatini uzaytirish arizasi necha kunda korib chiqiladi",
+   "ranks": {
+    "fts": 2,
+    "vector": 8,
+    "hybrid": 3
+   },
+   "top3": {
+    "fts": [
+     "Vazirlar Mahkamasi qarori 408: Chet el fuqarolari va fuqaroligi boʻlmagan shaxslarning Oʻzbekiston Respublikasiga kelishlari, ketishlari, bu yerda boʻlishlari… 15²¹",
+     "Vazirlar Mahkamasi qarori 417: Oʻzbekiston Respublikasida vaqtincha boʻlib turgan chet el fuqarolari va fuqaroligi boʻlmagan shaxslarning viza muddatini uzayti… 15²¹",
+     "Vazirlar Mahkamasi qarori 417: Oʻzbekiston Respublikasida vaqtincha boʻlib turgan chet el fuqarolari va fuqaroligi boʻlmagan shaxslarning viza muddatini uzayti… None"
+    ],
+    "vector": [
+     "Vazirlar Mahkamasi qarori 417: Oʻzbekiston Respublikasida vaqtincha boʻlib turgan chet el fuqarolari va fuqaroligi boʻlmagan shaxslarning viza muddatini uzayti… 15²³",
+     "Vazirlar Mahkamasi qarori 417: Oʻzbekiston Respublikasida vaqtincha boʻlib turgan chet el fuqarolari va fuqaroligi boʻlmagan shaxslarning viza muddatini uzayti… None",
+     "Vazirlar Mahkamasi qarori 417: Oʻzbekiston Respublikasida vaqtincha boʻlib turgan chet el fuqarolari va fuqaroligi boʻlmagan shaxslarning viza muddatini uzayti… 10"
+    ],
+    "hybrid": [
+     "Vazirlar Mahkamasi qarori 417: Oʻzbekiston Respublikasida vaqtincha boʻlib turgan chet el fuqarolari va fuqaroligi boʻlmagan shaxslarning viza muddatini uzayti… None",
+     "Vazirlar Mahkamasi qarori 417: Oʻzbekiston Respublikasida vaqtincha boʻlib turgan chet el fuqarolari va fuqaroligi boʻlmagan shaxslarning viza muddatini uzayti… 10",
+     "Vazirlar Mahkamasi qarori 417: Oʻzbekiston Respublikasida vaqtincha boʻlib turgan chet el fuqarolari va fuqaroligi boʻlmagan shaxslarning viza muddatini uzayti… 15²¹"
+    ]
+   }
+  },
+  "dr-24": {
+   "question": "Yangi tugʻilgan bolaga ID-karta necha yilga beriladi?",
+   "ranks": {
+    "fts": 5,
+    "vector": null,
+    "hybrid": 5
+   },
+   "top3": {
+    "fts": [
+     "Vazirlar Mahkamasi qarori 539: Odam savdosidan jabrlangan shaxslarga ijtimoiy xizmatlar koʻrsatish tizimini samarali yoʻlga qoʻyish chora-tadbirlari toʻgʻrisida 9",
+     "Oʻzbekiston Respublikasida identifikatsiya ID-kartalarni joriy etish chora-tadbirlari toʻgʻrisidagi Prezident farmoni (PF-6065) 9",
+     "Oʻzbekiston Respublikasida identifikatsiya ID-kartalarni joriy etish chora-tadbirlari toʻgʻrisidagi Prezident farmoni (PF-6065) 10"
+    ],
+    "vector": [
+     "Vazirlar Mahkamasi qarori 119: Ijtimoiy himoyaga muhtoj ayrim toifadagi shaxslarga nafaqa va moddiy yordamlarni tayinlash hamda toʻlash tartibi toʻgʻrisidagi n… None",
+     "Vazirlar Mahkamasi qarori 318: Oʻzgalarning parvarishiga muhtoj boʻlgan ayrim shaxslarga qarab turishning haqiqiy holatini tekshirish dalolatnomasini rasmiylas… None",
+     "Vazirlar Mahkamasi qarori 119: Ijtimoiy himoyaga muhtoj ayrim toifadagi shaxslarga nafaqa va moddiy yordamlarni tayinlash hamda toʻlash tartibi toʻgʻrisidagi n… None"
+    ],
+    "hybrid": [
+     "Oʻzbekiston Respublikasida identifikatsiya ID-kartalarni joriy etish chora-tadbirlari toʻgʻrisidagi Prezident farmoni (PF-6065) 10",
+     "Oʻzbekiston Respublikasida identifikatsiya ID-kartalarni joriy etish chora-tadbirlari toʻgʻrisidagi Prezident farmoni (PF-6065) 3",
+     "Oʻzbekiston Respublikasida identifikatsiya ID-kartalarni joriy etish chora-tadbirlari toʻgʻrisidagi Prezident farmoni (PF-6065) 12"
+    ]
+   }
+  },
+  "dr-25": {
+   "question": "Familiyam oʻzgardi, ID-kartani qancha muddat ichida almashtirishim kerak?",
+   "ranks": {
+    "fts": 8,
+    "vector": null,
+    "hybrid": null
+   },
+   "top3": {
+    "fts": [
+     "Oʻzbekiston Respublikasida identifikatsiya ID-kartalarni joriy etish chora-tadbirlari toʻgʻrisidagi Prezident farmoni (PF-6065) None",
+     "Fuqarolikni rasmiylashtirish sohasida ayrim davlat xizmatlari koʻrsatishning maʼmuriy reglamentlarini tasdiqlash toʻgʻrisidagi Vazirlar Mahkamasi qarori (8) None",
+     "Oʻzbekiston Respublikasida identifikatsiya ID-kartalarni joriy etish chora-tadbirlari toʻgʻrisidagi Prezident farmoni (PF-6065) None"
+    ],
+    "vector": [
+     "Buyruq 2547: Fuqarolik holati dalolatnomalarini yozish organlarida ish yuritish tartibi toʻgʻrisidagi yoʻriqnomani tasdiqlash haqida None",
+     "Vazirlar Mahkamasi qarori 418: Koʻmir sanoatida bozor mexanizmlari joriy etilishi munosabati bilan ijtimoiy reyestrga kiritilgan oilalarni qoʻllab-quvvatlash c… None",
+     "Hujjat 2174: Tergovga qadar tekshiruv, surishtiruv, dastlabki tergov va sud muhokamasi davomida ashyoviy dalillar, moddiy qimmatliklar va boshqa mol-mulkni oli… None"
+    ],
+    "hybrid": [
+     "Prezident qarori PQ-265: Aholiga koʻrsatilayotgan davlat xizmatlarini takomillashtirish hamda fuqarolar uchun qoʻshimcha qulayliklar yaratish chora-tadbirlari… None",
+     "Buyruq 2547: Fuqarolik holati dalolatnomalarini yozish organlarida ish yuritish tartibi toʻgʻrisidagi yoʻriqnomani tasdiqlash haqida None",
+     "Vazirlar Mahkamasi qarori 418: Koʻmir sanoatida bozor mexanizmlari joriy etilishi munosabati bilan ijtimoiy reyestrga kiritilgan oilalarni qoʻllab-quvvatlash c… None"
+    ]
+   }
+  },
+  "dr-26": {
+   "question": "Zagran pasport 25 yoshgacha boʻlganlarga necha yilga beriladi?",
+   "ranks": {
+    "fts": 3,
+    "vector": 5,
+    "hybrid": 1
+   },
+   "top3": {
+    "fts": [
+     "Prezident qarori PQ-282: Oʻzbekiston Respublikasi fuqarolariga xorijga chiqish biometrik pasportini berishga doir davlat xizmati koʻrsatish tartibini yanada so… 4",
+     "Vazirlar Mahkamasi qarori 49: Konsullik roʻyxatida turuvchi Oʻzbekiston Respublikasi fuqarolariga Oʻzbekiston Respublikasining xorijdagi konsullik muassasalari… 10",
+     "Prezident qarori PQ-4079: Oʻzbekiston Respublikasi fuqarosining xorijga chiqish biometrik pasportini rasmiylashtirish va berish tizimini yaratish hamda Oʻzbeki… 7"
+    ],
+    "vector": [
+     "Vazirlar Mahkamasi qarori 318: Oʻzgalarning parvarishiga muhtoj boʻlgan ayrim shaxslarga qarab turishning haqiqiy holatini tekshirish dalolatnomasini rasmiylas… None",
+     "Vazirlar Mahkamasi qarori 224: Oʻzbekiston Respublikasi fuqarolarini yashash va turgan joyi boʻyicha roʻyxatdan oʻtkazish hamda roʻyxatdan oʻtkazilganligini be… None",
+     "Vazirlar Mahkamasi qarori 460: Ish beruvchilarga ular tomonidan 25 yoshdan oshmagan xodimlar uchun toʻlangan ijtimoiy soliq summasini Davlat budjetidan toʻliq… None"
+    ],
+    "hybrid": [
+     "Prezident qarori PQ-4079: Oʻzbekiston Respublikasi fuqarosining xorijga chiqish biometrik pasportini rasmiylashtirish va berish tizimini yaratish hamda Oʻzbeki… 7",
+     "Prezident qarori PQ-282: Oʻzbekiston Respublikasi fuqarolariga xorijga chiqish biometrik pasportini berishga doir davlat xizmati koʻrsatish tartibini yanada so… 4",
+     "Prezident qarori PQ-282: Oʻzbekiston Respublikasi fuqarolariga xorijga chiqish biometrik pasportini berishga doir davlat xizmati koʻrsatish tartibini yanada so… 31"
+    ]
+   }
+  },
+  "dr-27": {
+   "question": "Xorijga chiqish pasportini muddati tugamasdan oldin almashtirsa boʻladimi?",
+   "ranks": {
+    "fts": 8,
+    "vector": null,
+    "hybrid": null
+   },
+   "top3": {
+    "fts": [
+     "Vazirlar Mahkamasi qarori 49: Konsullik roʻyxatida turuvchi Oʻzbekiston Respublikasi fuqarolariga Oʻzbekiston Respublikasining xorijdagi konsullik muassasalari… 49",
+     "Vazirlar Mahkamasi qarori 49: Konsullik roʻyxatida turuvchi Oʻzbekiston Respublikasi fuqarolariga Oʻzbekiston Respublikasining xorijdagi konsullik muassasalari… 57",
+     "Vazirlar Mahkamasi qarori 49: Konsullik roʻyxatida turuvchi Oʻzbekiston Respublikasi fuqarolariga Oʻzbekiston Respublikasining xorijdagi konsullik muassasalari… 33"
+    ],
+    "vector": [
+     "Buyruq 3682: Xorijiy davlatlardan readmissiya qilingan Oʻzbekiston Respublikasi fuqarolariga istisno holatlarda xorijga chiqish biometrik pasportini rasmiylash… 8",
+     "Buyruq 3682: Xorijiy davlatlardan readmissiya qilingan Oʻzbekiston Respublikasi fuqarolariga istisno holatlarda xorijga chiqish biometrik pasportini rasmiylash… 4",
+     "Prezident qarori PQ-4079: Oʻzbekiston Respublikasi fuqarosining xorijga chiqish biometrik pasportini rasmiylashtirish va berish tizimini yaratish hamda Oʻzbeki… 57"
+    ],
+    "hybrid": [
+     "Prezident qarori PQ-4079: Oʻzbekiston Respublikasi fuqarosining xorijga chiqish biometrik pasportini rasmiylashtirish va berish tizimini yaratish hamda Oʻzbeki… 4¹",
+     "Prezident qarori PQ-282: Oʻzbekiston Respublikasi fuqarolariga xorijga chiqish biometrik pasportini berishga doir davlat xizmati koʻrsatish tartibini yanada so… 54",
+     "Prezident qarori PQ-282: Oʻzbekiston Respublikasi fuqarolariga xorijga chiqish biometrik pasportini berishga doir davlat xizmati koʻrsatish tartibini yanada so… 3"
+    ]
+   }
+  },
+  "dr-28": {
+   "question": "Armiyaga chaqirilgan yigitning xorijga chiqish pasportini olib qoʻyishadimi?",
+   "ranks": {
+    "fts": 2,
+    "vector": null,
+    "hybrid": 1
+   },
+   "top3": {
+    "fts": [
+     "Buyruq 3670: Probatsiya nazoratidagi shaxslarning xulq-atvori ustidan nazoratni amalga oshirish tartibi toʻgʻrisidagi yoʻriqnomani tasdiqlash haqida None",
+     "Prezident qarori PQ-4079: Oʻzbekiston Respublikasi fuqarosining xorijga chiqish biometrik pasportini rasmiylashtirish va berish tizimini yaratish hamda Oʻzbeki… 14",
+     "Prezident qarori PQ-4079: Oʻzbekiston Respublikasi fuqarosining xorijga chiqish biometrik pasportini rasmiylashtirish va berish tizimini yaratish hamda Oʻzbeki… 28"
+    ],
+    "vector": [
+     "Vazirlar Mahkamasi qarori 367: Roʻyxatga olinmagan qurolni va uning oʻq-dorilarini, oʻqotar qurolning asosiy qismlarini, portlovchi materiallarni va portlatish… None",
+     "Vazirlar Mahkamasi qarori 367: Roʻyxatga olinmagan qurolni va uning oʻq-dorilarini, oʻqotar qurolning asosiy qismlarini, portlovchi materiallarni va portlatish… None",
+     "Oʻzbekiston Respublikasida pasport tizimini takomillashtirishga doir qoʻshimcha chora-tadbirlar toʻgʻrisidagi Prezident farmoni (PF-4262) None"
+    ],
+    "hybrid": [
+     "Prezident qarori PQ-4079: Oʻzbekiston Respublikasi fuqarosining xorijga chiqish biometrik pasportini rasmiylashtirish va berish tizimini yaratish hamda Oʻzbeki… 14",
+     "Prezident qarori PQ-282: Oʻzbekiston Respublikasi fuqarolariga xorijga chiqish biometrik pasportini berishga doir davlat xizmati koʻrsatish tartibini yanada so… None",
+     "Prezident qarori PQ-4079: Oʻzbekiston Respublikasi fuqarosining xorijga chiqish biometrik pasportini rasmiylashtirish va berish tizimini yaratish hamda Oʻzbeki… None"
+    ]
+   }
+  },
+  "dr-29": {
+   "question": "Haydovchilik nazariy imtihonida savollarga javob berish uchun qancha vaqt beriladi?",
+   "ranks": {
+    "fts": 1,
+    "vector": null,
+    "hybrid": 5
+   },
+   "top3": {
+    "fts": [
+     "Vazirlar Mahkamasi qarori 272: Avtomototransport vositalarini boshqarish huquqini beruvchi haydovchilik guvohnomalarini olish uchun imtihonlarni oʻtkazish soha… 27",
+     "Vazirlar Mahkamasi qarori 272: Avtomototransport vositalarini boshqarish huquqini beruvchi haydovchilik guvohnomalarini olish uchun imtihonlarni oʻtkazish soha… 31",
+     "Vazirlar Mahkamasi qarori 272: Avtomototransport vositalarini boshqarish huquqini beruvchi haydovchilik guvohnomalarini olish uchun imtihonlarni oʻtkazish soha… 18"
+    ],
+    "vector": [
+     "Vazirlar Mahkamasi qarori 742: Shaxslarni kundalik hayotdagi faolligi va ishtirokini baholash uchun yoʻllash hamda baholashdan oʻtkazish tartibi toʻgʻrisidagi… None",
+     "Hujjat 3173: Toshkent davlat yuridik universitetining Ixtisoslashtirilgan filialida taʼlim oluvchilarning bilimini nazorat qilish tartibi va baholash mezonlari… None",
+     "Vazirlar Mahkamasi qarori 958: Oʻzbekiston Respublikasi Ichki ishlar vazirligi Akademiyasi bakalavriatining kunduzgi va masofaviy taʼlim shakllariga nomzodlarn… None"
+    ],
+    "hybrid": [
+     "Vazirlar Mahkamasi qarori 408: Avtomototransport vositalari va shahar elektr transporti vositalari haydovchilarini tayyorlash hamda qayta tayyorlash boʻyicha n… 31¹",
+     "Vazirlar Mahkamasi qarori 408: Avtomototransport vositalari va shahar elektr transporti vositalari haydovchilarini tayyorlash hamda qayta tayyorlash boʻyicha n… 27",
+     "Vazirlar Mahkamasi qarori 742: Shaxslarni kundalik hayotdagi faolligi va ishtirokini baholash uchun yoʻllash hamda baholashdan oʻtkazish tartibi toʻgʻrisidagi… None"
+    ]
+   }
+  }
+ },
+ "settings": {
+  "model": "e5-small-int8",
+  "stem": true,
+  "alt": "questions",
+  "questions": "eval/questions_decrees.yaml"
+ }
+}
