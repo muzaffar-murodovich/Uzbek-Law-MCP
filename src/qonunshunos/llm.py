@@ -10,6 +10,7 @@ unless the caller explicitly allows paid tokens (``allow_paid``).
 import json
 import logging
 import os
+import threading
 import time
 from datetime import UTC, datetime
 from pathlib import Path
@@ -66,12 +67,15 @@ class Ledger:
     def used(self, key_var: str, tier: str) -> int:
         return self._load().get(self.today(), {}).get(key_var, {}).get(tier, 0)
 
+    _lock = threading.Lock()  # parallel callers share one file: read-modify-write under a lock
+
     def add(self, key_var: str, tier: str, tokens: int) -> None:
-        data = self._load()
-        day = data.setdefault(self.today(), {}).setdefault(key_var, {})
-        day[tier] = day.get(tier, 0) + tokens
-        self.path.parent.mkdir(parents=True, exist_ok=True)
-        self.path.write_text(json.dumps(data, indent=1), encoding="utf-8")
+        with self._lock:
+            data = self._load()
+            day = data.setdefault(self.today(), {}).setdefault(key_var, {})
+            day[tier] = day.get(tier, 0) + tokens
+            self.path.parent.mkdir(parents=True, exist_ok=True)
+            self.path.write_text(json.dumps(data, indent=1), encoding="utf-8")
 
 
 class OpenAIChat:
@@ -87,6 +91,7 @@ class OpenAIChat:
         self.allow_paid = allow_paid  # past every free allowance, keep going on paid tokens
         self.ledger = Ledger()
         self.usage = {"prompt_tokens": 0, "completion_tokens": 0}
+        self._usage_lock = threading.Lock()
         self._http = httpx.Client(timeout=timeout)
 
     def _pick_key(self) -> tuple[str, str]:
@@ -118,8 +123,9 @@ class OpenAIChat:
             if response.status_code == 200:
                 data = response.json()
                 usage = data.get("usage", {})
-                for k in self.usage:
-                    self.usage[k] += usage.get(k, 0)
+                with self._usage_lock:
+                    for k in self.usage:
+                        self.usage[k] += usage.get(k, 0)
                 self.ledger.add(var, self.tier, usage.get("total_tokens", 0))
                 return json.loads(data["choices"][0]["message"]["content"])
             retryable = response.status_code == 429 or response.status_code >= 500
