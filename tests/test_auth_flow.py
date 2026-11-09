@@ -186,5 +186,7 @@ def test_public_pages(app):
             privacy = (await http.get("/maxfiylik")).text
             assert "12 oy" in privacy and "Germaniyada" in privacy and "15-moddasiga" in privacy
             assert "yuridik maslahat emas" in (await http.get("/shartlar")).text
+            robots = (await http.get("/robots.txt")).text
+            assert "Disallow: /mcp" in robots and "Disallow: /authorize" in robots
 
     anyio.run(scenario)

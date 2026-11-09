@@ -1,13 +1,59 @@
-"""Public pages: home (how to connect), privacy policy, terms of use."""
+"""Public pages: home (how to connect), privacy policy, terms of use, robots.txt."""
 
+import logging
+import time
+from collections.abc import Callable
+from contextlib import AbstractContextManager
+from dataclasses import dataclass
+from datetime import date
 from html import escape
 
+import psycopg
+from starlette.concurrency import run_in_threadpool
 from starlette.requests import Request
-from starlette.responses import HTMLResponse
+from starlette.responses import HTMLResponse, PlainTextResponse
 
 from qonunshunos.auth.pages import page
 
 UPDATED = "2026-yil 6-noyabr"
+
+log = logging.getLogger(__name__)
+
+MONTHS = (
+    "yanvar", "fevral", "mart", "aprel", "may", "iyun",
+    "iyul", "avgust", "sentabr", "oktabr", "noyabr", "dekabr",
+)  # fmt: skip
+
+# Crawlers may read the public pages; the MCP endpoint and OAuth flow are not for them.
+ROBOTS = """User-agent: *
+Disallow: /mcp
+Disallow: /auth/
+Disallow: /authorize
+Disallow: /token
+Disallow: /register
+Disallow: /revoke
+Allow: /
+"""
+
+STATS_TTL = 600  # seconds
+
+
+@dataclass(frozen=True)
+class Stats:
+    documents: int  # acts in force with searchable text
+    updated: date | None  # last nightly update run
+
+
+def date_uz(d: date) -> str:
+    return f"{d.year}-yil {d.day}-{MONTHS[d.month - 1]}"
+
+
+def load_stats(conn: psycopg.Connection) -> Stats:
+    documents = conn.execute(
+        "SELECT count(*) FROM documents WHERE status = 'in_force' AND content = 'html'"
+    ).fetchone()[0]
+    row = conn.execute("SELECT max(finished_at) FROM update_runs").fetchone()
+    return Stats(documents, row[0].date() if row and row[0] else None)
 
 
 def _contact(contact: str) -> str:
@@ -18,13 +64,27 @@ def _contact(contact: str) -> str:
     return f"<a href='{escape(contact)}'>{escape(contact)}</a> orqali"
 
 
-def home(base_url: str) -> HTMLResponse:
+def _coverage(stats: Stats | None) -> str:
+    if stats is None:
+        return ""
+    text = (
+        f"Bazada {stats.documents:,} ta amaldagi hujjat".replace(",", " ")
+        + ": Konstitutsiya, kodekslar, qonunlar, Prezident va hukumat qarorlari, vazirlik"
+        " va idoralarning roʻyxatdan oʻtgan hujjatlari. Faqat amaldagi tahrir."
+    )
+    if stats.updated:
+        text += f" Har kecha yangilanadi, oxirgi yangilanish: {date_uz(stats.updated)}."
+    return f"<p>{text}</p>"
+
+
+def home(base_url: str, stats: Stats | None = None) -> HTMLResponse:
     mcp = escape(f"{base_url.rstrip('/')}/mcp")
     body = f"""
 <h1>Qonunshunos</h1>
 <p>AI yordamchingiz (Claude, ChatGPT, Cursor va boshqalar) Oʻzbekiston qonunchiligidan javob
 topishi uchun MCP server. Manba — <a href="https://lex.uz">lex.uz</a> (Qonunchilik
 maʼlumotlari milliy bazasi). Har bir javobda moddaga aniq havola beriladi.</p>
+{_coverage(stats)}
 <p>Xizmat bepul. Kuniga 30 ta qidiruv va 200 ta boshqa soʻrov, daqiqasiga 10 ta.
 Kirish Google akkaunti orqali.</p>
 
@@ -117,9 +177,33 @@ mumkin. Shartlar oʻzgarsa, shu sahifada eʼlon qilinadi.</li>
     return page("Foydalanish shartlari", body, wide=True)
 
 
-def routes(base_url: str, contact: str = ""):
+def routes(
+    base_url: str,
+    contact: str = "",
+    connection: Callable[[], AbstractContextManager[psycopg.Connection]] | None = None,
+):
+    cache: dict[str, tuple[float, Stats | None]] = {}
+
+    def stats() -> Stats | None:
+        if connection is None:
+            return None
+        hit = cache.get("stats")
+        if hit and time.monotonic() - hit[0] < STATS_TTL:
+            return hit[1]
+        try:
+            with connection() as conn:
+                value = load_stats(conn)
+        except Exception:  # the home page must render even without the database
+            log.exception("home page stats failed")
+            value = hit[1] if hit else None
+        cache["stats"] = (time.monotonic(), value)
+        return value
+
     async def home_page(_request: Request) -> HTMLResponse:
-        return home(base_url)
+        return home(base_url, await run_in_threadpool(stats))
+
+    async def robots(_request: Request) -> PlainTextResponse:
+        return PlainTextResponse(ROBOTS)
 
     async def privacy_page(_request: Request) -> HTMLResponse:
         return privacy(contact)
@@ -129,6 +213,7 @@ def routes(base_url: str, contact: str = ""):
 
     return [
         ("/", ["GET"], home_page),
+        ("/robots.txt", ["GET"], robots),
         ("/maxfiylik", ["GET"], privacy_page),
         ("/shartlar", ["GET"], terms_page),
     ]

@@ -203,7 +203,7 @@ def create_server(
         auth=auth_settings(auth.public_url) if auth else None,
         auth_server_provider=provider,
     )
-    pages = site.routes(auth.public_url if auth else public_url, contact)
+    pages = site.routes(auth.public_url if auth else public_url, contact, services.connection)
     if auth:
         pages += auth_routes(provider, auth, services.connection)
     for path, methods, handler in pages:
