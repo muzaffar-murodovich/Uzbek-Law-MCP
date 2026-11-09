@@ -241,7 +241,7 @@ eval/questions.yaml                  ≈30 ta yangi savol
    yuklamasdan qayta parse qilinadi. Parser ogohlantirishlari to'liq yuklashdan keyin ko'riladi.
 4. ✅ To'liq yuklab olish (`qonunshunos crawl-full`) `myserver`da: 2026-11-07 22:25 – 11-08 16:47 (Toshkent).
 5. Zaxira nusxa muddatlarini o'zgartirish (serverda o'zgarish: avval foydalanuvchidan so'raladi).
-6. ⏳ Indekslash: HNSW'siz yozish → indeksni qurish → rekvizitlar. `minor=Y` bo'yicha qaror
+6. ⏳ Indekslash: ✅ HNSW'siz yozish (2026-11-09) → ⏳ indeksni qurish → rekvizitlar. `minor=Y` bo'yicha qaror
    qabul qilindi (pastda, "O'zgartirish kirituvchi hujjatlar").
 7. Baholash: yangi savollar, R@10 va javob vaqti, kerak bo'lsa hujjat turi og'irligi.
 8. Tungi `update`ni kengaytirish (musbat ID'li lotin hujjatlar ham), bir kecha kuzatish.
@@ -318,6 +318,14 @@ eval/questions.yaml                  ≈30 ta yangi savol
   hafta keyin chiqishi mumkin, shuning uchun bitta sahifa emas, uchtasi. Musbat ID'li lotin
   hujjatlar ham shu yo'l bilan keladi. `SCOPE_KINDS` olib tashlandi; RSS faqat havola
   qilingan hujjatlarni qayta tekshirish uchun qoldi.
+- **Indekslash tugadi (2026-11-08 17:28 – 11-09 01:32 UTC, ≈8 soat).** `home` va 4 ta box
+  birgalikda ishladi. Server bazasida 15 810 hujjat, 491 947 bo'lak, embedding'siz bo'lak yo'q.
+  Box'lar o'chirildi, ularning kalitlari `authorized_keys`dan olib tashlandi (nusxasi
+  `authorized_keys.bak-qidx`), `home`dagi tunnel va indekslash unit'lari to'xtatildi.
+- **HNSW qayta qurilmoqda (2026-11-09 18:21 UTC).** Oddiy `CREATE INDEX` (yozuvchi yo'q, timer
+  to'xtatilgan), `maintenance_work_mem = 1GB`, 2 ta parallel worker, parametrlar 0003-migratsiyadagidek
+  (m = 32, ef_construction = 200). Server auto mode'da to'xtatilgani uchun buyruqni foydalanuvchi
+  ishga tushirdi. Qurish paytida bo'sh RAM ≈1,5 GB.
 
 ## Xavflar
 
