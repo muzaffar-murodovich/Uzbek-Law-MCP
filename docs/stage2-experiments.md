@@ -505,12 +505,41 @@ qo'shildi: tunnel orqali 300 savol × 3 rejim (2 ta `alt` bilan) 4 oqimda ≈43 
 - **Savolning o'zi ham kerak:** FTS top-50 da 18 ta savolni faqat savol matni, 21 tasini faqat
   `alt` topgan.
 
+### Birlashtirish variantlari (oflayn)
+
+`scripts/dump_candidates.py` 300 savolning 6 tadan nomzod ro'yxatini (har birida 200 ta) bir
+marta `data/eval/candidates_llm_full.json.gz`ga yozadi; `scripts/fusion_lab.py` shu fayldan
+birlashtirish variantlarini bazasiz hisoblaydi (butun to'r 15 soniya). Hozirgi qoidani fayldan
+qayta hisoblash 0,649 berdi (serverda 0,644; farq `ef_search` 400 dan), ya'ni model to'g'ri.
+208 ta aniq savol, gibrid:
+
+| Variant | R@1 | R@5 | R@10 | MRR |
+|---|---:|---:|---:|---:|
+| hozirgi qidiruv | 0,20 | 0,53 | 0,649 | 0,33 |
+| vektorsiz (faqat FTS) | 0,23 | 0,47 | 0,611 | 0,34 |
+| savol matnisiz (faqat `alt`) | 0,20 | 0,45 | 0,543 | 0,30 |
+| vektor og'irligi 0,5 | 0,21 | 0,56 | 0,663 | 0,35 |
+| eng yaxshi: FTS'dan 100 nomzod, k=20, vektor og'irligi 0,5 | 0,23 | 0,57 | 0,678 | 0,38 |
+| hujjat turi og'irligi (kodeks 1,5, qonun 1,2) eng yaxshi variant ustiga | 0,25 | 0,55 | 0,673 | 0,38 |
+
+- O'rinlarga asoslangan hech bir qoida (og'irliklar, RRF doimiysi, bitta ro'yxatdagi eng yaxshi
+  o'rin uchun bonus, modda darajasida birlashtirish, bitta hujjatdan ko'p nomzod chiqqani uchun
+  bonus, hujjat turi) 0,68 dan oshmadi. +3 foiz 208 savolda 6 ta savol degani; savollarning ikki
+  yarmi orasidagi farq esa 0,59 va 0,77, ya'ni bu yutuq shovqin chegarasida.
+- Sabab: 6 ta ro'yxatning har birida o'z top-10 i bor, 10 ta o'ringa 60 tagacha nomzod da'vogar.
+  Qaysi biri to'g'ri ekanini o'rinlar emas, matnning o'zi hal qiladi.
+- Nomzodlar to'plamining chegarasi (to'g'ri modda to'plamda bor savollar ulushi): hozirgi
+  (50 + 50) 0,885; FTS 100 + vektor 50 da 0,928; 200 + 200 da 0,962.
+- Natijalar sonini oshirish kam beradi: eng yaxshi variantda R@20 0,74, R@30 0,78, R@50 0,82.
+- Savol matni kerak (usiz 0,54), vektor ham ozgina foyda beradi (usiz 0,61).
+
+Xulosa: 0,85 ga faqat nomzodlar matnini o'qiydigan qayta saralash (reranker) yoki kuchliroq
+nomzod topish bilan yetiladi; birlashtirishni sozlash yetmaydi.
+
 ### Keyingi qadam
 
-1. Birlashtirishni tuzatish (ro'yxatlar og'irligi, bitta ro'yxatdagi yuqori o'rinni yo'qotmaslik):
-   nomzod ro'yxatlarini bir marta fayl qilib olib, variantlarni serverga ulanmasdan sinash.
-2. Qayta saralash (reranker) hozirgi nomzodlar to'plamida.
-3. Embedding modelini o'zbek qonunchiligiga moslab qo'shimcha o'qitish (7-bo'lim).
+1. Qayta saralash (reranker) FTS 100 + vektor 50 nomzodlar to'plamida: chegara 0,93.
+2. Embedding modelini o'zbek qonunchiligiga moslab qo'shimcha o'qitish (7-bo'lim).
 
 Maqsad o'zgarmagan: aniq savollarda R@10 ≥ 0,85, ommaga ochish shungacha kechiktiriladi.
 
