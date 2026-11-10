@@ -1,0 +1,1202 @@
+{
+ "lf-001": [
+  "notarial harakatlar tili va hujjat matni",
+  "notarial hujjatni boshqa tilda rasmiylashtirish"
+ ],
+ "lf-002": [
+  "birja bitimi bo‘yicha hisob-kitob muddati",
+  "birja savdosida to‘lovni amalga oshirish muddati"
+ ],
+ "lf-003": [
+  "ozodlikdan mahrum etish joyidan ozod etilayotgan shaxsga beriladigan hujjat tibbiy ma’lumotlar",
+  "sil kasalligi mavjud bo‘lgan mahkumni ozod etishda beriladigan ma’lumotnoma maxfiylik"
+ ],
+ "lf-004": [
+  "oliy ta’lim muassasasi filial bitiruvchisiga beriladigan diplom namunasi va tan olinishi",
+  "xorijiy oliy ta’lim muassasasi dasturi bo‘yicha ta’lim yakunida diplom berish tartibi"
+ ],
+ "lf-005": [
+  "kutubxona fondini inventarizatsiya qilish tartibi",
+  "kutubxona hujjatlari yo‘qolgan yoki yaroqsiz holga kelgan taqdirda tekshiruv o‘tkazish"
+ ],
+ "lf-006": [
+  "uy-joy ijarasi shartnomasi ijarachining muomalaga layoqatsiz deb topilishi oila a'zolarining huquqlari",
+  "davlat uy-joy fondi turar joyini ijaraga olish shartnomasini oila a'zosining nomiga qayta rasmiylashtirish"
+ ],
+ "lf-007": [
+  "nuqsonli oziq-ovqat mahsulotini savdodan olib tashlash",
+  "qadoqlanishi buzilgan konserva mahsulotini realizatsiya qilish taqiqi"
+ ],
+ "lf-008": [
+  "qishloq xo‘jaligi mahsulotlari importini moliyalashtirish bo‘yicha kredit foiz stavkasi",
+  "bank krediti bo‘yicha yillik foiz stavkasi va import operatsiyalarini kreditlash shartlari"
+ ],
+ "lf-009": [
+  "Toshkent shahrida og‘ir yuk transport vositalarining harakatlanishini cheklash",
+  "maxsus xizmat transport vositalari uchun harakatlanish cheklovlaridan istisno"
+ ],
+ "lf-010": [
+  "o‘ng rul joylashuviga ega transport vositasini davlat ro‘yxatidan o‘tkazish",
+  "o‘ng tomonlama rul boshqaruvli avtotransport vositasini ro‘yxatdan o‘tkazishni cheklash"
+ ],
+ "lf-011": [
+  "yer uchastkasini elektron onlayn-auksion orqali berish tadbirkorlik faoliyati uchun",
+  "yer uchastkasini hokim qarori bilan to‘g‘ridan to‘g‘ri ajratish hollari"
+ ],
+ "lf-012": [
+  "nogironlik pensiyasini qayta hisoblash ishlagan davr ish haqi hisobga olinishi",
+  "pensiya tayinlangandan keyingi ish staji va ish haqi bo‘yicha pensiyani qayta ko‘rib chiqish"
+ ],
+ "lf-013": [
+  "vaqtincha turgan joyi bo‘yicha ro‘yxatga olish uy egasining roziligi elektron shaklda",
+  "yashash joyiga ro‘yxatga qo‘yishda mulkdorning roziligi telefon orqali tasdiqlash elektron tasdiq"
+ ],
+ "lf-014": [
+  "tavakkalchilikka asoslangan o‘yinlar ishtirokchilarining cheklangan ro‘yxati ro‘yxatga kiritilgan shaxsni o‘yinga qo‘yishni taqiqlash muddati",
+  "onlayn qimor o‘yinlari ro‘yxatga kiritilgan shaxsga o‘yin hisobvarag‘i ochishni to‘xtatish vaqti"
+ ],
+ "lf-015": [
+  "nuqsonli tovar aniqlanganda iste'molchining huquqlari",
+  "sifat darajasi lozim bo'lmagan tovarni almashtirish bepul bartaraf etish narxni kamaytirish shartnomani bekor qilish"
+ ],
+ "lf-016": [
+  "mahkumlarni shaxsiy tintuvdan o‘tkazish bir jinsdagi xodim tomonidan",
+  "hibsda saqlanayotgan shaxslarni ko‘zdan kechirish va tintuv qilish xodimning jinsi"
+ ],
+ "lf-017": [
+  "elektron hisobot tizimlari integratsiyasi",
+  "axborot tizimlari va ma’lumotlar bazalarini o‘zaro integratsiya qilish"
+ ],
+ "lf-018": [
+  "voyaga yetmaganlar bilan ishlashga sudlangan shaxslarni qabul qilish taqiqi",
+  "sudlanganlik holati tugallanmagan shaxsni tarbiyachi lavozimiga tayinlash cheklovi"
+ ],
+ "lf-019": [
+  "xodimlarni majburiy tibbiy ko‘rikdan o‘tkazish tibbiyot tashkiloti",
+  "dastlabki va davriy majburiy tibbiy ko‘rikni o‘tkazuvchi tibbiyot muassasasi"
+ ],
+ "lf-020": [
+  "import qilingan dori vositalari va tibbiy buyumlarni qadoqlash hamda markirovkalash mahalliy ishlab chiqarish",
+  "dori vositasi va tibbiy buyumning kelib chiqishi qadoqlash yorliqlash mahsulotni mahalliy deb e’tirof etish"
+ ],
+ "lf-021": [
+  "masofaviy usulda tuziladigan oldi-sotdi shartnomasi bo‘yicha tovarni yetkazib berish shartlari va narxi to‘g‘risida iste’molchiga axborot taqdim etish",
+  "elektron tijoratda tovarni yetkazib berish muddati qiymati va hududi haqida iste’molchiga majburiy ma’lumot berish"
+ ],
+ "lf-022": [
+  "maishiy tovarni shaxsiy ehtiyoj uchun olib kirishda davlat tilidagi markirovka talabi",
+  "import qilinadigan maishiy buyum yorligʻi va yoʻriqnomasi oʻzbek tilida boʻlishi shartlari"
+ ],
+ "lf-023": [
+  "tabiiy gaz ta’minotiga ulanish abonent raqamini berish tartibi",
+  "gaz ta’minoti yangi iste’molchiga shaxsiy hisob raqami ajratish va xabardor qilish"
+ ],
+ "lf-024": [
+  "temir yo‘l vokzaliga kirishda yo‘lovchi hujjatlarini tekshirish tartibi",
+  "poyezdga chiqish uchun chipta va shaxsni tasdiqlovchi hujjat taqdim etish talablari"
+ ],
+ "lf-025": [
+  "jismoniy tarbiya-sog'lomlashtirish xizmatlari ko'rsatish shartnomasi kasallik sabab vaqtincha foydalanmaslik to'lovni qayta hisoblash tibbiy ma'lumotnoma",
+  "iste'molchi kasalligi munosabati bilan pullik sport to'garagi xizmatidan foydalanmaslik davri uchun to'lovni to'xtatish yoki qaytarish asoslari"
+ ],
+ "lf-026": [
+  "urug‘lik bug‘doy qabul qilishda super elita elita birinchi avlod uchun ustama haq miqdori",
+  "urug‘lik don xarid narxiga nav va avlodiga qarab foizli ustama belgilash"
+ ],
+ "lf-027": [
+  "asossiz olingan pul mablag‘larini qaytarish majburiyati",
+  "noto‘g‘ri to‘langan summalarni undirib olish tartibi"
+ ],
+ "lf-028": [
+  "harbiy xizmatchini shaxsiy tarkib ro‘yxatlaridan chiqarish xizmat vazifalari va mulkni topshirgandan keyin",
+  "kontrakt bo‘yicha harbiy xizmatdan bo‘shatilgan shaxsni ro‘yxatlardan chiqarish tartibi"
+ ],
+ "lf-029": [
+  "savdo obyektlarida videokuzatuv kameralari joylashtirish talablari",
+  "savdo markazi kirish chiqish avtoturargoh zinapoya eskalator savdo zallari videokuzatuv"
+ ],
+ "lf-030": [
+  "tabiiy gaz yetkazib berish uzluksizligi va sifat ko‘rsatkichlari",
+  "gaz ta’minoti shartnomasi bo‘yicha yetkazib beruvchining majburiyatlari"
+ ],
+ "lf-031": [
+  "arzon uy-joy olishda ustuvor toifalar budjet tashkiloti xodimlari doimiy roʻyxatga olingan fuqarolar",
+  "uy-joyga muhtoj fuqarolarni hisobga olish Toshkent shahrida doimiy yashash tor joyda yashash navbat ustuvorligi"
+ ],
+ "lf-032": [
+  "birinchi marta soliqlarni to‘lashdan bo‘yin tovlash qilmishini sodir etgan shaxs yetkazilgan zararni to‘liq qoplagan taqdirda javobgarlikdan ozod etish",
+  "soliqni qasddan kam ko‘rsatish natijasida yetkazilgan zararni va penyani to‘liq to‘lash sudgacha javobgarlikdan ozod qilish"
+ ],
+ "lf-033": [
+  "ruxsat beruvchi hujjatni berish muddati ish kunlari",
+  "tadbirkorlik faoliyati uchun ruxsatnoma berish muddati"
+ ],
+ "lf-034": [
+  "arizadagi noto‘g‘ri ma’lumotlarni tuzatish muddati arizani ko‘rib chiqishni to‘xtatib turish",
+  "arizada xatolarni bartaraf etish uchun beriladigan muddat va ko‘rib chiqishni to‘xtatish"
+ ],
+ "lf-035": [
+  "topshirilgan bug'doy uchun haq to'lash muddati",
+  "don mahsulotlarini xarid qilishda hisob-kitob muddati"
+ ],
+ "lf-036": [
+  "shaxsni va yashash joyini aniqlagach doimiy yashash joyiga qaytarish hamda yo‘l xarajatlarini qoplash",
+  "vaqtincha joylashtirilgan shaxsni yashash joyiga yuborish transport xarajatlari davlat tomonidan qoplanishi"
+ ],
+ "lf-037": [
+  "o‘rindoshlik asosida pedagogik faoliyat masofaviy shaklda ish vaqti",
+  "masofaviy ish o‘rindoshlik ish vaqti davomiyligi pedagog xodim"
+ ],
+ "lf-038": [
+  "yer uchastkasining maqsadli foydalanish turi aniqlash muddati",
+  "bo‘sh yer uchastkasi foydalanish maqsadini belgilash tartibi"
+ ],
+ "lf-039": [
+  "sport maktabi tarbiyalanuvchilarini sport kiyimlari va poyabzal bilan ta’minlash me’yorlari",
+  "sport maktablarida inventar, sport formasi va krossovkalarni berish hamda almashtirish muddati"
+ ],
+ "lf-040": [
+  "tanlovda ishtirok etish uchun hujjatlarni topshirish muddati va talab etiladigan hujjatlar",
+  "ko‘rik tanlov ishtirokchilari tomonidan taqdim etiladigan hujjatlar ro‘yxati va topshirish tartibi"
+ ],
+ "lf-041": [
+  "korxona hududiga kirish va chiqish ruxsatnomasi qayd etish tartibi",
+  "yopiq hududga tashrif buyuruvchilarni roʻyxatga olish va belgi qoʻyish talabi"
+ ],
+ "lf-042": [
+  "masofaviy ta’lim talabalarining malakaviy amaliyoti o‘tash tartibi",
+  "malakaviy amaliyotni boshqa tashkilotda o‘tashga ruxsat berish"
+ ],
+ "lf-043": [
+  "jamoat tartibini saqlashda fuqarolarning ishtiroki o‘zini o‘zi boshqarish organlari",
+  "xususiy shaxslarning huquqbuzarlarni ushlash va shaxsni tekshirish vakolatlari"
+ ],
+ "lf-044": [
+  "kimyoviy moddalarning zararli bug‘lari konsentratsiyasi oshganda avtomatik signalizatsiya ochiq maydon va nazorat xonasi",
+  "zararli bug‘ va gazlar ajraladigan joylarda avariya signalizatsiyasi ish joyi hamda dispetcherlik xonasi"
+ ],
+ "lf-045": [
+  "talabalarni chet elda stajirovkaga yuborish tartibi",
+  "talabalar uchun maxsus stipendiya tayinlash"
+ ],
+ "lf-046": [
+  "chiqindidan energiya ishlab chiqarish elektr energiyasini xarid qilish kafolati",
+  "chiqindilarni yoqish orqali ishlab chiqarilgan elektr energiyasini davlat tomonidan uzoq muddatli xarid qilish"
+ ],
+ "lf-047": [
+  "esdalik nishoni bilan taqdirlangan shaxslarga guvohnoma berish",
+  "esdalik nishoni topshirilganda guvohnoma rasmiylashtirish"
+ ],
+ "lf-048": [
+  "yolgʻiz keksalar va nogironligi boʻlgan shaxslar uchun internat uylariga joylashtirish",
+  "keksalar uchun ijtimoiy xizmatlar va statsionar parvarish muassasalari"
+ ],
+ "lf-049": [
+  "xorijiy savdo obyektlarini tashkil etish xarajatlarini qoplash eksport hajmi talabi",
+  "ijara va reklama xarajatlarini subsidiyalash keyingi davrda qo‘llab-quvvatlash shartlari"
+ ],
+ "lf-050": [
+  "darsliklarning mazmuni yosh xususiyatlariga mosligi va tushunarliligi",
+  "ta'lim nashrlarida o‘quv materialini bolalar yoshiga mos bayon etish talablari"
+ ],
+ "lf-051": [
+  "yuridik shaxs nomi o‘zgarganda davlat ro‘yxatidan o‘tkazuvchi organni xabardor qilish muddati",
+  "yuridik shaxs filial ochilganda vakolatli organga xabar berish tartibi va muddati"
+ ],
+ "lf-052": [
+  "nikoh tuzishga monelik qiluvchi holatlar aniqlanganda nikohni qayd etishni kechiktirish muddati",
+  "fuqarolik holati dalolatnomalarini yozish organi nikohni qayd etishni kechiktirish asoslari va muddati"
+ ],
+ "lf-053": [
+  "ichimlik suvi ishlab chiqarish joyidan olingan tekshiruv namunasi uchun nazorat paketi soni",
+  "suv ishlab chiqarish joyida namuna olishda nazorat paketi tayyorlash tartibi"
+ ],
+ "lf-054": [
+  "homilador ayolni abort qilishga majburlash",
+  "homiladorlikni sun’iy to‘xtatishga majbur etish"
+ ],
+ "lf-055": [
+  "uzrli sabablarga ko'ra imtihonda ishtirok etmagan abituriyent test sinovlarini qayta topshirish muddati to'lov",
+  "kasallik yoki yaqin qarindoshi vafot etgani sababli imtihonga kelmagan talabgor test natijalari e'lon qilingandan keyin qayta test topshirish"
+ ],
+ "lf-056": [
+  "ishlatilgan motor moyini alohida idishda yig‘ish talablari",
+  "chiqindi moylarni boshqa turdagi moylarga aralashtirmaslik"
+ ],
+ "lf-057": [
+  "yer uchastkasida tuproqni tekshirish natijalari bo‘yicha beriladigan hujjatlar",
+  "tuproq tadqiqoti yakuni bo‘yicha rasmiy hujjatlar va xulosa"
+ ],
+ "lf-058": [
+  "notarial harakatni rasmiylashtirishda tasdiqlash kodi va to‘lov summasi SMS xabarnoma yuborilishi",
+  "notarius huzurida mobil telefon raqami mavjud bo‘lmaganda SMS xabarnoma oluvchi shaxs"
+ ],
+ "lf-059": [
+  "mahkumlar bilan uchrashuvlar soni va davomiyligi",
+  "jazoni ijro etish muassasasida yaqin qarindoshlar bilan ko‘rishish tartibi"
+ ],
+ "lf-060": [
+  "davlat granti asosida ta'lim olgan bitiruvchilarning majburiy ishlab berish muddati",
+  "oliy ta'lim muassasasi filialida grant asosida o'qigan bitiruvchini ishga joylashtirish majburiyati"
+ ],
+ "lf-061": [
+  "zargarlik faoliyatini boshlash uchun imtiyozli kredit asbob-uskunalar xaridi miqdori",
+  "kasb-hunarga o‘qitishni tamomlagan fuqarolarga o‘zini o‘zi band qilish uchun mikrokredit zargarlik uskunalari"
+ ],
+ "lf-062": [
+  "ta'lim muassasasida amaliy mashg'ulot uchun ajratilgan materiallarni omborga qaytarish tartibi",
+  "foydalanilmagan moddiy boyliklarni omborga topshirish va hisobdan chiqarish tartibi"
+ ],
+ "lf-063": [
+  "jismoniy shaxslar tomonidan dori vositalarini olib kirish tasdiqlovchi hujjatlar",
+  "shaxsiy foydalanish uchun dori vositalarini bojxona chegarasi orqali olib o‘tish tibbiy hujjatlar"
+ ],
+ "lf-064": [
+  "mehnatni muhofaza qilish bo‘yicha jamoatchilik nazorati vakillari",
+  "mehnatni muhofaza qilish talablariga rioya etilishi ustidan davlat va jamoatchilik nazorati"
+ ],
+ "lf-065": [
+  "sertifikat olishga ruxsat berilgandan keyin markaz bilan shartnoma tuzish va to'lovni amalga oshirish muddati",
+  "sertifikat berishga ruxsat etilgan shaxsning shartnoma tuzishi hamda to'lovni to'lashi uchun belgilangan muddat"
+ ],
+ "lf-066": [
+  "jismoniy shaxslardan olinadigan daromad solig'i ushlab qolish ish haqi",
+  "mehnatga haq to'lash tarzidagi daromadlardan soliqlar va majburiy to'lovlar"
+ ],
+ "lf-067": [
+  "turistlarga hamrohlik qilish xizmatlarini ko'rsatish shartlari va to'lov tartibi",
+  "turizm xizmatlari bo'yicha shartnoma tuzish muddati hamda oldindan to'lov miqdori"
+ ],
+ "lf-068": [
+  "diniy tashkilot faoliyatini vaqtincha to‘xtatib turish bank hisobvaraqlaridan foydalanish",
+  "diniy tashkilot faoliyati to‘xtatilganda mol-mulk va pul mablag‘laridan foydalanish tartibi"
+ ],
+ "lf-069": [
+  "davlat organi xodimlarini jamoat birlashmasi yoki saylov tadbirlarida ishtirok etishga majburlash taqiqlanishi",
+  "mehnat munosabatlarida xodimni siyosiy faoliyatga va ovoz to‘plashga majburlash javobgarligi"
+ ],
+ "lf-070": [
+  "afv etishni qo‘llash qurol bilan bog‘liq jinoyat bo‘yicha hukm qilingan shaxslarga nisbatan",
+  "qurol muomalasi bilan bog‘liq jinoyatlar uchun afv akti tatbiq etilmaydigan shaxslar"
+ ],
+ "lf-071": [
+  "tadbirkorlik subyektini tekshirishda tadbirkorlar birlashmasi vakili ishtiroki",
+  "nazorat qiluvchi organlar tekshiruvida tadbirkorlik subyekti vakiliga hamrohlik qilish huquqi"
+ ],
+ "lf-072": [
+  "keksalar va nogironligi bo‘lgan shaxslar uchun internat uyiga qabul qilish navbati bo‘sh o‘rin mavjudligi",
+  "ijtimoiy xizmatlar muassasasiga joylashtirish bo‘sh o‘rin bo‘lmaganda kutish ro‘yxati va rozilik"
+ ],
+ "lf-073": [
+  "iqtidorli qizlarni davlat mukofoti bilan taqdirlash",
+  "ta'lim va ijod sohasida alohida yutuqlarga erishgan qizlar uchun mukofot"
+ ],
+ "lf-074": [
+  "maktabgacha ta’lim tashkilotida ovqat sifati nazorati va brakeraj jurnali",
+  "tayyor ovqatlarning sifatini tekshirish natijalarini qayd etish tartibi"
+ ],
+ "lf-075": [
+  "rezident jismoniy shaxsning chet el bankida hisobvaraqlar ochishi",
+  "valyuta operatsiyalari chet el bank hisobvarag‘i rezident jismoniy shaxs"
+ ],
+ "lf-076": [
+  "umumiy o‘rta ta’lim muassasasida tanlov va musobaqalarda qo‘lga kiritilgan pul mukofotini taqsimlash tartibi",
+  "o‘quvchilarni rag‘batlantirish uchun pul mukofoti va sovg‘alar berish tartibi"
+ ],
+ "lf-077": [
+  "voyaga yetmaganlarni og‘ir yuk ko‘tarish va zararli ishlarga jalb etishni taqiqlash",
+  "o‘n sakkiz yoshga to‘lmagan shaxslar mehnati qo‘llanilishi mumkin bo‘lmagan ishlar"
+ ],
+ "lf-078": [
+  "umumiy o‘rta ta’lim sinflarining to‘ldirilishi me’yorlari qishloq joylarida",
+  "kam komplektli maktablarda sinf komplektlarini tashkil etish tartibi"
+ ],
+ "lf-079": [
+  "xodimlarni qayta tayyorlash va malakasini oshirish kurslarini tashkil etish uchun taqdim etiladigan hujjatlar",
+  "pullik o‘quv kurslarini ochish uchun oldindan taqdim etiladigan ma’lumotlar va hujjatlar"
+ ],
+ "lf-080": [
+  "teatrlar uchun olib kiriladigan musiqa asboblari sahna yoritish uskunalari dekoratsiyalar bojxona boji imtiyozi",
+  "madaniyat muassasalari ehtiyojlari uchun import qilinadigan sahna jihozlari va dekoratsiyalar bojxona to‘lovlaridan ozod etish"
+ ],
+ "lf-081": [
+  "filialda ta’lim tili",
+  "o‘qitish qaysi tilda amalga oshiriladi"
+ ],
+ "lf-082": [
+  "jismoniy shaxslar tomonidan davolanish uchun dori vositalari va protez-ortopediya buyumlarini olib kirishda bojxona to‘lovlaridan ozod etish",
+  "davolanish maqsadida olib kiriladigan dori vositalari tibbiy buyumlar protezlar bojxona imtiyozlari"
+ ],
+ "lf-083": [
+  "aholini tadbirkorlikka o‘qitish loyihasi ishtirokchilarini tanlash mezonlari",
+  "tadbirkorlik ko‘nikmalarini o‘qitish bo‘yicha nodavlat tashkilotlarni saralash talablari"
+ ],
+ "lf-084": [
+  "tuzni omborda saqlash qoplarni taxlash og‘zi qaratilishi",
+  "oziq-ovqat mahsulotlarini saqlash qoplarni ustma-ust terish talablari"
+ ],
+ "lf-085": [
+  "uyumlangan don haroratini o‘lchash nuqtalari va masofa",
+  "omborda donni saqlashda harorat nazoratini o‘tkazish tartibi"
+ ],
+ "lf-086": [
+  "ta'lim oluvchini oraliq nazoratni qayta topshirish va keyingi modulga o'tkazish tartibi",
+  "masofaviy kursda test sinovidan o'ta olmagan tinglovchini qayta topshirishga ruxsat berish shartlari"
+ ],
+ "lf-087": [
+  "sirtqi ta’lim shakliga qabul pedagogika yo‘nalishi pedagogik staj talabi",
+  "oliy ta’limga qabul sirtqi ta’lim pedagogika yo‘nalishlari ta’lim sohasida ish staji"
+ ],
+ "lf-088": [
+  "chet el fuqarosini vaqtincha turgan joyi bo‘yicha ro‘yxatga olish",
+  "xorijiy fuqarolarning O‘zbekiston Respublikasida bo‘lishi va yashash joyi bo‘yicha hisobga olish"
+ ],
+ "lf-089": [
+  "ixtiyoriy topshirilgan biomaterialni qaytarish va yo‘q qilish tartibi",
+  "biologik material egasining biomaterialni yo‘q qilishni talab qilish huquqi"
+ ],
+ "lf-090": [
+  "davlat organi mansabdor shaxsining g‘ayriqonuniy qarori bilan yetkazilgan zararni qoplash",
+  "davlat organlari va ularning mansabdor shaxslari tomonidan yetkazilgan mulkiy zarar va boy berilgan foydani undirish"
+ ],
+ "lf-091": [
+  "jismoniy va yuridik shaxslarning murojaatlarini ko‘rib chiqish navbati va muddatlari",
+  "murojaatni navbatdan tashqari ko‘rib chiqish asoslari va tartibi"
+ ],
+ "lf-092": [
+  "falsafa doktori (PhD) ilmiy darajasi uchun ustama miqdori",
+  "oliy ta'lim muassasasi xodimlariga ilmiy daraja uchun har oylik qo'shimcha haq"
+ ],
+ "lf-093": [
+  "chet el fuqarolari davlat boji viza muddatini uzaytirish vaqtincha ro‘yxatdan o‘tkazishdan ozod etish",
+  "xorijiy mutaxassislar viza uzaytirish va vaqtincha turgan joyi bo‘yicha ro‘yxatga olish yig‘imlaridan ozod qilish"
+ ],
+ "lf-094": [
+  "malaka oshirish kurslari yakuniy attestatsiya oraliq nazorat test shakli",
+  "qayta tayyorlash va malaka oshirish o‘quv jarayoni bilimlarni nazorat qilish imtihon"
+ ],
+ "lf-095": [
+  "imtihon o‘tkazish tartibini buzgan abituriyentni chetlashtirish",
+  "taqiqlangan buyumlar olib kirish va foydalanish uchun imtihondan chiqarish"
+ ],
+ "lf-096": [
+  "issiqxona xo‘jaligi uchun mol-mulk va yer soliqlari bo‘yicha imtiyozlar",
+  "issiqxonada yetishtirilgan mahsulot realizatsiyasidan olingan daromad uchun aylanmadan olinadigan soliq imtiyozi"
+ ],
+ "lf-097": [
+  "tomorqa yer uchastkasida bog‘ yaratish va ko‘chat xarajatlarini qoplash subsidiyasi",
+  "mevali bog‘larni yangilash uchun ko‘chat xarajatlarining bir qismini qoplash tartibi"
+ ],
+ "lf-098": [
+  "boquvchisini yo‘qotganlik nafaqasi oluvchi oilalarga bir martalik moddiy yordam",
+  "18 yoshga to‘lmagan farzandlarga avgust oyida bir martalik pul to‘lovi"
+ ],
+ "lf-099": [
+  "hujjatlarni qayta topshirganda ko‘rib chiqish muddati ish kunlari",
+  "xato va kamchiliklar bartaraf etilgandan keyin davlat xizmati natijasini berish muddati"
+ ],
+ "lf-100": [
+  "transport vositasini jarima maydonchasidan berish dam olish kunlari",
+  "ushlab turilgan transport vositasini qaytarish qabul qilish vaqti"
+ ],
+ "lf-101": [
+  "tibbiy yo'sindagi majburlov choralarini qo'llash asoslari ruhiy holat ijtimoiy xavfli qilmish sodir etgan shaxs",
+  "sud tomonidan majburiy davolash tayinlash ruhiy kasalligi bo'lgan shaxs qilmishni sodir etganligi isbotlanishi"
+ ],
+ "lf-102": [
+  "dual ta'lim o'qish muddati kunduzgi ta'lim shakli bilan tengligi",
+  "dual ta'limni tashkil etishda ta'lim dasturini o'zlashtirish muddati qisqartirilishi"
+ ],
+ "lf-103": [
+  "davlat maktabgacha ta’lim tashkilotida ota-onalar to‘lovi miqdori",
+  "maktabgacha ta’lim tashkilotlarida bolalarni saqlash uchun to‘lov"
+ ],
+ "lf-104": [
+  "davlat soliq xizmati organlariga taqdim etiladigan chet tilidagi hujjatlarning davlat tiliga tarjimasi",
+  "soliq organlari tomonidan taqdim etilgan hujjatni boshqa chet tiliga tarjima qilishni talab etish"
+ ],
+ "lf-105": [
+  "biopsiya materialini qabul qilish va patologoanatomik tekshiruvga yuborish tartibi",
+  "operatsion va biopsiya materialini patologoanatomik bo‘limga yuborish uchun mas’ul shaxs"
+ ],
+ "lf-106": [
+  "ishlab chiqarish binolarida ventilyatsiya chiqarish havosini tashqariga chiqarish talablari",
+  "mahalliy so‘rish qurilmalaridan chiqadigan havoni ichki xonoga qaytarish taqiqlari"
+ ],
+ "lf-107": [
+  "harbiy xizmatchilarni xorijiy davlatlarda tayyorlash va malakasini oshirish",
+  "harbiy xizmatchilarni chet el ta’lim muassasalariga o‘qishga yuborish tartibi"
+ ],
+ "lf-108": [
+  "kam ta'minlangan oilalarga bolalar nafaqasi tayinlash va to'lash shartlari, majburiyatlarga rioya etmaslik oqibatlari",
+  "bolalar nafaqasi miqdorini kamaytirish yoki to'lovni to'xtatish asoslari, ijtimoiy himoya shartlari buzilishi"
+ ],
+ "lf-109": [
+  "ariqda qafas o‘rnatish suv obyektidan foydalanish talablari",
+  "suv obyektlarida inshoot joylashtirish xavfsizlik va ruxsat tartibi"
+ ],
+ "lf-110": [
+  "Qonunchilik palatasi deputatligiga nomzodning yoshi va Oʻzbekiston hududida muqim yashash muddati",
+  "deputatlikka nomzod boʻlish shartlari yoshga doir talab va mamlakat hududida yashash talabi"
+ ],
+ "lf-111": [
+  "bola tug‘ilganda beriladigan bir martalik nafaqa qayta tayinlanishi",
+  "bola tug‘ilishi munosabati bilan nafaqa ota-onadan biriga to‘lanishi"
+ ],
+ "lf-112": [
+  "xotin-qizlarni kasb-hunarga o‘qitish markazi tashkil etish",
+  "bo‘sh turgan bino negizida xotin-qizlar bandligini ta’minlash uchun subsidiya va grantlar"
+ ],
+ "lf-113": [
+  "jazoni ijro etish muassasalarida vijdon erkinligi va diniy marosimlar",
+  "mahkumlarning diniy adabiyotdan foydalanishi va ibodat qilish tartibi"
+ ],
+ "lf-114": [
+  "subsidiya olish uchun ariza davlat xizmatlari markazi orqali yuborish",
+  "subsidiya ajratish bo‘yicha murojaatni yagona interaktiv davlat xizmatlari portali orqali topshirish"
+ ],
+ "lf-115": [
+  "bolalarning sog‘lomlashtirish oromgohlarida ovqatlanishni tashkil etish va oziq-ovqat sifati talablari",
+  "bolalar dam olish oromgohlarida sanitariya qoidalari hamda sifatli ovqat bilan ta’minlash majburiyati"
+ ],
+ "lf-116": [
+  "birinchi marta uncha og'ir bo'lmagan jinoyat uchun ozodlikdan mahrum etishga hukm qilingan shaxsni jazodan ozod qilish",
+  "birinchi marta qasddan sodir etilgan jinoyat uchun uch yilgacha ozodlikdan mahrum etish tayinlanganda jazodan ozod etish"
+ ],
+ "lf-117": [
+  "tomchilatib sug‘orish tizimi mavjud yer uchastkasida eski usulda sug‘orish videoyozuvini taqdim etish muddati va talablari",
+  "suv resurslaridan foydalanish qoidabuzarligi bo‘yicha videomaterialni topshirish tartibi va videoda aks ettirilishi lozim bo‘lgan holatlar"
+ ],
+ "lf-118": [
+  "dehqon xo‘jaligi va tomorqa mahsulotlarini bozorda erkin sotish huquqi",
+  "bozor ma’muriyatining savdo joyiga kirishni cheklashi taqiqlanishi"
+ ],
+ "lf-119": [
+  "yig‘ilish bayonnomasini rasmiylashtirish muddati va imzolash tartibi",
+  "majlis bayonnomasi necha kunda tayyorlanadi va kimlar tomonidan imzolanadi"
+ ],
+ "lf-120": [
+  "mehnatni muhofaza qilish talablariga rioya etilmagan taqdirda uskunalardan foydalanishni to‘xtatib turish",
+  "mehnat inspeksiyasi inspektorining ishlab chiqarish uskunalari ishini vaqtincha to‘xtatish vakolati"
+ ],
+ "lf-121": [
+  "kredit foiz xarajatlarini qoplash bo‘yicha subsidiya to‘lovlarni kechiktirish",
+  "kredit to‘lovlari bo‘yicha muddati o‘tgan qarzdorlik yuzaga kelganda subsidiya to‘xtatilishi va qayta tiklanishi"
+ ],
+ "lf-122": [
+  "transport vositasi haydovchisining salonni tark etishi ichki ishlar organi xodimining qonuniy talabi",
+  "yo‘l-patrul xizmati xodimining haydovchini transport vositasidan tushirish asoslari"
+ ],
+ "lf-123": [
+  "arizani ko‘rib chiqish muddati va nafaqa tayinlash yoki rad etish haqida xabardor qilish",
+  "taqdim etilgan hujjatlar asosida nafaqa miqdorini belgilash va tayinlashni rad etish muddati"
+ ],
+ "lf-124": [
+  "qishloq xo‘jaligiga mo‘ljallangan yer uchastkasini bog‘ va uzumzor barpo etish uchun uzoq muddatli ijaraga berish",
+  "yer uchastkasini bog‘dorchilik va uzumchilik maqsadida o‘ttiz yil muddatga berish tartibi"
+ ],
+ "lf-125": [
+  "parranda go‘shtini veterinariya-sanitariya ekspertizasi kasallik aniqlanganda utilizatsiya qilish yoki zararsizlantirib foydalanish tartibi",
+  "tovuq kasalliklarida so‘yilgan mahsulotni iste’molga yaroqlilik shartlari va yo‘q qilish talablari"
+ ],
+ "lf-126": [
+  "malaka sertifikatini berish muddati",
+  "imtihondan o'tgan shaxsga sertifikat berish tartibi"
+ ],
+ "lf-127": [
+  "kutubxona axborot resurslari elektron nashrlar va fayllar",
+  "kutubxonaning elektron resurslari ichki ma'lumotlar bazasi materiallari"
+ ],
+ "lf-128": [
+  "ijod maktablariga o‘quvchilarni qabul qilish tartibi tanlov sinovlari",
+  "ijod maktablarida sinflarning to‘ldirilish me’yori o‘quvchilar soni"
+ ],
+ "lf-129": [
+  "yuridik texnikum bitiruvchilari oliy ta’limga qabul davlat granti to‘lov-kontrakt",
+  "yuridik texnikum bitiruvchilarini yuridik oliy ta’lim muassasasiga qabul tartibi grant"
+ ],
+ "lf-130": [
+  "oliy ta'limga ko'chirib tiklash va kreditlarni tan olish o'zlashtirish ko'rsatkichi uch semestr o'rtacha",
+  "ta'lim natijalarini tan olish uch semestrlik o'rtacha o'zlashtirish ko'rsatkichi talablari"
+ ],
+ "lf-131": [
+  "chet el fuqarosi ushlab turish asoslari va huquqlarini tushuntirish majburiyati",
+  "ushlab turilgan shaxsga ushlash sabablari hamda protsessual huquqlarini ma'lum qilish"
+ ],
+ "lf-132": [
+  "sut mahsulotlarini avtofurgonda ko‘chma savdo orqali realizatsiya qilish tartibi",
+  "ko‘chma savdo naqd pul hisob-kitoblari oziq-ovqat mahsulotlari savdosi talablari"
+ ],
+ "lf-133": [
+  "chet davlat hududida qarovsiz qolgan uch yoshga to‘lmagan bolani O‘zbekiston Respublikasiga qaytarishni tashkil etish",
+  "chet elda ota-ona qaramog‘isiz qolgan bolani O‘zbekistonga olib kelish vakolatli organlar"
+ ],
+ "lf-134": [
+  "talabalarning ishlab chiqarish amaliyoti davrida ish haqi kompensatsiyasi",
+  "talaba amaliyotchilarni ish bilan ta’minlashda davlat subsidiyasi"
+ ],
+ "lf-135": [
+  "oziq-ovqat mahsulotlarini saqlash shartlari yaroqsiz qadoq namlangan mahsulot",
+  "choy mahsulotining sifati buzilgan mog‘or hidi qadoqlanishi shikastlangan mahsulotni saqlash taqiqlanishi"
+ ],
+ "lf-136": [
+  "laboratoriya xonalarini birlamchi yong‘in o‘chirish vositalari bilan ta’minlash",
+  "har bir xonaga o‘t o‘chirgich o‘rnatish talablari"
+ ],
+ "lf-137": [
+  "oliy ta'lim tashkilotiga ishga taklif etilgan chet el fuqarolariga ko'p martalik kirish vizasi va konsullik yig'imidan ozod etish oila a'zolari bilan",
+  "chet el fuqarolari va ularning oila a'zolariga mehnat faoliyati uchun kirish vizasi bepul rasmiylashtirish ko'p marta kirib chiqish"
+ ],
+ "lf-138": [
+  "ruxsatnomaning amal qilishini to'xtatib turish asoslari",
+  "nazorat organi ko'rsatmasini belgilangan muddatda bajarmaslik ruxsatnoma"
+ ],
+ "lf-139": [
+  "kasbga o‘qitish kursini tamomlaganlik to‘g‘risida hujjat berish",
+  "kasbiy tayyorgarlik va qayta tayyorlashni tugatgan shaxslarga beriladigan hujjat"
+ ],
+ "lf-140": [
+  "tovarlarni sun'iy taqchillik yuzaga keltirish maqsadida muomaladan olib qo'yish va narxlarni oshirish",
+  "ustun mavqeni suiiste'mol qilish orqali narxlarni asossiz oshirish va tovar chiqarishni cheklash"
+ ],
+ "lf-141": [
+  "kundalik ishlar oralig‘idagi dam olish vaqti kamida necha soat",
+  "smenalar orasidagi tanaffusning eng kam davomiyligi mehnat kodeksi"
+ ],
+ "lf-142": [
+  "xalqaro olimpiada g‘oliblariga oliy ta’lim muassasasiga imtihonsiz qabul imtiyozi amal qilish muddati",
+  "xalqaro olimpiada medal sovrindorlari uchun davlat granti asosida o‘qishga qabul qilish imtiyozi necha yil amal qiladi"
+ ],
+ "lf-143": [
+  "favqulodda holat davrida hududga kirish va chiqishni cheklash tartibi",
+  "Qoraqalpog‘iston Respublikasida favqulodda holat rejimida harakatlanishni cheklash"
+ ],
+ "lf-144": [
+  "majburiy umumiy o‘rta ta’lim muddati",
+  "maktab ta’limi majburiyligi necha yil"
+ ],
+ "lf-145": [
+  "yo‘l harakati qoidabuzarliklari bo‘yicha jarima ballari haqida xabardor qilish",
+  "haydovchini jarima ballari to‘g‘risida SMS xabarnoma yuborish tartibi"
+ ],
+ "lf-146": [
+  "ishsiz shaxslarni muddatidan oldin pensiyaga chiqarish hujjatlarini pensiya organiga yuborish muddati",
+  "bandlik organi muddatidan oldin yoshga doir pensiya tayinlash uchun hujjatlarni yuborish"
+ ],
+ "lf-147": [
+  "majburiy emlashni bekor qilish to'g'risidagi axborotni e'lon qilish tartibi",
+  "aholini sanitariya-epidemiologik chora-tadbirlar va emlash bo'yicha xabardor qilish"
+ ],
+ "lf-148": [
+  "ta'lim tashkiloti faoliyati yuzasidan murojaatlarni telefon orqali qabul qilish",
+  "o'quvchi ta'lim olish masalalari bo'yicha shikoyat bilan telefon orqali murojaat qilish"
+ ],
+ "lf-149": [
+  "ko‘p kvartirali uyda umumiy mulkdagi uskunadan ishlab chiqarilgan issiqlik energiyasi va elektr energiyasi uchun tariflar",
+  "ko‘p qavatli uydagi yangi uskunadan olingan issiqlik hamda elektr energiyasini iste’molchilarga yetkazib berish narxini davlat tomonidan tartibga solish"
+ ],
+ "lf-150": [
+  "davlat umumiy o‘rta ta’lim muassasasiga qabul arizasini davlat xizmatlari markazi yoki Yagona interaktiv davlat xizmatlari portali orqali topshirish",
+  "umumiy o‘rta ta’lim maktabiga o‘quvchini qabul qilish davlat xizmatlari markazi va elektron shaklda ariza berish"
+ ],
+ "lf-151": [
+  "nogironligi bo‘lgan shaxslar uchun sport inshootlari va shart-sharoitlar yaratish",
+  "jismoniy tarbiya va sport bilan shug‘ullanish uchun nogironligi bo‘lgan shaxslarga sharoitlar"
+ ],
+ "lf-152": [
+  "a’zo va to‘qimalarni transplantatsiya qilish asoratlar bo‘yicha tibbiy yordam va murojaat tartibi",
+  "transplantatsiyadan keyingi asoratlar yuzaga kelganda bemorning huquqlari va tibbiy yordam ko‘rsatish"
+ ],
+ "lf-153": [
+  "o‘zini himoya qila olmaydigan ahvol mastlik holati",
+  "jabrlanuvchining ojiz ahvoli alkogol mastligi"
+ ],
+ "lf-154": [
+  "yoshga doir pensiyaga qo‘shimcha to‘lov yuz yoshga to‘lgan shaxslar",
+  "pensiya oluvchilarga yoshiga ko‘ra har oylik ustama to‘lash"
+ ],
+ "lf-155": [
+  "olti kunlik ish haftasida bayram kuniga toʻgʻri kelgan dam olish kuni ko‘chirilishi",
+  "Qurbon hayiti bayram kuni dam olish kuni hisoblanishi mehnat qonunchiligi"
+ ],
+ "lf-156": [
+  "sotilgan tovar nuqsonlari aniqlanganda tovarni almashtirish va yaroqsiz tovarni qaytarib olish majburiyati",
+  "yetkazib berilgan oziq-ovqat mahsuloti sifatsiz bo‘lsa yetkazib beruvchining nuqsonli tovarni almashtirish majburiyati"
+ ],
+ "lf-157": [
+  "tibbiy uskunani ta'mirlash va texnik xizmat ko'rsatishda elektr tarmog'idan uzish talabi",
+  "elektr qurilmalarida ishlarni boshlashdan oldin kuchlanishni o'chirish va xavfsizlik choralari"
+ ],
+ "lf-158": [
+  "tanlovda ishtirok etish talablari ishsiz o‘qimaydigan shaxslar",
+  "mustaqil ijodiy faoliyat bilan shug‘ullanuvchi fuqarolarning tanlovda qatnashishi"
+ ],
+ "lf-159": [
+  "ko‘p kvartirali uy-joy qurilishini joylashtirish va ruxsat berish",
+  "yer uchastkasining foydalanish turini o‘zgartirish va qurilish uchun kelishish"
+ ],
+ "lf-160": [
+  "sog‘lig‘ini tiklash uchun har yilgi bir martalik pul yordami nogiron pensioner xavfli hududlarda xizmat qilgan shaxslar",
+  "sog‘lomlashtirish uchun yillik kompensatsiya nogironligi bo‘lgan pensioner maxsus xavf sharoitlarida xizmat qilgan fuqarolar"
+ ],
+ "lf-161": [
+  "bojxona tranziti tovarlarni bojxona identifikatsiyalash vositalari bilan ta’minlash",
+  "bojxona kuzatuvi yuk va transport hujjatlarini alohida tekshirish hamda identifikatsiya qilish"
+ ],
+ "lf-162": [
+  "bitiruv malakaviy ishi rasmiylashtirish talablari shrift o'lchami",
+  "dissertatsiya matnini rasmiylashtirish kompyuterda terish shrift"
+ ],
+ "lf-163": [
+  "maktab qoshidagi yozgi kunduzgi oromgoh pedagog xodimlarini jalb etish va mehnatiga haq to‘lash",
+  "boshqa umumiy o‘rta ta’lim muassasasidan o‘qituvchi va tarbiyachilarni yozgi sog‘lomlashtirish lagerida ishlatish tartibi"
+ ],
+ "lf-164": [
+  "xalq deputatlari Kengashi deputatining daxlsizligi deputatlik faoliyati doirasida bildirgan fikri uchun javobgarlik",
+  "mahalliy Kengash deputati sessiyada bildirgan fikri uchun jinoiy yoki ma'muriy javobgarlikka tortilmasligi"
+ ],
+ "lf-165": [
+  "etil spirtini realizatsiya qilish ulgurji savdo litsenziya dorixona",
+  "dorixona uchun etil spirti yetkazib berish ishlab chiqaruvchi va ulgurji yetkazib beruvchi talablari"
+ ],
+ "lf-166": [
+  "subsidiya arizasini rad etish sabablari arizachiga yuborish tartibi",
+  "subsidiya olish uchun arizani kamchiliklarni bartaraf etib qayta topshirish"
+ ],
+ "lf-167": [
+  "transport vositasini davlat roʻyxatidan oʻtkazish uchun jismoniy shaxsga oid maʼlumotlar",
+  "avtotransport vositasini roʻyxatdan oʻtkazishda taqdim etiladigan shaxsiy maʼlumotlar va identifikatsiya hujjatlari"
+ ],
+ "lf-168": [
+  "maktabgacha yoshdagi bolalarning rivojlanish ko‘rsatkichlari",
+  "maktabgacha ta’lim davlat talablari bolalar kompetensiyalari"
+ ],
+ "lf-169": [
+  "yopiq fazoda ishlash vaqti hamda tanaffus muddati",
+  "quvur ichida ishlashda bo‘lishning eng ko‘p davomiyligi va keyingi kirish oralig‘i"
+ ],
+ "lf-170": [
+  "chegara nazoratida hujjatlarni vaqtincha olib qo‘yish",
+  "soxta viza yoki chegara nazorati muhri alomatlari pasportni ushlab turish"
+ ],
+ "lf-171": [
+  "radioelektron vositalardan foydalanishda radioxalaqitlarni bartaraf etish va faoliyatini to‘xtatib turish",
+  "elektromagnit moslashuv buzilganda radiochastota spektridan foydalanishni cheklash yoki taqiqlash"
+ ],
+ "lf-172": [
+  "yolg‘iz yashovchi keksalar holidan xabar olish davriyligi",
+  "ko‘ngil so‘rab borish va ijtimoiy patronaj ko‘rsatish tartibi"
+ ],
+ "lf-173": [
+  "ishlab chiqarishdagi baxtsiz hodisa yoki kasb kasalligi munosabati bilan tovon puli va kompensatsiya to'lovlari",
+  "mehnatda mayib bo'lish, kasb kasalligi yoki vafot etish holatida xodim va oila a'zolariga beriladigan nafaqa va sug'urta to'lovlari"
+ ],
+ "lf-174": [
+  "turar joy oldi-sotdi shartnomasi bo‘yicha pul talab qilish huquqini boshqa shaxsga o‘tkazish",
+  "talab qilish huquqidan boshqaning foydasiga voz kechish notarial tasdiqlash davlat ro‘yxatidan o‘tkazish"
+ ],
+ "lf-175": [
+  "sun’iy hovuzlarda suv olishni hisobga olish va onlayn kuzatish qurilmasi majburiyati",
+  "suv iste’molini hisobga olish uskunasi va avtomatlashtirilgan axborot tizimiga ulash talabi"
+ ],
+ "lf-176": [
+  "suv taqsimoti rejasi o‘zgartirilishi",
+  "suv taqsimoti limitlari qayta ko‘rib chiqilishi"
+ ],
+ "lf-177": [
+  "qasddan sodir etilgan jinoyat uchun sudlangan shaxslarni pedagogik faoliyatga qo‘yish",
+  "umumiy o‘rta ta’lim tashkilotida o‘qituvchi lavozimiga qo‘yiladigan cheklovlar sudlanganlik"
+ ],
+ "lf-178": [
+  "texnologik uskunani ishga tushirishdan oldin ogohlantiruvchi signal",
+  "ishlab chiqarish uskunalari uchun ovozli va yorug‘lik signallari"
+ ],
+ "lf-179": [
+  "ijara haqi to‘lash muddati va tartibi",
+  "ijara to‘lovi oldindan to‘lash shartlari"
+ ],
+ "lf-180": [
+  "kreditor ustav fondini kamaytirish munosabati bilan majburiyatlarni muddatidan oldin bajarishni va zararni qoplashni yozma talab qilish muddati",
+  "ustav kapitalini kamaytirish haqida xabardor qilingan kreditorning muddatidan oldin ijro va zararlarni qoplash to'g'risidagi talabi"
+ ],
+ "lf-181": [
+  "o‘zini o‘zi band qilgan shaxs qishloq xo‘jaligi texnikasi xizmatlari ko‘rsatish",
+  "yakka tartibdagi mehnat faoliyati fermer xo‘jaliklariga traktor bilan yer haydash xizmati"
+ ],
+ "lf-182": [
+  "suv obyektlarining qirg‘oqbo‘yi mintaqasida qurilish cheklovlari",
+  "daryo bo‘yidagi yer uchastkasida bino va inshootlar qurishga ruxsat"
+ ],
+ "lf-183": [
+  "xizmat vazifalarini bajarish chog'ida halok bo'lgan harbiy xizmatchining ota-onasi bepul temir yo'l havo transporti yurish huquqi",
+  "halok bo'lgan harbiy xizmatchi ota-onalariga yiliga necha marta bepul yo'l yurish imtiyozi"
+ ],
+ "lf-184": [
+  "sport maktabi bitiruvchisiga murabbiylik va hakamlik faoliyati uchun ruxsatnoma berish",
+  "murabbiylik va sport hakamligi faoliyati bilan shugʻullanish huquqini tasdiqlovchi hujjatlar"
+ ],
+ "lf-185": [
+  "magistratura qo‘shma ta’lim dasturi o‘qitish tili",
+  "chet el oliy ta’lim muassasasi bilan hamkorlikdagi ta’lim dasturi mashg‘ulotlar tili"
+ ],
+ "lf-186": [
+  "mehnatni muhofaza qilish ish joylarining sanitariya va gigiyena talablari",
+  "ish beruvchining xavfsiz mehnat sharoitlarini ta'minlash yoritish shovqin mikroiqlim"
+ ],
+ "lf-187": [
+  "qarz oluvchining to‘lovga qobiliyati va daromadlarini tasdiqlovchi hujjatlar",
+  "bank krediti bo‘yicha jismoniy shaxsning oylik daromadi to‘g‘risidagi ma’lumotnoma"
+ ],
+ "lf-188": [
+  "dori vositalari reklamasiga ruxsatnoma berilgunga qadar reklama qilish taqiqlanadi",
+  "dori vositalari reklamasi uchun hujjatlar qabul qilinganligi to‘g‘risidagi yozma xabar huquqiy asos"
+ ],
+ "lf-189": [
+  "chet ellik xodim uchun mehnat faoliyatiga ruxsatnoma yig‘imi o‘z vaqtida to‘lanmagan taqdirda ruxsatnomani bekor qilish",
+  "mehnat faoliyatiga ruxsat berish tasdiqnomasini berish uchun yig‘imni belgilangan muddatda to‘lamaslik oqibatlari"
+ ],
+ "lf-190": [
+  "oilaviy nodavlat maktabgacha ta’lim tashkiloti ijtimoiy ko‘makka muhtoj oilalar bolalari kvotasi bo‘sh o‘rinlarga boshqa bolalarni qabul qilish",
+  "oilaviy bog‘cha ota-onalar badali miqdori davlat maktabgacha ta’lim tashkilotidagi to‘lovdan oshmasligi"
+ ],
+ "lf-191": [
+  "yoshlarga tadbirkorlik faoliyatini boshlash uchun imtiyozli kreditlar va davlat tomonidan qo‘llab-quvvatlash",
+  "yoshlar startap loyihalarini moliyalashtirish va subsidiyalar ajratish tartibi"
+ ],
+ "lf-192": [
+  "kichik sanoat zonasida davlat mulki obyektlarini ijaraga berish va mulk huquqini o‘tkazish shartlari",
+  "davlat ko‘chmas mulk obyektini investitsiya majburiyatlari bajarilganda xususiylashtirish tartibi"
+ ],
+ "lf-193": [
+  "tibbiy hujjatlardan ko‘chirma berish bemorning huquqi",
+  "bemorga tibbiy ko‘rik natijalari nusxasini berish"
+ ],
+ "lf-194": [
+  "sariyog'ni saqlash talablari boshqa oziq-ovqat mahsulotlari bilan birga saqlash",
+  "o'tkir hidli mahsulotlar bilan birga saqlash taqiqlanishi sut mahsulotlari savdo qoidalari"
+ ],
+ "lf-195": [
+  "oldi-sotdi shartnomasida tovarning assortimenti va xususiyatlari buyurtmachining maqsadiga muvofiqligi",
+  "chakana oldi-sotdi buyurtma bo‘yicha tovarni topshirish sotuvchining majburiyatlari assortiment o‘lcham rang"
+ ],
+ "lf-196": [
+  "muddatli harbiy xizmatni o‘tagan fuqarolarga oliy ta’limga kirishda tavsiyanoma bo‘yicha imtiyoz",
+  "eski namunadagi tavsiyanoma amal qilishi oliy ta’lim muassasasiga qabulda yengilliklar"
+ ],
+ "lf-197": [
+  "ruhiy kasalliklar shifoxonasi tibbiyot xodimlari qisqartirilgan ish vaqti qo‘shimcha mehnat ta’tili imtiyozli pensiya",
+  "psixiatriya muassasasi xodimlari mehnat sharoitlari qisqa ish haftasi qo‘shimcha ta’til muddatidan oldin pensiya"
+ ],
+ "lf-198": [
+  "test natijalari to‘g‘risida to‘liq axborot taqdim etish",
+  "ta’lim oluvchining baholash natijalari haqida ma’lumot berish majburiyati"
+ ],
+ "lf-199": [
+  "davlat organlari xodimlariga turar joy ijarasi uchun kompensatsiya to‘lash",
+  "xizmat uyi berilmagan xodimga uy-joy ijarasi xarajatlarini qoplash"
+ ],
+ "lf-200": [
+  "jismoniy va yuridik shaxslarning murojaatlari natijasi haqida xabardor qilish",
+  "ariza bo‘yicha qabul qilingan qaror to‘g‘risida murojaat etuvchini xabardor etish"
+ ],
+ "lf-201": [
+  "sinov xonasi uchun olib kiriladigan uskuna va ehtiyot qismlar bojxona to'lovlaridan ozod etish",
+  "shartnomada nazarda tutilgan uskuna bilan birga ehtiyot qismlarni import qilishda bojxona imtiyozlari"
+ ],
+ "lf-202": [
+  "konsert-tomosha faoliyatini amalga oshirish uchun ruxsatnoma berish to‘g‘risidagi arizani ko‘rib chiqish",
+  "ijrochilik faoliyati uchun ruxsatnoma berishda taqdim etilgan hujjatlar va xulosa mezonlari"
+ ],
+ "lf-203": [
+  "ijara asosida foydalanilayotgan yer uchastkasining tuproq boniteti va meliorativ holati toʻgʻrisida axborot taqdim etish",
+  "yer uchastkasining sifat tavsiflari va tuproq unumdorligi haqidagi rasmiy maʼlumotni olish huquqi"
+ ],
+ "lf-204": [
+  "yo‘qolgan ijro ishini yuritish materiallarini tiklash to‘g‘risida ariza sudga berish",
+  "ijro hujjatlari yo‘qolgan taqdirda ish yuritishni tiklash qaysi sud vakolatiga kiradi"
+ ],
+ "lf-205": [
+  "xorijiy davlat bojxona muhrini tan olish",
+  "transport vositasidagi bojxona muhrlari va plombalari"
+ ],
+ "lf-206": [
+  "havo kemasi bortida radioelektron vositalardan foydalanish tartibi",
+  "yo‘lovchilarning foto va videotasvirga olish qoidalari havo transportida"
+ ],
+ "lf-207": [
+  "giyohvandlik vositalari iste'mol qilganlik holatini aniqlash uchun tibbiy tekshiruvga yuborish",
+  "majburiy tibbiy ko'rik giyohvandlik vositalari psixotrop moddalar iste'moli gumoni"
+ ],
+ "lf-208": [
+  "bojxona rasmiylashtiruvi hujjatlarini qabul qilishni rad etish asoslari",
+  "bojxona deklaratsiyasida ma'lumotlar yetishmasligi va hujjatlarni qabul qilmaslik"
+ ],
+ "lf-209": [
+  "terrorizm oqibatida jabrlangan shaxslarni ijtimoiy reabilitatsiya qilish ustidan shikoyat qilish tartibi",
+  "davlat organlari va mansabdor shaxslar qarorlari hamda harakatlari ustidan shikoyat qilish terrorchilikka qarshi kurashda yordam ko‘rsatish"
+ ],
+ "lf-210": [
+  "xodimni o‘qishga yuborishda ish haqi saqlanishi",
+  "ish beruvchi tomonidan o‘qishga yuborilgan xodimga kafolat va kompensatsiyalar"
+ ],
+ "lf-211": [
+  "yer uchastkasini ijaraga berish muddatini uzaytirish",
+  "yer uchastkasidan foydalanish huquqini qayta rasmiylashtirish"
+ ],
+ "lf-212": [
+  "bojxona deklaratsiyasiga o‘zgartirish va qo‘shimcha ma’lumotlar kiritish vakolatli shaxs ishonchnoma",
+  "deklarantning bojxona organiga murojaati bojxona hujjatlarini tuzatish vakil ishonchnoma asosida"
+ ],
+ "lf-213": [
+  "yangi tashkil etilgan kichik ishlab chiqarish korxonasi soliq imtiyozi yagona soliq to'lovi muddatlari",
+  "Qoraqalpog'iston Respublikasi Chimboy tumani yangi korxona yagona soliq to'lovidan ozod etish"
+ ],
+ "lf-214": [
+  "umumiy o‘rta ta’lim muassasalari o‘quvchi qizlarini davlat mukofoti bilan taqdirlash",
+  "iqtidorli va namunali xulqli qizlar uchun davlat mukofoti"
+ ],
+ "lf-215": [
+  "jismoniy tayyorgarlik sinovi mashqlar orasidagi dam olish vaqti",
+  "qorin mushaklari mashqi qo‘llarni bukib-yozish mashqlari bajarish tartibi"
+ ],
+ "lf-216": [
+  "ichki ishlar organlari tibbiyot muassasasi yo‘llanmasi asosida sog‘liqni saqlash tizimidagi ixtisoslashtirilgan shifoxonaga yuborish tartibi",
+  "ichki ishlar tizimi xodimlarini maxsus davolanish uchun boshqa vazirlik tibbiyot muassasasiga yo‘llash"
+ ],
+ "lf-217": [
+  "yengil atletika qisqa masofaga yugurish start buyruqlari va sportchining harakatlari",
+  "sport musobaqalari qoidalari start diqqat olg'a buyruqlari bajarilishi"
+ ],
+ "lf-218": [
+  "arizani kamchiliklarini bartaraf etish uchun muddat ichida qayta topshirish davlat boji",
+  "arizani qayta topshirish muddati o‘tkazib yuborilganda ariza yangidan berilgan deb hisoblash"
+ ],
+ "lf-219": [
+  "abbreviatura va qisqartmalarni yozish qoidalari bosh harflar",
+  "davlatlar va tashkilotlar nomlarining qisqartmalarini imlo qoidalari"
+ ],
+ "lf-220": [
+  "er-xotinning umumiy birgalikdagi mulkidagi ulushni aniqlash va ajratish meros ochilganda",
+  "meros tarkibidan omon qolgan er yoki xotinning ulushini ajratish notarial tartib"
+ ],
+ "lf-221": [
+  "pedagog xodimlarning yillik ish vaqti me’yori",
+  "kasb-hunar ta’limi tashkiloti o‘qituvchisining ish vaqti davomiyligi"
+ ],
+ "lf-222": [
+  "xizmat vazifasini bajarish chog‘ida olgan jarohat natijasida nogironlikni fuqarolarni himoya qilish bilan bog‘liq deb e’tirof etish komissiyasi",
+  "xizmat paytida jarohatlanish oqibatida nogiron bo‘lib qolgan shaxs holatini alohida ko‘rib chiqish va qaror qabul qilish tartibi"
+ ],
+ "lf-223": [
+  "mijozni masofadan identifikatsiya qilish va verifikatsiya qilish biometrik identifikatsiya mobil telefon raqamini tasdiqlash",
+  "bank hisobvarag'ini ochishda shaxsni tasdiqlovchi hujjat selfi videoidentifikatsiya SMS orqali abonent raqamini tekshirish"
+ ],
+ "lf-224": [
+  "Jasorat maktabi bitiruvchilariga oliy harbiy ta’lim muassasalariga kirishda tavsiyanoma berish tartibi",
+  "Vatan tayanchi otryadi a’zolariga oliy harbiy va yuridik ta’lim muassasalariga qabulda imtiyozlar"
+ ],
+ "lf-225": [
+  "deputatni haqorat qilish va tuhmat uchun javobgarlik",
+  "xalq deputati shaʼni qadr qimmati va obroʻsiga tajovuz javobgarligi"
+ ],
+ "lf-226": [
+  "elektron savdo platformasi sotuvchini reyestrdan chiqarish asoslari",
+  "soliq qarzdorligi va tovar yetkazib berilmaganligi uchun marketplace sotuvchini hisobdan chiqarish"
+ ],
+ "lf-227": [
+  "pedagog xodimlarni qayta tayyorlash va malakasini oshirish xarajatlari",
+  "akademik litsey pedagog xodimlarining malakasini oshirishni moliyalashtirish"
+ ],
+ "lf-228": [
+  "qutqaruv ishlarini amalga oshirish chog‘ida turar joy va hovliga kirish",
+  "favqulodda vaziyatlarda fuqarolarning mol-mulkiga kirish tartibi qutqaruvchilar"
+ ],
+ "lf-229": [
+  "ta'lim oluvchini dars mashg'ulotlarini sababsiz qoldirganligi uchun chetlashtirish",
+  "sababsiz 18 soat va undan ortiq dars qoldirish o'qishdan chiqarish asoslari"
+ ],
+ "lf-230": [
+  "farmatsevtika mahsulotlarini ishlab chiqarish uchun texnologik uskunalarni import qilish bo‘yicha chet el valyutasidagi kredit muddati va imtiyozli davr",
+  "dorixona uchun ishlab chiqarish uskunalarini chetdan olib kelishda valyuta krediti maksimal muddati hamda asosiy qarzni to‘lashni kechiktirish muddati"
+ ],
+ "lf-231": [
+  "fermer xo‘jaligi yer uchastkasida baliqchilik faoliyatini amalga oshirish tanlovda ishtirok etish",
+  "suv obyektlarida baliqchilikni tashkil etish bo‘yicha tanlov ishtirokchilari va yer foydalanuvchilari huquqlari"
+ ],
+ "lf-232": [
+  "nikohlanuvchi shaxslarni tibbiy ko‘rikdan o‘tkazish to‘g‘risidagi ma’lumotnoma amal qilish muddati",
+  "nikoh tuzishdan oldin tibbiy ko‘rik ma’lumotnomasi berish va haqiqiylik muddati"
+ ],
+ "lf-233": [
+  "oliy ta'lim muassasalariga qabul onlayn ro'yxatdan o'tish muddati",
+  "ijodiy imtihon o'tkaziladigan ta'lim yo'nalishlariga ro'yxatdan o'tish muddati"
+ ],
+ "lf-234": [
+  "bolalar sog'lomlashtirish oromgohi o'rmon tomoni bo'ylab yong'inga qarshi ochiq yo'lak kengligi",
+  "o'rmon bilan tutash hududda oromgoh uchun yong'in xavfsizligi oralig'i"
+ ],
+ "lf-235": [
+  "texnologik uskuna importi bojxona to‘lovlaridan ozod etish",
+  "olib kirilayotgan uskuna uchun bojxona boji va qo‘shilgan qiymat solig‘i imtiyozlari"
+ ],
+ "lf-236": [
+  "tadbirkorlik faoliyatiga noqonuniy aralashish va faoliyatni to'xtatib turish",
+  "davlat nazorati tekshiruvlarida savdo faoliyatiga to'sqinlik qilish taqiqlanishi"
+ ],
+ "lf-237": [
+  "sud hujjatini majburiy ijro etish muddatlari pul mablag'larini undirish",
+  "undiruv summasini undiruvchiga o'tkazish muddati ijro ishi bank kartasi"
+ ],
+ "lf-238": [
+  "ko‘chmas mulkka egalik huquqini vujudga keltiruvchi muddat",
+  "egasiz mol-mulkka nisbatan mulk huquqini olish"
+ ],
+ "lf-239": [
+  "arizani qabul qilishni rad etish asoslari hujjatlar to‘liq bo‘lmaganda",
+  "yetishmayotgan hujjatlar sabab arizani qabul qilmaslik tartibi"
+ ],
+ "lf-240": [
+  "alimentni oldindan to‘lash tartibi",
+  "aliment majburiyatini oldindan bajarish murojaat qilish"
+ ],
+ "lf-241": [
+  "olti kunlik ish haftasi yangi yil bayrami dam olish kunini ko‘chirish",
+  "bayram kunlari arafasida va dam olish kunlariga to‘g‘ri kelganda olti kunlik ish haftasi"
+ ],
+ "lf-242": [
+  "mol-mulk sug‘urtasi sug‘urta tovonini hisoblash tartibi chorva nobud bo‘lishi o‘g‘irlanishi majburiy so‘yish",
+  "sug‘urta summasi va sug‘urta qoplamasi miqdorini aniqlash qishloq xo‘jaligi hayvonlari o‘lim o‘g‘irlik majburiy so‘yish"
+ ],
+ "lf-243": [
+  "naqd xorijiy valyutani olib chiqish tasdiqlovchi hujjat boshqa shaxsga berilishi taqiqlanadi",
+  "naqd xorijiy valyutani olib chiqishga asos bo‘ladigan bank hujjatidan qayta foydalanish mumkin emas"
+ ],
+ "lf-244": [
+  "ishsiz sifatida e'tirof etish muddati va mos ish topilmaganda tartib",
+  "ish qidirayotgan shaxsni ishsiz deb e'tirof etish va qaror qabul qilish muddati"
+ ],
+ "lf-245": [
+  "nogironligi bo‘lgan shaxslarga navbatdan tashqari xizmat ko‘rsatish",
+  "davlat xizmatlari markazlarida nogironligi bo‘lgan shaxslarga ustuvor qabul"
+ ],
+ "lf-246": [
+  "nazorat-kassa texnikasi fiskal xotira blokirovka holatlari",
+  "nazorat-kassa mashinasi chekning nazorat lentasi tugashi ichki nosozlik bloklanishi"
+ ],
+ "lf-247": [
+  "ko‘p marta foydalaniladigan idish va qadoqlash xavfsizligi hamda mustahkamligi talablari",
+  "iste’molchi uchun zararsiz qayta foydalaniladigan quti va idishlarni tashishda saqlanishi talablari"
+ ],
+ "lf-248": [
+  "nodavlat ta'lim tashkiloti pedagog xodimlari malaka sertifikati xarajatlarining bir qismini qoplash subsidiyasi ariza berish muddati va tartibi",
+  "xususiy ta'lim muassasasi o'qituvchisining kasbiy sertifikat olish xarajatlarini qoplash uchun murojaat qilish tartibi va vakolatli organ"
+ ],
+ "lf-249": [
+  "qurilish ruxsatnomasi va loyiha hujjatlari bilan tanishtirish jamoatchilik xabardor qilish tartibi",
+  "qurilish obyektiga e'tiroz bildirish murojaat qilish muddati qo'shnilar huquqlari"
+ ],
+ "lf-250": [
+  "familiya o‘zgarganda shaxsga doir ma’lumotlarni davlat organlari axborot tizimlarida yangilash tartibi",
+  "fuqarolik holati dalolatnomasi o‘zgarganda idoralararo elektron ma’lumot almashinuvi orqali ma’lumotlarni yangilash"
+ ],
+ "lf-251": [
+  "nogironligi bo‘lgan shaxslar uchun oqilona moslashtirish va sharoit yaratish",
+  "malaka sinovi o‘tkazishda nogironligi bo‘lgan shaxslar uchun alohida qulayliklar"
+ ],
+ "lf-252": [
+  "amaliyot rahbari yo‘riqnoma va hisobot tartibini tushuntirish majburiyati",
+  "talabalarning ishlab chiqarish amaliyoti birinchi kun yo‘riqnoma hisobot yozish tartibi"
+ ],
+ "lf-253": [
+  "imtihonga shaxsni tasdiqlovchi hujjatsiz kiritish tartibi",
+  "imtihonga kechikib kelgan abituriyentni kiritish qoidalari"
+ ],
+ "lf-254": [
+  "ko‘rgazma ishtirokchisining axborot taxtasi va yozuvlari davlat tilida hamda boshqa tillarda",
+  "savdo ko‘rgazmasida stendda tashkilot haqida majburiy ma’lumotlarni joylashtirish tartibi"
+ ],
+ "lf-255": [
+  "talabalarga stipendiya tayinlash muddati va toʻlash boshlanish sanasi",
+  "oliy taʼlim muassasasida stipendiya berish davri va tayinlash tartibi"
+ ],
+ "lf-256": [
+  "aholi punktlarini ichimlik suvi ta’minoti, oqova suv chiqarish va ichki yo‘llarni yaxshilash dasturi",
+  "mahalla infratuzilmasini rivojlantirish ichimlik suvi, kanalizatsiya tarmoqlari va ichki ko‘chalarni ta’mirlash"
+ ],
+ "lf-257": [
+  "talabalarni ta'lim muassasasidan chetlashtirish asoslari",
+  "talabalar turar joyi ichki tartib qoidalarini buzganlik uchun javobgarlik"
+ ],
+ "lf-258": [
+  "imtihon vaqtida taqiqlangan vositalardan foydalanish tartibi",
+  "telefon va kalkulyatordan foydalangan abituriyentni test sinovidan chetlashtirish"
+ ],
+ "lf-259": [
+  "eksport shartnomasini tuzmasdan ishlar va xizmatlarni eksport qilish qiymati bazaviy hisoblash miqdorining belgilangan baravarigacha",
+  "elektron savdo platformalari orqali dasturiy ta'minotni chet elga realizatsiya qilish bo'yicha tashqi savdo shartnomasi rasmiylashtirish talabi"
+ ],
+ "lf-260": [
+  "chet davlatda roʻyxatdan oʻtkazilgan transport vositasi maʼmuriy jarima undirish tartibi",
+  "davlat chegarasi orqali chiqishda maʼmuriy jarimani undirish transport vositasi egasi"
+ ],
+ "lf-261": [
+  "bir hududda joylashgan bir nechta qozonlarning umumiy issiqlik quvvatini aniqlash va toifaga kiritish",
+  "qozon qurilmalarini yig‘indi quvvati bo‘yicha toifalash tartibi"
+ ],
+ "lf-262": [
+  "chakana savdo faoliyatida nazorat-kassa texnikasi va tovar cheki berish majburiyati",
+  "savdo shoxobchasida to'lov terminallari bilan jihozlash va bank kartalari orqali to'lovlarni qabul qilish majburiyati"
+ ],
+ "lf-263": [
+  "sport maktab-internati o‘quvchilarini yotoqxona ovqatlanish va kiyim-bosh bilan ta’minlash",
+  "olimpiya va milliy sport turlari bo‘yicha davlat ixtisoslashtirilgan maktab-internati internatda yashash va moddiy ta’minot"
+ ],
+ "lf-264": [
+  "kam ta'minlangan oilalarga bolalar nafaqasi va moddiy yordam tayinlash toifalari hamda ma'lumotlarni axborot tizimlari orqali tekshirish",
+  "bolali oilalarga nafaqa va moddiy yordam olishda oila tarkibi mezonlari hamda ko'mir bo'yicha ma'lumotlarni idoralararo elektron almashinuvi orqali aniqlash"
+ ],
+ "lf-265": [
+  "aliment bo‘yicha qarzdorlik mavjud bo‘lganda mulkni boshqa shaxsga o‘tkazishni cheklash va bank hamda davlat xizmatlaridan foydalanishni cheklash",
+  "aliment undirish bo‘yicha ijro hujjati yuzasidan qarzdorga nisbatan qo‘llaniladigan cheklovlar ko‘chmas mulk va transport vositasini realizatsiya qilish bank xizmatlari va davlat xizmatlari"
+ ],
+ "lf-266": [
+  "akademik litseyga qabul kvotasi",
+  "akademik litseyga o‘quvchilar qabul parametrlari"
+ ],
+ "lf-267": [
+  "mehmonxona faoliyatini tashkil etish uchun olingan kredit foiz xarajatlarining bir qismini qoplash muddati",
+  "mehmonxona qurish va jihozlash uchun kredit foizlarini kompensatsiya qilish tushum oshishi talabi"
+ ],
+ "lf-268": [
+  "kredit bo‘yicha majburiyatlarni muddatidan oldin qisman so‘ndirish va to‘lov jadvalini qayta tuzish",
+  "qarz oluvchining ortiqcha to‘lovi hisobiga asosiy qarzdorlikni kamaytirish va qayta hisob-kitob qilish"
+ ],
+ "lf-269": [
+  "magistraturaga qabul chet tili milliy yoki xalqaro sertifikat imtihondan ozod etish",
+  "magistratura qabulida bakalavr diplomi o‘rtacha o‘zlashtirish ko‘rsatkichi baholash tartibi"
+ ],
+ "lf-270": [
+  "chet tili imtihoni sinov tartibi va baholash mezonlari",
+  "chet tilini bilish darajasini aniqlash bo‘yicha malaka talablari"
+ ],
+ "lf-271": [
+  "imtihon natijalarini qayta ko‘rib chiqish komissiyasi tarkibi",
+  "apellatsiya komissiyasi a’zolari soni va manfaatlar to‘qnashuvi"
+ ],
+ "lf-272": [
+  "to‘lov kartasi rekvizitlari va bir martalik tasdiqlash kodini uchinchi shaxsga oshkor etish oqibatlari",
+  "bank kartadan yechilgan mablag‘larni qaytarish majburiyati mijozning aybi bilan ruxsatsiz operatsiya"
+ ],
+ "lf-273": [
+  "yosh oilalarga ipoteka krediti yangi qurilgan uy-joy",
+  "uy-joyga muhtoj yosh oila imtiyozli ipoteka kredit shartlari"
+ ],
+ "lf-274": [
+  "tovarlar haqidagi ma’lumotlarning bojxona hujjatlariga muvofiq emasligi",
+  "bojxona nazoratida yuk hujjatlari va tovarlar nomuvofiqligi"
+ ],
+ "lf-275": [
+  "attestatsiyaga uzrli sabab bilan kelmagan shaxsni keyingi attestatsiyaga kiritish",
+  "attestatsiyaga uzrsiz sabablarsiz kelmaslik oqibatlari"
+ ],
+ "lf-276": [
+  "oliy ta’lim muassasasi talabalar yotoqxonasi ovqatlanish xizmatlarini tashkil etish shartnoma bo‘yicha buyurtmachi majburiyatlari",
+  "autsorsing asosida ovqatlanish xizmatlari buyurtmachi talabalar soni ovqatlanish vaqti ma’lumot berish va xizmat haqini o‘z vaqtida to‘lash"
+ ],
+ "lf-277": [
+  "ishsiz shaxsni ish qidiruvchi sifatida ro‘yxatga olish va maqbullashtirilgan ish taklif qilish muddati",
+  "muddatidan oldin pensiya tayinlash uchun murojaat qilgan ishsiz fuqaroni bandlik organi tomonidan tekshirish va chaqirish tartibi"
+ ],
+ "lf-278": [
+  "taqdim etuvchiga beriladigan qimmatli qog'oz bo'yicha to'lovlarni taqiqlash sud ajrimi",
+  "yo'qolgan qimmatli qog'oz yuzasidan to'lov va berishni vaqtincha to'xtatib turish"
+ ],
+ "lf-279": [
+  "sertifikat olish uchun arizani ko‘rib chiqish muddati va sinov sanasini belgilash",
+  "sertifikat berish bo‘yicha hujjatlarni ko‘rib chiqish hamda malaka sinovi kunini belgilovchi vakolatli organ"
+ ],
+ "lf-280": [
+  "ochiq sud majlisida audio yozuvni amalga oshirish tartibi",
+  "sud majlisini stenogramma qilish va ovoz yozib olishga ruxsat"
+ ],
+ "lf-281": [
+  "imtiyozlar qo‘llanilgan tovarlarni realizatsiya qilganda bojxona to‘lovlarini to‘lash majburiyati",
+  "bojxona imtiyozi bilan olib kirilgan uskuna maqsadli foydalanilmaganda soliq va bojxona to‘lovlarini undirish"
+ ],
+ "lf-282": [
+  "jismoniy tayyorgarlik sinovlari turnikda tortilish me'yorlari",
+  "turnikda tortilish bo'yicha normativlar qabul qilish tartibi"
+ ],
+ "lf-283": [
+  "tanlov natijalari yuzasidan yozma e'tiroz kiritish muddati va ko'rib chiqish tartibi",
+  "tanlov natijalaridan norozi bo'lgan ishtirokchining e'tirozini ish kunlarida berish va ko'rib chiqish muddati"
+ ],
+ "lf-284": [
+  "ta'til puli hisoblashda ish haqi tarkibiga ustamalarni kiritish",
+  "o'rtacha ish haqini hisoblashda doimiy ustamalarni hisobga olish"
+ ],
+ "lf-285": [
+  "teri kasalliklarini aniqlash va davolash bo‘yicha tibbiy yordam",
+  "fuqarolarga tibbiy maslahat va dermatologiya xizmati ko‘rsatish"
+ ],
+ "lf-286": [
+  "ishga qabul qilishda dastlabki sinov muddati pedagog xodim",
+  "oliy ta'lim muassasasiga pedagog xodimni ishga qabul qilish tartibi"
+ ],
+ "lf-287": [
+  "oliy ta'lim to'g'risidagi diplomni o'zaro tan olish Belarus Respublikasi",
+  "xorijiy davlat ta'lim hujjatlarini tan olish va nostrifikatsiya Belarus"
+ ],
+ "lf-288": [
+  "umumiy o‘rta ta’lim muassasasida davlat bayramlarini o‘tkazish tartibi",
+  "ta’lim muassasasida bayram tadbirlari va o‘quvchilar ishtirokidagi tanlov sport musobaqalari"
+ ],
+ "lf-289": [
+  "ipoteka krediti mablag‘larini ajratish shartlari garov shartnomasi sug‘urta polisi taqdim etilgandan so‘ng",
+  "bankning kredit mablag‘larini berish majburiyati ipoteka ta’minoti rasmiylashtirilgandan keyin"
+ ],
+ "lf-290": [
+  "suzib yuruvchi navigatsiya belgilarining ko‘rinish uzoqligi",
+  "daryoda suzib turuvchi belgilarni ko‘rish masofasi"
+ ],
+ "lf-291": [
+  "elektr tarmoqlariga ulanish texnik shartlar amal qilish muddati",
+  "elektr ta'minoti obyektlarini ulash bo'yicha texnik shartlarni qayta rasmiylashtirish"
+ ],
+ "lf-292": [
+  "sport maktabiga o‘qishni ko‘chirishni rad etish sabablari yozma ravishda ma’lum qilish",
+  "sport ta’lim muassasasiga o‘tkazishni rad etish to‘g‘risida xabarnoma yuborish tartibi"
+ ],
+ "lf-293": [
+  "talabani amaliyot o‘tash joyi tugatilganda boshqa tashkilotga biriktirish tartibi",
+  "dual ta’lim shaklida o‘qiyotgan talabani kunduzgi ta’lim shakliga o‘tkazish tartibi"
+ ],
+ "lf-294": [
+  "paxta chigitini tozalash uskunasi ishchi organlari orasidagi masofa",
+  "paxta chigitini ezilishini oldini olish uchun tishli aylana va qobiq orasidagi tirqish"
+ ],
+ "lf-295": [
+  "markazlashmagan kanalizatsiya yopiq oqova suv to‘plash inshooti",
+  "hojatxona va qo‘l yuvgich oqova suvlarini germetik yig‘ma chuqurga chiqarish talablari"
+ ],
+ "lf-296": [
+  "maishiy chiqindilarni saqlash talablari",
+  "qattiq va suyuq maishiy chiqindilarni xavfsiz saqlash"
+ ],
+ "lf-297": [
+  "sud majlisi vaqti va joyi haqida oldindan xabardor qilish",
+  "sud majlisiga kelmagan shaxs ishtirokisiz ishni ko‘rish shartlari"
+ ],
+ "lf-298": [
+  "jinoyat natijasida orttirilgan mol-mulkni ashyoviy dalil sifatida e'tirof etish",
+  "jinoiy yo'l bilan topilgan mablag' hisobiga olingan buyumlarni dalil sifatida olish"
+ ],
+ "lf-299": [
+  "xususiy sport klubi sport musobaqalarida ishtirok etish tartibi",
+  "sport klubi nomidan rasmiy sport musobaqalarida qatnashish"
+ ],
+ "lf-300": [
+  "talabalar bilan ishlash bo'yicha tyutor faoliyati va vazifalari",
+  "bir nafar tyutorga biriktiriladigan talabalar soni oliy ta'lim muassasasi"
+ ]
+}

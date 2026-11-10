@@ -1,0 +1,3862 @@
+[
+ {
+  "question": "lf-001",
+  "document": -54458,
+  "article": "11",
+  "within": "I BOʻLIM. NOTARIAT FAOLIYATINING TASHKILIY ASOSLARI > 1-bob. UMUMIY QOIDALAR",
+  "pass": "raw",
+  "status": "kept",
+  "quote": "Rasmiylashtirilgan hujjat matni fuqarolarning talabiga binoan notarius yoki notarial harakatlarni amalga oshiruvchi shaxs tomonidan rus tilida yoki imkon boʻlsa, boshqa maqbul tilda beriladi.",
+  "reason": "States that on the citizen's request the notary issues the document text in Russian."
+ },
+ {
+  "question": "lf-004",
+  "document": -2364165,
+  "article": null,
+  "within": "Ilova. Toshkent shahridagi Inxa universiteti faoliyatini tashkil etish boʻyicha TADBIRLAR REJASI",
+  "pass": "raw",
+  "status": "no_text",
+  "quote": "",
+  "reason": ""
+ },
+ {
+  "question": "lf-004",
+  "document": -5495526,
+  "article": "7",
+  "within": "Ilova. Oʻzbekiston Respublikasi va xorijiy hamkor oliy taʼlim tashkilotlarining qoʻshma taʼlim dasturlari asosida taʼlim faoliyatini tashkil etish tartibi toʻgʻrisida NIZOM > 1-bob. Umumiy qoidalar",
+  "pass": "alt",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Only lists that the contract must describe the diploma; does not say which diploma is issued."
+ },
+ {
+  "question": "lf-004",
+  "document": -5495526,
+  "article": "9",
+  "within": "Ilova. Oʻzbekiston Respublikasi va xorijiy hamkor oliy taʼlim tashkilotlarining qoʻshma taʼlim dasturlari asosida taʼlim faoliyatini tashkil etish tartibi toʻgʻrisida NIZOM > 1-bob. Umumiy qoidalar",
+  "pass": "alt",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Lists documents for programme expertise; does not say which diploma the graduate receives."
+ },
+ {
+  "question": "lf-005",
+  "document": -6216084,
+  "article": "32",
+  "within": "3-ilova. Axborot-kutubxona resurslarini axborot-kutubxona muassasalarining fondlari hisobidan chiqarish tartibi toʻgʻrisida NIZOM > 2-bob. Axborot-kutubxona resurslarini fond hisobidan chiqarish > 2-§. Foydalanuvchilar tomonidan yoki boshqa muayyan sabablarga koʻra yoʻqotilgan axborot-kutubxona resurslarini fond hisobidan chiqarish",
+  "pass": "alt",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Text covers drawing up loss documents for an expert group, not re-inventory of the whole stock."
+ },
+ {
+  "question": "lf-005",
+  "document": -6216084,
+  "article": "55",
+  "within": "1-ilova. Axborot-kutubxona muassasalarida axborot-kutubxona resurslarini hisobga olish va axborot-kutubxona fondini tekshirish tartibi toʻgʻrisida NIZOM > 8-bob. Axborot-kutubxona fondini tekshirish",
+  "pass": "alt",
+  "status": "kept",
+  "quote": "axborot-kutubxona resurslarini oʻgʻirlash, suiisteʼmol qilish yoki buzish holatlari aniqlanganda;",
+  "reason": "The clause lists detected theft or damage of library resources as a ground for carrying out a check of the library fund."
+ },
+ {
+  "question": "lf-006",
+  "document": -106136,
+  "article": "50",
+  "within": "III BOʻLIM. DAVLAT UY-JOY FONDI > 7-bob. MUNITSIPAL, IDORAVIY UY-JOY FONDI VA ANIQ MAQSADLI KOMMUNAL UY-JOY FONDINING UYLARIDAGI TURAR JOYLARDAN FOYDALANISH",
+  "pass": "raw",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Article lists family members' rights and duties in a tenancy; nothing on re-registering the lease when the tenant is declared incapable."
+ },
+ {
+  "question": "lf-006",
+  "document": -106136,
+  "article": "33",
+  "within": "II BOʻLIM. XUSUSIY UY-JOY FONDI > 4-bob. TURAR JOY MULKDORI OILA AʼZOLARINING, IJARAGA VA ARENDAGA OLUVCHILARNING TURAR JOYDAN FOYDALANISHI",
+  "pass": "raw",
+  "status": "rejected",
+  "quote": "",
+  "reason": "About moving family into privately rented housing, not about replacing an incapacitated tenant."
+ },
+ {
+  "question": "lf-008",
+  "document": -5984522,
+  "article": "2",
+  "within": "",
+  "pass": "alt",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Budget loans for growing/purchasing local crops, not a bank loan for importing potatoes."
+ },
+ {
+  "question": "lf-009",
+  "document": -7180916,
+  "article": "10",
+  "within": "3-ilova. Oʻzbekiston Respublikasi Hukumatining ayrim qarorlariga kiritilayotgan oʻzgartirish va qoʻshimchalar",
+  "pass": "raw",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Amends a fund regulation on fee shares; nothing on rush-hour truck bans or exemptions."
+ },
+ {
+  "question": "lf-010",
+  "document": -562451,
+  "article": "1",
+  "within": "",
+  "pass": "raw",
+  "status": "kept",
+  "quote": "rul boshqaruvi oʻng tomonda joylashgan boʻlsa, 1993-yilning 1-martidan roʻyxatga olinishiga, 1993-yilning 1-iyulidan esa ulardan foydalanilishiga yo",
+  "reason": "Text directly bars registration and use of right-hand-drive vehicles."
+ },
+ {
+  "question": "lf-011",
+  "document": -5450176,
+  "article": "13",
+  "within": "",
+  "pass": "raw",
+  "status": "rejected",
+  "quote": "",
+  "reason": "It only says auction procedures and hokimiyat decisions are processed electronically, not whether land can be obtained directly or only by auction."
+ },
+ {
+  "question": "lf-012",
+  "document": -112314,
+  "article": "49",
+  "within": "VIII BOB. PENSIYALARNI QAYTA HISOBLASH",
+  "pass": "raw",
+  "status": "kept",
+  "quote": "I va II guruh nogironlik pensiyasi tayinlanganidan keyin kamida 1 yil ish stajiga ega boʻlsa, fuqaroning arizasi asosida ish staji va ish haqi inobatga olingan holda pensiya har ikki yilda bir marotaba qayta hisoblab chiqiladi",
+  "reason": "States that group I/II disability pensions are recalculated every two years on application, counting later work and wages."
+ },
+ {
+  "question": "lf-013",
+  "document": -5023876,
+  "article": "17",
+  "within": "1-ilova. Oʻzbekiston Respublikasi hududida chet el fuqarolari va fuqaroligi boʻlmagan shaxslarni vaqtincha turgan joyi boʻyicha roʻyxatga olish tartibi toʻgʻrisida NIZOM > 2-bob. Boshqa davlatlardan kelgan chet el fuqarolari va fuqaroligi boʻlmagan shaxslarni vaqtincha turgan joyi boʻyicha roʻyxatga olish tartibi",
+  "pass": "raw",
+  "status": "kept",
+  "quote": "uy-joy mulkdorining (mulkdorlarining) yozma arizasi (roziligi) yoxud shaxsan topshirish imkoni boʻlmaganda, notarial tasdiqlangan arizasi (roziligi);",
+  "reason": "Requires the owner's written consent, or a notarised one if not handed in personally, for temporary registration of a foreigner."
+ },
+ {
+  "question": "lf-013",
+  "document": -5023876,
+  "article": "16",
+  "within": "1-ilova. Oʻzbekiston Respublikasi hududida chet el fuqarolari va fuqaroligi boʻlmagan shaxslarni vaqtincha turgan joyi boʻyicha roʻyxatga olish tartibi toʻgʻrisida NIZOM > 2-bob. Boshqa davlatlardan kelgan chet el fuqarolari va fuqaroligi boʻlmagan shaxslarni vaqtincha turgan joyi boʻyicha roʻyxatga olish tartibi",
+  "pass": "raw",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Lists data entered in E-mehmon; says nothing on how the owner confirms consent."
+ },
+ {
+  "question": "lf-014",
+  "document": -7615042,
+  "article": "3",
+  "within": "Ilova. Internet butunjahon axborot tarmogʻida tavakkalchilikka asoslangan oʻyinlarni tashkil etish va oʻtkazish tartibi toʻgʻrisidagi NIZOM > 1-bob. Umumiy qoidalar",
+  "pass": "raw",
+  "status": "rejected",
+  "quote": "",
+  "reason": "General duties of the game organiser; no rule on when to block a person on the restriction list."
+ },
+ {
+  "question": "lf-015",
+  "document": -6213382,
+  "article": "26",
+  "within": "6-bob. Elektron tijorat sohasida tovarlarni yetkazib berishning, nuqsonli tovarni almashtirib berishning va (yoki) tovarning nuqsonlarini bartaraf etishning, shuningdek toʻlangan mablagʻlarni xaridorga qaytarishning oʻziga xos xususiyatlari",
+  "pass": "raw",
+  "status": "rejected",
+  "quote": "",
+  "reason": "E-commerce law clause; covers replacement only, not the shop buyer's choice of repair, discount or refund."
+ },
+ {
+  "question": "lf-019",
+  "document": -1717902,
+  "article": "34",
+  "within": "Ilova. Pochta aloqasi obyektlari xodimlari uchun mehnatni muhofaza qilish QOIDALARI > 7-§. Xodimlarning salomatligini nazorat qilish",
+  "pass": "raw",
+  "status": "kept",
+  "quote": "Tibbiy koʻriklar tashkilotning tibbiy muassasalarida, ular mavjud boʻlmagan hollarda davolash-profilaktika muassasalarida oʻtkazilishi lozim.",
+  "reason": "States directly where medical examinations are held: the organisation's own medical facility, otherwise other treatment institutions."
+ },
+ {
+  "question": "lf-019",
+  "document": -2869594,
+  "article": "37",
+  "within": "Ilova. Optik detallarga mexanik ishlov berishda‎ mehnatni muhofaza qilish QOIDALARI > 2-bob. Xavfsizlikka qoʻyiladigan umumiy talablar > 8-§. Xodimlarning salomatligini nazorat qilish",
+  "pass": "raw",
+  "status": "kept",
+  "quote": "Tibbiy koʻriklar tashkilotga tibbiyot xizmati koʻrsatuvchi davolash-profilaktika muassasalari tomonidan, agar ular boʻlmagan taqdirda tashkilot joylashgan joydagi hududiy davolash-profilaktika muassasasi tomonidan oʻtkaziladi",
+  "reason": "Says exams are done by the facility serving the organisation, otherwise by the local territorial facility."
+ },
+ {
+  "question": "lf-021",
+  "document": -2216121,
+  "article": "197",
+  "within": "Ilova. Oʻzbekiston Respublikasi Ichki ishlar vazirligi ozodlikdan mahrum qilish turidagi jazoni ijro etish muassasalarining ichki tartib QOIDALARI > IX bob. Mahkumlarning oziq-ovqat mahsulotlari va eng zarur narsalarni sotib olishi, shuningdek posilka, yoʻqlov, banderollar va pul joʻnatmalarini olishi hamda yuborishi > 1-§. Oziq-ovqat mahsulotlari va eng zarur narsalarni sotib olish",
+  "pass": "raw",
+  "status": "rejected",
+  "quote": "",
+  "reason": "About prisoners ordering via infokiosk, not consumer online purchases."
+ },
+ {
+  "question": "lf-021",
+  "document": -6213382,
+  "article": "25",
+  "within": "6-bob. Elektron tijorat sohasida tovarlarni yetkazib berishning, nuqsonli tovarni almashtirib berishning va (yoki) tovarning nuqsonlarini bartaraf etishning, shuningdek toʻlangan mablagʻlarni xaridorga qaytarishning oʻziga xos xususiyatlari",
+  "pass": "alt",
+  "status": "rejected",
+  "quote": "",
+  "reason": "About the delivery obligation itself, not the duty to inform the buyer in advance about time, cost and area."
+ },
+ {
+  "question": "lf-022",
+  "document": -2336049,
+  "article": "3",
+  "within": "1-ilova. Ishlab chiqaruvchi, ishlab chiqaruvchining vakolatli shaxsi va import qiluvchilar tomonidan davlat tilida markirovka qilinishi shart boʻlgan import qilinadigan isteʼmol tovarlarining ayrim turlarini markirovka qilish va bojxonada rasmiylashtirish qoidalari > II. Davlat tilida markirovka qilinishi majburiy boʻlgan isteʼmol tovarlarini markirovka qilish shartlari",
+  "pass": "alt",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Covers labelling of goods for retail sale; does not address items imported for personal use."
+ },
+ {
+  "question": "lf-022",
+  "document": -2336049,
+  "article": "4",
+  "within": "1-ilova. Ishlab chiqaruvchi, ishlab chiqaruvchining vakolatli shaxsi va import qiluvchilar tomonidan davlat tilida markirovka qilinishi shart boʻlgan import qilinadigan isteʼmol tovarlarining ayrim turlarini markirovka qilish va bojxonada rasmiylashtirish qoidalari > II. Davlat tilida markirovka qilinishi majburiy boʻlgan isteʼmol tovarlarini markirovka qilish shartlari",
+  "pass": "alt",
+  "status": "kept",
+  "quote": "ehtiyojlari uchun olib kirilayotgan va ishlab chiqarish yoki boshqa tijorat faoliyati uchun moʻljallanmagan tovarlar",
+  "reason": "Goods imported for own needs are exempt from mandatory state-language labelling."
+ },
+ {
+  "question": "lf-023",
+  "document": -3645661,
+  "article": null,
+  "within": "Reglamentiga 4-ilova",
+  "pass": "raw",
+  "status": "no_text",
+  "quote": "",
+  "reason": ""
+ },
+ {
+  "question": "lf-027",
+  "document": -6008267,
+  "article": "20",
+  "within": "1-ilova. Sotib olingan tovarlar (xizmatlar) qiymatining bir qismini jismoniy shaxslarga qaytarishning MAʼMURIY REGLAMENTI > 2-bob. Fiskal belgili cheklarni roʻyxatdan oʻtkazish va sotib olingan tovarlar (xizmatlar) qiymatining bir qismini qaytarib olish tartibi",
+  "pass": "raw",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Covers grounds for refusing a cashback payment, not recovery of money already paid out or other sanctions."
+ },
+ {
+  "question": "lf-027",
+  "document": -831964,
+  "article": null,
+  "within": "Nizomga 2-ilova",
+  "pass": "raw",
+  "status": "no_text",
+  "quote": "",
+  "reason": ""
+ },
+ {
+  "question": "lf-027",
+  "document": -180552,
+  "article": "1028",
+  "within": "IKKINCHI QISM > 3-kichik boʻlim. MAJBURIYATLARNING AYRIM TURLARI > 58-bob. Asossiz boylik orttirish oqibatida kelib chiqadigan majburiyatlar",
+  "pass": "alt",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Covers income and interest on unjust enrichment, not the return of the wrongly received cashback itself or other sanctions."
+ },
+ {
+  "question": "lf-027",
+  "document": -180552,
+  "article": "1030",
+  "within": "IKKINCHI QISM > 3-kichik boʻlim. MAJBURIYATLARNING AYRIM TURLARI > 58-bob. Asossiz boylik orttirish oqibatida kelib chiqadigan majburiyatlar",
+  "pass": "alt",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Lists what is not returned as unjust enrichment; does not address wrongly obtained cashback."
+ },
+ {
+  "question": "lf-027",
+  "document": -7747538,
+  "article": "7",
+  "within": "1-ilova. Ijtimoiy reyestrga kiritilgan oilalarning vakillari boʻlgan jismoniy shaxslar tomonidan ijtimoiy karta orqali xarid qilingan ayrim turdagi tovarlar (xizmatlar) boʻyicha qoʻshilgan qiymat soligʻi summasini qaytarish tartibi toʻgʻrisida VAQTINCHALIK NIZOM > 2-bob. Ayrim turdagi tovarlar (xizmatlar) uchun ijtimoiy karta orqali xarid qilishda toʻlangan soliq summasini qaytarish va qaytarishni rad etish tartibi",
+  "pass": "alt",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Grounds for refusing a refund, not recovery of an already paid refund."
+ },
+ {
+  "question": "lf-029",
+  "document": -3145322,
+  "article": "14",
+  "within": "",
+  "pass": "raw",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Only requires oversight that markets get cameras; does not say where cameras must be placed."
+ },
+ {
+  "question": "lf-030",
+  "document": -249760,
+  "article": null,
+  "within": "Ilova. Oʻzbekiston Respublikasi isteʼmolchilariga gaz yetkazib berish QOIDALARI > 6. Gaz yetkazib beruvchilarning, gaz uzatish va gaz taʼminoti tashkilotlari hamda isteʼmolchilarning huquq va majburiyatlari",
+  "pass": "raw",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Only the gas quality duty is stated; uninterrupted even monthly supply is not addressed."
+ },
+ {
+  "question": "lf-030",
+  "document": -249760,
+  "article": null,
+  "within": "Ilova. Oʻzbekiston Respublikasi isteʼmolchilariga gaz yetkazib berish QOIDALARI > 4. ISTEʼMOLCHILARGA GAZ YETKAZIB BERISH",
+  "pass": "raw",
+  "status": "kept",
+  "quote": "Gaz yetkazib beruvchi, gaz uzatish va gaz taʼminoti tashkiloti gaz yetkazib berishga, isteʼmolchi esa oʻrtacha sutkalik meʼyorlar doirasida oy davomida bir maromda",
+  "reason": "Clause 4.7 obliges the supplier to deliver gas evenly during the month; the quality part of the question is not covered."
+ },
+ {
+  "question": "lf-030",
+  "document": -6954979,
+  "article": "66",
+  "within": "2-ilova. Tabiiy gazdan foydalanish QOIDALARI > 7-bob. Isteʼmolchilarga tabiiy gazni yetkazib berish tartibi",
+  "pass": "alt",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Speaks of even monthly quantities and metering; does not state a duty of uninterrupted supply or gas quality."
+ },
+ {
+  "question": "lf-030",
+  "document": -6954979,
+  "article": "10",
+  "within": "2-ilova. Tabiiy gazdan foydalanish QOIDALARI > 2-bob. Isteʼmolchilar, gaz taʼminoti tashkilotlari va nazorat organlarning huquqlari va majburiyatlari",
+  "pass": "alt",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Only says gas is supplied per contract terms; nothing on uninterrupted monthly supply or quality."
+ },
+ {
+  "question": "lf-030",
+  "document": -6954979,
+  "article": "9",
+  "within": "2-ilova. Tabiiy gazdan foydalanish QOIDALARI > 2-bob. Isteʼmolchilar, gaz taʼminoti tashkilotlari va nazorat organlarning huquqlari va majburiyatlari",
+  "pass": "alt",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Lists the gas supplier rights to cut supply, not its duty to supply continuously with proper quality."
+ },
+ {
+  "question": "lf-031",
+  "document": -3389943,
+  "article": "6",
+  "within": "",
+  "pass": "raw",
+  "status": "rejected",
+  "quote": "",
+  "reason": "About down payment and land allocation; says nothing on priority in the queue."
+ },
+ {
+  "question": "lf-031",
+  "document": -4076825,
+  "article": "18",
+  "within": "",
+  "pass": "raw",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Lists apartment quotas for military, police and other categories, not priority for long-registered budget employees."
+ },
+ {
+  "question": "lf-035",
+  "document": -6485509,
+  "article": "15",
+  "within": "",
+  "pass": "raw",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Speaks about special-purpose accounts for the funds, not the deadline for paying for delivered wheat."
+ },
+ {
+  "question": "lf-035",
+  "document": -7554303,
+  "article": "4",
+  "within": "",
+  "pass": "alt",
+  "status": "kept",
+  "quote": "davlat resursiga xarid qilingan bugʻdoy tijorat vakiliga topshirilgan kundan eʼtiboran ikki hafta muddatda bugʻdoy uchun toʻlovlarni bugʻdoy yetishtiruvchining 23210 maxsus hisobvaraqlariga oʻtkazib beradi",
+  "reason": "States payment is transferred within two weeks from the day the wheat is delivered."
+ },
+ {
+  "question": "lf-037",
+  "document": -6257288,
+  "article": "461",
+  "within": "MAXSUS QISM > VI BOʻLIM. AYRIM TOIFADAGI XODIMLAR MEHNATINI HUQUQIY JIHATDAN TARTIBGA SOLISHNING OʻZIGA XOS XUSUSIYATLARI > 26-bob. Xodimning ish beruvchi bilan mehnatga oid aloqasi xususiyatiga va oʻz mehnat faoliyatini amalga oshirish joyiga bogʻliq holda mehnatni huquqiy jihatdan tartibga solishning oʻziga xos xususiyatlari > 3-§. Masofadan turib ishlovchi xodimlarning mehnatini huquqiy jihatdan tartibga solishning oʻziga xos xususiyatlari",
+  "pass": "raw",
+  "status": "rejected",
+  "quote": "",
+  "reason": "General remote-work time rules; does not address side teaching work done remotely."
+ },
+ {
+  "question": "lf-037",
+  "document": -6257288,
+  "article": "453",
+  "within": "MAXSUS QISM > VI BOʻLIM. AYRIM TOIFADAGI XODIMLAR MEHNATINI HUQUQIY JIHATDAN TARTIBGA SOLISHNING OʻZIGA XOS XUSUSIYATLARI > 26-bob. Xodimning ish beruvchi bilan mehnatga oid aloqasi xususiyatiga va oʻz mehnat faoliyatini amalga oshirish joyiga bogʻliq holda mehnatni huquqiy jihatdan tartibga solishning oʻziga xos xususiyatlari > 3-§. Masofadan turib ishlovchi xodimlarning mehnatini huquqiy jihatdan tartibga solishning oʻziga xos xususiyatlari",
+  "pass": "raw",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Defines permanent/temporary remote work; nothing about a second teaching job or its working time."
+ },
+ {
+  "question": "lf-039",
+  "document": -6589160,
+  "article": null,
+  "within": "Ilova. Sport vazirligi tizimidagi sport taʼlim muassasalarini sport jihozlari va anjomlari bilan jihozlash MEʼYORLARI",
+  "pass": "raw",
+  "status": "no_text",
+  "quote": "",
+  "reason": ""
+ },
+ {
+  "question": "lf-039",
+  "document": -6490362,
+  "article": null,
+  "within": "3-ilova. Gimnastika sport turlari boʻyicha davlat sport-taʼlim muassasalarida shugʻullanuvchi oʻquvchi-sportchilarni sport anjomlari, sport ekipirovkasi va ixtisoslashtirilgan kiyim bilan taʼminlash NORMATIVLARI",
+  "pass": "raw",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Footnote says replacement depends on condition; gives no replacement period."
+ },
+ {
+  "question": "lf-039",
+  "document": -6602590,
+  "article": null,
+  "within": "6-ilova. Oʻzbekiston futbol assotsiatsiyasi futbol akademiyalarining oʻquvchilarini yashash uchun jihozlar, sport anjomlari va kiyim-bosh bilan taʼminlash hamda sutkalik oziq-ovqat NORMALARI",
+  "pass": "raw",
+  "status": "rejected",
+  "quote": "",
+  "reason": "A note about norms being maximums; says nothing about replacement period of sports clothing."
+ },
+ {
+  "question": "lf-040",
+  "document": -2467536,
+  "article": "82",
+  "within": "1-ilova. Oʻzbekiston Respublikasida vasiylik va homiylik toʻgʻrisida NIZOM > 2-§. Alohida holatlarda vasiylik va homiylikni belgilash, vasiy va homiyni tayinlash xususiyatlari > 4. Vasiylik yoki homiylikni rasmiylashtirish uchun zarur hujjatlar",
+  "pass": "raw",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Lists documents for appointing a guardian, unrelated to applying for a contest."
+ },
+ {
+  "question": "lf-042",
+  "document": -2308284,
+  "article": "16⁶",
+  "within": "Ilova. Yuridik taʼlim muassasalari (harbiy, maxsus oliy taʼlim muassasalaridan tashqari) talabalari tomonidan tanishtiruv va bitiruv malakaviy amaliyotni, shuningdek stajirovkani oʻtash tartibi toʻgʻrisidagi nizom > 2-bob. Bitiruv malakaviy amaliyotni oʻtash tartibi",
+  "pass": "alt",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Lists duties of the university practice supervisor; nothing about distance students doing practice elsewhere."
+ },
+ {
+  "question": "lf-042",
+  "document": -6655381,
+  "article": "1",
+  "within": "Ilova. Oʻzbekiston Respublikasi Huquqni muhofaza qilish akademiyasi talabalari va tinglovchilari tomonidan malakaviy amaliyot hamda stajirovkani oʻtash tartibi toʻgʻrisidagi NIZOM > 1-bob. Umumiy qoidalar",
+  "pass": "alt",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Purpose of internship at the Law Enforcement Academy; unrelated to changing internship place."
+ },
+ {
+  "question": "lf-043",
+  "document": -3786903,
+  "article": "2",
+  "within": "",
+  "pass": "alt",
+  "status": "rejected",
+  "quote": "",
+  "reason": "About police patrol organisation, not citizens forming their own groups."
+ },
+ {
+  "question": "lf-043",
+  "document": -3202965,
+  "article": "1",
+  "within": "",
+  "pass": "alt",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Lists police priority tasks; does not address citizens forming their own patrol groups."
+ },
+ {
+  "question": "lf-044",
+  "document": -8288643,
+  "article": "126",
+  "within": "Ilova. Yengil alangalanuvchi va portlovchi kimyoviy moddalar bilan muomala qilish xavfsizligi QOIDALARI > 9-bob. Texnologik jarayonlarni nazorat qilish, boshqarish, xabar berish tizimi (signalizatsiya) va avariyaga qarshi avtomatik himoya tizimlari",
+  "pass": "raw",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Clause concerns rooms, not open-air loading sites named in the question."
+ },
+ {
+  "question": "lf-045",
+  "document": -2308284,
+  "article": "32",
+  "within": "Ilova. Yuridik taʼlim muassasalari (harbiy, maxsus oliy taʼlim muassasalaridan tashqari) talabalari tomonidan tanishtiruv va bitiruv malakaviy amaliyotni, shuningdek stajirovkani oʻtash tartibi toʻgʻrisidagi nizom > 5-bob. Moddiy taʼminot",
+  "pass": "raw",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Only says the stipend is kept during practice; nothing on internships abroad or special stipends for good study."
+ },
+ {
+  "question": "lf-046",
+  "document": -8489078,
+  "article": "3",
+  "within": "II. Majburiyat va imtiyozlar",
+  "pass": "raw",
+  "status": "kept",
+  "quote": "AJ 30 yil davomida elektr energiyasini kafolatlangan tarzda milliy valyutada xarid qiladi",
+  "reason": "States the electricity is bought under guarantee for 30 years."
+ },
+ {
+  "question": "lf-046",
+  "document": -8487939,
+  "article": "3",
+  "within": "II. Majburiyat va imtiyozlar",
+  "pass": "raw",
+  "status": "kept",
+  "quote": "(g) “Oʻzenergosotish” AJ 30 yil davomida elektr energiyasini kafolatlangan tarzda milliy valyutada xarid qiladi",
+  "reason": "States that the electricity is bought under guarantee for 30 years from the waste-to-energy project."
+ },
+ {
+  "question": "lf-046",
+  "document": -7444387,
+  "article": "2",
+  "within": "II. Majburiyat va imtiyozlar.",
+  "pass": "raw",
+  "status": "kept",
+  "quote": "“Oʻzenergosotish” AJ 30 yil davomida elektr energiyasini kafolatlangan tarzda xarid qiladi va milliy valyutada toʻlov qiladi",
+  "reason": "States guaranteed purchase of the electricity for 30 years."
+ },
+ {
+  "question": "lf-046",
+  "document": -8488547,
+  "article": "3",
+  "within": "II. Majburiyat va imtiyozlar",
+  "pass": "raw",
+  "status": "kept",
+  "quote": "(g) “Oʻzenergosotish” AJ 30 yil davomida elektr energiyasini kafolatlangan tarzda milliy valyutada xarid qiladi",
+  "reason": "States the state buyer purchases the electricity on a guaranteed basis for 30 years."
+ },
+ {
+  "question": "lf-047",
+  "document": -5611260,
+  "article": null,
+  "within": "",
+  "pass": "raw",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Preamble only; nothing about a certificate accompanying the badge."
+ },
+ {
+  "question": "lf-048",
+  "document": -8419982,
+  "article": null,
+  "within": "Reglamentiga 2-ilova",
+  "pass": "raw",
+  "status": "rejected",
+  "quote": "",
+  "reason": "A note about referring homeless persons to rehabilitation centres, not about residential homes for lonely elderly people."
+ },
+ {
+  "question": "lf-048",
+  "document": -5342462,
+  "article": "4",
+  "within": "",
+  "pass": "alt",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Lists tasks of support centres; does not say that lonely elderly people can be accommodated to live there."
+ },
+ {
+  "question": "lf-049",
+  "document": -5193568,
+  "article": "12",
+  "within": "1-ilova. Oʻzbekiston Respublikasi Investitsiyalar va tashqi savdo vazirligi huzuridagi Eksportni ragʻbatlantirish agentligi tomonidan eksport qiluvchi tashkilotlarga moliyaviy yordam koʻrsatish tartibi toʻgʻrisidagi NIZOM > 3-bob. Eksport qiluvchi tashkilotlarning arizalarini koʻrib chiqish tartibi",
+  "pass": "raw",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Does not state the months/minimum export volume required after receiving the aid."
+ },
+ {
+  "question": "lf-050",
+  "document": -4807552,
+  "article": null,
+  "within": "1-ilova. 2020 — 2023-yillarda Oʻzbekiston Respublikasida matematika fanlari boʻyicha taʼlim sifatini yaxshilash, ilmiy-tadqiqotlarning natijadorligi va amaliy ahamiyatini oshirishning MAQSADLI DASTURI",
+  "pass": "raw",
+  "status": "rejected",
+  "quote": "",
+  "reason": "A note about monitoring a programme; unrelated to textbook language."
+ },
+ {
+  "question": "lf-050",
+  "document": -373338,
+  "article": "21",
+  "within": "4-ilova. Umumiy oʻrta va oʻrta maxsus, kasb-hunar taʼlimi taʼlim muassasalari uchun darsliklar va oʻquv-metodik komplekslarni tanlov asosida tanlab olish tartibi toʻgʻrisida NIZOM > III. Tanlov orqali tanlab olishni oʻtkazish shartlari",
+  "pass": "alt",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Tender evaluation criteria for textbooks; no rule that new words must be explained for the age."
+ },
+ {
+  "question": "lf-050",
+  "document": -3153714,
+  "article": "8",
+  "within": "5-ilova. Umumiy oʻrta va oʻrta maxsus, professional taʼlim muassasalari uchun umumtaʼlim fanlaridan oʻquv-metodik majmualarning yangi avlodini ishlab chiqishga qoʻyiladigan > 4-bob. Oʻquv-metodik majmualarni ishlab chiqishga qoʻyiladigan talablar",
+  "pass": "alt",
+  "status": "kept",
+  "quote": "quv fani mavzularining oʻquvchi yoshi va psixofiziologik xususiyatlariga mos holda berilishi, maʼlum faktlar, tushunchalar, qoidalar va fanlararo bogʻliqlikni hisobga olgan holda tushunarli bayon qilinishi",
+  "reason": "Textbook requirements say topics must match pupil age and concepts/rules be stated understandably."
+ },
+ {
+  "question": "lf-051",
+  "document": -5972411,
+  "article": "18",
+  "within": "2-bob. Nobank kredit tashkilotlarini va ularning filiallarini tashkil etish",
+  "pass": "raw",
+  "status": "kept",
+  "quote": "Nobank kredit tashkiloti filialni ochgan kundan eʼtiboran oʻn ish kuni ichida Markaziy bankka",
+  "reason": "Gives the notification deadline for opening a branch (ten working days) and for a branch name change (three days), though only for non-bank credit organisations."
+ },
+ {
+  "question": "lf-052",
+  "document": -6638940,
+  "article": "84",
+  "within": "3-ilova. Fuqarolik holati dalolatnomalarini qayd etish QOIDALARI > 5-bob. Nikohni qayd etish > 1-§. Nikohni qayd etish tartibi, vaqti va joyi",
+  "pass": "raw",
+  "status": "kept",
+  "quote": "Yuqorida qayd etilgan holatlarni tekshirish muddati uch oydan oshmasligi kerak",
+  "reason": "States the check of the reported obstacles may not exceed three months."
+ },
+ {
+  "question": "lf-054",
+  "document": -4951702,
+  "article": null,
+  "within": "Nizomga 1-ilova",
+  "pass": "raw",
+  "status": "no_text",
+  "quote": "",
+  "reason": ""
+ },
+ {
+  "question": "lf-054",
+  "document": -4951702,
+  "article": "3",
+  "within": "Ilova. Homiladorlikni sunʼiy ravishda toʻxtatishni amalga oshirish tartibi toʻgʻrisidagi NIZOM > 1-bob. Umumiy qoidalar",
+  "pass": "alt",
+  "status": "kept",
+  "quote": "Ayol homiladorlikni sunʼiy ravishda toʻxtatishga majbur qilinishi mumkin emas.",
+  "reason": "Directly states a woman cannot be forced to terminate a pregnancy."
+ },
+ {
+  "question": "lf-056",
+  "document": -2048292,
+  "article": "2",
+  "within": "Ilova. Ishlatilgan texnik moylarni topshirish, toʻplash, ular uchun hisob-kitob qilish, ularni saqlash va tashish tartibi toʻgʻrisida NIZOM > I. Umumiy qoidalar",
+  "pass": "raw",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Definitions only; no rule on collecting used oil separately."
+ },
+ {
+  "question": "lf-057",
+  "document": -7766989,
+  "article": null,
+  "within": "Nizomga 3-ilova",
+  "pass": "raw",
+  "status": "no_text",
+  "quote": "",
+  "reason": ""
+ },
+ {
+  "question": "lf-058",
+  "document": -7973712,
+  "article": "33",
+  "within": "Ilova. Notariuslar tomonidan nikoh shartnomalarini tasdiqlash tartibi toʻgʻrisidagi NIZOM > 6-bob. Shartnomani tasdiqlash uchun toʻlovlarni amalga oshirish",
+  "pass": "raw",
+  "status": "kept",
+  "quote": "Tizimga u tomonidan koʻrsatilgan, notarial idoraga birga kelgan boshqa shaxsning mobil telefoni raqamini, agar faqat oʻzi kelgan boʻlsa, notariusning mobil telefoni raqamini kiritishga ruxsat etiladi",
+  "reason": "Says whose phone number is entered when the applicant has no mobile phone."
+ },
+ {
+  "question": "lf-059",
+  "document": -111460,
+  "article": "244",
+  "within": "UMUMIY QISM > TOʻRTINCHI BOʻLIM PROTSESSUAL MAJBURLOV > 28-bob. EHTIYOT CHORALARI",
+  "pass": "raw",
+  "status": "rejected",
+  "quote": "",
+  "reason": "About places and terms of detention, not visits."
+ },
+ {
+  "question": "lf-059",
+  "document": -163629,
+  "article": "76",
+  "within": "MAXSUS QISM > IV BOʻLIM. OZODLIKDAN MAHRUM QILISH TARIQASIDAGI JAZONI IJRO ETISH > 11-BOB. JAZONI IJRO ETISH MUASSASALARIDAGI REJIM",
+  "pass": "alt",
+  "status": "kept",
+  "quote": "Uzoq muddatli uchrashuv muddati quyidagicha belgilanadi: muassasa hududida — bir sutkadan uch sutkagacha, muassasa hududidan tashqarida esa — uch sutkadan besh sutkagacha.",
+  "reason": "The article sets the duration of short and long visits and says the number depends on the regime of the institution."
+ },
+ {
+  "question": "lf-059",
+  "document": -163629,
+  "article": "151",
+  "within": "MAXSUS QISM > VI BOʻLIM. HARBIY XIZMATCHILARGA NISBATAN XIZMAT BOʻYICHA CHEKLASH VA INTIZOMIY QISMGA JOʻNATISH TARIQASIDAGI JAZOLARNI IJRO ETISH > 26-BOB. INTIZOMIY QISMGA JOʻNATISH TARIQASIDAGI JAZONI IJRO ETISH",
+  "pass": "alt",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Concerns visits in a military disciplinary unit, not ordinary imprisonment."
+ },
+ {
+  "question": "lf-060",
+  "document": -5036447,
+  "article": "8",
+  "within": "",
+  "pass": "raw",
+  "status": "kept",
+  "quote": "davlat granti asosida taʼlim olgan Filial bitiruvchilari uch yildan kam boʻlmagan muddatga majburiy ishlab berish sharti bilan",
+  "reason": "States grant graduates of the branch must work at least three years."
+ },
+ {
+  "question": "lf-060",
+  "document": -5215610,
+  "article": "7",
+  "within": "",
+  "pass": "raw",
+  "status": "kept",
+  "quote": "davlat granti asosida taʼlim olgan Filial bitiruvchilari uch yildan kam boʻlmagan muddatga majburiy ishlab berish sharti bilan Oʻzbekiston Respublikasining davlat organlari va tashkilotlariga taqsimlanadi",
+  "reason": "States grant graduates must work at least three years."
+ },
+ {
+  "question": "lf-060",
+  "document": -7731859,
+  "article": "7",
+  "within": "II. Xalqaro tan olingan taʼlim dasturlari asosida muhandislik sohasida kadrlar tayyorlash",
+  "pass": "raw",
+  "status": "kept",
+  "quote": "davlat granti asosida taʼlim olgan Filial bitiruvchilari uch yildan kam boʻlmagan muddat majburiy ishlab berish sharti bilan Oʻzbekiston Respublikasining davlat tashkilotlariga taqsimlanadi",
+  "reason": "States grant graduates of the branch must work at least three years."
+ },
+ {
+  "question": "lf-061",
+  "document": -8201170,
+  "article": null,
+  "within": "Ilova. Oʻzbekiston Respublikasi hududiga import qilishda bojxona bojidan ozod etiladigan oʻxshashi respublikada ishlab chiqarilmaydigan hamda zargarlik sanoatida foydalaniladigan asbob-uskunalar, ehtiyot qismlar, butlovchi buyumlar va sarflov vositalari ROʻYXATI*",
+  "pass": "raw",
+  "status": "rejected",
+  "quote": "",
+  "reason": "About customs duty exemption for equipment, not preferential loans."
+ },
+ {
+  "question": "lf-062",
+  "document": -1714689,
+  "article": null,
+  "within": "Yoʻriqnomaga 36-ilova",
+  "pass": "raw",
+  "status": "no_text",
+  "quote": "",
+  "reason": ""
+ },
+ {
+  "question": "lf-066",
+  "document": -5524265,
+  "article": null,
+  "within": "Nizomga 1-ilova",
+  "pass": "raw",
+  "status": "no_text",
+  "quote": "",
+  "reason": ""
+ },
+ {
+  "question": "lf-066",
+  "document": -4674902,
+  "article": "387",
+  "within": "MAXSUS QISM > XIII BOʻLIM. JISMONIY SHAXSLARDAN OLINADIGAN DAROMAD SOLIGʻI > 56-bob. Soliqni hisoblab chiqarish, soliq hisobotini taqdim etish va toʻlash tartibi",
+  "pass": "alt",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Lists income types taxed at the tax agent without naming the tax or stating what is withheld from a salary."
+ },
+ {
+  "question": "lf-066",
+  "document": -7231786,
+  "article": "1",
+  "within": "Ilova. Ish beruvchilar tomonidan fuqarolarning shaxsiy jamgʻarib boriladigan pensiya hisobvaraqlariga majburiy jamgʻarib boriladigan pensiya badallarini hisoblash va toʻlash tartibi toʻgʻrisidagi NIZOM > 1-bob. Umumiy qoidalar",
+  "pass": "alt",
+  "status": "rejected",
+  "quote": "",
+  "reason": "About mandatory funded pension contributions; income tax is only mentioned in passing."
+ },
+ {
+  "question": "lf-067",
+  "document": -4475557,
+  "article": "14",
+  "within": "1-ilova. Ichki ishlar organlarining xavfsiz turizmni taʼminlash boʻlinmalari tomonidan shartnoma asosida turistlar va turistik guruhlarni kuzatib borish boʻyicha pulli xizmatlar koʻrsatish tartibi toʻgʻrisida NIZOM > 3-bob. Kuzatuv xizmatini koʻrsatishning asosiy shartlari",
+  "pass": "raw",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Describes pre-escort checks, not contract term or prepayment."
+ },
+ {
+  "question": "lf-069",
+  "document": -6236838,
+  "article": "8",
+  "within": "1-ilova. Davlat fuqarolik xizmatchilari odob-axloqining NAMUNAVIY QOIDALARI > 2-bob. Kasbiy madaniyatga oid umumiy odob-axloq qoidalari",
+  "pass": "alt",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Bans forcing party political activity/NGO participation; not collecting votes for a project."
+ },
+ {
+  "question": "lf-069",
+  "document": -4539262,
+  "article": "10",
+  "within": "1-ilova. Oʻzbekiston Respublikasi Oliy Majlisi Qonunchilik palatasi saylovida ishtirok etish uchun siyosiy partiyalar tomonidan imzolarni toʻplash va imzo varaqalari toʻgʻri toʻldirilganligini tekshirish tartibi toʻgʻrisida NIZOM > II bob. Siyosiy partiyalar tomonidan imzolar toʻplash",
+  "pass": "alt",
+  "status": "rejected",
+  "quote": "",
+  "reason": "About collecting voter signatures for elections, not a boss forcing staff to collect project votes."
+ },
+ {
+  "question": "lf-070",
+  "document": -3725214,
+  "article": "16",
+  "within": "Ilova. Oʻzbekiston Respublikasida afv etishni amalga oshirish tartibi toʻgʻrisida NIZOM > 3-bob. Afv etish toʻgʻrisidagi iltimosnomalarni taqdim etish tartibi",
+  "pass": "alt",
+  "status": "rejected",
+  "quote": "",
+  "reason": "About when a pardon petition may be filed, not weapons-related offences."
+ },
+ {
+  "question": "lf-070",
+  "document": -111453,
+  "article": "76",
+  "within": "UMUMIY QISM > BESHINCHI BOʻLIM JAVOBGARLIKDAN VA JAZODAN OZOD QILISH > XIII bob. Jazodan ozod qilishning turlari",
+  "pass": "alt",
+  "status": "rejected",
+  "quote": "",
+  "reason": "General rule on release under amnesty or pardon; says nothing about whether weapon-related crimes are covered."
+ },
+ {
+  "question": "lf-071",
+  "document": -7231780,
+  "article": "23",
+  "within": "4-ilova. Oʻzbekiston Respublikasi Prezidentining ayrim hujjatlariga kiritilayotgan oʻzgartirishlar. “Nazorat qiluvchi organlar tomonidan tadbirkorlik subyektlari faoliyatida tekshiruvlar va profilaktika tadbirlarini oʻtkazish tartibi toʻgʻrisida NIZOM > 4-bob. Tekshiruvlarni oʻtkazish",
+  "pass": "alt",
+  "status": "kept",
+  "quote": "tadbirkorlik subyektlari birlashmalarining aʼzosi boʻlgan tadbirkorlik subyektining faoliyatida tekshiruv oʻtkazishda esa mazkur birlashmalar vakillari ishtirok etishi mumkin",
+  "reason": "States representatives of the business association the entity belongs to may take part in the inspection."
+ },
+ {
+  "question": "lf-071",
+  "document": -6195004,
+  "article": "23",
+  "within": "Ilova. Nazorat qiluvchi organlar tomonidan tadbirkorlik subyektlari faoliyatida tekshiruvlar va profilaktika tadbirlarini oʻtkazish tartibi toʻgʻrisida NIZOM > 4-bob. Tekshiruvlarni oʻtkazish",
+  "pass": "alt",
+  "status": "kept",
+  "quote": "tadbirkorlik subyektlari birlashmalarining aʼzosi boʻlgan tadbirkorlik subyektining faoliyatida tekshiruv oʻtkazishda esa mazkur birlashmalar vakillari ishtirok etishi mumkin.",
+  "reason": "Allows representatives of the business association the entity belongs to to take part in the inspection at its request."
+ },
+ {
+  "question": "lf-072",
+  "document": -6834968,
+  "article": null,
+  "within": "Reglamentiga 4-ilova. ",
+  "pass": "raw",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Fragment of a form note about registry processing; nothing on refusal for lack of places."
+ },
+ {
+  "question": "lf-073",
+  "document": -7190311,
+  "article": null,
+  "within": "Nizomga 2-ilova. Zulfiya nomidagi Davlat mukofotiga talabgorlarning yutuqlari, ilmiy-ijodiy va amaliy ishlarini baholash MEZONLARI",
+  "pass": "raw",
+  "status": "no_text",
+  "quote": "",
+  "reason": ""
+ },
+ {
+  "question": "lf-073",
+  "document": -1632433,
+  "article": "1",
+  "within": "",
+  "pass": "alt",
+  "status": "kept",
+  "quote": "hamda adabiyot, madaniyat, sanʼat, fan va taʼlim sohalaridagi alohida yutuqlari uchun Qoraqalpogʻiston Respublikasi, viloyatlar va Toshkent shahrining iqtidorli qizlari Zulfiya nomidagi Davlat mukofoti bilan taqdirlansin",
+  "reason": "Gifted girls with study and creative achievements are awarded the Zulfiya State Prize."
+ },
+ {
+  "question": "lf-073",
+  "document": -2350727,
+  "article": "1",
+  "within": "",
+  "pass": "alt",
+  "status": "kept",
+  "quote": "iqtidorli qizlari Zulfiya nomidagi Davlat mukofoti bilan taqdirlansin",
+  "reason": "Decree awards the Zulfiya State Prize to talented girls for study and creative achievements."
+ },
+ {
+  "question": "lf-073",
+  "document": -2353307,
+  "article": "1",
+  "within": "",
+  "pass": "alt",
+  "status": "kept",
+  "quote": "iqtidorli qizlari Zulfiya nomidagi Davlat mukofoti bilan taqdirlansin",
+  "reason": "Shows that gifted girls with achievements in study and the arts are awarded the Zulfiya State Prize."
+ },
+ {
+  "question": "lf-073",
+  "document": -1795120,
+  "article": "1",
+  "within": "",
+  "pass": "alt",
+  "status": "kept",
+  "quote": "adabiyot, madaniyat, sanʼat, fan, taʼlim va sport sohalaridagi alohida yutuqlari uchun Qoraqalpogʻiston Respublikasi, viloyatlar va Toshkent shahrining iqtidorli qizlari Zulfiya nomidagi Davlat mukofoti bilan taqdirlansin",
+  "reason": "Awards the Zulfiya State Prize to gifted girls for achievements in study, arts and other fields."
+ },
+ {
+  "question": "lf-073",
+  "document": -2154930,
+  "article": "1",
+  "within": "",
+  "pass": "alt",
+  "status": "kept",
+  "quote": "adabiyot, madaniyat, sanʼat, taʼlim va sport sohalaridagi alohida yutuqlari uchun Qoraqalpogʻiston Respublikasi, viloyatlar va Toshkent shahrining iqtidorli qizlarini Zulfiya nomidagi Davlat mukofoti bilan taqdirlash",
+  "reason": "Girls with success in study and achievements in arts are awarded the Zulfiya State Prize."
+ },
+ {
+  "question": "lf-073",
+  "document": -2346400,
+  "article": "1",
+  "within": "",
+  "pass": "alt",
+  "status": "kept",
+  "quote": "adabiyot, sanʼat, madaniyat, taʼlim va fan sohalaridagi alohida yutuqlari uchun Qoraqalpogʻiston Respublikasi, viloyatlar va Toshkent shahrining iqtidorli qizlari Zulfiya nomidagi Davlat mukofoti bilan taqdirlansin",
+  "reason": "States gifted girls with study and creative achievements are awarded the Zulfiya State Prize."
+ },
+ {
+  "question": "lf-073",
+  "document": -3112722,
+  "article": "1",
+  "within": "",
+  "pass": "alt",
+  "status": "kept",
+  "quote": "iqtidorli qizlarini aʼlo xulqi, noyob isteʼdodi, zukkoligi, tashabbuskorligi, oʻqishdagi muvaffaqiyatlari hamda adabiyot, madaniyat, sanʼat, taʼlim va sport sohalaridagi alohida yutuqlari uchun Zulfiya nomidagi Davlat mukofoti bilan taqdirlash",
+  "reason": "Gifted girls with study and creative achievements are awarded the Zulfiya State Prize."
+ },
+ {
+  "question": "lf-073",
+  "document": -1377965,
+  "article": "1",
+  "within": "",
+  "pass": "alt",
+  "status": "kept",
+  "quote": "iqtidorli qizlari Zulfiya nomidagi Davlat mukofoti bilan taqdirlansin",
+  "reason": "Decree awards the Zulfiya State Prize to talented girls for study and creative achievements."
+ },
+ {
+  "question": "lf-074",
+  "document": -1714689,
+  "article": null,
+  "within": "Yoʻriqnomaga 52-ilova. Bolalarning davomat hisobi boʻyicha TABEL",
+  "pass": "raw",
+  "status": "no_text",
+  "quote": "",
+  "reason": ""
+ },
+ {
+  "question": "lf-074",
+  "document": -1714689,
+  "article": null,
+  "within": "Yoʻriqnomaga 53-ilova. Taʼlim muassasalarida bolalarni saqlanganligi uchun ularning ota-onalari bilan olib boriladigan hisob-kitoblar QAYDNOMASI",
+  "pass": "raw",
+  "status": "no_text",
+  "quote": "",
+  "reason": ""
+ },
+ {
+  "question": "lf-074",
+  "document": -4441105,
+  "article": "12",
+  "within": "1-ilova. Davlat maktabgacha taʼlim tashkilotlarida sogʻlom ovqatlantirishni tashkil etish tartibi toʻgʻrisida NIZOM > 4-bob. Maktabgacha taʼlim tashkilotlarida sogʻlom ovqatlantirishni tashkil etish",
+  "pass": "alt",
+  "status": "kept",
+  "quote": "Brakeraj komissiyasi oshxonaga qabul qilinadigan oziq-ovqat mahsulotlari va tayyorlanayotgan taomlar sifatini doimiy ravishda oʻrganib boradi.",
+  "reason": "States that food quality is checked constantly and the results are recorded in brakeraj journals."
+ },
+ {
+  "question": "lf-074",
+  "document": -4441105,
+  "article": "13",
+  "within": "1-ilova. Davlat maktabgacha taʼlim tashkilotlarida sogʻlom ovqatlantirishni tashkil etish tartibi toʻgʻrisida NIZOM > 4-bob. Maktabgacha taʼlim tashkilotlarida sogʻlom ovqatlantirishni tashkil etish",
+  "pass": "alt",
+  "status": "kept",
+  "quote": "Brakeraj daftari oziq-ovqat mahsulotlarining sifati, mazasi, kunlik sinama olinganligi, ovqatni tarqatishga ruxsat berilganligi haqidagi maʼlumotlar belgilangan tartibda toʻldirilib, har kuni hamshiraning imzosi bilan tasdiqlanadi",
+  "reason": "States food quality data are recorded daily in the brakeraj journal and signed by the nurse."
+ },
+ {
+  "question": "lf-077",
+  "document": -2514335,
+  "article": "175",
+  "within": "Ilova. Bugʻ va issiq suv quvurlari qurish va ulardan foydalanishda mehnatni muhofaza qilish Qoidalari > 3-bob. Ishlab chiqarish (texnologiya) jarayonlariga qoʻyiladigan talablar > 7-§. Takelaj (yukni koʻtaradigan yoki bir joydan ikkinchi joyga koʻchirishda ishlatiladigan mexanizmlar moslamasi) ishlarini bajarishda xavfsizlik talablari",
+  "pass": "raw",
+  "status": "rejected",
+  "quote": "",
+  "reason": "About moving heavy loads with rigging, not employment of minors."
+ },
+ {
+  "question": "lf-078",
+  "document": -5679836,
+  "article": "32",
+  "within": "2-ilova. Alohida taʼlim ehtiyojlari boʻlgan bolalar uchun davlat ixtisoslashtirilgan taʼlim muassasalari toʻgʻrisida NIZOM > 5-bob. Ixtisoslashtirilgan taʼlim muassasalarida oʻquv-tarbiya jarayonini tashkil etish",
+  "pass": "raw",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Concerns classes in specialised (special-needs) institutions, not an ordinary rural school."
+ },
+ {
+  "question": "lf-079",
+  "document": -6228935,
+  "article": null,
+  "within": "Nizomga 1-ilova. Davlat organlari va tashkilotlarining jismoniy va yuridik shaxslarning murojaatlari bilan ish olib boruvchi xodimlari malakasini oshirish kurslarini tashkil etish SXEMASI",
+  "pass": "raw",
+  "status": "no_text",
+  "quote": "",
+  "reason": ""
+ },
+ {
+  "question": "lf-080",
+  "document": -2989939,
+  "article": "1",
+  "within": "Ilova. Bojxona bojlari va soliqlarni toʻlashdan shartli ozod qilish tadbiq etiladigan vaqtincha olib kiriladigan tovarlar roʻyxati, ozod qilish shartlari, shuningdek, imtiyozlarning amal qilish muddatlari",
+  "pass": "raw",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Temporary-import conditional exemption list; no duty exemption until 2030 for theatres."
+ },
+ {
+  "question": "lf-081",
+  "document": -5426253,
+  "article": "3",
+  "within": "",
+  "pass": "alt",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Does not state the language of instruction."
+ },
+ {
+  "question": "lf-083",
+  "document": -6767101,
+  "article": null,
+  "within": "1-ilova. “Kichik biznesni uzluksiz qoʻllab-quvvatlash” kompleks dasturi tashabbuskorlarini tanlash, ularning loyihalarini qoʻllab-quvvatlash va moliyalashtirish toʻgʻrisida NIZOM > 6-bob. Yakunlovchi qoidalar > Dastur doirasida loyiha tashabbuskorlarini baholash, oʻqitish, moliyaviy va konsultativ qoʻllab-quvvatlash va loyiha monitoringini yuritish",
+  "pass": "raw",
+  "status": "no_text",
+  "quote": "",
+  "reason": ""
+ },
+ {
+  "question": "lf-085",
+  "document": -8242581,
+  "article": "368",
+  "within": "Ilova. Yuk ortish va tushirish ishlarida yukchilar uchun ishlarning xavfsizligi QOIDALARI > 2-bob. Umumiy xavfsizlik talablari > 25-§. Savdo omborlari, chakana savdo va umumiy ovqatlanish tashkilotlarida mahsulotlarni tashish va joylashtirishga qoʻyiladigan talablar",
+  "pass": "raw",
+  "status": "rejected",
+  "quote": "",
+  "reason": "About moving a load stacked high, not about measuring grain temperature."
+ },
+ {
+  "question": "lf-086",
+  "document": -7437170,
+  "article": "19",
+  "within": "5-ilova. Umumiy oʻrta, oʻrta maxsus va professional taʼlim muassasalarida huquqiy fanlardan dars beradigan, oliy noyuridik maʼlumotga ega pedagog kadrlarni qayta tayyorlash kurslari toʻgʻrisida NIZOM > 4-bob. Tinglovchilarning yakuniy imtihoni",
+  "pass": "raw",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Concerns failing the final exam of the whole course, not a module test and moving on to the next module."
+ },
+ {
+  "question": "lf-087",
+  "document": -3299721,
+  "article": null,
+  "within": "Ilova. Pedagogika yoʻnalishlari boʻyicha maxsus sirtqi boʻlimlar tashkil etiladigan oliy taʼlim muassasalari ROʻYXATI",
+  "pass": "raw",
+  "status": "kept",
+  "quote": "oʻrta maxsus maʼlumotga hamda kamida uch yil pedagogik amaliy ish stajiga",
+  "reason": "States admission requires at least three years of pedagogical experience (five years is the post-graduation work obligation)."
+ },
+ {
+  "question": "lf-088",
+  "document": -5023876,
+  "article": "11",
+  "within": "1-ilova. Oʻzbekiston Respublikasi hududida chet el fuqarolari va fuqaroligi boʻlmagan shaxslarni vaqtincha turgan joyi boʻyicha roʻyxatga olish tartibi toʻgʻrisida NIZOM > 2-bob. Boshqa davlatlardan kelgan chet el fuqarolari va fuqaroligi boʻlmagan shaxslarni vaqtincha turgan joyi boʻyicha roʻyxatga olish tartibi",
+  "pass": "raw",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Lists who is exempt from temporary registration; does not answer whether a guest may stay in a home or rented flat."
+ },
+ {
+  "question": "lf-089",
+  "document": -1724291,
+  "article": "53",
+  "within": "Ilova. Tergovga qadar tekshiruv, surishtiruv, dastlabki tergov va sud muhokamasi davomida ashyoviy dalillar, moddiy qimmatliklar va boshqa mol-mulkni olib qoʻyish (qabul qilish), hisobga olish, saqlash, berish, sotish, qaytarish, yoʻq qilib tashlash tartibi toʻgʻrisidagi YOʻRIQNOMA > V. Ashyoviy dalillar va boshqa narsalarni topshirish",
+  "pass": "raw",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Fate of material evidence in criminal cases; nothing about voluntarily given biomaterial."
+ },
+ {
+  "question": "lf-089",
+  "document": -5120412,
+  "article": "22",
+  "within": "3-bob. Biologik materialni olish, undan foydalanish, uni saqlash, berish va yoʻq qilish",
+  "pass": "alt",
+  "status": "kept",
+  "quote": "biologik material egasining yoki uning qonuniy vakilining yozma arizasiga koʻra unga yoki uning qonuniy vakiliga qaytariladi yoxud yoʻq qilinadi",
+  "reason": "Voluntarily given biomaterial is returned or destroyed on the owner's written application."
+ },
+ {
+  "question": "lf-090",
+  "document": -8354256,
+  "article": "16",
+  "within": "",
+  "pass": "raw",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Describes the source of payment and regress against the state body, not the entrepreneur's right to full compensation."
+ },
+ {
+  "question": "lf-091",
+  "document": -4575264,
+  "article": "37",
+  "within": "1-ilova. Oʻzbekiston Respublikasi Adliya vazirligining Apellyatsiya kengashiga apellyatsiyalar va Oʻzbekiston Respublikasida hammaga maʼlum tovar belgilari deb eʼtirof etish toʻgʻrisidagi arizalarni berish va ularni koʻrib chiqish QOIDALARI > 6-bob. Apellyatsiya kengashining qarorlari",
+  "pass": "raw",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Describes the contents of the Appeal Board decision; nothing about order of consideration."
+ },
+ {
+  "question": "lf-093",
+  "document": -7617018,
+  "article": "15¹⁷",
+  "within": "2-ilova. Vazirlar Mahkamasining “Xorijiy fuqarolarning va fuqaroligi boʻlmagan shaxslarning Oʻzbekiston Respublikasiga kelishlari, ketishlari, bu yerda boʻlishlari va tranzit oʻtishlari tartibi toʻgʻrisida” 1996-yil 21-noyabrdagi 408-son qaroriga kiritilayotgan oʻzgartirish va qoʻshimchalar > “II¹. Ichki ishlar organlari tomonidan chet el fuqarolarining Oʻzbekiston Respublikasida boʻlish viza muddatlarini uzaytirish tartibi",
+  "pass": "raw",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Lists visa issuance cases; no exemption from fees for project specialists."
+ },
+ {
+  "question": "lf-093",
+  "document": -7617018,
+  "article": "15¹⁶",
+  "within": "2-ilova. Vazirlar Mahkamasining “Xorijiy fuqarolarning va fuqaroligi boʻlmagan shaxslarning Oʻzbekiston Respublikasiga kelishlari, ketishlari, bu yerda boʻlishlari va tranzit oʻtishlari tartibi toʻgʻrisida” 1996-yil 21-noyabrdagi 408-son qaroriga kiritilayotgan oʻzgartirish va qoʻshimchalar > “II¹. Ichki ishlar organlari tomonidan chet el fuqarolarining Oʻzbekiston Respublikasida boʻlish viza muddatlarini uzaytirish tartibi",
+  "pass": "raw",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Documents for extending a guest visa; nothing on fee exemption for project specialists."
+ },
+ {
+  "question": "lf-094",
+  "document": -7437170,
+  "article": "19",
+  "within": "5-ilova. Umumiy oʻrta, oʻrta maxsus va professional taʼlim muassasalarida huquqiy fanlardan dars beradigan, oliy noyuridik maʼlumotga ega pedagog kadrlarni qayta tayyorlash kurslari toʻgʻrisida NIZOM > 4-bob. Tinglovchilarning yakuniy imtihoni",
+  "pass": "raw",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Pass threshold and retake of the final test; does not describe interim vs final control."
+ },
+ {
+  "question": "lf-094",
+  "document": -6398231,
+  "article": "21",
+  "within": "Ilova. Avtomototransport vositalari va shahar elektr transporti vositalari haydovchilarini tayyorlash, qayta tayyorlash va ularning malakasini oshirish faoliyatini amalga oshiruvchi taʼlim tashkilotlari oʻqituvchi va haydovchi-yoʻriqchilarini qayta tayyorlash hamda ularning malakasini oshirish tartibi toʻgʻrisidagi NIZOM > 3-bob. Qayta tayyorlash va malaka oshirish kurslarini tashkil etish",
+  "pass": "raw",
+  "status": "borderline",
+  "quote": "oraliq nazorat 20 ta test savollaridan iborat boʻladi, har bir toʻgʻri javob uchun 1,5 ball va jami toʻplanishi mumkin boʻlgan ball 30 balni tashkil etadi",
+  "reason": "States that there is an intermediate and a final control, both as tests."
+ },
+ {
+  "question": "lf-095",
+  "document": -6973011,
+  "article": "22",
+  "within": "1-ilova. Oʻquvchilarni akademik litseylarga qabul qilish, ularning oʻqishini koʻchirish, qayta tiklash va oʻqishdan chetlatish tartibi toʻgʻrisidagi NIZOM > 2-bob. Oʻquvchilarni akademik litseylarga qabul qilish tartibi > 4-§. Ijodiy imtihonlarni oʻtkazish",
+  "pass": "alt",
+  "status": "kept",
+  "quote": "abituriyent ijodiy imtihonlarni oʻtkazish tartibini buzgan hisoblanadi va dalolatnoma tuzilib, u ijodiy imtihonlardan chetlashtiriladi",
+  "reason": "Directly says an applicant who brings a phone or cheat sheets is removed from the exam."
+ },
+ {
+  "question": "lf-095",
+  "document": -7726569,
+  "article": "27",
+  "within": "1-ilova. Oliy taʼlim tashkilotlarining bakalavriatiga oʻqishga qabul qilish tartibi toʻgʻrisida NIZOM > 4-bob. Kasbiy (ijodiy) imtihonlarni oʻtkazish",
+  "pass": "alt",
+  "status": "kept",
+  "quote": "imtihon oʻtkazish tartibini buzgan hisoblanadi va kasbiy (ijodiy) imtihon komissiyasi tomonidan dalolatnoma tuzilib, imtihondan chetlashtiriladi",
+  "reason": "States that an applicant who brings in a phone or cheat sheets is removed from the exam."
+ },
+ {
+  "question": "lf-095",
+  "document": -7692964,
+  "article": "31",
+  "within": "2-ilova. Oʻzbekiston Respublikasi Maktabgacha va maktab taʼlimi vazirligi huzuridagi Ixtisoslashtirilgan taʼlim muassasalari agentligi tizimidagi ixtisoslashtirilgan sport maktablariga oʻquvchilarni saralab olish, qabul qilish hamda chetlashtirish tartibi toʻgʻrisida NIZOM > 4-bob. Kirish imtihonlarini tashkil etish va oʻtkazish tartibi",
+  "pass": "alt",
+  "status": "kept",
+  "quote": "Yuqoridagi holatlar sodir etilganda, oʻquvchilarga nisbatan tegishli dalolatnoma rasmiylashtiriladi va ular javoblar varaqasini topshirgan holda kirish imtihonini tark etadi.",
+  "reason": "Using a cheat sheet or phone leads to an act and the pupil leaving the exam."
+ },
+ {
+  "question": "lf-095",
+  "document": -7437170,
+  "article": "26",
+  "within": "4-ilova. Oliy maʼlumotga ega boʻlgan shaxslarni yuridik mutaxassislik boʻyicha qayta tayyorlash kurslari toʻgʻrisida NIZOM > 2-bob. Hujjatlarni qabul qilish va qayta tayyorlash kurslariga qabulni tashkil etish",
+  "pass": "alt",
+  "status": "kept",
+  "quote": "Kirish imtihoni jarayonida talabgorning taqiqlangan materiallardan foydalanishi, foydalanishga urinishi",
+  "reason": "States use of prohibited materials is a ground for removal from the exam."
+ },
+ {
+  "question": "lf-095",
+  "document": -4313560,
+  "article": "73",
+  "within": "2-ilova. Oʻzbekiston Respublikasi Iqtisodiyot va moliya vazirligi huzuridagi Bojxona qoʻmitasining Bojxona instituti magistraturasiga oʻqishga qabul qilish tartibi toʻgʻrisida NIZOM > 7-bob. Yozma va ogʻzaki imtihon jarayonini tashkil etish",
+  "pass": "alt",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Defines what counts as violating exam order; does not state the consequence (removal)."
+ },
+ {
+  "question": "lf-095",
+  "document": -8164733,
+  "article": "33",
+  "within": "1-ilova. Davlat organlari va tashkilotlari ichki audit xizmatlarining xodimlari malakasini sertifikatlash va ularni uzluksiz kasbiy rivojlantirish tartibi toʻgʻrisida NIZOM > 6-bob. Malaka imtihonini tashkil qilish va oʻtkazish tartibi",
+  "pass": "alt",
+  "status": "borderline",
+  "quote": "Ushbu talablarni buzgan talabgorlar malaka imtihonidan chiqarib yuboriladi va malaka imtihonidan oʻtmagan deb hisoblanadi.",
+  "reason": "Candidates using phones or cheat sheets are removed from the exam."
+ },
+ {
+  "question": "lf-097",
+  "document": -5524284,
+  "article": null,
+  "within": "Nizomga 2-ilova. Mahalliy sharoitda yetishtirilgan koʻchatlar va payvandtaglarni sotib olish xarajatlarining bir qismini qoplab berish SXEMASI",
+  "pass": "raw",
+  "status": "no_text",
+  "quote": "",
+  "reason": ""
+ },
+ {
+  "question": "lf-097",
+  "document": -8038302,
+  "article": "28¹",
+  "within": "11-ilova. Oʻzbekiston Respublikasi Prezidentining va Oʻzbekiston Respublikasi Hukumatining ayrim qarorlariga kiritilayotgan oʻzgartirish va qoʻshimchalar > “3¹-§. Aholi tomorqalari hamda ijara yer uchastkalaridagi samarasiz eski bogʻlarni rekonstruksiya qilish va yangilarini barpo etish uchun subsidiya ajratish tartibi",
+  "pass": "alt",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Describes how to apply for a subsidy covering part of the cost but does not state that half is reimbursed."
+ },
+ {
+  "question": "lf-097",
+  "document": -7524309,
+  "article": "28¹",
+  "within": "2-ilova. Oʻzbekiston Respublikasi Kambagʻallikni qisqartirish va bandlik vazirligi huzuridagi Dehqon xoʻjaliklari va tomorqa yer egalari faoliyatini qoʻllab-quvvatlash jamgʻarmasi hisobidan grant, subsidiya, kredit va lizing ajratish tartibi toʻgʻrisida NIZOM > 3-bob. Moliyaviy qoʻllab-quvvatlash turlarini ajratish tartibi > 3¹-§. Aholi tomorqalari hamda ijara yer uchastkalaridagi samarasiz eski bogʻlarni rekonstruksiya qilish va yangilarini barpo etish uchun subsidiya ajratish tartibi",
+  "pass": "alt",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Only describes how to apply for partial cost compensation; the share (half) is not stated."
+ },
+ {
+  "question": "lf-098",
+  "document": -6411319,
+  "article": "62",
+  "within": "1-ilova. Ijtimoiy himoyaga muhtoj boʻlgan ayrim toifadagi shaxslarga nafaqa tayinlash va toʻlash tartibi toʻgʻrisida NIZOM > 9-bob. Nafaqalarni toʻlash",
+  "pass": "raw",
+  "status": "rejected",
+  "quote": "",
+  "reason": "About survivor benefit payment periods, not a 500 thousand one-off August payment."
+ },
+ {
+  "question": "lf-100",
+  "document": -8164743,
+  "article": "6",
+  "within": "Ilova. Avtomototransport vositalarini jarima maydonchasidan olib chiqish yuzasidan Davlat yoʻl harakati xavfsizligi xizmatiga elektron murojaat qilishning MAʼMURIY REGLAMENTI > 2-bob. Avtomototransport vositalarini jarima maydonchasidan olib chiqish yuzasidan elektron murojaat qilish tartibi",
+  "pass": "raw",
+  "status": "rejected",
+  "quote": "",
+  "reason": "About sending electronic applications any day, not about the impound lot accepting cars on weekends."
+ },
+ {
+  "question": "lf-101",
+  "document": -1601125,
+  "article": "15",
+  "within": "",
+  "pass": "raw",
+  "status": "rejected",
+  "quote": "",
+  "reason": "About procedure when insanity arises at trial; does not address proof that the person did the act."
+ },
+ {
+  "question": "lf-102",
+  "document": -8516565,
+  "article": "2",
+  "within": "II. Dual taʼlim shaklida kadrlar tayyorlashni yoʻlga qoʻyish",
+  "pass": "raw",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Dual education rules without anything on shorter study duration."
+ },
+ {
+  "question": "lf-103",
+  "document": -6903878,
+  "article": null,
+  "within": "1-ilova. Davlat maktabgacha taʼlim tashkilotlarida bolalar taʼminoti uchun ota-onalar toʻlovi MIQDORLARI",
+  "pass": "raw",
+  "status": "no_text",
+  "quote": "",
+  "reason": ""
+ },
+ {
+  "question": "lf-103",
+  "document": -6903878,
+  "article": null,
+  "within": "1-ilova. Davlat maktabgacha taʼlim tashkilotlarida bolalar taʼminoti uchun ota-onalar toʻlovi MIQDORLARI",
+  "pass": "alt",
+  "status": "no_text",
+  "quote": "",
+  "reason": ""
+ },
+ {
+  "question": "lf-103",
+  "document": -6903878,
+  "article": "1",
+  "within": "",
+  "pass": "alt",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Only approves the fee amounts by reference to an annex; no amount is given in the text."
+ },
+ {
+  "question": "lf-108",
+  "document": -7410357,
+  "article": null,
+  "within": "Ilova. Ijtimoiy shartnomani rasmiylashtirish va u asosida kambagʻal oilani kambagʻallikdan chiqarishga qaratilgan koʻmak choralarini koʻrsatish SXEMASI",
+  "pass": "raw",
+  "status": "no_text",
+  "quote": "",
+  "reason": ""
+ },
+ {
+  "question": "lf-108",
+  "document": -8027513,
+  "article": "26",
+  "within": "3-ilova. Ijtimoiy reyestrga kiritilgan oilalarga bolalar nafaqasi va moddiy yordamni tayinlash va toʻlash tartibi toʻgʻrisida NIZOM > 4-bob. Bolalar nafaqasi va moddiy yordam toʻlashni toʻxtatish tartibi",
+  "pass": "alt",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Lists cases when payment is stopped, not reduced, and no reduction amount."
+ },
+ {
+  "question": "lf-110",
+  "document": -4386848,
+  "article": "25",
+  "within": "3-bob. Saylov komissiyalari",
+  "pass": "raw",
+  "status": "rejected",
+  "quote": "",
+  "reason": "About election commission members, not deputy candidates."
+ },
+ {
+  "question": "lf-112",
+  "document": -7645251,
+  "article": null,
+  "within": "Nizomga 1-ilova. Qoraqalpogʻiston Respublikasi, viloyatlar va Toshkent shahridagi “Yoshlar daftari” jamgʻarmasi vasiylik kengashining NAMUNAVIY TARKIBI. “Yoshlar daftari”ni yuritish orqali yoshlar muammolarini tizimli ravishda hal etish va ularni ijtimoiy qoʻllab-quvvatlash tartibi toʻgʻrisida NIZOM > 7-bob. Yakunlovchi qoidalar > Ijtimoiy himoyaga muhtoj shaxslarning bandligini va ijtimoiy faolligini taʼminlashga qaratilgan ijtimoiy loyihalarni moliyalashtirish uchun grant ajratish",
+  "pass": "raw",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Footnote about a commission composition; does not answer."
+ },
+ {
+  "question": "lf-112",
+  "document": -6277196,
+  "article": "12",
+  "within": "Ilova. Mahallalarda xotin-qizlarning bandligini taʼminlash va salomatligini mustahkamlash markazlari toʻgʻrisida NIZOM > 4-bob. Markazlarda loyihani amalga oshirish uchun davlat granti olishga qoʻyiladigan talablar",
+  "pass": "alt",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Lists target groups for state grants; does not address permission to use a building for training."
+ },
+ {
+  "question": "lf-112",
+  "document": -6277196,
+  "article": "8",
+  "within": "Ilova. Mahallalarda xotin-qizlarning bandligini taʼminlash va salomatligini mustahkamlash markazlari toʻgʻrisida NIZOM > 3-bob. Markazlarda xotin-qizlar bandligini taʼminlash, salomatligini mustahkamlash hamda ularni kasbga oʻqitish faoliyati bilan bogʻliq ijtimoiy loyihani amalga oshirish uchun tadbirkorlik subyektlariga davlat granti ajratish va undan foydalanish tartibi",
+  "pass": "alt",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Project selection criteria; does not address permission or grants for training in an own building."
+ },
+ {
+  "question": "lf-112",
+  "document": -6277196,
+  "article": "10",
+  "within": "Ilova. Mahallalarda xotin-qizlarning bandligini taʼminlash va salomatligini mustahkamlash markazlari toʻgʻrisida NIZOM > 3-bob. Markazlarda xotin-qizlar bandligini taʼminlash, salomatligini mustahkamlash hamda ularni kasbga oʻqitish faoliyati bilan bogʻliq ijtimoiy loyihani amalga oshirish uchun tadbirkorlik subyektlariga davlat granti ajratish va undan foydalanish tartibi",
+  "pass": "alt",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Sets out grant stages for centres in mahalla premises; does not address training in one's own building or permission for it."
+ },
+ {
+  "question": "lf-114",
+  "document": -6076304,
+  "article": "9",
+  "within": "1-ilova. Nogironligi boʻlgan yoshlarga oʻqish, yashash va transport xarajatlarini qoplash uchun subsidiya ajratishning MAʼMURIY REGLAMENTI > 2-bob. Subsidiya ajratish tartibi",
+  "pass": "raw",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Clause lists documents to attach; submission channels are only implied, not stated as the rule."
+ },
+ {
+  "question": "lf-116",
+  "document": -196333,
+  "article": "2",
+  "within": "",
+  "pass": "raw",
+  "status": "kept",
+  "quote": "Birinchi marta ataylab qilgan jinoyatlari uchun 3 yilgacha ozodlikdan mahrum etilgan yoki yengilroq jazoga hukm qilinganlar, shuningdek ehtiyotsizlik tufayli qilgan jinoyati uchun 5 yilgacha ozodlikdan mahrum etilganlar jazodan ozod qilinsin.",
+  "reason": "Amnesty clause releases first-time intentional offenders sentenced up to 3 years from punishment."
+ },
+ {
+  "question": "lf-117",
+  "document": -7565069,
+  "article": null,
+  "within": "Ilova. Videotexnika vositalari orqali qayd etilgan huquqbuzarlik toʻgʻrisidagi foto va videomateriallarni qabul qilish, koʻrib chiqish hamda ularni taqdim etgan shaxslarni ragʻbatlantirish SXEMASI",
+  "pass": "alt",
+  "status": "no_text",
+  "quote": "",
+  "reason": ""
+ },
+ {
+  "question": "lf-117",
+  "document": -7565069,
+  "article": "5",
+  "within": "1-ilova. Jismoniy shaxslar tomonidan qayd etilgan suv xoʻjaligi sohasidagi huquqbuzarliklar toʻgʻrisidagi fotosuratlar va (yoki) videoyozuvlarni qabul qilish, koʻrib chiqish hamda ularni taqdim etgan shaxslarni ragʻbatlantirish tartibi haqida NIZOM > 2-bob. Huquqbuzarlikni videotexnika vositalari orqali qayd etish",
+  "pass": "alt",
+  "status": "borderline",
+  "quote": "Videotexnika vositalari orqali qayd etilgan huquqbuzarlik toʻgʻrisidagi foto va videomateriallarda quyidagilar aks ettirilishi lozim:",
+  "reason": "Directly states what the video material must show (half of the question; deadline not covered)."
+ },
+ {
+  "question": "lf-117",
+  "document": -7565069,
+  "article": "7",
+  "within": "1-ilova. Jismoniy shaxslar tomonidan qayd etilgan suv xoʻjaligi sohasidagi huquqbuzarliklar toʻgʻrisidagi fotosuratlar va (yoki) videoyozuvlarni qabul qilish, koʻrib chiqish hamda ularni taqdim etgan shaxslarni ragʻbatlantirish tartibi haqida NIZOM > 2-bob. Huquqbuzarlikni videotexnika vositalari orqali qayd etish",
+  "pass": "alt",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Lists reporter's personal data to include; gives no deadline and not the video content."
+ },
+ {
+  "question": "lf-118",
+  "document": -1620565,
+  "article": "3",
+  "within": "",
+  "pass": "alt",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Concerns the entrepreneur certificate exception for trading places, not obstruction of entry to the market."
+ },
+ {
+  "question": "lf-120",
+  "document": -1726587,
+  "article": "21",
+  "within": "1-ilova. Mehnatni muhofaza qilish toʻgʻrisidagi qonun hujjatlarini buzganlik uchun tashkilotlar faoliyatini toʻxtatib qoʻyish tartibi toʻgʻrisida > III. Mehnat xavfsizligi talablariga javob bermaydigan va ishlovchilar sogʻligʻi va (yoki) hayotiga xavf soladigan tashkilotlar faoliyatini va ishlab chiqarish vositalaridan foydalanishni toʻxtatib qoʻyish tartibi",
+  "pass": "raw",
+  "status": "kept",
+  "quote": "faoliyatini va ishlab chiqarish vositalaridan foydalanishni 10 kundan ortiq boʻlmagan muddatga toʻxtatib turish toʻgʻrisida qaror chiqariladi",
+  "reason": "States the inspector issues a decision suspending the use of dangerous production equipment for up to 10 days."
+ },
+ {
+  "question": "lf-121",
+  "document": -1480290,
+  "article": "4",
+  "within": "",
+  "pass": "raw",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Supreme Court guidance on changing or terminating loan contracts; nothing about interest subsidies."
+ },
+ {
+  "question": "lf-122",
+  "document": -4089917,
+  "article": "13",
+  "within": "Ilova. Yoʻl-patrul xizmati xodimlarining yoʻl harakati qatnashchilari bilan oʻzaro munosabatlari hamda maxsus moslamalardan foydalanishi tartibi toʻgʻrisida NIZOM > 3-bob. Yoʻl-patrul xizmati xodimining yoʻl harakati qatnashchilari bilan oʻzaro munosabatlaridagi huquq va majburiyatlari",
+  "pass": "raw",
+  "status": "kept",
+  "quote": "Quyidagi hollarda YPX xodimi haydovchi yoki yoʻlovchilardan transport vositasi kabinasidan chiqishini talab qilishga haqli:",
+  "reason": "Lists the cases when a traffic officer may demand leaving the vehicle."
+ },
+ {
+  "question": "lf-122",
+  "document": -4089917,
+  "article": "18",
+  "within": "Ilova. Yoʻl-patrul xizmati xodimlarining yoʻl harakati qatnashchilari bilan oʻzaro munosabatlari hamda maxsus moslamalardan foydalanishi tartibi toʻgʻrisida NIZOM > 4-bob. Yoʻl harakati qatnashchilarining yoʻl-patrul xizmati xodimlari bilan oʻzaro munosabatlaridagi huquq va majburiyatlari",
+  "pass": "raw",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Only refers to clause 13 for the cases; the cases themselves are not in this text."
+ },
+ {
+  "question": "lf-124",
+  "document": -7716565,
+  "article": "4",
+  "within": "",
+  "pass": "raw",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Agency tasks on planting and leasing orchards; no 30-year allocation term."
+ },
+ {
+  "question": "lf-125",
+  "document": -4327596,
+  "article": "116",
+  "within": "1-ilova. Ixtisoslashtirilgan soʻyish korxonalari uchun veterinariya, veterinariya-sanitariya NORMA VA QOIDALARI > 5-bob. Tana va ichki organlarning veterinariya-sanitariya ekspertizasi",
+  "pass": "raw",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Actinomycosis of slaughter animals, not poultry diseases."
+ },
+ {
+  "question": "lf-126",
+  "document": -6000393,
+  "article": "19",
+  "within": "Ilova. Xususiy sektorda oʻsimliklar himoyasi sohasida xizmat koʻrsatadigan yuridik shaxslar xodimlarining va jismoniy shaxslarning malakasini oshirish hamda ularga sertifikat berish tartibi toʻgʻrisida NIZOM > 7-bob. Malaka imtihonini oʻtkazish va sertifikat berish",
+  "pass": "raw",
+  "status": "kept",
+  "quote": "malaka imtihonini muvaffaqiyatli topshirgan tinglovchilarga 3 kun ichida mazkur Nizomga 2-ilovaga muvofiq namunadagi sertifikat beriladi",
+  "reason": "Gives the term for issuing the certificate after passing the exam: within 3 days."
+ },
+ {
+  "question": "lf-127",
+  "document": -6216084,
+  "article": "34",
+  "within": "1-ilova. Axborot-kutubxona muassasalarida axborot-kutubxona resurslarini hisobga olish va axborot-kutubxona fondini tekshirish tartibi toʻgʻrisida NIZOM > 3-bob. Axborot-kutubxona fondini hisobga olish obyektlari va birliklari",
+  "pass": "raw",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Defines accounting units for carrier-less electronic resources; does not say whether website files belong to the library's own base."
+ },
+ {
+  "question": "lf-128",
+  "document": -6479366,
+  "article": null,
+  "within": "Ilova. Ijod maktablariga oʻquvchilarni saralab olish va qabul qilish SXEMASI",
+  "pass": "raw",
+  "status": "no_text",
+  "quote": "",
+  "reason": ""
+ },
+ {
+  "question": "lf-128",
+  "document": -6862155,
+  "article": "2",
+  "within": "",
+  "pass": "raw",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Only covers contest winners admitted without exam; no class size or general admission rule."
+ },
+ {
+  "question": "lf-128",
+  "document": -6479366,
+  "article": "2",
+  "within": "3-ilova. Oʻzbekiston Respublikasi Maktabgacha va maktab taʼlimi vazirligi huzuridagi Ixtisoslashtirilgan taʼlim muassasalari agentligi tizimidagi ijod maktablariga oʻquvchilarni saralab olish va qabul qilish tartibi toʻgʻrisida NIZOM > 1-bob. Umumiy qoidalar",
+  "pass": "alt",
+  "status": "kept",
+  "quote": "Ijod maktablarining 7-sinflariga oʻquvchilar ijodiy imtihonlar hamda test sinovlari asosida har bir sinfda 20 nafardan oshmagan holda qabul qilinadi.",
+  "reason": "States admission to grade 7 by creative exams and tests, max 20 pupils per class."
+ },
+ {
+  "question": "lf-128",
+  "document": -7926881,
+  "article": "2",
+  "within": "3-ilova. Oʻzbekiston Respublikasi Hukumatining ayrim qarorlariga kiritilayotgan oʻzgartirish va qoʻshimchalar > “Toʻraqoʻrgʻon tumanida Isʼhoqxon Ibrat nomidagi ijod maktabini tashkil etish toʻgʻrisida”;",
+  "pass": "alt",
+  "status": "kept",
+  "quote": "ijod maktabida har bir sinfdagi oʻquvchilar soni 20 nafarni tashkil qiladi, 7-sinflarga esa ijodiy tanlovlar, test va boshqa sinovlar asosida qabul qilinadi",
+  "reason": "Gives class size (20) and admission to 7th grade by creative contests and tests."
+ },
+ {
+  "question": "lf-128",
+  "document": -7926881,
+  "article": "2",
+  "within": "3-ilova. Oʻzbekiston Respublikasi Hukumatining ayrim qarorlariga kiritilayotgan oʻzgartirish va qoʻshimchalar > “Qarshi shahrida Abdulla Oripov nomidagi ijod maktabini tashkil etish toʻgʻrisida”;",
+  "pass": "alt",
+  "status": "kept",
+  "quote": "ijod maktabida har bir sinfdagi oʻquvchilar soni 20 nafarni tashkil qiladi, 7-sinflarga esa ijodiy tanlovlar, test va boshqa sinovlar asosida qabul qilinadi",
+  "reason": "States 20 pupils per class and admission to grade 7 by creative contest and tests."
+ },
+ {
+  "question": "lf-128",
+  "document": -7926881,
+  "article": "6",
+  "within": "3-ilova. Oʻzbekiston Respublikasi Hukumatining ayrim qarorlariga kiritilayotgan oʻzgartirish va qoʻshimchalar > “Muhammad Rizo Erniyozbek oʻgʻli Ogahiy tavalludining 210 yilligini nishonlash hamda Xiva shahrida Muhammad Rizo Ogahiy nomidagi ijod maktabini tashkil etish toʻgʻrisida”;",
+  "pass": "alt",
+  "status": "kept",
+  "quote": "ijod maktabida har bir sinfdagi oʻquvchilar soni 20 nafarni tashkil qiladi, 7-sinflarga esa ijodiy tanlovlar, test va boshqa sinovlar asosida qabul qilinadi",
+  "reason": "Answers both parts: admission to grade 7 by contests and tests, 20 pupils per class."
+ },
+ {
+  "question": "lf-128",
+  "document": -7926881,
+  "article": "2",
+  "within": "3-ilova. Oʻzbekiston Respublikasi Hukumatining ayrim qarorlariga kiritilayotgan oʻzgartirish va qoʻshimchalar > “Jizzax shahrida Hamid Olimjon va Zulfiya nomidagi ijod maktabini tashkil etish toʻgʻrisida”;",
+  "pass": "alt",
+  "status": "kept",
+  "quote": "ijod maktabida har bir sinfdagi oʻquvchilar soni 20 nafarni tashkil qiladi, 7-sinflarga esa ijodiy tanlovlar, test va boshqa sinovlar asosida qabul qilinadi",
+  "reason": "States 20 pupils per class and admission to 7th grade by creative contests, tests and other trials."
+ },
+ {
+  "question": "lf-128",
+  "document": -7926881,
+  "article": "2",
+  "within": "3-ilova. Oʻzbekiston Respublikasi Hukumatining ayrim qarorlariga kiritilayotgan oʻzgartirish va qoʻshimchalar > “Andijon shahrida Muhammad Yusuf nomidagi ijod maktabini va Muhammad Yusufning byusti oʻrnatilgan xiyobonni tashkil etish toʻgʻrisida”;",
+  "pass": "alt",
+  "status": "kept",
+  "quote": "ijod maktabida har bir sinfdagi oʻquvchilar soni 20 nafarni tashkil qiladi, 7-sinflarga esa ijodiy tanlovlar, test va boshqa sinovlar asosida qabul qilinadi.",
+  "reason": "States 20 pupils per class and admission to 7th grade via creative contests and tests."
+ },
+ {
+  "question": "lf-129",
+  "document": -4477906,
+  "article": "7",
+  "within": "",
+  "pass": "raw",
+  "status": "rejected",
+  "quote": "",
+  "reason": "About the agrarian university technical school, not law technical school graduates; no answer on grant vs contract."
+ },
+ {
+  "question": "lf-133",
+  "document": -4685180,
+  "article": "11",
+  "within": "Ilova. Xorijda ota-onasi qaramogʻidan mahrum boʻlgan Oʻzbekiston Respublikasi fuqarolarining bolalarini Oʻzbekiston Respublikasiga qaytarish tartibi toʻgʻrisida NIZOM > 3-bob. Xorijda ota-onasi qaramogʻidan mahrum boʻlgan bolalarni qaytarish tartibi",
+  "pass": "raw",
+  "status": "kept",
+  "quote": "3 yoshga toʻlmagan bolalarni olib kelish boʻyicha Ichki ishlar vazirligi, Agentlik hamda Sogʻliqni saqlash vazirligi rahbariyatining tegishli koʻrsatmasiga asosan ichki ishlar, Agentlik hududiy boʻlinmalari va sogʻliqni saqlash organlari masʼul xodimlariga",
+  "reason": "Names the bodies whose staff are sent to bring back children under 3."
+ },
+ {
+  "question": "lf-134",
+  "document": -5524265,
+  "article": null,
+  "within": "Nizomga 1-ilova",
+  "pass": "raw",
+  "status": "no_text",
+  "quote": "",
+  "reason": ""
+ },
+ {
+  "question": "lf-134",
+  "document": -5668176,
+  "article": null,
+  "within": "Ilova. Professional taʼlim tashkilotlarida tahsil olayotgan, “Yoshlar daftari”ga kiritilgan oʻquvchi yoshlarga ishlab chiqarish va xizmat koʻrsatish korxonalarida ishlab chiqarish amaliyot davri uchun subsidiya ajratish SXEMASI",
+  "pass": "alt",
+  "status": "no_text",
+  "quote": "",
+  "reason": ""
+ },
+ {
+  "question": "lf-135",
+  "document": -2211301,
+  "article": "27",
+  "within": "Ilova. Birinchi guruhga choyni yetkazib berish, qabul qilish, saqlash va berib yuborish tartibi toʻgʻrisida YOʻRIQNOMA > IV bob. Omborlarga qoʻyiladigan talablar",
+  "pass": "raw",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Describes warehouse conditions, not whether damp or mouldy tea may be accepted for storage."
+ },
+ {
+  "question": "lf-136",
+  "document": -246177,
+  "article": "97",
+  "within": "Ilova. Veterinariyada giyohvandlik vositalari, psixotrop moddalar va prekursorlardan foydalanish tartibi > Veterinariya preparatlari omborlarida (bazalarida), veterinariya dorixonalarida, laboratoriyalarda, ilmiy-tadqiqot muassasalarida, oliy oʻquv yurtlarida, davolash-profilaktika muassasalarida, chorvachilik xoʻjaliklari va korxonalarida prekursorlarni saqlash, berish, hisobga olish va sotish",
+  "pass": "raw",
+  "status": "kept",
+  "quote": "Oʻt oʻchirgich laboratoriyaning har bir xonasida boʻlishi kerak.",
+  "reason": "Directly requires a fire extinguisher in every laboratory room."
+ },
+ {
+  "question": "lf-137",
+  "document": -512233,
+  "article": null,
+  "within": "4-ilova. Oʻzbekiston Respublikasining kirish, chiqish va tranzit vizalari (elektron boʻlmagan) toifalarining ROʻYXATI",
+  "pass": "raw",
+  "status": "no_text",
+  "quote": "",
+  "reason": ""
+ },
+ {
+  "question": "lf-137",
+  "document": -512233,
+  "article": "6",
+  "within": "1-ilova. Chet el fuqarolari va fuqaroligi boʻlmagan shaxslarning Oʻzbekiston Respublikasiga kelishlari va Oʻzbekiston Respublikasidan ketishlari TARTIBI > I. UMUMIY QOIDALAR",
+  "pass": "alt",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Lists categories for multiple-entry visas; invited university staff and free visas are not covered."
+ },
+ {
+  "question": "lf-137",
+  "document": -8547765,
+  "article": "12",
+  "within": "3-ilova. Oʻzbekiston Respublikasi Hukumatining ayrim qarorlariga kiritilayotgan oʻzgartirish va qoʻshimchalar. “Xorijda istiqomat qilayotgan vatandoshlar va ularning oila aʼzolarini Oʻzbekiston Respublikasiga taklif qilishni rasmiylashtirish, koʻp martalik kirish vizalarini berish hamda ularni ichki ishlar organlari tomonidan turgan joyi boʻyicha roʻyxatdan oʻtkazish tartibi toʻgʻrisida NIZOM > 3-bob. Vatandoshlarga Oʻzbekiston Respublikasiga koʻp martalik kirish vizalarini rasmiylashtirish tartibi",
+  "pass": "alt",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Only says who issues multiple-entry visas to compatriots; nothing on free visas for invited staff."
+ },
+ {
+  "question": "lf-137",
+  "document": -8547765,
+  "article": "1",
+  "within": "3-ilova. Oʻzbekiston Respublikasi Hukumatining ayrim qarorlariga kiritilayotgan oʻzgartirish va qoʻshimchalar. “Xorijda istiqomat qilayotgan vatandoshlar va ularning oila aʼzolarini Oʻzbekiston Respublikasiga taklif qilishni rasmiylashtirish, koʻp martalik kirish vizalarini berish hamda ularni ichki ishlar organlari tomonidan turgan joyi boʻyicha roʻyxatdan oʻtkazish tartibi toʻgʻrisida NIZOM > 1-bob. Umumiy qoidalar",
+  "pass": "alt",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Scope clause only; says nothing on free visas or a university invitation."
+ },
+ {
+  "question": "lf-138",
+  "document": -7182161,
+  "article": "113",
+  "within": "11-bob. Yer qaʼridan foydalanish sohasidagi faoliyatning asosiy turlariga doir ruxsatnomalar boʻyicha asosiy qoidalar",
+  "pass": "raw",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Concerns suspension of subsoil-use rights specifically, not a generic firm's permit."
+ },
+ {
+  "question": "lf-141",
+  "document": -6257288,
+  "article": "192",
+  "within": "MAXSUS QISM > IV BOʻLIM. YAKKA TARTIBDAGI MEHNATGA OID MUNOSABATLAR > 13-bob. Ish vaqti > 2-§. Ish vaqti rejimi va uni hisobga olish",
+  "pass": "raw",
+  "status": "kept",
+  "quote": "Smenalar orasidagi har kungi dam olishning eng kam davomiyligi (bitta smena oxiridan to keyingi smena boshlanishiga qadar) dam olish va ovqatlanish uchun tanaffus vaqti bilan birga kamida oʻn ikki soatni tashkil etishi kerak.",
+  "reason": "Minimum daily rest between shifts is twelve hours."
+ },
+ {
+  "question": "lf-143",
+  "document": -6125620,
+  "article": "1",
+  "within": "",
+  "pass": "raw",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Only terminates the state of emergency; says nothing about entry and exit restrictions."
+ },
+ {
+  "question": "lf-143",
+  "document": -6093281,
+  "article": "1",
+  "within": "",
+  "pass": "raw",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Only introduces the state of emergency and its dates; nothing on entry and exit restrictions."
+ },
+ {
+  "question": "lf-144",
+  "document": -3523206,
+  "article": "1",
+  "within": "",
+  "pass": "alt",
+  "status": "kept",
+  "quote": "2018/2019 oʻquv yilidan boshlab majburiy umumiy oʻrta va oʻrta maxsus taʼlim umumtaʼlim maktablarida, shu jumladan, ixtisoslashtirilgan maktablarda, ixtisoslashtirilgan sanʼat va madaniyat maktab-internatlarida hamda akademik litseylarda uzluksiz va 11 yillik muddatda amalga oshiriladi;",
+  "reason": "States compulsory general secondary education lasts 11 years."
+ },
+ {
+  "question": "lf-144",
+  "document": -3137130,
+  "article": "2",
+  "within": "1-ilova. Umumiy oʻrta taʼlim toʻgʻrisida NIZOM > 1-bob. Umumiy qoidalar",
+  "pass": "alt",
+  "status": "kept",
+  "quote": "Umumiy oʻrta taʼlimning muddati 11 yil boʻlib, uzluksiz taʼlim tizimining majburiy mustaqil turi hisoblanadi",
+  "reason": "States general secondary education lasts 11 years and is compulsory."
+ },
+ {
+  "question": "lf-145",
+  "document": -2387357,
+  "article": "31",
+  "within": "5-bob. Huquqbuzarliklarning yakka tartibdagi profilaktikasi",
+  "pass": "raw",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Describes official warning in crime prevention; nothing on SMS alerts to drivers about violations."
+ },
+ {
+  "question": "lf-146",
+  "document": -596542,
+  "article": null,
+  "within": "Yoʻriqnomaga 2-ilova",
+  "pass": "raw",
+  "status": "no_text",
+  "quote": "",
+  "reason": ""
+ },
+ {
+  "question": "lf-146",
+  "document": -8515680,
+  "article": null,
+  "within": "Reglamentiga 1-ilova. Mehnat shartnomasi alohida asoslarga koʻra bekor qilinganda, ishdan boʻshatilgan xodimlarga taqdimnoma rasmiylashtirish va muddatidan oldin yoshga doir pensiya tayinlash boʻyicha davlat xizmatini koʻrsatish SXEMASI",
+  "pass": "alt",
+  "status": "no_text",
+  "quote": "",
+  "reason": ""
+ },
+ {
+  "question": "lf-148",
+  "document": -5352371,
+  "article": "23",
+  "within": "2-ilova. Davlat organlari va tashkilotlarining davlat xizmatlarini koʻrsatishda idoraviy aloqa markazlari (ishonch telefonlari) faoliyatini tashkil etish tartibi toʻgʻrisida NAMUNAVIY NIZOM > 7-bob. Idoraviy aloqa markazlari (ishonch telefonlari) orqali murojaatlarni qabul qilish va koʻrib chiqish tartibi",
+  "pass": "alt",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Operator duties at agency call centres in general; not about education complaints by phone."
+ },
+ {
+  "question": "lf-149",
+  "document": -2430765,
+  "article": "111",
+  "within": "1-ilova. Koʻp kvartirali uylarda issiqlik taʼminoti xizmatlari koʻrsatish QOIDALARI > X. Uy boʻyicha umumiy hisobga olish asboblari bilan jihozlanmagan koʻp qavatli uylarda isteʼmolchilar tomonidan issiqlik taʼminoti xizmatlari uchun toʻlov miqdorini hisoblash tartibi",
+  "pass": "raw",
+  "status": "rejected",
+  "quote": "",
+  "reason": "About settlement for heat without a common meter, not the price of heat and power from newly installed equipment."
+ },
+ {
+  "question": "lf-149",
+  "document": -4624859,
+  "article": "2",
+  "within": "",
+  "pass": "raw",
+  "status": "rejected",
+  "quote": "",
+  "reason": "General heating tariff policy; nothing on the price of heat and power from newly installed equipment."
+ },
+ {
+  "question": "lf-149",
+  "document": -1750698,
+  "article": "27",
+  "within": "Ilova. Kommunal xizmatlarga tariflarni shakllantirish boʻyicha NIZOM > 2-bob. Kommunal xizmatlarni koʻrsatuvchi tashkilotlar tomonidan koʻrsatiladigan kommunal xizmatlarga tariflarning hisob-kitobi > 2-§. Issiq suv taʼminoti va isitish (issiqlik taʼminoti) xizmati (ishlab chiqarish va yetkazib berish)",
+  "pass": "raw",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Tariff cost-accounting specifics, not the price of energy from new equipment."
+ },
+ {
+  "question": "lf-150",
+  "document": -3603405,
+  "article": "9",
+  "within": "1-ilova. Bolalarni davlat maktabgacha taʼlim tashkilotlariga qabul qilish boʻyicha davlat xizmatlari koʻrsatishning MAʼMURIY REGLAMENTI > 2-bob. Davlat xizmatlarini koʻrsatish tartibi",
+  "pass": "raw",
+  "status": "rejected",
+  "quote": "",
+  "reason": "About admission to state preschools, not schools."
+ },
+ {
+  "question": "lf-150",
+  "document": -3603405,
+  "article": null,
+  "within": "Reglamentiga 1-ilova. Bolalarni davlat maktabgacha taʼlim tashkilotlariga qabul qilish ishlarini amalga oshirish SXEMASI",
+  "pass": "raw",
+  "status": "no_text",
+  "quote": "",
+  "reason": ""
+ },
+ {
+  "question": "lf-150",
+  "document": -6044094,
+  "article": null,
+  "within": "Reglamentiga 5-ilova. Oʻzbekiston Respublikasi fuqarolarining chet elda taʼlim olgan farzandlarini davlat umumiy oʻrta taʼlim muassasalariga qabul qilish boʻyicha davlat xizmati koʻrsatish SXEMASI",
+  "pass": "alt",
+  "status": "no_text",
+  "quote": "",
+  "reason": ""
+ },
+ {
+  "question": "lf-151",
+  "document": -7215989,
+  "article": null,
+  "within": "",
+  "pass": "raw",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Preamble only; no mention of Surxondaryo or concrete facilities."
+ },
+ {
+  "question": "lf-151",
+  "document": -5049511,
+  "article": "27",
+  "within": "3-bob. Nogironligi boʻlgan shaxslarning jamiyat va davlat hayotida toʻla huquqli tarzda ishtirok etishi uchun qulay shart-sharoitlar yaratish",
+  "pass": "raw",
+  "status": "borderline",
+  "quote": "shaxslarga sport bilan shugʻullanish, sport musobaqalarini oʻtkazish va ularda ishtirok etish uchun zarur shart-sharoitlar hamda imkoniyatlar yaratadi",
+  "reason": "Law obliges organisations to create conditions for persons with disabilities to do sport."
+ },
+ {
+  "question": "lf-152",
+  "document": -6001286,
+  "article": "18",
+  "within": "3-bob. Tirik donor hamda retsipiyentning huquq va majburiyatlari",
+  "pass": "alt",
+  "status": "kept",
+  "quote": "yuzaga kelgan asoratlar tufayli Oʻzbekiston Respublikasining Davlat budjeti mablagʻlari hisobidan koʻrsatiladigan zarur tibbiy yordamni qonunchilikka muvofiq olish huquqiga ega",
+  "reason": "Gives the recipient the right to state-funded medical care for complications after transplantation."
+ },
+ {
+  "question": "lf-152",
+  "document": -6997913,
+  "article": "54",
+  "within": "1-ilova. Inson aʼzolari va (yoki) toʻqimalarini transplantatsiya qilish tartibi toʻgʻrisida NIZOM > 7-bob. Yakunlovchi qoidalar",
+  "pass": "alt",
+  "status": "kept",
+  "quote": "asoratlar yuzaga kelganda Davlat budjetidan ushbu maqsadlar uchun ajratilgan mablagʻlar hisobidan Oʻzbekiston Respublikasining “Inson aʼzolari va toʻqimalarini transplantatsiyasi toʻgʻrisida”gi Qonuni va boshqa qonunchilik hujjatlariga muvofiq zarur tibbiy yordam oladi",
+  "reason": "States donor and recipient receive necessary medical care at budget expense when complications arise."
+ },
+ {
+  "question": "lf-153",
+  "document": -6683558,
+  "article": "6",
+  "within": "",
+  "pass": "raw",
+  "status": "kept",
+  "quote": "alkogol, giyohvandlik vositalari, ularning analoglari yoki psixotrop moddalar taʼsirida oʻta mastlik holati)ga koʻra oʻzini oʻzi himoya qilish",
+  "reason": "Defines helpless state as including extreme intoxication when the victim cannot understand or resist."
+ },
+ {
+  "question": "lf-154",
+  "document": -5840291,
+  "article": "2",
+  "within": "Ilova. Oʻzbekiston Respublikasi Prezidentining ayrim hujjatlariga kiritilayotgan oʻzgartirishlar va qoʻshimcha",
+  "pass": "raw",
+  "status": "kept",
+  "quote": "Yoshi 100 ga toʻlgan va undan oshgan fuqarolar pensiyasiga (nafaqasiga) 2022-yilning 1-martidan boshlab, har oyda pensiyani hisoblashning bazaviy miqdorining 100 foizi miqdorida qoʻshimcha toʻlov toʻlash belgilansin",
+  "reason": "States a monthly supplement to the pension for those aged 100 and over."
+ },
+ {
+  "question": "lf-155",
+  "document": -6089595,
+  "article": "1",
+  "within": "",
+  "pass": "raw",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Concerns 9 July 2022 and 11-12 July days off; nothing about 1 July or six-day week."
+ },
+ {
+  "question": "lf-156",
+  "document": -243235,
+  "article": "29",
+  "within": "1-ilova. Oʻzbekiston Respublikasida chakana savdo QOIDALARI > III. Sotuvchilarga, savdo obyektlariga va tovarlarga qoʻyiladigan asosiy talablar",
+  "pass": "alt",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Retail buyer's rights against a seller, not a supplier's duty to a shop."
+ },
+ {
+  "question": "lf-157",
+  "document": -1908933,
+  "article": "117",
+  "within": "Ilova. Noruda materiallari (shagʻal, qum) ishlab chiqarish xodimlari uchun mehnatni muhofaza qilish QOIDALARI > III bob. Ishlab chiqarish (texnologiya) jarayonlariga boʻlgan xavfsizlik talablari > 1-§. Umumiy talablar",
+  "pass": "raw",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Concerns technological equipment in gravel and sand production, not medical equipment."
+ },
+ {
+  "question": "lf-157",
+  "document": -5091758,
+  "article": "102",
+  "within": "Qoidalariga 10-ilova. Alohida ishlarni bajarishda xavfsizlik texnikasi qoidalari > 7-bob. Uskunalarda sinash va oʻlchashlarni amalga oshirish > 1-§. Tashqi tok manbaidan yuqori kuchlanish berib sinash",
+  "pass": "alt",
+  "status": "rejected",
+  "quote": "",
+  "reason": "About earthing during high-voltage tests; does not answer whether equipment must be disconnected before opening."
+ },
+ {
+  "question": "lf-158",
+  "document": -4249896,
+  "article": "11",
+  "within": "1-ilova. “Xalq cholgʻulari ijrochilari” respublika koʻrik-tanlovini tashkil etish va oʻtkazish tartibi toʻgʻrisida NIZOM > 3-bob. Tanlovda ishtirok etish shartlari",
+  "pass": "raw",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Lists documents to submit; does not say whether a non-working, non-studying person may take part."
+ },
+ {
+  "question": "lf-159",
+  "document": -7125707,
+  "article": "1",
+  "within": "4-ilova. Yer uchastkalaridan ruxsat etilgan foydalanishning asosiy turini oʻzgartirish boʻyicha davlat xizmatlarini koʻrsatish MAʼMURIY REGLAMENT > 1-bob. Umumiy qoidalar",
+  "pass": "alt",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Scope clause of a regulation; does not say which body considers the matter."
+ },
+ {
+  "question": "lf-159",
+  "document": -7125707,
+  "article": "15",
+  "within": "4-ilova. Yer uchastkalaridan ruxsat etilgan foydalanishning asosiy turini oʻzgartirish boʻyicha davlat xizmatlarini koʻrsatish MAʼMURIY REGLAMENT > 2-bob. Yer uchastkalaridan ruxsat etilgan foydalanishning asosiy turini oʻzgartirish boʻyicha davlat xizmatlarini koʻrsatish tartibi",
+  "pass": "alt",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Says where a branch forwards a request after a positive conclusion; not who considers demolition and multi-storey construction."
+ },
+ {
+  "question": "lf-159",
+  "document": -8071993,
+  "article": "2",
+  "within": "I. Maxsus huquqiy rejimning asosiy tamoyillari",
+  "pass": "alt",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Complex construction projects by investment companies; does not say who considers an individual's request."
+ },
+ {
+  "question": "lf-161",
+  "document": -3280860,
+  "article": "1",
+  "within": "",
+  "pass": "raw",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Merely approves the customs seal rules by reference to an annex."
+ },
+ {
+  "question": "lf-161",
+  "document": -2876354,
+  "article": "221",
+  "within": "IV boʻlim. Bojxona nazorati > 31-bob. Tovarlarni va transport vositalarini bojxona nazorati ostida tashish",
+  "pass": "alt",
+  "status": "kept",
+  "quote": "natuvchi bojxona organi bojxona hududi boʻylab bojxona nazorati ostida tashilayotgan tovarning va (yoki) transport vositasining bojxona identifikatsiyalanishini taʼminlaydi",
+  "reason": "States the customs office of departure ensures customs identification of goods and vehicles carried under customs control."
+ },
+ {
+  "question": "lf-161",
+  "document": -7816457,
+  "article": "110",
+  "within": "1-ilova. Bojxona nazorati shakllarini qoʻllash tartibi toʻgʻrisida NIZOM > 9-bob. Bojxona identifikatsiyalashi",
+  "pass": "alt",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Just a list of customs identification means; does not state transit goods are identified."
+ },
+ {
+  "question": "lf-163",
+  "document": -3014677,
+  "article": "21",
+  "within": "Ilova. Umumiy oʻrta taʼlim muassasalarining uzaytirilgan kun guruhlarida bolalar taʼminoti uchun ota-onalar toʻlovini undirish va undan foydalanish tartibi toʻgʻrisidagi NIZOM > 5-bob. Toʻlovdan tushadigan mablagʻlardan foydalanish",
+  "pass": "raw",
+  "status": "rejected",
+  "quote": "",
+  "reason": "About extended-day group fees, not summer camp staff from other schools."
+ },
+ {
+  "question": "lf-163",
+  "document": -3014677,
+  "article": "22",
+  "within": "Ilova. Umumiy oʻrta taʼlim muassasalarining uzaytirilgan kun guruhlarida bolalar taʼminoti uchun ota-onalar toʻlovini undirish va undan foydalanish tartibi toʻgʻrisidagi NIZOM > 5-bob. Toʻlovdan tushadigan mablagʻlardan foydalanish",
+  "pass": "raw",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Salary basis for extended-day group educators; nothing about summer camps or staff from other schools."
+ },
+ {
+  "question": "lf-163",
+  "document": -941876,
+  "article": null,
+  "within": "1-ilova. Maktab va qoʻshimcha taʼlim, madaniyat va sport muassasalari pedagog va boshqa xodimlari mehnatiga haq toʻlash boʻyicha bazaviy tarif stavkalari miqdorlari",
+  "pass": "alt",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Note on salary of club leaders; nothing on summer camp staff from other schools."
+ },
+ {
+  "question": "lf-164",
+  "document": -7015537,
+  "article": null,
+  "within": "Ilova. Ovozlarni sanab chiqishda uchastka saylov komissiyasi aʼzolari tomonidan amalga oshiriladigan VAZIFALAR TAQSIMOTI",
+  "pass": "raw",
+  "status": "rejected",
+  "quote": "",
+  "reason": "A note on election commission duties, unrelated to deputy immunity."
+ },
+ {
+  "question": "lf-165",
+  "document": -7349434,
+  "article": "11",
+  "within": "2-ilova. Oʻzbekiston Respublikasi Hukumatining ayrim qarorlariga kiritilayotgan oʻzgartirish va qoʻshimchalar. budjetnogo finansirovaniya sentralnogo apparata i organizatsiy NTRK Uzbekistana, a takje territorialnix teleradiokanalov. “Oʻzbekiston Respublikasi Qishloq xoʻjaligi vazirligi bilan maʼlumotlar almashishni yoʻlga qoʻyadigan tashkilotlar ROʻYXATI",
+  "pass": "alt",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Only amends annexes of a licensing regulation; no rule on who may sell alcohol to pharmacies."
+ },
+ {
+  "question": "lf-168",
+  "document": -5179335,
+  "article": null,
+  "within": "Talablariga 2-ilova. Maktabgacha yoshdagi bolalar rivojlanishiga qoʻyilayotgan TALABLAR",
+  "pass": "raw",
+  "status": "no_text",
+  "quote": "",
+  "reason": ""
+ },
+ {
+  "question": "lf-168",
+  "document": -5179335,
+  "article": null,
+  "within": "Dasturiga 6-ilova. 6-7 yoshdagi bolaning maktabga tayyorlik xaritasi",
+  "pass": "raw",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Note on the school-readiness map, not what a 6-7 year old should be able to do."
+ },
+ {
+  "question": "lf-170",
+  "document": -4598926,
+  "article": "121",
+  "within": "Ilova. Oʻzbekiston Respublikasining Davlat chegarasi orqali shaxslar, transport vositalari va tovarlarni oʻtkazish punktlarida chegara, bojxona, sanitariya-karantin, fitosanitariya va veterinariya nazoratidan oʻtkazish tartibi toʻgʻrisida NIZOM > 7-bob. Oʻtkazish punktlarida davlat nazorati organlarining huquqlari va majburiyatlari > 1-§. Chegara nazorati",
+  "pass": "raw",
+  "status": "borderline",
+  "quote": "Davlat chegarasidan oʻtayotgan shaxslarning ular shaxsini tasdiqlovchi hujjatlarini tekshirish, ularga tegishli belgilar qoʻyish va zarur boʻlganda, ushbu hujjatlarni vaqtincha olib qoʻyish",
+  "reason": "Gives border control the right to temporarily seize identity documents when necessary."
+ },
+ {
+  "question": "lf-171",
+  "document": -3580309,
+  "article": null,
+  "within": "Nizomga 2-ilova. Qonun hujjatlari va boshqa normativ hujjatlar, davlat standartlari talablarini hamda aloqa, axborotlashtirish va telekommunikatsiya texnologiyalari sohasida koʻrsatilayotgan xizmatlar sifatini buzilganligi uchun moliyaviy sanksiyalar (jarimalar) MIQDORLARI",
+  "pass": "raw",
+  "status": "no_text",
+  "quote": "",
+  "reason": ""
+ },
+ {
+  "question": "lf-171",
+  "document": -5179158,
+  "article": "32",
+  "within": "3-ilova. Radioelektron vositalar va yuqori chastotali qurilmalarni sotib olish (berish), sotish va (yoki) oʻrnatish (qurish), olib kirish, ulardan foydalanish tartibiga rioya qilinishi ustidan nazoratni tashkil etish hamda radioxalaqitlarni bartaraf etishda vazirliklar va idoralarning oʻzaro hamkorligi toʻgʻrisida NIZOM > 4-bob. Radioaloqa vositalariga, televideniye va radioeshittirish dasturlarini qabul qilishga taʼsir etuvchi radioxalaqitlarni bartaraf etish",
+  "pass": "alt",
+  "status": "kept",
+  "quote": "EMMM tomonidan qonunchilikda belgilangan tartibda REV yoki YUCHQdan foydalanishni vaqtinchalik toʻxtatish choralari koʻriladi",
+  "reason": "Use of an interfering radio device is temporarily suspended if the owner ignores the warning."
+ },
+ {
+  "question": "lf-171",
+  "document": -5179158,
+  "article": "17",
+  "within": "2-ilova. Radioelektron vositalar va yuqori chastotali qurilmalarni sotib olish (berish) va (yoki) oʻrnatish (qurish), olib kirish, foydalanishga ruxsat berish tartibi toʻgʻrisida NIZOM > 2-bob. Radiochastotalarni biriktirishga oid talab va shartlar",
+  "pass": "alt",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Lists regulator's powers on licence breaches and standards, not stopping a device for interference to others."
+ },
+ {
+  "question": "lf-171",
+  "document": -5179158,
+  "article": "37",
+  "within": "3-ilova. Radioelektron vositalar va yuqori chastotali qurilmalarni sotib olish (berish), sotish va (yoki) oʻrnatish (qurish), olib kirish, ulardan foydalanish tartibiga rioya qilinishi ustidan nazoratni tashkil etish hamda radioxalaqitlarni bartaraf etishda vazirliklar va idoralarning oʻzaro hamkorligi toʻgʻrisida NIZOM > 4-bob. Radioaloqa vositalariga, televideniye va radioeshittirish dasturlarini qabul qilishga taʼsir etuvchi radioxalaqitlarni bartaraf etish",
+  "pass": "alt",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Says information is passed on for administrative liability, not that the interfering device can be stopped."
+ },
+ {
+  "question": "lf-172",
+  "document": -6404992,
+  "article": null,
+  "within": "3-ilova. Keksa avlod vakillarini har tomonlama qoʻllab-quvvatlash hamda ularning ijtimoiy faolligini oshirishga doir qoʻshimcha chora-tadbirlar rejasi",
+  "pass": "raw",
+  "status": "no_text",
+  "quote": "",
+  "reason": ""
+ },
+ {
+  "question": "lf-173",
+  "document": -8503049,
+  "article": "30",
+  "within": "2-ilova. Xodimning mehnatda mayib boʻlishi va (yoki) kasb kasalligi tufayli hayotiga yoki sogʻligʻiga yetkazilgan ziyonning oʻrnini qoplash QOIDALARI > 4-bob. Boquvchi boʻlgan xodim vafot etgani munosabati bilan ziyonni toʻlash",
+  "pass": "raw",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Covers only the special case of death after an injury lump sum was already received; not the general payments asked about."
+ },
+ {
+  "question": "lf-173",
+  "document": -8503049,
+  "article": "31",
+  "within": "2-ilova. Xodimning mehnatda mayib boʻlishi va (yoki) kasb kasalligi tufayli hayotiga yoki sogʻligʻiga yetkazilgan ziyonning oʻrnini qoplash QOIDALARI > 4-bob. Boquvchi boʻlgan xodim vafot etgani munosabati bilan ziyonni toʻlash",
+  "pass": "raw",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Covers only funeral expenses, a minor part of the question."
+ },
+ {
+  "question": "lf-173",
+  "document": -1390913,
+  "article": "10",
+  "within": "",
+  "pass": "raw",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Covers only the funeral benefit, a minor part of the payments asked about."
+ },
+ {
+  "question": "lf-174",
+  "document": -8087150,
+  "article": "1",
+  "within": "Ilova. Koʻchmas mulk va transport vositalarining oldi-sotdi shartnomalari boʻyicha hisob-kitoblarni amalga oshirish uchun notariuslar va banklar oʻrtasida elektron maʼlumotlar almashish tartibi toʻgʻrisidagi NIZOM > 1-bob. Umumiy qoidalar",
+  "pass": "raw",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Scope of the notary-bank settlement regulation; nothing on assigning a claim."
+ },
+ {
+  "question": "lf-174",
+  "document": -8087150,
+  "article": "14",
+  "within": "Ilova. Koʻchmas mulk va transport vositalarining oldi-sotdi shartnomalari boʻyicha hisob-kitoblarni amalga oshirish uchun notariuslar va banklar oʻrtasida elektron maʼlumotlar almashish tartibi toʻgʻrisidagi NIZOM > 3-bob. Shartnomaning hisob-kitoblari boʻyicha notariuslar va banklar oʻrtasida elektron maʼlumotlar almashish",
+  "pass": "raw",
+  "status": "rejected",
+  "quote": "",
+  "reason": "About notary confirming a contract using bank escrow data, not assignment of a claim."
+ },
+ {
+  "question": "lf-175",
+  "document": -7655343,
+  "article": "75",
+  "within": "III BOʻLIM. SUVDAN FOYDALANISH, SUV OLISH KVOTALARI VA LIMITLARI, SUVDAN FOYDALANUVCHILARNING NODAVLAT TASHKILOTLARI > 11-bob. Suvdan foydalanuvchilarning hamda suv yetkazib beruvchi tashkilotlarning huquq va majburiyatlari",
+  "pass": "alt",
+  "status": "kept",
+  "quote": "suv olish joylarini suvni boshqarish va hisobga olish vositalari bilan jihozlashi",
+  "reason": "Obliges water users to equip intake points with metering devices; the online connection part is not covered."
+ },
+ {
+  "question": "lf-176",
+  "document": -2558275,
+  "article": "34",
+  "within": "3-ilova. Aholi punktlarida davlat kapital qoʻyilmalari hisobiga moliyalashtiriladigan ichimlik suv taʼminoti va oqova suv xizmati obyektlarini qurish va rekonstruksiya qilishni tashkil etish tartibi toʻgʻrisida NIZOM > VI. Ichimlik suv taʼminoti va oqova suv xizmati obyektlarini qurish sohasidagi loyihalarni amalga oshirishda ishtirok etuvchi tomonlarning majburiyati va javobgarligi",
+  "pass": "alt",
+  "status": "rejected",
+  "quote": "",
+  "reason": "About responsibility for architectural planning assignments; nothing on changing water allocation plans."
+ },
+ {
+  "question": "lf-177",
+  "document": -2387357,
+  "article": "25",
+  "within": "4-bob. Huquqbuzarliklarning maxsus profilaktikasi",
+  "pass": "raw",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Prevention measures for ex-convicts; nothing on working as a teacher."
+ },
+ {
+  "question": "lf-178",
+  "document": -2645029,
+  "article": "302",
+  "within": "Ilova. Yoʻl qurilishi materiallari ishlab chiqarishda mehnatni muhofaza qilish QOIDALARI > 4-bob. Ishlab chiqarish asbob-uskunalariga qoʻyiladigan talablar > 7-§. Konveyerlardan foydalanishda mehnat xavfsizligi talablari",
+  "pass": "raw",
+  "status": "rejected",
+  "quote": "",
+  "reason": "About signalling on conveyors in general, not a warning signal before starting new equipment."
+ },
+ {
+  "question": "lf-178",
+  "document": -1768757,
+  "article": "159",
+  "within": "Ilova. Sement ishlab chiqarish xodimlari uchun mehnatni muhofaza qilish QOIDALARI > IV bob. Ishlab chiqarish asbob-uskunalariga qoʻyiladigan xavfsizlik talablari > 3-§. Maydalagichlarga (shekali, valikli, konusli, bolgʻali) qoʻyiladigan xavfsizlik talablari",
+  "pass": "raw",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Requires signalling on crusher control panels in cement plants; not a start-up warning rule for new equipment."
+ },
+ {
+  "question": "lf-179",
+  "document": -5936132,
+  "article": null,
+  "within": "Reglamentiga 1-ilova",
+  "pass": "raw",
+  "status": "no_text",
+  "quote": "",
+  "reason": ""
+ },
+ {
+  "question": "lf-180",
+  "document": -6920001,
+  "article": "4",
+  "within": "",
+  "pass": "raw",
+  "status": "rejected",
+  "quote": "",
+  "reason": "States company's duty to notify creditors within thirty days, not the creditor's deadline to demand repayment."
+ },
+ {
+  "question": "lf-181",
+  "document": -4720426,
+  "article": "2",
+  "within": "8-ilova. “Tomorqa xizmati” tadbirkorlik subyektlarining reyestrini shakllantirish va yuritish tartibi toʻgʻrisida NIZOM > 1-bob. Umumiy qoidalar",
+  "pass": "alt",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Defines Tomorqa xizmati entities; does not directly say an individual entrepreneur may provide ploughing or machinery services."
+ },
+ {
+  "question": "lf-181",
+  "document": -6831090,
+  "article": "6",
+  "within": "8-ilova. Oʻzbekiston Respublikasi Prezidentining va Oʻzbekiston Respublikasi Hukumatining ayrim qarorlariga kiritilayotgan oʻzgartirish va qoʻshimchalar. Dehqon xoʻjaliklari va tomorqa yer uchastkalariga qishloq xoʻjaligi ekinlarini joylashtirish, ekish va parvarishlash, shuningdek, zarur moddiy resurslar yetkazib berilishini muvofiqlashtiruvchi respublika ishchi guruhi TARKIBI. “Oʻzbekiston fermer, dehqon xoʻjaliklari va tomorqa yer egalari kengashi huzuridagi Fermer, dehqon xoʻjaliklari va tomorqa yer egalarini koʻllab-quvvatlash jamgʻarmasi ijro etuvchi apparati TUZILMASI > “3-§. Intensiv bogʻ, tokzor yoki issiqxonalarni elektron onlayn auksion savdolari orqali sotish",
+  "pass": "alt",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Defines Tomorqa xizmati entrepreneurs supplying resources; does not state that a sole proprietor may provide ploughing or machinery services."
+ },
+ {
+  "question": "lf-182",
+  "document": -7655343,
+  "article": "129",
+  "within": "V BOʻLIM. SUVNI VA SUV OBYEKTLARINI MUHOFAZA QILISH, SUVNING ZARARLI TAʼSIRINING OLDINI OLISH > 24-bob. Suv obyektlarining suvni muhofaza qilish zonalarida, sohil boʻyi mintaqalarida va sanitariya muhofazasi zonalarida ishlarni amalga oshirish",
+  "pass": "raw",
+  "status": "kept",
+  "quote": "Mazkur sohil boʻyi mintaqasida xoʻjalik faoliyatini yuritish va har qanday turdagi binolar va inshootlarni qurish ishlari taqiqlanadi, bundan suv xoʻjaligi obyektlarini qurish mustasno.",
+  "reason": "Prohibits any construction in the riverside strip except water facilities."
+ },
+ {
+  "question": "lf-183",
+  "document": -2001187,
+  "article": "152",
+  "within": "Ilova. Oʻzbekiston Respublikasi temir yoʻl transportida yoʻlovchilar, bagaj va yuk bagaj tashish qoidalari > VIII bob. Tariflar va yigʻimlar > § 3. Poyezdda yurishga chegirmalar",
+  "pass": "raw",
+  "status": "kept",
+  "quote": "Vatan himoyasi va el-yurt tinchligi yoʻlida halok boʻlgan harbiy xizmatchining (xodimning) ota-onalariga Oʻzbekiston Respublikasi hududi boʻylab temir yoʻl transportidan yiliga ikki marta bepul foydalanish huquqi taqdim etilgan.",
+  "reason": "States parents of fallen servicemen may use rail transport free twice a year."
+ },
+ {
+  "question": "lf-184",
+  "document": -6602590,
+  "article": "25",
+  "within": "4-ilova. Oʻzbekiston futbol assotsiatsiyasi huzuridagi futbol maktablari toʻgʻrisida NIZOM > 5-bob. Futbol maktabining sport guruhlarini toʻldirish",
+  "pass": "raw",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Graduates get a player card and certificate; says nothing about a coaching or refereeing licence."
+ },
+ {
+  "question": "lf-186",
+  "document": -4327596,
+  "article": "61",
+  "within": "2-ilova. Hayvonotga mansub mahsulot va xom ashyolarni ishlab chiqarish, saqlash va sotish boʻyicha veterinariya-sanitariya NORMA VA QOIDALARI > 5-bob. Baliq va baliq mahsulotlarini ishlab chiqarish, tayyorlash va qayta ishlashni amalga oshiruvchi obyektlarga qoʻyiladigan veterinariya-sanitariya talablari",
+  "pass": "raw",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Sanitary layout of fish processing facilities, not employer's duty on working conditions."
+ },
+ {
+  "question": "lf-186",
+  "document": -1477830,
+  "article": "29",
+  "within": "Ilova. Kanop-jut ishlab chiqarish korxonalari xodimlari uchun mehnatni muhofaza qilish QOIDALARI > 6-§. Sanitariya va gigiyena talablari",
+  "pass": "alt",
+  "status": "kept",
+  "quote": "Korxonalarning ishlab chiqarish xonalari quyidagi sanitariya qoidalariga muvofiq saqlanishi lozim:",
+  "reason": "Requires production premises to meet standards for air, noise and lighting, which is what the worker asks about."
+ },
+ {
+  "question": "lf-186",
+  "document": -1479171,
+  "article": "29",
+  "within": "Ilova. Choy ishlab chiqarish xodimlari uchun mehnatni muhofaza qilish QOIDALARI > 6-§. Sanitariya va gigiyena talablari",
+  "pass": "alt",
+  "status": "kept",
+  "quote": "Korxonalarning ishlab chiqarish xonalari quyidagi sanitariya qoidalariga muvofiq saqlanishi lozim",
+  "reason": "Requires production premises to meet sanitary norms for air, noise and lighting."
+ },
+ {
+  "question": "lf-186",
+  "document": -7942768,
+  "article": "35",
+  "within": "1-ilova. Tashkilotlarda mehnatni muhofaza qilish ishlarini hamda mehnatni muhofaza qilish xizmati faoliyatini tashkil etish tartibi toʻgʻrisida NIZOM > 3-bob. Mehnatni muhofaza qilishni tashkil etish > 2-§. Ish beruvchi va masʼul shaxslarning mehnatni muhofaza qilish sohasidagi huquqlari, majburiyatlari hamda vazifalari",
+  "pass": "alt",
+  "status": "kept",
+  "quote": "mehnat sharoitlarini sogʻlomlashtirish, havo muhiti, yoritish, issiqlik va ichimlik suvi rejimining normativ holatini taʼminlash, shovqin va tebranish darajasini pasaytirish boʻyicha choralar koʻradi;",
+  "reason": "Obliges the workshop head to ensure normative air, lighting and reduce noise."
+ },
+ {
+  "question": "lf-186",
+  "document": -1527315,
+  "article": "43",
+  "within": "Ilova. Linoleum uchun yopishqoq mastikalar, nitrolaklar, nitroemallar va nitromastikalar ishlab chiqarish xodimlari uchun xavfsizlik QOIDALARI > 7-§. Xodimlarning ishlab chiqarish jarayonida ishtirok etishiga ruxsat beruvchi sharoit talablari",
+  "pass": "alt",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Lists foremen duties (briefing, PPE, monitoring lighting); does not state the duty to fix air, noise and lighting."
+ },
+ {
+  "question": "lf-187",
+  "document": -7491592,
+  "article": "13",
+  "within": "Ilova. Banklarga oʻrnatiladigan makroprudensial normativlar hamda ular tomonidan beriladigan kreditlar (mikroqarzlar) boʻyicha toʻlovlarning eng yuqori qiymatlariga doir talablar toʻgʻrisidagi NIZOM > 2-bob. Banklar tomonidan qarz oluvchilarga beriladigan kreditlar (mikroqarzlar) boʻyicha ularning qarz yuki koʻrsatkichiga oid talablar > 3-§. Qarz oluvchining oʻrtacha oylik daromadlari miqdorini aniqlash",
+  "pass": "raw",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Explains how average income is calculated; does not list documents the bank may request."
+ },
+ {
+  "question": "lf-187",
+  "document": -7491592,
+  "article": "17",
+  "within": "Ilova. Banklarga oʻrnatiladigan makroprudensial normativlar hamda ular tomonidan beriladigan kreditlar (mikroqarzlar) boʻyicha toʻlovlarning eng yuqori qiymatlariga doir talablar toʻgʻrisidagi NIZOM > 2-bob. Banklar tomonidan qarz oluvchilarga beriladigan kreditlar (mikroqarzlar) boʻyicha ularning qarz yuki koʻrsatkichiga oid talablar > 3-§. Qarz oluvchining oʻrtacha oylik daromadlari miqdorini aniqlash",
+  "pass": "raw",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Income calculation for seasonal workers, not documents the bank may request."
+ },
+ {
+  "question": "lf-190",
+  "document": -6141472,
+  "article": "38",
+  "within": "3-ilova. Oilaviy nodavlat maktabgacha taʼlim tashkilotlari toʻgʻrisida NIZOM > 5-bob. Taʼlim-tarbiya jarayoni qatnashchilari",
+  "pass": "alt",
+  "status": "kept",
+  "quote": "oilaviy MTT yetmagan qismiga ota-onalar toʻlovini shu joydagi davlat maktabgacha taʼlim tashkilotlari uchun belgilangan hajmlardan oshmaydigan miqdorlarda oʻrnatgan holda boshqa bolalarni ham qabul qilishi mumkin",
+  "reason": "Directly allows taking other children for the shortfall with a fee capped at the state kindergarten level (the text's threshold is 35 percent, not 70)."
+ },
+ {
+  "question": "lf-190",
+  "document": -3610518,
+  "article": "104",
+  "within": "1-ilova. Maktabgacha taʼlim sohasida davlat-xususiy sheriklik toʻgʻrisidagi NIZOM > 13-bob. Oilaviy nodavlat maktabgacha taʼlim tashkilotlarini moddiy-texnik va uslubiy jihatdan taʼminlash shaklidagi davlat-xususiy sheriklikni amalga oshirish",
+  "pass": "alt",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Concerns private partners in a PPP with a 35 percent quota; not family kindergartens with a 70 percent quota."
+ },
+ {
+  "question": "lf-191",
+  "document": -7386867,
+  "article": null,
+  "within": "3-ilova. Yoshlar tadbirkorligini hamda ularning bandligini taʼminlashga qaratilgan biznes loyihalarni qoʻllab-quvvatlash instrumentlari ROʻYXATI",
+  "pass": "raw",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Footnotes on loan misuse and definitions; does not state youth support availability."
+ },
+ {
+  "question": "lf-191",
+  "document": -8046189,
+  "article": "4",
+  "within": "5-ilova. Oʻzbekiston Respublikasi Prezidentining va Oʻzbekiston Respublikasi Hukumatining ayrim qarorlariga kiritilayotgan oʻzgartirish va qoʻshimchalar",
+  "pass": "raw",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Venture investment for startups that passed accelerators; no youth-age preferential funding rule in the text."
+ },
+ {
+  "question": "lf-192",
+  "document": -4384718,
+  "article": "2",
+  "within": "",
+  "pass": "raw",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Privatisation after 3 or 5 years under other conditions; no 10-year arrangement as asked."
+ },
+ {
+  "question": "lf-194",
+  "document": -4327596,
+  "article": "121",
+  "within": "2-ilova. Hayvonotga mansub mahsulot va xom ashyolarni ishlab chiqarish, saqlash va sotish boʻyicha veterinariya-sanitariya NORMA VA QOIDALARI > 8-bob. Oziq-ovqat mahsulotlarini tashish, saqlash va realizatsiya qilishga qoʻyilgan talablar",
+  "pass": "alt",
+  "status": "kept",
+  "quote": "ziga xos hidga ega boʻlgan oziq-ovqat mahsulotlari (baliq, pishloq va boshqalar) begona hidni oʻzida singdirib oluvchi mahsulotlardan (xom goʻsht, sariyogʻ, tuxum va boshqalar) alohida saqlanadi.",
+  "reason": "Strong-smelling foods such as fish are stored separately from butter."
+ },
+ {
+  "question": "lf-197",
+  "document": -1976988,
+  "article": "29",
+  "within": "Ilova. Imtiyozli shartlarda pensiya olish huquqini beradigan ishlab chiqarishlar, muassasalar, ishlar, kasblar, lavozimlar va koʻrsatkichlar roʻyxatlarini qoʻllash tartibi toʻgʻrisida yoʻriqnoma > II-bob. Roʻyxatlarning qoʻllanilishi",
+  "pass": "raw",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Lists periods excluded from special service; nothing about psychiatric hospital staff benefits."
+ },
+ {
+  "question": "lf-198",
+  "document": -5863626,
+  "article": null,
+  "within": "Reglamentiga 3-ilova",
+  "pass": "raw",
+  "status": "no_text",
+  "quote": "",
+  "reason": ""
+ },
+ {
+  "question": "lf-199",
+  "document": -831964,
+  "article": null,
+  "within": "Nizomga 1-ilova",
+  "pass": "raw",
+  "status": "no_text",
+  "quote": "",
+  "reason": ""
+ },
+ {
+  "question": "lf-200",
+  "document": -8415577,
+  "article": "20",
+  "within": "Ilova. Turistik startaplarni — yangi turdagi turizm xizmatlarini ishlab chiqib, amaliyotga joriy etish bilan bogʻliq xarajatlarning bir qismiga subsidiya ajratish boʻyicha davlat xizmatini koʻrsatishning MAʼMURIY REGLAMENTI > 2-bob. Xarajatlarni qoplash uchun ariza taqdim etish va uni koʻrib chiqish tartibi",
+  "pass": "raw",
+  "status": "rejected",
+  "quote": "",
+  "reason": "About re-applying after a refusal; does not say the applicant is informed of the result."
+ },
+ {
+  "question": "lf-201",
+  "document": -6201435,
+  "article": null,
+  "within": "2-ilova. 2028-yil 1-yanvarga qadar bojxona bojlaridan ozod qilinadigan farmatsevtika mahsulotlari kosmetika vositalari hamda biologik faol qoʻshimchalar ishlab chiqaruvchilar, farmatsevtika mahsulotlarining ulgurji savdosi bilan shugʻullanuvchi korxonalar, ixtisoslashgan ilmiy-tadqiqot institutlari va oliy taʼlim muassasalari tomonidan oʻz ehtiyojlari uchun olib kelinadigan va farmatsevtika mahsulotlarining ulgurji savdosi bilan shugʻullanuvchi korxonalar tomonidan farmatsevtika mahsulotlarini ishlab chiqaruvchi korxonalar ehtiyoji uchun keltiriladigan hamda farmatsevtika mahsulotlarining ulgurji va chakana savdosi bilan shugʻullanuvchi korxonalar tomonidan dorixona ichida dori tayyorlash maqsadida olib kiriladigan, Oʻzbekiston Respublikasida ishlab chiqarilmaydigan texnologik va laboratoriya uskunalari, ularning butlovchi va ehtiyot qismlari ROʻYXATI",
+  "pass": "raw",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Footnote about tariff codes only."
+ },
+ {
+  "question": "lf-201",
+  "document": -4649351,
+  "article": "2",
+  "within": "",
+  "pass": "raw",
+  "status": "rejected",
+  "quote": "",
+  "reason": "About control and penalties for misuse, not the customs exemption itself."
+ },
+ {
+  "question": "lf-202",
+  "document": -3324310,
+  "article": "1",
+  "within": "4-ilova. Oʻzbekiston Respublikasi Hukumatining ayrim qarorlariga kiritilayotgan oʻzgartirishlar",
+  "pass": "alt",
+  "status": "kept",
+  "quote": "konsert-tomosha faoliyati bilan shugʻullanishga maxsus ruxsatnoma (litsenziya) olish uchun tushgan arizalarni koʻrib chiqib, muhokama qiladi, sanʼatkorlarning ijodiy nufuzi, mahorati, professional malakasi, repertuar saviyasiga qarab, ularga xulosa beradi",
+  "reason": "Says which group reviews licence applications and on what criteria it gives its conclusion."
+ },
+ {
+  "question": "lf-203",
+  "document": -246806,
+  "article": "6",
+  "within": "4-ilova. Yer uchastkalariga boʻlgan huquqni hamda qishloq xoʻjaligi kooperativlari (shirkat xoʻjaliklari) bilan fermer xoʻjaliklari oʻrtasida tuzilgan ijara shartnomalarini qayta rasmiylashtirish tartibi toʻgʻrisida NIZOM > I. Qishloq xoʻjaligi kooperativlari (shirkat xoʻjaliklari)ning yer uchastkalariga boʻlgan huquqini qayta rasmiylashtirish",
+  "pass": "alt",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Says lease contract reflects land quality; no right to request official soil data."
+ },
+ {
+  "question": "lf-205",
+  "document": -5756525,
+  "article": null,
+  "within": "Reglamentiga 7-ilova",
+  "pass": "raw",
+  "status": "no_text",
+  "quote": "",
+  "reason": ""
+ },
+ {
+  "question": "lf-206",
+  "document": -6685595,
+  "article": "48",
+  "within": "IV bob. Harbiy mulkni saqlash yoki undan foydalanish tartibiga qarshi jinoyatlarga oid ishlarni koʻrish bilan bogʻliq masalalar",
+  "pass": "raw",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Court guidance on military flight crimes, unrelated to filming on a plane."
+ },
+ {
+  "question": "lf-206",
+  "document": -97664,
+  "article": "117",
+  "within": "MAXSUS QISM > XI bob. TRANSPORTDAGI, YOʻL XOʻJALIGI VA ALOQA SOHALARIDAGI HUQUQBUZARLIKLAR UCHUN MAʼMURIY JAVOBGARLIK",
+  "pass": "alt",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Only sets a fine for breaking filming rules on board; does not say whether filming is allowed."
+ },
+ {
+  "question": "lf-208",
+  "document": -6182772,
+  "article": "51",
+  "within": "Ilova. Tranzit deklaratsiyasini toʻldirish, rasmiylashtirish, unga oʻzgartirish va qoʻshimcha kiritish, uni qaytarib olish hamda bekor qilish tartibi toʻgʻrisidagi NIZOM > III boʻlim. Tranzit deklaratsiyasini qogʻozga chop etiladigan shaklida maʼlumotlarni shakllantirish tartibi > 4-bob. Tranzit deklaratsiyasini qogʻozga chop etiladigan shaklidagi grafalarning toʻldirish tartibi",
+  "pass": "raw",
+  "status": "rejected",
+  "quote": "",
+  "reason": "How to fill transit declaration boxes; nothing on refusal grounds."
+ },
+ {
+  "question": "lf-212",
+  "document": -4733026,
+  "article": "56",
+  "within": "Ilova. Bojxona yuk deklaratsiyasini oʻzgartirish, unga qoʻshimcha kiritish, uni qayta rasmiylashtirish, qaytarib olish va bekor qilish tartibi toʻgʻrisidagi NIZOM > II boʻlim. Qogʻoz shakldagi BYDga oʻzgartirish va (yoki) qoʻshimchalar kiritish, uni qaytarib olish va bekor qilish > 4-bob. Roʻyxatga olinib, rasmiylashtirilmagan qogʻoz shakldagi BYDga oʻzgartirish va (yoki) qoʻshimcha kiritish, uni qaytarib olish va bekor qilish > 2-§. Bojxona organi tashabbusi bilan BYDga oʻzgartirish va (yoki) qoʻshimcha kiritish",
+  "pass": "raw",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Customs notifies the declarant about errors; does not say who may apply to amend or about a power of attorney."
+ },
+ {
+  "question": "lf-214",
+  "document": -213812,
+  "article": "2",
+  "within": "",
+  "pass": "raw",
+  "status": "kept",
+  "quote": "Zulfiya nomidagi Davlat mukofoti taʼlim, fan, adabiyot, madaniyat, sanʼat, sport, tibbiyot, axborot texnologiyalari sohalari va jamoatchilik faoliyatida alohida yutuqlarga erishgan oʻn toʻrt yoshga toʻlgan va oʻttiz yoshdan oshmagan iqtidorli xotin-qizlarga beriladi",
+  "reason": "States the Zulfiya State Prize is given to gifted girls with achievements in education, science, art."
+ },
+ {
+  "question": "lf-215",
+  "document": -4203889,
+  "article": null,
+  "within": "Nizomga 7-ilova. Trampolin sport turi boʻyicha nomzodlarning jismoniy tayyorgarlik darajasini aniqlash boʻyicha sinovlarni BAHOLASH MEZONLARI",
+  "pass": "raw",
+  "status": "no_text",
+  "quote": "",
+  "reason": ""
+ },
+ {
+  "question": "lf-216",
+  "document": -4344511,
+  "article": "61",
+  "within": "Ilova. Oʻzbekiston Respublikasi Ichki ishlar vazirligi tergov hibsxonalari va jazoni ijro etish muassasalarida saqlanayotgan shaxslarning tibbiy-sanitariya taʼminoti boʻyicha QOIDALAR > 1-bob. Umumiy qoidalar > 5-§. Ixtisoslashgan kasalxonada statsionar yordamni tashkillashtirish",
+  "pass": "raw",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Concerns prisoners and detainees, not patients of the internal affairs polyclinic."
+ },
+ {
+  "question": "lf-216",
+  "document": -4344511,
+  "article": "83",
+  "within": "Ilova. Oʻzbekiston Respublikasi Ichki ishlar vazirligi tergov hibsxonalari va jazoni ijro etish muassasalarida saqlanayotgan shaxslarning tibbiy-sanitariya taʼminoti boʻyicha QOIDALAR > 2-bob. Ayrim kasalliklarda davolash-profilaktik tadbirlarni tashkillashtirish > 3-§. Teri-tanosil kasalliklari boʻyicha davolash-profilaktik tadbirlarni oʻtkazish",
+  "pass": "raw",
+  "status": "rejected",
+  "quote": "",
+  "reason": "About removal from follow-up after treatment in penal institutions, not referral to a Health Ministry hospital."
+ },
+ {
+  "question": "lf-217",
+  "document": -6688256,
+  "article": "57",
+  "within": "1-ilova. Ichki ishlar organlarida xizmatga nomzodlarni tanlab olish tadbirlarini tashkil etish va oʻtkazish tartibi toʻgʻrisidagi YOʻRIQNOMA > 7-bob. Nomzodlarning jismoniy tayyorgarlik darajasini baholash",
+  "pass": "raw",
+  "status": "kept",
+  "quote": "Diqqat” komandasi boʻyicha tananing ogʻirligini oldinda turgan oyoqqa oʻtkazish, gavda va boshni oldinga egish, qoʻllarni tirsakka bukish",
+  "reason": "Describes what to do on each of the three commands in the 100 m run."
+ },
+ {
+  "question": "lf-217",
+  "document": -5796493,
+  "article": "9",
+  "within": "Nizomga 9-ilova. Umumjismoniy tayyorgarlik darajasini baholash METODIKASI > 2-bob. Mashqlarni bajarishga qoʻyiladigan talablar va mezonlar",
+  "pass": "raw",
+  "status": "kept",
+  "quote": "“Startga” komandasi berilganda, start olish chizigʻiga kelib, kuchli oyoq start olish chizigʻi yaqiniga qoʻyilib, ikkinchi oyoq yarim qadam ortda qoldiriladi. “Diqqat” komandasi berilganda, tana vazni oldinda turgan oyoqqa oʻtkazilib, gavda va bosh oldinga egiladi, qoʻl tirsaklari esa bukiladi. “Olgʻa” komandasi berilganda, yugurish amalga oshiriladi.",
+  "reason": "Describes what to do at each of the three start commands."
+ },
+ {
+  "question": "lf-218",
+  "document": -7526613,
+  "article": "8",
+  "within": "",
+  "pass": "raw",
+  "status": "rejected",
+  "quote": "",
+  "reason": "About the deadline for applications on newly discovered circumstances, not resubmission of a corrected application or fees."
+ },
+ {
+  "question": "lf-220",
+  "document": -1741499,
+  "article": "148",
+  "within": "Ilova. Oʻzbekiston Respublikasi konsullik muassasalarining konsullari tomonidan notarial harakatlarni amalga oshirish tartibi toʻgʻrisidagi YOʻRIQNOMA > III-bob. Notarial harakatlarning ayrim turlarini amalga oshirish qoidalari > 11-§. Er-xotinning umumiy mol-mulkidagi ulushga boʻlgan mulk huquqi toʻgʻrisida guvohnomalar berish",
+  "pass": "raw",
+  "status": "kept",
+  "quote": "guvohnoma marhum erdan (xotindan) keyin xotinga (erga) nikoh davomida orttirilgan umumiy mol-mulkning yarmisi uchun berilishi mumkin",
+  "reason": "Surviving spouse may (on application) get a certificate for half of the jointly acquired property."
+ },
+ {
+  "question": "lf-221",
+  "document": -6858672,
+  "article": null,
+  "within": "Ilova. Professional taʼlim muassasalari ishlab chiqarish taʼlimi ustalarining namunaviy yillik ish rejasi hamda ularning asosiy faoliyat turlariga sarflanadigan VAQT MEʼYORLARI",
+  "pass": "raw",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Concerns production training masters' 1640 hours, not teachers."
+ },
+ {
+  "question": "lf-222",
+  "document": -4403453,
+  "article": null,
+  "within": "Ilova. Ichki ishlar organlari xodimlarini terrorizmga va jinoyatchilikka qarshi kurashish hamda jamoat xavfsizligini taʼminlash chogʻida halok boʻlgan yoki olgan jarohati tufayli nogiron boʻlib qolgan deb topish tartibi toʻgʻrisida NIZOM",
+  "pass": "raw",
+  "status": "rejected",
+  "quote": "",
+  "reason": "A scope clause naming what the regulation governs; does not say who decides or how."
+ },
+ {
+  "question": "lf-222",
+  "document": -4403453,
+  "article": "2",
+  "within": "Ilova. Ichki ishlar organlari xodimlarini terrorizmga va jinoyatchilikka qarshi kurashish hamda jamoat xavfsizligini taʼminlash chogʻida halok boʻlgan yoki olgan jarohati tufayli nogiron boʻlib qolgan deb topish tartibi toʻgʻrisida NIZOM > 1-bob. Umumiy qoidalar",
+  "pass": "raw",
+  "status": "kept",
+  "quote": "yicha maxsus komissiya (bundan buyon matnda Maxsus komissiya deb yuritiladi) tomonidan amalga oshiriladi",
+  "reason": "States a special commission decides whether the officer is recognised as disabled in such circumstances."
+ },
+ {
+  "question": "lf-222",
+  "document": -4403453,
+  "article": "25",
+  "within": "Ilova. Ichki ishlar organlari xodimlarini terrorizmga va jinoyatchilikka qarshi kurashish hamda jamoat xavfsizligini taʼminlash chogʻida halok boʻlgan yoki olgan jarohati tufayli nogiron boʻlib qolgan deb topish tartibi toʻgʻrisida NIZOM > 5-bob. Maxsus komissiya yigʻilishini oʻtkazish",
+  "pass": "raw",
+  "status": "kept",
+  "quote": "Yigʻma jildi taqdim etilgan sobiq xodimni Maxsus komissiya tomonidan halok boʻlgan yoki olgan jarohati tufayli nogiron boʻlib qolgan deb topish quyidagi mezonlar asosida amalga oshiriladi:",
+  "reason": "States a Special commission decides the recognition on listed criteria."
+ },
+ {
+  "question": "lf-224",
+  "document": 8438236,
+  "article": "34",
+  "within": "Ilova. “Vatan tayanchi” otryadining aʼzosiga, “Vatanparvarlar” harbiy-sport musobaqalari hamda mahalla yoshlari oʻrtasida oʻtkaziladigan “Shijoat va gʻayrat” musobaqalarining respublika bosqichi gʻoliblariga oliy harbiy (harbiylashtirilgan) taʼlim muassasalariga oʻqishga kirish uchun tavsiyanomalar berish tartibi toʻgʻrisidagi NIZOM > 4-bob. “Jasorat maktabi”ni aʼlo baholar bilan tamomlagan har bir “Vatan tayanchi” otryadidan bir nafar aʼzoni aniqlash",
+  "pass": "raw",
+  "status": "kept",
+  "quote": "“Jasorat maktabi”ni aʼlo baholar bilan tamomlagan har bir “Vatan tayanchi” otryadining bir nafar aʼzosi tavsiyanoma olish uchun nomzod sifatida belgilanadi",
+  "reason": "States such a member is designated a candidate for the recommendation."
+ },
+ {
+  "question": "lf-224",
+  "document": 8438236,
+  "article": "3",
+  "within": "Ilova. “Vatan tayanchi” otryadining aʼzosiga, “Vatanparvarlar” harbiy-sport musobaqalari hamda mahalla yoshlari oʻrtasida oʻtkaziladigan “Shijoat va gʻayrat” musobaqalarining respublika bosqichi gʻoliblariga oliy harbiy (harbiylashtirilgan) taʼlim muassasalariga oʻqishga kirish uchun tavsiyanomalar berish tartibi toʻgʻrisidagi NIZOM > 1-bob. Umumiy qoidalar",
+  "pass": "raw",
+  "status": "kept",
+  "quote": "tamomlagan har bir “Vatan tayanchi” otryadining bir nafar aʼzosiga berilgan tavsiyanoma oliy harbiy (harbiylashtirilgan) taʼlim muassasalaridan tashqari yuridik taʼlim muassasalariga oʻqishga kirishda imtiyozdan foydalanish huquqini ham beradi",
+  "reason": "Recommendation for an excellent Jasorat maktabi graduate in Vatan tayanchi also covers law schools."
+ },
+ {
+  "question": "lf-225",
+  "document": -436950,
+  "article": "10",
+  "within": "I. Umumiy qoidalar",
+  "pass": "raw",
+  "status": "kept",
+  "quote": "Deputatni haqorat qilish, shuningdek, unga nisbatan tuhmat qilish qonunda belgilangan javobgarlikka sabab bo",
+  "reason": "Insulting or slandering a deputy entails liability."
+ },
+ {
+  "question": "lf-226",
+  "document": -5205248,
+  "article": "20",
+  "within": "1-ilova. Mahsulotlarni identifikatsiya vositalari orqali raqamli markirovkalash va ularning aylanmasini kuzatib borish QOIDALARI > 4-bob. Markirovkalash axborot tizimida mahsulotlar aylanmasi ishtirokchilarini roʻyxatdan oʻtkazish",
+  "pass": "raw",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Grounds for refusing registration in the marking system, not removal of a marketplace seller."
+ },
+ {
+  "question": "lf-226",
+  "document": -4603329,
+  "article": null,
+  "within": "Ilova",
+  "pass": "alt",
+  "status": "no_text",
+  "quote": "",
+  "reason": ""
+ },
+ {
+  "question": "lf-227",
+  "document": -6045422,
+  "article": "24",
+  "within": "Ilova. Akademik litseylar rahbar va pedagog xodimlarining uzluksiz malaka oshirish jarayonlarini tashkil etish tartibi toʻgʻrisida NIZOM > 3-bob. Malaka oshirish jarayonlarini tashkil etish",
+  "pass": "raw",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Only covers paid repeat courses for those who failed; does not say whether regular training is free."
+ },
+ {
+  "question": "lf-227",
+  "document": -6045422,
+  "article": "4",
+  "within": "",
+  "pass": "raw",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Covers salary retention and travel costs, not whether the training itself is free."
+ },
+ {
+  "question": "lf-229",
+  "document": -2607658,
+  "article": "19",
+  "within": "Ilova. Umumtaʼlim muassasalarining chet tillar oʻqituvchilari kasb mahoratini oshirish har haftalik kurslarini oʻtkazish tartibi toʻgʻrisida NIZOM > III. Har haftalik kurslarni tashkil etish va ularni oʻtkazish shakllari",
+  "pass": "raw",
+  "status": "kept",
+  "quote": "Sababsiz 18 soat dars qoldirgan tinglovchi kursdan chiqarib yuboriladi.",
+  "reason": "States a listener who misses 18 hours without reason is expelled from the course."
+ },
+ {
+  "question": "lf-231",
+  "document": -6575092,
+  "article": null,
+  "within": "1-ilova. “Oʻzbekbaliqsanoat” uyushmasi tomonidan Ekologiya, atrof-muhitni muhofaza qilish va iqlim oʻzgarishi vazirligi tizimidagi tashkilotlarga topshiriladigan tabiiy suv havzalari ROʻYXATI",
+  "pass": "raw",
+  "status": "rejected",
+  "quote": "",
+  "reason": "A note on who may amend a list; nothing about participating in a tender."
+ },
+ {
+  "question": "lf-235",
+  "document": -5131862,
+  "article": null,
+  "within": "Ilova",
+  "pass": "raw",
+  "status": "no_text",
+  "quote": "",
+  "reason": ""
+ },
+ {
+  "question": "lf-235",
+  "document": -3160010,
+  "article": "18",
+  "within": "3-ilova. Erkin iqtisodiy zonalar hududida soliqlar va bojxona toʻlovlari boʻyicha imtiyozlarni qoʻllash tartibi toʻgʻrisida NIZOM > 3-bob. Oʻz ishlab chiqarish ehtiyojlari uchun chetdan olib kelinadigan asbob-uskunalar, xomashyo, materiallar va butlovchi buyumlar uchun bojxona imtiyozlarini qoʻllash tartibi",
+  "pass": "raw",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Annual declaration duty of free economic zone participants, not customs payment exemption."
+ },
+ {
+  "question": "lf-237",
+  "document": -3517337,
+  "article": "448",
+  "within": "V BOʻLIM. SUD HUJJATLARINING IJROSI",
+  "pass": "raw",
+  "status": "rejected",
+  "quote": "",
+  "reason": "About issuing writs of execution, not the term for paying the recovered money."
+ },
+ {
+  "question": "lf-237",
+  "document": -3523891,
+  "article": "336",
+  "within": "V BOʻLIM. IQTISODIY SUDLARNING SUD HUJJATLARINI IJRO ETISH.",
+  "pass": "raw",
+  "status": "rejected",
+  "quote": "",
+  "reason": "About issuing writs of execution; no deadline for paying money to the claimant's card."
+ },
+ {
+  "question": "lf-237",
+  "document": -26477,
+  "article": "8²",
+  "within": "1-BOB. UMUMIY QOIDALAR",
+  "pass": "alt",
+  "status": "rejected",
+  "quote": "",
+  "reason": "About enforcement by banks/organisations of certain writs, not the term for transferring recovered money to the claimant."
+ },
+ {
+  "question": "lf-237",
+  "document": -26477,
+  "article": "47",
+  "within": "5-BOB. UNDIRUVNI QARZDORNING MOL- MULKIGA QARATISH",
+  "pass": "alt",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Three-day distribution applies only to seized cash; no general deadline for paying the claimant."
+ },
+ {
+  "question": "lf-238",
+  "document": -1947974,
+  "article": "11",
+  "within": "",
+  "pass": "alt",
+  "status": "kept",
+  "quote": "mulkdor boʻlmagan, lekin koʻchmas mol-mulkka oʻn besh yil davomida yoki boshqa mol-mulkka besh yil davomida oʻziniki kabi halol, oshkora va uzluksiz egalik qilgan shaxs bu mol-mulkka mulk huquqini oladi",
+  "reason": "Acquisitive prescription: 15 years of open, good-faith possession of real estate gives ownership."
+ },
+ {
+  "question": "lf-238",
+  "document": -1455965,
+  "article": "27",
+  "within": "",
+  "pass": "alt",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Only says acquisitive prescription does not apply to contractual possession; does not state the right itself."
+ },
+ {
+  "question": "lf-238",
+  "document": -111189,
+  "article": "187",
+  "within": "Birinchi qism > II BOʻLIM MULK HUQUQI VA BOSHQA ASHYOVIY HUQUQLAR > 15-BOB MULK HUQUQINING VUJUDGA KELISHI VA UNING BEKOR BOʻLISHI",
+  "pass": "alt",
+  "status": "kept",
+  "quote": "koʻchmas mol-mulkka oʻn besh yil davomida yoki boshqa mol-mulkka besh yil davomida oʻziniki kabi halol, oshkora va uzluksiz egalik qilgan shaxs bu mol-mulkka mulk huquqini oladi",
+  "reason": "The acquisitive prescription rule directly answers the 15-year open possession question."
+ },
+ {
+  "question": "lf-238",
+  "document": -1448773,
+  "article": "12",
+  "within": "",
+  "pass": "alt",
+  "status": "kept",
+  "quote": "Faqatgina koʻrsatilgan uchchala shartlarga rioya qilingan taqdirda, egalik huquqini vujudga keltiruvchi muddat amalda egalik qiluvchining mulk huquqiga asos boʻlishi mumkin",
+  "reason": "States that when the three conditions of possession are met, the period of possession can ground ownership."
+ },
+ {
+  "question": "lf-238",
+  "document": -6297080,
+  "article": "10",
+  "within": "1-bob. Umumiy qoidalar",
+  "pass": "alt",
+  "status": "rejected",
+  "quote": "",
+  "reason": "List of registrable rights; nothing on acquisitive prescription."
+ },
+ {
+  "question": "lf-240",
+  "document": -104720,
+  "article": "135",
+  "within": "V BOʻLIM. OILA AʼZOLARINING VA BOSHQA SHAXSLARNING ALIMENT MAJBURIYATLARI > 18-bob. Alimentlarni toʻlash va undirish tartibi",
+  "pass": "raw",
+  "status": "borderline",
+  "quote": "Voyaga yetmagan bolalar taʼminoti uchun alimentlar bola voyaga yetguniga qadar boʻlgan davr uchun, shu jumladan koʻchmas yoki koʻchar mulk yoxud boshqa qimmatli ashyoni berish yoʻli bilan oldindan toʻlanishi mumkin.",
+  "reason": "States child alimony may be paid in advance; the article also says how it is paid voluntarily."
+ },
+ {
+  "question": "lf-244",
+  "document": -6649386,
+  "article": null,
+  "within": "Reglamentga 1-ilova. Shaxslarni ishsiz deb eʼtirof etish va ularga ishsizlik nafaqasini tayinlash boʻyicha elektron davlat xizmatini koʻrsatish SXEMASI",
+  "pass": "raw",
+  "status": "no_text",
+  "quote": "",
+  "reason": ""
+ },
+ {
+  "question": "lf-246",
+  "document": -2425764,
+  "article": "23",
+  "within": "Ilova. Aholi bilan pulli hisob-kitoblarni amalga oshirish uchun qoʻllaniladigan fiskal xotirali nazorat- kassa mashinalariga qoʻyiladigan YAGONA TEXNIK TALABLAR > 3-bob. NKMning barcha guruhlari uchun qoʻyiladigan umumiy talablar",
+  "pass": "raw",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Requires receipts and control tape; does not list blocking conditions of the cash register."
+ },
+ {
+  "question": "lf-247",
+  "document": -1811284,
+  "article": "20",
+  "within": "Ilova. Veterinariya tadbirlari uchun qoʻllaniladigan mikroorganizmlar va viruslar shtammlari, hayvonot va oʻsimliklarga mansub toksinlar hamda zaharlarni saqlash, ishlatish, shuningdek bir tashkilotdan boshqa tashkilotlarga berish tartibi toʻgʻrisida NIZOM > III bob. Mikroorganizmlar shtammlari va zaharlarni bir tashkilotdan boshqa tashkilotlarga berish",
+  "pass": "raw",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Packaging of microorganism strains, unrelated to reusable retail packaging."
+ },
+ {
+  "question": "lf-247",
+  "document": -8242581,
+  "article": "376",
+  "within": "Ilova. Yuk ortish va tushirish ishlarida yukchilar uchun ishlarning xavfsizligi QOIDALARI > 2-bob. Umumiy xavfsizlik talablari > 25-§. Savdo omborlari, chakana savdo va umumiy ovqatlanish tashkilotlarida mahsulotlarni tashish va joylashtirishga qoʻyiladigan talablar",
+  "pass": "alt",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Loader safety requirements for containers, not the rule that reusable packaging must be harmless and durable."
+ },
+ {
+  "question": "lf-249",
+  "document": -8297360,
+  "article": null,
+  "within": "Nizomga 7-ilova. Yoʻl qurilishi obyektlarini nazorat qilish sohasida qonunchilik buzilishi xavfini aniqlash KOʻRSATKICHLARI",
+  "pass": "alt",
+  "status": "no_text",
+  "quote": "",
+  "reason": ""
+ },
+ {
+  "question": "lf-250",
+  "document": -2308332,
+  "article": null,
+  "within": "Yoʻriqnomaga 54-ilova",
+  "pass": "raw",
+  "status": "no_text",
+  "quote": "",
+  "reason": ""
+ },
+ {
+  "question": "lf-251",
+  "document": -5049511,
+  "article": "23",
+  "within": "3-bob. Nogironligi boʻlgan shaxslarning jamiyat va davlat hayotida toʻla huquqli tarzda ishtirok etishi uchun qulay shart-sharoitlar yaratish",
+  "pass": "alt",
+  "status": "rejected",
+  "quote": "",
+  "reason": "About physical access to buildings and infrastructure; nothing about accommodations at qualification exams."
+ },
+ {
+  "question": "lf-251",
+  "document": -5049511,
+  "article": "9",
+  "within": "1-bob. Umumiy qoidalar",
+  "pass": "alt",
+  "status": "rejected",
+  "quote": "",
+  "reason": "General accessibility principle, not about qualification exams."
+ },
+ {
+  "question": "lf-252",
+  "document": -7285944,
+  "article": "31",
+  "within": "1-ilova. Kasbiy taʼlim tashkilotlari oʻquvchilarining ishlab chiqarish amaliyotini tashkil etish tartibi toʻgʻrisida NIZOM > 3-bob. Korxona (tashkilot), kasbiy taʼlim tashkiloti va oʻquvchilarning vazifalari, huquqlari hamda majburiyatlari",
+  "pass": "alt",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Lists student duties during practice, not an obligation to hold an introductory briefing."
+ },
+ {
+  "question": "lf-252",
+  "document": -7285944,
+  "article": "26",
+  "within": "1-ilova. Kasbiy taʼlim tashkilotlari oʻquvchilarining ishlab chiqarish amaliyotini tashkil etish tartibi toʻgʻrisida NIZOM > 3-bob. Korxona (tashkilot), kasbiy taʼlim tashkiloti va oʻquvchilarning vazifalari, huquqlari hamda majburiyatlari",
+  "pass": "alt",
+  "status": "rejected",
+  "quote": "",
+  "reason": "College duties before practice (safety briefing); no first-day meeting on tasks and report writing."
+ },
+ {
+  "question": "lf-252",
+  "document": -3358139,
+  "article": "37",
+  "within": "4-ilova. Oʻzbekiston Respublikasi Prezidenti huzuridagi Davlat boshqaruvi akademiyasi magistraturasi tinglovchilari tomonidan malakaviy amaliyot va stajirovka oʻtash tartibi toʻgʻrisidagi NIZOM > 5-bob. Amaliyot va stajirovkani tashkil etish talablari",
+  "pass": "alt",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Duties of the Academy's practice supervisor; no first-day meeting or report explanation."
+ },
+ {
+  "question": "lf-255",
+  "document": -5354947,
+  "article": "44¹",
+  "within": "3-ilova. Ishsiz va ish qidirayotgan shaxslarni kasbga tayyorlash va qayta tayyorlash, ularning malakasini oshirishni tashkil etish tartibi toʻgʻrisida NIZOM > 4-bob. Ishsiz shaxslarni kasb-hunarga oʻqitish davrida stipendiya toʻlash tartibi",
+  "pass": "raw",
+  "status": "rejected",
+  "quote": "",
+  "reason": "About incentive payments to unemployed persons with disabilities during vocational training, not an institute stipend."
+ },
+ {
+  "question": "lf-256",
+  "document": -3888311,
+  "article": null,
+  "within": "Ilova. 2018-2019-yillarda Andijon, Buxoro, Jizzax, Qashqadaryo, Navoiy, Namangan, Samarqand, Surxondaryo, Sirdaryo, Toshkent va Fargʻona viloyatlarida ichimlik suv taʼminoti va kanalizatsiya tizimlarini qurish va rekonstruksiya qilish DASTURI",
+  "pass": "raw",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Only footnotes about funding amounts; no content on planned improvements."
+ },
+ {
+  "question": "lf-256",
+  "document": -5914975,
+  "article": null,
+  "within": "4-ilova. 2022 — 2026-yillarda “Obod qishloq” va “Obod mahalla” dasturlari doirasida mintaqaviy yoʻllar (ichki koʻchalar) va ichimlik suv taʼminoti tizimlarini yaxshilash borasida amalga oshiriladigan chora-tadbirlarning MAQSADLI PARAMETRLARI",
+  "pass": "raw",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Footnote about target parameters only."
+ },
+ {
+  "question": "lf-256",
+  "document": -4087011,
+  "article": null,
+  "within": "1-ilova. 2019-yilda Oʻzbekiston Respublikasi Davlat budjeti doirasida markazlashtirilgan kapital qoʻyilmalar limitlari hisobidan amalga oshiriladigan suv taʼminoti va kanalizatsiya obyektlarini qurish hamda rekonstruksiya qilishning MANZILLI DASTURI",
+  "pass": "raw",
+  "status": "rejected",
+  "quote": "",
+  "reason": "A note about project capacities; does not answer."
+ },
+ {
+  "question": "lf-256",
+  "document": -3174685,
+  "article": null,
+  "within": "8-ilova. Oʻzbekiston Respublikasi Moliya vazirligi huzuridagi “Suv taʼminoti va kanalizatsiya tizimlarini rivojlantirish” jamgʻarmasi hamda Qoraqalpogʻiston Respublikasi Moliya vazirligi, viloyatlar va Toshkent shahar hokimliklari moliya bosh boshqarmalari huzuridagi suv taʼminoti va kanalizatsiya tizimlarini rivojlantirish hududiy jamgʻarmalari mablagʻlarini shakllantirish va foydalanish tartibi toʻgʻrisidagi NIZOM > 7-bob. Jamgʻarma mablagʻlaridan foydalanishning hisobini yuritish, hisoboti va nazorati > Oʻzbekiston Respublikasi Prezidentining “2017 — 2021-yillarda ichimlik suvi taʼminoti va kanalizatsiya tizimlarini kompleks rivojlantirish hamda modernizatsiya qilish dasturi toʻgʻrisida”gi qaroriga",
+  "pass": "raw",
+  "status": "rejected",
+  "quote": "",
+  "reason": "General commentary on a 2017-2021 water programme; does not cover the mahalla plan with internal roads."
+ },
+ {
+  "question": "lf-257",
+  "document": -5690812,
+  "article": "41",
+  "within": "Ilova. Oʻzbekiston Respublikasi Jamoat xavfsizligi universiteti kursantlari, talabalari va tinglovchilarini oʻqishdan chetlashtirish va ularni oʻqishga tiklash tartibi toʻgʻrisidagi NIZOM > 4-bob. Talabalarni oʻqishdan chetlashtirish > 1-§. Umumiy qoidalar",
+  "pass": "raw",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Expulsion grounds at one security university; not about foreign students, failing courses or dormitory rules."
+ },
+ {
+  "question": "lf-258",
+  "document": -8516575,
+  "article": "35",
+  "within": "Nizomga 3-ilova. Kasbiy taʼlim tashkilotlariga oʻqishga qabul qilish uchun kirish imtihonlarini (test sinovlari, kasbiy (ijodiy) imtihon, yozma imtihon) oʻtkazish TARTIBI > 2-bob. Test sinovlarini oʻtkazish > 4-§. Test sinovlarini oʻtkazishda bino rahbari, guruh nazoratchisi va abituriyentlarning vazifalari, huquqlari va majburiyatlari",
+  "pass": "alt",
+  "status": "kept",
+  "quote": "Quyidagi hollarda abituriyent test sinovlari jarayonidan chetlashtiriladi va natijalari chiqarilmasligiga asos boʻladi:",
+  "reason": "States that bringing or using a phone or calculator leads to removal from the test and no results."
+ },
+ {
+  "question": "lf-258",
+  "document": -5477615,
+  "article": "34",
+  "within": "2-ilova. Geodeziya va kartografiya faoliyati bilan shugʻullanadigan mutaxassislarning malakasini oshirish va ularga malaka sertifikatini berish tartibi toʻgʻrisida NIZOM > 3-bob. Malaka imtihonini topshirish tartibi",
+  "pass": "alt",
+  "status": "kept",
+  "quote": "Ushbu talablarni buzgan talabgorlar test sinovlari oʻtkaziladigan xonadan chiqarib yuboriladi va malaka imtihonidan oʻtmagan deb hisoblanadi",
+  "reason": "States violators are removed from the test room and deemed to have failed."
+ },
+ {
+  "question": "lf-258",
+  "document": -6405748,
+  "article": "2",
+  "within": "Nizomga 6-ilova. Nomzodlarni psixologik oʻrganish METODIKASI",
+  "pass": "alt",
+  "status": "rejected",
+  "quote": "",
+  "reason": "About psychological tests for emergency service candidates, not an exam with scores; annulment of marks not covered."
+ },
+ {
+  "question": "lf-258",
+  "document": -5770609,
+  "article": "17",
+  "within": "Nizomga 5-ilova. Ichki ishlar organlarida xizmatga nomzodlarning intellektual bilim darajasini baholash METODIKASI > 2-bob. Test sinovini oʻtkazish va natijalarini aniqlash",
+  "pass": "alt",
+  "status": "kept",
+  "quote": "nomzod test sinovini oʻtkazish tartibini buzgan hisoblanadi va test sinovidan chetlashtirilib, bu haqda test sinovini oʻtkazish boʻyicha kichik komissiyasi tomonidan dalolatnoma rasmiylashtiriladi",
+  "reason": "States the candidate is removed from the test for bringing a phone or calculator."
+ },
+ {
+  "question": "lf-259",
+  "document": -6840502,
+  "article": "2",
+  "within": "",
+  "pass": "alt",
+  "status": "rejected",
+  "quote": "",
+  "reason": "IT-park residents' platform contracts up to 100k USD as e-documents; no 5k no-contract rule."
+ },
+ {
+  "question": "lf-260",
+  "document": -111453,
+  "article": "223",
+  "within": "MAXSUS QISM > BESHINCHI BOʻLIM HOKIMIYAT, BOSHQARUV VA JAMOAT BIRLASHMALARI ORGANLARINING FAOLIYAT TARTIBIGA QARSHI JINOYATLAR > XV bob. Boshqaruv tartibiga qarshi jinoyatlar",
+  "pass": "raw",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Criminal liability for illegal border crossing, unrelated to traffic fines."
+ },
+ {
+  "question": "lf-260",
+  "document": -8107338,
+  "article": "29",
+  "within": "1-ilova. Transport vositalarini boshqarish huquqini olgan shaxslarga yoʻl harakati qoidalari buzilgani uchun javobgarlik oʻtkazilgani haqida Davlat yoʻl harakati xavfsizligi xizmati organlarini xabardor qilish tartibi toʻgʻrisida NIZOM > 6-bob. Boshqarish huquqini olgan chet el fuqarolari yoki fuqaroligi boʻlmagan shaxslarni yoʻl harakati qoidalarini buzgani uchun maʼmuriy javobgarlikka tortish tartibi",
+  "pass": "alt",
+  "status": "kept",
+  "quote": "jarimani chegara bojxona postidagi bank kassalari yoki elektron toʻlov tizimlari yoxud oʻziga-oʻzi xizmat koʻrsatish terminallari orqali toʻlaydi",
+  "reason": "Says foreign citizens pay the traffic fine at the border customs post or via electronic payment."
+ },
+ {
+  "question": "lf-260",
+  "document": -8107338,
+  "article": "30",
+  "within": "1-ilova. Transport vositalarini boshqarish huquqini olgan shaxslarga yoʻl harakati qoidalari buzilgani uchun javobgarlik oʻtkazilgani haqida Davlat yoʻl harakati xavfsizligi xizmati organlarini xabardor qilish tartibi toʻgʻrisida NIZOM > 6-bob. Boshqarish huquqini olgan chet el fuqarolari yoki fuqaroligi boʻlmagan shaxslarni yoʻl harakati qoidalarini buzgani uchun maʼmuriy javobgarlikka tortish tartibi",
+  "pass": "alt",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Says border bank desks accept fines from foreigners, but does not state when the fine must be paid or that it is collected on exit."
+ },
+ {
+  "question": "lf-260",
+  "document": -4933420,
+  "article": "12",
+  "within": "1-ilova. Oʻzbekiston Respublikasi hududida yoʻl harakati qoidalarini buzgan xorijiy avtotransport vositalari haydovchilaridan jarimalarni undirish tartibi toʻgʻrisida NIZOM > 2-bob. Yoʻl harakati xavfsizligi qoidalarini buzganlik uchun jarimani undirish",
+  "pass": "alt",
+  "status": "kept",
+  "quote": "Chegara bojxona postlaridagi bank kassalari:\nOʻzbekiston Respublikasi hududida yoʻl harakati qoidalarini buzgan xorijiy avtotransport vositasining haydovchisi yoki uni amalda olib chiqayotgan boshqa shaxsdan jarima summasini qabul qiladi;",
+  "reason": "Bank cashiers at border customs posts collect the fine from the driver of the foreign vehicle on exit."
+ },
+ {
+  "question": "lf-260",
+  "document": -4933420,
+  "article": "15",
+  "within": "1-ilova. Oʻzbekiston Respublikasi hududida yoʻl harakati qoidalarini buzgan xorijiy avtotransport vositalari haydovchilaridan jarimalarni undirish tartibi toʻgʻrisida NIZOM > 2-bob. Yoʻl harakati xavfsizligi qoidalarini buzganlik uchun jarimani undirish",
+  "pass": "alt",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Describes impounding the vehicle for an unpaid fine; does not state when the fine is to be paid."
+ },
+ {
+  "question": "lf-261",
+  "document": -5038211,
+  "article": "107",
+  "within": "Ilova. Elektr qurilmalarini ekspluatatsiya qilishda xavfsizlik texnikasi QOIDALARI > 4-bob. Tashkiliy tadbirlar > 11-§. Elektr stansiyalar, podstansiyalarning elektr qurilmalarida va KLda ishlarni bajarishda amalga oshiriladigan tashkiliy chora-tadbirlar > b) Bir nechta ish joylarida, ulanishlarda, podstansiyalarda bitta naryad boʻyicha ishlar",
+  "pass": "raw",
+  "status": "rejected",
+  "quote": "",
+  "reason": "About work permits for electric motors of units under repair; nothing on boiler capacity categories."
+ },
+ {
+  "question": "lf-262",
+  "document": -2045196,
+  "article": "20",
+  "within": "1-ilova. Oʻzbekiston Respublikasi bozorlarida savdo faoliyatini tashkil etish qoidalari > III. Bozor hududini obodonlashtirishga, obyektlarni joylashtirishga va bozorni jihozlashga qoʻyiladigan umumiy talablar",
+  "pass": "raw",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Only says use of cash registers and terminals is regulated by legislation; states no obligation."
+ },
+ {
+  "question": "lf-262",
+  "document": -3119089,
+  "article": "1",
+  "within": "",
+  "pass": "raw",
+  "status": "kept",
+  "quote": "oʻrnatish majburiy boʻlgan hisob-kitob terminallarini oʻrnatmagan taqdirda oʻz faoliyatlarini amalga oshirish huquqiga ega boʻlmaydilar",
+  "reason": "Makes card payment terminals mandatory for retail traders; the cash register part is only touched for artisans."
+ },
+ {
+  "question": "lf-263",
+  "document": -6571370,
+  "article": null,
+  "within": "2-ilova. Oʻzbekiston Respublikasi Ichki ishlar vazirligining Sport kurashlari boʻyicha ixtisoslashtirilgan olimpiya zaxiralari maktabi oʻquvchi-sportchilari uchun zarur anjomlar, sport ekipirovkasi va formali kiyim-bosh bilan taʼminlash NORMATIVLARI",
+  "pass": "raw",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Only a footnote on replacing gear; does not state provision of lodging, four meals and clothing."
+ },
+ {
+  "question": "lf-263",
+  "document": -3762919,
+  "article": "21",
+  "within": "4-ilova. Olimpiya va milliy sport turlari boʻyicha davlat ixtisoslashtirilgan maktab-internati toʻgʻrisida NIZOM > 4-bob. Oʻquv-tarbiya jarayonini tashkil etish",
+  "pass": "alt",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Mentions food per norm and free dormitory but not four meals a day or clothing."
+ },
+ {
+  "question": "lf-263",
+  "document": -3762919,
+  "article": "2",
+  "within": "6-ilova. Olimpiya va milliy sport turlari boʻyicha davlat ixtisoslashtirilgan maktab-internatida oziq-ovqat bilan taʼminlash xarajatlarini qisman qoplash uchun ota-onalar toʻlovini toʻlash tartibi toʻgʻrisida NIZOM > 1-bob. Umumiy qoidalar",
+  "pass": "alt",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Covers only meals (partly paid by parents); nothing on dormitory, four meals a day or clothing."
+ },
+ {
+  "question": "lf-264",
+  "document": -8027513,
+  "article": null,
+  "within": "Nizomga 2-ilova",
+  "pass": "raw",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Notes and codes of an application form; does not say the category or that coal data is checked automatically."
+ },
+ {
+  "question": "lf-264",
+  "document": -8366663,
+  "article": null,
+  "within": "Reglamentiga 2-ilova. ",
+  "pass": "raw",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Preamble only."
+ },
+ {
+  "question": "lf-264",
+  "document": -8565490,
+  "article": null,
+  "within": "Reglamentiga 2-ilova",
+  "pass": "raw",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Consent wording of an application form; does not say who qualifies or that coal purchase data is checked."
+ },
+ {
+  "question": "lf-265",
+  "document": -3967908,
+  "article": "24",
+  "within": "Ilova. Alimentlarni oldindan toʻlash, shuningdek aliment toʻlash majburiyatini taʼminlash boʻyicha garov shartnomasini tuzish tartibi toʻgʻrisida NIZOM > 2-bob. Alimentlarni oldindan toʻlash tartibi > S=[12×A×(k^((g+1) )-1)/(k-1)]-[(MF-1)×A]-[(12-ML)×k^g×A]",
+  "pass": "alt",
+  "status": "rejected",
+  "quote": "",
+  "reason": "About lifting restrictions after advance alimony payment; does not state what restrictions apply to a debtor."
+ },
+ {
+  "question": "lf-265",
+  "document": -5899498,
+  "article": "19",
+  "within": "",
+  "pass": "alt",
+  "status": "rejected",
+  "quote": "",
+  "reason": "An instruction to draft a bill with different restrictions (driving licence, licences), not those asked."
+ },
+ {
+  "question": "lf-266",
+  "document": -4086981,
+  "article": "19",
+  "within": "Ilova. Oʻzbekiston Respublikasi Milliy gvardiyasi Harbiy musiqa akademik litseyiga oʻquvchilarni tanlab olish, oʻqishga qabul qilish va oʻqishdan chetlatish tartibi toʻgʻrisida NIZOM > 3-bob. Akademik litseyga nomzodlarni tanlab olish va oʻqishga qabul qilish",
+  "pass": "raw",
+  "status": "rejected",
+  "quote": "",
+  "reason": "About tie-break admissions above quota; the yearly intake number is not given."
+ },
+ {
+  "question": "lf-267",
+  "document": -5031869,
+  "article": null,
+  "within": "Nizomga 1-ilova",
+  "pass": "alt",
+  "status": "no_text",
+  "quote": "",
+  "reason": ""
+ },
+ {
+  "question": "lf-268",
+  "document": -3804290,
+  "article": null,
+  "within": "Ilova. Kredit rasmiylashtirishdan oldin toʻldiriladigan CHEKLIST",
+  "pass": "raw",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Introductory line of a checklist; nothing about early overpayment and a new schedule."
+ },
+ {
+  "question": "lf-269",
+  "document": -3843525,
+  "article": "52",
+  "within": "Ilova. Jahon iqtisodiyoti va diplomatiya universitetining bakalavriat va magistraturasiga oʻqishga qabul qilish toʻgʻrisida NIZOM > 3-bob. Universitet magistraturasiga qabul qilish tartibi",
+  "pass": "raw",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Only exemption from the foreign language exam at one university; does not answer whether a separate exam remains."
+ },
+ {
+  "question": "lf-270",
+  "document": -5770609,
+  "article": "7",
+  "within": "Metodikasiga 2-ilova. Yagona koʻp balli imtihon tizimi boʻyicha chet tilidan imtihonni baholash MEZONLARI > 2-bob. Baholash mezonlari",
+  "pass": "raw",
+  "status": "kept",
+  "quote": "Chet tili boʻyicha nomzodning matnni oʻqiy olishi, tarjima qila olishi, matn (maqola)ning mazmunini gapirib bera olishi",
+  "reason": "Lists exactly what the foreign language exam checks: reading, translating and retelling a text."
+ },
+ {
+  "question": "lf-270",
+  "document": -3558737,
+  "article": "7",
+  "within": "Nizomga 11-ilova. Yagona koʻp balli imtihon tizimi boʻyicha chet tilidan imtihon oʻtkazish METODIKASI > 2-bob. Baholash mezonlari",
+  "pass": "raw",
+  "status": "kept",
+  "quote": "Chet tili boʻyicha nomzodning matnni oʻqiy olishi, tarjima qila olishi, matnning (maqolaning) mazmunini gapirib bera olishi, mamlakatda amalga oshirilayotgan islohotlar va ularning mazmuni yuzasidan savollarga javob bera olishi tekshiriladi",
+  "reason": "States the exam checks reading, translating, retelling the text and answering questions."
+ },
+ {
+  "question": "lf-270",
+  "document": -4313560,
+  "article": "5",
+  "within": "Nizomga 14-ilova. Yagona koʻp balli imtihon tizimi boʻyicha chet tilidan imtihonni baholash MEZONLARI > 2-bob. Baholash mezonlari",
+  "pass": "raw",
+  "status": "kept",
+  "quote": "matnni toʻliq (100 foiz) tarjima qilsa — 11,6 ball;\nmatnning (maqolaning) mazmunini toʻliq gapirib bersa — 11,6 ball;\nberilgan mavzuni toʻliq bilsa",
+  "reason": "Scoring rubric shows the exam consists of reading and translating a text, retelling it and knowing a given topic."
+ },
+ {
+  "question": "lf-270",
+  "document": -3435596,
+  "article": "7",
+  "within": "Metodikasiga 1-ilova. Yagona koʻp balli imtihon tizimi boʻyicha chet tilidan imtihonni baholash MEZONLARI > 2-bob. Baholash mezonlari",
+  "pass": "raw",
+  "status": "kept",
+  "quote": "Chet tili boʻyicha nomzodning matnni oʻqiy olishi, tarjima qila olishi, matnning (maqolaning) mazmunini gapirib bera olishi, mamlakatda amalga oshirilayotgan islohotlar va ularning mazmuni yuzasidan savollarga javob bera olishi tekshiriladi",
+  "reason": "States what is tested: reading, translating, retelling a text and answering questions."
+ },
+ {
+  "question": "lf-270",
+  "document": -5770609,
+  "article": "4",
+  "within": "Metodikasiga 2-ilova. Yagona koʻp balli imtihon tizimi boʻyicha chet tilidan imtihonni baholash MEZONLARI > 1-bob. Umumiy qoidalar",
+  "pass": "raw",
+  "status": "kept",
+  "quote": "nomzodning matnni oʻqiy olishi, tarjima qila olishi, matn (maqola)ning mazmunini gapirib bera olishi, berilgan mavzuni bilishi",
+  "reason": "Lists what is checked at the foreign-language exam: reading, translating, retelling, topic."
+ },
+ {
+  "question": "lf-271",
+  "document": -6973011,
+  "article": "67",
+  "within": "1-ilova. Oʻquvchilarni akademik litseylarga qabul qilish, ularning oʻqishini koʻchirish, qayta tiklash va oʻqishdan chetlatish tartibi toʻgʻrisidagi NIZOM > 2-bob. Oʻquvchilarni akademik litseylarga qabul qilish tartibi > 10-§. Imtihon natijalari boʻyicha berilgan apellyatsiya shikoyatlarini koʻrib chiqish",
+  "pass": "raw",
+  "status": "rejected",
+  "quote": "",
+  "reason": "About the right and deadline to file an appeal, not commission composition."
+ },
+ {
+  "question": "lf-273",
+  "document": -6906830,
+  "article": "4",
+  "within": "",
+  "pass": "raw",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Refinancing conditions for banks; no criteria about young families under 30 without housing."
+ },
+ {
+  "question": "lf-274",
+  "document": -5343844,
+  "article": null,
+  "within": "Ilova",
+  "pass": "raw",
+  "status": "no_text",
+  "quote": "",
+  "reason": ""
+ },
+ {
+  "question": "lf-275",
+  "document": -6860339,
+  "article": "23",
+  "within": "4-ilova. Texnik jihatdan tartibga solish, standartlashtirish, metrologiya, muvofiqlikni baholash, shuningdek, veterinariya, karantin va sanitariya sohalari mutaxassislarining malakasini oshirish hamda ularni attestatsiyadan oʻtkazish tartibi toʻgʻrisida NIZOM > 5-bob. Attestatsiyani oʻtkazish tartibi",
+  "pass": "raw",
+  "status": "kept",
+  "quote": "uzrli sababga koʻra kelmagan taqdirda, attestatsiya komissiyasining keyingi navbatdagi majlisida attestatsiyadan oʻtkazilishiga ruxsat etiladi",
+  "reason": "States absence for a valid reason allows attestation at the next commission meeting."
+ },
+ {
+  "question": "lf-276",
+  "document": -243235,
+  "article": "14",
+  "within": "2-ilova. Oʻzbekiston Respublikasida umumiy ovqatlanish mahsulotlarini (xizmatlarni) ishlab chiqarish va sotish QOIDALARI > I. Umumiy qoidalar",
+  "pass": "raw",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Payment methods in catering; nothing on the institute's duties to an outsourced caterer."
+ },
+ {
+  "question": "lf-277",
+  "document": -596542,
+  "article": "6",
+  "within": "II. PENSIYA TAYINLASH VA TOʻLASH TARTIBI",
+  "pass": "raw",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Gives the period for helping to find a job, not the time for review or summoning with a job offer."
+ },
+ {
+  "question": "lf-277",
+  "document": -6649386,
+  "article": null,
+  "within": "Reglamentga 1-ilova. Shaxslarni ishsiz deb eʼtirof etish va ularga ishsizlik nafaqasini tayinlash boʻyicha elektron davlat xizmatini koʻrsatish SXEMASI",
+  "pass": "alt",
+  "status": "no_text",
+  "quote": "",
+  "reason": ""
+ },
+ {
+  "question": "lf-277",
+  "document": -8515680,
+  "article": null,
+  "within": "Reglamentiga 1-ilova. Mehnat shartnomasi alohida asoslarga koʻra bekor qilinganda, ishdan boʻshatilgan xodimlarga taqdimnoma rasmiylashtirish va muddatidan oldin yoshga doir pensiya tayinlash boʻyicha davlat xizmatini koʻrsatish SXEMASI",
+  "pass": "alt",
+  "status": "no_text",
+  "quote": "",
+  "reason": ""
+ },
+ {
+  "question": "lf-279",
+  "document": -8164733,
+  "article": "20",
+  "within": "1-ilova. Davlat organlari va tashkilotlari ichki audit xizmatlarining xodimlari malakasini sertifikatlash va ularni uzluksiz kasbiy rivojlantirish tartibi toʻgʻrisida NIZOM > 5-bob. Sertifikat olish uchun ariza berish, malaka imtihonini topshirishga ruxsat berish yoki ruxsat berishni rad etish toʻgʻrisida qaror qabul qilish tartibi",
+  "pass": "raw",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Lists documents and submission window; does not say who sets the review and test dates."
+ },
+ {
+  "question": "lf-280",
+  "document": -3517337,
+  "article": "208",
+  "within": "2-kichik boʻlim. Daʼvo ishini yuritish > 22-bob. Sud muhokamasi",
+  "pass": "alt",
+  "status": "kept",
+  "quote": "Sud majlisini fototasvirga tushirish, audio- va videoyozuvini amalga oshirish, shuningdek ommaviy axborot vositalarida translyatsiya qilinishiga taraflarning roziligi va sud majlisida raislik qiluvchining ruxsati bilan yo",
+  "reason": "Audio recording of a hearing requires parties' consent and the presiding judge's permission."
+ },
+ {
+  "question": "lf-280",
+  "document": -111460,
+  "article": "19",
+  "within": "UMUMIY QISM > BIRINCHI BOʻLIM ASOSIY QOIDALAR > 2-bob. JINOYAT PROTSESSI PRINSIPLARI",
+  "pass": "alt",
+  "status": "kept",
+  "quote": "Sud zalida ovozlarni yozib olish, fotosuratga, videoyozuvga va kinotasvirga olishga faqat sud majlisida raislik qiluvchining ruxsati bilan yoʻl qoʻyiladi",
+  "reason": "States that audio recording in the courtroom is allowed only with the presiding judge's permission."
+ },
+ {
+  "question": "lf-282",
+  "document": -4313560,
+  "article": "8",
+  "within": "Nizomga 7-ilova. Umumjismoniy tayyorgarlik darajasini baholash METODIKASI > 2-bob. Mashqlarni bajarishga qoʻyiladigan talablar va mezonlar",
+  "pass": "raw",
+  "status": "kept",
+  "quote": "Turnikda kamida 7-marta tortilgan nomzod ushbu sinovdan “oʻtdi” deb hisoblanadi",
+  "reason": "States that at least 7 pull-ups count as passing."
+ },
+ {
+  "question": "lf-283",
+  "document": -5863626,
+  "article": null,
+  "within": "Reglamentiga 3-ilova",
+  "pass": "raw",
+  "status": "no_text",
+  "quote": "",
+  "reason": ""
+ },
+ {
+  "question": "lf-286",
+  "document": -6257288,
+  "article": "132",
+  "within": "MAXSUS QISM > IV BOʻLIM. YAKKA TARTIBDAGI MEHNATGA OID MUNOSABATLAR > 12-bob. Mehnat shartnomasi > 2-§. Mehnat shartnomasini tuzish",
+  "pass": "alt",
+  "status": "rejected",
+  "quote": "",
+  "reason": "About terminating a contract during probation, not a trial lesson before hiring."
+ },
+ {
+  "question": "lf-287",
+  "document": -4416971,
+  "article": "3",
+  "within": "",
+  "pass": "raw",
+  "status": "kept",
+  "quote": "qoʻshma fakultetlar bitiruvchilariga Oʻzbekiston Respublikasi hamda tegishlicha Belarus Respublikasida yoki Rossiya Federatsiyasida oliy taʼlim toʻgʻrisidagi hujjat sifatida eʼtirof etiladigan",
+  "reason": "States graduates get diplomas recognised in Uzbekistan and Belarus/Russia."
+ },
+ {
+  "question": "lf-288",
+  "document": -6549682,
+  "article": null,
+  "within": "2-ilova. “Yangi hayot uchun, Yangi Oʻzbekiston uchun!” degan bosh gʻoyani oʻzida mujassam etgan tashkiliy amaliy, maʼnaviy-maʼrifiy tadbirlar hamda targʻibot-tashviqot ishlari DASTURI",
+  "pass": "raw",
+  "status": "no_text",
+  "quote": "",
+  "reason": ""
+ },
+ {
+  "question": "lf-288",
+  "document": -8115046,
+  "article": null,
+  "within": "2-ilova. Oʻzbekiston Respublikasi davlat mustaqilligining 35 yillik bayrami munosabati bilan “Yagona Vatan, yagona xalq boʻlib, yangi hayot va kelajak yaratamiz!” degan bosh gʻoyani oʻzida mujassam etgan tashkiliy-amaliy, maʼnaviy-maʼrifiy hamda targʻibot-tashviqot chora-tadbirlari DASTURI",
+  "pass": "raw",
+  "status": "no_text",
+  "quote": "",
+  "reason": ""
+ },
+ {
+  "question": "lf-288",
+  "document": -8115046,
+  "article": null,
+  "within": "2-ilova. Oʻzbekiston Respublikasi davlat mustaqilligining 35 yillik bayrami munosabati bilan “Yagona Vatan, yagona xalq boʻlib, yangi hayot va kelajak yaratamiz!” degan bosh gʻoyani oʻzida mujassam etgan tashkiliy-amaliy, maʼnaviy-maʼrifiy hamda targʻibot-tashviqot chora-tadbirlari DASTURI",
+  "pass": "alt",
+  "status": "no_text",
+  "quote": "",
+  "reason": ""
+ },
+ {
+  "question": "lf-288",
+  "document": -8115046,
+  "article": "3",
+  "within": "1-ilova. Oʻzbekiston Respublikasi davlat mustaqilligining 35 yilligini nishonlashning gʻoyaviy-badiiy KONSEPSIYASI > III. Mustaqillik bayramining bosh gʻoyasini keng jamoatchilikka yetkazish",
+  "pass": "alt",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Mentions contests in summer-holiday programmes; does not regulate how a school marks the holiday."
+ },
+ {
+  "question": "lf-289",
+  "document": -3802293,
+  "article": "146",
+  "within": "Ilova. Tijorat banklarida kassa ishini tashkil etish, naqd pul va boshqa qimmatliklarni inkassatsiya qilishga doir YOʻRIQNOMA > 8-bob. Naqd pul va boshqa qimmatliklarni saqlash uchun qabul qilish tartibi",
+  "pass": "raw",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Storage of loan collateral documents in the bank vault, not when the bank must disburse."
+ },
+ {
+  "question": "lf-291",
+  "document": -7145088,
+  "article": "89",
+  "within": "Ilova. Taqsimlash elektr tarmoqlaridan foydalanish QOIDALARI > III boʻlim. Taqsimlash tizimiga ulanish qoidalari > 3-bob. Ulanish va mavjud ulanishni oʻzgartirish tartibi > 2-§. Yangi ulanishlar tartibi va ulanish shartnomasi",
+  "pass": "raw",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Lists the contents of technical conditions; does not say what happens if work does not start within three years."
+ },
+ {
+  "question": "lf-293",
+  "document": -5796493,
+  "article": null,
+  "within": "Nizomga 2-ilova. ",
+  "pass": "raw",
+  "status": "no_text",
+  "quote": "",
+  "reason": ""
+ },
+ {
+  "question": "lf-295",
+  "document": -1775016,
+  "article": "81",
+  "within": "Ilova. Gidridlangan moylar ishlab chiqarish xodimlari uchun xavfsizlik QOIDALARI > II bob. Xavfsizlik boʻyicha umumiy talablar > 14-§. Suv taʼminoti va kanalizatsiya tizimiga qoʻyiladigan talablar",
+  "pass": "raw",
+  "status": "kept",
+  "quote": "yer qatlamini ifloslantirmagan holda dushxonalardan va yuz-qoʻl yuvgichlardan suv oqmaydigan qurilmali axlat oʻralarini mavjud boʻlishiga ruxsat etiladi",
+  "reason": "Permits watertight pits when there is no sewerage, with agreement of sanitary authorities."
+ },
+ {
+  "question": "lf-295",
+  "document": -1790502,
+  "article": "81",
+  "within": "Ilova. Presslash va ekstraksiyalash usuli bilan oʻsimlik yogʻi ishlab chiqarish xodimlari uchun xavfsizlik QOIDALARI > II bob. Xavfsizlik boʻyicha umumiy talablar > 14-§. Suv taʼminoti va kanalizatsiya tizimiga qoʻyiladigan talablar",
+  "pass": "raw",
+  "status": "kept",
+  "quote": "Tashkilotda kanalizatsiya tizimi yoʻq boʻlganda Oʻzbekiston Respublikasi Sogʻliqni saqlash vazirligi huzuridagi Sanitariya-epidemiologik osoyishtalik va jamoat salomatligi qoʻmitasining hududiy boshqarmalari yoki tuman (shahar) boʻlimlari bilan kelishilgan holda tashkilotda yer qatlamini ifloslantirmagan holda dushxonalardan va yuz-qoʻl yuvgichlardan suv oqmaydigan qurilmali axlat oʻralarini mavjud boʻlishiga ruxsat etiladi.",
+  "reason": "Allows watertight cesspits when there is no sewerage, with sanitary authority approval."
+ },
+ {
+  "question": "lf-295",
+  "document": -1837923,
+  "article": "81",
+  "within": "Ilova. Margarin ishlab chiqarish xodimlari uchun xavfsizlik QOIDALARI > II bob. Xavfsizlik boʻyicha umumiy talablar > 14-§. Suv taʼminoti va kanalizatsiya tizimiga qoʻyiladigan talablar",
+  "pass": "raw",
+  "status": "kept",
+  "quote": "tashkilotda yer qatlamini ifloslantirmagan holda dushxonalardan va yuz-qoʻl yuvgichlardan suv oqmaydigan qurilmali axlat oʻralarini mavjud boʻlishiga ruxsat etiladi",
+  "reason": "Permits watertight cesspits when there is no sewerage, with sanitary authority approval."
+ },
+ {
+  "question": "lf-295",
+  "document": -1669229,
+  "article": "75",
+  "within": "Ilova. Oyna ishlab chiqarish xodimlari uchun mehnatni muhofaza qilish QOIDALARI > 12-§. Suv taʼminoti va oqova suvlarni chiqarib yuborish tizimiga qoʻyiladigan talablar",
+  "pass": "alt",
+  "status": "kept",
+  "quote": "davlat sanitariya nazorati organlari bilan kelishilgan holda tashkilotda yer qatlamini ifloslantirmagan holda dushxonalardan va yuz-qoʻl yuvgichlardan suv oqmaydigan qurilmali axlat oʻralarini mavjud boʻlishiga ruxsat etiladi",
+  "reason": "Permits watertight cesspits when there is no sewerage, with sanitary authority approval."
+ },
+ {
+  "question": "lf-295",
+  "document": -1908933,
+  "article": "75",
+  "within": "Ilova. Noruda materiallari (shagʻal, qum) ishlab chiqarish xodimlari uchun mehnatni muhofaza qilish QOIDALARI > II bob. Xavfsizlik boʻyicha umumiy talablar > 13-§. Suv taʼminoti va oqova suvlarni chiqarib yuborish tizimiga qoʻyiladigan talablar",
+  "pass": "alt",
+  "status": "borderline",
+  "quote": "Tashkilotda oqova suvlarni chiqarib yuborish tizimi yoʻq boʻlganda davlat sanitariya nazorati organlari bilan kelishilgan holda tashkilotda yer qatlamini ifloslantirmagan holda dushxonalardan va yuz-qoʻl yuvgichlardan suv oqmaydigan qurilmali axlat oʻralarini mavjud boʻlishiga ruxsat etiladi.",
+  "reason": "Sealed cesspits for washbasin water are allowed where there is no sewerage, with sanitary approval."
+ },
+ {
+  "question": "lf-295",
+  "document": -2107240,
+  "article": "79",
+  "within": "Ilova. Poyabzal ishlab chiqarish xodimlari uchun mehnatni muhofaza qilish QOIDALARI > II bob. Xavfsizlikka qoʻyiladigan umumiy talablar > 12-§. Suv taʼminoti va oqova suvlarni chiqarib yuborish tizimiga qoʻyiladigan talablar",
+  "pass": "alt",
+  "status": "kept",
+  "quote": "yuz-qoʻl yuvgichlardan suv oqmaydigan qurilmali axlat oʻralarining mavjud boʻlishiga ruxsat etiladi",
+  "reason": "Permits watertight pits where there is no sewerage, with the agreement of the sanitary authorities."
+ },
+ {
+  "question": "lf-295",
+  "document": -2108055,
+  "article": "79",
+  "within": "Ilova. Moʻynadan va qoʻy terisidan poʻstin ishlab chiqarish xodimlari uchun mehnatni muhofaza qilish QOIDALARI > II bob. Xavfsizlikka qoʻyiladigan umumiy talablar > 12-§. Suv taʼminoti va oqova suvlarni chiqarib yuborish tizimiga qoʻyiladigan talablar",
+  "pass": "alt",
+  "status": "kept",
+  "quote": "yer qatlamini ifloslantirmagan holda dushxonalardan va yuz-qoʻl yuvgichlardan suv oqmaydigan qurilmali axlat oʻralarining mavjud boʻlishiga ruxsat etiladi",
+  "reason": "Permits watertight pits when there is no sewage system, with agreement of sanitary authorities."
+ },
+ {
+  "question": "lf-295",
+  "document": -2230759,
+  "article": "81",
+  "within": "Ilova. Trikotaj va tikuvchilik ishlab chiqarishi xodimlari uchun mehnatni muhofaza qilish QOIDALARI > II bob. Xavfsizlikka qoʻyiladigan umumiy talablar > 13-§. Suv taʼminoti va oqova suvlarni chiqarib yuborish tizimiga qoʻyiladigan talablar",
+  "pass": "alt",
+  "status": "kept",
+  "quote": "Tashkilotda oqova suvlarni chiqarib yuborish tizimi yoʻq boʻlganda davlat sanitariya nazorati organlari bilan kelishilgan holda tashkilotda yer qatlamini ifloslantirmagan holda dushxonalardan va yuz-qoʻl yuvgichlardan suv oqmaydigan qurilmali axlat oʻralarining mavjud boʻlishiga ruxsat etiladi.",
+  "reason": "Allows watertight cesspits when there is no sewerage, with sanitary authority approval."
+ },
+ {
+  "question": "lf-295",
+  "document": -1739950,
+  "article": "74",
+  "within": "Ilova. Charm-galantereya mahsulotlari ishlab chiqarish xodimlari uchun mehnatni muhofaza qilish QOIDALARI > 12-§. Suv taʼminoti va oqova suvlarni chiqarib yuborish tizimiga qoʻyiladigan talablar",
+  "pass": "alt",
+  "status": "kept",
+  "quote": "Tashkilotda oqova suvlarni chiqarib yuborish tizimi yoʻq boʻlganda davlat sanitariya nazorati organlari bilan kelishilgan holda tashkilotda yer qatlamini ifloslantirmagan holda dushxonalardan va yuz-qoʻl yuvgichlaridan suv oqmaydigan qurilmali axlat oʻralarining mavjud boʻlishiga ruxsat etiladi",
+  "reason": "Permits watertight cesspits when there is no sewerage, with sanitary authority approval."
+ },
+ {
+  "question": "lf-295",
+  "document": -2176093,
+  "article": "82",
+  "within": "Ilova. Metall va nometall noorganik qoplamalar ishlab chiqarishda mehnatni muhofaza qilish QOIDALARI > II bob. Xavfsizlikka qoʻyiladigan umumiy talablar > 13-§. Suv taʼminoti va oqova suvlarni chiqarib yuborish tizimiga qoʻyiladigan talablar",
+  "pass": "alt",
+  "status": "kept",
+  "quote": "davlat sanitariya nazorati organlari bilan kelishilgan holda tashkilotda yer qatlamini ifloslantirmagan holda dushxonalardan va yuz-qoʻl yuvgichlardan suv oqmaydigan qurilmali axlat oʻralarining boʻlishiga ruxsat etiladi",
+  "reason": "Permits watertight cesspits when there is no sewerage, with sanitary authority approval."
+ },
+ {
+  "question": "lf-295",
+  "document": -1768757,
+  "article": "81",
+  "within": "Ilova. Sement ishlab chiqarish xodimlari uchun mehnatni muhofaza qilish QOIDALARI > II bob. Xavfsizlik boʻyicha umumiy talablar > 14-§. Suv taʼminoti va oqova suvlarni chiqarib yuborish tizimiga qoʻyiladigan talablar",
+  "pass": "alt",
+  "status": "borderline",
+  "quote": "Tashkilotda oqova suvlarni chiqarib yuborish tizimi yoʻq boʻlganda davlat sanitariya nazorati organlari bilan kelishilgan holda tashkilotda yer qatlamini ifloslantirmagan holda dushxonalardan va yuz-qoʻl yuvgichlaridan suv oqmaydigan qurilmali axlat oʻralarining mavjud boʻlishiga ruxsat etiladi.",
+  "reason": "Sealed cesspits for washbasin water are allowed where there is no sewerage, with sanitary approval."
+ },
+ {
+  "question": "lf-296",
+  "document": -4191475,
+  "article": "9",
+  "within": "1-ilova. Qattiq va suyuq maishiy chiqindilarni toʻplash va olib chiqib ketish boʻyicha xizmatlar koʻrsatish QOIDALARI > 3-bob. Maishiy chiqindilarni toʻplash, saqlash va olib chiqib ketishga doir talablar",
+  "pass": "alt",
+  "status": "kept",
+  "quote": "Maishiy chiqindilarni joylashtirish va saqlash ushbu Qoidalar, sanitariya qoidalari, normalari va gigiyena normativlari, ekologik talablarga muvofiq",
+  "reason": "Requires household waste to be stored in line with the rules, sanitary and environmental requirements."
+ },
+ {
+  "question": "lf-296",
+  "document": -4191475,
+  "article": "42",
+  "within": "1-ilova. Qattiq va suyuq maishiy chiqindilarni toʻplash va olib chiqib ketish boʻyicha xizmatlar koʻrsatish QOIDALARI > 7-bob. Isteʼmolchining huquq va majburiyatlari",
+  "pass": "alt",
+  "status": "kept",
+  "quote": "maishiy chiqindilarni ruxsat etilmagan joylarga va obyektlarga tashlamaslik hamda joylashtirmaslik",
+  "reason": "Obliges the consumer not to dump or place household waste in unauthorised places."
+ },
+ {
+  "question": "lf-297",
+  "document": -3523891,
+  "article": "220",
+  "within": "II BOʻLIM. BIRINCHI INSTANSIYA SUDIDA ISH YURITISH > 27-bob. Huquqiy taʼsir choralarini qoʻllash toʻgʻrisidagi ishlarni yuritish",
+  "pass": "raw",
+  "status": "kept",
+  "quote": "Sud majlisining vaqti va joyi toʻgʻrisida tegishli tarzda xabardor qilingan mazkur shaxslarning kelmaganligi, agar sud ularning kelishini majburiy deb topmagan boʻlsa, ishni koʻrib chiqish uchun toʻsqinlik qilmaydi.",
+  "reason": "States notified persons' absence does not prevent the hearing; the same clause obliges the court to notify."
+ },
+ {
+  "question": "lf-297",
+  "document": -3523891,
+  "article": "171",
+  "within": "II BOʻLIM. BIRINCHI INSTANSIYA SUDIDA ISH YURITISH > 20-bob. Sud muhokamasi",
+  "pass": "raw",
+  "status": "rejected",
+  "quote": "",
+  "reason": "About grounds for postponing a hearing; not the notification duty or hearing in absence."
+ },
+ {
+  "question": "lf-297",
+  "document": -7004127,
+  "article": "23",
+  "within": "",
+  "pass": "raw",
+  "status": "kept",
+  "quote": "Sud muhokamasining oʻtkazish vaqti va joyi haqida tegishli tartibda xabardor qilingan shaxslarning sud majlisiga kelmaganligi ishni ularning ishtirokisiz koʻrishga toʻsqinlik qilmaydi",
+  "reason": "Notice of time and place is mandatory; absence of a duly notified person does not prevent hearing."
+ },
+ {
+  "question": "lf-298",
+  "document": -2414513,
+  "article": "9",
+  "within": "",
+  "pass": "raw",
+  "status": "rejected",
+  "quote": "",
+  "reason": "About disposal of evidence at the end of a case, not whether such property is taken as evidence."
+ },
+ {
+  "question": "lf-299",
+  "document": -6654217,
+  "article": null,
+  "within": "Reglamentiga 1-ilova. Sport unvoni yoki sport razryadini berish toʻgʻrisida TAQDIMNOMA",
+  "pass": "raw",
+  "status": "no_text",
+  "quote": "",
+  "reason": ""
+ },
+ {
+  "question": "lf-299",
+  "document": -3824011,
+  "article": "22",
+  "within": "Ilova. Davlat taʼlim muassasalari huzuridagi sport klublari toʻgʻrisida NIZOM > 5-bob. Sport klubiga aʼzo boʻlish hamda aʼzolarning huquq va majburiyatlari",
+  "pass": "alt",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Concerns sports clubs at state educational institutions, not a private sports club."
+ },
+ {
+  "question": "lf-299",
+  "document": -8093787,
+  "article": "24",
+  "within": "3-bob. Jismoniy tarbiya va sport sohasidagi faoliyatni tashkil etish",
+  "pass": "alt",
+  "status": "kept",
+  "quote": "reyestriga kiritilgan jismoniy va yuridik shaxslar rasmiy sport musobaqalarida oʻz nomidan ishtirok etishi",
+  "reason": "States registered non-state sports organisations may take part in official competitions in their own name."
+ },
+ {
+  "question": "lf-299",
+  "document": -8548625,
+  "article": "11",
+  "within": "2-ilova. Sport ligasining faoliyat yuritish tartibi hamda sport ligasi tomonidan professional sport musobaqalarini tashkil etish va oʻtkazish tartibi toʻgʻrisida NIZOM > 3-bob. Sport ligasiini tashkil etish va ularning faoliyat yuritish tartibi",
+  "pass": "alt",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Rights of a sports league, not participation of a private club's athlete."
+ }
+]
