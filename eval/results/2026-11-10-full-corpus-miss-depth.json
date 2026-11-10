@@ -1,0 +1,1334 @@
+[
+ {
+  "id": "lf-004",
+  "question": "Men Inha universiteti dasturi bo‘yicha o‘qib bitirsam, menga Koreyadagi Inha diplomi beriladimi yoki O‘zbekistonda ham o‘tadigan diplom ham beriladimi?",
+  "fts": [
+   7,
+   107,
+   null
+  ],
+  "vector": [
+   89,
+   null,
+   null
+  ],
+  "best_fts": 7,
+  "best_vector": 89,
+  "fused": 65,
+  "pool_units": 197
+ },
+ {
+  "id": "lf-006",
+  "question": "Uy ijarada turgan odam sud qarori bilan aqli joyida emas deb topilsa, shu uy ijarasini uning oilasidan kimdir o‘z nomiga birinchi bo‘lib rasmiylashtirib olishga haqlimi?",
+  "fts": [
+   null,
+   2,
+   null
+  ],
+  "vector": [
+   null,
+   null,
+   null
+  ],
+  "best_fts": 2,
+  "best_vector": null,
+  "fused": 47,
+  "pool_units": 189
+ },
+ {
+  "id": "lf-008",
+  "question": "Men chetdan kartoshka olib kelmoqchiman, bankdan buning uchun yillik necha foizda pul olsa bo‘ladi?",
+  "fts": [
+   65,
+   null,
+   54
+  ],
+  "vector": [
+   null,
+   null,
+   null
+  ],
+  "best_fts": 54,
+  "best_vector": null,
+  "fused": null,
+  "pool_units": 228
+ },
+ {
+  "id": "lf-009",
+  "question": "Toshkentda 10 tonnadan og‘ir yuk mashinalari ertalab-kechqurun tirband paytda yura oladimi, yo maxsus xizmat mashinalariga bu taqiq tegishli emasmi?",
+  "fts": [
+   83,
+   null,
+   null
+  ],
+  "vector": [
+   null,
+   127,
+   null
+  ],
+  "best_fts": 83,
+  "best_vector": 127,
+  "fused": null,
+  "pool_units": 229
+ },
+ {
+  "id": "lf-011",
+  "question": "Do‘kon yoki ustaxona ochish uchun yer olmoqchi bo‘lsam, hokimiyatdan to‘g‘ridan-to‘g‘ri olib bo‘ladimi yoki faqat internetdagi auksion orqali olinadimi?",
+  "fts": [
+   null,
+   null,
+   null
+  ],
+  "vector": [
+   66,
+   20,
+   66
+  ],
+  "best_fts": null,
+  "best_vector": 20,
+  "fused": 106,
+  "pool_units": 247
+ },
+ {
+  "id": "lf-014",
+  "question": "Agar odamni internetdagi pul tikiladigan o‘yinlarga kiritmaslik kerak degan ro‘yxatga qo‘shishgan bo‘lsa, sayt unga o‘yin ochishni qachondan to‘xtatishi kerak?",
+  "fts": [
+   2,
+   176,
+   56
+  ],
+  "vector": [
+   94,
+   58,
+   35
+  ],
+  "best_fts": 2,
+  "best_vector": 35,
+  "fused": 26,
+  "pool_units": 204
+ },
+ {
+  "id": "lf-015",
+  "question": "Do‘kondan olgan telefonim uyga kelib qarasam nuqsonli chiqdi, sotuvchi oldindan aytmagandi. Endi men uni boshqasiga almashtirib berishni, bepul tuzatishni, pulidan chegirma qilishni yoki umuman qaytarib pulimni olib bekor qilishni talab qilsam bo‘ladimi?",
+  "fts": [
+   null,
+   null,
+   2
+  ],
+  "vector": [
+   null,
+   null,
+   null
+  ],
+  "best_fts": 2,
+  "best_vector": null,
+  "fused": 33,
+  "pool_units": 218
+ },
+ {
+  "id": "lf-021",
+  "question": "Internetdan narsa buyurtma qilayotganda menga oldindan qachon olib kelishi, nech pul turishi va qayerlargacha yetkazib berishi aytilishi shartmi?",
+  "fts": [
+   null,
+   70,
+   4
+  ],
+  "vector": [
+   null,
+   null,
+   null
+  ],
+  "best_fts": 4,
+  "best_vector": null,
+  "fused": 37,
+  "pool_units": 241
+ },
+ {
+  "id": "lf-025",
+  "question": "Farzandim 2 haftadan ko‘proq kasal bo‘lib, basseynga bora olmay qoldi. Shu davr uchun pul to‘lamaslik uchun nima olib borishim kerak?",
+  "fts": [
+   5,
+   null,
+   null
+  ],
+  "vector": [
+   null,
+   null,
+   null
+  ],
+  "best_fts": 5,
+  "best_vector": null,
+  "fused": 35,
+  "pool_units": 238
+ },
+ {
+  "id": "lf-027",
+  "question": "Men ilova orqali chekni yuborib pul qaytarib olgandim, keyin adashib noto‘g‘ri yo‘l bilan olganim aniqlansa, o‘sha pulni mendan qaytarib olishadimi yoki boshqa chorasi bormi?",
+  "fts": [
+   32,
+   null,
+   null
+  ],
+  "vector": [
+   null,
+   null,
+   null
+  ],
+  "best_fts": 32,
+  "best_vector": null,
+  "fused": 158,
+  "pool_units": 246
+ },
+ {
+  "id": "lf-030",
+  "question": "Men korxonamga gaz olayapman, yetkazib beruvchi gazni oyma-oy to‘xtatmay berishi va sifati me’yorida bo‘lishini ta’minlashi shartmi?",
+  "fts": [
+   5,
+   null,
+   null
+  ],
+  "vector": [
+   null,
+   null,
+   null
+  ],
+  "best_fts": 5,
+  "best_vector": null,
+  "fused": 46,
+  "pool_units": 165
+ },
+ {
+  "id": "lf-036",
+  "question": "Meni vaqtincha olib borishgan joyda kimligim va uyim qayerdaligi aniqlansa, uyimga qaytarib yuborishadimi, yo‘l pulini ham berishadimi?",
+  "fts": [
+   null,
+   null,
+   null
+  ],
+  "vector": [
+   null,
+   null,
+   null
+  ],
+  "best_fts": null,
+  "best_vector": null,
+  "fused": null,
+  "pool_units": 199
+ },
+ {
+  "id": "lf-042",
+  "question": "Men masofadan o‘qiyapman, ishlab turgan joyim o‘qiyotgan yo‘nalishimga to‘g‘ri kelmasa, amaliyotni boshqa joyda o‘tsam bo‘ladimi?",
+  "fts": [
+   null,
+   156,
+   null
+  ],
+  "vector": [
+   null,
+   19,
+   null
+  ],
+  "best_fts": 156,
+  "best_vector": 19,
+  "fused": 104,
+  "pool_units": 204
+ },
+ {
+  "id": "lf-043",
+  "question": "Mahallada odamlar pul yigʻib, oʻzimiz alohida guruh tuzib ko‘chalarda jinoyatchilarni ushlaymiz, tekshiramiz desa bo‘ladimi, yo‘qmi?",
+  "fts": [
+   null,
+   null,
+   null
+  ],
+  "vector": [
+   null,
+   null,
+   null
+  ],
+  "best_fts": null,
+  "best_vector": null,
+  "fused": null,
+  "pool_units": 248
+ },
+ {
+  "id": "lf-048",
+  "question": "Yolgʻiz qolgan keksa onam bor, o‘zi alohida yashay olmayapti. Shunaqa odamlar uchun turadigan maxsus joylar bormi?",
+  "fts": [
+   null,
+   null,
+   null
+  ],
+  "vector": [
+   null,
+   null,
+   null
+  ],
+  "best_fts": null,
+  "best_vector": null,
+  "fused": null,
+  "pool_units": 164
+ },
+ {
+  "id": "lf-056",
+  "question": "Mashinamning ishlatilgan motor moyini almashtirganda, eski moyni boshqa turdagi moylarga qo‘shib yubormasdan alohida idishda yig‘ishlari shartmi?",
+  "fts": [
+   77,
+   66,
+   null
+  ],
+  "vector": [
+   null,
+   103,
+   null
+  ],
+  "best_fts": 66,
+  "best_vector": 103,
+  "fused": null,
+  "pool_units": 185
+ },
+ {
+  "id": "lf-066",
+  "question": "Men oylik olib ishlayman, maoshimdan qaysi soliq ushlanishi kerak?",
+  "fts": [
+   null,
+   null,
+   null
+  ],
+  "vector": [
+   null,
+   null,
+   null
+  ],
+  "best_fts": null,
+  "best_vector": null,
+  "fused": null,
+  "pool_units": 232
+ },
+ {
+  "id": "lf-069",
+  "question": "Men davlat ishida ishlayman, rahbarimiz “mana shu loyihaga ovoz to‘plab kelasizlar” deb majburlasa, bu mumkinmi o‘zi?",
+  "fts": [
+   null,
+   null,
+   15
+  ],
+  "vector": [
+   null,
+   null,
+   null
+  ],
+  "best_fts": 15,
+  "best_vector": null,
+  "fused": 81,
+  "pool_units": 269
+ },
+ {
+  "id": "lf-070",
+  "question": "Akam qamoqda, eshitishimcha kechirim berib chiqarishar ekan. Lekin u qurol bilan bog‘liq ish bo‘yicha o‘tirgan bo‘lsa, shunday kechirim unga ham tegishli bo‘ladimi?",
+  "fts": [
+   null,
+   33,
+   21
+  ],
+  "vector": [
+   null,
+   null,
+   null
+  ],
+  "best_fts": 21,
+  "best_vector": null,
+  "fused": 25,
+  "pool_units": 226
+ },
+ {
+  "id": "lf-078",
+  "question": "Qishloqdagi maktabda bitta sinfda 18 ta bola bo‘lsa, baribir alohida sinf ochsa bo‘ladimi yoki majburan boshqa sinfga qo‘shib yuborishadimi?",
+  "fts": [
+   93,
+   null,
+   20
+  ],
+  "vector": [
+   null,
+   79,
+   68
+  ],
+  "best_fts": 20,
+  "best_vector": 68,
+  "fused": 93,
+  "pool_units": 206
+ },
+ {
+  "id": "lf-081",
+  "question": "Men shu filialga topshirmoqchi edim, darslar qaysi tilda bo‘ladi?",
+  "fts": [
+   null,
+   38,
+   null
+  ],
+  "vector": [
+   129,
+   null,
+   null
+  ],
+  "best_fts": 38,
+  "best_vector": 129,
+  "fused": 192,
+  "pool_units": 243
+ },
+ {
+  "id": "lf-084",
+  "question": "Do‘kondan ko‘p miqdorda tuz olib, omborda saqlamoqchiman. Qoplarni ustma-ust terayotganda og‘zi qaysi tomonga qaratib qo‘yilishi kerak?",
+  "fts": [
+   1,
+   4,
+   null
+  ],
+  "vector": [
+   null,
+   null,
+   null
+  ],
+  "best_fts": 1,
+  "best_vector": null,
+  "fused": 12,
+  "pool_units": 226
+ },
+ {
+  "id": "lf-086",
+  "question": "Kursda bir bo‘limdan testdan 56 foizga yetolmadim. Uni yana bir marta qayta topshirsam bo‘ladimi, keyin keyingi bo‘limga o‘ta olamanmi?",
+  "fts": [
+   22,
+   null,
+   169
+  ],
+  "vector": [
+   null,
+   null,
+   null
+  ],
+  "best_fts": 22,
+  "best_vector": null,
+  "fused": 101,
+  "pool_units": 219
+ },
+ {
+  "id": "lf-097",
+  "question": "Tomorqamdagi eski bogʻni yangilamoqchiman. Yangi ko‘chat olib eksam, xarajatning yarmi qoplab beriladimi?",
+  "fts": [
+   47,
+   101,
+   null
+  ],
+  "vector": [
+   null,
+   null,
+   null
+  ],
+  "best_fts": 47,
+  "best_vector": null,
+  "fused": 178,
+  "pool_units": 189
+ },
+ {
+  "id": "lf-103",
+  "question": "Bolam davlat bog‘chasiga qatnasa, bir oyiga taxminan qancha to‘lov qilaman?",
+  "fts": [
+   null,
+   null,
+   null
+  ],
+  "vector": [
+   null,
+   null,
+   null
+  ],
+  "best_fts": null,
+  "best_vector": null,
+  "fused": null,
+  "pool_units": 200
+ },
+ {
+  "id": "lf-108",
+  "question": "Biz kambag‘al oilalar ro‘yxatida turamiz. Agar kelishilgan shartlarga amal qilolmasak, bolalar uchun olayotgan pulimizni kamaytirishlari mumkinmi, qancha kamayadi?",
+  "fts": [
+   41,
+   null,
+   null
+  ],
+  "vector": [
+   13,
+   null,
+   null
+  ],
+  "best_fts": 41,
+  "best_vector": 13,
+  "fused": 18,
+  "pool_units": 213
+ },
+ {
+  "id": "lf-112",
+  "question": "Men bo‘sh turgan binomda ayollarni tikuvchilik yoki boshqa hunarga o‘rgatmoqchi edim. Bunga ruxsat bersa bo‘ladimi, yana grant olish imkoniyati ham bormi?",
+  "fts": [
+   25,
+   148,
+   null
+  ],
+  "vector": [
+   null,
+   null,
+   null
+  ],
+  "best_fts": 25,
+  "best_vector": null,
+  "fused": 114,
+  "pool_units": 190
+ },
+ {
+  "id": "lf-117",
+  "question": "Men dalada tomchilatib sug'orish o'rnatilgan joyda baribir eski usulda suv berayotganini videoga olib qolsam, shu videoni necha kun ichida topshirishim kerak va unda nimalarni ko'rsatishim kerak?",
+  "fts": [
+   180,
+   98,
+   null
+  ],
+  "vector": [
+   null,
+   17,
+   12
+  ],
+  "best_fts": 98,
+  "best_vector": 12,
+  "fused": 13,
+  "pool_units": 236
+ },
+ {
+  "id": "lf-118",
+  "question": "Men o‘zim yetishtirgan sabzavotni bozorga olib borib sotsam, bozor tomondan “kiritmaymiz” deb to‘sqinlik qilishsa mumkinmi?",
+  "fts": [
+   null,
+   77,
+   null
+  ],
+  "vector": [
+   null,
+   null,
+   null
+  ],
+  "best_fts": 77,
+  "best_vector": null,
+  "fused": null,
+  "pool_units": 216
+ },
+ {
+  "id": "lf-134",
+  "question": "Men o‘qib yurib korxonada amaliyot qilib ishlasam, oyligimning 2 million so‘mgacha qismini davlat to‘lab beradimi?",
+  "fts": [
+   61,
+   null,
+   null
+  ],
+  "vector": [
+   null,
+   null,
+   null
+  ],
+  "best_fts": 61,
+  "best_vector": null,
+  "fused": null,
+  "pool_units": 255
+ },
+ {
+  "id": "lf-137",
+  "question": "Meni Andijondagi universitet ishga taklif qilsa, oila a’zolarim bilan O‘zbekistonga kelish uchun vizani bepul olib, bir necha marta kirib-chiqishimiz mumkinmi?",
+  "fts": [
+   40,
+   114,
+   null
+  ],
+  "vector": [
+   null,
+   105,
+   null
+  ],
+  "best_fts": 40,
+  "best_vector": 105,
+  "fused": 145,
+  "pool_units": 185
+ },
+ {
+  "id": "lf-146",
+  "question": "Ishsiz bo‘lib qolganman, yoshim ham erta pensiyaga chiqishga to‘g‘ri kelsa, bandlik bo‘limi hujjatlarimni pensiya bo‘limiga necha kunda yuborishi kerak?",
+  "fts": [
+   53,
+   10,
+   29
+  ],
+  "vector": [
+   null,
+   null,
+   null
+  ],
+  "best_fts": 10,
+  "best_vector": null,
+  "fused": 32,
+  "pool_units": 192
+ },
+ {
+  "id": "lf-148",
+  "question": "Farzandimning o‘qishi bo‘yicha muammo yoki shikoyatim bo‘lsa, telefon qilib murojaat qilsam bo‘ladimi?",
+  "fts": [
+   null,
+   123,
+   null
+  ],
+  "vector": [
+   null,
+   null,
+   null
+  ],
+  "best_fts": 123,
+  "best_vector": null,
+  "fused": null,
+  "pool_units": 227
+ },
+ {
+  "id": "lf-150",
+  "question": "Bolamni davlat maktabiga berish uchun albatta maktabning o‘ziga borishim kerakmi yoki arizani davlat xizmatlari markazi yoki internet orqali topshirsam ham bo‘ladimi?",
+  "fts": [
+   null,
+   107,
+   null
+  ],
+  "vector": [
+   null,
+   null,
+   null
+  ],
+  "best_fts": 107,
+  "best_vector": null,
+  "fused": null,
+  "pool_units": 152
+ },
+ {
+  "id": "lf-156",
+  "question": "Do‘konga olib kelgan shakar buzilgan chiqsa, yetkazib bergan odam uni almashtirib berishi va yaroqsizini olib ketishi shartmi?",
+  "fts": [
+   2,
+   null,
+   null
+  ],
+  "vector": [
+   1,
+   null,
+   null
+  ],
+  "best_fts": 2,
+  "best_vector": 1,
+  "fused": 5,
+  "pool_units": 222
+ },
+ {
+  "id": "lf-157",
+  "question": "Usta tibbiy uskunani tokdan uzmasdan ichini ochib tekshirsa bo‘ladimi, yo avval to‘liq o‘chirib, elektrdan uzish shartmi?",
+  "fts": [
+   null,
+   null,
+   null
+  ],
+  "vector": [
+   null,
+   125,
+   null
+  ],
+  "best_fts": null,
+  "best_vector": 125,
+  "fused": null,
+  "pool_units": 255
+ },
+ {
+  "id": "lf-158",
+  "question": "Men raqs bilan mustaqil shug‘ullanaman, hech qayerda ishlamayman ham o‘qimayman ham. Shunaqa bo‘lsam ham bu tanlovda qatnasha olamanmi?",
+  "fts": [
+   81,
+   null,
+   null
+  ],
+  "vector": [
+   null,
+   null,
+   null
+  ],
+  "best_fts": 81,
+  "best_vector": null,
+  "fused": null,
+  "pool_units": 266
+ },
+ {
+  "id": "lf-159",
+  "question": "Mahallada hovlim bor, uni buzib o‘rniga ko‘p qavatli uy qilmoqchi bo‘lsam, bu masalani qayer ko‘rib chiqadi?",
+  "fts": [
+   10,
+   null,
+   null
+  ],
+  "vector": [
+   null,
+   null,
+   null
+  ],
+  "best_fts": 10,
+  "best_vector": null,
+  "fused": 66,
+  "pool_units": 213
+ },
+ {
+  "id": "lf-163",
+  "question": "Maktabdagi yozgi kunduzgi lagerga boshqa maktabdan ham o‘qituvchi yoki tarbiyachilar kelib ishlasa bo‘ladimi, ularga bu ishi uchun pul to‘lanadimi?",
+  "fts": [
+   null,
+   6,
+   null
+  ],
+  "vector": [
+   null,
+   76,
+   null
+  ],
+  "best_fts": 6,
+  "best_vector": 76,
+  "fused": 54,
+  "pool_units": 200
+ },
+ {
+  "id": "lf-165",
+  "question": "Dorixona uchun 96 foizlik spirt kerak bo‘lsa, uni oddiy odam yoki istalgan firma sotsa bo‘ladimi, yo faqat shu ishga ruxsati bor ishlab chiqaruvchi va ulgurji sotuvchidan olish kerakmi?",
+  "fts": [
+   93,
+   6,
+   176
+  ],
+  "vector": [
+   null,
+   null,
+   null
+  ],
+  "best_fts": 6,
+  "best_vector": null,
+  "fused": 56,
+  "pool_units": 135
+ },
+ {
+  "id": "lf-170",
+  "question": "Chegaradan o‘tayotganda pasportimdagi viza yoki muhr soxta deb gumon qilishsa, pasportimni olib qo‘yishlari mumkinmi?",
+  "fts": [
+   null,
+   null,
+   2
+  ],
+  "vector": [
+   null,
+   null,
+   null
+  ],
+  "best_fts": 2,
+  "best_vector": null,
+  "fused": 22,
+  "pool_units": 256
+ },
+ {
+  "id": "lf-173",
+  "question": "Agar odam ishda baxtsiz hodisaga uchrab vafot etsa yoki ogʻir kasb kasalligiga chalinib qolsa, unga yoki oilasiga qanday yordam pullari beriladi?",
+  "fts": [
+   45,
+   1,
+   null
+  ],
+  "vector": [
+   null,
+   null,
+   null
+  ],
+  "best_fts": 1,
+  "best_vector": null,
+  "fused": 36,
+  "pool_units": 164
+ },
+ {
+  "id": "lf-176",
+  "question": "Agar qurg‘oqchilik bo‘lib qolsa yoki yangi zavod ishga tushib suvga talab oshsa, suv taqsimoti rejasi keyin o‘zgartirilishi mumkinmi?",
+  "fts": [
+   54,
+   null,
+   null
+  ],
+  "vector": [
+   null,
+   null,
+   null
+  ],
+  "best_fts": 54,
+  "best_vector": null,
+  "fused": null,
+  "pool_units": 198
+ },
+ {
+  "id": "lf-181",
+  "question": "Men yakka tartibda ishlasam, fermerlarga traktor bilan yer haydab berish yoki texnika xizmatlarini ko‘rsatishim mumkinmi?",
+  "fts": [
+   null,
+   null,
+   50
+  ],
+  "vector": [
+   null,
+   null,
+   null
+  ],
+  "best_fts": 50,
+  "best_vector": null,
+  "fused": 178,
+  "pool_units": 181
+ },
+ {
+  "id": "lf-184",
+  "question": "O‘g‘lim futbol akademiyasini bitirsa, oddiy guvohnomadan tashqari murabbiylik yoki hakamlik qilib ishlashi uchun alohida ruxsatnoma ham beriladimi?",
+  "fts": [
+   12,
+   null,
+   null
+  ],
+  "vector": [
+   148,
+   null,
+   null
+  ],
+  "best_fts": 12,
+  "best_vector": 148,
+  "fused": 61,
+  "pool_units": 247
+ },
+ {
+  "id": "lf-191",
+  "question": "Men 29 yoshdaman, kichik biznes boshlamoqchiman. Shu yoshlar uchun alohida dasturda imtiyozli pul olish yoki startapimni qo‘llab-quvvatlash imkoniyati bormi?",
+  "fts": [
+   null,
+   null,
+   null
+  ],
+  "vector": [
+   40,
+   null,
+   null
+  ],
+  "best_fts": null,
+  "best_vector": 40,
+  "fused": 143,
+  "pool_units": 174
+ },
+ {
+  "id": "lf-192",
+  "question": "Kichik sanoat zonasida davlatga qarashli bino yoki joyni olsam, ish boshlash, odamlarni ish bilan ta’minlash va soliqlarni vaqtida to‘lasam, uni 10 yilga olib keyin o‘zimga o‘tkazib olishim mumkinmi?",
+  "fts": [
+   13,
+   29,
+   null
+  ],
+  "vector": [
+   null,
+   79,
+   null
+  ],
+  "best_fts": 13,
+  "best_vector": 79,
+  "fused": 24,
+  "pool_units": 213
+ },
+ {
+  "id": "lf-201",
+  "question": "Korxonamizdagi sinov xonasiga kerakli uskuna bilan birga uning ehtiyot qismlarini ham chetdan olib kelsak, shartnomada shu narsa yozilgan bo‘lsa, bojxonada soliq to‘lamaymizmi?",
+  "fts": [
+   151,
+   null,
+   null
+  ],
+  "vector": [
+   null,
+   null,
+   null
+  ],
+  "best_fts": 151,
+  "best_vector": null,
+  "fused": null,
+  "pool_units": 152
+ },
+ {
+  "id": "lf-203",
+  "question": "Men ijaraga olgan yerimning tuprogʻi qanchalik yaxshi yoki yomonligini bilmoqchi edim, shu haqda rasmiy maʼlumot olib bersin deb soʻrashga haqqim bormi?",
+  "fts": [
+   null,
+   136,
+   1
+  ],
+  "vector": [
+   null,
+   null,
+   null
+  ],
+  "best_fts": 1,
+  "best_vector": null,
+  "fused": 21,
+  "pool_units": 251
+ },
+ {
+  "id": "lf-206",
+  "question": "Samolyot uchayotganda telefonimdan video olib yoki rasmga tushirsam bo'ladimi?",
+  "fts": [
+   null,
+   10,
+   null
+  ],
+  "vector": [
+   null,
+   null,
+   42
+  ],
+  "best_fts": 10,
+  "best_vector": 42,
+  "fused": 14,
+  "pool_units": 244
+ },
+ {
+  "id": "lf-215",
+  "question": "Sinovda qorin mashqi bilan qoʻlda bukib-yozish orasida dam olishga ruxsat bormi, yoʻqmi?",
+  "fts": [
+   27,
+   5,
+   null
+  ],
+  "vector": [
+   null,
+   null,
+   54
+  ],
+  "best_fts": 5,
+  "best_vector": 54,
+  "fused": 19,
+  "pool_units": 209
+ },
+ {
+  "id": "lf-216",
+  "question": "Menda teri kasalligi chiqib qoldi. Ichki ishlar tizimidagi poliklinika menga yo‘llanma bersa, maxsus davolanish uchun Sog‘liqni saqlash vazirligi tizimidagi ixtisoslashgan shifoxonaga yuborishadimi?",
+  "fts": [
+   29,
+   4,
+   null
+  ],
+  "vector": [
+   null,
+   null,
+   null
+  ],
+  "best_fts": 4,
+  "best_vector": null,
+  "fused": 19,
+  "pool_units": 233
+ },
+ {
+  "id": "lf-226",
+  "question": "Men marketpleysda sotuvchi bo‘lib turibman. Agar soliqdan qarzim chiqib qolsa yoki ketma-ket bir necha marta tovar yetkazildi deb qog‘oz qilinib, aslida yetkazilmagan deb aniqlansa, meni ro‘yxatdan chiqarib yuborishadimi?",
+  "fts": [
+   null,
+   null,
+   2
+  ],
+  "vector": [
+   null,
+   115,
+   null
+  ],
+  "best_fts": 2,
+  "best_vector": 115,
+  "fused": 25,
+  "pool_units": 253
+ },
+ {
+  "id": "lf-237",
+  "question": "Suddan pul undirish haqida qaror olib borsam, menga pulni necha kunda kartamga tashlab berishlari kerak?",
+  "fts": [
+   null,
+   null,
+   53
+  ],
+  "vector": [
+   null,
+   null,
+   null
+  ],
+  "best_fts": 53,
+  "best_vector": null,
+  "fused": null,
+  "pool_units": 214
+ },
+ {
+  "id": "lf-245",
+  "question": "Men 2-guruh nogironman, poliklinikaga yoki davlat xizmatlari markaziga borsam navbat kutmasdan kirsa bo‘ladimi?",
+  "fts": [
+   null,
+   null,
+   null
+  ],
+  "vector": [
+   null,
+   146,
+   122
+  ],
+  "best_fts": null,
+  "best_vector": 122,
+  "fused": null,
+  "pool_units": 210
+ },
+ {
+  "id": "lf-247",
+  "question": "Masalan, do‘konda bir necha marta ishlatiladigan quti yoki idishdan foydalansak, u odamga zarar qilmasligi va odatdagi tashishda buzilib ketmasligi shartmi?",
+  "fts": [
+   null,
+   null,
+   null
+  ],
+  "vector": [
+   null,
+   null,
+   null
+  ],
+  "best_fts": null,
+  "best_vector": null,
+  "fused": null,
+  "pool_units": 253
+ },
+ {
+  "id": "lf-248",
+  "question": "Men xususiy kollejda dars beraman. Kasbim bo‘yicha sertifikat oldim, bunga ancha pul ketdi. Shu xarajatning yarmi uchun yordam puli olishga qayerdan va qachongacha topshirsam bo‘ladi?",
+  "fts": [
+   null,
+   57,
+   7
+  ],
+  "vector": [
+   null,
+   null,
+   null
+  ],
+  "best_fts": 7,
+  "best_vector": null,
+  "fused": 47,
+  "pool_units": 251
+ },
+ {
+  "id": "lf-249",
+  "question": "Mahallada bir yerga kimdir uy qurib olgan ekan, shu haqdagi ma’lumotlar qayerga osiladi yoki qayerdan ko‘rsam bo‘ladi, agar rozi bo‘lmasam necha kun ichida murojaat qilishim kerak?",
+  "fts": [
+   null,
+   null,
+   190
+  ],
+  "vector": [
+   null,
+   null,
+   null
+  ],
+  "best_fts": 190,
+  "best_vector": null,
+  "fused": null,
+  "pool_units": 254
+ },
+ {
+  "id": "lf-251",
+  "question": "Men malaka sinoviga borsam, nogironligi bor odamlar uchun ham alohida qulaylik qilib berishlari shartmi?",
+  "fts": [
+   null,
+   null,
+   null
+  ],
+  "vector": [
+   null,
+   null,
+   null
+  ],
+  "best_fts": null,
+  "best_vector": null,
+  "fused": null,
+  "pool_units": 226
+ },
+ {
+  "id": "lf-252",
+  "question": "Amaliyotga chiqqan birinchi kunimizdayoq yig‘ilish qilib, bizga nima qilishimiz kerakligi va keyin hisobotni qanday yozishimizni tushuntirib berishlari shartmi?",
+  "fts": [
+   170,
+   null,
+   37
+  ],
+  "vector": [
+   null,
+   null,
+   null
+  ],
+  "best_fts": 37,
+  "best_vector": null,
+  "fused": 195,
+  "pool_units": 263
+ },
+ {
+  "id": "lf-257",
+  "question": "Men chet eldan kelib bu yerda o‘qiyapman. Agar darslarni topshirolmasam yoki yotoqxonadagi qoidalarga amal qilmasam, o‘qishdan haydab yuborishlari mumkinmi?",
+  "fts": [
+   8,
+   null,
+   null
+  ],
+  "vector": [
+   null,
+   71,
+   61
+  ],
+  "best_fts": 8,
+  "best_vector": 61,
+  "fused": 55,
+  "pool_units": 248
+ },
+ {
+  "id": "lf-259",
+  "question": "Men dastur yozaman, uni internetdagi platforma orqali chet elga sotmoqchiman. Agar summa 5 ming dollargacha bo‘lsa, alohida shartnoma qilmasam ham bo‘ladimi?",
+  "fts": [
+   75,
+   null,
+   55
+  ],
+  "vector": [
+   115,
+   null,
+   null
+  ],
+  "best_fts": 55,
+  "best_vector": 115,
+  "fused": null,
+  "pool_units": 251
+ },
+ {
+  "id": "lf-262",
+  "question": "Bozordagi do‘konda narsa sotayotgan tadbirkor albatta chek beradigan apparat ishlatishi shartmi, kartadan to‘lov olsa terminal ham bo‘lishi kerakmi?",
+  "fts": [
+   7,
+   146,
+   17
+  ],
+  "vector": [
+   19,
+   null,
+   46
+  ],
+  "best_fts": 7,
+  "best_vector": 19,
+  "fused": 13,
+  "pool_units": 199
+ },
+ {
+  "id": "lf-263",
+  "question": "O‘g‘lim kurashga iqtidorli, shunaqa internatli sport maktabiga kirsa, yotoq joyi, kuniga 4 mahal ovqat va kiyim-bosh bilan ta’minlanadimi?",
+  "fts": [
+   1,
+   155,
+   null
+  ],
+  "vector": [
+   null,
+   null,
+   null
+  ],
+  "best_fts": 1,
+  "best_vector": null,
+  "fused": 55,
+  "pool_units": 197
+ },
+ {
+  "id": "lf-265",
+  "question": "Agar alimentdan qarzim chiqib qolsa, qarzni to'liq yopmagunimcha uy yoki mashina oldi-sotdisi qilishimga, bankdan ayrim xizmatlarni olishimga yoki ba'zi davlat xizmatlaridan foydalanishimga to'siq bo'ladimi?",
+  "fts": [
+   null,
+   5,
+   null
+  ],
+  "vector": [
+   null,
+   null,
+   104
+  ],
+  "best_fts": 5,
+  "best_vector": 104,
+  "fused": 48,
+  "pool_units": 222
+ },
+ {
+  "id": "lf-266",
+  "question": "O‘g‘limni shu litseyga topshirmoqchimiz, bir yilda nechta bola qabul qilinadi?",
+  "fts": [
+   151,
+   null,
+   null
+  ],
+  "vector": [
+   null,
+   null,
+   null
+  ],
+  "best_fts": 151,
+  "best_vector": null,
+  "fused": null,
+  "pool_units": 210
+ },
+ {
+  "id": "lf-267",
+  "question": "Mehmonxona ochish uchun kredit olsam, davlat kredit foizining bir qismini necha yil to'lab beradi va keyingi yillarda buning uchun tushumim qancha oshgan bo'lishi kerak?",
+  "fts": [
+   7,
+   null,
+   6
+  ],
+  "vector": [
+   null,
+   156,
+   null
+  ],
+  "best_fts": 6,
+  "best_vector": 156,
+  "fused": 12,
+  "pool_units": 230
+ },
+ {
+  "id": "lf-277",
+  "question": "Ishdan bo‘shab qolib, pensiyaga ertaroq chiqish uchun murojaat qilgan bo‘lsam, bandlik bo‘limi meni necha kunda tekshirib ko‘radi va qachon ish taklifi olish uchun chaqiradi?",
+  "fts": [
+   null,
+   null,
+   37
+  ],
+  "vector": [
+   90,
+   null,
+   null
+  ],
+  "best_fts": 37,
+  "best_vector": 90,
+  "fused": 156,
+  "pool_units": 213
+ },
+ {
+  "id": "lf-278",
+  "question": "Yo‘qolib qolgan qog‘ozim bo‘yicha sudga murojaat qilganimdan keyin, sud hal bo‘lguncha o‘sha qog‘oz bo‘yicha pul berishni vaqtincha to‘xtatib qo‘yishadimi?",
+  "fts": [
+   null,
+   1,
+   null
+  ],
+  "vector": [
+   null,
+   null,
+   null
+  ],
+  "best_fts": 1,
+  "best_vector": null,
+  "fused": 35,
+  "pool_units": 240
+ },
+ {
+  "id": "lf-285",
+  "question": "Terimdagi dogʻ ustiga yod surtganda oʻsha joyi sogʻlom teriga qaraganda toʻqroq boʻlib qolsa, bu nimadan darak berishi mumkin?",
+  "fts": [
+   1,
+   null,
+   null
+  ],
+  "vector": [
+   null,
+   null,
+   null
+  ],
+  "best_fts": 1,
+  "best_vector": null,
+  "fused": 29,
+  "pool_units": 218
+ },
+ {
+  "id": "lf-286",
+  "question": "Institutda dars beruvchi bo‘lib ishga kirmoqchi edim. Meni ishga olishdan oldin albatta sinov tariqasida dars o‘tib berishim kerakmi?",
+  "fts": [
+   null,
+   null,
+   null
+  ],
+  "vector": [
+   null,
+   null,
+   null
+  ],
+  "best_fts": null,
+  "best_vector": null,
+  "fused": null,
+  "pool_units": 225
+ },
+ {
+  "id": "lf-288",
+  "question": "Maktabda Mustaqillik bayrami uchun faqat bir xil rasmiy yig‘ilish qilmasdan, bolalar qatnashadigan tanlov, sport musobaqasi yoki chiqishlar ham qilish kerakmi?",
+  "fts": [
+   9,
+   null,
+   99
+  ],
+  "vector": [
+   null,
+   null,
+   null
+  ],
+  "best_fts": 9,
+  "best_vector": null,
+  "fused": 65,
+  "pool_units": 212
+ },
+ {
+  "id": "lf-290",
+  "question": "Daryoda qo‘yiladigan suzib turadigan belgi odamga qancha uzoqdan ko‘rinishi kerak?",
+  "fts": [
+   45,
+   167,
+   126
+  ],
+  "vector": [
+   null,
+   null,
+   null
+  ],
+  "best_fts": 45,
+  "best_vector": null,
+  "fused": 150,
+  "pool_units": 204
+ },
+ {
+  "id": "lf-291",
+  "question": "Elektr tarmog‘iga ulanish uchun berilgan shartnoma qog‘ozini olib, 3 yil ichida ish boshlamasak, keyin yana o‘sha qog‘oz amal qiladimi yoki yangidan olish kerakmi?",
+  "fts": [
+   null,
+   null,
+   24
+  ],
+  "vector": [
+   null,
+   17,
+   112
+  ],
+  "best_fts": 24,
+  "best_vector": 17,
+  "fused": 21,
+  "pool_units": 213
+ }
+]

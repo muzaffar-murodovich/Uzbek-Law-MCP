@@ -481,12 +481,38 @@ Aniq savollarda gibrid R@10 turlar bo'yicha: qonun 0,77 (22), vm_qarori 0,67 (86
 qo'shildi: tunnel orqali 300 savol × 3 rejim (2 ta `alt` bilan) 4 oqimda ≈43 daqiqa, bitta oqimda
 ≈90 daqiqa.
 
+### Topilmagan savollarda to'g'ri modda qayerda
+
+`scripts/miss_depth.py`: gibrid topolmagan 74 ta aniq savol uchun to'g'ri moddaning o'rni
+(savol va 2 ta `alt` bo'yicha eng yaxshisi, har ro'yxatda 200 talikkacha;
+`eval/results/2026-11-10-full-corpus-miss-depth.json`). O'lchovda `ef_search` 400.
+
+| Ro'yxat | 1–10 | 11–50 | 51–200 | yo'q |
+|---|---:|---:|---:|---:|
+| FTS (istalgan so'rov) | 29 | 17 | 16 | 12 |
+| Vektor (istalgan so'rov) | 1 | 9 | 18 | 46 |
+| Hozirgi birlashtirilgan ro'yxat (har ro'yxatdan 50) | 1 | 26 | 23 | 24 |
+
+- **Birlashtirish yo'qotadi:** 29 ta savolda to'g'ri modda kamida bitta FTS ro'yxatining top-10
+  ida turibdi, lekin RRF uni birlashtirilgan top-10 dan chiqarib yuborgan (6 ta ro'yxatning
+  bir nechtasida uchraydigan o'rtacha nomzodlar bitta ro'yxatda yuqori turgan nomzoddan o'zib
+  ketadi).
+- **Nomzodlar bor, tartibi noto'g'ri:** 50 ta savolda to'g'ri modda hozirgi nomzodlar to'plamida
+  (o'rtacha 218 modda) bor. Ideal qayta saralash bilan chegara: (134 + 50) / 208 = 0,88;
+  nomzodlar 200 talikkacha kengaytirilsa (yana 16 ta) 0,96. 8 ta savolda 200 talikda ham yo'q.
+- **Vektor deyarli yordam bermaydi:** 74 tadan 46 tasida to'g'ri modda vektor ro'yxatining
+  200 taligida ham yo'q, top-50 da faqat 10 tasida bor.
+- **Savolning o'zi ham kerak:** FTS top-50 da 18 ta savolni faqat savol matni, 21 tasini faqat
+  `alt` topgan.
+
 ### Keyingi qadam
 
-Topilmagan 75 ta aniq savolda to'g'ri modda FTS va vektorda nechanchi o'rinda turganini o'lchash
-(birinchi 200 talik). 11–50-o'rinlarda bo'lsa, qayta saralash yoki og'irliklar yetadi; 200 talikda
-ham bo'lmasa, nomzod topishning o'zini kuchaytirish kerak (embedding, FTS so'rovi). Maqsad
-o'zgarmagan: aniq savollarda R@10 ≥ 0,85, ommaga ochish shungacha kechiktiriladi.
+1. Birlashtirishni tuzatish (ro'yxatlar og'irligi, bitta ro'yxatdagi yuqori o'rinni yo'qotmaslik):
+   nomzod ro'yxatlarini bir marta fayl qilib olib, variantlarni serverga ulanmasdan sinash.
+2. Qayta saralash (reranker) hozirgi nomzodlar to'plamida.
+3. Embedding modelini o'zbek qonunchiligiga moslab qo'shimcha o'qitish (7-bo'lim).
+
+Maqsad o'zgarmagan: aniq savollarda R@10 ≥ 0,85, ommaga ochish shungacha kechiktiriladi.
 
 ## 7. Ochiq masalalar
 
