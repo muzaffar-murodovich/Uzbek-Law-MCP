@@ -355,6 +355,9 @@ kutilgan javob sarlavha yo'lining bir qismi bilan aniqlanadi (`evaluation.Expect
 
 ### Natijalar (R@10; qavsda 86 hujjatdagi qiymat)
 
+> **Tuzatish (6d):** `questions_llm_full` va `questions_llm` qatorlaridagi raqamlar shishirilgan:
+> `judge` qo'shgan javoblarning ko'pi noto'g'ri bo'lib chiqdi. Ishonchli qiymatlar 6d-bo'limda.
+
 | To'plam | FTS | Vektor | Gibrid | Gibrid R@1 | Gibrid MRR |
 |---|---:|---:|---:|---:|---:|
 | questions, `alt` bilan (97) | 0,77 | 0,34 | **0,75** (0,92) | 0,34 | 0,47 |
@@ -398,6 +401,93 @@ mos keladi, masalan 15 773 bo'lak). HNSW qurish: 7,5 daqiqa, 640 MB. Bo'sh RAM q
 Tavsiya: 1 → 2 → 3, har biridan keyin to'rtala to'plamni qayta o'lchash; 0,85 ga yetmasa 4/5.
 Ommaga ochish shu ish tugaguncha kechiktiriladi.
 
+## 6d. Baholash to'plamini tozalash va ishonchli boshlang'ich nuqta (2026-11-10)
+
+6c'dagi 1-variant bajarildi va u to'plamning o'zida uchta muammoni ochdi. Baza va model o'sha
+(491 947 bo'lak, `e5-small-int8`). Hammasi `questions_llm_full` (300 savol) ustida.
+
+### 1. AI `alt`i bilan o'lchash
+
+`llm_eval.py rephrase` har savolga 2 ta rasmiy qidiruv iborasini yozdi
+(`eval/alt_llm_questions_llm_full.json`, ≈71 ming token). Natija kutilganidek chiqmadi: gibrid
+R@10 0,53 → 0,54 (FTS 0,45 → 0,55, vektor 0,19 → 0,24). 49 ta savol topildi, 47 tasi yo'qoldi.
+86 hujjatdagi "0,65 → 0,90" takrorlanmadi.
+
+### 2. Noaniq savollar
+
+Topilmagan 139 ta savoldan 40 tasi qo'lda ko'rildi: 14 tasida savolning o'zidan gap nima haqida
+ekanini bilib bo'lmaydi. Sabab: `generate` bitta bandni kontekstsiz ko'rib savol yozadi. Masalan,
+`lf-111`: "Men bir marta shu yordam pulini olgan bo'lsam, keyin yana topshirsam bo'ladimi?" —
+manba tibbiyot xodimlarini qo'llab-quvvatlash haqidagi qaror, savolda esa tibbiyot so'zi yo'q.
+86 hujjatda bu sezilmagan, 15 ming hujjatda bunday savolga o'nlab hujjat mos keladi.
+
+`llm_eval.py clarity` (gpt-5.4 savolni va manba hujjat nomini ko'radi) har savolga `aniq` yoki
+`noaniq` tegini qo'ydi: 208 aniq, 92 noaniq. `eval` hisobotida ikkala guruh alohida chiqadi.
+Belgilash taxminiy: qo'lda "noaniq" deyilgan 14 tadan 9 tasida model ham shunday dedi, qo'lda
+"aniq" deyilgan 26 tadan 4 tasini model noaniq dedi.
+
+AI `alt`i aniq savollarda foyda beradi (gibrid 0,52 → 0,60), noaniq savollarda zarar qiladi
+(0,54 → 0,39): 1-banddagi "o'zgarmadi" shu ikkisining yig'indisi edi. (Bu raqamlar hali eski,
+shishirilgan javoblar ro'yxati bilan.)
+
+### 3. `judge` juda yumshoq
+
+`judge --alt-file --missed-in` aniq savollardagi 83 ta xatoning top-10 natijasini baholadi
+(≈246 ming token) va 73 tasida "to'g'ri javob bor" dedi: qog'ozda R@10 0,95. Qabul qilinganlardan
+15 tasi qo'lda o'qildi: 6 tasi to'g'ri, 3 tasi bahsli, 6 tasi noto'g'ri. Masalan, `lf-286`
+("institutga ishga kirishda sinov darsi o'tishim shartmi?") uchun Mehnat kodeksining dastlabki
+sinov muddati haqidagi 132-moddasi qabul qilingan.
+
+Shuning uchun `judge` qo'shgan barcha 386 ta javob (6c'dagi 231 + bugungi 155) qat'iy qoida
+bilan qayta tekshirildi: tekshiruvchi moddaning to'liq matnini o'qiydi va javob beradigan jumlani
+so'zma-so'z ko'chirib ko'rsatadi, iqtibos matnda topilmasa javob o'chiriladi. Tekshiruvni Claude
+subagentlari bajardi (6 ta, matnlar mahalliy `data/parsed`dan), iqtiboslar skript bilan tekshirildi.
+Bu qadam `llm_eval.py` buyrug'i emas, natijasi `eval/verified_llm_full.json`da.
+
+| Holat | Soni |
+|---|---:|
+| O'tdi (`verified: true`) | 114 |
+| Rad etildi | 215 |
+| Bahsli, o'chirildi | 8 |
+| Matni mahalliy fayldan topilmadi (raqamsiz qism), o'chirildi | 49 |
+
+6c'dagi birinchi `judge`ning 231 ta javobidan 53 tasi qoldi. Xulosa: `JUDGE_SYSTEM` (800–1200
+belgi, faqat "ha/yo'q") javoblarning taxminan uchdan ikkisini noto'g'ri qabul qiladi, uning
+natijasini iqtibos talabisiz ishlatib bo'lmaydi. `questions_llm.yaml` (100 savol) hali
+tekshirilmagan.
+
+### Ishonchli boshlang'ich nuqta
+
+Tozalangan javoblar ro'yxati, AI `alt`i bilan
+(`eval/results/2026-11-10-full-corpus-questions_llm_full-alt_llm-verified.json`):
+
+| Guruh | Rejim | R@1 | R@5 | R@10 | MRR |
+|---|---|---:|---:|---:|---:|
+| aniq (208) | FTS | 0,23 | 0,47 | 0,60 | 0,34 |
+| aniq (208) | vektor | 0,06 | 0,18 | 0,25 | 0,11 |
+| aniq (208) | gibrid | 0,20 | 0,53 | **0,64** | 0,33 |
+| noaniq (92) | gibrid | 0,04 | 0,23 | 0,26 | 0,11 |
+
+Aniq savollarda gibrid R@10 turlar bo'yicha: qonun 0,77 (22), vm_qarori 0,67 (86), kodeks 0,67
+(6), boshqa 0,65 (23), buyruq 0,63 (19), qaror 0,60 (35), farmon 0,44 (16).
+
+- Uchala rejimdan kamida bittasi top-10 da topgan savollar: 0,70. Rejimlarni birlashtirishni
+  sozlash bilan bundan oshib bo'lmaydi.
+- 20 ta savolni faqat gibrid topdi, 11 tasini FTS topib, gibrid chiqarib yubordi.
+- Ro'yxat qattiq tozalangani uchun 0,64 pastki baho: topilmagan savollarning ayrimlarida qidiruv
+  ro'yxatda yo'q, lekin to'g'ri moddani topgan bo'lishi mumkin.
+
+`eval`ga `--workers` (parallel qidiruv, har oqimga alohida ulanish) va jarayon ko'rsatkichi
+qo'shildi: tunnel orqali 300 savol × 3 rejim (2 ta `alt` bilan) 4 oqimda ≈43 daqiqa, bitta oqimda
+≈90 daqiqa.
+
+### Keyingi qadam
+
+Topilmagan 75 ta aniq savolda to'g'ri modda FTS va vektorda nechanchi o'rinda turganini o'lchash
+(birinchi 200 talik). 11–50-o'rinlarda bo'lsa, qayta saralash yoki og'irliklar yetadi; 200 talikda
+ham bo'lmasa, nomzod topishning o'zini kuchaytirish kerak (embedding, FTS so'rovi). Maqsad
+o'zgarmagan: aniq savollarda R@10 ≥ 0,85, ommaga ochish shungacha kechiktiriladi.
+
 ## 7. Ochiq masalalar
 
 - **Model tanlovi.** 4.7-bo'lim: sifat bo'yicha bge-m3 birinchi, lekin `myserver` uchun og'ir.
@@ -420,4 +510,15 @@ uv run python scripts/llm_eval.py generate --by-kind --sample 450 --limit 300 \
     --out eval/questions_llm_full.yaml --id-prefix lf --workers 6
 uv run python scripts/llm_eval.py judge --questions eval/questions_llm_full.yaml --workers 6
 uv run qonunshunos eval --questions eval/questions_llm_full.yaml --save full-corpus-questions_llm_full
+# 6d: AI alt, aniq/noaniq teglari, ikkinchi judge (keyin javoblar eval/verified_llm_full.json
+# bo'yicha tozalangan), tozalangan ro'yxat bilan o'lchash
+uv run python scripts/llm_eval.py rephrase --questions eval/questions_llm_full.yaml \
+    --out eval/alt_llm_questions_llm_full.json
+uv run python scripts/llm_eval.py clarity
+uv run python scripts/llm_eval.py judge --questions eval/questions_llm_full.yaml \
+    --alt-file eval/alt_llm_questions_llm_full.json --depth 10 --chars 800 \
+    --missed-in eval/results/2026-11-10-full-corpus-questions_llm_full-alt_llm.json
+uv run qonunshunos eval --questions eval/questions_llm_full.yaml --workers 4 \
+    --alt-file eval/alt_llm_questions_llm_full.json \
+    --save full-corpus-questions_llm_full-alt_llm-verified
 ```

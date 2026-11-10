@@ -63,14 +63,13 @@ Dasturlash tili — Python.
 
 Bosqichlar holati `PLAN.md`ning 8-bo'limida. 1–5-bosqichlar bajarildi (har birining hujjatida
 "Natija" bo'limi bor, tajribalar `docs/stage2-experiments.md`da). Xizmat
-`https://qonunshunos.muzaffar.zip`da ishlayapti (namunaviy korpus, 86 hujjat). Har kecha
+`https://qonunshunos.muzaffar.zip`da ishlayapti (to'liq korpus). Har kecha
 `qonunshunos update` lex.uz'dan yangilaydi, zaxira `home`ga ko'chiriladi, xatolar va ertalabki
 hisobot Telegram'ga (@qonunshunosbot) keladi (`docs/stage5-ops.md`). 6-bosqich jarayonda
-(`docs/stage6-full-crawl.md`): 15 810 ta amaldagi lotin hujjat yuklab olindi va parser v2 bilan
-parse qilindi. To'liq indekslash 2026-11-08 kechqurun boshlandi (`home`dagi user unit'lar
-`qonunshunos-tunnel`, `qonunshunos-index`, `qonunshunos-index-watch`; yordamchi instabox
-box'lar `qidx-1..4`). Server bazasida HNSW indeksi vaqtincha o'chirilgan, tungi update timer'i
-to'xtatilgan. Keyin: HNSW qurish, timer'ni yoqish, baholash, ommaga ochish.
+(`docs/stage6-full-crawl.md`): 15 810 ta amaldagi lotin hujjat yuklab olindi, parser v2 bilan
+parse qilindi va server bazasiga indekslandi (491 947 bo'lak, HNSW qurilgan, tungi update timer'i
+yoqilgan). To'liq bazada qidiruv sifati yetarli emas: aniq savollarda gibrid R@10 0,64, maqsad
+0,85 (`docs/stage2-experiments.md` 6d). Ommaga ochish shu tuzatilguncha kechiktirilgan.
 
 CLI: `uv run qonunshunos fetch|parse [--all]|crawl-sample|crawl|listing|scope|crawl-full|db-migrate|index|search|eval|serve|tool|user|auth-cleanup|update|report|notify`
 (`--data-dir`, standart `./data`). `serve` standart holatda OAuth talab qiladi: mahalliy
