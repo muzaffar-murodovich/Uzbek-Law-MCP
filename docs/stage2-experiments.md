@@ -536,10 +536,45 @@ qayta hisoblash 0,649 berdi (serverda 0,644; farq `ef_search` 400 dan), ya'ni mo
 Xulosa: 0,85 ga faqat nomzodlar matnini o'qiydigan qayta saralash (reranker) yoki kuchliroq
 nomzod topish bilan yetiladi; birlashtirishni sozlash yetmaydi.
 
+### Qayta saralash (reranker), oflayn (2026-11-10/11)
+
+`scripts/dump_chunk_texts.py` nomzod bo'laklarning matnini (71 955 ta, 51 mln belgi)
+`data/eval/chunk_texts_llm_full.json.gz`ga oladi. `scripts/rerank_lab.py score` eng yaxshi
+birlashtirish variantining (FTS 100, k=20, vektor 0,5) birinchi N ta moddasini cross-encoder
+bilan baholaydi ("savol matni + moddaning eng yaxshi bo'lagi", o'rtacha 190 token), `report`
+qayta tartiblab o'lchaydi. Mashina: `home`, i5-1235U, GPU yo'q, torch CPU. 208 ta aniq savol.
+
+| Model | N | R@1 | R@5 | R@10 | MRR | s/savol |
+|---|---:|---:|---:|---:|---:|---:|
+| reranker'siz | — | 0,23 | 0,57 | 0,678 | 0,38 | — |
+| `mmarco-mMiniLMv2-L12-H384-v1` (118 mln) | 10 | 0,43 | 0,63 | 0,678 | 0,51 | 1,1 |
+| | 20 | 0,40 | 0,67 | 0,731 | 0,52 | 2,1 |
+| | 30 | 0,41 | 0,68 | 0,755 | 0,53 | 3,2 |
+| | 50 | 0,41 | 0,71 | 0,760 | 0,53 | 5,3 |
+| | 100 | 0,40 | 0,70 | 0,779 | 0,53 | 10,7 |
+| `bge-reranker-v2-m3` (568 mln) | 10 | 0,49 | 0,66 | 0,678 | 0,56 | 10 |
+| | 20 | 0,48 | 0,71 | 0,726 | 0,57 | 20 |
+| | 30 | 0,50 | 0,74 | 0,769 | 0,59 | 30 |
+
+N ≥ 20 qatorlari "aralash" tartib bilan: `1/(10 + reranker o'rni) + 0,5/(10 + birlashtirilgan
+o'rin)`. Faqat reranker bahosi bilan R@10 0–5 foiz past. `gte-multilingual-reranker-base`
+o'lchanmadi: modelning o'z kodi transformers 5.22 bilan `IndexError` beradi.
+
+- Yengil model ham R@1 ni deyarli ikki baravar oshiradi (0,23 → 0,41), R@10 ni 0,68 → 0,76.
+  U o'zbek tilida o'qitilmagan (mMARCO, 14 til).
+- Og'ir model R@1 va R@5 da yaxshiroq (0,50 va 0,74), R@10 da deyarli teng (0,769): N=30 da
+  to'plam chegarasi 0,784, ikkala model ham unga yaqin. R@10 ni endi reranker emas, nomzodlar
+  to'plami cheklaydi (N=50 da chegara 0,82, N=100 da 0,85, butun to'plamda 0,93).
+- Tezlik: yengil model 9,4 juftlik/s, og'ir model 1,0 juftlik/s. Og'ir model CPU'da xizmatga
+  yaramaydi; yengil model uchun ham N=30 da 3,2 s (hozirgi qidiruv 0,7 s). Serverda va int8
+  ONNX bilan o'lchanmagan.
+
 ### Keyingi qadam
 
-1. Qayta saralash (reranker) FTS 100 + vektor 50 nomzodlar to'plamida: chegara 0,93.
-2. Embedding modelini o'zbek qonunchiligiga moslab qo'shimcha o'qitish (7-bo'lim).
+1. Yengil reranker'ni xizmatga tayyorlash: int8 ONNX, N=20–30, serverda tezlikni o'lchash.
+2. "Savol → modda" o'qitish to'plami (LLM yozgan, `clarity` va iqtibosli tekshiruvdan o'tgan) va
+   unda embedding modelini hamda yengil reranker'ni qo'shimcha o'qitish: birinchisi nomzodlar
+   to'plamini, ikkinchisi tartibni yaxshilaydi (7-bo'lim).
 
 Maqsad o'zgarmagan: aniq savollarda R@10 ≥ 0,85, ommaga ochish shungacha kechiktiriladi.
 

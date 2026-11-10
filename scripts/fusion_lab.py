@@ -53,6 +53,10 @@ class Lab:
 
     def fuse(self, q: dict, p: Params) -> list[int]:
         """Ranked unit (section) ids, as ``hybrid.search`` would return them."""
+        return [section for section, _chunk in self.fuse_chunks(q, p)]
+
+    def fuse_chunks(self, q: dict, p: Params) -> list[tuple[int, int]]:
+        """Ranked (unit id, its best chunk id): the chunk is what a reranker would read."""
         total: dict[int, float] = {}
         best: dict[int, float] = {}
         for kind, depth, weight in (("fts", p.n_fts, p.w_fts), ("vector", p.n_vec, p.w_vec)):
@@ -64,6 +68,7 @@ class Lab:
                     best[chunk] = max(best.get(chunk, 0.0), part)
         scores = {c: s + p.top_bonus * best[c] for c, s in total.items()}
         units: dict[int, float] = {}
+        shown: dict[int, int] = {}
         for chunk in sorted(scores, key=lambda c: -scores[c]):
             section = self.chunks[chunk]
             score = scores[chunk]
@@ -71,7 +76,8 @@ class Lab:
                 units[section] += score * p.extra_chunks
             else:
                 units[section] = score * p.kind.get(self.documents[self.sections[section][0]][0], 1)
-        return sorted(units, key=lambda s: -units[s])
+                shown[section] = chunk
+        return [(section, shown[section]) for section in sorted(units, key=lambda s: -units[s])]
 
     def rank(self, q: dict, p: Params) -> int | None:
         for rank, section in enumerate(self.fuse(q, p)[:10], start=1):
