@@ -4,6 +4,8 @@ import argparse
 import dataclasses
 import json
 import logging
+import sys
+import threading
 from collections import Counter
 from pathlib import Path
 
@@ -133,6 +135,7 @@ def build_parser() -> argparse.ArgumentParser:
     p.add_argument("--alt-file", type=Path, help="JSON {id: [queries]} replacing alt")
     p.add_argument("--model", default=DEFAULT_MODEL, choices=sorted(MODELS))
     p.add_argument("--save", metavar="LABEL", help="write eval/results/<date>-<LABEL>.json")
+    p.add_argument("--workers", type=int, default=1, help="parallel searches (slow remote DB)")
     return parser
 
 
@@ -144,15 +147,29 @@ def _eval(args: argparse.Namespace) -> int:
     settings = Settings.from_env(args.data_dir)
     questions = load_questions(args.questions, args.alt_file)
     embedder = Embedder(settings.model_dir, args.model)
-    with connect(settings.dsn) as conn:
+    local = threading.local()  # psycopg connections are not shared between threads
+    opened = []
 
-        def search_fn(q, mode):
-            alt = [] if args.no_alt else q.alt
-            return search(
-                conn, embedder, q.question, alt, mode=mode, limit=10, use_stem=not args.no_stem
-            )
+    def search_fn(q, mode):
+        if not hasattr(local, "conn"):
+            local.conn = connect(settings.dsn)
+            opened.append(local.conn)
+        alt = [] if args.no_alt else q.alt
+        return search(
+            local.conn, embedder, q.question, alt, mode=mode, limit=10, use_stem=not args.no_stem
+        )
 
-        report = run(questions, search_fn, args.modes.split(","))
+    try:
+        report = run(
+            questions,
+            search_fn,
+            args.modes.split(","),
+            workers=args.workers,
+            progress=lambda line: print(line, file=sys.stderr, flush=True),
+        )
+    finally:
+        for conn in opened:
+            conn.close()
     report["settings"] = {
         "model": args.model,
         "stem": not args.no_stem,

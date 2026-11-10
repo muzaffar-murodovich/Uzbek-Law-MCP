@@ -4,6 +4,7 @@ import json
 import time
 from collections import defaultdict
 from collections.abc import Callable, Sequence
+from concurrent.futures import ThreadPoolExecutor
 from dataclasses import asdict, dataclass, field
 from pathlib import Path
 
@@ -99,17 +100,29 @@ def metrics(ranks: Sequence[int | None]) -> Metrics:
 SearchFn = Callable[[Question, str], list[Hit]]
 
 
-def run(questions: Sequence[Question], search_fn: SearchFn, modes: Sequence[str]) -> dict:
-    """Ranks per mode and question, overall and per-tag metrics."""
+def run(
+    questions: Sequence[Question],
+    search_fn: SearchFn,
+    modes: Sequence[str],
+    workers: int = 1,
+    progress: Callable[[str], None] | None = None,
+) -> dict:
+    """Ranks per mode and question, overall and per-tag metrics.
+
+    With ``workers`` > 1 ``search_fn`` is called from several threads at once.
+    """
     report: dict = {"modes": {}, "questions": {}}
     for mode in modes:
         ranks: dict[str, int | None] = {}
         started = time.perf_counter()
         tops: dict[str, list[str]] = {}
-        for q in questions:
-            hits = search_fn(q, mode)
-            ranks[q.id] = first_rank(hits, q.expected)
-            tops[q.id] = [f"{h.document} {h.unit_number}" for h in hits[:3]]
+        with ThreadPoolExecutor(workers) as pool:
+            results = pool.map(lambda q, mode=mode: search_fn(q, mode), questions)
+            for done, (q, hits) in enumerate(zip(questions, results, strict=True), start=1):
+                ranks[q.id] = first_rank(hits, q.expected)
+                tops[q.id] = [f"{h.document} {h.unit_number}" for h in hits[:3]]
+                if progress and (done % 25 == 0 or done == len(questions)):
+                    progress(f"{mode}: {done}/{len(questions)}")
         elapsed = (time.perf_counter() - started) / max(len(questions), 1)
         by_tag: dict[str, list[int | None]] = defaultdict(list)
         for q in questions:
