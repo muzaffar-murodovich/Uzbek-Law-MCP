@@ -74,6 +74,7 @@ def build_parser() -> argparse.ArgumentParser:
     p.add_argument("--model", default=DEFAULT_MODEL, choices=sorted(MODELS))
 
     p = sub.add_parser("reembed", help="recompute vectors made by another model or text form")
+    p.add_argument("lex_ids", type=int, nargs="*", help="redo these documents in any case")
     p.add_argument("--model", default=DEFAULT_MODEL, choices=sorted(MODELS))
     p.add_argument("--limit-docs", type=int, help="stop after this many documents (a trial run)")
     p.add_argument("--threads", type=int, help="onnxruntime threads (default: all cores)")
@@ -569,7 +570,9 @@ def _reembed(args: argparse.Namespace) -> int:
             conn.execute("DROP INDEX IF EXISTS chunks_embedding")
             conn.commit()
             progress("HNSW index dropped")
-        total = reembed(conn, embedder, limit_docs=args.limit_docs, progress=progress)
+        total = reembed(
+            conn, embedder, limit_docs=args.limit_docs, lex_ids=args.lex_ids, progress=progress
+        )
         progress(f"done: {total} chunks embedded as {embedder.name}")
         if args.rebuild_hnsw:
             conn.execute("SET maintenance_work_mem = '512MB'")

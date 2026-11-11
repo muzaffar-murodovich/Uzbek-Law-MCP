@@ -601,6 +601,33 @@ o'lchanmadi: modelning o'z kodi transformers 5.22 bilan `IndexError` beradi.
 
 Maqsad o'zgarmagan: aniq savollarda R@10 ≥ 0,85, ommaga ochish shungacha kechiktiriladi.
 
+## 6e. Tutuq belgisi va oʻ/gʻ shakli embedding uchun (2026-11-11)
+
+Hujjatlar rasmiy shaklda saqlanadi: oʻ/gʻ uchun U+02BB, tutuq belgisi uchun U+02BC. FTS savolni
+ham shu shaklga keltiradi va belgini olib tashlaydi. Vektor qidiruvda esa savol modelga yozilgan
+holicha berilardi. LLM savollarida asosan U+2018 (638 ta), U+0027, U+2019 uchraydi, rasmiy
+belgilar kam (80 ta). e5 tokenizer har bir belgini alohida token qiladi: `bo‘ladi` →
+`bo` + `‘` + `ladi`.
+
+Sinov: 208 ta aniq savol, har biri uchun gibrid birlashtirishning birinchi 100 ta bo'lagi
+(`data/eval/`), e5-small int8. To'g'ri modda shu 100 talikda bo'lgan 177 ta savolda vektor
+tartibi o'lchandi (savol va 2 ta `alt`dan eng yaxshisi). Bo'lak matni sarlavhasiz.
+
+| Modelga beriladigan shakl (hujjat + savol) | 1-o'rin | Top 5 | Top 10 | O'rtacha o'rin |
+|---|---:|---:|---:|---:|
+| **Tipografik `‘` (U+2018) va `’` (U+2019)** | **55** | **117** | **142** | **6,8** |
+| Avvalgi holat: hujjat rasmiy, savol yozilgandek | 46 | 107 | 137 | 8,0 |
+| Oddiy `'` (U+0027) | 36 | 96 | 133 | 9,6 |
+| Belgisiz | 33 | 99 | 129 | 9,5 |
+| Rasmiy `ʻ` `ʼ` (U+02BB, U+02BC) | 27 | 88 | 134 | 9,7 |
+
+Xulosa: e5 o'zbek tilini web matnidan o'rgangan, u yerda tipografik qo'shtirnoqlar ko'p, rasmiy
+belgilar kam. Shuning uchun modelga (hujjat va savol) tipografik shakl beriladi:
+`normalize.embedding_text`. Saqlanadigan matn, FTS va foydalanuvchiga ko'rsatiladigan matn
+o'zgarmaydi. Model nomi `e5-small-int8/q1` bo'ldi, eski vektorlar qayta ishlatilmaydi. Butun
+korpus `qonunshunos reembed --rebuild-hnsw` bilan qayta hisoblandi (`home`, ≈10 soat).
+To'liq qidiruvdagi ta'siri qayta o'lchanadi.
+
 ## 7. Ochiq masalalar
 
 - **Model tanlovi.** 4.7-bo'lim: sifat bo'yicha bge-m3 birinchi, lekin `myserver` uchun og'ir.

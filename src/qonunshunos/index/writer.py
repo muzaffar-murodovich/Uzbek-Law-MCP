@@ -360,22 +360,28 @@ def reembed(
     *,
     batch_chunks: int = 512,
     limit_docs: int | None = None,
+    lex_ids: list[int] | None = None,
     progress=print,
 ) -> int:
     """Recompute the vectors of documents embedded by another model or text form.
 
     Only ``chunks.embedding`` and ``documents.meta->>'embed_model'`` change. Work is committed
-    a few documents at a time, so the run can be stopped and started again.
+    a few documents at a time, so the run can be stopped and started again. ``lex_ids`` are
+    redone whatever their marker says (e.g. documents rewritten by the old code during a run).
     """
     model = getattr(embedder, "name", "unknown")
-    todo = [
-        r[0]
-        for r in conn.execute(
-            "SELECT d.id FROM documents d WHERE coalesce(d.meta->>'embed_model', '') <> %s"
-            " AND EXISTS (SELECT 1 FROM chunks c WHERE c.document_id = d.id) ORDER BY d.id",
-            (model,),
-        ).fetchall()
-    ]
+    todo = (
+        list(lex_ids)
+        if lex_ids
+        else [
+            r[0]
+            for r in conn.execute(
+                "SELECT d.id FROM documents d WHERE coalesce(d.meta->>'embed_model', '') <> %s"
+                " AND EXISTS (SELECT 1 FROM chunks c WHERE c.document_id = d.id) ORDER BY d.id",
+                (model,),
+            ).fetchall()
+        ]
+    )
     if limit_docs:
         todo = todo[:limit_docs]
     total_chunks = 0
