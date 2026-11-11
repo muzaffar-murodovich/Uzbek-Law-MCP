@@ -6,11 +6,26 @@ while users type ``o'``, ``o‘``, ``o’`` or ``o```. Everything is brought to 
 
 import re
 
-OKINA = "ʻ"  # ʻ  — after o / g
-TUTUQ = "ʼ"  # ʼ  — after any other letter
+OKINA = "\u02bb"  # MODIFIER LETTER TURNED COMMA: oʻ, gʻ (official lex.uz form)
+TUTUQ = "\u02bc"  # MODIFIER LETTER APOSTROPHE: tutuq belgisi (official lex.uz form)
 
-# All characters people use in place of ʻ and ʼ.
-APOSTROPHES = "'`‘’ʻʼ´ʹ"
+# All characters people use in place of ʻ and ʼ. Written as escapes: several look identical.
+APOSTROPHES = (
+    "\u0027"  # APOSTROPHE
+    "\u0060"  # GRAVE ACCENT
+    "\u2018"  # LEFT SINGLE QUOTATION MARK
+    "\u2019"  # RIGHT SINGLE QUOTATION MARK
+    "\u02bb"  # MODIFIER LETTER TURNED COMMA
+    "\u02bc"  # MODIFIER LETTER APOSTROPHE
+    "\u00b4"  # ACUTE ACCENT
+    "\u02b9"  # MODIFIER LETTER PRIME
+)
+
+# What the embedding model reads. e5 learned Uzbek from web text, where oʻ/gʻ and the tutuq
+# are mostly typed as quotation marks; it ranks texts in that form clearly better than in the
+# official one (docs/stage2-experiments.md, 6e).
+EMBED_OKINA = "\u2018"  # LEFT SINGLE QUOTATION MARK
+EMBED_TUTUQ = "\u2019"  # RIGHT SINGLE QUOTATION MARK
 
 _APOSTROPHE_RE = re.compile(rf"(?<=([^\W\d_]))[{re.escape(APOSTROPHES)}](?=[^\W\d_])")
 _WHITESPACE_RE = re.compile(r"\s+")
@@ -48,3 +63,8 @@ def normalize_text(text: str) -> str:
 def fold(text: str) -> str:
     """Canonical lower-case form for matching user queries against stored text."""
     return normalize_text(text).lower()
+
+
+def embedding_text(text: str) -> str:
+    """Form given to the embedding model, for passages and queries alike."""
+    return normalize_text(text).replace(OKINA, EMBED_OKINA).replace(TUTUQ, EMBED_TUTUQ)

@@ -22,7 +22,7 @@ from qonunshunos.crawler.pipeline import (
     sample_ids,
 )
 from qonunshunos.db import connect, migrate
-from qonunshunos.index.embed import DEFAULT_MODEL, MODELS
+from qonunshunos.index.embed import DEFAULT_MODEL, MODELS, embed_name
 
 
 def build_parser() -> argparse.ArgumentParser:
@@ -72,6 +72,16 @@ def build_parser() -> argparse.ArgumentParser:
     p.add_argument("--fts-only", action="store_true", help="only recompute FTS vectors")
     p.add_argument("--no-stem", action="store_true", help="index FTS terms without stemming")
     p.add_argument("--model", default=DEFAULT_MODEL, choices=sorted(MODELS))
+
+    p = sub.add_parser("reembed", help="recompute vectors made by another model or text form")
+    p.add_argument("--model", default=DEFAULT_MODEL, choices=sorted(MODELS))
+    p.add_argument("--limit-docs", type=int, help="stop after this many documents (a trial run)")
+    p.add_argument("--threads", type=int, help="onnxruntime threads (default: all cores)")
+    p.add_argument(
+        "--rebuild-hnsw",
+        action="store_true",
+        help="drop the HNSW index first and build it again at the end (faster writes)",
+    )
 
     p = sub.add_parser("search", help="hybrid search over the indexed documents")
     p.add_argument("query")
@@ -423,7 +433,7 @@ class _LazyEmbedder:
 
     def __init__(self, model_dir: Path, model: str) -> None:
         self.model_dir, self.model, self._real = model_dir, model, None
-        self.name = MODELS[model].name
+        self.name = embed_name(model)
 
     def _get(self):
         if self._real is None:
@@ -541,6 +551,34 @@ def _index(args: argparse.Namespace, ws: Workspace) -> int:
     return 0
 
 
+def _reembed(args: argparse.Namespace) -> int:
+    import time
+
+    from qonunshunos.index.embed import Embedder
+    from qonunshunos.index.writer import HNSW_INDEX, reembed
+
+    settings = Settings.from_env(args.data_dir)
+    embedder = Embedder(settings.model_dir, args.model, threads=args.threads)
+    started = time.monotonic()
+
+    def progress(line: str) -> None:
+        print(f"{time.monotonic() - started:>7.0f}s  {line}", flush=True)
+
+    with connect(settings.dsn) as conn:
+        if args.rebuild_hnsw:
+            conn.execute("DROP INDEX IF EXISTS chunks_embedding")
+            conn.commit()
+            progress("HNSW index dropped")
+        total = reembed(conn, embedder, limit_docs=args.limit_docs, progress=progress)
+        progress(f"done: {total} chunks embedded as {embedder.name}")
+        if args.rebuild_hnsw:
+            conn.execute("SET maintenance_work_mem = '512MB'")
+            conn.execute(HNSW_INDEX)
+            conn.commit()
+            progress("HNSW index built")
+    return 0
+
+
 def _search(args: argparse.Namespace) -> int:
     from qonunshunos.index.embed import Embedder
     from qonunshunos.search.hybrid import search
@@ -586,6 +624,9 @@ def main(argv: list[str] | None = None) -> int:
 
     if args.command == "index":
         return _index(args, ws)
+
+    if args.command == "reembed":
+        return _reembed(args)
 
     if args.command == "search":
         return _search(args)

@@ -1,7 +1,9 @@
 import pytest
 
 from qonunshunos.text.normalize import (
+    APOSTROPHES,
     clean_whitespace,
+    embedding_text,
     fold,
     normalize_apostrophes,
     normalize_text,
@@ -37,3 +39,16 @@ def test_to_superscript():
 def test_normalize_text_and_fold():
     assert normalize_text("  Mehnat  kodeksi, o'zgartirish ") == "Mehnat kodeksi, oʻzgartirish"
     assert fold("O‘ZBEKISTON Respublikasi") == "oʻzbekiston respublikasi"
+
+
+def test_apostrophe_code_points():
+    # Several of these look identical, so the set is pinned by code point.
+    assert sorted(ord(c) for c in APOSTROPHES) == sorted(
+        [0x0027, 0x0060, 0x2018, 0x2019, 0x02BB, 0x02BC, 0x00B4, 0x02B9]
+    )
+
+
+@pytest.mark.parametrize("variant", ["\u0027", "\u0060", "\u2019", "\u02bb", "\u00b4"])
+def test_embedding_text_uses_quotation_marks(variant):
+    text = embedding_text(f"to{variant}g{variant}risida ma{variant}lumot")
+    assert text == "to\u2018g\u2018risida ma\u2019lumot"

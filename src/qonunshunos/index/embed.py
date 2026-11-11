@@ -14,6 +14,8 @@ from typing import Protocol
 import httpx
 import numpy as np
 
+from qonunshunos.text.normalize import embedding_text
+
 log = logging.getLogger(__name__)
 
 DIM = 384
@@ -57,6 +59,14 @@ MODELS = {
     ),
 }
 DEFAULT_MODEL = "e5-small-int8"
+
+# Version of the text form fed to the model (see ``embedding_text``). It is part of the name
+# stored in documents.meta->>'embed_model', so vectors made from another form are not reused.
+TEXT_FORM = "q1"
+
+
+def embed_name(model: str) -> str:
+    return f"{MODELS[model].name}/{TEXT_FORM}"
 
 
 class Embed(Protocol):
@@ -106,7 +116,7 @@ class Embedder:
 
         spec = MODELS[model]
         root = ensure_model(spec, model_dir)
-        self.name = spec.name
+        self.name = embed_name(model)
         self.tokenizer = Tokenizer.from_file(str(root / "tokenizer.json"))
         self.tokenizer.enable_truncation(MAX_TOKENS)
         options = ort.SessionOptions()
@@ -144,8 +154,8 @@ class Embedder:
         out = np.zeros((len(texts), DIM), dtype=np.float32)
         for start in range(0, len(order), batch_size):
             idx = order[start : start + batch_size]
-            out[idx] = self._embed([f"passage: {texts[i]}" for i in idx])
+            out[idx] = self._embed([f"passage: {embedding_text(texts[i])}" for i in idx])
         return out
 
     def query(self, text: str) -> np.ndarray:
-        return self._embed([f"query: {text}"])[0]
+        return self._embed([f"query: {embedding_text(text)}"])[0]

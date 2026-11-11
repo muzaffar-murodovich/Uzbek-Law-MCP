@@ -6,6 +6,7 @@ from qonunshunos.index.writer import (
     build_sections,
     index_document,
     kind_and_title,
+    reembed,
     refresh_fts_stats,
 )
 from qonunshunos.parser.card import parse_card
@@ -127,3 +128,24 @@ def test_content_hash_ignores_card_language(fixture_html):
     assert content_hash(doc, card) != content_hash(
         doc, card.model_copy(update={"status": "lost_force"})
     )
+
+
+@pytest.mark.db
+def test_reembed_only_touches_other_models(db_dsn, fixture_html):
+    doc = parse_document(fixture_html("doc_mehnat_kodeksi.html"), -6257288)
+    card = parse_card(fixture_html("card1_in_force.html"), -6257288)
+    card.status = "in_force"
+    with connect(db_dsn) as conn:
+        total = index_document(conn, doc, card, FakeEmbedder())
+        before = conn.execute("SELECT id, embedding::text FROM chunks ORDER BY id").fetchall()
+
+        newer = CountingEmbedder()
+        newer.name = "fake/v2"
+        assert reembed(conn, newer, batch_chunks=50, progress=lambda _: None) == total
+        assert newer.embedded == total
+        assert conn.execute("SELECT meta->>'embed_model' FROM documents").fetchone()[0] == "fake/v2"
+        after = conn.execute("SELECT id, embedding::text FROM chunks ORDER BY id").fetchall()
+        assert [r[0] for r in after] == [r[0] for r in before]  # same rows, vectors rewritten
+
+        # A second run has nothing left to do.
+        assert reembed(conn, newer, progress=lambda _: None) == 0

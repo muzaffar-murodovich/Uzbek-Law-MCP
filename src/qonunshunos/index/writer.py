@@ -346,3 +346,67 @@ def refresh_fts_stats(conn: psycopg.Connection) -> int:
             " SELECT word, ndoc FROM ts_stat('SELECT tsv FROM chunks')"
         )
     return conn.execute("SELECT count(*) FROM fts_stats").fetchone()[0]
+
+
+HNSW_INDEX = (
+    "CREATE INDEX chunks_embedding ON chunks USING hnsw (embedding halfvec_cosine_ops)"
+    " WITH (m = 32, ef_construction = 200)"
+)  # same parameters as migration 0003
+
+
+def reembed(
+    conn: psycopg.Connection,
+    embedder: Embed,
+    *,
+    batch_chunks: int = 512,
+    limit_docs: int | None = None,
+    progress=print,
+) -> int:
+    """Recompute the vectors of documents embedded by another model or text form.
+
+    Only ``chunks.embedding`` and ``documents.meta->>'embed_model'`` change. Work is committed
+    a few documents at a time, so the run can be stopped and started again.
+    """
+    model = getattr(embedder, "name", "unknown")
+    todo = [
+        r[0]
+        for r in conn.execute(
+            "SELECT d.id FROM documents d WHERE coalesce(d.meta->>'embed_model', '') <> %s"
+            " AND EXISTS (SELECT 1 FROM chunks c WHERE c.document_id = d.id) ORDER BY d.id",
+            (model,),
+        ).fetchall()
+    ]
+    if limit_docs:
+        todo = todo[:limit_docs]
+    total_chunks = 0
+    group: list[int] = []
+    rows: list[tuple[int, str, str]] = []
+
+    def flush() -> None:
+        nonlocal total_chunks
+        vectors = embedder.passages([f"{heading}\n{text}" for _id, heading, text in rows])
+        with conn.transaction(), conn.cursor() as cur:
+            cur.executemany(
+                "UPDATE chunks SET embedding = %s::halfvec WHERE id = %s",
+                [(v.tolist(), cid) for (cid, _h, _t), v in zip(rows, vectors, strict=True)],
+            )
+            cur.execute(
+                "UPDATE documents SET meta = meta || %s WHERE id = ANY(%s)",
+                (Jsonb({"embed_model": model}), group),
+            )
+        total_chunks += len(rows)
+        group.clear()
+        rows.clear()
+
+    for n, lex_id in enumerate(todo, start=1):
+        rows.extend(
+            conn.execute(
+                "SELECT id, heading, text FROM chunks WHERE document_id = %s ORDER BY ord",
+                (lex_id,),
+            ).fetchall()
+        )
+        group.append(lex_id)
+        if len(rows) >= batch_chunks or n == len(todo):
+            flush()
+            progress(f"{n}/{len(todo)} documents, {total_chunks} chunks")
+    return total_chunks
