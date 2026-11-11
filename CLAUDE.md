@@ -69,7 +69,17 @@ hisobot Telegram'ga (@qonunshunosbot) keladi (`docs/stage5-ops.md`). 6-bosqich j
 (`docs/stage6-full-crawl.md`): 15 810 ta amaldagi lotin hujjat yuklab olindi, parser v2 bilan
 parse qilindi va server bazasiga indekslandi (491 947 bo'lak, HNSW qurilgan, tungi update timer'i
 yoqilgan). To'liq bazada qidiruv sifati yetarli emas: aniq savollarda gibrid R@10 0,64, maqsad
-0,85 (`docs/stage2-experiments.md` 6d). Ommaga ochish shu tuzatilguncha kechiktirilgan.
+0,85; oflayn sinovda yengil reranker 0,755 berdi (`docs/stage2-experiments.md` 6d, "Qisqacha"
+jadvali). Ommaga ochish shu tuzatilguncha kechiktirilgan. Keyingi tanlov: A) yengil reranker'ni
+xizmatga qo'yish (int8 ONNX, serverda tezlik), B) tekshirilgan "savol → modda" to'plamida
+embedding va reranker'ni qo'shimcha o'qitish.
+
+Baholash: `eval/questions_llm_full.yaml` (300 savol, `aniq`/`noaniq` teglari, javoblar
+tekshirilgan) asosiy to'plam; natijalar `eval/results/`da. Server bazasiga tegadigan o'lchovlarni
+foydalanuvchi `bash scripts/with_server_db.sh <buyruq>` bilan ishga tushiradi (auto mode
+tunnelni ochishga ruxsat bermaydi). Oflayn tajribalar: `scripts/fusion_lab.py`,
+`scripts/rerank_lab.py` (`data/eval/`dagi nomzodlar va matnlar ustida, `--group bench`).
+LLM `judge` natijasini iqtibosli tekshiruvsiz ishlatma (6d).
 
 CLI: `uv run qonunshunos fetch|parse [--all]|crawl-sample|crawl|listing|scope|crawl-full|db-migrate|index|search|eval|serve|tool|user|auth-cleanup|update|report|notify`
 (`--data-dir`, standart `./data`). `serve` standart holatda OAuth talab qiladi: mahalliy

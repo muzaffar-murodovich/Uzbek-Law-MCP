@@ -406,6 +406,29 @@ Ommaga ochish shu ish tugaguncha kechiktiriladi.
 6c'dagi 1-variant bajarildi va u to'plamning o'zida uchta muammoni ochdi. Baza va model o'sha
 (491 947 bo'lak, `e5-small-int8`). Hammasi `questions_llm_full` (300 savol) ustida.
 
+**Qisqacha (2026-11-10/11):**
+
+| Bosqich | Aniq savollar (208), R@10 | R@1 |
+|---|---:|---:|
+| Hozirgi gibrid qidiruv, tozalangan javoblar ro'yxati | 0,644 | 0,20 |
+| Eng yaxshi birlashtirish sozlamasi (oflayn) | 0,678 | 0,23 |
+| + yengil reranker, birinchi 30 ta | 0,755 | 0,41 |
+| + og'ir reranker, birinchi 30 ta (CPU'da 30 s) | 0,769 | 0,50 |
+| Nomzodlar to'plami chegarasi: 30 / 50 / butun to'plam | 0,78 / 0,82 / 0,93 | — |
+
+Topilmalar:
+
+1. LLM yozgan savollarning 31 %i (92/300) kontekstsiz, javobi aniqlab bo'lmaydi: `clarity`
+   bilan ajratiladi va alohida hisoblanadi.
+2. LLM `judge` qo'shgan javoblarning faqat 30 %i (114/386) haqiqiy: iqtibosli qat'iy tekshiruvsiz
+   ishlatib bo'lmaydi. Avvalgi raqamlar shu sababli shishirilgan edi.
+3. AI'ning rasmiy iboralari aniq savollarda foyda beradi, noaniqlarida zarar qiladi; savol matni
+   ham kerak (usiz R@10 0,54).
+4. Vektor qidiruv (`e5-small`) bu bazada deyarli ishlamaydi: topilmagan 74 savoldan 46 tasida
+   to'g'ri modda vektorning 200 taligida ham yo'q.
+5. O'rinlarga asoslangan birlashtirishni sozlash shovqin darajasida (+3 %). Matnni o'qiydigan
+   qayta saralash ishlaydi; endi R@10 ni nomzodlar to'plami cheklaydi.
+
 ### 1. AI `alt`i bilan o'lchash
 
 `llm_eval.py rephrase` har savolga 2 ta rasmiy qidiruv iborasini yozdi
@@ -583,9 +606,16 @@ Maqsad o'zgarmagan: aniq savollarda R@10 ≥ 0,85, ommaga ochish shungacha kechi
 - **Model tanlovi.** 4.7-bo'lim: sifat bo'yicha bge-m3 birinchi, lekin `myserver` uchun og'ir.
 - **Haqiqiy foydalanuvchi savollari** hali yo'q. Xizmat ishga tushgach, so'rovlar anonim holda
   yig'ilib, baholash to'plamiga qo'shiladi.
-- **Farmon va qarorlar** baholash to'plamida hali yo'q.
+- **Farmon va qarorlar:** `questions_decrees.yaml` (29, qo'lda) va `questions_llm_full.yaml`da
+  bor (6c, 6d).
 - **Yuridik domenga moslashtirish.** LLM yordamida yaratilgan "savol → modda" juftliklarida
-  embedding modelini qo'shimcha o'qitish (fine-tuning).
+  embedding modelini va yengil reranker'ni qo'shimcha o'qitish (fine-tuning). O'qitish
+  juftliklari `clarity` va iqtibosli tekshiruvdan o'tishi kerak (6d); baholashdagi 208 savol va
+  ularning manba moddalari o'qitishga kirmasligi kerak.
+- **Reranker'ni xizmatga qo'yish:** int8 ONNX, N=20–30, serverda tezlik (6d).
+- **`questions_llm.yaml` (100 savol)** hali `clarity` va qat'iy tekshiruvdan o'tmagan: uning
+  `judge` javoblari ham shishirilgan deb hisoblash kerak.
+- **`gte-multilingual-reranker-base`** transformers 5.22 bilan ishlamadi (modelning o'z kodi).
 
 ## Qayta ishlab chiqarish
 
@@ -611,4 +641,20 @@ uv run python scripts/llm_eval.py judge --questions eval/questions_llm_full.yaml
 uv run qonunshunos eval --questions eval/questions_llm_full.yaml --workers 4 \
     --alt-file eval/alt_llm_questions_llm_full.json \
     --save full-corpus-questions_llm_full-alt_llm-verified
+# Server bazasiga tunnel bilan: bash scripts/with_server_db.sh <buyruq> (oddiy terminalda)
+bash scripts/with_server_db.sh uv run python scripts/miss_depth.py \
+    --result eval/results/2026-11-10-full-corpus-questions_llm_full-alt_llm-verified.json \
+    --alt-file eval/alt_llm_questions_llm_full.json \
+    --out eval/results/2026-11-10-full-corpus-miss-depth.json
+bash scripts/with_server_db.sh uv run python scripts/dump_candidates.py \
+    --alt-file eval/alt_llm_questions_llm_full.json --out data/eval/candidates_llm_full.json.gz
+bash scripts/with_server_db.sh uv run python scripts/dump_chunk_texts.py \
+    data/eval/candidates_llm_full.json.gz --out data/eval/chunk_texts_llm_full.json.gz
+# Oflayn (bazasiz)
+uv run python scripts/fusion_lab.py data/eval/candidates_llm_full.json.gz
+uv run --group bench python scripts/rerank_lab.py score \
+    --model cross-encoder/mmarco-mMiniLMv2-L12-H384-v1 --variants q --top 100
+uv run --group bench python scripts/rerank_lab.py score \
+    --model BAAI/bge-reranker-v2-m3 --variants q --top 30 --batch 8
+uv run --group bench python scripts/rerank_lab.py report --tops 10 20 30 50 100
 ```
