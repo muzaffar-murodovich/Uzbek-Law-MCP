@@ -658,6 +658,20 @@ chegara 0,82, ya'ni faqat reranker bilan 0,85 ga yetib bo'lmaydi; birinchi bosqi
 yaxshilanishi kerak. "halves" ustunida yarimlar orasidagi farq 0,15–0,20: 208 savolda ±0,02
 farqlar shovqin.
 
+**Reranker xizmatga qo'yildi (2026-11-12).** int8 ONNX (`model_quint8_avx2.onnx`), birinchi 20 ta
+birlik, faqat savol matni bilan, blend 0,5 (`search/rerank.py`, `QONUNSHUNOS_RERANK_TOP`). Oflayn:
+int8 fp32 dan farq qilmaydi (top 30 da R@10 0,750 va 0,760, R@1 0,42 va 0,41); matn shakli
+(tipografik yoki rasmiy) ham farq qilmaydi. To'liq korpusda, jonli baza bilan:
+
+| | Aniq (208): R@1 | R@5 | R@10 | MRR | Noaniq (92): R@1 | R@10 |
+|---|---:|---:|---:|---:|---:|---:|
+| Reranker'siz | 0,245 | 0,562 | 0,668 | 0,375 | 0,054 | 0,272 |
+| **Reranker, top 20** | **0,394** | **0,649** | **0,716** | **0,502** | 0,174 | 0,293 |
+
+Serverda (2 vCPU) issiq holatda bitta qidiruv `alt` bilan 4,6–5,2 s, reranker'siz 4,0–5,6 s:
+asosiy vaqtni reranker emas, qidiruvning o'zi oladi. Xizmat jarayoni ikkala model bilan ≈1,1 GB.
+Natija: `eval/results/2026-11-12-full-corpus-questions_llm_full-alt_llm-q1-rerank20.json`.
+
 ## 7. Ochiq masalalar
 
 - **Model tanlovi.** 4.7-bo'lim: sifat bo'yicha bge-m3 birinchi, lekin `myserver` uchun og'ir.
