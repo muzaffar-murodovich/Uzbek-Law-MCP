@@ -28,7 +28,7 @@ RERANKER = ModelSpec(
     },
     onnx_file="onnx/model_quint8_avx2.onnx",
 )
-MAX_TOKENS = 512
+MAX_TOKENS = 256  # same quality as 512 offline (6e), a third faster
 DEFAULT_TOP = 20
 BLEND = 0.5  # weight of the fused order next to the reranker's order
 RANK_K = 10  # reciprocal-rank constant for both orders
@@ -39,14 +39,16 @@ class Rerank(Protocol):
 
 
 class Reranker:
-    def __init__(self, model_dir: Path, threads: int | None = None) -> None:
+    def __init__(
+        self, model_dir: Path, threads: int | None = None, max_tokens: int = MAX_TOKENS
+    ) -> None:
         import onnxruntime as ort
         from tokenizers import Tokenizer
 
         root = ensure_model(RERANKER, model_dir)
         self.name = RERANKER.name
         self.tokenizer = Tokenizer.from_file(str(root / "tokenizer.json"))
-        self.tokenizer.enable_truncation(MAX_TOKENS, strategy="longest_first")
+        self.tokenizer.enable_truncation(max_tokens, strategy="longest_first")
         options = ort.SessionOptions()
         if threads:
             options.intra_op_num_threads = threads
