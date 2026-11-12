@@ -641,6 +641,23 @@ xil, ya'ni farq faqat vektordan):
 Gibrid top-10: 8 ta savol qo'shildi, 3 tasi chiqib ketdi. Natija:
 `eval/results/2026-11-12-full-corpus-questions_llm_full-alt_llm-q1.json`.
 
+Yangi nomzodlar (`dump_candidates`, 2026-11-12; eskilari `data/eval/q0/`da) ustida oflayn
+laboratoriyalar, 208 ta aniq savol, R@10 (qavsda q0, ya'ni avvalgi vektorlar bilan):
+
+| Variant | R@1 | R@10 |
+|---|---:|---:|
+| Hozirgi qidiruv | 0,23 | 0,668 (0,644) |
+| Eng yaxshi birlashtirish | 0,25 | 0,692 (0,678) |
+| + yengil reranker, top 30, savol, blend 0,5 (`home`da ≈2,8 s) | 0,41 | 0,760 (0,755) |
+| + yengil reranker, top 50, savol, blend 0,5 (≈4,7 s) | 0,41 | 0,769 |
+| + yengil reranker, top 30, savol + 2 `alt` (≈8,5 s) | 0,39 | 0,774 |
+| Nomzodlar chegarasi top 20 / 30 / 50 / hammasi | — | 0,764 / 0,788 / 0,822 / 0,947 (0,740 / 0,784 / 0,822 / 0,928) |
+
+Reranker natijasi deyarli o'zgarmadi: u allaqachon top 30 chegarasiga (0,79) yaqin. Top 50 da ham
+chegara 0,82, ya'ni faqat reranker bilan 0,85 ga yetib bo'lmaydi; birinchi bosqich (nomzodlar)
+yaxshilanishi kerak. "halves" ustunida yarimlar orasidagi farq 0,15–0,20: 208 savolda ±0,02
+farqlar shovqin.
+
 ## 7. Ochiq masalalar
 
 - **Model tanlovi.** 4.7-bo'lim: sifat bo'yicha bge-m3 birinchi, lekin `myserver` uchun og'ir.
