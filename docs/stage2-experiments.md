@@ -672,6 +672,15 @@ Serverda (2 vCPU) issiq holatda bitta qidiruv `alt` bilan 4,6–5,2 s, reranker'
 asosiy vaqtni reranker emas, qidiruvning o'zi oladi. Xizmat jarayoni ikkala model bilan ≈1,1 GB.
 Natija: `eval/results/2026-11-12-full-corpus-questions_llm_full-alt_llm-q1-rerank20.json`.
 
+**Qidiruv vaqti (serverda, issiq kesh, savol + 1 `alt`).** Qismlarga bo'lindi: FTS 0,8–2,5 s, reranker
+1,5–2,0 s, vektor 0,04–0,15 s, oxirgi so'rov ≈0,01 s. FTS vaqti mos kelgan chunk'lar soniga
+bog'liq (6 ming → 0,2 s, 54 ming → 1,7 s): mos qatorlarni topish arzon (0,14 s), qimmati ball
+hisoblash. Sinalgan va foyda bermagan: ballni `unnest(tsv)` bilan bir o'tishda hisoblash
+(natija bir xil, 1,5–2 barobar sekinroq), FTS va vektor so'rovlarini parallel yuborish (2 vCPU'da
+1,46 → 1,28 s). Reranker'ni 256 tokenga qisqartirish sifatni o'zgartirmadi (top 20: R@10 0,750,
+R@1 0,413; 384 token: 0,740 / 0,404) va reranker vaqtini 1,1–1,5 s ga tushirdi; xizmatga qo'yildi.
+Keyingi imkoniyat: `COMMON_DF` (5 %) ni pasaytirib FTS mos qatorlarini kamaytirish, eval bilan.
+
 ## 7. Ochiq masalalar
 
 - **Model tanlovi.** 4.7-bo'lim: sifat bo'yicha bge-m3 birinchi, lekin `myserver` uchun og'ir.
