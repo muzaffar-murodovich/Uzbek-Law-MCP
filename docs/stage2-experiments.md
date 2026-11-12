@@ -625,8 +625,21 @@ Xulosa: e5 o'zbek tilini web matnidan o'rgangan, u yerda tipografik qo'shtirnoql
 belgilar kam. Shuning uchun modelga (hujjat va savol) tipografik shakl beriladi:
 `normalize.embedding_text`. Saqlanadigan matn, FTS va foydalanuvchiga ko'rsatiladigan matn
 o'zgarmaydi. Model nomi `e5-small-int8/q1` bo'ldi, eski vektorlar qayta ishlatilmaydi. Butun
-korpus `qonunshunos reembed --rebuild-hnsw` bilan qayta hisoblandi (`home`, ≈10 soat).
-To'liq qidiruvdagi ta'siri qayta o'lchanadi.
+korpus `qonunshunos reembed --rebuild-hnsw` bilan qayta hisoblandi (`home`, 2026-11-11/12,
+10,7 soat, 492 139 bo'lak; HNSW qayta qurish 19 daqiqa).
+
+To'liq korpusda natija (208 ta aniq savol, LLM `alt`; FTS natijalari 300/300 savolda aynan bir
+xil, ya'ni farq faqat vektordan):
+
+| Rejim | R@1 | R@5 | R@10 | MRR |
+|---|---:|---:|---:|---:|
+| Vektor, oldin | 0,058 | 0,178 | 0,245 | 0,110 |
+| Vektor, keyin | 0,101 | 0,284 | 0,370 | 0,176 |
+| Gibrid, oldin | 0,202 | 0,534 | 0,644 | 0,332 |
+| **Gibrid, keyin** | **0,245** | **0,562** | **0,668** | **0,375** |
+
+Gibrid top-10: 8 ta savol qo'shildi, 3 tasi chiqib ketdi. Natija:
+`eval/results/2026-11-12-full-corpus-questions_llm_full-alt_llm-q1.json`.
 
 ## 7. Ochiq masalalar
 
