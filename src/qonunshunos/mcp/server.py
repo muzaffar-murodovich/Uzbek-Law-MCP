@@ -25,6 +25,7 @@ from qonunshunos.auth.provider import SCOPE, Provider
 from qonunshunos.index.embed import DEFAULT_MODEL, Embed, Embedder
 from qonunshunos.mcp import tools
 from qonunshunos.mcp.tools import Result
+from qonunshunos.search.rerank import Rerank, Reranker, rerank_top
 
 log = logging.getLogger(__name__)
 
@@ -66,11 +67,21 @@ PageArg = Annotated[int, Field(ge=1, description="Page of a long text, from 1.")
 class Services:
     """Connection pool and embedding model, shared by all tool calls."""
 
-    def __init__(self, dsn: str, model_dir, model: str = DEFAULT_MODEL, embedder: Embed = None):
+    def __init__(
+        self,
+        dsn: str,
+        model_dir,
+        model: str = DEFAULT_MODEL,
+        embedder: Embed = None,
+        reranker: Rerank | None = None,
+    ):
         self.dsn = dsn
         self.model_dir = model_dir
         self.model = model
         self.embedder: Embed | None = embedder
+        # Real models are loaded on first use only when none were passed in (tests pass fakes).
+        self._load_reranker = embedder is None and reranker is None
+        self.reranker: Rerank | None = reranker
         self.pool: ConnectionPool | None = None
         self.window = limits.MinuteWindow()
 
@@ -88,6 +99,8 @@ class Services:
             )
         if self.embedder is None:
             self.embedder = Embedder(self.model_dir, self.model)
+        if self._load_reranker and self.reranker is None and rerank_top() > 0:
+            self.reranker = Reranker(self.model_dir)
 
     @contextmanager
     def connection(self) -> Iterator[psycopg.Connection]:
@@ -121,7 +134,8 @@ class Services:
                     if refusal:
                         return refusal
                 extra = (self.embedder,) if embed else ()
-                result = fn(conn, *extra, **args)
+                kwargs = {**args, "reranker": self.reranker} if embed and self.reranker else args
+                result = fn(conn, *extra, **kwargs)
                 return result.text
         finally:
             elapsed = int((time.perf_counter() - started) * 1000)

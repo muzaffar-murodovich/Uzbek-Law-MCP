@@ -12,6 +12,7 @@ fi
 HOST=${QONUNSHUNOS_HOST:-myserver}
 APP=/home/deploy/qonunshunos
 MODEL=data/models/Xenova__multilingual-e5-small
+RERANK_MODEL=data/models/cross-encoder__mmarco-mMiniLMv2-L12-H384-v1
 cd "$(dirname "$0")/.."
 # One shared connection: myserver refuses SSH after a burst of new connections.
 SSH_OPTS=(-o ControlMaster=auto -o ControlPath=/tmp/qs-ssh-%r@%h -o ControlPersist=10m)
@@ -31,6 +32,12 @@ rsync -az --delete \
 echo "== sync the int8 embedding model (fp32 file skipped)"
 ssh $HOST "mkdir -p $APP/$MODEL"
 rsync -az --exclude 'onnx/model.onnx' $MODEL/ $HOST:$APP/$MODEL/
+
+echo "== sync the int8 reranker model"
+uv run python -c "from pathlib import Path; from qonunshunos.index.embed import ensure_model; \
+from qonunshunos.search.rerank import RERANKER; ensure_model(RERANKER, Path('data/models'))"
+ssh $HOST "mkdir -p $APP/$RERANK_MODEL"
+rsync -az $RERANK_MODEL/ $HOST:$APP/$RERANK_MODEL/
 
 echo "== install and migrate"
 ssh $HOST "set -e; cd $APP

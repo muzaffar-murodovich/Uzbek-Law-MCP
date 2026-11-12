@@ -28,6 +28,7 @@ from qonunshunos.mcp.resolve import (
     unit_kinds,
 )
 from qonunshunos.search.hybrid import search
+from qonunshunos.search.rerank import Rerank, rerank_top
 from qonunshunos.text.normalize import fold
 
 MAX_QUERY = 300
@@ -163,6 +164,7 @@ def search_law(
     alt_queries: Sequence[str] = (),
     doc_types: Sequence[str] | None = None,
     limit: int = 8,
+    reranker: Rerank | None = None,
 ) -> Result:
     query = " ".join(query.split())[:MAX_QUERY]
     alts = [" ".join(q.split())[:MAX_QUERY] for q in alt_queries if q and q.strip()][:MAX_ALT]
@@ -170,7 +172,16 @@ def search_law(
         return Result("Soʻrov boʻsh. Savolni oʻzbek tilida (lotin yozuvida) yozing.")
     kinds = [k for k in (doc_types or []) if k in KINDS] or None
     limit = min(max(limit, 1), 15)
-    hits = search(conn, embedder, query, alts, doc_types=kinds, limit=limit)
+    hits = search(
+        conn,
+        embedder,
+        query,
+        alts,
+        doc_types=kinds,
+        limit=limit,
+        reranker=reranker,
+        rerank_top=rerank_top() if reranker is not None else 0,
+    )
     if not hits:
         return Result(
             "Hech narsa topilmadi. Savolni qonun matnidagi rasmiy iboralar bilan qayta "

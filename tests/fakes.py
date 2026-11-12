@@ -24,3 +24,13 @@ class FakeEmbedder:
 
     def query(self, text):
         return self._vec(text)
+
+
+class FakeReranker:
+    """Scores a text by how many query terms it contains."""
+
+    name = "fake-reranker"
+
+    def score(self, query, texts):
+        wanted = set(terms(query))
+        return [float(len(wanted & set(terms(t)))) for t in texts]

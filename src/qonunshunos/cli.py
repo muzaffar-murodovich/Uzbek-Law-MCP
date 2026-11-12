@@ -147,6 +147,9 @@ def build_parser() -> argparse.ArgumentParser:
     p.add_argument("--model", default=DEFAULT_MODEL, choices=sorted(MODELS))
     p.add_argument("--save", metavar="LABEL", help="write eval/results/<date>-<LABEL>.json")
     p.add_argument("--workers", type=int, default=1, help="parallel searches (slow remote DB)")
+    p.add_argument(
+        "--rerank", type=int, default=0, metavar="N", help="rerank the first N hybrid units"
+    )
     return parser
 
 
@@ -158,6 +161,11 @@ def _eval(args: argparse.Namespace) -> int:
     settings = Settings.from_env(args.data_dir)
     questions = load_questions(args.questions, args.alt_file)
     embedder = Embedder(settings.model_dir, args.model)
+    reranker = None
+    if args.rerank:
+        from qonunshunos.search.rerank import Reranker
+
+        reranker = Reranker(settings.model_dir)
     local = threading.local()  # psycopg connections are not shared between threads
     opened = []
 
@@ -167,7 +175,15 @@ def _eval(args: argparse.Namespace) -> int:
             opened.append(local.conn)
         alt = [] if args.no_alt else q.alt
         return search(
-            local.conn, embedder, q.question, alt, mode=mode, limit=10, use_stem=not args.no_stem
+            local.conn,
+            embedder,
+            q.question,
+            alt,
+            mode=mode,
+            limit=10,
+            use_stem=not args.no_stem,
+            reranker=reranker if mode == "hybrid" else None,
+            rerank_top=args.rerank,
         )
 
     try:

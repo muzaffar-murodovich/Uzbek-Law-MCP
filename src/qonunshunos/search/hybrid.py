@@ -1,5 +1,6 @@
 """Hybrid search: full-text (FTS) and vector candidates merged with Reciprocal Rank Fusion."""
 
+import logging
 import math
 import time
 from collections.abc import Sequence
@@ -9,9 +10,12 @@ from typing import Literal
 import psycopg
 
 from qonunshunos.index.embed import Embed
+from qonunshunos.search.rerank import Rerank, blended_order
 from qonunshunos.text.fts import terms
 
 Mode = Literal["hybrid", "fts", "vector"]
+
+_log = logging.getLogger(__name__)
 
 CANDIDATES = 50
 RRF_K = 60
@@ -170,8 +174,14 @@ def search(
     statuses: Sequence[str] = ("in_force",),
     limit: int = 8,
     use_stem: bool = True,
+    reranker: Rerank | None = None,
+    rerank_top: int = 0,
 ) -> list[Hit]:
-    """Best chunk per unit, ranked by RRF over FTS and vector lists of every query."""
+    """Best chunk per unit, ranked by RRF over FTS and vector lists of every query.
+
+    With a ``reranker``, the first ``rerank_top`` units are reordered by the cross-encoder's
+    reading of the question and each unit's best chunk, blended with the fused order.
+    """
     lists: dict[str, list[int]] = {}
     for i, q in enumerate([query, *alt_queries]):
         if mode in ("hybrid", "fts"):
@@ -203,12 +213,14 @@ def search(
         (list(scores),),
     ).fetchall()
     best: dict[int, Hit] = {}
+    texts: dict[int, str] = {}  # section -> full text of its best chunk (what a reranker reads)
     for row in sorted(rows, key=lambda r: -scores[r[0]]):
         chunk_id, section_id, text, doc_id = row[0], row[1], row[2], row[3]
         hit = best.get(section_id)
         if hit is not None:
             hit.score += scores[chunk_id] * 0.1  # small bonus for several matching pieces
             continue
+        texts[section_id] = text
         elem_id = row[12]
         best[section_id] = Hit(
             document_id=doc_id,
@@ -227,4 +239,14 @@ def search(
             pending_changes=bool(row[13]),
             ranks=ranks.get(chunk_id, {}),
         )
-    return sorted(best.values(), key=lambda h: -h.score)[:limit]
+    hits = sorted(best.values(), key=lambda h: -h.score)
+    if reranker is not None and rerank_top > 0 and len(hits) > 1:
+        head = hits[: max(rerank_top, 2)]
+        started = time.perf_counter()
+        order = blended_order(reranker.score(query, [texts[h.section_id] for h in head]))
+        head = [head[i] for i in order]
+        for position, hit in enumerate(head, start=1):
+            hit.ranks["rerank"] = position
+        _log.debug("reranked %d units in %.2f s", len(head), time.perf_counter() - started)
+        hits = head + hits[len(head) :]
+    return hits[:limit]
