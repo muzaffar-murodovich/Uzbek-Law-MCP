@@ -68,11 +68,12 @@ Bosqichlar holati `PLAN.md`ning 8-bo'limida. 1–5-bosqichlar bajarildi (har bir
 hisobot Telegram'ga (@qonunshunosbot) keladi (`docs/stage5-ops.md`). 6-bosqich jarayonda
 (`docs/stage6-full-crawl.md`): 15 810 ta amaldagi lotin hujjat yuklab olindi, parser v2 bilan
 parse qilindi va server bazasiga indekslandi (491 947 bo'lak, HNSW qurilgan, tungi update timer'i
-yoqilgan). To'liq bazada qidiruv sifati yetarli emas: aniq savollarda gibrid R@10 0,64, maqsad
-0,85; oflayn sinovda yengil reranker 0,755 berdi (`docs/stage2-experiments.md` 6d, "Qisqacha"
-jadvali). Ommaga ochish shu tuzatilguncha kechiktirilgan. Keyingi tanlov: A) yengil reranker'ni
-xizmatga qo'yish (int8 ONNX, serverda tezlik), B) tekshirilgan "savol → modda" to'plamida
-embedding va reranker'ni qo'shimcha o'qitish.
+yoqilgan). To'liq bazada qidiruv sifati hali yetarli emas: aniq savollarda R@10 0,716 (R@1 0,394), maqsad
+0,85. Xizmatda: embedding uchun tipografik `‘ ’` shakl (`e5-small-int8/q1`, 6e) va yengil reranker
+(int8 ONNX, top 20, 256 token, `QONUNSHUNOS_RERANK_TOP`). Serverda bitta qidiruv 3–4 s, asosiy
+vaqt FTS. Ommaga ochish kechiktirilgan. Keyingi ish: o'qitish to'plamini o'stirish
+(`scripts/train_data.py`, `data/train/pairs.jsonl`, 796 juftlik, 6f) va e5-small'ni fine-tune
+qilish; FTS'ni tezlashtirish (`COMMON_DF`).
 
 Baholash: `eval/questions_llm_full.yaml` (300 savol, `aniq`/`noaniq` teglari, javoblar
 tekshirilgan) asosiy to'plam; natijalar `eval/results/`da. Server bazasiga tegadigan o'lchovlarni

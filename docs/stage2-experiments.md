@@ -681,6 +681,40 @@ hisoblash. Sinalgan va foyda bermagan: ballni `unnest(tsv)` bilan bir o'tishda h
 R@1 0,413; 384 token: 0,740 / 0,404) va reranker vaqtini 1,1–1,5 s ga tushirdi; xizmatga qo'yildi.
 Keyingi imkoniyat: `COMMON_DF` (5 %) ni pasaytirib FTS mos qatorlarini kamaytirish, eval bilan.
 
+**Reranker'ga beriladigan matn shakli (2026-11-12, oflayn, int8, top 20, 512 token, blend 0,5,
+208 aniq savol).** Savol va bo'lak tipografik `‘ ’` shaklda: R@1 0,404, R@5 0,688, R@10 0,740,
+MRR 0,523. Rasmiy `ʻ ʼ` shaklda: 0,404 / 0,678 / 0,750 / 0,520. Farq shovqin darajasida, xizmat
+tipografik shaklda qoladi (embedding bilan bir xil `embedding_text`).
+
+## 6f. O'qitish to'plami: "savol → modda" juftliklari (2026-11-12)
+
+Maqsad: e5-small (keyin reranker'ni ham) o'zbek qonunchiligiga moslashtirish, chunki 6e ga ko'ra
+faqat reranker bilan 0,85 ga yetib bo'lmaydi. `scripts/train_data.py`:
+
+- `export`: amaldagi hujjatlarning fuqaroga tegishli bo'laklari (kodeks/qonun moddalari, qaror
+  ilovalaridagi nizom/tartib bandlari; yakunlovchi, o'tish davri, ijro qismlari va farmoyishlar
+  chiqarib tashlanadi). Hujjat turi vazni: kodeks 8, konstitutsiya 4, qonun 3, buyruq 1,5.
+  Barcha eval to'plamlaridagi hujjatlar (424 ta) chiqarib tashlanadi. Bir bo'lak ikki marta
+  olinmaydi.
+- `generate`: LLM har bir bo'lak uchun fuqaro savoli va rasmiy qidiruv iborasini yozadi yoki
+  `skip` qiladi. Bo'lakning o'zi to'g'ri javob, shuning uchun `judge` kerak emas.
+- `merge`: tekshiruv (≥3 so'z, kirill harfi yo'q, takror yo'q) va `data/train/pairs.jsonl`.
+
+Holat (2026-11-12 oxiri): **796 juftlik**, 569 hujjatdan. Manba: `gpt-5.4` 415 (p001, b001–b008,
+bepul limit, bo'laklarning ≈47 % ini qoldiradi), Claude Opus subagent'lari 360 (p001, c001–c010,
+≈36 %), Sonnet 21 (pilot). 1 302 bo'lak `skip` qilindi, 2 tasi kirill harfi uchun tashlandi.
+Savol medianasi 19 so'z, rasmiy ibora 7 so'z. Pilotda (p001, bir xil 100 bo'lak) Opus savollari
+eng tabiiy edi, `gpt-5.4` savollari uzunroq.
+
+Topilma: hujjat turlari bo'yicha `vm_qarori` 327, `qonun` 180, `buyruq` 154, `qaror` 47, `farmon`
+32, `kodeks` atigi 9. Kodekslarning ko'pi eval hujjatlari sifatida chiqarib tashlangan, shuning
+uchun vazn 8 ham yordam bermadi. Fine-tuning natijasi kodeks savollarida kuchsiz bo'lishi
+mumkin; eval'ni hujjat turi bo'yicha ham ko'rish kerak.
+
+Keyingi qadam: har kuni bepul `gpt-5.4` bilan ≈8 batch (b009 dan), kerak bo'lsa Opus batch'lari;
+taxminan 1 500–2 000 juftlikda e5-small'ni fine-tune qilib, 208 aniq savolda o'lchash (796 bilan
+sinov tariqasida ham boshlash mumkin).
+
 ## 7. Ochiq masalalar
 
 - **Model tanlovi.** 4.7-bo'lim: sifat bo'yicha bge-m3 birinchi, lekin `myserver` uchun og'ir.
@@ -691,8 +725,8 @@ Keyingi imkoniyat: `COMMON_DF` (5 %) ni pasaytirib FTS mos qatorlarini kamaytiri
 - **Yuridik domenga moslashtirish.** LLM yordamida yaratilgan "savol → modda" juftliklarida
   embedding modelini va yengil reranker'ni qo'shimcha o'qitish (fine-tuning). O'qitish
   juftliklari `clarity` va iqtibosli tekshiruvdan o'tishi kerak (6d); baholashdagi 208 savol va
-  ularning manba moddalari o'qitishga kirmasligi kerak.
-- **Reranker'ni xizmatga qo'yish:** int8 ONNX, N=20–30, serverda tezlik (6d).
+  ularning manba moddalari o'qitishga kirmasligi kerak. To'plam yig'ilmoqda (6f).
+- **Qidiruv tezligi:** serverda 3–4 s, asosiy vaqt FTS ball hisoblashi (6e). `COMMON_DF` sinovi.
 - **`questions_llm.yaml` (100 savol)** hali `clarity` va qat'iy tekshiruvdan o'tmagan: uning
   `judge` javoblari ham shishirilgan deb hisoblash kerak.
 - **`gte-multilingual-reranker-base`** transformers 5.22 bilan ishlamadi (modelning o'z kodi).
