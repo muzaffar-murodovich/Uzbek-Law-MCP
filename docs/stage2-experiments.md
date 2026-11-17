@@ -715,6 +715,55 @@ Keyingi qadam: har kuni bepul `gpt-5.4` bilan ≈8 batch (b009 dan), kerak bo'ls
 taxminan 1 500–2 000 juftlikda e5-small'ni fine-tune qilib, 208 aniq savolda o'lchash (796 bilan
 sinov tariqasida ham boshlash mumkin).
 
+Holat (2026-11-17): **1 849 juftlik**. `gpt-5.4` 1 146 (b001–b023, faqat bepul limit), Opus
+subagent'lari 682 (c001–c022), Sonnet 21. c011–c022 da Opus bo'laklarning faqat ≈26 % ini qoldirdi:
+o'zgartirish ro'yxatlari va idoralarning ichki vakolatlari ko'paydi. Jami 2 895 bo'lak `skip`
+qilindi (≈60 %). Narx: bitta `gpt-5.4` batch (100 bo'lak) ≈69k kirish + ≈5,5k chiqish token,
+pullik tarifda ≈$0,25 va ≈50 juftlik; 6 ta Opus batch foydalanuvchining Claude 5 soatlik
+limitining ≈12 % ini oladi.
+
+## 6g. e5-small'ni fine-tune qilish (2026-11-15..17)
+
+`scripts/finetune_e5.py`: oddiy torch tsikli, in-batch negatives (MultipleNegativesRankingLoss
+kabi, scale 20), har bir juftlikdan ikki misol (fuqaro savoli va rasmiy ibora → bo'lak), bir
+batch'da bitta bo'lak ikki marta uchramaydi. Word embedding matritsasi (og'irliklarning 80 %)
+muzlatilgan. Matn shakli xizmatdagidek (`embedding_text`, `query: ` / `passage: `). `home` CPU'da
+batch 32 × 256 token 5,6 GB'da OOM bo'ldi; gradient checkpointing bilan ≈2,5 GB.
+
+**ft1:** 1 506 juftlik (3 012 misol), 2 epoch, lr 2e-5, 190 qadam, `home` CPU'da 68 daqiqa, loss
+2,40 → 0,07.
+
+Baholash (`scripts/vector_lab.py`): butun korpus emas, saqlangan nomzodlar pool'i
+(`dump_chunk_texts.py --heading`: barcha savollarning FTS top 100 va vector top 50 bo'laklari,
+sarlavhasi bilan, 72 533 bo'lak). Har bir model pool'ni va savollarni embedding qiladi, vector
+ro'yxatlarini o'zinikiga almashtiradi, FTS ro'yxatlari o'zgarmaydi; RRF `fusion_lab.py` bilan,
+reranker'siz. 208 aniq savol:
+
+| Run | R@1 | R@5 | R@10 | MRR |
+|---|---|---|---|---|
+| Saqlangan ro'yxatlar (xizmatdagi int8, butun korpus), hybrid | 0,231 | 0,538 | 0,668 | 0,366 |
+| Base e5-small (fp32), vector | 0,106 | 0,298 | 0,385 | 0,187 |
+| **ft1 (fp32), vector** | **0,250** | **0,582** | **0,697** | **0,390** |
+| Base e5-small (fp32), hybrid | 0,216 | 0,572 | 0,688 | 0,367 |
+| **ft1 (fp32), hybrid** | **0,365** | **0,673** | **0,769** | **0,500** |
+
+Eval hujjatlari (424) o'qitishdan chiqarib tashlangan. Ehtiyot: pool korpusdan ≈7 barobar kichik,
+to'liq korpusdagi raqam pastroq bo'lishi mumkin; reranker qo'shilmagan (xizmatda reranker'siz
+hybrid 0,668, reranker bilan 0,716).
+
+**Serverga moslash (`scripts/export_onnx.py`).** Server faqat ONNX o'qiydi (torch'siz).
+- TorchScript eksportchisi `transformers` 5 ning mask kodini misol shakliga bog'lab qo'ydi: fp32
+  ONNX vektorlarining torch bilan cosine'i 0,93. Dynamo eksportchisi bilan 1,0000.
+- Oddiy int8 (`quantize_dynamic`, bitta scale): cosine 0,93. Xizmatdagi base int8 fayl o'z fp32
+  si bilan 0,984 beradi. `per_channel=True` bilan ft1 int8 0,98 (fayl o'sha 119 MB).
+- int8 ft1 ning pool baholashi `home`da ishlamoqda (`data/train/vlab2.log`). onnxruntime arena'si
+  har xil shakllar uchun 5,7 GB gacha o'sdi (OOM xavfi), `vector_lab.py` da arena o'chirilgan;
+  shuning uchun ≈4 bo'lak/s, ≈5 soat.
+
+`home` CPU'da bitta tajriba ≈1 kun olgani uchun keyingi tajribalar ijaradagi GPU'da (RunPod)
+bo'ladi: 750 / 1 506 / 1 849 juftlik (ko'proq data foyda beradimi), int8 va fp32 masalasi,
+2–3 ta sozlama varianti. Butun korpusni qayta embedding qilish `home` CPU'da 10,7 soat (6e).
+
 ## 7. Ochiq masalalar
 
 - **Model tanlovi.** 4.7-bo'lim: sifat bo'yicha bge-m3 birinchi, lekin `myserver` uchun og'ir.

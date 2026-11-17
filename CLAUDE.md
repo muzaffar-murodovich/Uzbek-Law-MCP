@@ -71,9 +71,12 @@ parse qilindi va server bazasiga indekslandi (491 947 bo'lak, HNSW qurilgan, tun
 yoqilgan). To'liq bazada qidiruv sifati hali yetarli emas: aniq savollarda R@10 0,716 (R@1 0,394), maqsad
 0,85. Xizmatda: embedding uchun tipografik `‘ ’` shakl (`e5-small-int8/q1`, 6e) va yengil reranker
 (int8 ONNX, top 20, 256 token, `QONUNSHUNOS_RERANK_TOP`). Serverda bitta qidiruv 3–4 s, asosiy
-vaqt FTS. Ommaga ochish kechiktirilgan. Keyingi ish: o'qitish to'plamini o'stirish
-(`scripts/train_data.py`, `data/train/pairs.jsonl`, 796 juftlik, 6f) va e5-small'ni fine-tune
-qilish; FTS'ni tezlashtirish (`COMMON_DF`).
+vaqt FTS. Ommaga ochish kechiktirilgan. O'qitish to'plami: `scripts/train_data.py`,
+`data/train/pairs.jsonl` (`home`da), 1 849 juftlik (6f). Birinchi fine-tune (ft1, 1 506 juftlik,
+`scripts/finetune_e5.py`, 6g) 72k bo'lakli pool'da hybrid R@10 ni 0,688 → 0,769 ga, vector'ni
+0,385 → 0,697 ga ko'tardi (reranker'siz, `scripts/vector_lab.py`). Serverga: `scripts/export_onnx.py`
+(dynamo eksport, int8 `per_channel`). Keyingi ish: ijaradagi GPU'da (RunPod, `runpod` plugin/MCP)
+tajribalar, keyin butun korpusni qayta embedding qilib deploy; FTS'ni tezlashtirish (`COMMON_DF`).
 
 Baholash: `eval/questions_llm_full.yaml` (300 savol, `aniq`/`noaniq` teglari, javoblar
 tekshirilgan) asosiy to'plam; natijalar `eval/results/`da. Server bazasiga tegadigan o'lchovlarni
