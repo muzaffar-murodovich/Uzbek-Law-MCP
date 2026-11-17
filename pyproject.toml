@@ -23,6 +23,8 @@ qonunshunos = "qonunshunos.cli:main"
 
 [dependency-groups]
 bench = [
+    "onnx>=1.23.2",
+    "onnxscript>=0.7.2",
     "sentence-transformers>=5.5.1",
     "torch>=2.5",
 ]
