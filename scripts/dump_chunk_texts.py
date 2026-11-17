@@ -4,7 +4,8 @@
         --out data/eval/chunk_texts_llm_full.json.gz
 
 Rerankers read the text, so offline reranking experiments (scripts/rerank_lab.py) need it.
-Only the chunks within ``--n-fts`` / ``--n-vec`` of each list are fetched.
+Only the chunks within ``--n-fts`` / ``--n-vec`` of each list are fetched. ``--heading`` saves
+"heading\ntext", the form the embedding model reads (scripts/vector_lab.py).
 """
 
 import argparse
@@ -24,6 +25,7 @@ def main() -> None:
     parser.add_argument("candidates", type=Path)
     parser.add_argument("--n-fts", type=int, default=100)
     parser.add_argument("--n-vec", type=int, default=50)
+    parser.add_argument("--heading", action="store_true", help="prepend the chunk heading")
     parser.add_argument("--out", type=Path, required=True)
     args = parser.parse_args()
 
@@ -36,8 +38,10 @@ def main() -> None:
     texts: dict[int, str] = {}
     with connect(Settings.from_env().dsn) as conn:
         for start in range(0, len(ids), BATCH):
+            column = "heading || E'\\n' || text" if args.heading else "text"
             rows = conn.execute(
-                "SELECT id, text FROM chunks WHERE id = ANY(%s)", (ids[start : start + BATCH],)
+                f"SELECT id, {column} FROM chunks WHERE id = ANY(%s)",
+                (ids[start : start + BATCH],),
             ).fetchall()
             texts.update(rows)
             print(f"{min(start + BATCH, len(ids))}/{len(ids)}", file=sys.stderr, flush=True)
