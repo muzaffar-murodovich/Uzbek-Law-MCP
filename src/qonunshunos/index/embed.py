@@ -65,6 +65,22 @@ DEFAULT_MODEL = "e5-small-int8"
 TEXT_FORM = "q1"
 
 
+def load_tokenizer(path: Path, max_tokens: int = MAX_TOKENS):
+    """A tokenizer.json with our own settings: no padding, truncation at ``max_tokens``.
+
+    A file saved by transformers after fine-tuning carries the padding and truncation of its
+    last call (BatchLongest, 256). ``encode_batch`` would then pad every text to the batch's
+    longest, and ``Embedder._embed`` would count the pad tokens as text: a vector would depend
+    on its batch neighbours (cosine 0.5-0.9 to the same text embedded alone).
+    """
+    from tokenizers import Tokenizer
+
+    tokenizer = Tokenizer.from_file(str(path))
+    tokenizer.no_padding()
+    tokenizer.enable_truncation(max_tokens)
+    return tokenizer
+
+
 def embed_name(model: str) -> str:
     return f"{MODELS[model].name}/{TEXT_FORM}"
 
@@ -112,13 +128,11 @@ class Embedder:
         self, model_dir: Path, model: str = DEFAULT_MODEL, threads: int | None = None
     ) -> None:
         import onnxruntime as ort
-        from tokenizers import Tokenizer
 
         spec = MODELS[model]
         root = ensure_model(spec, model_dir)
         self.name = embed_name(model)
-        self.tokenizer = Tokenizer.from_file(str(root / "tokenizer.json"))
-        self.tokenizer.enable_truncation(MAX_TOKENS)
+        self.tokenizer = load_tokenizer(root / "tokenizer.json")
         options = ort.SessionOptions()
         if threads:
             options.intra_op_num_threads = threads

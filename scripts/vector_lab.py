@@ -70,14 +70,12 @@ class OnnxModel:
 
     def __init__(self, name: str, max_len: int) -> None:
         import onnxruntime as ort
-        from tokenizers import Tokenizer
 
-        from qonunshunos.index.embed import Embedder
+        from qonunshunos.index.embed import Embedder, load_tokenizer
 
         path = Path(name)
         self.embedder = Embedder.__new__(Embedder)  # skip the Hub download of the live model
-        self.embedder.tokenizer = Tokenizer.from_file(str(path.parent / "tokenizer.json"))
-        self.embedder.tokenizer.enable_truncation(max_len)
+        self.embedder.tokenizer = load_tokenizer(path.parent / "tokenizer.json", max_len)
         options = ort.SessionOptions()
         # The arena keeps the largest batch's buffers for every shape seen: 5.7 GB on home, OOM.
         options.enable_cpu_mem_arena = False

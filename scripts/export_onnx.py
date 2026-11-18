@@ -18,6 +18,7 @@ from onnxruntime.quantization import QuantType, quantize_dynamic
 from tokenizers import Tokenizer
 from transformers import AutoModel
 
+from qonunshunos.index.embed import load_tokenizer
 from qonunshunos.text.normalize import embedding_text
 
 SAMPLES = [
@@ -71,8 +72,7 @@ def main() -> None:
     out.mkdir(exist_ok=True)
     fp32, int8 = out / "model.onnx", out / "model_int8.onnx"
     model = AutoModel.from_pretrained(args.model).eval()
-    tokenizer = Tokenizer.from_file(str(args.model / "tokenizer.json"))
-    tokenizer.enable_truncation(512)
+    tokenizer = load_tokenizer(args.model / "tokenizer.json")
     example = {k: torch.from_numpy(v) for k, v in feeds(tokenizer, SAMPLES[:2]).items()}
     names = ["input_ids", "attention_mask", "token_type_ids"]
     # The dynamo exporter: the TorchScript one bakes transformers 5's mask code for the example
@@ -91,7 +91,9 @@ def main() -> None:
     # Per-channel scales: one scale per tensor dropped the fine-tuned model's cosine to torch to
     # 0.93 (the base model's int8 file keeps 0.98); per channel gives 0.98 at the same size.
     quantize_dynamic(str(fp32), str(int8), weight_type=QuantType.QInt8, per_channel=True)
-    (out / "tokenizer.json").write_bytes((args.model / "tokenizer.json").read_bytes())
+    # Without the padding/truncation transformers saved: onnxruntime users pad themselves.
+    tokenizer.no_truncation()
+    tokenizer.save(str(out / "tokenizer.json"))
 
     batch = feeds(tokenizer, SAMPLES)
     with torch.inference_mode():
