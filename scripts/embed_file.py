@@ -9,7 +9,8 @@ what ``qonunshunos reembed`` would write with the same ONNX file. Work is split 
 ``--part`` chunks saved as ``<out>/part-NNNNN.npz`` (ids int64, vectors float16); a part that
 exists is skipped, so the run can be stopped and started again. ``--merge`` joins the parts
 into ``<out>/vectors.npz``. ``--provider cuda`` needs onnxruntime-gpu installed instead of
-onnxruntime.
+onnxruntime. ``--torch DIR`` runs a fine-tuned model folder in fp32 with torch instead (CUDA if
+present; ``uv run --group bench``): same text form and pooling, same vectors as its fp32 ONNX.
 """
 
 import argparse
@@ -56,6 +57,45 @@ def _embed_part(job: tuple[Path, list[int], list[str], int]) -> tuple[str, int, 
     return target.name, len(ids), time.time() - started
 
 
+class _TorchEmbedder:
+    """Embedder.passages with a transformers model (fp32) in place of onnxruntime."""
+
+    def __init__(self, folder: Path) -> None:
+        import torch
+        from transformers import AutoModel
+
+        from qonunshunos.index.embed import load_tokenizer
+
+        self.torch = torch
+        self.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+        self.tokenizer = load_tokenizer(folder / "tokenizer.json")
+        self.model = AutoModel.from_pretrained(folder).to(self.device).eval()
+
+    def passages(self, texts: list[str], batch_size: int) -> np.ndarray:
+        from qonunshunos.text.normalize import embedding_text
+
+        torch = self.torch
+        order = sorted(range(len(texts)), key=lambda i: len(texts[i]))
+        out = np.zeros((len(texts), 384), dtype=np.float32)
+        for start in range(0, len(order), batch_size):
+            idx = order[start : start + batch_size]
+            enc = self.tokenizer.encode_batch([f"passage: {embedding_text(texts[i])}" for i in idx])
+            width = max(len(e.ids) for e in enc)
+            ids = torch.zeros((len(enc), width), dtype=torch.long)
+            mask = torch.zeros_like(ids)
+            for r, e in enumerate(enc):
+                ids[r, : len(e.ids)] = torch.tensor(e.ids)
+                mask[r, : len(e.ids)] = 1
+            ids, mask = ids.to(self.device), mask.to(self.device)
+            with torch.inference_mode():
+                hidden = self.model(input_ids=ids, attention_mask=mask).last_hidden_state
+            weights = mask.unsqueeze(-1).float()
+            pooled = (hidden * weights).sum(1) / weights.sum(1).clamp(min=1e-9)
+            pooled = torch.nn.functional.normalize(pooled, dim=-1)
+            out[idx] = pooled.cpu().numpy()
+        return out
+
+
 def merge(out: Path) -> None:
     parts = sorted(out.glob("part-*.npz"))
     ids = np.concatenate([np.load(p)["ids"] for p in parts])
@@ -70,6 +110,7 @@ def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("texts", type=Path, nargs="?", help="json.gz {chunk id: text}")
     parser.add_argument("--onnx", type=Path)
+    parser.add_argument("--torch", type=Path, help="fine-tuned model folder, run in fp32")
     parser.add_argument("--out", type=Path, required=True)
     parser.add_argument("--provider", choices=["cpu", "cuda"], default="cpu")
     parser.add_argument("--workers", type=int, default=1, help="processes")
@@ -84,8 +125,8 @@ def main() -> None:
     if args.merge:
         merge(args.out)
         return
-    if not (args.texts and args.onnx):
-        parser.error("texts and --onnx are required")
+    if not args.texts or bool(args.onnx) == bool(args.torch):
+        parser.error("texts and one of --onnx / --torch are required")
 
     with gzip.open(args.texts, "rt", encoding="utf-8") as f:
         texts = {int(k): v for k, v in json.load(f).items()}
@@ -98,15 +139,25 @@ def main() -> None:
             jobs.append((target, part, [texts[i] for i in part], args.batch))
     print(f"{len(ids)} chunks, {len(jobs)} parts to do", flush=True)
 
-    started, done = time.time(), 0
+    started, done, todo = time.time(), 0, sum(len(j[1]) for j in jobs)
+
+    def report(name: str, count: int, seconds: float) -> None:
+        nonlocal done
+        done += count
+        rate = done / (time.time() - started)
+        print(f"{name}: {count} in {seconds:.0f}s; {done} done, {rate:.0f}/s, "
+              f"eta {(todo - done) / rate / 60:.0f}m", flush=True)  # fmt: skip
+
+    if args.torch:
+        global _embedder
+        _embedder = _TorchEmbedder(args.torch)
+        for job in jobs:
+            report(*_embed_part(job))
+        return
     init = (str(args.onnx), args.provider, args.threads)
     with Pool(args.workers, initializer=_load, initargs=init) as pool:
-        for name, count, seconds in pool.imap_unordered(_embed_part, jobs):
-            done += count
-            rate = done / (time.time() - started)
-            left = sum(len(j[1]) for j in jobs) - done
-            print(f"{name}: {count} in {seconds:.0f}s; {done} done, {rate:.0f}/s, "
-                  f"eta {left / rate / 60:.0f}m", flush=True)  # fmt: skip
+        for result in pool.imap_unordered(_embed_part, jobs):
+            report(*result)
 
 
 if __name__ == "__main__":

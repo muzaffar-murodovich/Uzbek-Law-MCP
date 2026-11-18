@@ -12,6 +12,9 @@ search alone and the hybrid RRF of the live search (scripts/fusion_lab.py, no re
 A ``.onnx`` path is run by the live search's Embedder (onnxruntime), e.g. the int8 file of
 scripts/export_onnx.py. The "saved" row uses the stored lists (live int8 model over the
 whole corpus) for reference. Pool embeddings are cached in data/eval/vec/.
+
+``--model NAME@VECTORS.npz`` takes the pool vectors from a whole-corpus file of
+scripts/embed_file.py (ids, vectors) instead of embedding the pool; NAME embeds the queries.
 """
 
 import argparse
@@ -111,6 +114,17 @@ def pool_vectors(model: Model, name: str, ids: list[int], texts: list[str]) -> n
     return vectors
 
 
+def file_vectors(path: Path, ids: list[int]) -> tuple[np.ndarray, list[int]]:
+    """Rows of a scripts/embed_file.py output for the pool ids it has; the ids it lacks."""
+    data = np.load(path)
+    where = {int(c): n for n, c in enumerate(data["ids"])}
+    missing = [c for c in ids if c not in where]
+    rows = [where.get(c, 0) for c in ids]
+    vectors = data["vectors"][rows].astype(np.float32)
+    vectors[[n for n, c in enumerate(ids) if c not in where]] = 0.0  # never retrieved
+    return vectors, missing
+
+
 def row(lab: Lab, label: str, p: Params) -> str:
     m = metrics(lab.ranks(p))
     return (
@@ -140,15 +154,21 @@ def main() -> None:
     hybrid, vector_only = Params(), replace(Params(), w_fts=0.0)
     lines = [row(lab, "saved lists: hybrid", hybrid), row(lab, "saved lists: vector", vector_only)]
     saved = [q["vector"] for q in lab.questions]
-    for name in args.model:
+    for spec in args.model:
+        name, _, vector_file = spec.partition("@")
         model = (OnnxModel if name.endswith(".onnx") else Model)(name, args.max_len)
-        pool = torch.from_numpy(pool_vectors(model, name, ids, [texts[c] for c in ids]))
+        if vector_file:
+            vectors, lacking = file_vectors(Path(vector_file), ids)
+            print(f"{vector_file}: {len(lacking)} pool chunks missing", flush=True)
+        else:
+            vectors = pool_vectors(model, name, ids, [texts[c] for c in ids])
+        pool = torch.from_numpy(vectors)
         pool_ids = np.array(ids)
         for q in lab.questions:
             qv = torch.from_numpy(model.embed(q["queries"], "query: "))
             top = (qv @ pool.T).topk(args.n_vec, dim=1).indices.numpy()
             q["vector"] = [pool_ids[row_].tolist() for row_ in top]
-        lines += [row(lab, f"{name}: hybrid", hybrid), row(lab, f"{name}: vector", vector_only)]
+        lines += [row(lab, f"{spec}: hybrid", hybrid), row(lab, f"{spec}: vector", vector_only)]
         print(header, *lines, sep="\n", flush=True)
     for q, lists in zip(lab.questions, saved, strict=True):
         q["vector"] = lists
