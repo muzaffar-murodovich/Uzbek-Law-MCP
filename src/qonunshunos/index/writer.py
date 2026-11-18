@@ -416,3 +416,56 @@ def reembed(
             flush()
             progress(f"{n}/{len(todo)} documents, {total_chunks} chunks")
     return total_chunks
+
+
+@dataclass
+class LoadResult:
+    updated: int  # chunks whose vector was written
+    marked: int  # documents now marked with the model
+    left: int  # documents with chunks still marked otherwise (for ``reembed``)
+
+
+def load_vectors(
+    conn: psycopg.Connection,
+    ids: np.ndarray,
+    vectors: np.ndarray,
+    model: str,
+    *,
+    batch: int = 20000,
+    progress=print,
+) -> LoadResult:
+    """Write vectors computed elsewhere (scripts/embed_file.py) into ``chunks.embedding``.
+
+    The database may have moved on since the text dump: an id that no longer exists is
+    skipped, and a document gets ``embed_model = model`` only when every one of its chunks got
+    a vector. The caller drops and rebuilds the HNSW index around this (scripts/load_vectors.py).
+    """
+    conn.execute("CREATE TEMP TABLE IF NOT EXISTS new_vec (id bigint PRIMARY KEY, v halfvec(384))")
+    conn.execute("CREATE TEMP TABLE IF NOT EXISTS loaded (id bigint PRIMARY KEY)")
+    conn.execute("TRUNCATE new_vec, loaded")
+    updated = 0
+    for start in range(0, len(ids), batch):
+        part = slice(start, start + batch)
+        with conn.transaction(), conn.cursor() as cur:
+            with cur.copy("COPY new_vec (id, v) FROM STDIN") as copy:
+                for cid, vec in zip(ids[part], vectors[part], strict=True):
+                    copy.write_row((int(cid), "[" + ",".join(map(str, vec.tolist())) + "]"))
+            cur.execute("UPDATE chunks c SET embedding = n.v FROM new_vec n WHERE c.id = n.id")
+            updated += cur.rowcount
+            cur.execute("INSERT INTO loaded SELECT n.id FROM new_vec n JOIN chunks c USING (id)")
+            cur.execute("TRUNCATE new_vec")
+        progress(f"{min(start + batch, len(ids))}/{len(ids)} read, {updated} updated")
+    with conn.transaction():
+        marked = conn.execute(
+            "UPDATE documents d SET meta = meta || %s"
+            " WHERE EXISTS (SELECT 1 FROM chunks c WHERE c.document_id = d.id)"
+            " AND NOT EXISTS (SELECT 1 FROM chunks c WHERE c.document_id = d.id"
+            "   AND NOT EXISTS (SELECT 1 FROM loaded l WHERE l.id = c.id))",
+            (Jsonb({"embed_model": model}),),
+        ).rowcount
+    left = conn.execute(
+        "SELECT count(*) FROM documents d WHERE coalesce(d.meta->>'embed_model', '') <> %s"
+        " AND EXISTS (SELECT 1 FROM chunks c WHERE c.document_id = d.id)",
+        (model,),
+    ).fetchone()[0]
+    return LoadResult(updated, marked, left)

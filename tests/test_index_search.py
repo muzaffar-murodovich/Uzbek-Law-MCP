@@ -6,6 +6,7 @@ from qonunshunos.index.writer import (
     build_sections,
     index_document,
     kind_and_title,
+    load_vectors,
     reembed,
     refresh_fts_stats,
 )
@@ -149,3 +150,36 @@ def test_reembed_only_touches_other_models(db_dsn, fixture_html):
 
         # A second run has nothing left to do.
         assert reembed(conn, newer, progress=lambda _: None) == 0
+
+
+@pytest.mark.db
+def test_load_vectors_marks_only_complete_documents(db_dsn, fixture_html):
+    import numpy as np
+
+    code = parse_document(fixture_html("doc_mehnat_kodeksi.html"), -6257288)
+    decree = parse_document(fixture_html("doc_pf60.html"), -5841063)
+    card = parse_card(fixture_html("card1_in_force.html"), -6257288)
+    card.status = "in_force"
+    with connect(db_dsn) as conn:
+        index_document(conn, code, card, FakeEmbedder())
+        index_document(conn, decree, card, FakeEmbedder())
+        rows = conn.execute("SELECT id, document_id FROM chunks ORDER BY id").fetchall()
+        # Every chunk of the code, all but one of the decree, and an id that no longer exists.
+        decree_ids = [cid for cid, doc in rows if doc == -5841063]
+        ids = [cid for cid, doc in rows if doc == -6257288] + decree_ids[1:] + [10**9]
+        vectors = np.zeros((len(ids), 384), dtype=np.float16)
+        vectors[:, 7] = 1.0
+        result = load_vectors(conn, np.array(ids), vectors, "e6/q1", batch=7, progress=print)
+
+        assert result.updated == len(ids) - 1
+        assert (result.marked, result.left) == (1, 1)
+        marks = dict(conn.execute("SELECT id, meta->>'embed_model' FROM documents").fetchall())
+        assert marks[-6257288] == "e6/q1" and marks[-5841063] != "e6/q1"
+        first = conn.execute(
+            "SELECT embedding::text FROM chunks WHERE id = %s", (ids[0],)
+        ).fetchone()[0]
+        assert first.startswith("[0,0,0,0,0,0,0,1,0")
+        untouched = conn.execute(
+            "SELECT embedding::text FROM chunks WHERE id = %s", (decree_ids[0],)
+        ).fetchone()[0]
+        assert not untouched.startswith("[0,0,0,0,0,0,0,1,0")
