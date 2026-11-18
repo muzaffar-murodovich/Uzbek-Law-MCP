@@ -6,6 +6,11 @@
 Rerankers read the text, so offline reranking experiments (scripts/rerank_lab.py) need it.
 Only the chunks within ``--n-fts`` / ``--n-vec`` of each list are fetched. ``--heading`` saves
 "heading\ntext", the form the embedding model reads (scripts/vector_lab.py).
+
+``--all`` saves every chunk of the corpus instead (for re-embedding it on a rented GPU):
+
+    bash scripts/with_server_db.sh uv run python scripts/dump_chunk_texts.py --all --heading \
+        --out data/embed/chunk_texts_all.json.gz
 """
 
 import argparse
@@ -22,21 +27,27 @@ BATCH = 2000
 
 def main() -> None:
     parser = argparse.ArgumentParser()
-    parser.add_argument("candidates", type=Path)
+    parser.add_argument("candidates", type=Path, nargs="?")
+    parser.add_argument("--all", action="store_true", help="every chunk, not only candidates")
     parser.add_argument("--n-fts", type=int, default=100)
     parser.add_argument("--n-vec", type=int, default=50)
     parser.add_argument("--heading", action="store_true", help="prepend the chunk heading")
     parser.add_argument("--out", type=Path, required=True)
     args = parser.parse_args()
 
-    with gzip.open(args.candidates, "rt", encoding="utf-8") as f:
-        questions = json.load(f)["questions"]
-    ids = sorted(
-        {c for q in questions for ranking in q["fts"] for c in ranking[: args.n_fts]}
-        | {c for q in questions for ranking in q["vector"] for c in ranking[: args.n_vec]}
-    )
+    if args.all == bool(args.candidates):
+        parser.error("give a candidates file or --all")
     texts: dict[int, str] = {}
     with connect(Settings.from_env().dsn) as conn:
+        if args.all:
+            ids = [r[0] for r in conn.execute("SELECT id FROM chunks ORDER BY id").fetchall()]
+        else:
+            with gzip.open(args.candidates, "rt", encoding="utf-8") as f:
+                questions = json.load(f)["questions"]
+            ids = sorted(
+                {c for q in questions for ranking in q["fts"] for c in ranking[: args.n_fts]}
+                | {c for q in questions for ranking in q["vector"] for c in ranking[: args.n_vec]}
+            )
         for start in range(0, len(ids), BATCH):
             column = "heading || E'\\n' || text" if args.heading else "text"
             rows = conn.execute(
