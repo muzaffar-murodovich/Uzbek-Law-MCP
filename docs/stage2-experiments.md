@@ -811,6 +811,35 @@ Xulosalar:
   `gpu1/e4s8`). Keyingi qadam: int8 eksport, butun korpusni qayta embedding qilish (GPU'da) va
   xizmatda reranker bilan o'lchash.
 
+## 6i. Butun korpusni GPU'da qayta embedding qilish (2026-11-18)
+
+**Tokenizer xatosi.** transformers fine-tune'dan keyin `tokenizer.json`ga oxirgi chaqiruv
+sozlamalarini yozadi (`padding: BatchLongest`, pad_id 1; `truncation: 256`). `Embedder`
+`encode_batch` natijasidagi hamma id'larni matn deb hisoblardi: vektor batch'dagi eng uzun
+matnga bog'liq bo'lib qolgan (bitta matn yolg'iz va 32 talik batch'da: e6 fp32 ONNX cosine
+0,54–1,0; Xenova fayllari 1,000 / int8 0,996). torch va ONNX bir xil batch'da 1,0000 bergani
+uchun `export_onnx.py` tekshiruvi buni ko'rmagan. Tuzatildi: `load_tokenizer` (padding o'chiq,
+truncation 512), eksport toza `tokenizer.json` yozadi. Tuzatishdan keyin e6 fp32 1,000, int8
+0,98–0,99. **6g dagi ft1 int8 pool natijasi (0,774) shu xato bilan o'lchangan.**
+
+**Embedding.** `dump_chunk_texts.py --all --heading` (492 263 bo'lak, 69 MB) →
+`scripts/embed_file.py --torch` (fp32, RunPod RTX PRO 6000, Secure, US-KS-2, $2,69/soat;
+`get-capacity` $1,69 ko'rsatgan): ≈1 500 bo'lak/s, butun korpus ≈5,5 daqiqa (`home` CPU'da
+int8 10,7 soat). int8 ONNX GPU'da ishlamadi (onnxruntime-gpu 1.32 CUDA 13 + cuDNN 9 so'radi va
+CPU'ga tushdi, 4 thread'da 14 bo'lak/s). Pod ≈27 daqiqa, ≈$1,2.
+
+Pool baholashi butun korpus vektorlaridan (`vector_lab.py --model NAME@vectors.npz`, 40 ta pool
+bo'lagi faylda yo'q, korpus o'zgargan), 208 aniq savol, reranker'siz:
+
+| Bo'laklar | Savollar | hybrid R@1 | hybrid R@10 | vector R@10 |
+|---|---|---|---|---|
+| e6 fp32 | e6 fp32 (torch) | 0,389 | 0,837 | 0,760 |
+| e6 fp32 | e6 int8 ONNX | 0,380 | 0,837 | 0,745 |
+
+Qaror: bo'laklar fp32 bilan (GPU), savollar serverda int8 bilan. Hybrid natija bir xil,
+server xotirasi o'zgarmaydi. Vektorlar: `home`da `data/embed/e6-fp32/vectors.npz` (ids,
+float16). Keyingi qadam: serverga yuklash, HNSW, xizmatda reranker bilan o'lchash.
+
 ## 7. Ochiq masalalar
 
 - **Model tanlovi.** 4.7-bo'lim: sifat bo'yicha bge-m3 birinchi, lekin `myserver` uchun og'ir.
