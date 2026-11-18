@@ -33,14 +33,18 @@ from qonunshunos.text.normalize import embedding_text
 CACHE = Path("data/eval/vec")
 
 
+DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+
+
 class Model:
     def __init__(self, name: str, max_len: int) -> None:
         self.tokenizer = AutoTokenizer.from_pretrained(name)
-        self.model = AutoModel.from_pretrained(name).eval()
+        self.model = AutoModel.from_pretrained(name).to(DEVICE).eval()
         self.max_len = max_len
 
     @torch.inference_mode()
-    def embed(self, texts: list[str], prefix: str, batch: int = 32, log: bool = False):
+    def embed(self, texts: list[str], prefix: str, batch: int = 0, log: bool = False):
+        batch = batch or (256 if DEVICE.type == "cuda" else 32)
         order = sorted(range(len(texts)), key=lambda i: len(texts[i]))
         out = np.zeros((len(texts), 384), dtype=np.float32)
         for n, start in enumerate(range(0, len(order), batch)):
@@ -51,11 +55,11 @@ class Model:
                 truncation=True,
                 max_length=self.max_len,
                 return_tensors="pt",
-            )
+            ).to(DEVICE)
             hidden = self.model(**enc).last_hidden_state
             mask = enc["attention_mask"].unsqueeze(-1).float()
             pooled = (hidden * mask).sum(1) / mask.sum(1).clamp(min=1e-9)
-            out[idx] = F.normalize(pooled, dim=-1).numpy()
+            out[idx] = F.normalize(pooled, dim=-1).float().cpu().numpy()
             if log and n % 200 == 0:
                 print(f"  {start}/{len(texts)}", flush=True)
         return out

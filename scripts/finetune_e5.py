@@ -1,4 +1,4 @@
-"""Fine-tune multilingual-e5-small on the training pairs (scripts/train_data.py) on CPU.
+"""Fine-tune multilingual-e5-small on the pairs of scripts/train_data.py (CUDA if present).
 
     HF_HUB_DISABLE_XET=1 uv run --group bench python scripts/finetune_e5.py \
         --pairs data/train/pairs.jsonl --out data/models/e5-small-ft1
@@ -61,8 +61,12 @@ def batches(examples: list, size: int, rng: random.Random) -> list[list]:
     return out
 
 
+DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+
+
 def encode(model, tokenizer, texts: list[str], max_len: int) -> torch.Tensor:
     enc = tokenizer(texts, padding=True, truncation=True, max_length=max_len, return_tensors="pt")
+    enc = enc.to(DEVICE)
     hidden = model(**enc).last_hidden_state
     mask = enc["attention_mask"].unsqueeze(-1).float()
     pooled = (hidden * mask).sum(1) / mask.sum(1).clamp(min=1e-9)
@@ -89,10 +93,13 @@ def main() -> None:
     torch.manual_seed(args.seed)
     rng = random.Random(args.seed)
     tokenizer = AutoTokenizer.from_pretrained(args.base)
-    model = AutoModel.from_pretrained(args.base, attn_implementation="sdpa")
+    model = AutoModel.from_pretrained(args.base, attn_implementation="sdpa").to(DEVICE)
     model.embeddings.word_embeddings.weight.requires_grad = False
-    # Recompute activations in backward: batch 32 x 256 tokens otherwise needs > 5 GB (OOM on home).
-    model.gradient_checkpointing_enable()
+    if DEVICE.type == "cpu":
+        # Recompute activations in backward: batch 32 x 256 tokens otherwise needs > 5 GB
+        # (OOM on home). A GPU has the memory, so it skips the recomputation.
+        model.gradient_checkpointing_enable()
+    print(f"device {DEVICE}", flush=True)
     params = [p for p in model.parameters() if p.requires_grad]
     print(f"trainable {sum(p.numel() for p in params) / 1e6:.1f}M "
           f"of {sum(p.numel() for p in model.parameters()) / 1e6:.1f}M", flush=True)  # fmt: skip
@@ -119,7 +126,7 @@ def main() -> None:
             q = encode(model, tokenizer, [b[0] for b in batch], args.max_query)
             p = encode(model, tokenizer, [b[1] for b in batch], args.max_passage)
             logits = args.scale * q @ p.T
-            loss = F.cross_entropy(logits, torch.arange(len(batch)))
+            loss = F.cross_entropy(logits, torch.arange(len(batch), device=DEVICE))
             loss.backward()
             torch.nn.utils.clip_grad_norm_(params, 1.0)
             optimizer.step()
