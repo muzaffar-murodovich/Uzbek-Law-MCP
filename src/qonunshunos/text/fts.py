@@ -4,7 +4,10 @@ PostgreSQL has no Uzbek stemmer, so text is normalized here and handed to the ``
 configuration as space-separated terms. Queries go through the very same function.
 """
 
+import gzip
 import re
+from functools import cache
+from importlib import resources
 
 from qonunshunos.text.normalize import fold
 
@@ -40,7 +43,10 @@ def stem(word: str) -> str:
     for slot in _SLOTS:
         for suffix, min_len in slot:
             if word.endswith(suffix) and len(word) - len(suffix) >= min_len:
-                word = word[: -len(suffix)]
+                if suffix[0] == "i" and word[: -len(suffix)].endswith("ch"):
+                    suffix = suffix[1:]  # keep the i of agent nouns: beruvchi(miz), not -imiz
+                if suffix:
+                    word = word[: -len(suffix)]
                 break
         if word in _KEEP:
             return word
@@ -49,14 +55,44 @@ def stem(word: str) -> str:
     return word
 
 
+# Stems whose vowel drops before a suffix (shahar → shahri): the suffix stripper and the
+# lemma table both leave the short form, so it is mapped to the full one.
+_ELISION = {
+    "shahr": "shahar", "ogl": "ogil", "burn": "burun", "qorn": "qorin", "kongl": "kongil",
+    "bogz": "bogiz", "ogz": "ogiz", "bagr": "bagir", "singl": "singil", "zehn": "zehin",
+}  # fmt: skip
+
+
+@cache
+def _lemmas() -> dict[str, str]:
+    """Word → lemma, FTS form, from the uzmorph analyser (scripts/build_lemmas.py).
+
+    Only the words whose stem changes through the lemma are listed (52k of 229k corpus words):
+    beruvchiga → beruvchi, kodeksi → kodeks, soliqqa → soliq.
+    """
+    raw = resources.files("qonunshunos.text").joinpath("lemmas.tsv.gz").read_bytes()
+    lines = gzip.decompress(raw).decode("utf-8").splitlines()
+    return dict(line.split("\t", 1) for line in lines)
+
+
+def term(word: str) -> str:
+    """FTS term of one folded, apostrophe-free word: stem of its lemma when the corpus has it.
+
+    Stemming the lemma (not using it as is) keeps a known form and an unseen form of the same
+    word together: beruvchiga → beruvchi → beruvch, and beruvchimizga → beruvch.
+    """
+    stemmed = stem(_lemmas().get(word, word))
+    return _ELISION.get(stemmed, stemmed)
+
+
 def terms(text: str, use_stem: bool = True) -> list[str]:
-    """Folded, apostrophe-free terms without stopwords (optionally stemmed)."""
+    """Folded, apostrophe-free terms without stopwords (optionally lemmatised and stemmed)."""
     words = _WORD_RE.findall(fold(text).translate(_DROP))
     out = []
     for word in words:
         if word in STOPWORDS:
             continue
-        out.append(stem(word) if use_stem and not word.isdigit() else word)
+        out.append(term(word) if use_stem and not word.isdigit() else word)
     return out
 
 

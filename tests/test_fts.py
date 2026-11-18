@@ -37,3 +37,25 @@ def test_terms_superscripts_become_digits():
 def test_to_tsquery_is_or_of_unique_terms():
     assert to_tsquery("ishdan bo'shatish ishdan") == "ish | boshatish"
     assert to_tsquery("va yoki") is None
+
+
+@pytest.mark.parametrize(
+    "forms",
+    [
+        ["beruvchi", "beruvchiga", "beruvchilar", "beruvchisi", "beruvchimizga"],
+        ["shahar", "shaharda", "shahri", "shahrida", "shahrimizda"],
+        ["kodeks", "kodeksi", "kodeksining"],
+        ["soliq", "solig‘i", "soliqlar", "soliqqa"],
+        ["o‘g‘il", "o‘g‘li", "o‘g‘illari"],
+    ],
+)
+def test_forms_of_one_word_share_a_term(forms):
+    assert len({" ".join(terms(f)) for f in forms}) == 1
+
+
+@pytest.mark.parametrize(
+    ("derived", "base"),
+    [("ishsiz", "ish"), ("raqamli", "raqam"), ("taqiqlanmagan", "taqiqlangan"), ("birov", "bir")],
+)
+def test_meaning_changing_suffixes_stay(derived, base):
+    assert terms(derived) != terms(base)
