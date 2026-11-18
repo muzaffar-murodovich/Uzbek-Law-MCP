@@ -7,6 +7,7 @@ from qonunshunos.index.writer import (
     index_document,
     kind_and_title,
     load_vectors,
+    rebuild_fts,
     reembed,
     refresh_fts_stats,
 )
@@ -183,3 +184,16 @@ def test_load_vectors_marks_only_complete_documents(db_dsn, fixture_html):
             "SELECT embedding::text FROM chunks WHERE id = %s", (decree_ids[0],)
         ).fetchone()[0]
         assert not untouched.startswith("[0,0,0,0,0,0,0,1,0")
+
+
+@pytest.mark.db
+def test_rebuild_fts_in_batches_restores_the_terms(db_dsn, fixture_html):
+    doc = parse_document(fixture_html("doc_mehnat_kodeksi.html"), -6257288)
+    card = parse_card(fixture_html("card1_in_force.html"), -6257288)
+    card.status = "in_force"
+    with connect(db_dsn) as conn:
+        total = index_document(conn, doc, card, FakeEmbedder())
+        before = conn.execute("SELECT id, tsv::text FROM chunks ORDER BY id").fetchall()
+        conn.execute("UPDATE chunks SET tsv = ''::tsvector")
+        assert rebuild_fts(conn, use_stem=True, batch=7, progress=lambda _: None) == total
+        assert conn.execute("SELECT id, tsv::text FROM chunks ORDER BY id").fetchall() == before

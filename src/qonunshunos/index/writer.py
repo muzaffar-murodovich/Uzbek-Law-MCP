@@ -323,18 +323,34 @@ def index_document(
     return len(chunks)
 
 
-def rebuild_fts(conn: psycopg.Connection, use_stem: bool) -> int:
-    """Recompute ``chunks.tsv`` (e.g. after changing the stemmer) without re-embedding."""
-    rows = conn.execute("SELECT id, heading, text FROM chunks").fetchall()
-    with conn.transaction(), conn.cursor() as cur:
-        cur.executemany(
-            "UPDATE chunks SET tsv = setweight(to_tsvector('simple', %s), 'A')"
-            " || setweight(to_tsvector('simple', %s), 'B') WHERE id = %s",
-            [(to_fts_text(h, use_stem), to_fts_text(t, use_stem), i) for i, h, t in rows],
-        )
-        cur.execute("UPDATE documents SET meta = meta || %s", (Jsonb({"fts_stem": use_stem}),))
+def rebuild_fts(
+    conn: psycopg.Connection, use_stem: bool, *, batch: int = 5000, progress=print
+) -> int:
+    """Recompute ``chunks.tsv`` (e.g. after changing the stemmer) without re-embedding.
+
+    Chunks are read and written ``batch`` ids at a time, each batch in its own transaction:
+    the full corpus does not fit in the server's memory at once, and a stopped run leaves
+    every chunk with either the old or the new terms.
+    """
+    low, high = conn.execute("SELECT min(id), max(id) FROM chunks").fetchone()
+    done = 0
+    for start in range(low or 0, (high or -1) + 1, batch):
+        rows = conn.execute(
+            "SELECT id, heading, text FROM chunks WHERE id >= %s AND id < %s",
+            (start, start + batch),
+        ).fetchall()
+        with conn.transaction(), conn.cursor() as cur:
+            cur.executemany(
+                "UPDATE chunks SET tsv = setweight(to_tsvector('simple', %s), 'A')"
+                " || setweight(to_tsvector('simple', %s), 'B') WHERE id = %s",
+                [(to_fts_text(h, use_stem), to_fts_text(t, use_stem), i) for i, h, t in rows],
+            )
+        done += len(rows)
+        progress(f"{done} chunks (ids < {start + batch})")
+    with conn.transaction():
+        conn.execute("UPDATE documents SET meta = meta || %s", (Jsonb({"fts_stem": use_stem}),))
     refresh_fts_stats(conn)
-    return len(rows)
+    return done
 
 
 def refresh_fts_stats(conn: psycopg.Connection) -> int:
