@@ -1,7 +1,8 @@
 """Sentence embeddings with ``multilingual-e5-small`` on onnxruntime (no torch).
 
 Model files are downloaded once from the Hugging Face Hub into ``model_dir`` at a pinned
-revision and checked against their sha256.
+revision and checked against their sha256. A ``local/`` repo (our fine-tuned model, not on the
+Hub) is never downloaded: deploy/deploy.sh copies its files into ``model_dir``.
 """
 
 import hashlib
@@ -58,7 +59,19 @@ MODELS = {
         onnx_file="onnx/model.onnx",
     ),
 }
-DEFAULT_MODEL = "e5-small-int8"
+# e5-small fine-tuned on the question-passage pairs (docs/stage2-experiments.md 6h, 6i), int8 by
+# scripts/export_onnx.py. Files: data/models/local__e5-small-e6/2026-11-18 on home.
+MODELS["e5-small-e6-int8"] = ModelSpec(
+    name="e5-small-e6-int8",
+    repo="local/e5-small-e6",
+    revision="2026-11-18",
+    files={
+        "tokenizer.json": "6040ba36e3e2f7b2fa6ae076b69d024a08666bea4c345105a32e542900fcc7e7",
+        "onnx/model_int8.onnx": "1e181aa85173f62d05f25e2e1f05a4a57811a45124a8a0bb043aafdf9e068a7d",
+    },
+    onnx_file="onnx/model_int8.onnx",
+)
+DEFAULT_MODEL = "e5-small-e6-int8"
 
 # Version of the text form fed to the model (see ``embedding_text``). It is part of the name
 # stored in documents.meta->>'embed_model', so vectors made from another form are not reused.
@@ -105,6 +118,11 @@ def ensure_model(spec: ModelSpec, model_dir: Path) -> Path:
         target = root / rel
         if target.exists() and _sha256(target) == sha:
             continue
+        if spec.repo.startswith("local/"):
+            raise RuntimeError(
+                f"{target} is missing or differs from sha256 {sha[:12]}: {spec.name} is not on "
+                "the Hub, copy its files there (deploy/deploy.sh does it from home)"
+            )
         target.parent.mkdir(parents=True, exist_ok=True)
         url = f"https://huggingface.co/{spec.repo}/resolve/{spec.revision}/{rel}"
         log.warning("downloading %s", url)
