@@ -756,13 +756,60 @@ hybrid 0,668, reranker bilan 0,716).
   ONNX vektorlarining torch bilan cosine'i 0,93. Dynamo eksportchisi bilan 1,0000.
 - Oddiy int8 (`quantize_dynamic`, bitta scale): cosine 0,93. Xizmatdagi base int8 fayl o'z fp32
   si bilan 0,984 beradi. `per_channel=True` bilan ft1 int8 0,98 (fayl o'sha 119 MB).
-- int8 ft1 ning pool baholashi `home`da ishlamoqda (`data/train/vlab2.log`). onnxruntime arena'si
-  har xil shakllar uchun 5,7 GB gacha o'sdi (OOM xavfi), `vector_lab.py` da arena o'chirilgan;
-  shuning uchun ≈4 bo'lak/s, ≈5 soat.
+- int8 ft1 pool'da (`home`, ≈5 soat: onnxruntime arena'si har xil shakllar uchun 5,7 GB gacha
+  o'sgani uchun `vector_lab.py` da o'chirilgan, ≈4 bo'lak/s): hybrid R@10 **0,774** (R@1 0,356),
+  vector 0,668. fp32 bilan farq shovqin darajasida (hybrid 0,769), demak serverga int8 yetadi.
 
 `home` CPU'da bitta tajriba ≈1 kun olgani uchun keyingi tajribalar ijaradagi GPU'da (RunPod)
 bo'ladi: 750 / 1 506 / 1 849 juftlik (ko'proq data foyda beradimi), int8 va fp32 masalasi,
 2–3 ta sozlama varianti. Butun korpusni qayta embedding qilish `home` CPU'da 10,7 soat (6e).
+
+## 6h. GPU'da fine-tune tajribalari (RunPod, 2026-11-18)
+
+RunPod Secure Cloud, RTX 3090 24 GB, EU-CZ-1, $0,50/soat (`get-capacity` $0,22 ko'rsatgan edi,
+bu Community narxi). Pod ≈68 daqiqa ishladi, ≈$0,57. `finetune_e5.py` va `vector_lab.py` CUDA
+bo'lsa GPU'da ishlaydi (GPU'da gradient checkpointing o'chiq). Bitta o'qitish (1 849 juftlik,
+2 epoch) ≈40 s (`home` CPU'da 68 daqiqa), pool'ni (72 533 bo'lak) embedding qilib baholash ≈3
+daqiqa (`home`da int8 ≈5 soat).
+
+Baholash 6g dagidek: pool, 208 aniq savol, fp32, reranker'siz. Bitta savol = 0,005.
+
+**Data hajmi** (2 epoch, batch 32, lr 2e-5, seed 7). 1 506 to'plami ft1 niki (b017–b023
+batch'larining bo'laklari chiqarilgan), 753 uning tasodifiy yarmi (seed 7):
+
+| Juftlik | hybrid R@1 | hybrid R@10 | vector R@10 |
+|---|---|---|---|
+| 0 (base) | 0,216 | 0,688 | 0,385 |
+| 753 | 0,365 | 0,774 | 0,688 |
+| 1 506 | 0,370 | 0,779 | 0,692 |
+| 1 849 | 0,365 | 0,793 | 0,707 |
+
+Data ikki barobar bo'lganda +1 savol: bu hajmda data asosiy cheklov emas. GPU'dagi 1 506
+(0,779) CPU'dagi ft1 ga (0,769) yaqin.
+
+**Sozlamalar** (1 849 juftlik):
+
+| Run | hybrid R@1 | hybrid R@10 | vector R@10 |
+|---|---|---|---|
+| 2 epoch, b32, lr 2e-5 | 0,365 | 0,793 | 0,707 |
+| batch 64 | 0,375 | 0,779 | 0,712 |
+| batch 128 | 0,380 | 0,764 | 0,692 |
+| 4 epoch, lr 3e-5, seed 7 | 0,375 | 0,822 | 0,707 |
+| 4 epoch, lr 3e-5, seed 8 | 0,380 | 0,841 | 0,731 |
+| 4 epoch, lr 3e-5, seed 9 | 0,394 | 0,808 | 0,721 |
+| 4 epoch, lr 5e-5 | 0,356 | 0,832 | 0,721 |
+| **6 epoch, lr 3e-5, seed 7 (`e6`)** | 0,389 | **0,837** | **0,760** |
+| 6 epoch, lr 3e-5, seed 8 | 0,356 | 0,822 | 0,736 |
+| 8 epoch, lr 3e-5 | 0,389 | 0,827 | 0,764 |
+| 10 epoch, lr 3e-5 | 0,380 | 0,837 | 0,750 |
+
+Xulosalar:
+- Seed shovqini katta: bir xil sozlamada R@10 0,808–0,841 (±3–4 savol). Bitta run'ga ishonma.
+- Kattaroq batch foyda bermadi. Uzunroq o'qitish bergan: 2 epoch 0,793, 4–10 epoch 0,81–0,84,
+  4 epoch'dan keyin to'yinadi.
+- Tanlov: `e6` (6 epoch, lr 3e-5, batch 32, seed 7), `home`da `data/models/gpu1/e6` (yana
+  `gpu1/e4s8`). Keyingi qadam: int8 eksport, butun korpusni qayta embedding qilish (GPU'da) va
+  xizmatda reranker bilan o'lchash.
 
 ## 7. Ochiq masalalar
 

@@ -75,8 +75,9 @@ vaqt FTS. Ommaga ochish kechiktirilgan. O'qitish to'plami: `scripts/train_data.p
 `data/train/pairs.jsonl` (`home`da), 1 849 juftlik (6f). Birinchi fine-tune (ft1, 1 506 juftlik,
 `scripts/finetune_e5.py`, 6g) 72k bo'lakli pool'da hybrid R@10 ni 0,688 → 0,769 ga, vector'ni
 0,385 → 0,697 ga ko'tardi (reranker'siz, `scripts/vector_lab.py`). Serverga: `scripts/export_onnx.py`
-(dynamo eksport, int8 `per_channel`). Keyingi ish: ijaradagi GPU'da (RunPod, `runpod` plugin/MCP)
-tajribalar, keyin butun korpusni qayta embedding qilib deploy; FTS'ni tezlashtirish (`COMMON_DF`).
+(dynamo eksport, int8 `per_channel`). GPU'da (RunPod RTX 3090, 6h) 1 849 juftlik, 6 epoch, lr 3e-5 → pool'da hybrid R@10 0,837
+(seed shovqini ±0,02), model `home`da `data/models/gpu1/e6`. Keyingi ish: int8 eksport, butun
+korpusni GPU'da qayta embedding qilib deploy; FTS'ni tezlashtirish (`COMMON_DF`).
 
 Baholash: `eval/questions_llm_full.yaml` (300 savol, `aniq`/`noaniq` teglari, javoblar
 tekshirilgan) asosiy to'plam; natijalar `eval/results/`da. Server bazasiga tegadigan o'lchovlarni
