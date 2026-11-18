@@ -838,7 +838,26 @@ bo'lagi faylda yo'q, korpus o'zgargan), 208 aniq savol, reranker'siz:
 
 Qaror: bo'laklar fp32 bilan (GPU), savollar serverda int8 bilan. Hybrid natija bir xil,
 server xotirasi o'zgarmaydi. Vektorlar: `home`da `data/embed/e6-fp32/vectors.npz` (ids,
-float16). Keyingi qadam: serverga yuklash, HNSW, xizmatda reranker bilan o'lchash.
+float16).
+
+**Deploy (2026-11-18).** Xizmat modeli `e5-small-e6-int8/q1` (`index/embed.py`, fayllar HF'da emas,
+`deploy.sh` `home`dan ko'chiradi). `scripts/load_vectors.py` serverda: HNSW o'chirildi, 492 263
+vektor 20 000 talik batch'larda yozildi (COPY → UPDATE, 218 s), 10 274 hujjat belgilandi,
+`reembed` uchun hujjat qolmadi; HNSW qayta qurildi (≈29 daqiqa, 2 yadro).
+
+**Xizmatda o'lchov** (butun korpus, `qonunshunos eval --rerank`, 208 aniq savol, LLM `alt`):
+
+| Run | R@1 | R@5 | R@8 | R@10 | MRR |
+|---|---|---|---|---|---|
+| q1 (eski), reranker'siz | 0,245 | 0,562 | 0,654 | 0,668 | 0,375 |
+| q1 (eski), rerank 20 (avvalgi xizmat) | 0,394 | 0,649 | 0,688 | 0,716 | 0,502 |
+| e6, reranker'siz | 0,389 | 0,697 | 0,760 | 0,793 | 0,515 |
+| **e6, rerank 20 (xizmat)** | **0,462** | **0,764** | **0,841** | **0,846** | **0,586** |
+| e6, faqat vector | 0,236 | 0,558 | 0,630 | 0,663 | 0,370 |
+
+FTS natijalari o'zgarmadi (R@10 0,601), farq faqat vektordan. R@8 ham ko'rsatildi: `search_law`
+standart holatda 8 ta modda qaytaradi. Maqsad (R@10 0,85) bilan farq ≈1 savol. Pool natijasi
+(0,837, reranker'siz) butun korpusda 0,793 bo'ldi.
 
 ## 7. Ochiq masalalar
 
