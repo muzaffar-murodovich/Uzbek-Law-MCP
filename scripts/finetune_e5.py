@@ -29,17 +29,29 @@ from qonunshunos.text.normalize import embedding_text
 BASE = "intfloat/multilingual-e5-small"
 
 
-def load_examples(path: Path) -> list[tuple[str, str, int]]:
-    """(anchor, passage, chunk id) for the question and the query of every pair."""
+def load_examples(path: Path, negatives: dict | None = None) -> list[tuple]:
+    """(anchor, passage, chunk id, hard negative ids) for the question and query of every pair."""
     out = []
-    for line in path.open(encoding="utf-8"):
-        if not line.strip():
-            continue
+    lines = [line for line in path.open(encoding="utf-8") if line.strip()]
+    for n, line in enumerate(lines):
         pair = json.loads(line)
         passage = "passage: " + embedding_text(pair["passage"])
         for field in ("question", "query"):
             if pair.get(field):
-                out.append(("query: " + embedding_text(pair[field]), passage, pair["chunk_id"]))
+                hard = (negatives or {}).get((n, field), [])
+                out.append(
+                    ("query: " + embedding_text(pair[field]), passage, pair["chunk_id"], hard)
+                )
+    return out
+
+
+def load_negatives(path: Path, skip: int) -> dict:
+    """scripts/mine_negatives.py output → {(pair, field): ids}, without the first ``skip``."""
+    out = {}
+    for line in path.open(encoding="utf-8"):
+        if line.strip():
+            m = json.loads(line)
+            out[(m["pair"], m["field"])] = m["negatives"][skip:]
     return out
 
 
@@ -85,6 +97,9 @@ def main() -> None:
     parser.add_argument("--max-query", type=int, default=64)
     parser.add_argument("--max-passage", type=int, default=256)
     parser.add_argument("--seed", type=int, default=7)
+    parser.add_argument("--negatives", type=Path, help="scripts/mine_negatives.py output")
+    parser.add_argument("--texts", type=Path, help="json.gz {chunk id: heading\\ntext}")
+    parser.add_argument("--neg-skip", type=int, default=3, help="mined hits left out")
     parser.add_argument("--threads", type=int, default=0, help="torch threads (0: default)")
     args = parser.parse_args()
 
@@ -104,7 +119,15 @@ def main() -> None:
     print(f"trainable {sum(p.numel() for p in params) / 1e6:.1f}M "
           f"of {sum(p.numel() for p in model.parameters()) / 1e6:.1f}M", flush=True)  # fmt: skip
 
-    examples = load_examples(args.pairs)
+    texts: dict[int, str] = {}
+    negatives = None
+    if args.negatives:
+        import gzip
+
+        with gzip.open(args.texts, "rt", encoding="utf-8") as f:
+            texts = {int(k): v for k, v in json.load(f).items()}
+        negatives = load_negatives(args.negatives, args.neg_skip)
+    examples = load_examples(args.pairs, negatives)
     plan = [batches(examples, args.batch, rng) for _ in range(args.epochs)]
     total = sum(len(p) for p in plan)
     warmup = max(1, total // 10)
@@ -125,6 +148,10 @@ def main() -> None:
         for i, batch in enumerate(epoch_batches, start=1):
             q = encode(model, tokenizer, [b[0] for b in batch], args.max_query)
             p = encode(model, tokenizer, [b[1] for b in batch], args.max_passage)
+            hard = [rng.choice([c for c in b[3] if c in texts] or [None]) for b in batch]
+            if negatives and all(h is not None for h in hard):
+                extra = ["passage: " + embedding_text(texts[h]) for h in hard]
+                p = torch.cat([p, encode(model, tokenizer, extra, args.max_passage)])
             logits = args.scale * q @ p.T
             loss = F.cross_entropy(logits, torch.arange(len(batch), device=DEVICE))
             loss.backward()
