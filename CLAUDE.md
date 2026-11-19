@@ -68,18 +68,20 @@ Bosqichlar holati `PLAN.md`ning 8-bo'limida. 1–5-bosqichlar bajarildi (har bir
 hisobot Telegram'ga (@qonunshunosbot) keladi (`docs/stage5-ops.md`). 6-bosqich jarayonda
 (`docs/stage6-full-crawl.md`): 15 810 ta amaldagi lotin hujjat yuklab olindi, parser v2 bilan
 parse qilindi va server bazasiga indekslandi (491 947 bo'lak, HNSW qurilgan, tungi update timer'i
-yoqilgan). To'liq bazada aniq savollarda R@10 0,846, R@8 0,841 (R@1 0,462), maqsad
-0,85 (6i). Xizmatda: fine-tune qilingan embedding modeli `e5-small-e6-int8/q1` (fayllari HF'da emas,
-`home`dagi `data/models/local__e5-small-e6`, deploy ko'chiradi; tipografik `‘ ’` shakl, 6e) va yengil reranker
-(int8 ONNX, top 20, 256 token, `QONUNSHUNOS_RERANK_TOP`). Serverda bitta qidiruv 3–4 s, asosiy
-vaqt FTS. Ommaga ochish kechiktirilgan. O'qitish to'plami: `scripts/train_data.py`,
+yoqilgan). To'liq bazada aniq savollarda R@10 0,875, R@8 0,865 (R@1 0,538), maqsad
+0,85 bajarildi (6j). Xizmatda: fine-tune qilingan embedding modeli `e5-small-e6-int8/q1` (fayllari HF'da emas,
+`home`dagi `data/models/local__e5-small-e6`, deploy ko'chiradi; tipografik `‘ ’` shakl, 6e) va fine-tune qilingan reranker
+`mmarco-uz-rr1-int8` (`home`dagi `data/models/local__mmarco-uz-rr1`, top 30, 256 token,
+`QONUNSHUNOS_RERANK_TOP`); FTS'da noun lemmalari (`text/lemmas.tsv.gz`, uzmorph'dan,
+`scripts/build_lemmas.py`), `COMMON_DF` 2 %, vektor og'irligi 1,5. Serverda bitta qidiruv 2–3 s,
+asosiy vaqt reranker. Ommaga ochish kechiktirilgan. O'qitish to'plami: `scripts/train_data.py`,
 `data/train/pairs.jsonl` (`home`da), 1 849 juftlik (6f). Birinchi fine-tune (ft1, 1 506 juftlik,
 `scripts/finetune_e5.py`, 6g) 72k bo'lakli pool'da hybrid R@10 ni 0,688 → 0,769 ga, vector'ni
 0,385 → 0,697 ga ko'tardi (reranker'siz, `scripts/vector_lab.py`). Serverga: `scripts/export_onnx.py`
 (dynamo eksport, int8 `per_channel`). GPU'da (RunPod RTX 3090, 6h) 1 849 juftlik, 6 epoch, lr 3e-5 → pool'da hybrid R@10 0,837
 (seed shovqini ±0,02), model `home`da `data/models/gpu1/e6`. Butun korpus GPU'da qayta embedding
-qilindi (`scripts/embed_file.py`, `scripts/load_vectors.py`, 6i). Keyingi ish: FTS'ni tezlashtirish
-(`COMMON_DF`), ommaga ochishga tayyorgarlik.
+qilindi (`scripts/embed_file.py`, `scripts/load_vectors.py`, 6i). Keyingi ish: ommaga ochishga
+tayyorgarlik.
 
 Baholash: `eval/questions_llm_full.yaml` (300 savol, `aniq`/`noaniq` teglari, javoblar
 tekshirilgan) asosiy to'plam; natijalar `eval/results/`da. Server bazasiga tegadigan o'lchovlarni

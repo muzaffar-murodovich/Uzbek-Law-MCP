@@ -859,6 +859,68 @@ FTS natijalari o'zgarmadi (R@10 0,601), farq faqat vektordan. R@8 ham ko'rsatild
 standart holatda 8 ta modda qaytaradi. Maqsad (R@10 0,85) bilan farq ≈1 savol. Pool natijasi
 (0,837, reranker'siz) butun korpusda 0,793 bo'ldi.
 
+## 6j. Lemma, birlashtirish, fine-tune qilingan reranker (2026-11-18/19)
+
+**FTS lemmatizatsiyasi.** O'zbek tili uchun ochiq vositalar sinaldi (UzbekStemmer,
+UzMorphAnalyser, uzbek-morph, Apertium asosidagi uzmorph). Eng yaxshisi uzmorph (GPL-3.0), lekin
+u ham unli tushishida (shahri), "-uvchi" va inkor "-ma" da xato qiladi. Xizmatda uzmorph kodi
+ishlamaydi: `scripts/build_lemmas.py` korpusdagi 230 ming so'z uchun "so'z → lemma" jadvalini
+bir marta tuzadi, paketga faqat o'zagi o'zgaradigan 9 081 so'z (`text/lemmas.tsv.gz`) kiradi.
+Qoidalar: fe'llar (UPOS VERB/AUX) lemmalanmaydi (solinadigan → sol bo'lib ketardi); ma'noni
+o'zgartiradigan qo'shimchalar lemmada qoladi (-li, -siz, -uvchi, -chi, -lik, -ma, -ov);
+FTS so'zi = `stem(lemma)`, shunda jadvalda yo'q shakllar ham bir o'zakka tushadi; "-chi"ning
+"i"si egalik deb kesilmaydi; shahr → shahar kabi 10 ta unli tushishi qo'lda. Xizmatda (e6,
+eski reranker, top 20): FTS R@1 0,231 → 0,250, R@5 0,466 → 0,505, R@10 0,601 → 0,596; gibrid
+R@10 0,846 → 0,832 (±3 savol, shovqin chegarasida). Lemma qoldirildi: keyingi qadamlar shu
+nomzodlar ustida tanlandi.
+
+**Tutuq belgilari.** FTS'da ʻ ʼ olib tashlanadi; korpusda shu sabab bir-biriga qo'shilib ketadigan
+sezilarli juftliklar 123 ta (so'z qo'llanishlarining 0,5 %): bosh/boʻsh, oʻlim/olim, daʼvo/davo.
+Embedding va reranker belgilarni ko'radi, shuning uchun o'zgartirilmadi.
+
+**Oflayn tahlil** (`data/eval/v2/`: xizmatdagi nomzodlar, 300 savol, chuqurlik 200; 208 aniq):
+- Birlashtirish: vektor kuchaygani uchun uning og'irligi oshirildi. Eng yaxshisi vektor
+  ro'yxatidan 100 nomzod, og'irlik 1,5, RRF k=20, moddaning qo'shimcha bo'laklari uchun bonus
+  yo'q: reranker'siz R@10 0,784 → 0,817. Nomzodlar chegarasi: top 20 da 0,870, top 30 da 0,899.
+- `COMMON_DF` 5 % → 2 %: nomzodlar chegarasi deyarli o'zgarmadi (top 30: 0,904 → 0,899), FTS
+  bitta so'rovda 0,8–2,5 s dan 0,04–0,2 s ga tushdi.
+
+**Reranker fine-tune** (`scripts/mine_negatives.py`, `scripts/finetune_reranker.py`, RunPod RTX 5090,
+$1,39/soat, ≈45 daqiqa ≈ $1). Har bir juftlikning savoli va rasmiy iborasi uchun e6 bilan butun
+korpusdan eng yaqin 30 bo'lak (o'z moddasidan tashqari) hard negative. mmarco-mMiniLMv2, guruh
+(1 to'g'ri + 7 yoki 15 manfiy) bo'yicha cross-entropy, 2 epoch, ≈1 daqiqa. Yangi birlashtirish,
+reranker faqat savol matnini o'qiydi, blend 0,5:
+
+| Reranker | top 20: R@1 | R@10 | top 30: R@1 | R@5 | R@10 |
+|---|---|---|---|---|---|
+| asl mmarco | 0,50 | 0,856 | 0,50 | 0,77 | 0,851 |
+| rr1 (guruh 8) | 0,57 | 0,861 | 0,57 | 0,83 | 0,875 |
+| rr1, seed 8 / 3 epoch / lr 3e-5 | 0,55–0,59 | 0,856–0,865 | 0,56–0,57 | 0,83–0,84 | 0,880–0,885 |
+| **rr3g16 (guruh 16)** | 0,58 | 0,865 | 0,56 | 0,84 | **0,889** |
+| rr3g16 int8 ONNX | 0,54 | 0,870 | 0,54 | 0,84 | 0,889 |
+
+Sarlavha bilan o'qitilgan reranker yomonroq (top 30: 0,865), savol + `alt` iboralarning
+eng yaxshi bahosi ham (0,861). e5 ni hard negative'lar bilan qayta o'qitish (e7) pool'da
+yomonlashtirdi (hybrid 0,803 → 0,745): mined negative'lar orasida javoblar ko'p, e6 qoldi.
+
+**Xizmatga** (2026-11-19): reranker `mmarco-uz-rr1-int8` (fayllar HF'da emas, `home`dagi
+`data/models/local__mmarco-uz-rr1`, `scripts/export_reranker.py`; dynamo eksport, int8 per channel;
+eksportchining value_info'si kvantlashda shape xatosi beradi, olib tashlanadi), top 30, yangi
+birlashtirish, `COMMON_DF` 2 %, HNSW `ef_search` 200. Reranker matnlarni uzunligi bo'yicha
+4 tadan baholaydi (padding kam): 30 ta modda serverda ≈2,2 s → ≈1,4 s. Qidiruv reranker'siz
+≈0,3 s, jami ≈2–3 s (avval 3–4 s). To'liq eval 43 → 26 daqiqa.
+
+**Xizmatdagi o'lchov** (butun korpus, 300 savol, LLM `alt`, gibrid):
+
+| Run | aniq R@1 | R@5 | R@8 | **R@10** | MRR | noaniq R@10 |
+|---|---|---|---|---|---|---|
+| e6 + eski FTS + asl reranker top 20 | 0,462 | 0,764 | 0,841 | 0,846 | 0,586 | 0,489 |
+| e6 + lemma + asl reranker top 20 | 0,471 | 0,769 | 0,822 | 0,832 | 0,589 | 0,511 |
+| **e6 + lemma + yangi birlashtirish + rr3g16 top 30** | **0,538** | **0,822** | **0,865** | **0,875** | **0,655** | **0,576** |
+
+Maqsad (aniq savollarda R@10 ≥ 0,85) bajarildi. Ehtiyot: birlashtirish va reranker sozlamalari
+shu 208 savolda tanlangan; savollarning ikki yarmida natija yaqin (0,85/0,92).
+
 ## 7. Ochiq masalalar
 
 - **Model tanlovi.** 4.7-bo'lim: sifat bo'yicha bge-m3 birinchi, lekin `myserver` uchun og'ir.
