@@ -18,7 +18,7 @@ from pathlib import Path
 
 from qonunshunos.config import Settings
 from qonunshunos.db import connect
-from qonunshunos.evaluation import Question, first_rank, load_questions
+from qonunshunos.evaluation import Question, first_rank, has_tags, load_questions
 from qonunshunos.index.embed import Embedder
 from qonunshunos.search import hybrid
 
@@ -36,7 +36,7 @@ def main() -> None:
     parser.add_argument("--result", type=Path, required=True)
     parser.add_argument("--questions", type=Path, default=Path("eval/questions_llm_full.yaml"))
     parser.add_argument("--alt-file", type=Path)
-    parser.add_argument("--tag", default="aniq", help="only questions with this tag")
+    parser.add_argument("--tag", default="aniq,dev", help="only questions with all these tags")
     parser.add_argument("--depth", type=int, default=200)
     parser.add_argument("--workers", type=int, default=4)
     parser.add_argument("--out", type=Path)
@@ -46,7 +46,7 @@ def main() -> None:
     questions = [
         q
         for q in load_questions(args.questions, args.alt_file)
-        if args.tag in q.tags and ranks[q.id]["ranks"]["hybrid"] is None
+        if has_tags(q.tags, args.tag) and ranks[q.id]["ranks"]["hybrid"] is None
     ]
     settings = Settings.from_env()
     embedder = Embedder(settings.model_dir)

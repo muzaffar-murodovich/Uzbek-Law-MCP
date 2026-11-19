@@ -17,7 +17,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent))
 
-from fusion_lab import Lab, Params
+from fusion_lab import DEFAULT_TAG, Lab, Params
 
 from qonunshunos.evaluation import metrics
 
@@ -176,7 +176,7 @@ def main() -> None:
         p.add_argument(
             "--candidates", type=Path, default=Path("data/eval/candidates_llm_full.json.gz")
         )
-        p.add_argument("--tag", default="aniq")
+        p.add_argument("--tag", default=DEFAULT_TAG)
         p.add_argument("--fusion", default="", help='e.g. "n_fts=50,k=60" (default: FUSION)')
         p.add_argument("--cache", type=Path, default=CACHE, help="score cache folder")
     p = sub.choices["score"]

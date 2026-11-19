@@ -1,6 +1,14 @@
 import pytest
 
-from qonunshunos.evaluation import Expected, Question, first_rank, load_questions, metrics, run
+from qonunshunos.evaluation import (
+    Expected,
+    Question,
+    first_rank,
+    has_tags,
+    load_questions,
+    metrics,
+    run,
+)
 from qonunshunos.search.hybrid import Hit
 
 
@@ -27,12 +35,32 @@ def test_within_tells_repeated_band_numbers_apart():
     assert first_rank([nizom], [Expected(-1, "4", "2-ilova")]) is None
 
 
+def test_empty_article_matches_unnumbered_unit():
+    table = _hit(-1, None, ["Ilova. Davlat boji stavkalari"])
+    assert first_rank([table], [Expected(-1, "", "Davlat boji")]) == 1
+    assert first_rank([_hit(-1, "3")], [Expected(-1, "", None)]) is None
+
+
 def test_run_reports_per_mode():
     q = Question("q1", "savol", [Expected(-1, "9")], tags=["mehnat"])
     report = run([q], lambda q, mode: [_hit(-1, "9")] if mode == "fts" else [], ["fts", "vector"])
     assert report["modes"]["fts"]["overall"]["recall_at_1"] == 1.0
     assert report["modes"]["vector"]["overall"]["recall_at_10"] == 0.0
     assert report["questions"]["q1"]["ranks"] == {"fts": 1, "vector": None}
+
+
+def test_tag_spec_and_clarity_split_groups():
+    assert has_tags(["llm", "aniq", "dev"], "aniq,dev")
+    assert not has_tags(["llm", "aniq", "test"], "aniq,dev")
+    assert has_tags(["aniq"], "")
+    qs = [
+        Question("q1", "a", [Expected(-1, "9")], tags=["aniq", "dev"]),
+        Question("q2", "b", [Expected(-1, "9")], tags=["aniq", "test"]),
+    ]
+    report = run(qs, lambda q, mode: [_hit(-1, "9")] if q.id == "q1" else [], ["hybrid"])
+    by_tag = report["modes"]["hybrid"]["by_tag"]
+    assert by_tag["aniq+dev"]["recall_at_10"] == 1.0
+    assert by_tag["aniq+test"]["recall_at_10"] == 0.0
 
 
 def test_load_questions(tmp_path):

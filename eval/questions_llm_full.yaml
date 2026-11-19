@@ -16,6 +16,7 @@
   - llm
   - buyruq
   - noaniq
+  - test
   source: 'Buyruq 3743: Notariuslar tomonidan nikoh shartnomalarini tasdiqlash tartibi toʻgʻrisidagi nizomni
     tasdiqlash haqida'
   judged: true
@@ -31,6 +32,7 @@
   - llm
   - boshqa
   - noaniq
+  - test
   source: 'Hujjat 3010: Banklararo pul bozorida elektron savdo platformasi orqali operatsiyalarni amalga
     oshirish tartibi toʻgʻrisidagi nizomni tasdiqlash haqida'
   judged: true
@@ -47,6 +49,7 @@
   - llm
   - qonun
   - aniq
+  - dev
   source: Aholini sil kasalligidan muhofaza qilish toʻgʻrisidagi Qonun (215-II)
   judged: true
 - id: lf-004
@@ -61,6 +64,7 @@
   - llm
   - qaror
   - aniq
+  - dev
   source: Toshkent shahridagi Inxa universiteti faoliyatini yanada takomillashtirish boʻyicha qoʻshimcha
     chora-tadbirlar toʻgʻrisidagi Prezident qarori (PQ-243)
   judged: true
@@ -84,6 +88,7 @@
   - llm
   - boshqa
   - aniq
+  - test
   source: 'Hujjat 2567: Axborot-kutubxona muassasalarida axborot-kutubxona resurslarini hisobga olish
     tartibi toʻgʻrisidagi yoʻriqnomani tasdiqlash haqida'
   judged: true
@@ -99,6 +104,7 @@
   - llm
   - qonun
   - aniq
+  - test
   source: Ijara toʻgʻrisidagi Qonun (427-XII)
   judged: true
 - id: lf-007
@@ -113,6 +119,7 @@
   - llm
   - vm_qarori
   - aniq
+  - test
   source: 'Vazirlar Mahkamasi qarori 2489: Birinchi guruhga goʻsht, sut va baliq konservalarini yetkazib
     berish, qabul qilish, saqlash va berib yuborish tartibi toʻgʻrisi…'
   judged: true
@@ -127,6 +134,7 @@
   - llm
   - vm_qarori
   - aniq
+  - test
   source: 'Vazirlar Mahkamasi qarori 344: Ichki isteʼmol bozorini asosiy turdagi oziq-ovqat mahsulotlari
     bilan taʼminlash boʻyicha qoʻshimcha chora-tadbirlar toʻgʻrisida'
   judged: true
@@ -142,6 +150,7 @@
   - llm
   - farmon
   - aniq
+  - dev
   source: “Oʻzbekiston-2030” strategiyasini “Yoshlar va biznesni qoʻllab-quvvatlash yili”da amalga oshirishga
     oid davlat dasturi toʻgʻrisidagi Prezident farmoni (PF-37)
   judged: true
@@ -161,6 +170,7 @@
   - llm
   - vm_qarori
   - aniq
+  - dev
   source: 'Vazirlar Mahkamasi qarori 683: Avtomototransport vositalarini davlat roʻyxatidan oʻtkazish
     va ularga roʻyxatdan oʻtkazish davlat raqami belgilarini berish tart…'
   judged: true
@@ -175,6 +185,7 @@
   - llm
   - qaror
   - aniq
+  - test
   source: 'Prezident qarori PQ-3677: Tadbirkorlik va shaharsozlik faoliyatini amalga oshirish uchun yer
     uchastkalarini doimiy foydalanishga berish tartibini tubdan takomi…'
   judged: true
@@ -195,6 +206,7 @@
   - llm
   - qaror
   - aniq
+  - dev
   source: Ijtimoiy himoyaga va yordamga muhtoj aholi qatlamlarini moddiy qoʻllab-quvvatlashga doir qoʻshimcha
     chora-tadbirlar toʻgʻrisidagi Prezident qarori (PQ-230)
   judged: true
@@ -221,6 +233,7 @@
   - llm
   - vm_qarori
   - noaniq
+  - dev
   source: 'Vazirlar Mahkamasi qarori 579: Xorijda istiqomat qilayotgan vatandoshlar va ularning oila aʼzolarini
     Oʻzbekiston Respublikasiga taklif qilish hamda fuqaroligi…'
   judged: true
@@ -238,6 +251,7 @@
   - llm
   - buyruq
   - aniq
+  - test
   source: 'Buyruq 3641: Internet butunjahon axborot tarmogʻida tavakkalchilikka asoslangan oʻyinlarni
     tashkil etish va oʻtkazish tartibi toʻgʻrisidagi nizomni tasdiqlash…'
   judged: true
@@ -253,6 +267,7 @@
   - llm
   - boshqa
   - aniq
+  - dev
   source: Tegishli darajada sifatli boʻlmagan mahsulotlar (tovarlar)ni yetkazib berish bilan bogʻliq boʻlgan
     nizolarni hal qilish tartibi toʻgʻrisidagi Hujjat (174)
   judged: true
@@ -267,6 +282,7 @@
   - llm
   - kodeks
   - aniq
+  - dev
   source: Jinoyat-ijroiya kodeksi
   judged: true
 - id: lf-017
@@ -280,6 +296,7 @@
   - llm
   - qaror
   - noaniq
+  - dev
   source: 'Prezident qarori PQ-8: Tadbirkorlik subyektlari tomonidan davlat organlariga hisobot va statistik
     maʼlumotlarni taqdim etish jarayonlarini yanada soddalashtiri…'
   judged: true
@@ -297,6 +314,7 @@
   - llm
   - vm_qarori
   - aniq
+  - dev
   source: 'Vazirlar Mahkamasi qarori 339: Voyaga yetmagan shaxslarga jamoat tarbiyachilarini tayinlash
     tartibi toʻgʻrisidagi nizomni tasdiqlash haqida'
   judged: true
@@ -325,6 +343,7 @@
   - llm
   - buyruq
   - noaniq
+  - dev
   source: 'Buyruq 2100: Nogironligi boʻlgan shaxslar, shu jumladan nogironligi boʻlgan shaxslar-urush
     qatnashchilari va chernobilchilar jamiyatining oʻquv-ishlab chiqaris…'
   judged: true
@@ -341,6 +360,7 @@
   - llm
   - qaror
   - aniq
+  - test
   source: Dori vositalari va tibbiyot buyumlari ishlab chiqarish hamda olib kirishni yanada tartibga solish
     chora-tadbirlari toʻgʻrisidagi Prezident qarori (PQ-3489)
   judged: true
@@ -356,6 +376,7 @@
   - llm
   - buyruq
   - aniq
+  - test
   source: 'Buyruq 3631: Elektron tijoratda kuryerlik xizmati faoliyatini amalga oshirish tartibi toʻgʻrisidagi
     nizomni tasdiqlash haqida'
   judged: true
@@ -379,6 +400,7 @@
   - llm
   - vm_qarori
   - aniq
+  - test
   source: Oʻzbekiston Respublikasiga isteʼmol tovarlari olib kirishni takomillashtirishga doir qoʻshimcha
     chora-tadbirlar toʻgʻrisidagi Vazirlar Mahkamasi qarori (127)
   judged: true
@@ -397,6 +419,7 @@
   - llm
   - vm_qarori
   - aniq
+  - test
   source: 'Vazirlar Mahkamasi qarori 256: Muhandislik-kommunikatsiya tarmoqlariga ulanish boʻyicha davlat
     xizmatlari koʻrsatishning maʼmuriy reglamentlarini tasdiqlash to…'
   judged: true
@@ -413,6 +436,7 @@
   - llm
   - boshqa
   - noaniq
+  - test
   source: 'Hujjat 3233: Temir yoʻl transporti yoʻlovchilarining qoʻl yukini, bagajini, valyutasini va
     valyuta boyliklarini bojxona nazoratidan oʻtkazish va rasmiylashtiri…'
   judged: true
@@ -430,6 +454,7 @@
   - llm
   - vm_qarori
   - aniq
+  - test
   source: Suzish sport turlarini rivojlantirish chora-tadbirlari toʻgʻrisidagi Vazirlar Mahkamasi qarori
     (333)
   judged: true
@@ -445,6 +470,7 @@
   - llm
   - vm_qarori
   - aniq
+  - dev
   source: Qishloq xoʻjaligi ekinlari urugʻchiligi tizimini yanada takomillashtirishning qoʻshimcha chora-tadbirlari
     toʻgʻrisidagi Vazirlar Mahkamasi qarori (622)
   judged: true
@@ -461,6 +487,7 @@
   - llm
   - vm_qarori
   - aniq
+  - dev
   source: 'Vazirlar Mahkamasi qarori 255: Savdo va xizmat koʻrsatish sohasida jamoatchilik nazorati samaradorligini
     oshirishga doir qoʻshimcha chora-tadbirlar toʻgʻrisida'
   judged: true
@@ -477,6 +504,7 @@
   - llm
   - qaror
   - aniq
+  - test
   source: 'Prezident qarori PQ-4447: Oʻzbekiston Respublikasi fuqarolarining harbiy xizmatni oʻtash tartibi
     toʻgʻrisidagi nizomni tasdiqlash haqida'
   judged: true
@@ -493,6 +521,7 @@
   - llm
   - vm_qarori
   - noaniq
+  - test
   source: 'Vazirlar Mahkamasi qarori 791: Yirik bozorlarda jamoat tartibini saqlash va yongʻin xavfsizligini
     taʼminlash tizimini takomillashtirish chora-tadbirlari toʻgʻr…'
   judged: true
@@ -518,6 +547,7 @@
   - llm
   - qaror
   - aniq
+  - test
   source: 'Prezident qarori PQ-3373: 2017-2021-yillarda uglevodorod xom ashyosini qazib olishni koʻpaytirish
     Dasturining birinchi bosqichini amalga oshirish chora-tadbirl…'
   judged: true
@@ -533,6 +563,7 @@
   - llm
   - qaror
   - aniq
+  - test
   source: 'Prezident qarori PQ-2824: 2017-2021-yillarda toshkent shahrida arzon koʻp qavatli uylar qurish
     koʻlamini kengaytirishga oid qoʻshimchachora-tadbirlar toʻgʻrisi…'
   judged: true
@@ -548,6 +579,7 @@
   - llm
   - kodeks
   - aniq
+  - dev
   source: Jinoyat kodeksi
   judged: true
 - id: lf-033
@@ -561,6 +593,7 @@
   - llm
   - qaror
   - noaniq
+  - dev
   source: Byurokratik toʻsiqlarni bartaraf etish va tadbirkorlik faoliyati erkinligini yanada oshirish
     chora-tadbirlari toʻgʻrisidagi Prezident qarori (PQ-1604)
   judged: true
@@ -577,6 +610,7 @@
   - llm
   - vm_qarori
   - noaniq
+  - test
   source: Notarial faoliyatni tashkil etishni yanada takomillashtirish chora-tadbirlari toʻgʻrisidagi
     Vazirlar Mahkamasi qarori (369)
   judged: true
@@ -596,6 +630,7 @@
   - llm
   - vm_qarori
   - aniq
+  - dev
   source: 2024-yil hosilidan bugʻdoy xarid qilish va ichki bozorda narxlar barqarorligini taʼminlash chora-tadbirlari
     toʻgʻrisidagi Vazirlar Mahkamasi qarori (325)
   judged: true
@@ -613,6 +648,7 @@
   - llm
   - vm_qarori
   - aniq
+  - test
   source: 'Vazirlar Mahkamasi qarori 309: Ichki ishlar organlarining muayyan yashash joyiga ega boʻlmagan
     shaxslarni reabilitatsiya qilish markazlari toʻgʻrisidagi nizomn…'
   judged: true
@@ -628,6 +664,7 @@
   - llm
   - vm_qarori
   - noaniq
+  - test
   source: 'Vazirlar Mahkamasi qarori 297: Oʻrindoshlik asosida hamda bir necha kasbda va lavozimda ishlash
     tartibi toʻgʻrisidagi nizomni tasdiqlash haqida'
   judged: true
@@ -647,6 +684,7 @@
   - llm
   - vm_qarori
   - aniq
+  - dev
   source: 'Vazirlar Mahkamasi qarori 614: Yer uchastkalaridan ruxsat etilgan foydalanish turlari va kapital
     qurilish obyektlarining yagona klassifikatorini amalga kiritis…'
   judged: true
@@ -662,6 +700,7 @@
   - llm
   - vm_qarori
   - aniq
+  - dev
   source: Oliy mahorat sport maktablari faoliyatini tashkil etish toʻgʻrisidagi Vazirlar Mahkamasi qarori
     (18)
   judged: true
@@ -677,6 +716,7 @@
   - llm
   - vm_qarori
   - noaniq
+  - test
   source: Xalqaro baxshichilik sanʼati festivalini oʻtkazish chora-tadbirlari toʻgʻrisidagi Vazirlar Mahkamasi
     qarori (946)
   judged: true
@@ -695,6 +735,7 @@
   - llm
   - vm_qarori
   - noaniq
+  - test
   source: 'Vazirlar Mahkamasi qarori 283: Rasmiy davlat hujjatlarini tayyorlash, hisobga olish, saqlash,
     topshirish hamda ulardan foydalanish tartibini takomillashtirish…'
   judged: true
@@ -712,6 +753,7 @@
   - llm
   - vm_qarori
   - aniq
+  - test
   source: Oliy taʼlim tashkilotlarida masofaviy taʼlim shaklini joriy etish chora-tadbirlari toʻgʻrisidagi
     Vazirlar Mahkamasi qarori (559)
   judged: true
@@ -727,6 +769,7 @@
   - llm
   - konstitutsiya
   - aniq
+  - dev
   source: Oʻzbekiston Respublikasi Konstitutsiyasi
   judged: true
   judged_alt: true
@@ -743,6 +786,7 @@
   - llm
   - vm_qarori
   - aniq
+  - test
   source: Yengil alangalanuvchi va portlovchi kimyoviy moddalar bilan muomala qilish xavfsizligi qoidalarini
     tasdiqlash toʻgʻrisidagi Vazirlar Mahkamasi qarori (326)
   judged: true
@@ -757,6 +801,7 @@
   - llm
   - vm_qarori
   - noaniq
+  - dev
   source: Toshkent shahrida Turkiyaning Iqtisodiyot va texnologiyalar universiteti filialini tashkil etish
     chora-tadbirlari toʻgʻrisidagi Vazirlar Mahkamasi qarori (389)
   judged: true
@@ -793,6 +838,7 @@
   - llm
   - qaror
   - aniq
+  - test
   source: 'Prezident qarori PQ-331: “Buxoro va Navoiy viloyatlarida qattiq maishiy chiqindilarni yoqish
     orqali elektr energiyasi ishlab chiqarish” investitsiya loyihasini…'
   judged: true
@@ -806,6 +852,7 @@
   - llm
   - farmon
   - aniq
+  - test
   source: “Oʻzbekiston mustaqilligiga 25 yil” esdalik nishonini taʼsis etish toʻgʻrisidagi Prezident farmoni
     (PF-4807)
   judged: true
@@ -821,6 +868,7 @@
   - llm
   - kodeks
   - aniq
+  - test
   source: Uy-joy kodeksi
   judged: true
   judged_alt: true
@@ -835,6 +883,7 @@
   - llm
   - vm_qarori
   - aniq
+  - test
   source: Oʻzbekiston Respublikasida eksportni moliyaviy qoʻllab-quvvatlashni yanada kengaytirish chora-tadbirlari
     toʻgʻrisidagi Vazirlar Mahkamasi qarori (167)
   judged: true
@@ -857,6 +906,7 @@
   - llm
   - vm_qarori
   - aniq
+  - dev
   source: Umumiy oʻrta taʼlim muassasalarida “Tarbiya” fanini bosqichma-bosqich amaliyotga joriy etish
     chora-tadbirlari toʻgʻrisidagi Vazirlar Mahkamasi qarori (422)
   judged: true
@@ -879,6 +929,7 @@
   - llm
   - buyruq
   - noaniq
+  - dev
   source: 'Buyruq 3927: Elektron tijorat operatorlari faoliyatini boshlash va tugatish uchun vakolatli
     organni xabardor qilish tartibi toʻgʻrisidagi nizomni tasdiqlash ha…'
   judged: true
@@ -903,6 +954,7 @@
   - llm
   - vm_qarori
   - aniq
+  - test
   source: Fuqarolik holati dalolatnomalarini yozish tartiblarini yanada takomillashtirish chora-tadbirlari
     toʻgʻrisidagi Vazirlar Mahkamasi qarori (540)
   judged: true
@@ -917,6 +969,7 @@
   - llm
   - vm_qarori
   - aniq
+  - test
   source: 'Vazirlar Mahkamasi qarori 2642: Birinchi guruhga butilkalarga quyilgan ichimlik suvini yetkazib
     berish, qabul qilish, saqlash va berib yuborish tartibi toʻgʻri…'
   judged: true
@@ -936,6 +989,7 @@
   - llm
   - qonun
   - aniq
+  - test
   source: Fuqarolarning reproduktiv salomatligini saqlash toʻgʻrisidagi Qonun (OʻRQ-528)
   judged: true
   judged_alt: true
@@ -952,6 +1006,7 @@
   - llm
   - boshqa
   - noaniq
+  - dev
   source: 'Hujjat 3565: “Korrupsiyaga qarshi kurashish virtual akademiyasi” elektron platformasida oʻqitishni
     tashkil etish tartibi toʻgʻrisidagi nizomni tasdiqlash haqida'
   judged: true
@@ -970,6 +1025,7 @@
   - llm
   - vm_qarori
   - aniq
+  - test
   source: 'Vazirlar Mahkamasi qarori 258: Ishlatilgan texnik moylarni topshirish, toʻplash, ular uchun
     hisob-kitob qilish, ularni saqlash va tashish tartibi toʻgʻrisidagi…'
   judged: true
@@ -985,6 +1041,7 @@
   - llm
   - vm_qarori
   - aniq
+  - dev
   source: 'Vazirlar Mahkamasi qarori 33: Tuproq monitoringini amalga oshirish hamda tuproqning unumdor
     qatlamini aniqlash tartibini takomillashtirish chora-tadbirlari toʻ…'
   judged: true
@@ -1006,6 +1063,7 @@
   - llm
   - buyruq
   - noaniq
+  - dev
   source: 'Buyruq 3757: Notariuslar tomonidan ijro xatlarini yozish tartibi toʻgʻrisidagi nizomni tasdiqlash
     haqida'
   judged: true
@@ -1027,6 +1085,7 @@
   - llm
   - qonun
   - aniq
+  - dev
   source: Maʼmuriy qamoqni oʻtash tartibi toʻgʻrisidagi Qonun (OʻRQ-420)
   judged: true
   judged_alt: true
@@ -1056,6 +1115,7 @@
   - llm
   - qaror
   - aniq
+  - dev
   source: 'Prezident qarori PQ-3875: Toshkent shahrida “MMFI” milliy tadqiqot yadro universiteti” federal
     davlat avtonom oliy taʼlim muassasasining filialini tashkil etis…'
   judged: true
@@ -1070,6 +1130,7 @@
   - llm
   - qaror
   - aniq
+  - dev
   source: 'Prezident qarori PQ-452: Zargarlik buyumlarini ishlab chiqarish quvvatlarini kengaytirish va
     mahalliy zargarlarni har tomonlama qoʻllab-quvvatlash boʻyicha qoʻ…'
   judged: true
@@ -1086,6 +1147,7 @@
   - llm
   - boshqa
   - aniq
+  - dev
   source: 'Hujjat 2427: Davlat kasbiy taʼlim tashkilotlarini oʻquv-amaliy mashgʻulotlarni oʻtkazish uchun
     sarflanadigan materiallar hamda zarur xom ashyo bilan taʼminlash…'
   judged: true
@@ -1102,6 +1164,7 @@
   - llm
   - vm_qarori
   - aniq
+  - dev
   source: 'Vazirlar Mahkamasi qarori 191: Dori vositalari va tibbiy jihozlarni jismoniy shaxslar tomonidan
     shaxsiy foydalanish uchun olib kirish hamda olib chiqish tartib…'
   judged: true
@@ -1117,6 +1180,7 @@
   - llm
   - buyruq
   - noaniq
+  - dev
   source: 'Buyruq 2091: Detallarni gidroqumpurkash va maydalab purkash va kimyoviy ishlov berish usullari
     bilan tozalashda mehnatni muhofaza qilish qoidalarini tasdiqlash…'
   judged: true
@@ -1135,6 +1199,7 @@
   - llm
   - vm_qarori
   - noaniq
+  - test
   source: 'Vazirlar Mahkamasi qarori 433: Oʻzbekiston Respublikasida turizm sohasini tiklash va rivojlantirish
     uchun qulay shart-sharoitlarni yaratish chora-tadbirlari to…'
   judged: true
@@ -1150,6 +1215,7 @@
   - llm
   - kodeks
   - aniq
+  - test
   source: Soliq kodeksi
   judged: true
   judged_alt: true
@@ -1167,6 +1233,7 @@
   - llm
   - vm_qarori
   - aniq
+  - test
   source: 'Vazirlar Mahkamasi qarori 669: Ichki ishlar organlarining xavfsiz turizmni taʼminlash boʻlinmalari
     tomonidan shartnoma asosida pulli xizmatlar koʻrsatish tarti…'
   judged: true
@@ -1181,6 +1248,7 @@
   - llm
   - qonun
   - aniq
+  - dev
   source: Vijdon erkinligi va diniy tashkilotlar toʻgʻrisidagi Qonun (OʻRQ-699)
   judged: true
 - id: lf-069
@@ -1194,6 +1262,7 @@
   - llm
   - qaror
   - aniq
+  - dev
   source: 'Prezident qarori PQ-117: Tashabbusli budjetlashtirish amaliyotini yanada takomillashtirish
     hamda faol mahallalarni qoʻllab-quvvatlash chora-tadbirlari toʻgʻris…'
   judged: true
@@ -1209,6 +1278,7 @@
   - llm
   - farmon
   - aniq
+  - dev
   source: Oʻzbekiston Respublikasi mustaqilligining uch yilligi munosabati bilan afv etish toʻgʻrisidagi
     Prezident farmoni (PF-936)
   judged: true
@@ -1237,6 +1307,7 @@
   - llm
   - boshqa
   - aniq
+  - dev
   source: Tadbirkorlik subyektlari faoliyatini tartibga soluvchi qonun hujjatlarini qoʻllash boʻyicha
     sud amaliyotining ayrim masalalari toʻgʻrisidagi Hujjat (12/239)
   judged: true
@@ -1255,6 +1326,7 @@
   - llm
   - buyruq
   - noaniq
+  - test
   source: 'Buyruq 2785: Ruhiyatida sezilarli yoki ancha sezilarli nuqsonlari mavjud nogironligi boʻlgan
     shaxslarni Oʻzbekiston Respublikasi Prezidenti huzuridagi Ijtimoiy…'
   judged: true
@@ -1311,6 +1383,7 @@
   - llm
   - vm_qarori
   - aniq
+  - test
   source: Zulfiya nomidagi Davlat mukofoti bilan taqdirlash toʻgʻrisidagi Vazirlar Mahkamasi qarori (100)
   judged: true
   judged_alt: true
@@ -1341,6 +1414,7 @@
   - llm
   - vm_qarori
   - aniq
+  - test
   source: Davlat maktabgacha taʼlim tashkilotlarida sogʻlom ovqatlantirish tartibini takomillashtirish
     chora-tadbirlari toʻgʻrisidagi Vazirlar Mahkamasi qarori (1)
   judged: true
@@ -1355,6 +1429,7 @@
   - llm
   - qonun
   - aniq
+  - test
   source: 'Qonun OʻRQ-573: “Valyutani tartibga solish toʻgʻrisida”gi Oʻzbekiston Respublikasi Qonuniga
     oʻzgartish va qoʻshimchalar kiritish haqida'
   judged: true
@@ -1373,6 +1448,7 @@
   - llm
   - vm_qarori
   - noaniq
+  - dev
   source: Maktabgacha va maktab taʼlimi vaziri jamgʻarmasi faoliyatini tashkil etish chora-tadbirlari
     toʻgʻrisidagi Vazirlar Mahkamasi qarori (425)
   judged: true
@@ -1390,6 +1466,7 @@
   - llm
   - buyruq
   - noaniq
+  - dev
   source: 'Buyruq 2048: Matbaachilik ishlab chiqarishi xodimlari uchun mehnatni muhofaza qilish qoidalarini
     tasdiqlash haqida'
   judged: true
@@ -1406,6 +1483,7 @@
   - llm
   - boshqa
   - aniq
+  - dev
   source: 'Hujjat 3271: Umumtaʼlim muassasalarida sinflarni komplektlash hamda tarifikatsiya roʻyxatlarini
     shakllantirish tartibi toʻgʻrisidagi nizomni tasdiqlash haqida'
   judged: true
@@ -1421,6 +1499,7 @@
   - llm
   - vm_qarori
   - noaniq
+  - test
   source: 'Vazirlar Mahkamasi qarori 149: Oʻzbekiston davlat konservatoriyasi huzurida Musiqa sohasi pedagoglarini
     qayta tayyorlash va ularning malakasini oshirish markaz…'
   judged: true
@@ -1436,6 +1515,7 @@
   - llm
   - qaror
   - aniq
+  - test
   source: 'Prezident qarori PQ-399: Teatrlarning jamiyat madaniy hayotidagi ahamiyatini oshirish va ular
     faoliyatini yanada qoʻllab-quvvatlash chora-tadbirlari toʻgʻrisida'
   judged: true
@@ -1449,6 +1529,7 @@
   - llm
   - qaror
   - aniq
+  - test
   source: 'Prezident qarori PQ-5169: N.I. Pirogov nomidagi Rossiya milliy tadqiqot tibbiyot universitetining
     Toshkent shahridagi filiali faoliyatini tashkil etish toʻgʻri…'
   judged: true
@@ -1464,6 +1545,7 @@
   - llm
   - qaror
   - noaniq
+  - test
   source: Bolalarni qoʻllab-quvvatlash jamoat fondi faoliyatini tashkil etish chora-tadbirlari toʻgʻrisidagi
     Prezident qarori (PQ-5255)
   judged: true
@@ -1483,6 +1565,7 @@
   - llm
   - vm_qarori
   - aniq
+  - dev
   source: 'Vazirlar Mahkamasi qarori 388: Yoshlar va xotin-qizlarni kasb-hunar va tadbirkorlikka oʻqitish
     dasturlarini samarali amalga oshirish hamda ularning tadbirkorli…'
   judged: true
@@ -1498,6 +1581,7 @@
   - llm
   - vm_qarori
   - aniq
+  - dev
   source: 'Vazirlar Mahkamasi qarori 2484: Birinchi guruhga yodlangan osh tuzi yetkazib berish, qabul
     qilish, saqlash va berib yuborish tartibi toʻgʻrisidagi yoʻriqnomani…'
   judged: true
@@ -1514,6 +1598,7 @@
   - llm
   - vm_qarori
   - aniq
+  - test
   source: 'Vazirlar Mahkamasi qarori 312: Gʻalla yetishtiruvchi xoʻjaliklar va korxonalardan sotib olinadigan
     donni saqlash sohasidagi ayrim normativ-huquqiy hujjatlarni…'
   judged: true
@@ -1530,6 +1615,7 @@
   - llm
   - buyruq
   - aniq
+  - dev
   source: 'Buyruq 3621: Oʻzbekiston Respublikasi Adliya vazirligi huzuridagi Yuridik kadrlarni qayta tayyorlash
     va malakasini oshirish institutida yuridik kadrlarning kre…'
   judged: true
@@ -1550,6 +1636,7 @@
   - llm
   - qaror
   - aniq
+  - test
   source: 'Prezident qarori PQ-289: Pedagogik taʼlim sifatini oshirish va pedagog kadrlar tayyorlovchi
     oliy taʼlim muassasalari faoliyatini yanada rivojlantirish chora-ta…'
   judged: true
@@ -1565,6 +1652,7 @@
   - llm
   - vm_qarori
   - noaniq
+  - test
   source: 'Vazirlar Mahkamasi qarori 408: Chet el fuqarolari va fuqaroligi boʻlmagan shaxslarning Oʻzbekiston
     Respublikasiga kelishlari, ketishlari, bu yerda boʻlishlari…'
   judged: true
@@ -1587,6 +1675,7 @@
   - llm
   - vm_qarori
   - aniq
+  - test
   source: 'Vazirlar Mahkamasi qarori 689: Genom boʻyicha davlat roʻyxatiga olish tartibi toʻgʻrisidagi
     nizomni tasdiqlash haqida'
   judged: true
@@ -1602,6 +1691,7 @@
   - llm
   - farmon
   - noaniq
+  - test
   source: Oʻzbekiston Respublikasida investitsiya muhitini tubdan yaxshilash chora-tadbirlari toʻgʻrisidagi
     Prezident farmoni (PF-5495)
   judged: true
@@ -1620,6 +1710,7 @@
   - llm
   - vm_qarori
   - noaniq
+  - dev
   source: 'Vazirlar Mahkamasi qarori 39: Uy-joy sharoitlarini yaxshilashga ehtiyojmand mehnat migrantlariga
     koʻp kvartirali uylardan xonadonlar ajratish chora-tadbirlari…'
   judged: true
@@ -1636,6 +1727,7 @@
   - llm
   - qaror
   - noaniq
+  - dev
   source: 'Prezident qarori PQ-3850: Oʻzbekiston Respublikasi Prezidenti huzuridagi Strategik va mintaqalararo
     tadqiqotlar instituti xodimlarining mehnatiga haq toʻlash v…'
   judged: true
@@ -1652,6 +1744,7 @@
   - llm
   - qaror
   - noaniq
+  - test
   source: 'Prezident qarori PQ-1709: “Elektr energiyasini taqsimlashda yoʻqotishlarni kamaytirish, shuningdek,
     Navoiy viloyatida elektr energiyasini nazorat qilish va his…'
   judged: true
@@ -1670,6 +1763,7 @@
   - llm
   - boshqa
   - noaniq
+  - dev
   source: 'Hujjat 3808: Oʻzbekiston Respublikasi Harbiy xavfsizlik va mudofaa universitetining Harbiy
     tibbiyot institutida toʻlov-kontrakt asosida oʻqitish toʻgʻrisidagi…'
   judged: true
@@ -1716,6 +1810,7 @@
   - llm
   - buyruq
   - aniq
+  - dev
   source: 'Buyruq 3528: Toshkent davlat yuridik universiteti huzuridagi akademik litseylarda yakuniy davlat
     attestatsiyasini oʻtkazish tartibi toʻgʻrisidagi nizomni tasdi…'
   judged: true
@@ -1731,6 +1826,7 @@
   - llm
   - qaror
   - aniq
+  - dev
   source: 'Prezident qarori PQ-371: Ilgʻor “yashil” texnologiyalar asosida issiqxona xoʻjaliklarini rivojlantirish
     va aholi tomorqa yer maydonlaridan samarali foydalanish…'
   judged: true
@@ -1745,6 +1841,7 @@
   - llm
   - qaror
   - aniq
+  - dev
   source: “Uzagrostar xolding” kompaniyasi faoliyatini tashkil etish toʻgʻrisidagi Prezident qarori (PQ-57)
   judged: true
   judged_alt: true
@@ -1759,6 +1856,7 @@
   - llm
   - qaror
   - aniq
+  - test
   source: Kam taʼminlangan va ijtimoiy himoyaga muhtoj oilalar farzandlarini qoʻllab-quvvatlashning qoʻshimcha
     chora-tadbirlari toʻgʻrisidagi Prezident qarori (PQ-5204)
   judged: true
@@ -1775,6 +1873,7 @@
   - llm
   - qaror
   - noaniq
+  - dev
   source: 'Prezident qarori PQ-332: Investitsiyaviy va infratuzilmaviy loyihalarning loyihaoldi, davlat
     xaridiga doir tender boʻyicha xarid qilish hujjatlari va texnik to…'
   judged: true
@@ -1794,6 +1893,7 @@
   - llm
   - vm_qarori
   - aniq
+  - dev
   source: 'Vazirlar Mahkamasi qarori 508: Toshkent shahrida qonunchilik hujjatlari buzilganligi uchun
     ushlangan transport vositalarini vaqtincha saqlab turish joylariga o…'
   judged: true
@@ -1808,6 +1908,7 @@
   - llm
   - boshqa
   - aniq
+  - test
   source: Ruhiy holati buzilgan shaxslarga nisbatan tibbiy yoʻsindagi majburlov choralarini qoʻllash boʻyicha
     sud amaliyoti toʻgʻrisidagi Hujjat (23)
   judged: true
@@ -1823,6 +1924,7 @@
   - llm
   - vm_qarori
   - aniq
+  - dev
   source: Oliy taʼlim tizimida dual taʼlimni tashkil etish chora-tadbirlari toʻgʻrisidagi Vazirlar Mahkamasi
     qarori (14)
   judged: true
@@ -1836,6 +1938,7 @@
   - llm
   - vm_qarori
   - aniq
+  - dev
   source: Bolalarning maktabgacha tarbiya muassasalarida boʻlishlari uchun ota-onalardan olinadigan haq
     miqdorlari toʻgʻrisidagi Vazirlar Mahkamasi qarori (441)
   judged: true
@@ -1854,6 +1957,7 @@
   - llm
   - vm_qarori
   - noaniq
+  - dev
   source: 'Vazirlar Mahkamasi qarori 111: Transfert narxini belgilashda soliq nazoratini va norezidentlarning
     soliq solish maʼmuriyatchiligini tartibga soluvchi ayrim qon…'
   judged: true
@@ -1872,6 +1976,7 @@
   - llm
   - buyruq
   - aniq
+  - dev
   source: 'Buyruq 3138: Patologik-anatomik tadqiqotlar oʻtkazish tartibi toʻgʻrisidagi nizomni tasdiqlash
     haqida'
   judged: true
@@ -1887,6 +1992,7 @@
   - llm
   - buyruq
   - noaniq
+  - dev
   source: 'Buyruq 2042: Mebel ishlab chiqarish xodimlari uchun mehnatni muhofaza qilish qoidalarini tasdiqlash
     haqida'
   judged: true
@@ -1903,6 +2009,7 @@
   - llm
   - qaror
   - noaniq
+  - test
   source: 'Prezident qarori PQ-75: Oʻzbekiston Respublikasi Qurolli Kuchlarida kibersport, dron va robot
     texnologiyalari yoʻnalishidagi sport turlarini rivojlantirish cho…'
   judged: true
@@ -1920,6 +2027,7 @@
   - llm
   - vm_qarori
   - aniq
+  - test
   source: 'Vazirlar Mahkamasi qarori 125: Oilalarni kambagʻallikdan chiqarishga qaratilgan koʻmak choralarini
     koʻrsatishga doir tartib-taomillarni takomillashtirish toʻgʻ…'
   judged: true
@@ -1936,6 +2044,7 @@
   - llm
   - buyruq
   - noaniq
+  - test
   source: 'Buyruq 3086: Sugʻorish tarmoqlari (kanallar)da baliq yetishtirish tartibi toʻgʻrisidagi nizomni
     tasdiqlash haqida'
   judged: true
@@ -1952,6 +2061,7 @@
   - llm
   - qonun
   - noaniq
+  - dev
   source: Referendum yakunlari hamda davlat hokimiyati tashkil etilishining asosiy prinsiplari toʻgʻrisidagi
     Qonun (350-II)
   judged: true
@@ -1970,6 +2080,7 @@
   - llm
   - vm_qarori
   - noaniq
+  - dev
   source: 'Vazirlar Mahkamasi qarori 310: Davlat tibbiyot muassasalarida faoliyat yuritayotgan tibbiyot
     va farmatsevtika xodimlarini moddiy jihatdan qoʻllab-quvvatlash ch…'
   judged: true
@@ -1987,6 +2098,7 @@
   - llm
   - farmon
   - aniq
+  - dev
   source: Xotin-qizlarni qoʻllab-quvvatlashga oid qoʻshimcha chora-tadbirlar toʻgʻrisidagi Prezident farmoni
     (PF-240)
   judged: true
@@ -2003,6 +2115,7 @@
   - llm
   - buyruq
   - aniq
+  - dev
   source: 'Buyruq 2495: Oʻzbekiston Respublikasi Ichki ishlar vazirligi ozodlikdan mahrum qilish turidagi
     jazoni ijro etish muassasalarining ichki tartib qoidalarini tasd…'
   judged: true
@@ -2019,6 +2132,7 @@
   - llm
   - vm_qarori
   - noaniq
+  - dev
   source: 'Vazirlar Mahkamasi qarori 210: Buxgalterlarni xalqaro sertifikatlash doirasida imtihonlarni
     topshirish xarajatlarini qoplash tartibi toʻgʻrisidagi vaqtinchalik…'
   judged: true
@@ -2036,6 +2150,7 @@
   - llm
   - boshqa
   - aniq
+  - dev
   source: 'Hujjat 2621: Korxona, tashkilot va muassasalar tasarrufidagi statsionar bolalar dam oldirish
     va sogʻlomlashtirish oromgohlari bazasida tashkil etiladigan dam o…'
   judged: true
@@ -2055,6 +2170,7 @@
   - llm
   - farmon
   - noaniq
+  - test
   source: Oʻzbekiston Respublikasi Konstitutsiyasi qabul qilinganligining besh yilligi munosabati bilan
     amnistiya toʻgʻrisidagi Prezident farmoni (PF-1885)
   judged: true
@@ -2073,6 +2189,7 @@
   - llm
   - vm_qarori
   - aniq
+  - test
   source: 'Vazirlar Mahkamasi qarori 206: Agrar va oziq-ovqat sohalarini davlat tomonidan qoʻllab-quvvatlash
     tizimini tubdan takomillashtirish chora-tadbirlari toʻgʻrisida'
   judged: true
@@ -2088,6 +2205,7 @@
   - llm
   - vm_qarori
   - aniq
+  - test
   source: 'Vazirlar Mahkamasi qarori 239: Bozorlar faoliyatini takomillashtirish va mahsulotlar sotish
     uchun zarur shart-sharoitlar yaratishga doir qoʻshimcha chora-tadbi…'
   judged: true
@@ -2103,6 +2221,7 @@
   - llm
   - qonun
   - noaniq
+  - dev
   source: 'Qonun OʻRQ-370: “Aksiyadorlik jamiyatlari va aksiyadorlarning huquqlarini himoya qilish toʻgʻrisida”gi
     Oʻzbekiston Respublikasi Qonuniga oʻzgartish va qoʻshimc…'
   judged: true
@@ -2126,6 +2245,7 @@
   - llm
   - qonun
   - aniq
+  - test
   source: 'Qonun OʻRQ-410: “Mehnatni muhofaza qilish toʻgʻrisida”gi Oʻzbekiston Respublikasi Qonuniga
     oʻzgartish va qoʻshimchalar kiritish haqida'
   judged: true
@@ -2142,6 +2262,7 @@
   - llm
   - vm_qarori
   - noaniq
+  - test
   source: 'Vazirlar Mahkamasi qarori 660: Nodavlat umumiy oʻrta taʼlim tashkilotlarini davlat tomonidan
     qoʻshimcha qoʻllab-quvvatlashga oid ayrim normativ-huquqiy hujjatl…'
   judged: true
@@ -2168,6 +2289,7 @@
   - llm
   - boshqa
   - noaniq
+  - dev
   source: 'Hujjat 2338: Oʻzbekiston Respublikasida akkreditatsiya qilingan xorijiy davlatlar diplomatik
     vakolatxonalari va konsullik muassasalari, shuningdek ularga tengl…'
   judged: true
@@ -2187,6 +2309,7 @@
   - llm
   - vm_qarori
   - noaniq
+  - test
   source: Oziq-ovqat sanoati mahsulotlarini ishlab chiqarishni qoʻllab-quvvatlashning samarali mexanizmlarini
     joriy etish toʻgʻrisidagi Vazirlar Mahkamasi qarori (476)
   judged: true
@@ -2202,6 +2325,7 @@
   - llm
   - vm_qarori
   - noaniq
+  - dev
   source: 'Vazirlar Mahkamasi qarori 567: Andijon viloyati Asaka tumanidagi qishloq xoʻjaligiga moʻljallangan
     yerlardan samarali foydalanishni tashkil etish chora-tadbirl…'
   judged: true
@@ -2220,6 +2344,7 @@
   - llm
   - vm_qarori
   - noaniq
+  - test
   source: 'Vazirlar Mahkamasi qarori 386: Ixtisoslashtirilgan soʻyish korxonalari faoliyatini tartibga
     solish hamda isteʼmol bozoriga goʻsht va goʻsht mahsulotlarini yetk…'
   judged: true
@@ -2243,6 +2368,7 @@
   - llm
   - vm_qarori
   - noaniq
+  - test
   source: Davlat xizmatlarini koʻrsatishda agentlar faoliyatini tashkil etish chora-tadbirlari toʻgʻrisidagi
     Vazirlar Mahkamasi qarori (221)
   judged: true
@@ -2261,6 +2387,7 @@
   - llm
   - vm_qarori
   - noaniq
+  - dev
   source: 'Vazirlar Mahkamasi qarori 552: Axborot-kutubxona muassasalarida axborot-kutubxona resurslarini
     hisobga olish, fondlarni saqlash va hisobdan chiqarish sohasidag…'
   judged: true
@@ -2317,6 +2444,7 @@
   - llm
   - vm_qarori
   - aniq
+  - test
   source: 'Vazirlar Mahkamasi qarori 238: Muhammad Rizo Erniyozbek oʻgʻli Ogahiy tavalludining 210 yilligini
     nishonlash hamda Xiva shahrida Muhammad Rizo Ogahiy nomidagi…'
   judged: true
@@ -2334,6 +2462,7 @@
   - llm
   - vm_qarori
   - aniq
+  - test
   source: 'Vazirlar Mahkamasi qarori 705: Oʻzbekiston Respublikasi Adliya vazirligi tizimidagi taʼlim
     muassasalari faoliyatini yanada takomillashtirish chora-tadbirlari t…'
   judged: true
@@ -2350,6 +2479,7 @@
   - llm
   - boshqa
   - noaniq
+  - test
   source: 'Hujjat 2984: Oʻzbekiston Respublikasi oliy taʼlim muassasalarida rezervdagi va zaxiradagi ofitserlarni
     tayyorlash dasturlari boʻyicha oʻqitish uchun talabalarn…'
   judged: true
@@ -2367,6 +2497,7 @@
   - llm
   - qonun
   - aniq
+  - dev
   source: Oʻzbekiston Respublikasida chet el fuqarolarining va fuqaroligi boʻlmagan shaxslarning huquqiy
     holati toʻgʻrisidagi Qonun (OʻRQ-692)
   judged: true
@@ -2380,6 +2511,7 @@
   - llm
   - qaror
   - aniq
+  - test
   source: 'Prezident qarori PQ-1047: Oziq-ovqat mahsulotlari ishlab chiqarishni kengaytirish va ichki
     bozorni toʻldirish yuzasidan qoʻshimcha chora-tadbirlar toʻgʻrisida'
   judged: true
@@ -2401,6 +2533,7 @@
   - llm
   - vm_qarori
   - aniq
+  - dev
   source: 'Vazirlar Mahkamasi qarori 6: Xorijda ota-onasi qaramogʻidan mahrum boʻlgan Oʻzbekiston Respublikasi
     fuqarolarining bolalarini Oʻzbekiston Respublikasiga qaytar…'
   judged: true
@@ -2415,6 +2548,7 @@
   - llm
   - farmon
   - aniq
+  - test
   source: 'Prezident farmoni PF-93: Kambagʻallikni qisqartirishda tadbirkorlik subyektlari bilan oʻzaro
     manfaatli hamkorlik oʻrnatishga qaratilgan chora-tadbirlar toʻgʻri…'
   judged: true
@@ -2431,6 +2565,7 @@
   - llm
   - vm_qarori
   - aniq
+  - test
   source: 'Vazirlar Mahkamasi qarori 2486: Birinchi guruhga choyni yetkazib berish, qabul qilish, saqlash
     va berib yuborish tartibi toʻgʻrisidagi yoʻriqnomani tasdiqlash…'
   judged: true
@@ -2454,6 +2589,7 @@
   - llm
   - vm_qarori
   - noaniq
+  - test
   source: 'Vazirlar Mahkamasi qarori 472: Oʻzbekiston Respublikasida giyohvandlik vositalari, psixotrop
     moddalar va prekursorlarning muomalada boʻlish tartibini belgilab…'
   judged: true
@@ -2470,6 +2606,7 @@
   - llm
   - qaror
   - aniq
+  - dev
   source: Oʻzbekistonda Sharda universitetini tashkil etish toʻgʻrisidagi Prezident qarori (PQ-4278)
   judged: true
   judged_alt: true
@@ -2486,6 +2623,7 @@
   - llm
   - buyruq
   - noaniq
+  - test
   source: 'Buyruq 3638: Internet butunjahon axborot tarmogʻida tavakkalchilikka asoslangan oʻyinlarni,
     lotereya tashkil etish va bukmekerlik faoliyatini litsenziyalash to…'
   judged: true
@@ -2505,6 +2643,7 @@
   - llm
   - boshqa
   - noaniq
+  - test
   source: 'Hujjat 3878: Oʻzbekiston Respublikasi Qurolli Kuchlarida muddatli harbiy xizmatni oʻtayotgan
     harbiy xizmatchilarni kasbga oʻqitish xarajatlarini Bandlikka koʻm…'
   judged: true
@@ -2520,6 +2659,7 @@
   - llm
   - qonun
   - aniq
+  - test
   source: Raqobat toʻgʻrisidagi Qonun (OʻRQ-850)
   judged: true
 - id: lf-141
@@ -2541,6 +2681,7 @@
   - llm
   - vm_qarori
   - noaniq
+  - test
   source: 'Vazirlar Mahkamasi qarori 636: Uzoq masofada joylashgan va muhim ahamiyatga ega boʻlgan obyektlarda
     qurilish-montaj ishlarini amalga oshirishning vaxta usuli t…'
   judged: true
@@ -2558,6 +2699,7 @@
   - llm
   - vm_qarori
   - noaniq
+  - test
   source: Alisher Navoiy nomidagi xalqaro oʻzbek tili olimpiadasini tashkil etish toʻgʻrisidagi Vazirlar
     Mahkamasi qarori (250)
   judged: true
@@ -2573,6 +2715,7 @@
   - llm
   - farmon
   - aniq
+  - test
   source: Qoraqalpogʻiston Respublikasi hududida favqulodda holat joriy etish toʻgʻrisidagi Prezident
     farmoni (PF-164)
   judged: true
@@ -2596,6 +2739,7 @@
   - llm
   - vm_qarori
   - aniq
+  - dev
   source: 'Vazirlar Mahkamasi qarori 140: Umumiy oʻrta taʼlim toʻgʻrisidagi nizomni tasdiqlash haqida'
   judged: true
   judged_alt: true
@@ -2612,6 +2756,7 @@
   - llm
   - vm_qarori
   - aniq
+  - dev
   source: Yoʻl harakati qoidabuzarliklarini jarima ballari asosida baholash tizimini joriy etish toʻgʻrisidagi
     Vazirlar Mahkamasi qarori (296)
   judged: true
@@ -2626,6 +2771,7 @@
   - llm
   - boshqa
   - aniq
+  - test
   source: Alohida asoslarga koʻra mehnat shartnomasi bekor qilinganda ishdan boʻshatilgan xodimlarga muddatidan
     oldin pensiya tayinlash tartibi toʻgʻrisidagi Hujjat (588)
   judged: true
@@ -2642,6 +2788,7 @@
   - llm
   - buyruq
   - aniq
+  - test
   source: 'Buyruq 3936: Karantinli va inson uchun xavfli boʻlgan boshqa yuqumli kasalliklar tarqalishi
     xavfi mavjud boʻlganda aholini profilaktik emlashdan oʻtkazish tart…'
   judged: true
@@ -2656,6 +2803,7 @@
   - llm
   - qaror
   - aniq
+  - dev
   source: Taʼlim va ilm-fan vazirligi faoliyatini tashkil etish chora-tadbirlari toʻgʻrisidagi Prezident
     qarori (PQ-380)
   judged: true
@@ -2671,6 +2819,7 @@
   - llm
   - vm_qarori
   - aniq
+  - dev
   source: 'Vazirlar Mahkamasi qarori 23: Toshkent shahri aholisini qoʻshimcha issiqlik va elektr energiyasi
     bilan taʼminlash maqsadida tajriba-sinov loyihalarini amalga o…'
   judged: true
@@ -2685,6 +2834,7 @@
   - llm
   - farmon
   - aniq
+  - dev
   source: Xalq taʼlimini boshqarish tizimini takomillashtirish boʻyicha qoʻshimcha chora-tadbirlar toʻgʻrisidagi
     Prezident farmoni (PF-5538)
   judged: true
@@ -2700,6 +2850,7 @@
   - llm
   - vm_qarori
   - aniq
+  - dev
   source: Surxondaryo viloyatida yoshlarni sportga jalb qilish tizimini takomillashtirish chora-tadbirlari
     toʻgʻrisidagi Vazirlar Mahkamasi qarori (243)
   judged: true
@@ -2728,6 +2879,7 @@
   - llm
   - buyruq
   - aniq
+  - dev
   source: 'Buyruq 3708: Davlat sogʻliqni saqlash tizimidagi tibbiyot muassasalarida retsipiyent hamda
     tirik donorni transplantatsiya amaliyotiga tayyorlash va ularning am…'
   judged: true
@@ -2748,6 +2900,7 @@
   - llm
   - boshqa
   - aniq
+  - test
   source: Qasddan odam oʻldirishga oid ishlar boʻyicha sud amaliyoti toʻgʻrisidagi Hujjat (13)
   judged: true
 - id: lf-154
@@ -2766,6 +2919,7 @@
   - llm
   - farmon
   - aniq
+  - test
   source: 'Prezident farmoni PF-4715: Keksalarni ijtimoiy himoya qilish va moddiy qoʻllab-quvvatlashni
     yanada kuchaytirish boʻyicha qoʻshimcha chora-tadbirlar toʻgʻrisida'
   judged: true
@@ -2779,6 +2933,7 @@
   - llm
   - qaror
   - aniq
+  - dev
   source: Qurbon hayitini nishonlash toʻgʻrisidagi Prezident qarori (PQ-195)
   judged: true
 - id: lf-156
@@ -2793,6 +2948,7 @@
   - llm
   - vm_qarori
   - aniq
+  - test
   source: 'Vazirlar Mahkamasi qarori 2485: Birinchi guruhga shakar yetkazib berish, qabul qilish, saqlash
     va berib yuborish tartibi toʻgʻrisidagi yoʻriqnomani tasdiqlash…'
   judged: true
@@ -2809,6 +2965,7 @@
   - llm
   - buyruq
   - aniq
+  - test
   source: 'Buyruq 2177: Tibbiyot texnikasidan foydalanish, montaj qilish, texnik xizmat koʻrsatish va
     taʼmirlashda mehnatni muhofaza qilish qoidalarini tasdiqlash haqida'
   judged: true
@@ -2825,6 +2982,7 @@
   - llm
   - vm_qarori
   - aniq
+  - test
   source: 'Vazirlar Mahkamasi qarori 237: “Xalq cholgʻulari ijrochilari”, Mukarrama Turgʻunboyeva nomidagi
     “Milliy raqs ijrochilari” va Yunus Rajabiy nomidagi “Yosh maqom…'
   judged: true
@@ -2843,6 +3001,7 @@
   - llm
   - vm_qarori
   - aniq
+  - dev
   source: Qurilish sohasiga oid yagona maʼmuriy qurilish reglamentlarini tasdiqlash toʻgʻrisidagi Vazirlar
     Mahkamasi qarori (200)
   judged: true
@@ -2858,6 +3017,7 @@
   - llm
   - farmon
   - noaniq
+  - dev
   source: 'Prezident farmoni PF-3079: Yadro poligonlarida va boshqa yadroviy-radiatsiya obyektlarida harbiy
     xizmatni oʻtagan pensiya yoshidagi shaxslarni ijtimoiy qoʻllab…'
   judged: true
@@ -2881,6 +3041,7 @@
   - llm
   - qonun
   - aniq
+  - dev
   source: Transport toʻgʻrisidagi Qonun (OʻRQ-706)
   judged: true
   judged_alt: true
@@ -2897,6 +3058,7 @@
   - llm
   - buyruq
   - noaniq
+  - test
   source: 'Buyruq 2937: Oliy taʼlim tashkilotlarining rahbar va pedagog kadrlarini qayta tayyorlash va
     ularning malakasini oshirish kurslari tinglovchilarining bitiruv (l…'
   judged: true
@@ -2913,6 +3075,7 @@
   - llm
   - vm_qarori
   - aniq
+  - test
   source: Bolalarning dam olishini tashkil etish va sogʻlomlashtirish tizimini yanada takomillashtirish
     chora-tadbirlari toʻgʻrisidagi Vazirlar Mahkamasi qarori (84)
   judged: true
@@ -2928,6 +3091,7 @@
   - llm
   - qonun
   - aniq
+  - test
   source: Xalq deputatlari viloyat, tuman va shahar kengashi deputatining maqomi toʻgʻrisidagi Qonun (706-II)
   judged: true
 - id: lf-165
@@ -2942,6 +3106,7 @@
   - llm
   - buyruq
   - aniq
+  - test
   source: 'Buyruq 2970: Etil spirtini realizatsiya qilish, berish, saqlash va hisobga olish tartibi toʻgʻrisidagi
     nizomni tasdiqlash haqida'
   judged: true
@@ -2959,6 +3124,7 @@
   - llm
   - vm_qarori
   - noaniq
+  - dev
   source: 'Vazirlar Mahkamasi qarori 498: Toʻsiqsiz turizm orqali turizm imkoniyatlarini yanada kengaytirish
     boʻyicha qulay shart-sharoitlar yaratish chora-tadbirlari toʻ…'
   judged: true
@@ -2976,6 +3142,7 @@
   - llm
   - boshqa
   - noaniq
+  - dev
   source: 'Hujjat 2156: Bojxona chegarasidan olib oʻtilayotgan avtotransport vositalarini bojxona rasmiylashtiruvidan
     oʻtkazish tartibi toʻgʻrisida nizomni tasdiqlash haq…'
   judged: true
@@ -2993,6 +3160,7 @@
   - llm
   - vm_qarori
   - aniq
+  - test
   source: Maktabgacha taʼlim va tarbiyaning davlat standartini tasdiqlash toʻgʻrisidagi Vazirlar Mahkamasi
     qarori (802)
   judged: true
@@ -3009,6 +3177,7 @@
   - llm
   - buyruq
   - noaniq
+  - dev
   source: Bugʻ va issiq suv quvurlari qurish va ulardan foydalanishda mehnatni muhofaza qilish qoidalarini
     tasdiqlash toʻgʻrisidagi Buyruq (2631)
   judged: true
@@ -3026,6 +3195,7 @@
   - llm
   - farmon
   - aniq
+  - test
   source: Oʻzbekiston Respublikasida pasport tizimini takomillashtirishga doir qoʻshimcha chora-tadbirlar
     toʻgʻrisidagi Prezident farmoni (PF-4262)
   judged: true
@@ -3050,6 +3220,7 @@
   - llm
   - qonun
   - aniq
+  - dev
   source: Radiochastota spektri toʻgʻrisidagi Qonun (725-I)
   judged: true
   judged_alt: true
@@ -3064,6 +3235,7 @@
   - llm
   - qaror
   - noaniq
+  - test
   source: Nuroniylarni har tomonlama qoʻllab-quvvatlash, ularning turmush darajasini oshirishga doir qoʻshimcha
     chora-tadbirlar toʻgʻrisidagi Prezident qarori (PQ-167)
   judged: true
@@ -3079,6 +3251,7 @@
   - llm
   - qonun
   - aniq
+  - dev
   source: Ishlab chiqarishdagi baxtsiz hodisalar va kasb kasalliklaridan majburiy davlat ijtimoiy sugʻurtasi
     toʻgʻrisidagi Qonun (OʻRQ-174)
   judged: true
@@ -3093,6 +3266,7 @@
   - llm
   - boshqa
   - aniq
+  - dev
   source: 'Hujjat 110: Oʻzbekiston Respublikasi Fuqarolik kodeksining talabdan boshqa shaxs foydasiga
     voz kechish huquqi bilan bogʻliq normalarini qoʻllashning ayrim masa…'
   judged: true
@@ -3114,6 +3288,7 @@
   - llm
   - farmon
   - aniq
+  - test
   source: Baliqchilik tarmogʻini rivojlantirishga oid qoʻshimcha chora-tadbirlar toʻgʻrisidagi Prezident
     farmoni (PF-122)
   judged: true
@@ -3130,6 +3305,7 @@
   - llm
   - vm_qarori
   - aniq
+  - test
   source: 'Vazirlar Mahkamasi qarori 545: Oʻzbekiston Respublikasida suv xoʻjaligi balanslarini tuzish
     tartibi toʻgʻrisidagi nizomni tasdiqlash haqida'
   judged: true
@@ -3145,6 +3321,7 @@
   - llm
   - qonun
   - aniq
+  - test
   source: Pedagogning maqomi toʻgʻrisidagi Qonun (OʻRQ-901)
   judged: true
 - id: lf-178
@@ -3160,6 +3337,7 @@
   - llm
   - buyruq
   - noaniq
+  - test
   source: 'Buyruq 2750: Optik detallarga mexanik ishlov berishda mehnatni muhofaza qilish qoidalarini
     tasdiqlash haqida'
   judged: true
@@ -3178,6 +3356,7 @@
   - llm
   - vm_qarori
   - noaniq
+  - test
   source: 'Vazirlar Mahkamasi qarori 358: Oʻzbekiston Respublikasi Ichki ishlar vazirligi huzuridagi Jazoni
     ijro etish departamenti va uning tizimidagi jazoni ijro etish…'
   judged: true
@@ -3195,6 +3374,7 @@
   - llm
   - qonun
   - aniq
+  - test
   source: Masʼuliyati cheklangan jamiyatlar toʻgʻrisidagi Qonun (OʻRQ-1137)
   judged: true
 - id: lf-181
@@ -3208,6 +3388,7 @@
   - llm
   - qaror
   - aniq
+  - dev
   source: 'Prezident qarori PQ-3751: Qishloq xoʻjaligi mahsulotlari ishlab chiqaruvchilarga mexanizatsiya
     va servis xizmatlarini koʻrsatish samaradorligini oshirish boʻyi…'
   judged: true
@@ -3229,6 +3410,7 @@
   - llm
   - qaror
   - noaniq
+  - dev
   source: Ugom daryosining tabiiy gidrologik rejimi va biologik xilma-xilligini yanada yaxshilash chora-tadbirlari
     toʻgʻrisidagi Prezident qarori (PQ-164)
   judged: true
@@ -3250,6 +3432,7 @@
   - llm
   - farmon
   - aniq
+  - dev
   source: 'Prezident farmoni PF-34: Vatan himoyasi va el-yurtimiz tinchligi yoʻlida halok boʻlgan harbiy
     xizmatchilar va xodimlar oila aʼzolarini ijtimoiy qoʻllab-quvvatl…'
   judged: true
@@ -3265,6 +3448,7 @@
   - llm
   - vm_qarori
   - aniq
+  - dev
   source: Oʻzbekiston futbol assotsiatsiyasi tizimidagi Milliy futbol markazi faoliyatini tashkil etish
     chora-tadbirlari toʻgʻrisidagi Vazirlar Mahkamasi qarori (634)
   judged: true
@@ -3279,6 +3463,7 @@
   - llm
   - vm_qarori
   - aniq
+  - test
   source: 'Vazirlar Mahkamasi qarori 500: Oʻzbekiston Respublikasi oliy taʼlim tizimida magistratura bosqichida
     kadrlar tayyorlashni takomillashtirish hamda samaradorligi…'
   judged: true
@@ -3314,6 +3499,7 @@
   - llm
   - buyruq
   - aniq
+  - test
   source: 'Buyruq 1999: Mebellar va yogʻoch qurilish materiallarini tayyorlash va taʼmirlashda mehnatni
     muhofaza qilish qoidalarini tasdiqlash haqida'
   judged: true
@@ -3331,6 +3517,7 @@
   - llm
   - vm_qarori
   - noaniq
+  - dev
   source: 'Vazirlar Mahkamasi qarori 691: “Mahalla yettiligi” tavsiyasi asosida kambagʻallikdan chiqarish
     dasturiga kiritilgan va uy-joy sharoitini yaxshilashga muhtoj bo…'
   judged: true
@@ -3350,6 +3537,7 @@
   - llm
   - vm_qarori
   - noaniq
+  - test
   source: 'Vazirlar Mahkamasi qarori 341: Voyaga yetmaganlar uchun moʻljallangan dori vositalarini reklama
     qilishga ruxsatnoma berish tartibi toʻgʻrisidagi Nizomni tasdiq…'
   judged: true
@@ -3365,6 +3553,7 @@
   - llm
   - boshqa
   - noaniq
+  - test
   source: 'Hujjat 2788: Valyuta birjasi faoliyatini litsenziyalash tartibi toʻgʻrisidagi nizomni tasdiqlash
     haqida'
   judged: true
@@ -3388,6 +3577,7 @@
   - llm
   - qaror
   - aniq
+  - dev
   source: Maktabgacha taʼlim sohasida davlat-xususiy sheriklikni yanada rivojlantirish boʻyicha qoʻshimcha
     chora-tadbirlar toʻgʻrisidagi Prezident qarori (PQ-322)
   judged: true
@@ -3403,6 +3593,7 @@
   - llm
   - qaror
   - aniq
+  - dev
   source: Yoshlar tadbirkorligini rivojlantirish va bandligini taʼminlashga doir qoʻshimcha chora-tadbirlar
     toʻgʻrisidagi Prezident qarori (PQ-62)
   judged: true
@@ -3418,6 +3609,7 @@
   - llm
   - vm_qarori
   - aniq
+  - test
   source: Fargʻona viloyatida qoʻshimcha kichik sanoat zonalari tashkil etish chora-tadbirlari toʻgʻrisidagi
     Vazirlar Mahkamasi qarori (1007)
   judged: true
@@ -3433,6 +3625,7 @@
   - llm
   - boshqa
   - noaniq
+  - dev
   source: 'Hujjat 3099: Transport vositalari haydovchilarining mast holatda ekanligini aniqlash tartibi
     toʻgʻrisidagi nizomni tasdiqlash haqida'
   judged: true
@@ -3457,6 +3650,7 @@
   - llm
   - vm_qarori
   - aniq
+  - dev
   source: 'Vazirlar Mahkamasi qarori 2492: Birinchi guruhga sariyogʻ yetkazib berish, qabul qilish, saqlash
     va berib yuborish tartibi toʻgʻrisida yoʻriqnomani tasdiqlash…'
   judged: true
@@ -3474,6 +3668,7 @@
   - llm
   - kodeks
   - aniq
+  - test
   source: Fuqarolik kodeksi (ikkinchi qism)
   judged: true
 - id: lf-196
@@ -3487,6 +3682,7 @@
   - llm
   - qaror
   - aniq
+  - dev
   source: 'Prezident qarori PQ-213: Oʻzbekiston Respublikasi Qurolli Kuchlari safida muddatli harbiy xizmatni
     oʻtayotgan harbiy xizmatchilarga beriladigan imtiyozlar tizi…'
   judged: true
@@ -3502,6 +3698,7 @@
   - llm
   - qonun
   - aniq
+  - dev
   source: Psixiatriya yordami toʻgʻrisidagi Qonun (OʻRQ-690)
   judged: true
 - id: lf-198
@@ -3517,6 +3714,7 @@
   - llm
   - vm_qarori
   - noaniq
+  - dev
   source: 'Vazirlar Mahkamasi qarori 2271: Avtomototransport vositalari va shahar elektr transporti vositalari
     haydovchilarini tayyorlash va qayta tayyorlash bilan shugʻu…'
   judged: true
@@ -3535,6 +3733,7 @@
   - llm
   - vm_qarori
   - noaniq
+  - dev
   source: 'Vazirlar Mahkamasi qarori 12: Oʻzbekiston Respublikasi Ekologiya va atrof muhitni muhofaza
     qilish davlat qoʻmitasi xodimlari mehnatini ragʻbatlantirishning sam…'
   judged: true
@@ -3552,6 +3751,7 @@
   - llm
   - qonun
   - noaniq
+  - test
   source: Oʻzbekiston Respublikasi Oliy Majlisining Inson huquqlari boʻyicha vakili (ombudsman) toʻgʻrisidagi
     Qonun (OʻRQ-1002)
   judged: true
@@ -3568,6 +3768,7 @@
   - llm
   - vm_qarori
   - aniq
+  - dev
   source: Korxonalarda xalqaro standartlarga muvofiq boʻlgan sifatni boshqarish tizimlarini joriy etish
     chora-tadbirlari toʻgʻrisidagi Vazirlar Mahkamasi qarori (349)
   judged: true
@@ -3587,6 +3788,7 @@
   - llm
   - vm_qarori
   - aniq
+  - dev
   source: Estrada qoʻshiqchilik sanʼatini yanada rivojlantirish toʻgʻrisidagi Vazirlar Mahkamasi qarori
     (272)
   judged: true
@@ -3602,6 +3804,7 @@
   - llm
   - qonun
   - aniq
+  - test
   source: Tuproqni muhofaza qilish va uning unumdorligini oshirish toʻgʻrisidagi Qonun (OʻRQ-903)
   judged: true
   judged_alt: true
@@ -3616,6 +3819,7 @@
   - llm
   - kodeks
   - aniq
+  - dev
   source: Fuqarolik protsessual kodeksi
   judged: true
 - id: lf-205
@@ -3631,6 +3835,7 @@
   - llm
   - boshqa
   - aniq
+  - test
   source: 'Hujjat 2904: Oʻzbekiston Respublikasi bojxona hududida avtomobil va temir yoʻl transport vositalarida
     bojxona nazorati ostidagi tovarlar tashilganda yuk boʻlim…'
   judged: true
@@ -3645,6 +3850,7 @@
   - llm
   - buyruq
   - aniq
+  - test
   source: Yoʻlovchining havo kemasi ichidagi yurish-turish qoidalarini tasdiqlash toʻgʻrisidagi Buyruq
     (2416)
   judged: true
@@ -3662,6 +3868,7 @@
   - llm
   - buyruq
   - aniq
+  - dev
   source: 'Buyruq 1494: Giyohvandlik vositalari yoki psixotrop moddalarni notibbiy isteʼmol qiluvchi shaxslarni,
     giyohvandlik yoki zaharvandlik bilan kasallangan bemorlar…'
   judged: true
@@ -3678,6 +3885,7 @@
   - llm
   - vm_qarori
   - noaniq
+  - test
   source: “Integratsiyalashgan tarif” interaktiv xizmatini joriy etish chora-tadbirlari toʻgʻrisidagi
     Vazirlar Mahkamasi qarori (829)
   judged: true
@@ -3696,6 +3904,7 @@
   - llm
   - vm_qarori
   - aniq
+  - test
   source: 'Vazirlar Mahkamasi qarori 414: Terrorchilik harakati oqibatida zarar koʻrgan shaxslarni ijtimoiy
     reabilitatsiya qilish tartibi toʻgʻrisidagi Nizomni tasdiqlash…'
   judged: true
@@ -3711,6 +3920,7 @@
   - llm
   - vm_qarori
   - noaniq
+  - test
   source: 'Vazirlar Mahkamasi qarori 451: Kasbiy taʼlim tizimi boshqaruv va pedagog kadrlarini kasbiy
     rivojlantirish tizimini yanada takomillashtirish chora-tadbirlari to…'
   judged: true
@@ -3726,6 +3936,7 @@
   - llm
   - vm_qarori
   - noaniq
+  - dev
   source: 'Vazirlar Mahkamasi qarori 516: Namangan viloyati Yangiqoʻrgʻon tumanida kartoshka urugʻchiligiga
     ixtisoslashgan ilmiy-taʼlim tashkilotlari faoliyatini yoʻlga q…'
   judged: true
@@ -3749,6 +3960,7 @@
   - llm
   - boshqa
   - aniq
+  - test
   source: 'Hujjat 3382: Tranzit deklaratsiyasini toʻldirish, rasmiylashtirish, unga oʻzgartirish va qoʻshimcha
     kiritish, uni qaytarib olish hamda bekor qilish tartibi toʻ…'
   judged: true
@@ -3763,6 +3975,7 @@
   - llm
   - qaror
   - noaniq
+  - test
   source: 2017-2021-yillarda Orolboʻyi mintaqasini rivojlantirish Davlat dasturi toʻgʻrisidagi Prezident
     qarori (PQ-2731)
   judged: true
@@ -3784,6 +3997,7 @@
   - llm
   - qaror
   - aniq
+  - test
   source: Zulfiya nomidagi davlat mukofoti bilan taqdirlash toʻgʻrisidagi Prezident qarori (PQ-808)
   judged: true
 - id: lf-215
@@ -3798,6 +4012,7 @@
   - llm
   - qaror
   - aniq
+  - test
   source: 'Prezident qarori PQ-40: Oʻzbekiston Respublikasi Qurolli Kuchlari harbiy xizmatchilarining
     jismoniy tayyorgarligini yuqori darajada tashkil etish boʻyicha qoʻs…'
   judged: true
@@ -3820,6 +4035,7 @@
   - llm
   - boshqa
   - aniq
+  - dev
   source: 'Hujjat 3349: Prokuratura organlari, adliya organlari (muassasalari), davlat bojxona xizmati
     organlari, Milliy gvardiya organlari, davlat feldyegerlik xizmati x…'
   judged: true
@@ -3848,6 +4064,7 @@
   - llm
   - buyruq
   - aniq
+  - dev
   source: 'Buyruq 3226: Oʻzbekiston Respublikasi Mudofaa vazirligi qoʻshinlariga kontrakt boʻyicha harbiy
     xizmatga nomzodlarni saralash tartibi toʻgʻrisidagi nizomni tasd…'
   judged: true
@@ -3864,6 +4081,7 @@
   - llm
   - vm_qarori
   - noaniq
+  - dev
   source: Qishloq xoʻjaligi ekinlari navlarini sinash tizimini takomillashtirish toʻgʻrisidagi Vazirlar
     Mahkamasi qarori (158)
   judged: true
@@ -3879,6 +4097,7 @@
   - llm
   - vm_qarori
   - aniq
+  - test
   source: 'Vazirlar Mahkamasi qarori 339: Oʻzbek tilining asosiy imlo qoidalarini tasdiqlash haqida'
   judged: true
 - id: lf-220
@@ -3901,6 +4120,7 @@
   - llm
   - vm_qarori
   - aniq
+  - dev
   source: 'Vazirlar Mahkamasi qarori 726: Notariuslar tomonidan ayrim notarial harakatlarni amalga oshirish
     tartibi toʻgʻrisidagi maʼmuriy reglamentlarni tasdiqlash haqida'
   judged: true
@@ -3915,6 +4135,7 @@
   - llm
   - vm_qarori
   - aniq
+  - test
   source: 'Vazirlar Mahkamasi qarori 165: Oʻrta maxsus, kasb-hunar taʼlimi muassasalari xodimlari mehnatiga
     haq toʻlashning takomillashtirilgan tizimini tasdiqlash toʻgʻr…'
   judged: true
@@ -3945,6 +4166,7 @@
   - llm
   - boshqa
   - aniq
+  - dev
   source: 'Hujjat 3171: Ichki ishlar organlari xodimlarini terrorizmga va jinoyatchilikka qarshi kurashish
     hamda jamoat havfsizligini taʼminlash chogʻida halok boʻlgan yo…'
   judged: true
@@ -3960,6 +4182,7 @@
   - llm
   - vm_qarori
   - aniq
+  - dev
   source: 'Vazirlar Mahkamasi qarori 238: Qimmatli qogʻozlar bozorida mijozlarni masofadan turib raqamli
     identifikatsiya qilish tartibi toʻgʻrisidagi nizomni tasdiqlash h…'
   judged: true
@@ -3991,6 +4214,7 @@
   - llm
   - qaror
   - aniq
+  - test
   source: Oʻquvchi-yoshlarni chaqiruvga qadar boshlangʻich tayyorlash tizimini yangi bosqichga olib chiqish
     chora-tadbirlari toʻgʻrisidagi Prezident qarori (PQ-393)
   judged: true
@@ -4010,6 +4234,7 @@
   - llm
   - qonun
   - aniq
+  - dev
   source: Oʻzbekiston Respublikasi Oliy Majlisi Qonunchilik palatasi deputatining va Senati aʼzosining
     maqomi toʻgʻrisidagi Qonun (704-II)
   judged: true
@@ -4027,6 +4252,7 @@
   - llm
   - vm_qarori
   - aniq
+  - dev
   source: 'Vazirlar Mahkamasi qarori 373: Oilaviy tadbirkorlikni rivojlantirish dasturlarining yagona
     elektron platformasi orqali kreditlar ajratish tartibi toʻgʻrisidagi…'
   judged: true
@@ -4043,6 +4269,7 @@
   - llm
   - vm_qarori
   - aniq
+  - test
   source: Akademik litseylar rahbar va pedagog xodimlarining uzluksiz malaka oshirish tizimini joriy etish
     toʻgʻrisidagi Vazirlar Mahkamasi qarori (296)
   judged: true
@@ -4057,6 +4284,7 @@
   - llm
   - qonun
   - aniq
+  - test
   source: Qutqaruv xizmati va qutqaruvchi maqomi toʻgʻrisidagi Qonun (OʻRQ-195)
   judged: true
 - id: lf-229
@@ -4079,6 +4307,7 @@
   - llm
   - buyruq
   - noaniq
+  - dev
   source: 'Buyruq 3721: Notariuslikka talabgorlar uchun Adliya vazirligi huzuridagi Yuridik kadrlarni
     qayta tayyorlash va malakasini oshirish institutida majburiy oʻquv k…'
   judged: true
@@ -4095,6 +4324,7 @@
   - llm
   - qaror
   - aniq
+  - test
   source: 'Prezident qarori PQ-2718: Oziq-ovqat, charm-poyabzal va farmatsevtika sanoatida investitsiya
     loyihalarini moliyalashtirish manbalarini kengaytirish chora-tadbi…'
   judged: true
@@ -4109,6 +4339,7 @@
   - llm
   - vm_qarori
   - aniq
+  - test
   source: Namangan viloyatida baliq yetishtirish boʻyicha mavjud imkoniyatlardan samarali foydalanish
     chora-tadbirlari toʻgʻrisidagi Vazirlar Mahkamasi qarori (572)
   judged: true
@@ -4123,6 +4354,7 @@
   - llm
   - vm_qarori
   - aniq
+  - dev
   source: 'Vazirlar Mahkamasi qarori 365: Nikohlanuvchi shaxslarni tibbiy koʻrikdan oʻtkazish toʻgʻrisidagi
     nizomni tasdiqlash haqida'
   judged: true
@@ -4137,6 +4369,7 @@
   - llm
   - qaror
   - aniq
+  - test
   source: Davlat oliy taʼlim muassasalariga oʻqishga qabul qilish jarayonlarini tashkil etish toʻgʻrisidagi
     Prezident qarori (PQ-279)
   judged: true
@@ -4153,6 +4386,7 @@
   - llm
   - vm_qarori
   - aniq
+  - dev
   source: Yongʻin xavfsizligi qoidalarini tasdiqlash toʻgʻrisidagi Vazirlar Mahkamasi qarori (649)
   judged: true
 - id: lf-235
@@ -4165,6 +4399,7 @@
   - llm
   - vm_qarori
   - noaniq
+  - test
   source: 'Vazirlar Mahkamasi qarori 462: “Infratuzilmalarni rivojlantirishni, shuningdek Sirdaryo viloyati
     Oqoltin tumanidagi tarkibi oʻzgartirilgan xoʻjaliklarni qoʻlla…'
   judged: true
@@ -4182,6 +4417,7 @@
   - llm
   - buyruq
   - noaniq
+  - test
   source: 'Buyruq 3932: Alkogol va tamaki bozorini tartibga solish sohasida “Xavfni tahlil qilish” elektron
     tizimini joriy etish tartibi toʻgʻrisidagi nizomni tasdiqlash…'
   judged: true
@@ -4197,6 +4433,7 @@
   - llm
   - qonun
   - aniq
+  - test
   source: 'Qonun OʻRQ-1161: Davlat organining yoki uning mansabdor shaxsining qonunga xilof qarori, harakati
     yoxud harakatsizligi tufayli yetkazilgan zararning oʻrnini qo…'
   judged: true
@@ -4228,6 +4465,7 @@
   - llm
   - vm_qarori
   - aniq
+  - dev
   source: Andijon viloyatining Asaka va Shahrixon tumanlarida koʻchmas mulk obyektlariga boʻlgan huquqlarni
     eʼtirof etish toʻgʻrisidagi Vazirlar Mahkamasi qarori (520)
   judged: true
@@ -4246,6 +4484,7 @@
   - llm
   - vm_qarori
   - noaniq
+  - dev
   source: 'Vazirlar Mahkamasi qarori 103: Ariza beruvchi-uy quruvchining 2017-2021-yillarda qishloq joylarda
     yangilangan namunaviy loyihalar boʻyicha arzon uy-joylar quri…'
   judged: true
@@ -4264,6 +4503,7 @@
   - llm
   - vm_qarori
   - aniq
+  - test
   source: 'Vazirlar Mahkamasi qarori 808: Alimentlarni oldindan toʻlash, shuningdek, aliment toʻlash majburiyatini
     taʼminlash boʻyicha garov shartnomasini tuzish tartibi…'
   judged: true
@@ -4278,6 +4518,7 @@
   - llm
   - farmon
   - aniq
+  - dev
   source: 'Prezident farmoni PF-257: 2026-yilda rasmiy sanalarni nishonlash davrida qoʻshimcha ishlanmaydigan
     kunlarni belgilash va dam olish kunlarini koʻchirish toʻgʻri…'
   judged: true
@@ -4294,6 +4535,7 @@
   - llm
   - vm_qarori
   - noaniq
+  - test
   source: 'Vazirlar Mahkamasi qarori 830: Aholi xonadonlarida va chorvachilik yoʻnalishida faoliyat koʻrsatadigan
     xoʻjalik yurituvchi subyektlarda parvarish qilinayotgan…'
   judged: true
@@ -4312,6 +4554,7 @@
   - llm
   - vm_qarori
   - aniq
+  - test
   source: 'Vazirlar Mahkamasi qarori 66: Jismoniy shaxslar tomonidan Oʻzbekiston Respublikasi naqd valyutasi
     va naqd chet el valyutasini Oʻzbekiston Respublikasining bojx…'
   judged: true
@@ -4328,6 +4571,7 @@
   - llm
   - buyruq
   - aniq
+  - test
   source: 'Buyruq 3472: Shaxslarni ishsiz deb eʼtirof etish va ularga ishsizlik nafaqasini tayinlash boʻyicha
     elektron davlat xizmatini koʻrsatish toʻgʻrisidagi reglament…'
   judged: true
@@ -4342,6 +4586,7 @@
   - llm
   - qaror
   - aniq
+  - test
   source: Nogironligi boʻlgan shaxslarni qoʻllab-quvvatlash tizimini takomillashtirishga doir qoʻshimcha
     chora-tadbirlar toʻgʻrisidagi Prezident qarori (PQ-74)
   judged: true
@@ -4359,6 +4604,7 @@
   - llm
   - boshqa
   - aniq
+  - test
   source: 'Hujjat 2601: Aholi bilan pulli hisob-kitoblarni amalga oshirish uchun qoʻllaniladigan fiskal
     xotirali nazorat-kassa mashinalariga qoʻyiladigan yagona texnik ta…'
   judged: true
@@ -4374,6 +4620,7 @@
   - llm
   - vm_qarori
   - aniq
+  - dev
   source: 'Vazirlar Mahkamasi qarori 109: Qadoqlar va qadoqlarni yopish vositalari xavfsizligi toʻgʻrisidagi
     texnik reglamentni tasdiqlash haqida'
   judged: true
@@ -4391,6 +4638,7 @@
   - llm
   - buyruq
   - aniq
+  - dev
   source: 'Buyruq 3832: Oʻzbekiston Respublikasi Bandlikka koʻmaklashish davlat jamgʻarmasi mablagʻlari
     hisobidan subsidiyalar va ssuda ajratish tartibi toʻgʻrisidagi niz…'
   judged: true
@@ -4408,6 +4656,7 @@
   - llm
   - qonun
   - aniq
+  - dev
   source: 'Qonun OʻRQ-937: Oʻzboshimchalik bilan egallab olingan yer uchastkalariga hamda ularda qurilgan
     binolar va inshootlarga boʻlgan huquqlarni eʼtirof etish toʻgʻri…'
   judged: true
@@ -4423,6 +4672,7 @@
   - llm
   - qaror
   - aniq
+  - test
   source: 'Prezident qarori PQ-265: Aholiga koʻrsatilayotgan davlat xizmatlarini takomillashtirish hamda
     fuqarolar uchun qoʻshimcha qulayliklar yaratish chora-tadbirlari…'
   judged: true
@@ -4438,6 +4688,7 @@
   - llm
   - vm_qarori
   - aniq
+  - dev
   source: 'Vazirlar Mahkamasi qarori 369: Oʻzbekiston Respublikasi milliy malaka tizimini tartibga solishga
     qaratilgan ayrim normativ-huquqiy hujjatlarni tasdiqlash toʻgʻ…'
   judged: true
@@ -4455,6 +4706,7 @@
   - llm
   - boshqa
   - aniq
+  - test
   source: 'Hujjat 3473: Oʻzbekiston Respublikasi Huquqni muhofaza qilish akademiyasi talabalari va tinglovchilari
     tomonidan malakaviy amaliyot hamda stajirovkani oʻtash t…'
   judged: true
@@ -4471,6 +4723,7 @@
   - llm
   - vm_qarori
   - noaniq
+  - dev
   source: Ekologik audit sohasini tartibga soluvchi ayrim normativ-huquqiy hujjatlarni tasdiqlash toʻgʻrisidagi
     Vazirlar Mahkamasi qarori (402)
   judged: true
@@ -4488,6 +4741,7 @@
   - llm
   - vm_qarori
   - noaniq
+  - dev
   source: 'Vazirlar Mahkamasi qarori 17: Oʻzbekiston Respublikasi zargarlik sanoatining zamonaviy uskuna,
     texnologiyalari va zargarlik buyumlari “Uzbek Jewellery Fair-202…'
   judged: true
@@ -4504,6 +4758,7 @@
   - llm
   - vm_qarori
   - noaniq
+  - dev
   source: Kamoliddin Behzod nomidagi davlat stipendiyasini taʼsis etish toʻgʻrisidagi Vazirlar Mahkamasi
     qarori (691)
   judged: true
@@ -4519,6 +4774,7 @@
   - llm
   - vm_qarori
   - noaniq
+  - test
   source: 'Vazirlar Mahkamasi qarori 74: 2021-2023-yillarda Qashqadaryo viloyatining Gʻuzor va Yakkabogʻ
     tumanlari markazlarini obodonlashtirish va kompleks ijtimoiy-iqti…'
   judged: true
@@ -4537,6 +4793,7 @@
   - llm
   - vm_qarori
   - aniq
+  - test
   source: 'Vazirlar Mahkamasi qarori 169: Xorijiy fuqarolarni Oʻzbekiston Respublikasi taʼlim muassasalariga
     oʻqishga qabul qilish va oʻqitish tartibini takomillashtirish…'
   judged: true
@@ -4575,6 +4832,7 @@
   - llm
   - buyruq
   - aniq
+  - dev
   source: 'Buyruq 3370: Oʻzbekiston Respublikasi Adliya vazirligining yuridik texnikumlari bitiruvchilariga
     “yurisprudensiya” mutaxassisligi boʻyicha yuridik kadrlarni ta…'
   judged: true
@@ -4590,6 +4848,7 @@
   - llm
   - boshqa
   - aniq
+  - dev
   source: 'Hujjat 2549: Dasturiy taʼminot vositalari eksporti va importi toʻgʻrisidagi nizomni tasdiqlash
     haqida'
   judged: true
@@ -4622,6 +4881,7 @@
   - llm
   - vm_qarori
   - aniq
+  - dev
   source: Yoʻl harakati qoidalariga rioya etilishini taʼminlash boʻyicha qoʻshimcha chora-tadbirlar toʻgʻrisidagi
     Vazirlar Mahkamasi qarori (463)
   judged: true
@@ -4638,6 +4898,7 @@
   - llm
   - vm_qarori
   - noaniq
+  - dev
   source: 'Vazirlar Mahkamasi qarori 586: Toshkent shahri va unga tutash hududlarda issiqxona xoʻjaliklarining
     ekologik xavfsiz faoliyat yuritishini taʼminlashga doir qoʻ…'
   judged: true
@@ -4660,6 +4921,7 @@
   - llm
   - vm_qarori
   - aniq
+  - dev
   source: Bozorlar va savdo komplekslari faoliyatini tartibga solishga doir qoʻshimcha chora-tadbirlar
     toʻgʻrisidagi Vazirlar Mahkamasi qarori (253)
   judged: true
@@ -4674,6 +4936,7 @@
   - llm
   - qaror
   - aniq
+  - dev
   source: Sport kurashlari boʻyicha ixtisoslashtirilgan olimpiya zaxiralari maktabini tashkil etish toʻgʻrisidagi
     Prezident qarori (PQ-1822)
   judged: true
@@ -4693,6 +4956,7 @@
   - llm
   - vm_qarori
   - noaniq
+  - dev
   source: 'Vazirlar Mahkamasi qarori 601: Yoqilgʻi-energetika sohasida bozor tamoyillariga oʻtishda aholini
     ijtimoiy qoʻllab-quvvatlash chora-tadbirlarini amalga oshirish…'
   judged: true
@@ -4710,6 +4974,7 @@
   - llm
   - farmon
   - aniq
+  - dev
   source: 'Prezident farmoni PF-50: Sud hujjatlari va boshqa organlar hujjatlarini ijro etish tizimini
     raqamlashtirish va samaradorligini oshirishga oid qoʻshimcha chora-…'
   judged: true
@@ -4724,6 +4989,7 @@
   - llm
   - vm_qarori
   - aniq
+  - test
   source: Toshkent shahridagi xalqaro Vestminster universiteti huzurida akademik litsey tashkil etish
     toʻgʻrisidagi Vazirlar Mahkamasi qarori (270)
   judged: true
@@ -4738,6 +5004,7 @@
   - llm
   - farmon
   - aniq
+  - test
   source: 'Prezident farmoni PF-138: Oʻzbekiston Respublikasi Prezidentining tadbirkorlar bilan V ochiq
     muloqotida belgilangan vazifalarni amalga oshirish chora-tadbirlar…'
   judged: true
@@ -4756,6 +5023,7 @@
   - llm
   - boshqa
   - aniq
+  - test
   source: 'Hujjat 3030: Bank xizmatlari isteʼmolchilari bilan oʻzaro munosabatlarni amalga oshirishda
     tijorat banklarining faoliyatiga qoʻyiladigan minimal talablar toʻgʻ…'
   judged: true
@@ -4770,6 +5038,7 @@
   - llm
   - qaror
   - aniq
+  - dev
   source: Andijon davlat chet tillari institutini tashkil etish toʻgʻrisidagi Prezident qarori (PQ-265)
   judged: true
 - id: lf-270
@@ -4814,6 +5083,7 @@
   - llm
   - vm_qarori
   - noaniq
+  - dev
   source: 'Vazirlar Mahkamasi qarori 365: Oʻzbekiston Respublikasi Davlat bojxona qoʻmitasining Bojxona
     instituti bakalavriati va magistraturasiga oʻqishga qabul qilish t…'
   judged: true
@@ -4831,6 +5101,7 @@
   - llm
   - buyruq
   - noaniq
+  - test
   source: 'Buyruq 3527: Toshkent davlat yuridik universiteti huzuridagi akademik litseylar oʻquvchilarining
     bilimini nazorat qilish va baholash tartibi toʻgʻrisidagi nizo…'
   judged: true
@@ -4848,6 +5119,7 @@
   - llm
   - boshqa
   - aniq
+  - dev
   source: 'Hujjat 3294: Oʻzbekiston Respublikasi hududida bank kartalarining chiqarilishi va muomalada
     boʻlishi qoidalari toʻgʻrisidagi nizomni tasdiqlash haqida'
   judged: true
@@ -4863,6 +5135,7 @@
   - llm
   - farmon
   - aniq
+  - dev
   source: 'Prezident farmoni PF-66: “Yangi Oʻzbekiston yoshlari-2030” strategiyasini tasdiqlash hamda
     yoshlarni har tomonlama qoʻllab-quvvatlash chora-tadbirlari toʻgʻris…'
   judged: true
@@ -4878,6 +5151,7 @@
   - llm
   - vm_qarori
   - noaniq
+  - dev
   source: Normativ hujjatlarni tasdiqlash toʻgʻrisidagi Vazirlar Mahkamasi qarori (194)
   judged: true
   missing: gap lizing operatsiyalari bo‘yicha olib kirilayotgan tovarlar va ularni bojxona rasmiylashtiruvi
@@ -4902,6 +5176,7 @@
   - llm
   - vm_qarori
   - aniq
+  - test
   source: 'Vazirlar Mahkamasi qarori 244: Yuridik xizmatlar xodimlarini attestatsiyadan oʻtkazish va ularning
     malakasini oshirish tartibi toʻgʻrisidagi Nizomni tasdiqlash…'
   judged: true
@@ -4919,6 +5194,7 @@
   - llm
   - vm_qarori
   - noaniq
+  - test
   source: 'Vazirlar Mahkamasi qarori 52: Oʻzbekiston Respublikasi Davlat bojxona qoʻmitasining Bojxona
     instituti shaxsiy tarkibining ovqatlanish tizimini autsorsing shart…'
   judged: true
@@ -4937,6 +5213,7 @@
   - llm
   - vm_qarori
   - aniq
+  - dev
   source: 'Vazirlar Mahkamasi qarori 519: Mehnat shartnomasi alohida asoslarga koʻra bekor qilinganda,
     moddiy jihatdan qoʻllab-quvvatlash boʻyicha qoʻshimcha kafolatlarda…'
   judged: true
@@ -4952,6 +5229,7 @@
   - llm
   - boshqa
   - aniq
+  - test
   source: 'Hujjat 5б: Taqdim etuvchiga deb berilgan hujjatlar yoʻqolgan taqdirda ularga boʻlgan huquqlarni
     tiklash (chaqirib ish yurgizish) haqidagi arizalarning sudlar t…'
   judged: true
@@ -4969,6 +5247,7 @@
   - llm
   - vm_qarori
   - noaniq
+  - dev
   source: Kasbiy taʼlim tashkilotlarining ishlab chiqarish taʼlimi ustalariga kasbiy sertifikat berish
     tizimini joriy etish toʻgʻrisidagi Vazirlar Mahkamasi qarori (552)
   judged: true
@@ -4995,6 +5274,7 @@
   - llm
   - qonun
   - aniq
+  - dev
   source: Oʻzbekiston Respublikasining Konstitutsiyaviy sudi toʻgʻrisidagi Qonun (OʻRQ-1181)
   judged: true
   judged_alt: true
@@ -5010,6 +5290,7 @@
   - llm
   - vm_qarori
   - aniq
+  - test
   source: 'Vazirlar Mahkamasi qarori 410: Import qilingan tovarlar harakatini monitoring qilish tartibi
     toʻgʻrisidagi nizomni tasdiqlash haqida'
   judged: true
@@ -5030,6 +5311,7 @@
   - llm
   - buyruq
   - noaniq
+  - dev
   source: 'Buyruq 3342: Oʻzbekiston Respublikasi Ichki ishlar vazirligi Malaka oshirish institutining
     kasbiy tayyorgarlik fakultetiga qabul qilish tartibi toʻgʻrisidagi n…'
   judged: true
@@ -5049,6 +5331,7 @@
   - llm
   - vm_qarori
   - noaniq
+  - test
   source: “Mirzo Ulugʻbek vorislari” tayyorlov oʻquv kurslarini tashkil etish chora-tadbirlari toʻgʻrisidagi
     Vazirlar Mahkamasi qarori (206)
   judged: true
@@ -5065,6 +5348,7 @@
   - llm
   - vm_qarori
   - aniq
+  - dev
   source: Davlat xizmatchilarining lavozim maoshlariga yigirma foizli ustama haq belgilash toʻgʻrisidagi
     Vazirlar Mahkamasi qarori (339)
   judged: true
@@ -5079,6 +5363,7 @@
   - llm
   - boshqa
   - aniq
+  - test
   source: 'Hujjat 3524: Oʻzbekiston Respublikasi Davlat xavfsizlik xizmati “Temurbeklar maktabi” va “Yosh
     chegarachilar” harbiy-akademik litseylariga oʻqishga kirayotgan…'
   judged: true
@@ -5094,6 +5379,7 @@
   - llm
   - qaror
   - aniq
+  - dev
   source: 'Prezident qarori PQ-3775: Oliy taʼlim muassasalarida taʼlim sifatini oshirish va ularning mamlakatda
     amalga oshirilayotgan keng qamrovli islohotlarda faol isht…'
   judged: true
@@ -5113,6 +5399,7 @@
   - llm
   - vm_qarori
   - aniq
+  - dev
   source: 'Vazirlar Mahkamasi qarori 46: Muhammad al-Xorazmiy nomidagi Toshkent axborot texnologiyalari
     universiteti tarkibida Oʻzbek-Belarus qoʻshma axborot texnologiyal…'
   judged: true
@@ -5127,6 +5414,7 @@
   - llm
   - farmon
   - aniq
+  - test
   source: Oʻzbekiston oʻquv yurtlarida har yili 1-sentabrda “Mustaqillik kuni”ni oʻtkazish toʻgʻrisidagi
     Prezident farmoni (PF-456)
   judged: true
@@ -5146,6 +5434,7 @@
   - llm
   - vm_qarori
   - aniq
+  - dev
   source: 'Vazirlar Mahkamasi qarori 148: Yakka tartibda hamda qishloq joylarda namunaviy loyihalar boʻyicha
     arzon uy-joylar qurilishida qatnashuvchi tijorat banklari — “…'
   judged: true
@@ -5161,6 +5450,7 @@
   - llm
   - vm_qarori
   - aniq
+  - dev
   source: 'Vazirlar Mahkamasi qarori 204: Oʻzbekiston Respublikasining Davlat chegarasiga belgi qoʻyish
     tartibi toʻgʻrisidagi nizomni tasdiqlash haqida'
   judged: true
@@ -5179,6 +5469,7 @@
   - llm
   - vm_qarori
   - aniq
+  - test
   source: 'Vazirlar Mahkamasi qarori 610: Elektr energiyasi, shu jumladan, energiyaning qayta tiklanadigan
     manbalaridan elektr energiyasi ishlab chiqaradigan tadbirkorlik…'
   judged: true
@@ -5196,6 +5487,7 @@
   - llm
   - vm_qarori
   - aniq
+  - test
   source: Sport sohasida davlat xizmatlari koʻrsatishni yanada takomillashtirish chora-tadbirlari toʻgʻrisidagi
     Vazirlar Mahkamasi qarori (583)
   judged: true
@@ -5211,6 +5503,7 @@
   - llm
   - vm_qarori
   - aniq
+  - dev
   source: Oliy taʼlim tizimida dual taʼlimni tashkil etish chora-tadbirlari toʻgʻrisidagi Vazirlar Mahkamasi
     qarori (14)
   judged: true
@@ -5226,6 +5519,7 @@
   - llm
   - buyruq
   - aniq
+  - test
   source: 'Buyruq 3519: Urugʻlik chigit tayyorlovchi korxonalarda urugʻlik paxtani qayta ishlashda uskunalarni
     belgilangan meʼyorlar asosida sozlash tartibi toʻgʻrisidagi…'
   judged: true
@@ -5301,6 +5595,7 @@
   - llm
   - buyruq
   - aniq
+  - test
   source: 'Buyruq 2047: Issiqlik izolyatsiya materiallari ishlab chiqarish xodimlari uchun mehnatni muhofaza
     qilish qoidalarini tasdiqlash haqida'
   judged: true
@@ -5331,6 +5626,7 @@
   - llm
   - vm_qarori
   - aniq
+  - dev
   source: 'Vazirlar Mahkamasi qarori 787: Maishiy chiqindilar bilan bogʻliq ishlarni amalga oshirish sohasidagi
     ishlar samaradorligini yanada oshirish chora-tadbirlari to…'
   judged: true
@@ -5357,6 +5653,7 @@
   - llm
   - boshqa
   - aniq
+  - dev
   source: Sudlar tomonidan jinoyat ishlarini taftish tartibida koʻrib chiqishning ayrim masalalari toʻgʻrisidagi
     Hujjat (18)
   judged: true
@@ -5371,6 +5668,7 @@
   - llm
   - boshqa
   - aniq
+  - dev
   source: Jinoyat ishlari boʻyicha ashyoviy dalillarga oid qonunchilikni qoʻllashning ayrim masalalari
     toʻgʻrisidagi Hujjat (17)
   judged: true
@@ -5390,6 +5688,7 @@
   - llm
   - vm_qarori
   - aniq
+  - dev
   source: 'Vazirlar Mahkamasi qarori 561: Nodavlat jismoniy tarbiya va sport tashkilotlari, shuningdek,
     sport inshootlari reyestrlariga doir ayrim normativ-huquqiy hujjat…'
   judged: true
@@ -5405,6 +5704,7 @@
   - llm
   - vm_qarori
   - noaniq
+  - test
   source: 'Vazirlar Mahkamasi qarori 563: Respublika oliy taʼlim muassasalarida talabalarni turar joy
     bilan qamrab olish darajasini oshirish chora-tadbirlari toʻgʻrisida'
   judged: true

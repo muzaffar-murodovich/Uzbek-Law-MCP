@@ -5,7 +5,8 @@
 ``fuse`` with default parameters repeats ``qonunshunos.search.hybrid.search`` (RRF over the
 chunk lists of every query, best chunk per unit). The other parameters are the variants:
 list weights, candidates per list, the RRF constant, a bonus for the best single rank and
-document-kind weights. Numbers are for questions with ``--tag`` (default: aniq).
+document-kind weights. Numbers are for questions with every tag of ``--tag`` (default:
+aniq,dev). Tags come from ``QUESTIONS``, so dumps made before the dev/test split still filter.
 """
 
 import argparse
@@ -15,7 +16,12 @@ import json
 from dataclasses import dataclass, field, replace
 from pathlib import Path
 
-from qonunshunos.evaluation import Expected, metrics
+import yaml
+
+from qonunshunos.evaluation import Expected, has_tags, metrics
+
+QUESTIONS = Path("eval/questions_llm_full.yaml")
+DEFAULT_TAG = "aniq,dev"  # tune on dev only: test is for reporting (docs/stage2-experiments.md 6k)
 
 
 @dataclass(frozen=True)
@@ -47,7 +53,11 @@ class Lab:
         self.chunks = {int(c): s for c, s in data["chunks"].items()}
         self.sections = {int(s): v for s, v in data["sections"].items()}
         self.documents = {int(d): v for d, v in data["documents"].items()}
-        self.questions = [q for q in data["questions"] if tag in q["tags"]]
+        if QUESTIONS.exists():
+            tags = {i["id"]: i.get("tags", []) for i in yaml.safe_load(QUESTIONS.read_text())}
+            for q in data["questions"]:
+                q["tags"] = tags.get(q["id"], q["tags"])
+        self.questions = [q for q in data["questions"] if has_tags(q["tags"], tag)]
         for q in self.questions:
             q["expected"] = [Expected(int(d), str(a), w) for d, a, w in q["expected"]]
 
@@ -101,7 +111,7 @@ class Lab:
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("candidates", type=Path)
-    parser.add_argument("--tag", default="aniq")
+    parser.add_argument("--tag", default=DEFAULT_TAG)
     parser.add_argument("--top", type=int, default=15, help="grid rows to print")
     args = parser.parse_args()
     lab = Lab(args.candidates, args.tag)

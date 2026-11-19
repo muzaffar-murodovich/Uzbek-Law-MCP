@@ -16,13 +16,13 @@ from qonunshunos.search.hybrid import Hit
 @dataclass(frozen=True)
 class Expected:
     document: int
-    article: str  # unit number: "161", "126¹", band "5"
+    article: str  # unit number: "161", "126¹", band "5"; "" = an unnumbered unit (annex table)
     # Decrees repeat band numbers (the decree itself, each attached Nizom). ``within`` must occur
     # in the unit's heading path; "" means the decree's own bands (empty path).
     within: str | None = None
 
     def matches(self, document: int, article: str | None, path: Sequence[str]) -> bool:
-        if (document, article) != (self.document, self.article):
+        if (document, article or "") != (self.document, self.article):
             return False
         if self.within is None:
             return True
@@ -67,6 +67,15 @@ def load_questions(path: Path, alt_file: Path | None = None) -> list[Question]:
             )
         )
     return questions
+
+
+SPLITS = ("dev", "test")  # dev: tune on it; test: only report it (see scripts/llm_eval.py split)
+CLARITY = ("aniq", "noaniq")
+
+
+def has_tags(tags: Sequence[str], spec: str) -> bool:
+    """``spec`` is a comma-separated list of tags that must all be present ("aniq,dev")."""
+    return all(t in tags for t in spec.split(",") if t)
 
 
 def first_rank(hits: Sequence[Hit], expected: Sequence[Expected]) -> int | None:
@@ -128,6 +137,10 @@ def run(
         for q in questions:
             for tag in q.tags:
                 by_tag[tag].append(ranks[q.id])
+            # The headline number is per clarity and split together: "aniq+test".
+            for clarity in set(CLARITY) & set(q.tags):
+                for split in set(SPLITS) & set(q.tags):
+                    by_tag[f"{clarity}+{split}"].append(ranks[q.id])
         report["modes"][mode] = {
             "overall": asdict(metrics(list(ranks.values()))),
             "by_tag": {t: asdict(metrics(r)) for t, r in sorted(by_tag.items())},

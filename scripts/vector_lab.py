@@ -27,7 +27,7 @@ from pathlib import Path
 import numpy as np
 import torch
 import torch.nn.functional as F
-from fusion_lab import Lab, Params
+from fusion_lab import DEFAULT_TAG, Lab, Params
 from transformers import AutoModel, AutoTokenizer
 
 from qonunshunos.evaluation import metrics
@@ -137,7 +137,7 @@ def main() -> None:
     parser.add_argument("candidates", type=Path)
     parser.add_argument("passages", type=Path)
     parser.add_argument("--model", action="append", required=True, help="HF id or local dir")
-    parser.add_argument("--tag", default="aniq")
+    parser.add_argument("--tag", default=DEFAULT_TAG)
     parser.add_argument("--n-vec", type=int, default=50)
     parser.add_argument("--max-len", type=int, default=512)
     args = parser.parse_args()

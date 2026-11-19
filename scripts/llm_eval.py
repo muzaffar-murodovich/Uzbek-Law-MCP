@@ -4,6 +4,7 @@
     uv run python scripts/llm_eval.py generate   # eval/questions_llm.yaml: new questions
     uv run python scripts/llm_eval.py judge      # add other articles that answer them
     uv run python scripts/llm_eval.py clarity    # tag questions aniq / noaniq
+    uv run python scripts/llm_eval.py split      # tag questions dev / test
 
 ``rephrase`` imitates the assistant that calls ``search_law``: it sees only the user's
 question (never the article) and writes formal search queries. ``generate`` samples articles
@@ -22,7 +23,7 @@ import yaml
 
 from qonunshunos.config import Settings
 from qonunshunos.db import connect
-from qonunshunos.evaluation import load_questions
+from qonunshunos.evaluation import CLARITY, SPLITS, load_questions
 from qonunshunos.llm import OpenAIChat
 
 REPHRASE_SYSTEM = """Sen Oʻzbekiston qonunchiligi boʻyicha savollarga javob beradigan AI \
@@ -288,6 +289,39 @@ def clarity(args: argparse.Namespace) -> None:
     print("tokens:", llm.usage)
 
 
+def split(args: argparse.Namespace) -> None:
+    """Tag each question ``dev`` or ``test``, half and half within every (clarity, kind) group.
+
+    Search settings are tuned on dev only; test is only measured, so its number stays honest.
+    The split depends only on the ids and the seed: running it again gives the same tags.
+    """
+    items = yaml.safe_load(args.questions.read_text(encoding="utf-8"))
+    groups: dict[tuple[str, str], list[dict]] = {}
+    for item in sorted(items, key=lambda i: i["id"]):
+        tags = item.setdefault("tags", [])
+        clarity = next((t for t in tags if t in CLARITY), "")
+        kind = next((t for t in tags if t not in CLARITY + SPLITS + ("llm",)), "")
+        groups.setdefault((clarity, kind), []).append(item)
+    rng = random.Random(args.seed)
+    turn = 0  # odd groups give their extra question to dev and test in turn
+    for _key, group in sorted(groups.items()):
+        rng.shuffle(group)
+        for n, item in enumerate(group):
+            if n == len(group) - 1 and len(group) % 2:
+                name, turn = SPLITS[turn], 1 - turn
+            else:
+                name = SPLITS[n % 2]
+            item["tags"] = [t for t in item["tags"] if t not in SPLITS] + [name]
+    args.questions.write_text(
+        YAML_HEADER + yaml.safe_dump(items, allow_unicode=True, sort_keys=False, width=100),
+        encoding="utf-8",
+    )
+    for name in SPLITS:
+        chosen = [i for i in items if name in i["tags"]]
+        aniq = sum("aniq" in i["tags"] for i in chosen)
+        print(f"{name}: {len(chosen)} questions, {aniq} aniq")
+
+
 def main() -> None:
     parser = argparse.ArgumentParser()
     sub = parser.add_subparsers(dest="command", required=True)
@@ -308,6 +342,9 @@ def main() -> None:
     p.add_argument("--model", default="gpt-5.4")
     p.add_argument("--questions", type=Path, default=Path("eval/questions_llm_full.yaml"))
     p.add_argument("--workers", type=int, default=6, help="parallel API calls")
+    p = sub.add_parser("split")
+    p.add_argument("--questions", type=Path, default=Path("eval/questions_llm_full.yaml"))
+    p.add_argument("--seed", type=int, default=2026)
     p = sub.add_parser("generate")
     p.add_argument("--model", default="gpt-5.4")
     p.add_argument("--sample", type=int, default=400, help="articles to try")
@@ -330,9 +367,14 @@ def main() -> None:
             help="keep going on paid tokens once every free allowance is used",
         )
     args = parser.parse_args()
-    {"rephrase": rephrase, "generate": generate, "judge": judge, "clarity": clarity}[args.command](
-        args
-    )
+    commands = {
+        "rephrase": rephrase,
+        "generate": generate,
+        "judge": judge,
+        "clarity": clarity,
+        "split": split,
+    }
+    commands[args.command](args)
 
 
 if __name__ == "__main__":
