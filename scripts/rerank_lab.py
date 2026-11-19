@@ -23,11 +23,26 @@ from qonunshunos.evaluation import metrics
 
 FUSION = Params(n_fts=100, k=20, w_vec=0.5)  # best fusion variant; its pool is what we rerank
 CACHE = Path("data/eval/rerank")
+
+
+def fusion(spec: str) -> Params:
+    """``--fusion "n_fts=50,k=60,w_vec=1"``: the fused order whose head is reranked."""
+    if not spec:
+        return FUSION
+    values = dict(item.split("=") for item in spec.split(","))
+    return Params(**{k: type(getattr(Params(), k))(v) for k, v in values.items()})
+
+
 VARIANTS = ("q", "a1", "a2")
 
 
 def cache_path(model: str, variant: str) -> Path:
     return CACHE / f"{model.replace('/', '__')}.{variant}.json"
+
+
+def set_cache(path: Path) -> None:
+    global CACHE
+    CACHE = path
 
 
 def load_texts(path: Path) -> dict[int, str]:
@@ -54,7 +69,7 @@ def score(args: argparse.Namespace) -> None:
         for q in questions:
             if index >= len(q["queries"]):
                 continue
-            for _section, chunk in lab.fuse_chunks(q, FUSION)[: args.top]:
+            for _section, chunk in lab.fuse_chunks(q, fusion(args.fusion))[: args.top]:
                 key = f"{q['id']}:{chunk}"
                 if key not in done:
                     pairs.append((key, q["queries"][index], texts[chunk]))
@@ -102,7 +117,7 @@ def report(args: argparse.Namespace) -> None:
                 return rank
         return None
 
-    pools = {q["id"]: lab.fuse_chunks(q, FUSION) for q in lab.questions}
+    pools = {q["id"]: lab.fuse_chunks(q, fusion(args.fusion)) for q in lab.questions}
     print(
         line(
             "fused, no reranker", [first(q, [s for s, _ in pools[q["id"]]]) for q in lab.questions]
@@ -162,6 +177,8 @@ def main() -> None:
             "--candidates", type=Path, default=Path("data/eval/candidates_llm_full.json.gz")
         )
         p.add_argument("--tag", default="aniq")
+        p.add_argument("--fusion", default="", help='e.g. "n_fts=50,k=60" (default: FUSION)')
+        p.add_argument("--cache", type=Path, default=CACHE, help="score cache folder")
     p = sub.choices["score"]
     p.add_argument("--texts", type=Path, default=Path("data/eval/chunk_texts_llm_full.json.gz"))
     p.add_argument("--model", required=True)
@@ -174,6 +191,7 @@ def main() -> None:
     p.add_argument("--tops", type=int, nargs="+", default=[30, 50, 100])
     p.add_argument("--blend", type=float, default=0.5)
     args = parser.parse_args()
+    set_cache(args.cache)
     {"score": score, "report": report}[args.command](args)
 
 
