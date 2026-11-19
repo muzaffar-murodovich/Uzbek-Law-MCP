@@ -1,0 +1,482 @@
+{
+ "A-01": [
+  "mehnat shartnomasida dastlabki sinov muddati davrida mehnat shartnomasini bekor qilish va oldindan ogohlantirish",
+  "sinov muddati davrida ish beruvchining tashabbusi bilan xodimni ishdan bo'shatish asoslari va ogohlantirish tartibi"
+ ],
+ "A-02": [
+  "mehnat ta'tilining davomiyligi xodimlar uchun",
+  "birinchi ish yili uchun mehnat ta'tiliga chiqish huquqi 11 oy ishlagan"
+ ],
+ "A-03": [
+  "homiladorlik va tug‘ish ta’tili muddati ko‘p homilali tug‘ish",
+  "tug‘ruqqacha va tug‘ruqdan keyingi ta’til kunlari egizaklar"
+ ],
+ "A-04": [
+  "ish haqini to‘lash muddatini buzganlik uchun kompensatsiya",
+  "ish haqi kechiktirilganda xodimga to‘lanadigan foizlar"
+ ],
+ "A-05": [
+  "mehnat shartnomasini xodim tashabbusiga ko‘ra bekor qilish haqida ish beruvchini ogohlantirish muddati",
+  "xodimning o‘z xohishiga ko‘ra ishdan bo‘shashi to‘g‘risida ariza berish va ish beruvchining rad etishi"
+ ],
+ "A-06": [
+  "shtatlar qisqarishi munosabati bilan mehnat shartnomasini bekor qilishda ishdan bo‘shatish nafaqasi miqdori",
+  "xodimni shtat qisqarishi sababli ishdan bo‘shatishda kompensatsiya va ishdan bo‘shatish nafaqasi"
+ ],
+ "A-07": [
+  "voyaga yetmagan shaxslarning ish vaqti davomiyligi",
+  "o'n olti yoshga to'lmagan xodimlar uchun qisqartirilgan ish vaqti"
+ ],
+ "A-08": [
+  "mehnat stajini tasdiqlash elektron mehnat daftarchasi yo‘qolgan taqdirda",
+  "yo‘qolgan mehnat daftarchasi o‘rniga ish stajini tasdiqlovchi hujjatlar"
+ ],
+ "A-09": [
+  "bayram kunlari ishlaganlik uchun mehnatga haq to‘lash miqdori",
+  "dam olish va ishlanmaydigan bayram kunlaridagi ish uchun kamida ikki hissa haq to‘lash"
+ ],
+ "A-10": [
+  "uch yoshga to‘lmagan bolani parvarishlash ta’tilidagi xodim bilan mehnat shartnomasini bekor qilish",
+  "xodimlar soni qisqartirilishi yoki tashkilot tugatilishi munosabati bilan mehnat shartnomasini bekor qilish kafolatlari"
+ ],
+ "A-11": [
+  "vaqtincha mehnatga layoqatsizlik nafaqasi miqdori o‘rtacha ish haqiga nisbatan",
+  "kasallik varaqasi bo‘yicha nafaqa foizi to‘lash tartibi"
+ ],
+ "A-12": [
+  "mehnat shartnomasini yozma shaklda tuzish majburiyati ish beruvchi javobgarligi",
+  "mehnatga oid munosabatlarni rasmiylashtirmasdan xodimni ishga qo‘yish uchun javobgarlik"
+ ],
+ "A-13": [
+  "yoshga doir pensiya tayinlash shartlari ayollar pensiya yoshi ish staji",
+  "ayollarga yoshga doir pensiya uchun talab etiladigan ish staji va yosh"
+ ],
+ "A-14": [
+  "ishlayotgan pensionerlarga pensiya to‘lash tartibi",
+  "pensiya olayotgan shaxs mehnat faoliyatini davom ettirganda pensiya miqdori"
+ ],
+ "A-15": [
+  "boquvchisini yo‘qotganlik pensiyasini tayinlash uchun zarur hujjatlar",
+  "boquvchisini yo‘qotganlik pensiyasi olish huquqiga ega oila a’zolari"
+ ],
+ "A-16": [
+  "yoshga doir nafaqa tayinlash shartlari mehnat staji yetarli bo‘lmaganda",
+  "pensiya yoshiga yetganda yoshga doir nafaqa to‘lash tartibi"
+ ],
+ "A-17": [
+  "harbiy xizmat davrini va oliy ta’limda o‘qish davrini mehnat stajiga qo‘shish",
+  "pensiya tayinlashda ish stajiga kiritiladigan davrlar harbiy xizmat oliy o‘quv yurtida o‘qish"
+ ],
+ "A-18": [
+  "kam ta'minlangan oilalarga bolalar nafaqasini tayinlash muddati va murojaat qilish tartibi",
+  "yagona ijtimoiy reyestrga kiritish va bolalar nafaqasini olish uchun ariza berish tartibi"
+ ],
+ "A-19": [
+  "ishsizlik nafaqasi tayinlash miqdori va to'lash muddati",
+  "ishsiz shaxsni ro'yxatdan o'tkazish va ishsizlik nafaqasi to'lash tartibi"
+ ],
+ "A-20": [
+  "bola ikki yoshga to'lgunga qadar parvarishlash nafaqasi ota yoki ona tayinlanishi",
+  "bolani parvarishlash ta'tili va nafaqasi ota onadan biriga berilishi"
+ ],
+ "A-21": [
+  "pensiyani ishonchnoma asosida olish tartibi",
+  "pensiya to‘lovini vakil orqali olish"
+ ],
+ "A-22": [
+  "I guruh nogironligi bo‘lgan shaxsni parvarish qilayotgan oila a’zosiga nafaqa yoki kompensatsiya to‘lash",
+  "nogironligi bo‘lgan shaxsni uyda parvarish qilish uchun kompensatsiya puli tayinlash"
+ ],
+ "A-23": [
+  "II guruh nogironligi bo‘lgan xodimlar uchun qisqartirilgan ish vaqti va qo‘shimcha mehnat ta’tili",
+  "nogironligi bo‘lgan shaxslar mehnati qisqartirilgan ish haftasi qo‘shimcha ta’til kafolatlari"
+ ],
+ "A-24": [
+  "nogironligi bo‘lgan bolalarni protez-ortopediya buyumlari va texnik reabilitatsiya vositalari bilan ta’minlash tartibi",
+  "nogironligi bo‘lgan bolalarga nogironlik aravachasi va eshitish apparatini bepul berish tartibi"
+ ],
+ "A-25": [
+  "nogironlikni qayta tibbiy-ijtimoiy ekspertizadan o‘tkazish muddati",
+  "nogironlikni muddatsiz belgilash shartlari"
+ ],
+ "A-26": [
+  "ko‘p bolali oilalarni ijtimoiy qo‘llab-quvvatlash imtiyozlari",
+  "ko‘p bolali oilalar uchun kommunal xizmatlar va uy-joy bo‘yicha imtiyozlar"
+ ],
+ "A-27": [
+  "nogironligi bo‘lgan shaxslar uchun ish o‘rinlari kvotasi foizi",
+  "korxonalarda ish o‘rinlarini zaxiraga qo‘yish nogironligi bo‘lgan shaxslar"
+ ],
+ "A-28": [
+  "fuqarolarni chet elga ishga yuborish ro‘yxatga olish ijtimoiy himoya",
+  "chet elda mehnat faoliyatini amalga oshirayotgan fuqarolar huquqlari va kafolatlari"
+ ],
+ "A-29": [
+  "chet davlatdagi ish stajini pensiya tayinlashda hisobga olish",
+  "xorijda ishlagan davrni mehnat stajiga qo‘shish pensiya"
+ ],
+ "A-30": [
+  "qaytib kelgan mehnat migrantlarini kasbga o‘qitish subsidiyasi",
+  "mehnat migrantlariga imtiyozli kredit o‘zini o‘zi band qilish tadbirkorlikni boshlash"
+ ],
+ "B-01": [
+  "voyaga yetmagan ikki nafar bola uchun aliment miqdori ish haqi va boshqa daromadning ulushi",
+  "ota-onaning voyaga yetmagan bolalarni ta'minlash majburiyati aliment undirish ikki bola foizi"
+ ],
+ "B-02": [
+  "aliment bo‘yicha qarzdorlik uchun penya undirish",
+  "aliment to‘lashdan bo‘yin tovlaganlik oqibatlari va neустoyka"
+ ],
+ "B-03": [
+  "nikoh tuzish muddati va ariza berilgan kundan keyin davlat ro'yxatidan o'tkazish",
+  "nikohni tuzish muddatini qisqartirish uzrli sabablar FHDYo organi"
+ ],
+ "B-04": [
+  "nikoh yoshi kamaytirilishi va nikoh yoshini kamaytirishga ruxsat berish tartibi",
+  "nikoh tuzish uchun belgilangan yosh hamda nikoh yoshini kamaytirish vakolatli organ"
+ ],
+ "B-05": [
+  "homilador xotin bilan nikohdan ajratishni cheklash erning da'vo qo'zg'atishi mumkin emas",
+  "bola tug'ilganidan keyin bir yil mobaynida erning nikohdan ajratish to'g'risida da'vo arizasi xotin roziligisiz"
+ ],
+ "B-06": [
+  "nikoh shartnomasini tuzish vaqti notarial tasdiqlash",
+  "nikoh shartnomasi nikohdan oldin yoki nikoh davrida tuzilishi"
+ ],
+ "B-07": [
+  "farzandlikka oluvchilarga qo‘yiladigan talablar yosh tafovuti uy-joy sharoiti",
+  "farzandlikka olish shartlari er-xotin farzandlikka oluvchi uchun cheklovlar"
+ ],
+ "B-08": [
+  "vasiylik va homiylik belgilash uchun murojaat qilish tartibi hamda zarur hujjatlar",
+  "voyaga yetmagan nabira ustidan buvisi tomonidan vasiylik rasmiylashtirish tartibi"
+ ],
+ "B-09": [
+  "voyaga yetmagan bolani chet elga olib chiqish ota-onaning roziligi",
+  "bolaning chet elga chiqishi uchun ikkinchi ota-onaning notarial tasdiqlangan roziligi"
+ ],
+ "B-10": [
+  "nikoh davrida hadya qilingan kvartira er-xotinning umumiy mulki hisoblanadimi",
+  "hadya shartnomasi asosida olingan mol-mulkni ajrimda bo‘lish tartibi"
+ ],
+ "B-11": [
+  "merosni qabul qilish muddatini tiklash",
+  "merosni qabul qilish muddati o‘tkazib yuborilgan taqdirda sud tartibi"
+ ],
+ "B-12": [
+  "merosda majburiy ulushga ega shaxslar pensiya yoshidagi ota-ona vasiyatnoma",
+  "vasiyatnoma bo‘yicha meros qoldiruvchining mehnatga qobiliyatsiz turmush o‘rtog‘ining majburiy ulushi"
+ ],
+ "B-13": [
+  "vasiyat bo‘lmaganda qonun bo‘yicha vorislik navbatlari merosxo‘rlar",
+  "taqdim etish huquqi bo‘yicha meros olish meros qoldiruvchidan oldin vafot etgan vorisning avlodlari"
+ ],
+ "B-14": [
+  "vasiyatnomaning notarial tasdiqlanishi va unga tenglashtirilgan vasiyatnomalar",
+  "davolash muassasasida bo‘lgan shaxsning vasiyatnoma tuzishi tartibi"
+ ],
+ "B-15": [
+  "merosdan voz kechish va uni qaytarib olish",
+  "boshqa merosxo'r foydasiga merosdan voz kechish notarial tartibi"
+ ],
+ "B-16": [
+  "ko‘chmas mulk oldi-sotdi shartnomasini notarial tasdiqlash va davlat ro‘yxatidan o‘tkazish",
+  "kvartiraga mulk huquqining vujudga kelishi davlat ro‘yxatidan o‘tkazilgan payt"
+ ],
+ "B-17": [
+  "turar joyni ijaraga berish yozma shartnoma majburiyati javobgarlik",
+  "jismoniy shaxsning mol-mulkni ijaraga berishdan olgan daromadi solig'i"
+ ],
+ "B-18": [
+  "turar joy ijarasi shartnomasini muddatidan oldin bekor qilish asoslari ijaraga beruvchining huquqlari",
+  "ijara shartnomasi amal qilish muddati tugamasdan ijarachini chiqarib yuborish tartibi shartnomani bir tomonlama bekor qilish"
+ ],
+ "B-19": [
+  "Toshkent shahrida doimiy ro‘yxatdan o‘tkazish shartlari uy-joy mulkdori",
+  "doimiy propiska uchun uy-joy maydoni norma talabi yashash joyi bo‘yicha ro‘yxatga olish"
+ ],
+ "B-20": [
+  "ko‘p kvartirali uydagi turar joyni qayta qurish va qayta rejalashtirish uchun ruxsatnoma",
+  "yuk ko‘taruvchi devorni o‘zboshimchalik bilan buzish bo‘yicha shikoyat va davlat nazorati organlari"
+ ],
+ "B-21": [
+  "kommunal xizmatlar bo‘yicha qarzdorlik mavjud bo‘lganda elektr energiyasi va gaz ta’minotini to‘xtatish tartibi hamda iste’molchini oldindan ogohlantirish",
+  "elektr energiyasi va tabiiy gaz yetkazib berishni qarzdorlik sababli cheklash yoki uzib qo‘yish asoslari va muddatlari"
+ ],
+ "B-22": [
+  "ko‘p kvartirali uy umumiy mol-mulkini saqlash va ta’mirlash xarajatlari",
+  "uy-joy mulkdorlari shirkatiga a’zolik majburiyligi va majburiy badallar"
+ ],
+ "B-23": [
+  "tomorqa yer uchastkasiga bo‘lgan huquqni meros qilib qoldirish va boshqa shaxsga o‘tkazish",
+  "fuqarolarning tomorqa yer uchastkasiga egalik qilish va undan foydalanish huquqi"
+ ],
+ "B-24": [
+  "yakka tartibdagi uy-joy qurish uchun ruxsatnoma berish muddati",
+  "yakka tartibdagi uy-joy qurilishi uchun qurilish ruxsatnomasi talab etilishi"
+ ],
+ "B-25": [
+  "chet davlatdagi konsullik tomonidan tasdiqlangan ishonchnomaning Oʻzbekiston hududida haqiqiyligi",
+  "koʻchmas mulkni sotish uchun chet elda rasmiylashtirilgan ishonchnomani tan olish"
+ ],
+ "B-26": [
+  "ko‘chmas mulk oldi-sotdi shartnomasini notarial tasdiqlash davlat boji stavkalari",
+  "uy-joyni yaqin qarindoshlar o‘rtasida hadya qilish shartnomasini notarial tasdiqlash davlat boji imtiyozlari"
+ ],
+ "B-27": [
+  "notarial harakatni amalga oshirishni rad etish to‘g‘risida yozma qaror berish",
+  "notariusning harakati yoki rad etishi ustidan shikoyat qilish tartibi"
+ ],
+ "B-28": [
+  "nuqsonli tovar uchun pulni qaytarish talabi kafolat muddati ichida",
+  "sifatli bo‘lmagan maishiy texnika tovarini almashtirish yoki pulini qaytarish iste’molchi huquqlari"
+ ],
+ "B-29": [
+  "sifati lozim darajada bo‘lgan nooziq-ovqat tovarini almashtirish qaytarish muddati",
+  "iste’molchining kiyim-kechakni chek mavjud va foydalanilmagan holda almashtirish huquqi"
+ ],
+ "B-30": [
+  "iste'molchining oldindan haq to'langan tovarni belgilangan muddatda topshirmaganlik uchun neustoyka",
+  "buyurtma bo'yicha mebelni yetkazib berish muddatini buzganlik uchun penya miqdori"
+ ],
+ "C-01": [
+  "jismoniy shaxsning mol-mulkni ijaraga berishdan olgan daromadi soliq stavkasi va to‘lash muddati",
+  "turar joyni ijaraga berish daromadidan jismoniy shaxslardan olinadigan daromad solig‘i to‘lash tartibi"
+ ],
+ "C-02": [
+  "pensionerlar uchun mol-mulk solig‘i bo‘yicha imtiyozlar",
+  "jismoniy shaxslarning mol-mulk solig‘idan ozod etiladigan shaxslar"
+ ],
+ "C-03": [
+  "aylanmadan olinadigan soliq stavkasi soliq to‘lovchi yuridik shaxs yakka tartibdagi tadbirkor",
+  "aylanmadan olinadigan soliq soliq solinadigan baza yillik tushum savdo faoliyati"
+ ],
+ "C-04": [
+  "qo‘shilgan qiymat solig‘i to‘lovchisi sifatida majburiy ro‘yxatdan o‘tish yillik aylanma oshishi",
+  "soliq to‘lovchining realizatsiya bo‘yicha aylanmasi bir milliard so‘mdan oshganda QQS ro‘yxatidan o‘tish muddati"
+ ],
+ "C-05": [
+  "jismoniy shaxsning jami yillik daromadi to‘g‘risidagi deklaratsiyani taqdim etish muddati",
+  "chet davlatlardan olingan daromadlar bo‘yicha yillik daromad deklaratsiyasi topshirish"
+ ],
+ "C-06": [
+  "oliy ta’lim tashkilotida o‘qish uchun to‘lov summalarini jismoniy shaxslarning daromad solig‘idan chegirish",
+  "farzandning kontrakt to‘lovi bo‘yicha daromad solig‘i imtiyozi va soliq bazasini kamaytirish"
+ ],
+ "C-07": [
+  "jismoniy shaxslardan olinadigan yer solig'ini hisoblab chiqarish va to'lov xabarnomasi",
+  "tomorqa yer uchastkasi bo'yicha yer solig'ini to'lash muddati va soliq organi xabarnomasi"
+ ],
+ "C-08": [
+  "soliqni o‘z vaqtida to‘lamaganlik uchun penya miqdori",
+  "soliq qarzdorligi bo‘yicha penya har bir kechiktirilgan kun uchun"
+ ],
+ "C-09": [
+  "yakka tartibdagi tadbirkorni davlat ro‘yxatidan o‘tkazish uchun taqdim etiladigan hujjatlar va davlat boji",
+  "sartaroshlik xizmatlari bo‘yicha yakka tartibdagi tadbirkor sifatida faoliyatni ro‘yxatdan o‘tkazish tartibi"
+ ],
+ "C-10": [
+  "o‘zini o‘zi band qilgan shaxs amalga oshirishi mumkin bo‘lgan faoliyat turlari",
+  "o‘zini o‘zi band qilgan shaxs daromadlarini soliqqa tortish va uy sharoitida pishiriq tayyorlab sotish"
+ ],
+ "C-11": [
+  "nazorat-kassa texnikasisiz savdoni amalga oshirish uchun javobgarlik",
+  "chakana savdo obyektida onlayn nazorat-kassa mashinasidan foydalanmaslik jarimasi"
+ ],
+ "C-12": [
+  "alkogolli mahsulotlarning chakana savdosi uchun litsenziya talabi",
+  "alkogolli mahsulotlarni ta'lim muassasalariga yaqin joylarda realizatsiya qilishni cheklash"
+ ],
+ "C-13": [
+  "soliq organlari tomonidan tadbirkorlik subyektini tekshirishni tayinlash va xabardor qilish tartibi",
+  "soliq tekshiruvining muddati va davomiyligi"
+ ],
+ "C-14": [
+  "IT-park rezidentlari uchun soliq imtiyozlari",
+  "axborot texnologiyalari xizmatlarini eksport qiluvchi rezidentlarga soliq imtiyozlari"
+ ],
+ "C-15": [
+  "umumiy ovqatlanish shoxobchasini tashkil etishda xabardor qilish tartibi va ruxsat berish tartiblari",
+  "sanitariya-epidemiologiya xulosasi umumiy ovqatlanish obyektlari uchun majburiyligi"
+ ],
+ "C-16": [
+  "sifatli nooziq-ovqat tovarini almashtirish va qaytarish muddati",
+  "iste'molchi tomonidan tovarni qaytarish chek mavjud bo'lganda sotuvchining majburiyatlari"
+ ],
+ "C-17": [
+  "fermer xo‘jaligiga yer uchastkasini ijaraga berish muddati",
+  "yer ijara shartnomasini muddatidan oldin bekor qilish asoslari"
+ ],
+ "C-18": [
+  "dehqon xo‘jaligiga yer uchastkasini ajratish tartibi",
+  "oilaviy dehqon xo‘jaligi yuridik shaxs maqomi"
+ ],
+ "C-19": [
+  "qishloq xo‘jaligiga mo‘ljallangan yer uchastkasidan maqsadsiz foydalanish yer uchastkasiga bo‘lgan huquqni bekor qilish",
+  "fermer xo‘jaligi yer uchastkasini olib qo‘yish hosildorlik pasayishi yerdan oqilona foydalanmaslik"
+ ],
+ "C-20": [
+  "qishloq xo‘jaligiga mo‘ljallangan yer uchastkasini subijaraga berish taqiqi",
+  "fermer xo‘jaligi yer uchastkasini ikkilamchi ijaraga berish mumkinligi"
+ ],
+ "C-21": [
+  "mikroqarz bo‘yicha foiz stavkasi va maksimal miqdori",
+  "kreditni muddatidan oldin qaytarish uchun jarima taqiqlanishi"
+ ],
+ "C-22": [
+  "garovga qo‘yilgan ko‘chmas mulkni suddan tashqari undiruvga qaratish",
+  "ipoteka predmetini sudsiz realizatsiya qilish tartibi"
+ ],
+ "C-23": [
+  "iste'mol krediti shartnomasidan voz kechish muddati",
+  "iste'mol krediti shartnomasini bekor qilish huquqi"
+ ],
+ "C-24": [
+  "qarzdor bilan o‘zaro hamkorlikni amalga oshirish usullari va taqiqlar",
+  "muddati o‘tgan qarzdorlikni undirish faoliyatida taqiqlangan harakatlar"
+ ],
+ "C-25": [
+  "haydovchilik guvohnomasining amal qilish muddati tugagan holda transport vositasini boshqarish javobgarlik",
+  "haydovchilik guvohnomasini almashtirish tibbiy ma'lumotnoma talab etilishi"
+ ],
+ "C-26": [
+  "transport vositasini davlat ro‘yxatidan o‘tkazish muddati",
+  "transport vositasini o‘z vaqtida ro‘yxatdan o‘tkazmaslik uchun javobgarlik"
+ ],
+ "C-27": [
+  "transport vositalari egalarining fuqarolik javobgarligini majburiy sug'urta qilmasdan boshqarish uchun ma'muriy javobgarlik",
+  "transport vositalari egalarining fuqarolik javobgarligini majburiy sug'urta qilish bo'yicha sug'urta mukofoti miqdorini hisoblash"
+ ],
+ "C-28": [
+  "staji ikki yildan kam bo‘lgan haydovchilar uchun cheklovlar va tanitish belgisi",
+  "yangi haydovchi transport vositasiga tanitish belgisi o‘rnatish va tezlik bo‘yicha talablar"
+ ],
+ "C-29": [
+  "yo‘nalishsiz taksi faoliyatini amalga oshirish uchun litsenziya varaqasi va yakka tartibdagi tadbirkor",
+  "yo‘lovchilarni yengil avtomobilda tijorat asosida tashish o‘zini o‘zi band qilgan shaxs yoki YaTT"
+ ],
+ "C-30": [
+  "transport vositasi haydovchilarining ish vaqti hamda dam olish vaqti",
+  "avtomobil transporti haydovchilarining mehnat va dam olish rejimi"
+ ],
+ "D-01": [
+  "oliy ta'lim tashkilotida to'lov-kontrakt summasini bo'lib-bo'lib to'lash muddati",
+  "talabaning to'lov-kontrakt asosida o'qishi uchun to'lovni qismlarga bo'lib amalga oshirish tartibi"
+ ],
+ "D-02": [
+  "akademik ta'til berish asoslari va muddati oliy ta'lim",
+  "talabaning homiladorlik va tug'ish munosabati bilan akademik ta'tili"
+ ],
+ "D-03": [
+  "talabalarni bir oliy ta'lim muassasasidan boshqasiga ko'chirish tartibi",
+  "oliy ta'lim muassasalari o'rtasida o'qishni ko'chirish muddatlari va shartlari"
+ ],
+ "D-04": [
+  "nogironligi bo‘lgan shaxslar uchun oliy ta’lim muassasalariga qabul bo‘yicha alohida kvota",
+  "II guruh nogironligi bo‘lgan abituriyentlar uchun test sinovlarida imtiyozlar va davlat granti asosidagi qabul"
+ ],
+ "D-05": [
+  "pedagog xodim tomonidan o‘quvchiga nisbatan jismoniy zo‘ravonlik javobgarligi",
+  "ta’lim muassasasida o‘quvchining sha’ni va qadr-qimmatini kamsitish hamda tan jazosi taqiqlanishi"
+ ],
+ "D-06": [
+  "1-sinfga qabul qilish yoshi",
+  "umumiy o‘rta ta’limning birinchi sinfiga bolalarni qabul qilish"
+ ],
+ "D-07": [
+  "davlat granti asosida tahsil olayotgan talabaning o‘zlashtirmasligi va akademik qarzdorligi oqibatlari",
+  "oliy ta’lim muassasasida davlat granti va to‘lov-kontrakt asosida o‘qishga o‘tkazish tartibi"
+ ],
+ "D-08": [
+  "vaqtincha mehnatga layoqatsizlik nafaqasi miqdori mehnat stajiga qarab",
+  "kasallik varaqasi bo‘yicha nafaqa to‘lash tartibi ish staji 6 yil 10 kun"
+ ],
+ "D-09": [
+  "birlamchi tibbiy-sanitariya yordami doirasida bepul tibbiy xizmatlar",
+  "davlat tibbiyot muassasalarida laboratoriya tekshiruvlari pullik tibbiy xizmatlar tartibi"
+ ],
+ "D-10": [
+  "profilaktik emlashni rad etish ota-onaning huquqi maktabgacha ta'lim tashkilotiga qabul cheklovi",
+  "fuqarolarning sanitariya-epidemiologik osoyishtaligi profilaktik emlashdan voz kechish yozma rad etish bolalarni qabul qilish"
+ ],
+ "D-11": [
+  "qandli diabet bilan kasallangan shaxslarni insulin preparatlari bilan bepul ta'minlash tartibi",
+  "imtiyozli asosda dori vositalari bilan ta'minlash uchun tibbiyot muassasasiga murojaat qilish tartibi"
+ ],
+ "D-12": [
+  "tibbiyot xodimining kasb vazifalarini lozim darajada bajarmasligi oqibatida bemorga zarar yetkazish uchun javobgarlik",
+  "sog'liqni saqlash xodimining noto'g'ri davolashi yoki tibbiy yordam ko'rsatishi natijasida nogironlik kelib chiqishi uchun javobgarlik"
+ ],
+ "D-13": [
+  "shifokor siri oshkor etilishi tibbiy ma’lumotlarni uchinchi shaxslarga berish",
+  "bemorning sog‘lig‘i to‘g‘risidagi ma’lumotlarning maxfiyligi tibbiyot xodimining javobgarligi"
+ ],
+ "D-14": [
+  "muddatli harbiy xizmatga chaqirish yoshi",
+  "muddatli harbiy xizmat muddati"
+ ],
+ "D-15": [
+  "harbiy xizmatga chaqirishni kechiktirish kunduzgi magistratura ta'limi",
+  "chaqiruvdan ozod qilish yoki kechiktirish oliy ta'lim magistratura kunduzgi shakl"
+ ],
+ "D-16": [
+  "safarbarlik chaqiruvi rezervida xizmatni o‘tash tartibi va badal miqdori",
+  "fuqarolarning safarbarlik chaqiruvi rezervidagi xizmati muddati va to‘lovlari"
+ ],
+ "D-17": [
+  "muddatli harbiy xizmatga chaqirishni kechiktirish yolg‘iz boquvchi nogiron ona",
+  "harbiy xizmatdan ozod etish yoki kechiktirish ota vafot etgan nogiron onani parvarish qilish"
+ ],
+ "D-18": [
+  "chaqiruv qog‘ozi bo‘yicha harbiy komissariatga kelmaslik uchun javobgarlik",
+  "harbiy hisob va chaqiruv qoidalarini buzganlik uchun ma’muriy va jinoiy javobgarlik"
+ ],
+ "D-19": [
+  "ma'muriy jarimani ixtiyoriy to'lash muddati va jarima summasini kamaytirish tartibi",
+  "transport vositasini to'xtatish yoki to'xtab turish qoidalarini buzganlik uchun ma'muriy jarima ijrosi"
+ ],
+ "D-20": [
+  "axborot tizimlaridan foydalangan holda firibgarlik alomatlari va javobgarlik",
+  "ichki ishlar organlariga jinoyat to‘g‘risida ariza berish tartibi"
+ ],
+ "D-21": [
+  "shaxsni ushlab turish muddati himoyachiga yo‘l qo‘yish",
+  "ushlab turilgan shaxsning advokat bilan uchrashuvi huquqi"
+ ],
+ "D-22": [
+  "mayda bezorilik uchun jarima yoki ma'muriy qamoq",
+  "mayda bezorilik ma'muriy javobgarlik jazo chorasi"
+ ],
+ "D-23": [
+  "amnistiya akti tatbiq etilmaydigan jinoyatlar roʻyxati",
+  "firibgarlik jinoyati boʻyicha amnistiya aktini qoʻllash shartlari"
+ ],
+ "D-24": [
+  "ma'muriy jarima to'g'risidagi qaror ustidan shikoyat berish muddati",
+  "ma'muriy huquqbuzarlik to'g'risidagi ish bo'yicha qarorni shikoyat qilish muddati"
+ ],
+ "D-25": [
+  "identifikatsiyalovchi ID-kartani almashtirish davlat boji rasmiylashtirish muddati",
+  "ID-karta amal qilish muddati tugaganda almashtirish uchun davlat boji va berish muddati"
+ ],
+ "D-26": [
+  "jismoniy va yuridik shaxslarning murojaatlarini ko‘rib chiqish muddati",
+  "davlat organlari tomonidan murojaatlarga javob berish muddatlari"
+ ],
+ "D-27": [
+  "chet el fuqarosini vaqtincha turgan joyi bo‘yicha ro‘yxatga qo‘yish muddati va javobgarlik",
+  "xorijiy fuqarolarni vaqtincha ro‘yxatga olish kechiktirilganda ma’muriy javobgarlik"
+ ],
+ "D-28": [
+  "O‘zbekiston fuqaroligiga qabul qilish doimiy yashash muddati",
+  "yashash guvohnomasi bo‘lgan chet el fuqarosini O‘zbekiston fuqaroligiga qabul qilish shartlari"
+ ],
+ "D-29": [
+  "nikoh tuzilganidan keyin familiya o‘zgarganda pasportni almashtirish muddati va javobgarlik",
+  "familiya o‘zgargan taqdirda shaxsni tasdiqlovchi hujjatni almashtirish hamda ma’muriy jarima"
+ ],
+ "D-30": [
+  "mahalla fuqarolar yig‘inining vakolatlari va fuqarolarning o‘zini o‘zi boshqarish organlari faoliyati ustidan shikoyat qilish tartibi",
+  "kam ta’minlangan oilalarga nafaqa tayinlash uchun ma’lumotnoma berish mahalla fuqarolar yig‘ini vakolatlari"
+ ]
+}

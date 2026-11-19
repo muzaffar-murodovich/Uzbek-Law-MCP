@@ -1,0 +1,1861 @@
+# Written by Claude subagents from life situations, without seeing the law; answers
+# found by other subagents reading the corpus (scripts/blind_eval.py), not our search.
+- id: A-01
+  question: Ishga kirganimda 3 oy sinov muddati qo'yishdi. Sinov muddatida ish beruvchi meni sababsiz
+    ishdan bo'shata oladimi va oldindan ogohlantirishi shartmi?
+  expected:
+  - document: -6257288
+    article: '132'
+  tags:
+  - blind
+  - mehnat
+  note: Yes, during probation either party may terminate with at least 3 days' written notice; employer
+    must state reasons why the probation was failed (MK 132).
+- id: A-02
+  question: yillik tatil necha kun boladi oddiy ishchiga? 11 oy ishladim hali tatilga chiqmadim
+  expected:
+  - document: -6257288
+    article: '217'
+  - document: -6257288
+    article: '227'
+  tags:
+  - blind
+  - mehnat
+  note: Minimum annual leave is 21 calendar days; right to first-year leave arises after 6 months of continuous
+    work.
+- id: A-03
+  question: Homiladorlik va tug'ish ta'tili necha kun beriladi? Egizak kutyapman, shunda ko'proq beriladimi?
+  expected:
+  - document: -6257288
+    article: '404'
+  tags:
+  - blind
+  - mehnat
+  note: 70 days before + 56 days after birth; with twins (2+ children) 70 days after birth, i.e. 140 total.
+- id: A-04
+  question: Ish beruvchi ikki oydan beri oylikni bermayapti. Ish haqi kechiktirilgani uchun kompensatsiya
+    yoki foiz talab qilsam bo'ladimi?
+  expected:
+  - document: -6257288
+    article: '333'
+  tags:
+  - blind
+  - mehnat
+  note: 'Yes: employer pays compensation for each day of delay, 10% of the Central Bank refinancing rate,
+    regardless of fault (MK 333).'
+- id: A-05
+  question: o'zim hohlab ishdan ketmoqchiman, zayavleniya yozsam necha kun oldin ogohlantirishim kerak?
+    direktor qo'yib yubormayapti
+  expected:
+  - document: -6257288
+    article: '160'
+  tags:
+  - blind
+  - mehnat
+  note: 14 calendar days' written notice; after it expires the employee may stop work and the employer
+    must hand over documents and settle.
+- id: A-06
+  question: Shtat qisqarishi sababli ishdan bo'shatilsam, ishdan bo'shatish nafaqasi qancha miqdorda to'lanadi?
+  expected:
+  - document: -6257288
+    article: '173'
+  tags:
+  - blind
+  - mehnat
+  note: 'Severance depends on tenure with the employer: 50% (<3 y), 75% (3-5), 100% (5-10), 150% (10-15),
+    200% (>15) of average monthly wage.'
+- id: A-07
+  question: 16 yoshli o'g'lim yozgi ta'tilda do'konda ishlamoqchi. O'smirlar kuniga necha soat ishlashi
+    mumkin?
+  expected:
+  - document: -6257288
+    article: '416'
+  - document: -6257288
+    article: '415'
+  tags:
+  - blind
+  - mehnat
+  note: 'Age 16-18: max 36 h/week; daily max 6 h (6-day week) or 7.5 h (5-day week).'
+- id: A-08
+  question: Mehnat daftarchasi yo'qolib qoldi, endi elektron mehnat daftarchasi bor deyishyapti. Eski
+    ish stajimni qanday tasdiqlatsam bo'ladi?
+  expected:
+  - document: -6236060
+    article: '56'
+  - document: -4630020
+    article: '54'
+  - document: -643007
+    article: ''
+    within: IV. MEHNAT DAFTARCHASINING DUBLIKATI
+  - document: -112314
+    article: '42'
+  tags:
+  - blind
+  - mehnat
+  note: Without the paper book, past service is proven by employer/archive certificates, orders, payroll
+    records etc. (Nizom 592 p.56); past jobs can be entered into YAMMT and verified by the Pension Fund
+    (Nizom 971 p.54); a duplicate book is issued by the last employer.
+- id: A-09
+  question: Bayram kuni ishga chiqdim (Navro'z), ish beruvchi oddiy kunlik haq to'ladi. Dam olish va bayram
+    kunlari ishlaganga necha baravar to'lanishi kerak?
+  expected:
+  - document: -6257288
+    article: '263'
+  tags:
+  - blind
+  - mehnat
+  note: At least double pay, or at the employee's choice another day off plus single pay.
+- id: A-10
+  question: 3 yoshgacha bola parvarishi ta'tilida turgan ayolni ishdan bo'shatish mumkinmi? Korxona yopilyapti
+    deyishyapti.
+  expected:
+  - document: -6257288
+    article: '409'
+  - document: -6257288
+    article: '215'
+  tags:
+  - blind
+  - mehnat
+  note: Dismissal of a mother of a child under 3 / on leave is barred except on liquidation of the organisation
+    (and culpable grounds); so liquidation is a lawful ground, and the right to child-care allowance is
+    kept.
+- id: A-11
+  question: kasalxonada yotdim 10 kun, bolnichniy varaqa berishdi. Vaqtincha mehnatga layoqatsizlik nafaqasi
+    oylikni necha foizi miqdorida tolanadi?
+  expected:
+  - document: -7926684
+    article: '18'
+    within: 4-ilova
+  - document: -7926684
+    article: '19'
+    within: 4-ilova
+  - document: -6978570
+    article: '24'
+    within: 1-ilova
+  tags:
+  - blind
+  - mehnat
+  note: 'Sick-pay is 60% of average monthly wage (insurance record 6-96 months) or 80% (97+ months); +20
+    pp for some categories. Older Nizom (VM 314) also in corpus: 60%/80% by 8-year threshold.'
+- id: A-12
+  question: Ish beruvchi mehnat shartnomasini tuzmasdan og'zaki ishlatib kelyapti. Yozma mehnat shartnomasi
+    tuzish majburiymi va tuzilmasa kim javob beradi?
+  expected:
+  - document: -6257288
+    article: '106'
+  - document: -6257288
+    article: '128'
+  - document: -97664
+    article: '49'
+  - document: -97664
+    article: 175⁵
+  tags:
+  - blind
+  - mehnat
+  note: Written form is mandatory; actual admission to work counts as a concluded contract and employer
+    must formalise it within 3 days; the employer's officials bear administrative liability (MJtK 49,
+    175⁵).
+- id: A-13
+  question: Yoshga doir pensiyaga ayollar necha yoshda chiqadi va kamida necha yil ish staji bo'lishi
+    kerak?
+  expected:
+  - document: -112314
+    article: '7'
+  - document: -112314
+    article: '8'
+  tags:
+  - blind
+  - pensiya
+  note: 'Women: age 55 with at least 20 years'' service; with 7-20 years a proportional (incomplete-service)
+    pension.'
+- id: A-14
+  question: pensiyadaman lekin ishlashni davom ettiryapman. ishlaydigan pensionerga pensiya toliq beriladimi
+    yoki kesib qoyishadimi?
+  expected:
+  - document: -4103211
+    article: '1'
+    within: ''
+  tags:
+  - blind
+  - pensiya
+  note: Since 1 Jan 2019 working pensioners receive their pension in full (PF-5597 p.1).
+- id: A-15
+  question: Erim vafot etdi, 2 ta voyaga yetmagan bolam bor. Boquvchisini yo'qotganlik pensiyasini olish
+    uchun qanday hujjatlar kerak va kimlarga tayinlanadi?
+  expected:
+  - document: -112314
+    article: '19'
+  - document: -6236060
+    article: '14'
+    within: 1-ilova. Davlat pensiyalarini
+  - document: -112314
+    article: '21'
+  tags:
+  - blind
+  - pensiya
+  note: Granted to disabled family members incl. children under 18 (23 if studying) and the non-working
+    spouse caring for them; documents per Nizom 592 p.14 (kinship proof, deceased's service and wage certificates;
+    death/marriage data taken from FHDY archive).
+- id: A-16
+  question: Ish stajim yetmaydi, faqat 5 yil rasmiy ishlaganman. Pensiya yoshiga yetganimda menga nima
+    to'lanadi, yoshga doir nafaqa bormi?
+  expected:
+  - document: -112314
+    article: '8'
+  - document: -6411319
+    article: '18'
+    within: 1-ilova
+  - document: -6411319
+    article: '19'
+    within: 1-ilova
+  - document: -8283656
+    article: '5'
+    within: pensiyalar va nafaqalar miqdorlari
+  tags:
+  - blind
+  - pensiya
+  note: '5 yil staj 7 yillik minimal stajdan kam: pensiya emas, ayollarga 60, erkaklarga 65 yoshda yoshga
+    doir nafaqa (2026-07-01 dan 878 000 so''m).'
+- id: A-17
+  question: Harbiy xizmatda o'tgan muddat va oliy o'qishda o'qigan yillar pensiya uchun ish stajiga qo'shiladimi?
+  expected:
+  - document: -112314
+    article: '37'
+  tags:
+  - blind
+  - pensiya
+  note: 'Ha: harbiy xizmat (b) va kunduzgi oliy ta''lim (e) stajga qo''shiladi; oliy o''qish ''d''-''i''
+    davrlari kamida 7 yil asosiy staj bo''lsa qo''shiladi.'
+- id: A-18
+  question: kam taminlangan oilalarga bolalar nafaqasi qancha muddatga tayinlanadi va qayerga murojat
+    qilish kerak? ijtimoiy reestrga qanday kiriladi
+  expected:
+  - document: -8027513
+    article: '13'
+    within: 3-ilova
+  - document: -8027513
+    article: '6'
+    within: 3-ilova
+  - document: -8027513
+    article: '8'
+    within: 3-ilova
+  - document: -8027513
+    article: '5'
+    within: 1-ilova
+  tags:
+  - blind
+  - pensiya
+  note: Bolalar nafaqasi kambag'al/davlat ta'minotidagi oilaga toifadan chiqquncha, chegaradagi oilaga
+    6 oyga; 'Inson' markazi, DXM, ijtimoiy xodim yoki YIDXP/Ijtimoiy karta orqali; reyestrga kirish arizasi
+    bilan birga.
+- id: A-19
+  question: Ishsiz bo'lib qoldim. Bandlik markazida ro'yxatdan o'tsam ishsizlik nafaqasi qancha muddat
+    va qancha miqdorda beriladi?
+  expected:
+  - document: -5055690
+    article: '51'
+  - document: -5055690
+    article: '52'
+  - document: -7675184
+    article: '3'
+    within: II. Bandlik
+  tags:
+  - blind
+  - pensiya
+  note: 'Qonun: 12 oyda 26 haftagacha, o''rtacha ish haqining 50 %; PF-126 (2025-11-01 dan): faqat mehnat
+    shartnomasi bekor qilinganlarga, 3 oy, 75 %/50 %, EKIHMning 3 baravarigacha.'
+- id: A-20
+  question: Ona bolaga 2 yoshgacha qarash nafaqasini oladimi yoki uni otasi ham olishi mumkinmi?
+  expected:
+  - document: -6257288
+    article: '405'
+  - document: -6257288
+    article: '237'
+  - document: -6978570
+    article: '5'
+    within: 2-ilova
+  tags:
+  - blind
+  - pensiya
+  note: Otasi ham (buvi, buva, boshqa qarindosh, vasiy) ta'tilni olib, 2 yoshgacha parvarish nafaqasini
+    olishi mumkin.
+- id: A-21
+  question: Pensiya kartaga kelyapti, lekin onam yotib qolgan, bankka borolmaydi. Pensiyani ishonchnoma
+    bilan boshqa odam olishi mumkinmi?
+  expected:
+  - document: -6236060
+    article: '147'
+  - document: -6236060
+    article: '148'
+  - document: -111189
+    article: '137'
+  tags:
+  - blind
+  - pensiya
+  note: Ha, ishonchnoma bo'yicha boshqa shaxs oladi (yiliga bir marta huquqni tasdiqlash); ishonchnomani
+    mahalla yoki shifoxona ham tasdiqlaydi; yurolmaydiganlarga uyga yetkaziladi.
+- id: A-22
+  question: 1-guruh nogironligi bor odamga qarab turgan oila a'zosiga kompensatsiya yoki nafaqa to'lanadimi?
+  expected:
+  - document: -112314
+    article: '37'
+  - document: -8162485
+    article: '9'
+    within: III. Yangi
+  tags:
+  - blind
+  - ijtimoiy
+  note: Umumiy I guruh uchun pul kompensatsiyasi yo'q; qarab turilgan vaqt pensiya stajiga qo'shiladi;
+    faqat chuqur aqliy zaiflikka (18+) parvarishlash nafaqasi (2026-09 dan).
+- id: A-23
+  question: nogironligim bor 2 guruh, ish beruvchi qisqartirilgan ish vaqti va qo'shimcha tatil berishi
+    shartmi?
+  expected:
+  - document: -6257288
+    article: '427'
+  - document: -6257288
+    article: '218'
+  - document: -5049511
+    article: '42'
+  - document: -6257288
+    article: '242'
+  tags:
+  - blind
+  - ijtimoiy
+  note: 'Ha, majburiy: haftasiga 36 soatdan ko''p emas (ish haqi kamaytirilmaydi), 30 kunlik uzaytirilgan
+    ta''til, xohishiga ko''ra 14 kungacha haq to''lanmaydigan ta''til.'
+- id: A-24
+  question: Nogironligi bor bolalar uchun bepul protez, aravacha yoki eshitish apparati qanday tartibda
+    beriladi?
+  expected:
+  - document: -6905497
+    article: '3'
+    within: NIZOM
+  - document: -6905497
+    article: '6'
+    within: NIZOM
+  - document: -6905497
+    article: '23'
+  - document: -6905497
+    article: '27'
+  - document: -5049511
+    article: '34'
+  tags:
+  - blind
+  - ijtimoiy
+  note: TIEK nogironlik ma'lumotnomasida muhtojlik belgilanadi, so'ng vaucher (yoki ijtimoiy kartaga mablag')
+    beriladi, ota-ona 'Ijtimoiy himoya' ATda buyurtma qiladi; budjet hisobidan.
+- id: A-25
+  question: Nogironlik guruhini qayta ko'rikdan o'tkazish (TMEK) har yili shartmi yoki muddatsiz belgilanishi
+    mumkinmi?
+  expected:
+  - document: -5852486
+    article: '56'
+    within: 9-ilova
+  - document: -5852486
+    article: '57'
+    within: 9-ilova
+  - document: -5852486
+    article: '55'
+    within: 9-ilova
+  tags:
+  - blind
+  - ijtimoiy
+  note: 'Har yili shart emas: 6 oy, 1, 2, 5 yil yoki qaytarilmas buzilishda muddatsiz belgilanadi; muddatsizlar
+    faqat alohida holatlarda qayta ko''rikdan o''tadi.'
+- id: A-26
+  question: Ko'p bolali onaman, 5 ta farzandim bor. Ko'p bolali oilalarga qanday imtiyozlar bor, masalan
+    kommunal to'lovlar yoki uy-joy bo'yicha?
+  expected:
+  - document: -6835332
+    article: '8'
+    within: 1-ilova
+  - document: -104720
+    article: 4¹
+  - document: -3603405
+    article: '18'
+  tags:
+  - blind
+  - ijtimoiy
+  note: Ko'p bolali = 4+ voyaga yetmagan bola; aniq maqsadli kommunal uy-joy fondidan uy olish huquqi,
+    bog'chaga imtiyozli navbat; kommunal to'lov imtiyozi korpusda topilmadi.
+- id: A-27
+  question: Korxonalarda nogironligi bor shaxslar uchun ish o'rinlari kvotasi necha foiz qilib belgilangan?
+  expected:
+  - document: -5049511
+    article: '43'
+  - document: -5055690
+    article: '39'
+  - document: -7675184
+    article: '3'
+    within: II. Bandlik
+  tags:
+  - blind
+  - ijtimoiy
+  note: 'Qonun: 20+ xodimli tashkilotlarda kamida 3 %; PF-126 (2025-11-01 dan): xo''jalik subyektlarida
+    100+ xodimda 3 % gacha, budjet/davlat korxonalarida 20+ xodimda 7 % gacha (bir necha toifa uchun).'
+- id: A-28
+  question: Rossiyaga ishga ketmoqchiman. Chet elga ishlash uchun ketayotgan fuqaro qayerda ro'yxatdan
+    o'tishi kerak va qanday ijtimoiy kafolatlar bor?
+  expected:
+  - document: -3920063
+    article: '3'
+  - document: -3920063
+    article: '13'
+  - document: -6868721
+    article: '3'
+  - document: -5055690
+    article: '105'
+  tags:
+  - blind
+  - migratsiya
+  note: '''Xorijda ish'' tizimida ixtiyoriy, bepul ro''yxatdan o''tiladi; tashkiliy migrantlarga imtihon,
+    viza, chipta xarajatlari kompensatsiyasi, sug''urta subsidiyasi, huquqiy yordam; ijtimoiy soliq to''lasa
+    staj; konsullik himoyasi.'
+- id: A-29
+  question: Rossiyada 6 yil ishlab qaytdim, u yerdagi ish stajim Ozbekistonda pensiyaga hisoblanadimi?
+  expected:
+  - document: -112314
+    article: '40'
+  - document: -6236060
+    article: '41'
+  - document: -4674902
+    article: '408'
+  tags:
+  - blind
+  - migratsiya
+  note: 'Avtomatik emas: ijtimoiy soliq to''langan davrgina stajga qo''shiladi; qaytgandan keyin 3 yil
+    ichida o''tgan davr uchun bir yo''la (2020-dan yiliga 1 BHM) to''lash mumkin.'
+- id: A-30
+  question: Xorijdan qaytgan mehnat migrantlariga kasb o'rganish yoki o'z ishini ochish uchun davlat tomonidan
+    subsidiya yoki imtiyozli kredit beriladimi?
+  expected:
+  - document: -6868721
+    article: '14'
+  - document: -6868721
+    article: '11'
+  - document: -5055690
+    article: '106'
+  - document: -5739815
+    article: '6'
+    within: onlayn-auksion
+  tags:
+  - blind
+  - migratsiya
+  note: Qaytganlarga kichik biznes/oilaviy tadbirkorlik dasturlari bo'yicha kredit, ularni ishga olgan
+    ish beruvchiga 500 ming so'm/oy subsidiya (2026-01-01 gacha), ish va kasb o'rganishga ko'mak, yer
+    ijarasida alohida toifa; to'g'ridan-to'g'ri subsidiya topilmadi.
+- id: B-01
+  question: erim bilan ajrashmoqchiman, 2 ta bolam bor 3 va 7 yoshda. aliment oyligidan necha foiz bo'ladi?
+  expected:
+  - document: -104720
+    article: '99'
+  tags:
+  - blind
+  - oila
+  note: 'Two children: 1/3 of monthly earnings/income (OK 99); court may adjust; min 26.5% of minimum
+    wage per child.'
+- id: B-02
+  question: Ajrashgandan keyin sobiq erim aliment to'lamayapti, 8 oydan beri qarzi yig'ilib qoldi. Qarzi
+    uchun penya hisoblanadimi va qancha?
+  expected:
+  - document: -104720
+    article: '142'
+  - document: -104720
+    article: '140'
+  tags:
+  - blind
+  - oila
+  note: 'Yes: if debt arose by payer''s fault under a court decision, neustoyka 0.1% of unpaid sum per
+    day of delay (OK 142); debt amount computed per OK 140.'
+- id: B-03
+  question: ZAGSga zayavleniya berdik, nikoh qachon tuziladi? necha kun kutish kerak va tezlashtirsa bo'ladimi
+  expected:
+  - document: -104720
+    article: '13'
+  - document: -6638940
+    article: '71'
+  - document: -6638940
+    article: '70'
+  - document: -104720
+    article: '212'
+  tags:
+  - blind
+  - oila
+  note: Marriage registered one month after application; FHDY may shorten for valid reasons, same day
+    in special cases (pregnancy, birth, illness).
+- id: B-04
+  question: Qizim 17 yoshda, turmushga chiqmoqchi. Nikoh yoshini kamaytirish mumkinmi va buni kim hal
+    qiladi?
+  expected:
+  - document: -104720
+    article: '15'
+  - document: -6638940
+    article: '69'
+  tags:
+  - blind
+  - oila
+  note: Marriage age 18; district/city hokim may lower it by at most one year for valid reasons (pregnancy,
+    birth, emancipation).
+- id: B-05
+  question: Homilador xotin bilan er ajrashishi mumkinmi? Xotinim roziligi yo'q, men sudga ariza bermoqchiman,
+    bola tug'ilib 1 yosh bo'lmagan.
+  expected:
+  - document: -104720
+    article: '39'
+  tags:
+  - blind
+  - oila
+  note: 'No: husband cannot file for divorce without wife''s consent during pregnancy and one year after
+    birth.'
+- id: B-06
+  question: Nikoh shartnomasini to'ydan keyin ham tuzsa bo'ladimi yoki faqat nikohdan oldinmi? Notarial
+    tasdiqlash shartmi?
+  expected:
+  - document: -104720
+    article: '30'
+  tags:
+  - blind
+  - oila
+  note: Marriage contract may be concluded before registration or during marriage; written form and notarial
+    certification are mandatory.
+- id: B-07
+  question: Biz er-xotin bolalar uyidan bola asrab olmoqchimiz. Farzandlikka oluvchiga qanday talablar
+    qo'yiladi, yoshi farqi va uy-joy bo'yicha cheklov bormi?
+  expected:
+  - document: -104720
+    article: '152'
+  - document: -3517337
+    article: '300'
+  - document: -2307248
+    article: '16'
+  tags:
+  - blind
+  - oila
+  note: 'Adopters: adults not in the excluded categories (OK 152), certificate of training course, age
+    gap at least 15 years; no fixed housing norm, but document on housing rights must be attached (FPK
+    300) and living conditions are examined.'
+- id: B-08
+  question: otasi vafot etgan nevaramga vasiy bo'lmoqchiman, men buvisiman 64 yoshdaman. vasiylikka qayerga
+    murojaat qilinadi va qanday hujjatlar kerak
+  expected:
+  - document: -2307826
+    article: '19'
+  - document: -2307826
+    article: '21'
+  - document: -2467536
+    article: '80'
+  tags:
+  - blind
+  - oila
+  note: Guardianship for minors set by decision of the 'Inson' social services centre director at the
+    child's place of residence on written application; relatives have priority; document list in VM 269
+    Nizom band 80.
+- id: B-09
+  question: Ajrashgandan keyin bola menda qoldi. Otasi bolani olib chet elga ketmoqchi, mening roziligimsiz
+    bolani chet elga olib chiqib keta oladimi?
+  expected:
+  - document: -4162591
+    article: '22'
+  - document: -4162591
+    article: '33'
+  - document: -104720
+    article: '75'
+  tags:
+  - blind
+  - oila
+  note: Exit passport for a minor requires notarized consent of parents (both), except listed cases (death,
+    single mother, deprivation of rights etc.); disputes over child's residence go to court.
+- id: B-10
+  question: Nikohdan keyin otamning pulga olgan kvartirasi meni nomimga hadya qilingan. Ajrashsak eri
+    buni bo'lishga haqlimi?
+  expected:
+  - document: -104720
+    article: '25'
+  tags:
+  - blind
+  - oila
+  note: Gifted property is the recipient spouse's separate property, not divided (unless its value was
+    substantially increased by joint funds).
+- id: B-11
+  question: Otam vafot etganiga 7 oy bo'ldi, men Rossiyada ishlayman. Merosni qabul qilish muddati o'tib
+    ketgan bo'lsa nima qilish kerak, tiklasa bo'ladimi?
+  expected:
+  - document: -180552
+    article: '1145'
+  - document: -180552
+    article: '1146'
+  - document: -2414320
+    article: '18'
+  - document: -180552
+    article: '1151'
+  tags:
+  - blind
+  - meros
+  note: 'Current FK has no deadline for accepting inheritance: right arises at opening; certificate issued
+    after 6 months, no deadline to apply; nothing to restore.'
+- id: B-12
+  question: dadam vasiyatnoma yozib uyni faqat akamga qoldirgan. onam nafaqada 68 yoshda, unga hech narsa
+    tegmaydimi? majburiy ulush bormi
+  expected:
+  - document: -180552
+    article: '1142'
+  - document: -2414320
+    article: '17'
+  - document: -180552
+    article: '1143'
+  tags:
+  - blind
+  - meros
+  note: 'Yes: widow aged 68 is incapable of work (55+ women) and gets compulsory share = at least half
+    of her intestate share; plus her own marital share of joint property.'
+- id: B-13
+  question: Vasiyat yo'q bo'lsa meros kimlarga va qanday navbatda o'tadi? Bobomning uyi bor, uning 3 o'g'li
+    va 1 qizi bor, bittasi bobomdan oldin vafot etgan.
+  expected:
+  - document: -180552
+    article: '1135'
+  - document: -180552
+    article: '1140'
+  - document: -180552
+    article: '1134'
+  tags:
+  - blind
+  - meros
+  note: 'Intestate: first-order heirs (children, spouse, parents) in equal shares; predeceased son''s
+    share goes to his descendants by right of representation.'
+- id: B-14
+  question: Vasiyatnomani notariussiz, oddiy qog'ozga yozib qo'ysa kuchga egami? Kasalxonada yotgan odam
+    qanday vasiyat qila oladi?
+  expected:
+  - document: -180552
+    article: '1124'
+  - document: -180552
+    article: '1130'
+  - document: -180552
+    article: '1126'
+  tags:
+  - blind
+  - meros
+  note: A plain unattested paper will is invalid (must be notarized or equated); a hospital patient's
+    will can be certified by chief/deputy/duty doctor.
+- id: B-15
+  question: merosdan voz kechmoqchiman singlim foydasiga. notariusga borib voz kechsam keyin fikrimni
+    o'zgartira olamanmi
+  expected:
+  - document: -180552
+    article: '1147'
+  - document: -180552
+    article: '1148'
+  tags:
+  - blind
+  - meros
+  note: Renunciation via notary at place of opening, may name another heir (sister) as beneficiary, and
+    cannot be revoked later.
+- id: B-16
+  question: Kvartira oldi-sotdi dogovori notariusda tasdiqlanadimi yoki kadastrda ro'yxatdan o'tkazish
+    yetarlimi? Mulk huquqi qaysi paytdan boshlanadi?
+  expected:
+  - document: -180552
+    article: '488'
+  - document: -111189
+    article: '185'
+  - document: -180552
+    article: '481'
+  tags:
+  - blind
+  - uyjoy
+  note: Kvartira sotish shartnomasi notarial tasdiqlanadi VA davlat ro'yxatidan o'tkaziladi; mulk huquqi
+    ro'yxatdan o'tkazilgan paytdan vujudga keladi.
+- id: B-17
+  question: Kvartiramni ijaraga beraman. Ijarachi bilan yozma shartnoma tuzmasam jarima bormi va ijaradan
+    olgan daromadimdan qancha soliq to'lashim kerak?
+  expected:
+  - document: -97664
+    article: 159¹
+  - document: -4674902
+    article: '381'
+  - document: -4674902
+    article: '375'
+  - document: -180552
+    article: '603'
+  tags:
+  - blind
+  - uyjoy
+  note: Shartnomasiz/soliqda hisobga qo'yilmagan ijara uchun BHM 5-10 baravar jarima; ijara daromadi mulkiy
+    daromad, 12% JShDS.
+- id: B-18
+  question: ijarada turibman egasi 1 kunda chiqib keting deyapti, dogovor 1 yilga tuzilgan hali 5 oy bor.
+    muddatidan oldin chiqarib yuborishga haqqi bormi
+  expected:
+  - document: -180552
+    article: '615'
+  - document: -180552
+    article: '616'
+  tags:
+  - blind
+  - uyjoy
+  note: 'Ijaraga beruvchi shartnomani bir tomonlama bekor qila olmaydi: faqat kelishuv yoki sanab o''tilgan
+    asoslar bo''yicha sud orqali; ko''chirish faqat sud qarori bilan.'
+- id: B-19
+  question: Toshkentda kvartira sotib oldim, viloyatdanman. Toshkent shahriga doimiy propiska qilish uchun
+    qanday shartlar bor, kvartira kvadrati bo'yicha talab bormi?
+  expected:
+  - document: -7623461
+    article: '20'
+  - document: -7623461
+    article: '22'
+  - document: -7623461
+    article: '12'
+  - document: -7623461
+    article: '27'
+  tags:
+  - blind
+  - uyjoy
+  note: OʻRQ-1074 bo'yicha alohida Toshkent cheklovi yo'q (eski OʻRQ-296 bekor); talab — ijtimoiy norma
+    kishi boshiga kamida 16 m², rad etish asoslari yopiq ro'yxat.
+- id: B-20
+  question: Ko'p qavatli uyda qo'shnim balkonini kengaytirib, yuk ko'taruvchi devorni buzdi. Qayta qurish
+    uchun ruxsat kerakmi va buni qayerga shikoyat qilsam bo'ladi?
+  expected:
+  - document: -106136
+    article: '24'
+  - document: -4586282
+    article: '19'
+  - document: -97664
+    article: '159'
+  - document: -97664
+    article: 266⁴
+  tags:
+  - blind
+  - uyjoy
+  note: Qayta qurish uchun ruxsatnoma kerak, yuk ko'taruvchi konstruksiyani buzish taqiqlangan; BHM 50
+    baravar jarima; ish Qurilish va UJKX nazorat inspeksiyasiga taalluqli (shikoyat shu yerga).
+- id: B-21
+  question: Kommunal to'lovlardan qarzim bor deb gaz va svetni o'chirib qo'yishdi. Ogohlantirmasdan o'chirishga
+    haqlarimi? Qarz necha oy bo'lsa o'chiriladi?
+  expected:
+  - document: -106136
+    article: '134'
+  - document: -6954979
+    article: '105'
+    within: 2-ilova
+  - document: -6954979
+    article: '15'
+    within: 1-ilova
+  - document: -6954979
+    article: '88'
+    within: 1-ilova
+  tags:
+  - blind
+  - uyjoy
+  note: To'lov har oyning 10-sanasigacha; elektr/gaz uchun to'lanmasa (muddat — keyingi oy 10-sanasi)
+    uzishgacha choralar; 3 oylik qoida elektr/gazga taalluqli emas; gazda oldin ogohlantirish, EHNAT elektrda
+    qarz bo'lsa darhol uziladi.
+- id: B-22
+  question: Ko'p kvartirali uyda podyezd va tom ta'miri uchun pulni kim to'laydi? Uy-joy mulkdorlari shirkatiga
+    a'zo bo'lishga majburmanmi?
+  expected:
+  - document: -4586282
+    article: '16'
+  - document: -106136
+    article: '132'
+  - document: -4586282
+    article: '30'
+  - document: -4586282
+    article: '8'
+  tags:
+  - blind
+  - uyjoy
+  - trained
+  note: Podyezd/tom (umumiy mulk) ta'mirini barcha mulkdorlar maydonga mutanosib to'laydi; shirkat bor
+    uyda mulkdor avtomatik a'zo; boshqaruv usulini umumiy yig'ilish tanlaydi.
+- id: B-23
+  question: qishloqda hovlimiz bor tomorqa yer uchastkasini merosga qoldirsa bo'ladimi yoki sotsa bo'ladimi?
+    yer davlatniki deyishadi
+  expected:
+  - document: -152653
+    article: '17'
+  - document: -152653
+    article: '22'
+  - document: -180552
+    article: '1115'
+  - document: -5729966
+    article: '10'
+  - document: -5729966
+    article: '31'
+  tags:
+  - blind
+  - uyjoy
+  note: Umrbod egalik huquqi saqlanadi va meros bo'yicha/uy bilan birga sotilganda o'tadi; alohida yer
+    sotib bo'lmaydi, lekin uy-joy uchun berilgan yerni xususiylashtirib, keyin erkin tasarruf etish mumkin.
+- id: B-24
+  question: Hovlimda ikki qavatli uy qurmoqchiman. Yakka tartibdagi uy-joy qurish uchun ruxsatnoma olish
+    shartmi, qancha muddatda beriladi?
+  expected:
+  - document: -5970701
+    article: '5'
+    within: 4-ilova
+  - document: -5970701
+    article: '7'
+    within: 4-ilova
+  - document: -5970701
+    article: '3'
+    within: 5-ilova
+  tags:
+  - blind
+  - uyjoy
+  note: Ikki qavatgacha (12 m, 500 m²gacha) uy uchun inspeksiya ruxsatnomasi kerak emas, lekin loyiha-smeta
+    hujjatlarini tuman qurilish bo'limida kelishish shart (7 ish kuni); kattaroq uylar Kengashda 12 ish
+    kuni.
+- id: B-25
+  question: Chet elda yashayman, Toshkentdagi kvartiramni sotish uchun ukamga ishonchnoma bermoqchiman.
+    Konsullikda rasmiylashtirilgan doverennost O'zbekistonda kuchga egami?
+  expected:
+  - document: -54458
+    article: '28'
+  - document: -4167683
+    article: '27'
+  - document: -54458
+    article: '1'
+  - document: -111189
+    article: '135'
+  tags:
+  - blind
+  - notarius
+  note: O'zbekiston konsuli ishonchnomani notarial tasdiqlashi mumkin va u notarial ishonchnoma kuchiga
+    ega; kvartira sotish uchun ishonchnoma notarial shaklda bo'lishi shart (sotish shartnomasining o'zini
+    konsul tasdiqlay olmaydi).
+- id: B-26
+  question: Notarius kvartira oldi-sotdisini tasdiqlash uchun qancha davlat boji oladi? Qarindoshlar o'rtasida
+    hadya qilinsa boj kamroqmi?
+  expected:
+  - document: -4680944
+    article: ''
+  tags:
+  - blind
+  - notarius
+  note: 'Davlat boji: shahar/viloyat markazida BHM 1 baravari, boshqa joyda BHM 50%; yaqin qarindoshlarga
+    o''tkazishda 50% chegirma (Davlat boji to''g''risidagi Qonun ilovasi, 4-band ''a'').'
+- id: B-27
+  question: notarius ishonchnomani tasdiqlashdan bosh tortdi sababini aytmadi. notarius rad etsa yozma
+    sabab berishi kerakmi va ustidan qayerga shikoyat qilinadi
+  expected:
+  - document: -54458
+    article: '38'
+  - document: -54458
+    article: '39'
+  tags:
+  - blind
+  - notarius
+  note: Notarius 3 kun ichida rad etish qarori chiqaradi, so'ralsa sababni yozma bayon qiladi; shikoyat
+    notarial idora joylashgan joydagi sudga.
+- id: B-28
+  question: Do'kondan telefon oldim, 10 kunda ekrani o'chib qoldi. Pulini qaytarishni talab qilsam bo'ladimi
+    yoki faqat ta'mirlab berishadimi? Kafolat muddati ichida.
+  expected:
+  - document: -4704
+    article: '13'
+  - document: -180552
+    article: '434'
+  - document: -4704
+    article: '14'
+  tags:
+  - blind
+  - istemol
+  note: Kafolat muddatida nuqson chiqsa iste'molchi o'z xohishiga ko'ra almashtirish, bepul ta'mir, narxni
+    kamaytirish yoki shartnomani bekor qilib pulni qaytarishni talab qila oladi (chek bilan).
+- id: B-29
+  question: Kiyim sotib oldim razmeri to'g'ri kelmadi, chek bor, kiyilmagan. Sifatli tovarni necha kun
+    ichida almashtirish yoki qaytarish mumkin?
+  expected:
+  - document: -4704
+    article: '18'
+  - document: -180552
+    article: '433'
+  tags:
+  - blind
+  - istemol
+  note: Sifatli nooziq-ovqat tovarini 10 kun ichida almashtirish, mos tovar bo'lmasa pulini qaytarish
+    mumkin (foydalanilmagan, xususiyatlari saqlangan, chek bor).
+- id: B-30
+  question: Mebel buyurtma qildim, avans to'ladim, kelishilgan muddatdan 2 oy o'tdi hali yetkazib berishmadi.
+    Kechiktirgani uchun neustoyka talab qila olamanmi, qancha?
+  expected:
+  - document: -4704
+    article: 12¹
+  - document: -4704
+    article: '19'
+  tags:
+  - blind
+  - istemol
+  note: Tovar topshirish kechiksa har kun uchun bajarilmagan qismning 0,5% penya (tovar narxidan oshmaydi);
+    agar buyurtma ish (pudrat) deb qaralsa — kuniga 1%, buyurtma narxidan oshmaydi.
+- id: C-01
+  question: Uyimni ijaraga beryapman oyiga 4 million so'mga. Shu daromaddan qancha foiz nalog to'lashim
+    kerak va qachongacha?
+  expected:
+  - document: -4674902
+    article: '381'
+  - document: -4674902
+    article: '398'
+  - document: -4674902
+    article: '397'
+  - document: -4674902
+    article: '375'
+  tags:
+  - blind
+  - soliq
+  note: Rent income is property income taxed at 12%; paid monthly by the 15th of the next month (preliminary
+    declaration within 5 days after the first month), annual declaration by 1 April, final settlement
+    by 1 June.
+- id: C-02
+  question: Pensionerlar mol-mulk solig'idan ozod qilinadimi? Onamning nomida uy bor, u pensiyada.
+  expected:
+  - document: -4674902
+    article: '421'
+  tags:
+  - blind
+  - soliq
+  note: Pensioners are exempt from individual property tax only within 60 sq m of one residential property
+    (not fully exempt).
+- id: C-03
+  question: aylanmadan olinadigan soliq stavkasi necha foiz hozir? kichik magazinim bor yillik oborot
+    500 mln atrofida
+  expected:
+  - document: -4674902
+    article: '467'
+  - document: -4674902
+    article: '461'
+  tags:
+  - blind
+  - soliq
+  note: 'Turnover tax for retail: 4% in cities of 100k+, 2% elsewhere, 1% in remote/mountain districts;
+    YaTT 1%; applies while annual income <= 1 bn so''m.'
+- id: C-04
+  question: Korxonamizning yillik aylanmasi 1 milliard so'mdan oshib ketdi. QQS to'lovchisi sifatida qachondan
+    ro'yxatdan o'tishimiz shart?
+  expected:
+  - document: -4674902
+    article: '462'
+  - document: -4674902
+    article: '237'
+  - document: -5650010
+    article: '5'
+    within: NIZOM
+  - document: -5650010
+    article: '21'
+  tags:
+  - blind
+  - soliq
+  note: From the day income reaches 1 bn so'm the company switches to VAT and profit tax; VAT special
+    registration (VM 595 Nizom) applies from the 1st of the following month.
+- id: C-05
+  question: Jismoniy shaxs yillik daromad deklaratsiyasini qaysi muddatgacha topshirishi kerak? Chet eldan
+    pul kelgan edi
+  expected:
+  - document: -4674902
+    article: '397'
+  - document: -4674902
+    article: '393'
+  - document: -4674902
+    article: '398'
+  tags:
+  - blind
+  - soliq
+  note: Foreign-source income is declared; annual income declaration due by 1 April of the following year,
+    tax paid by 1 June.
+- id: C-06
+  question: Bolamning kontrakt pulini to'ladim universitetga. Shu summani daromad solig'idan chegirib
+    qaytarib olsa bo'ladimi?
+  expected:
+  - document: -4674902
+    article: '378'
+  - document: -1632379
+    article: '9'
+  - document: -1632379
+    article: '16'
+  - document: -1632379
+    article: '5'
+  tags:
+  - blind
+  - soliq
+  note: 'Yes: income spent on a child''s tuition at a professional/higher education institution is exempt
+    from personal income tax; claimed via employer or via annual declaration (Nizom, Hujjat 2107).'
+- id: C-07
+  question: Tomorqa yerim uchun yer solig'ini kim hisoblaydi, o'zim borib to'lashim kerakmi yoki xabarnoma
+    keladimi? Muddati qachon?
+  expected:
+  - document: -4674902
+    article: '439'
+  - document: -4674902
+    article: '440'
+  tags:
+  - blind
+  - soliq
+  note: The tax authority computes individual land tax and delivers a payment notice by 1 March; paid
+    in equal halves by 15 April and 15 October.
+- id: C-08
+  question: nalogni vaqtida tolamasam penya qancha hisoblanadi kuniga?
+  expected:
+  - document: -4674902
+    article: '110'
+  tags:
+  - blind
+  - soliq
+  note: Penalty accrues for each calendar day of delay at 1/300 of the Central Bank refinancing rate on
+    the unpaid tax.
+- id: C-09
+  question: YaTT bo'lib ro'yxatdan o'tish uchun qanday hujjatlar kerak va davlat boji qancha? Sartaroshxona
+    ochmoqchiman.
+  expected:
+  - document: -3111347
+    article: '33'
+    within: Tadbirkorlik subyektlarini davlat roʻyxatidan oʻtkazish tartibi
+  - document: -4680944
+    article: ''
+  - document: -3111347
+    article: '5'
+    within: Tadbirkorlik subyektlarini davlat roʻyxatidan oʻtkazish tartibi
+  - document: -1727490
+    article: ''
+    within: 1-ilova
+  tags:
+  - blind
+  - tadbirkorlik
+  note: YaTT registration requires a passport and proof of state fee payment; fee is 1 BHM; barbering
+    is on the list of YaTT activities.
+- id: C-10
+  question: O'zini o'zi band qilgan shaxs sifatida qanaqa ishlar bilan shug'ullanish mumkin? Uyda tort
+    pishirib sotaman, ro'yxatdan o'tsam soliq to'laymanmi?
+  expected:
+  - document: -4849607
+    article: ''
+    within: Ilova. Oʻzini oʻzi band
+  - document: -7681520
+    article: '5'
+  - document: -4674902
+    article: '467'
+  - document: -4674902
+    article: '365'
+  - document: -4674902
+    article: '461'
+  tags:
+  - blind
+  - tadbirkorlik
+  note: Home-made confectionery is on the self-employed activity list (PQ-4742 annex); from 2026 self-employed
+    pay 1% turnover tax (the 100 mln exemption was abolished), not personal income tax.
+- id: C-11
+  question: kassa apparatsiz savdo qilsam shtraf qancha? kichkina oziq ovqat dokoni
+  expected:
+  - document: -4674902
+    article: '221'
+  tags:
+  - blind
+  - tadbirkorlik
+  note: 'Trading without a mandatory cash register/terminal/QR code: fine of 5 mln so''m (Tax Code art.
+    221).'
+- id: C-12
+  question: Spirtli ichimlik sotish uchun litsenziya olish kerakmi, chakana savdo do'koniga? Maktabga
+    yaqin joyda sotish mumkinmi?
+  expected:
+  - document: -6472100
+    article: '32'
+  - document: -6472100
+    article: '21'
+  - document: -243235
+    article: '57'
+  - document: -243235
+    article: '60'
+  tags:
+  - blind
+  - tadbirkorlik
+  note: 'No license for alcohol retail: legal entities notify the tax authority (license only for wholesale);
+    sale is banned on the premises of and within 100 m of educational organizations.'
+- id: C-13
+  question: Soliq inspektorlari tadbirkorni oldindan xabar bermasdan tekshirishga kelishi mumkinmi? Tekshiruv
+    necha kun davom etadi?
+  expected:
+  - document: -4674902
+    article: '140'
+  - document: -4674902
+    article: '141'
+  - document: -4674902
+    article: '139'
+  - document: -4674902
+    article: '142'
+  tags:
+  - blind
+  - tadbirkorlik
+  note: Tax audit needs 30 days' prior notice (unless signs of evasion) and lasts max 30 days (extendable,
+    max 6 months total); on-site (sayyor) check max 10 days.
+- id: C-14
+  question: IT Park rezidenti bo'lsa qanday soliq imtiyozlari beriladi? Startap ochyapmiz, chet elga dasturlash
+    xizmati sotamiz.
+  expected:
+  - document: -3249651
+    article: '5'
+  - document: -3249651
+    article: '8'
+  - document: -4422250
+    article: '25'
+    within: NIZOM > 5-bob
+  tags:
+  - blind
+  - tadbirkorlik
+  note: IT Park residents are exempt from all taxes incl. social tax until 1 Jan 2028 plus customs duties
+    on equipment; employees' wages taxed at flat 7.5% PIT.
+- id: C-15
+  question: Kafe ochmoqchiman, sanitariya-epidemiologiya xulosasi va boshqa ruxsatnomalar kerakmi yoki
+    faqat xabardor qilish yetarlimi?
+  expected:
+  - document: -5511879
+    article: '36'
+  - document: -5511879
+    article: ''
+  tags:
+  - blind
+  - tadbirkorlik
+  note: A cafe is not among licensed/notified activities in the Licensing Law annexes except night operation
+    23:00-06:00 (and alcohol sales); no explicit corpus rule requiring a sanitary-epidemiological conclusion
+    to open a cafe was found, so only a partial answer.
+- id: C-16
+  question: xaridor sotib olgan kiyimini 3 kundan keyin qaytarib olib keldi chek bor, qaytarib olishim
+    shartmi? necha kun ichida qaytarish mumkin
+  expected:
+  - document: -4704
+    article: '18'
+  - document: -180552
+    article: '433'
+  - document: -243235
+    article: '27'
+  tags:
+  - blind
+  - tadbirkorlik
+  note: Sifatli nooziq-ovqat tovarini (kiyim) 10 kun ichida almashtirish, mos tovar bo'lmasa pulini qaytarish
+    mumkin; foydalanilmagan, xususiyatlari saqlangan va chek bo'lsa sotuvchi qabul qilishi shart.
+- id: C-17
+  question: Fermer xo'jaligiga yer necha yilga ijaraga beriladi va ijara shartnomasini muddatidan oldin
+    bekor qilish mumkinmi?
+  expected:
+  - document: -152653
+    article: '24'
+  - document: -275195
+    article: '11'
+  - document: -275195
+    article: '13'
+  - document: -152653
+    article: '36'
+  tags:
+  - blind
+  - qishloq
+  note: Fermer xo'jaligiga yer 30 yilga ijaraga beriladi; muddatidan oldin bekor qilish taraflar kelishuvi
+    yoki sud qarori bilan (Yer kodeksi 36-moddadagi asoslar).
+- id: C-18
+  question: Dehqon xo'jaligi ochish uchun yer qanday ajratiladi? Oilaviy dehqon xo'jaligi yuridik shaxs
+    bo'lishi shartmi?
+  expected:
+  - document: -5351631
+    article: '3'
+  - document: -5351631
+    article: '6'
+  - document: -152653
+    article: '55'
+  - document: -5351631
+    article: '8'
+  - document: -5739815
+    article: '20'
+    within: elektron onlayn-auksion savdo orqali
+  tags:
+  - blind
+  - qishloq
+  note: Yer elektron onlayn-auksion orqali ijaraga beriladi (0,06-1 ga); dehqon xo'jaligi yuridik shaxs
+    bo'lishi shart emas, ixtiyoriy.
+- id: C-19
+  question: Paxta yetishtiradigan fermerga yerdan maqsadsiz foydalangani yoki hosildorlik past bo'lgani
+    uchun yerni qaytarib olishlari mumkinmi?
+  expected:
+  - document: -152653
+    article: '36'
+  - document: -152653
+    article: '38'
+  - document: -275195
+    article: '13'
+  tags:
+  - blind
+  - qishloq
+  note: Maqsadga nomuvofiq yoki oqilona foydalanilmaganda ijara huquqi sud orqali bekor qilinishi mumkin;
+    past hosildorlik asosi Yer kodeksidan chiqarilgan (OʻRQ-973).
+- id: C-20
+  question: qishloq xojalik yerini boshqa odamga subijaraga berib qoysam boladimi? fermerman
+  expected:
+  - document: -152653
+    article: 24²
+  - document: -152653
+    article: 24⁵
+  - document: -275195
+    article: '13'
+  - document: -152653
+    article: '24'
+  - document: -5739815
+    article: '4'
+    within: qayta ijaraga berish
+  - document: -5739815
+    article: '5'
+    within: ikkilamchi ijaraga berish tartibi
+  tags:
+  - blind
+  - qishloq
+  - trained
+  note: Fermer yerini 1 yilgacha (dala chetlarini 10 yilgacha) ikkilamchi ijaraga berishi yoki 3 yil o'zi
+    foydalangandan so'ng notarial tartibda qayta ijaraga berishi mumkin; boshqa subijara taqiqlangan.
+- id: C-21
+  question: Mikroqarz bo'yicha bank yillik foizni qancha bo'lishi mumkin, chegarasi bormi? Kreditni muddatidan
+    oldin yopsam jarima olishadimi?
+  expected:
+  - document: -5972411
+    article: '32'
+  - document: -4654149
+    article: '11'
+  - document: -4654149
+    article: 11¹
+  - document: -3804290
+    article: 35¹
+  - document: -5972411
+    article: '33'
+  - document: -1004687
+    article: '16'
+  tags:
+  - blind
+  - bank
+  note: Foiz va boshqa to'lovlar yiliga qarzning yarmidan, MMT/lombardda kuniga 0,3 % dan oshmaydi; muddatidan
+    oldin to'lagani uchun jarima olish taqiqlangan.
+- id: C-22
+  question: kredit tolay olmay qoldim 3 oydan beri, bank garovdagi uyimni sudsiz sotib yuborishi mumkinmi?
+  expected:
+  - document: -111189
+    article: '280'
+  - document: -1063359
+    article: '37'
+  - document: -1063359
+    article: '36'
+  - document: -1063359
+    article: '44'
+  tags:
+  - blind
+  - bank
+  note: Shartnomada yoki notarial kelishuvda nazarda tutilgan bo'lsa suddan tashqari mumkin (3 oydan ortiq
+    kechikish, xabarnoma, kamida 2 oy, auksion); aks holda sud orqali.
+- id: C-23
+  question: Iste'mol krediti shartnomasini imzolaganimdan keyin fikrimdan qaytsam, necha kun ichida shartnomadan
+    voz kechish huquqim bor?
+  expected:
+  - document: -1004687
+    article: '12'
+  - document: -5972411
+    article: '33'
+  - document: -6185474
+    article: '2'
+    within: NIZOM
+  - document: -180552
+    article: '746'
+  tags:
+  - blind
+  - bank
+  note: Foydalanilmagan iste'mol kreditidan shartnoma tuzilgandan 2 hafta ichida yozma xabar berib voz
+    kechish mumkin.
+- id: C-24
+  question: Kollektorlar kechasi qo'ng'iroq qilib, qarindoshlarimga ham telefon qilyapti. Qarzni undirishda
+    ular nima qilishi taqiqlangan?
+  expected:
+  - document: -3804290
+    article: '37'
+  - document: -6185474
+    article: '35'
+  - document: -6185474
+    article: '33'
+  tags:
+  - blind
+  - bank
+  note: 20:00-8:00 oralig'ida qo'ng'iroq/xabarnoma taqiqlangan; qarindoshlarga qo'ng'iroq qilish haqida
+    aniq taqiq korpusda topilmadi.
+- id: C-25
+  question: Prava muddati o'tib ketgan, almashtirmasdan haydasam shtraf qancha bo'ladi? Almashtirish uchun
+    med spravka kerakmi?
+  expected:
+  - document: -97664
+    article: '135'
+  - document: -3765833
+    article: '57'
+  - document: -2194596
+    article: '2'
+    within: NIZOM
+  tags:
+  - blind
+  - transport
+  note: Hujjatlarsiz/muddati o'tgan hujjat bilan boshqarish MJtK 135 bo'yicha jarima; almashtirish hujjatlari
+    ro'yxatida tibbiy ma'lumotnoma ko'rsatilmagan, davriy tibbiy ko'rik har 2 yilda.
+- id: C-26
+  question: Yangi olgan mashinani necha kun ichida GAIda ro'yxatdan o'tkazish kerak? Kech qolsam jarima
+    bormi?
+  expected:
+  - document: -3334124
+    article: '6'
+    within: 1-ilova
+  - document: -97664
+    article: '125'
+  tags:
+  - blind
+  - transport
+  note: Mulk huquqi o'tgan kundan 10 kalendar kun ichida YHXXga murojaat; ro'yxatdan o'tkazilmagan avtomobilni
+    boshqarish uchun 0,5 BHM jarima yoki ogohlantirish.
+- id: C-27
+  question: OSAGO sug'urta polisi bo'lmasa haydaganim uchun qancha jarima soladi? Yillik polis narxi qanday
+    hisoblanadi?
+  expected:
+  - document: -97664
+    article: '135'
+  - document: -1342474
+    article: '12'
+  - document: -1342474
+    article: '11'
+  - document: -1366339
+    article: '27'
+    within: 4-ilova
+  - document: -97664
+    article: 135¹
+  tags:
+  - blind
+  - transport
+  note: Polissiz boshqarish 1 BHM jarima; mukofot = bazaviy stavka x koeffitsiyentlar (hudud, staj, mavsum,
+    sug'urta tarixi).
+- id: C-28
+  question: Endigina guvohnoma oldim 19 yoshdaman. Yangi haydovchilarga qanday cheklovlar bor, masalan
+    tezlik yoki mashina orqasiga belgi qo'yish shartmi?
+  expected:
+  - document: -5953883
+    article: '176'
+  tags:
+  - blind
+  - transport
+  note: Stajı 2 yildan kam haydovchi orqaga "!" belgisini qo'yishi shart; yangi haydovchilar uchun alohida
+    tezlik cheklovi qoidalarda topilmadi.
+- id: C-29
+  question: taksi bolib ishlash uchun litsenziya kerakmi yoki YaTT ochish yetadimi? yandexda ishlamoqchiman
+    o'z mashinamda
+  expected:
+  - document: -6100006
+    article: '5'
+  - document: -97664
+    article: '165'
+  - document: -22964
+    article: '2'
+  tags:
+  - blind
+  - transport
+  note: Taksi faoliyati litsenziya talab qiladi; o'zini o'zi band qilgan shaxs o'z yengil avtomobilida
+    litsenziya varaqasi (yiliga 1 BHM boj) asosida ishlashi mumkin.
+- id: C-30
+  question: Yuk mashinasi haydovchisiman. Bir kunda necha soat rulda bo'lishim mumkin, dam olish vaqtlari
+    qanday belgilangan?
+  expected:
+  - document: -2234877
+    article: '6'
+  - document: -2234877
+    article: '10'
+  - document: -2234877
+    article: '15'
+  - document: -2234877
+    article: '4'
+  - document: -2234877
+    article: '8'
+  tags:
+  - blind
+  - transport
+  note: Sutkada rulda 9 soatgacha; 1,5 soatdan keyin 15 daqiqa yoki 4,5 soatdan keyin 45 daqiqa tanaffus;
+    haftalik dam olish kamida 42 soat; haftasiga 40 soat.
+- id: D-01
+  question: Kontrakt pulini bo'lib to'lasa bo'ladimi? Qizim OTMda kontraktda o'qiydi, birdaniga hammasini
+    to'lay olmaymiz, necha qismga bo'lib to'lash mumkin va oxirgi muddati qachon?
+  expected:
+  - document: -2137212
+    article: '22'
+  - document: -2137212
+    article: '20'
+  tags:
+  - blind
+  - talim
+  note: 'Contract fee may be paid in parts: at least 25% by 15 Sep (new) / 1 Oct, 50% by 1 Jan, 75% by
+    1 Mar, 100% by 1 May, or rector-extended deadline.'
+- id: D-02
+  question: akademik tatil necha yilga beriladi va qanday sabab bilan olsa boladi? homilador bolib qoldim
+    3-kursda
+  expected:
+  - document: -5443081
+    article: '2'
+    within: 1-ilova
+  - document: -5443081
+    article: '3'
+    within: 1-ilova
+  - document: -5443081
+    article: '7'
+    within: 1-ilova
+  tags:
+  - blind
+  - talim
+  note: Academic leave is granted for pregnancy/childbirth and child care for the length of the maternity/child-care
+    leave; application with medical conclusion.
+- id: D-03
+  question: Bir universitetdan boshqa universitetga ko'chirish (perevod) qachon qilinadi? Kontrakt talabasiman,
+    Toshkentdan Samarqanddagi oliy o'quv yurtiga o'tmoqchiman, qanday tartibda bo'ladi?
+  expected:
+  - document: -7726569
+    article: '5'
+    within: 3-ilova
+  - document: -7726569
+    article: '14'
+    within: 3-ilova
+  - document: -7726569
+    article: '15'
+    within: 3-ilova
+  - document: -7726569
+    article: '18'
+    within: 3-ilova
+  tags:
+  - blind
+  - talim
+  note: Transfer between HEIs only on listed grounds (marriage, parent's state job relocation); applications
+    online 15 Jul-5 Aug (spring transfers between HEIs not accepted); decisions 6-30 Aug.
+- id: D-04
+  question: Nogironligi bor bolalar oliygohga kirishda imtiyoz bormi? Ukam 2-guruh nogironi, test sinovlarida
+    unga alohida kvota ajratiladimi?
+  expected:
+  - document: -3765153
+    article: '2'
+    within: NIZOM
+  - document: -3765153
+    article: '3'
+    within: NIZOM
+  - document: -3765153
+    article: '13'
+  - document: -7726569
+    article: '47'
+    within: 1-ilova
+  - document: -7726569
+    article: '15'
+    within: 1-ilova
+  tags:
+  - blind
+  - talim
+  note: 'Yes: additional 2% state-grant quota for group I/II disabled applicants; need >=30% of max test
+    score; also exempt from test fee.'
+- id: D-05
+  question: Maktabda o'qituvchi bolani urishi mumkinmi, qanday javobgarlik bor? Oglim 5-sinfda, uchitel
+    qulog'idan tortib sinfdan haydab chiqargan
+  expected:
+  - document: -97664
+    article: '47'
+  - document: -7219502
+    article: '44'
+  - document: -6786401
+    article: '15'
+  tags:
+  - blind
+  - talim
+  note: Corporal punishment in schools is banned; teacher's physical violence/humiliation of a child =
+    admin fine 1-5 BHM (MJtK 47 part 2) and 1-year ban from teaching.
+- id: D-06
+  question: Bolani maktabga 1-sinfga necha yoshdan qabul qilishadi? Sentabrda 6 yoshu 8 oylik bo'ladi,
+    olishadimi?
+  expected:
+  - document: -5013007
+    article: '9'
+  - document: -3137130
+    article: '42'
+  tags:
+  - blind
+  - talim
+  note: First grade admission in the year the child turns 7 (with medical conclusion); a child 6y8m in
+    September turns 7 only next year.
+- id: D-07
+  question: Davlat grantida o'qiyotgan talaba sessiyadan yiqilsa yoki qarzi qolsa grantdan chiqarib kontraktga
+    o'tkazishadimi?
+  expected:
+  - document: -7726569
+    article: '50'
+    within: 3-ilova
+  - document: -7726569
+    article: '51'
+    within: 3-ilova
+  - document: -7726569
+    article: '13'
+    within: 3-ilova
+  - document: -7726569
+    article: '45'
+    within: 3-ilova
+  tags:
+  - blind
+  - talim
+  note: Academic debtor / GPA below threshold is held back a year and continues on paid-contract basis;
+    failed credits are retaken for a fee; reinstatement is on contract.
+- id: D-08
+  question: bolnichniy necha foiz tolanadi? 6 yil stajim bor, 10 kun kasal boldim, ishxona qancha to'lab
+    berishi kerak
+  expected:
+  - document: -7926684
+    article: '18'
+    within: 4-ilova
+  - document: -7926684
+    article: '19'
+    within: 4-ilova
+  - document: -6257288
+    article: '281'
+  tags:
+  - blind
+  - sogliq
+  note: 'Sick benefit = average monthly wage x stazh coefficient: 6-96 months insurance stazh -> 60%,
+    97+ months -> 80% (6 years = 72 months -> 60%); paid via State Social Insurance Fund since 2026.'
+- id: D-09
+  question: Poliklinikada qaysi tibbiy xizmatlar bepul ko'rsatilishi kerak? Uchastka shifokori qon tahlilini
+    pullik qilib qo'ydi, bu qonuniymi?
+  expected:
+  - document: -26013
+    article: '29'
+  - document: -7583058
+    article: '2'
+    within: ''
+  - document: -7583058
+    article: ''
+    within: 1-ilova
+  - document: -7583058
+    article: '3'
+    within: 3-ilova
+  tags:
+  - blind
+  - sogliq
+  note: PHC is free within the state-guaranteed package (VM 382 list); services outside the package are
+    paid; whether a given blood test is free depends on the package list.
+- id: D-10
+  question: Bolamga majburiy emlashni qilmasam bo'ladimi? Yozma ravishda rad etish huquqim bormi va bog'chaga
+    olmay qo'yishlari mumkinmi?
+  expected:
+  - document: -26013
+    article: '27'
+  - document: -26013
+    article: '28'
+  - document: -2732587
+    article: '33'
+  tags:
+  - blind
+  - sogliq
+  note: Parent may refuse medical intervention (vaccination) in writing, except epidemic-threat mandatory
+    vaccination; no corpus rule found on refusing kindergarten admission for unvaccinated children.
+- id: D-11
+  question: Qandli diabet bilan kasallanganlarga insulin bepul beriladimi, buning uchun qayerga murojaat
+    qilish kerak?
+  expected:
+  - document: -5838968
+    article: '5'
+  - document: -2211626
+    article: '4'
+    within: ROʻYXATI
+  - document: -2211626
+    article: '15'
+  tags:
+  - blind
+  - sogliq
+  note: Insulin is free (analog insulin for type 1 under 25, human insulin for others); prescribed by
+    the polyclinic doctor at place of residence on endocrinologist's recommendation, distributed via PHC.
+- id: D-12
+  question: Shifokor xatosi bilan operatsiyadan keyin onam nogiron bo'lib qoldi. Tibbiy xatolik uchun
+    shifokorga qanday javobgarlik bor?
+  expected:
+  - document: -111453
+    article: '116'
+  - document: -26013
+    article: '46'
+  - document: -180552
+    article: '989'
+  - document: -180552
+    article: '1006'
+  tags:
+  - blind
+  - sogliq
+  note: Criminal liability under JK 116 (improper performance of professional duties causing serious harm),
+    plus civil compensation of health damage by the clinic/doctor.
+- id: D-13
+  question: Bemorning kasalligi haqidagi ma'lumotni shifoxona boshqalarga, masalan ish beruvchiga aytishi
+    mumkinmi? Vrach sirini oshkor qilgani uchun nima bo'ladi?
+  expected:
+  - document: -26013
+    article: '45'
+  - document: -97664
+    article: '46'
+  - document: -97664
+    article: 46¹
+  - document: -111453
+    article: 141¹
+  tags:
+  - blind
+  - sogliq
+  note: Medical secret may not be disclosed (e.g. to employer) without consent except listed cases; disclosure
+    = admin fine (MJtK 46), repeated privacy breach -> JK 141-1.
+- id: D-14
+  question: Muddatli harbiy xizmatga necha yoshdan chaqiriladi va xizmat muddati qancha?
+  expected:
+  - document: -78717
+    article: '4'
+  - document: -78717
+    article: '5'
+  tags:
+  - blind
+  - harbiy
+  note: Conscription of fit men aged 18-27; term of compulsory service 12 months.
+- id: D-15
+  question: voenkomatdan povestka keldi, lekin men magistraturada kunduzgi o'qiyman. Otsrochka beriladimi?
+  expected:
+  - document: -78717
+    article: '21'
+  - document: -78717
+    article: '19'
+  tags:
+  - blind
+  - harbiy
+  note: Full-time higher-education students (incl. master's) get deferment until graduation, by decision
+    of the territorial commission.
+- id: D-16
+  question: Safarbarlik chaqiruv rezervida xizmat qilish uchun qancha pul to'lanadi va u qancha muddatga
+    bo'ladi? O'g'lim armiyaga borishni xohlamayapti, pullik variant bormi
+  expected:
+  - document: -78717
+    article: '6'
+  - document: -243345
+    article: '2'
+    within: ''
+  - document: -243345
+    article: '2'
+    within: 1-ilova
+  tags:
+  - blind
+  - harbiy
+  note: Service = paying a cash contribution (amount set by VM/Presidential act, not stated in corpus;
+    model contract says 'BHM ning ___ baravari') plus one one-month military camp, while in reserve until
+    age 27; payable within a year after enrolment.
+- id: D-17
+  question: Oilada yolg'iz boquvchi bo'lsam, ya'ni otam vafot etgan, onam nogiron bo'lsa armiyaga olishadimi?
+  expected:
+  - document: -78717
+    article: '21'
+  tags:
+  - blind
+  - harbiy
+  note: Deferral on family grounds if parents are unable to work and there is no other adult able-bodied
+    son to support them (mother disabled, father deceased).
+- id: D-18
+  question: Chaqiruv qog'ozi kelganida harbiy komissariatga bormasa qanday jarima yoki jazo bor?
+  expected:
+  - document: -97664
+    article: '235'
+  - document: -97664
+    article: '237'
+  - document: -111453
+    article: '225'
+  tags:
+  - blind
+  - harbiy
+  note: 'Not appearing on summons: fine 1/10-1/3 BHM (MJtK 235); evading conscription: 2-5 BHM (MJtK 237);
+    repeat after admin penalty: criminal (JK 225).'
+- id: D-19
+  question: Mashinani noto'g'ri joyga qo'yganim uchun shtraf keldi. Jarimani necha kun ichida to'lasam
+    chegirma bo'ladi va to'lamasam nima bo'ladi?
+  expected:
+  - document: -97664
+    article: 332¹
+  - document: -97664
+    article: '332'
+  - document: -97664
+    article: '333'
+  - document: -1832522
+    article: '70'
+  - document: -1832522
+    article: '73'
+  tags:
+  - blind
+  - javobgarlik
+  note: Pay 50% within 15 days or 70% within 30 days of receiving the decision; traffic fines due within
+    60 days; unpaid fine goes to compulsory enforcement (MIB).
+- id: D-20
+  question: Telegramda telefon sotaman deb oldindan pulni olib, keyin blok qilib yubordi. 3 million so'm.
+    Bu firibgarlikmi va qayerga ariza berish kerak?
+  expected:
+  - document: -111453
+    article: '168'
+  - document: -111460
+    article: '324'
+  tags:
+  - blind
+  - javobgarlik
+  note: Taking prepayment by deception is fraud (JK 168, IT-aggravated part 3); a written/oral crime report
+    is filed with investigative bodies (JPK 324). Where exactly (IIV) not stated as such.
+- id: D-21
+  question: Akamni militsiya ushlab ketdi, hech narsa demayapti. Qancha soatgacha ushlab turishga haqli
+    va biz advokat yollasak u bilan qachondan uchrashtirishadi?
+  expected:
+  - document: -111460
+    article: '226'
+  - document: -6445145
+    article: '27'
+  - document: -111460
+    article: '49'
+  - document: -6445145
+    article: '29'
+  - document: -111460
+    article: '230'
+  - document: -111460
+    article: '48'
+  tags:
+  - blind
+  - javobgarlik
+  note: Detention max 48h (court may extend by 48h); lawyer admitted from moment of actual detention,
+    first private meeting before first interrogation.
+- id: D-22
+  question: kochada janjal bolib qoldi, mayda bezorilik deb protokol yozishdi. bunga qancha shtraf yoki
+    necha sutka qamoq berishi mumkin?
+  expected:
+  - document: -97664
+    article: '183'
+  - document: -97664
+    article: '29'
+  tags:
+  - blind
+  - javobgarlik
+  note: 'Petty hooliganism: fine 3-5 BHM or administrative arrest up to 15 days (arrest 3-15 days, imposed
+    by court).'
+- id: D-23
+  question: Amnistiya qaysi jinoyatlarga tatbiq etilmaydi? Ukam firibgarlik bo'yicha birinchi marta sudlangan,
+    amnistiyaga tushishi mumkinmi?
+  expected:
+  - document: -1591984
+    article: '24'
+  - document: -111453
+    article: '68'
+  - document: -111453
+    article: '76'
+  tags:
+  - blind
+  - javobgarlik
+  note: Excluded crimes/persons are set by each specific amnesty act; no current amnesty act in corpus
+    (only old 1990s-2004 decrees), so whether brother qualifies cannot be answered from corpus.
+- id: D-24
+  question: Ma'muriy jarima to'g'risidagi qarorga necha kun ichida shikoyat qilsa bo'ladi?
+  expected:
+  - document: -97664
+    article: '316'
+  - document: -97664
+    article: 324³
+  tags:
+  - blind
+  - javobgarlik
+  note: Complaint within 10 days of receiving the copy of the decision (10 days appeal for court decisions);
+    missed term can be restored.
+- id: D-25
+  question: ID karta muddati tugab qoldi, almashtirish uchun qancha davlat boji to'lanadi va necha kunda
+    tayyor bo'ladi?
+  expected:
+  - document: -4680944
+    article: ''
+  - document: -5015098
+    article: '12'
+    within: 1-ilova. Oʻzbekiston Respublikasi fuqarosining identifikatsiya ID-kartasi
+  - document: -5015098
+    article: '3'
+    within: ''
+  - document: -5015098
+    article: '10'
+    within: 1-ilova. Oʻzbekiston Respublikasi fuqarosining identifikatsiya ID-kartasi
+  tags:
+  - blind
+  - hujjat
+  note: State duty 89% of BHM; ID card issued within 1 working day after documents accepted; must apply
+    within one month of expiry.
+- id: D-26
+  question: Xokimiyatga yozgan murojaatimga bir oydan beri javob yo'q. Davlat organi murojaatga necha
+    kun ichida javob berishi shart?
+  expected:
+  - document: -3336169
+    article: '28'
+  - document: -3730228
+    article: '39'
+  - document: -97664
+    article: '43'
+  tags:
+  - blind
+  - hujjat
+  note: Application/complaint must be considered within 15 days, up to 1 month if extra checking needed
+    (extendable by at most 1 more month with notice); violation -> MJtK 43 fine for official.
+- id: D-27
+  question: Men Rossiya fuqarosiman, Toshkentda ijarada turaman. Vaqtincha ro'yxatdan o'tish (propiska)
+    uchun necha kun ichida murojaat qilishim kerak va kech qolsam jarima bormi?
+  expected:
+  - document: -5023876
+    article: '10'
+    within: 1-ilova. Oʻzbekiston Respublikasi hududida chet el fuqarolari
+  - document: -97664
+    article: '225'
+  - document: -5023876
+    article: '17'
+    within: 1-ilova. Oʻzbekiston Respublikasi hududida chet el fuqarolari
+  tags:
+  - blind
+  - hujjat
+  note: Temporary registration within 3 working days of entry, done by host/landlord via E-mehmon or MvaFRB;
+    violation fine 5 BHM (15/25 BHM if 10+/30+ days), unpaid fine -> expulsion.
+- id: D-28
+  question: O'zbekiston fuqaroligini olish uchun qancha yil yashash kerak? Turkmanistondan ko'chib kelganman,
+    yashash uchun ruxsatnomam bor
+  expected:
+  - document: -4761984
+    article: '19'
+  - document: -4761984
+    article: '20'
+  tags:
+  - blind
+  - hujjat
+  note: 'General procedure: 5 years continuous permanent residence on a residence permit, renounce foreign
+    citizenship, legal income, Constitution, state language; simplified procedure for compatriots (vatandosh).'
+- id: D-29
+  question: turmushga chiqdim familiyamni ozgartirdim, pasportni necha kun ichida almashtirishim shart?
+    kechiktirsam shtraf bormi
+  expected:
+  - document: -5015098
+    article: '10'
+    within: 1-ilova. Oʻzbekiston Respublikasi fuqarosining identifikatsiya ID-kartasi
+  - document: -210980
+    article: '17'
+  - document: -1729272
+    article: '11'
+    within: biometrik pasporti
+  - document: -97664
+    article: '223'
+  tags:
+  - blind
+  - hujjat
+  note: Must apply for a new ID card within one month after surname change (passport replaced by ID card);
+    MJtK 223 fines for living with invalid documents (1/2 BHM), not explicit for surname change.
+- id: D-30
+  question: Mahalla raisi kam ta'minlangan oilalarga nafaqa tayinlash uchun spravka bermayapti. Mahalla
+    fuqarolar yig'inining vakolatlari qanday va uning ustidan qayerga shikoyat qilinadi?
+  expected:
+  - document: -2156899
+    article: '11'
+  - document: -2156899
+    article: '14'
+  - document: -3527353
+    article: '27'
+  - document: -2156899
+    article: '19'
+  tags:
+  - blind
+  - hujjat
+  note: Mahalla assembly decides on benefits for low-income families; chairman must ensure certificates
+    on family/property status; inaction of mahalla officials can be challenged in administrative court.
