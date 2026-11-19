@@ -21,3 +21,17 @@ def test_rerank_top_from_environment(monkeypatch):
     assert rerank_top() == 0
     monkeypatch.setenv("QONUNSHUNOS_RERANK_TOP", "12")
     assert rerank_top() == 12
+
+
+def test_score_keeps_the_order_of_the_texts():
+    from qonunshunos.search.rerank import Reranker
+
+    class Lengths(Reranker):
+        def __init__(self) -> None:
+            pass
+
+        def _score(self, query, texts):
+            return [float(len(t)) for t in texts]
+
+    texts = ["ccc", "a", "bbbbb", "dd", "e" * 9]
+    assert Lengths().score("q", texts, batch_size=2) == [3.0, 1.0, 5.0, 2.0, 9.0]
