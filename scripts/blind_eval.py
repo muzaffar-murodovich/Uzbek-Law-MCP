@@ -8,7 +8,8 @@ from life situations only; another one finds the answering articles by reading t
     uv run python scripts/blind_eval.py units          # on home: data/parsed -> units file
     uv run python scripts/blind_eval.py grep 'mehnat ta.til' --title 'Mehnat kodeksi'
     uv run python scripts/blind_eval.py show -- -6257288 134
-    uv run python scripts/blind_eval.py build data/eval/blind/labels/*.json
+    uv run python scripts/blind_eval.py build data/eval/blind/labels/*.json \
+        --judged data/eval/blind/judged.json
 """
 
 import argparse
@@ -141,11 +142,16 @@ def build(args: argparse.Namespace) -> None:
         for line in args.pairs.read_text(encoding="utf-8").splitlines():
             pair = json.loads(line)
             trained.add((str(pair["document_id"]), str(pair["number"])))
+    # Units our search found for questions it missed, accepted by a judge (pooled relevance):
+    # they carry ``judged: true`` so the strict number can still be computed without them.
+    judged = json.loads(args.judged.read_text(encoding="utf-8")) if args.judged else {}
     items, dropped = [], []
     for path in args.labels:
         for entry in json.loads(path.read_text(encoding="utf-8")):
             expected = []
-            for a in entry.get("answers", []):
+            answers = [*entry.get("answers", [])]
+            answers += [{**a, "judged": True} for a in judged.get(entry["id"], [])]
+            for a in answers:
                 # "matn": an unnumbered unit (annex table); its number is empty in the index.
                 number = "" if str(a["article"]) == "matn" else str(a["article"])
                 key = (str(a["document"]), number)
@@ -164,6 +170,8 @@ def build(args: argparse.Namespace) -> None:
                         print(f"warning {entry['id']}: within {within!r} fits {len(hits)} units")
                 elif len(paths) > 1:
                     print(f"warning {entry['id']}: {key} repeats, no within: any of them counts")
+                if a.get("judged"):
+                    e["judged"] = True
                 expected.append(e)
             if not expected:
                 dropped.append(f"{entry['id']}: no answer ({entry.get('note', '')})")
@@ -183,7 +191,8 @@ def build(args: argparse.Namespace) -> None:
     items.sort(key=lambda i: i["id"])
     header = (
         "# Written by Claude subagents from life situations, without seeing the law; answers\n"
-        "# found by other subagents reading the corpus (scripts/blind_eval.py), not our search.\n"
+        "# found by other subagents reading the corpus (scripts/blind_eval.py), not our search;\n"
+        "# judged: true = in a missed question's top 10 of our search, accepted by a judge.\n"
     )
     args.out.write_text(
         header + yaml.safe_dump(items, allow_unicode=True, sort_keys=False, width=100),
@@ -221,6 +230,7 @@ def main() -> None:
     p.add_argument("labels", nargs="+", type=Path)
     p.add_argument("--out", type=Path, default=Path("eval/questions_blind.yaml"))
     p.add_argument("--pairs", type=Path, default=Path("data/eval/blind/pairs.jsonl"))
+    p.add_argument("--judged", type=Path, help="JSON {id: [answers]} from judging misses")
     args = parser.parse_args()
     UNITS = args.units
     if args.command == "units" and args.out is None:

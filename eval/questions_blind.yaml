@@ -1,5 +1,6 @@
 # Written by Claude subagents from life situations, without seeing the law; answers
-# found by other subagents reading the corpus (scripts/blind_eval.py), not our search.
+# found by other subagents reading the corpus (scripts/blind_eval.py), not our search;
+# judged: true = in a missed question's top 10 of our search, accepted by a judge.
 - id: A-01
   question: Ishga kirganimda 3 oy sinov muddati qo'yishdi. Sinov muddatida ish beruvchi meni sababsiz
     ishdan bo'shata oladimi va oldindan ogohlantirishi shartmi?
@@ -18,6 +19,12 @@
     article: '217'
   - document: -6257288
     article: '227'
+  - document: -6257288
+    article: '230'
+    judged: true
+  - document: -7206686
+    article: ''
+    judged: true
   tags:
   - blind
   - mehnat
@@ -439,6 +446,9 @@
   - document: -5739815
     article: '6'
     within: onlayn-auksion
+  - document: -7170464
+    article: '12'
+    judged: true
   tags:
   - blind
   - migratsiya
@@ -561,6 +571,9 @@
     article: '33'
   - document: -104720
     article: '75'
+  - document: -1297315
+    article: '14'
+    judged: true
   tags:
   - blind
   - oila
@@ -692,6 +705,9 @@
     article: '615'
   - document: -180552
     article: '616'
+  - document: -180552
+    article: '551'
+    judged: true
   tags:
   - blind
   - uyjoy
@@ -726,6 +742,15 @@
     article: '159'
   - document: -97664
     article: 266⁴
+  - document: -5970701
+    article: '6'
+    within: 2-ilova. Bino va inshootlarning ixtisoslashishini oʻzgartirish, qayta qurish, rekonstruksiya
+      qilish hamda oʻz hududida qoʻshimcha bino va inshootlarni qurishni loyihalashtirishga ruxsatnoma
+      berish boʻyicha davlat xizmatlari koʻrsatishning MAʼMURIY REGLAMENTI > 1-bob. Umumiy qoidalar
+    judged: true
+  - document: -8165716
+    article: '36'
+    judged: true
   tags:
   - blind
   - uyjoy
@@ -746,6 +771,25 @@
   - document: -6954979
     article: '88'
     within: 1-ilova
+  - document: -3263328
+    article: '13'
+    judged: true
+  - document: -3263328
+    article: '12'
+    judged: true
+  - document: -8508670
+    article: '7'
+    within: 7-ilova. Oʻzbekiston Respublikasi Prezidentining va Oʻzbekiston Respublikasi Hukumatining
+      ayrim hujjatlariga kiritilayotgan oʻzgartirish va qoʻshimchalar
+    judged: true
+  - document: -6954979
+    article: '10'
+    within: 2-ilova. Tabiiy gazdan foydalanish QOIDALARI > 2-bob. Isteʼmolchilar, gaz taʼminoti tashkilotlari
+      va nazorat organlarning huquqlari va majburiyatlari
+    judged: true
+  - document: -3263328
+    article: '3'
+    judged: true
   tags:
   - blind
   - uyjoy
@@ -860,6 +904,12 @@
     article: '434'
   - document: -4704
     article: '14'
+  - document: -4704
+    article: '15'
+    judged: true
+  - document: -243235
+    article: '29'
+    judged: true
   tags:
   - blind
   - istemol
@@ -927,6 +977,9 @@
     article: '467'
   - document: -4674902
     article: '461'
+  - document: -7681520
+    article: '5'
+    judged: true
   tags:
   - blind
   - soliq
@@ -977,6 +1030,12 @@
     article: '16'
   - document: -1632379
     article: '5'
+  - document: -1632379
+    article: '2'
+    within: Ilova. Oʻzbekiston Respublikasining professional va oliy taʼlim tashkilotlarida taʼlim olish
+      uchun yoʻnaltiriladigan mablagʻlarga jismoniy shaxslardan olinadigan daromad soligʻi boʻyicha imtiyozni
+      qoʻllash tartibi toʻgʻrisidagi nizom > I. Umumiy qoidalar
+    judged: true
   tags:
   - blind
   - soliq
@@ -1040,6 +1099,11 @@
     article: '365'
   - document: -4674902
     article: '461'
+  - document: -5182451
+    article: '7'
+    within: 1-ilova. Oʻzini oʻzi band qilgan shaxs sifatida faoliyatni amalga oshirish tartibi toʻgʻrisida
+      NIZOM > 1-bob. Umumiy qoidalar
+    judged: true
   tags:
   - blind
   - tadbirkorlik
@@ -1084,6 +1148,18 @@
     article: '139'
   - document: -4674902
     article: '142'
+  - document: -7408455
+    article: '15'
+    judged: true
+  - document: -2006789
+    article: '39'
+    judged: true
+  - document: -5206072
+    article: 241⁶
+    judged: true
+  - document: -8012407
+    article: 241⁶
+    judged: true
   tags:
   - blind
   - tadbirkorlik
@@ -1459,6 +1535,9 @@
     article: '44'
   - document: -6786401
     article: '15'
+  - document: -6786401
+    article: '8'
+    judged: true
   tags:
   - blind
   - talim
@@ -1679,9 +1758,19 @@
     article: '70'
   - document: -1832522
     article: '73'
+  - document: -5500086
+    article: '31'
+    judged: true
+  - document: -1832522
+    article: '11'
+    judged: true
+  - document: -6411366
+    article: '1'
+    judged: true
   tags:
   - blind
   - javobgarlik
+  - trained
   note: Pay 50% within 15 days or 70% within 30 days of receiving the decision; traffic fines due within
     60 days; unpaid fine goes to compulsory enforcement (MIB).
 - id: D-20
@@ -1692,9 +1781,13 @@
     article: '168'
   - document: -111460
     article: '324'
+  - document: -3027843
+    article: '16'
+    judged: true
   tags:
   - blind
   - javobgarlik
+  - trained
   note: Taking prepayment by deception is fraud (JK 168, IT-aggravated part 3); a written/oral crime report
     is filed with investigative bodies (JPK 324). Where exactly (IIV) not stated as such.
 - id: D-21

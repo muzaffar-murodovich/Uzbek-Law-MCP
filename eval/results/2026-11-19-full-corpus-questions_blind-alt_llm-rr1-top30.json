@@ -1,0 +1,1731 @@
+{
+ "modes": {
+  "hybrid": {
+   "overall": {
+    "n": 120,
+    "recall_at_1": 0.4083333333333333,
+    "recall_at_5": 0.6666666666666666,
+    "recall_at_10": 0.8,
+    "mrr": 0.5214451058201058
+   },
+   "by_tag": {
+    "bank": {
+     "n": 4,
+     "recall_at_1": 0.5,
+     "recall_at_5": 1.0,
+     "recall_at_10": 1.0,
+     "mrr": 0.7083333333333334
+    },
+    "blind": {
+     "n": 120,
+     "recall_at_1": 0.4083333333333333,
+     "recall_at_5": 0.6666666666666666,
+     "recall_at_10": 0.8,
+     "mrr": 0.5214451058201058
+    },
+    "harbiy": {
+     "n": 5,
+     "recall_at_1": 0.4,
+     "recall_at_5": 1.0,
+     "recall_at_10": 1.0,
+     "mrr": 0.7
+    },
+    "hujjat": {
+     "n": 6,
+     "recall_at_1": 0.5,
+     "recall_at_5": 0.6666666666666666,
+     "recall_at_10": 0.8333333333333334,
+     "mrr": 0.5499999999999999
+    },
+    "ijtimoiy": {
+     "n": 6,
+     "recall_at_1": 0.5,
+     "recall_at_5": 0.6666666666666666,
+     "recall_at_10": 0.8333333333333334,
+     "mrr": 0.611111111111111
+    },
+    "istemol": {
+     "n": 3,
+     "recall_at_1": 0.3333333333333333,
+     "recall_at_5": 0.6666666666666666,
+     "recall_at_10": 0.6666666666666666,
+     "mrr": 0.5
+    },
+    "javobgarlik": {
+     "n": 6,
+     "recall_at_1": 0.3333333333333333,
+     "recall_at_5": 0.5,
+     "recall_at_10": 0.5,
+     "mrr": 0.4166666666666667
+    },
+    "mehnat": {
+     "n": 12,
+     "recall_at_1": 0.5,
+     "recall_at_5": 0.8333333333333334,
+     "recall_at_10": 0.8333333333333334,
+     "mrr": 0.6138888888888888
+    },
+    "meros": {
+     "n": 5,
+     "recall_at_1": 0.4,
+     "recall_at_5": 0.8,
+     "recall_at_10": 1.0,
+     "mrr": 0.6222222222222222
+    },
+    "migratsiya": {
+     "n": 3,
+     "recall_at_1": 0.3333333333333333,
+     "recall_at_5": 0.3333333333333333,
+     "recall_at_10": 0.3333333333333333,
+     "mrr": 0.3333333333333333
+    },
+    "notarius": {
+     "n": 3,
+     "recall_at_1": 0.3333333333333333,
+     "recall_at_5": 0.6666666666666666,
+     "recall_at_10": 1.0,
+     "mrr": 0.43703703703703706
+    },
+    "oila": {
+     "n": 10,
+     "recall_at_1": 0.6,
+     "recall_at_5": 0.8,
+     "recall_at_10": 0.9,
+     "mrr": 0.6958333333333333
+    },
+    "pensiya": {
+     "n": 9,
+     "recall_at_1": 0.6666666666666666,
+     "recall_at_5": 0.8888888888888888,
+     "recall_at_10": 1.0,
+     "mrr": 0.7444444444444445
+    },
+    "qishloq": {
+     "n": 4,
+     "recall_at_1": 0.25,
+     "recall_at_5": 0.5,
+     "recall_at_10": 1.0,
+     "mrr": 0.3729166666666667
+    },
+    "sogliq": {
+     "n": 6,
+     "recall_at_1": 0.3333333333333333,
+     "recall_at_5": 0.6666666666666666,
+     "recall_at_10": 1.0,
+     "mrr": 0.46388888888888885
+    },
+    "soliq": {
+     "n": 8,
+     "recall_at_1": 0.5,
+     "recall_at_5": 0.75,
+     "recall_at_10": 0.75,
+     "mrr": 0.55625
+    },
+    "tadbirkorlik": {
+     "n": 8,
+     "recall_at_1": 0.125,
+     "recall_at_5": 0.375,
+     "recall_at_10": 0.5,
+     "mrr": 0.2625
+    },
+    "talim": {
+     "n": 7,
+     "recall_at_1": 0.42857142857142855,
+     "recall_at_5": 0.7142857142857143,
+     "recall_at_10": 0.8571428571428571,
+     "mrr": 0.5285714285714286
+    },
+    "trained": {
+     "n": 2,
+     "recall_at_1": 0.0,
+     "recall_at_5": 0.5,
+     "recall_at_10": 1.0,
+     "mrr": 0.18333333333333335
+    },
+    "transport": {
+     "n": 6,
+     "recall_at_1": 0.5,
+     "recall_at_5": 0.6666666666666666,
+     "recall_at_10": 0.8333333333333334,
+     "mrr": 0.5571428571428572
+    },
+    "uyjoy": {
+     "n": 9,
+     "recall_at_1": 0.0,
+     "recall_at_5": 0.1111111111111111,
+     "recall_at_10": 0.4444444444444444,
+     "mrr": 0.10648148148148147
+    }
+   },
+   "ms_per_query": 2347.8
+  }
+ },
+ "questions": {
+  "A-01": {
+   "question": "Ishga kirganimda 3 oy sinov muddati qo'yishdi. Sinov muddatida ish beruvchi meni sababsiz ishdan bo'shata oladimi va oldindan ogohlantirishi shartmi?",
+   "ranks": {
+    "hybrid": 2
+   },
+   "top3": {
+    "hybrid": [
+     "Sudlar tomonidan mehnat shartnomasini bekor qilishni tartibga soluvchi qonunchilikni qoʻllash amaliyoti toʻgʻrisidagi Hujjat (26) 11",
+     "Mehnat kodeksi 132",
+     "Mehnat kodeksi 168"
+    ]
+   }
+  },
+  "A-02": {
+   "question": "yillik tatil necha kun boladi oddiy ishchiga? 11 oy ishladim hali tatilga chiqmadim",
+   "ranks": {
+    "hybrid": null
+   },
+   "top3": {
+    "hybrid": [
+     "Mehnat kodeksi 418",
+     "Mehnat kodeksi 449",
+     "Mehnat kodeksi 230"
+    ]
+   }
+  },
+  "A-03": {
+   "question": "Homiladorlik va tug'ish ta'tili necha kun beriladi? Egizak kutyapman, shunda ko'proq beriladimi?",
+   "ranks": {
+    "hybrid": 1
+   },
+   "top3": {
+    "hybrid": [
+     "Mehnat kodeksi 404",
+     "Buyruq 2667: Mehnatga layoqatsizlik varaqalarini berish tartibi toʻgʻrisidagi yoʻriqnomani tasdiqlash haqida 27",
+     "Ayrim turdagi nafaqalarni tayinlash va toʻlashni tartibga solish chora-tadbirlari toʻgʻrisidagi Vazirlar Mahkamasi qarori (314) 34"
+    ]
+   }
+  },
+  "A-04": {
+   "question": "Ish beruvchi ikki oydan beri oylikni bermayapti. Ish haqi kechiktirilgani uchun kompensatsiya yoki foiz talab qilsam bo'ladimi?",
+   "ranks": {
+    "hybrid": 1
+   },
+   "top3": {
+    "hybrid": [
+     "Mehnat kodeksi 333",
+     "Mehnat kodeksi 100",
+     "Hujjat 720: Mehnat shartnomasi alohida asoslarga koʻra bekor qilinib, ogohlantirish muddati pullik kompensatsiyaga almashtirilganda xodimlarga moddiy madad ber… None"
+    ]
+   }
+  },
+  "A-05": {
+   "question": "o'zim hohlab ishdan ketmoqchiman, zayavleniya yozsam necha kun oldin ogohlantirishim kerak? direktor qo'yib yubormayapti",
+   "ranks": {
+    "hybrid": 5
+   },
+   "top3": {
+    "hybrid": [
+     "Mehnat kodeksi 165",
+     "Mehnat kodeksi 511",
+     "Mehnat kodeksi 499"
+    ]
+   }
+  },
+  "A-06": {
+   "question": "Shtat qisqarishi sababli ishdan bo'shatilsam, ishdan bo'shatish nafaqasi qancha miqdorda to'lanadi?",
+   "ranks": {
+    "hybrid": 3
+   },
+   "top3": {
+    "hybrid": [
+     "Mehnat kodeksi 442",
+     "Mehnat kodeksi 98",
+     "Mehnat kodeksi 173"
+    ]
+   }
+  },
+  "A-07": {
+   "question": "16 yoshli o'g'lim yozgi ta'tilda do'konda ishlamoqchi. O'smirlar kuniga necha soat ishlashi mumkin?",
+   "ranks": {
+    "hybrid": 1
+   },
+   "top3": {
+    "hybrid": [
+     "Mehnat kodeksi 415",
+     "Mehnat kodeksi 416",
+     "Mehnat kodeksi 427"
+    ]
+   }
+  },
+  "A-08": {
+   "question": "Mehnat daftarchasi yo'qolib qoldi, endi elektron mehnat daftarchasi bor deyishyapti. Eski ish stajimni qanday tasdiqlatsam bo'ladi?",
+   "ranks": {
+    "hybrid": 1
+   },
+   "top3": {
+    "hybrid": [
+     "Fuqarolarning davlat pensiya taʼminoti toʻgʻrisidagi Qonun (938-XII) 42",
+     "Vazirlar Mahkamasi qarori 592: Davlat pensiyalarini tayinlash va toʻlash tartibi toʻgʻrisidagi nizomni tasdiqlash haqida 56",
+     "Vazirlar Mahkamasi qarori 11: Sudyalar va ularning oila aʼzolari pensiya taʼminoti shartlari, meʼyorlari hamda tartibi toʻgʻrisidagi nizomni tasdiqlash haqida 36"
+    ]
+   }
+  },
+  "A-09": {
+   "question": "Bayram kuni ishga chiqdim (Navro'z), ish beruvchi oddiy kunlik haq to'ladi. Dam olish va bayram kunlari ishlaganga necha baravar to'lanishi kerak?",
+   "ranks": {
+    "hybrid": 1
+   },
+   "top3": {
+    "hybrid": [
+     "Mehnat kodeksi 263",
+     "Obodonlashtirish xodimlarini moddiy ragʻbatlantirishni kuchaytirish chora-tadbirlari toʻgʻrisidagi Vazirlar Mahkamasi qarori (91) 9",
+     "Vazirlar Mahkamasi qarori 4: Oʻzbekiston Respublikasi Prezidentining “Yirik sanoat korxonalari bilan kasanachilikni rivojlantirish asosidagi ishlab chiqarish v… 30"
+    ]
+   }
+  },
+  "A-10": {
+   "question": "3 yoshgacha bola parvarishi ta'tilida turgan ayolni ishdan bo'shatish mumkinmi? Korxona yopilyapti deyishyapti.",
+   "ranks": {
+    "hybrid": 1
+   },
+   "top3": {
+    "hybrid": [
+     "Mehnat kodeksi 409",
+     "Mehnat kodeksi 163",
+     "Prezident qarori PQ-10: Ichki ishlar organlarini xalqchil professional tuzilmaga aylantirish va aholi bilan yanada yaqin hamkorlikda ishlashga yoʻnaltirish boʻ… 3"
+    ]
+   }
+  },
+  "A-11": {
+   "question": "kasalxonada yotdim 10 kun, bolnichniy varaqa berishdi. Vaqtincha mehnatga layoqatsizlik nafaqasi oylikni necha foizi miqdorida tolanadi?",
+   "ranks": {
+    "hybrid": 3
+   },
+   "top3": {
+    "hybrid": [
+     "Ayrim turdagi nafaqalarni tayinlash va toʻlashni tartibga solish chora-tadbirlari toʻgʻrisidagi Vazirlar Mahkamasi qarori (314) 22",
+     "Ayrim turdagi nafaqalarni tayinlash va toʻlashni tartibga solish chora-tadbirlari toʻgʻrisidagi Vazirlar Mahkamasi qarori (314) 23",
+     "Vazirlar Mahkamasi qarori 796: Aholiga davlat ijtimoiy sugʻurtasi boʻyicha toʻlovlarni amalga oshirish tizimini takomillashtirishning qoʻshimcha chora-tadbirla… 18"
+    ]
+   }
+  },
+  "A-12": {
+   "question": "Ish beruvchi mehnat shartnomasini tuzmasdan og'zaki ishlatib kelyapti. Yozma mehnat shartnomasi tuzish majburiymi va tuzilmasa kim javob beradi?",
+   "ranks": {
+    "hybrid": null
+   },
+   "top3": {
+    "hybrid": [
+     "Mehnat kodeksi 317",
+     "Mehnat kodeksi 446",
+     "Raqamli texnologiyalar xalqaro markazi toʻgʻrisidagi Qonun (OʻRQ-1169) 72"
+    ]
+   }
+  },
+  "A-13": {
+   "question": "Yoshga doir pensiyaga ayollar necha yoshda chiqadi va kamida necha yil ish staji bo'lishi kerak?",
+   "ranks": {
+    "hybrid": 1
+   },
+   "top3": {
+    "hybrid": [
+     "Fuqarolarning davlat pensiya taʼminoti toʻgʻrisidagi Qonun (938-XII) 7",
+     "Davlat pensiya taʼminoti bilan bogʻliq ishlar boʻyicha sud amaliyoti toʻgʻrisidagi Hujjat (44) 10",
+     "Fuqarolarning davlat pensiya taʼminoti toʻgʻrisidagi Qonun (938-XII) 12¹"
+    ]
+   }
+  },
+  "A-14": {
+   "question": "pensiyadaman lekin ishlashni davom ettiryapman. ishlaydigan pensionerga pensiya toliq beriladimi yoki kesib qoyishadimi?",
+   "ranks": {
+    "hybrid": 5
+   },
+   "top3": {
+    "hybrid": [
+     "Vazirlar Mahkamasi qarori 354: Oʻzbekiston Respublikasi ichki ishlar organlari va Milliy gvardiyasining shaxsiy tarkibi hamda ularning oila aʼzolarini ijtimoiy… 218",
+     "Fuqarolarning davlat pensiya taʼminoti toʻgʻrisidagi Qonun (938-XII) 52",
+     "Alohida asoslarga koʻra mehnat shartnomasi bekor qilinganda ishdan boʻshatilgan xodimlarga muddatidan oldin pensiya tayinlash tartibi toʻgʻrisidagi Hujjat (588) 13"
+    ]
+   }
+  },
+  "A-15": {
+   "question": "Erim vafot etdi, 2 ta voyaga yetmagan bolam bor. Boquvchisini yo'qotganlik pensiyasini olish uchun qanday hujjatlar kerak va kimlarga tayinlanadi?",
+   "ranks": {
+    "hybrid": 1
+   },
+   "top3": {
+    "hybrid": [
+     "Vazirlar Mahkamasi qarori 592: Davlat pensiyalarini tayinlash va toʻlash tartibi toʻgʻrisidagi nizomni tasdiqlash haqida 14",
+     "Vazirlar Mahkamasi qarori 11: Sudyalar va ularning oila aʼzolari pensiya taʼminoti shartlari, meʼyorlari hamda tartibi toʻgʻrisidagi nizomni tasdiqlash haqida 14",
+     "Vazirlar Mahkamasi qarori 354: Oʻzbekiston Respublikasi ichki ishlar organlari va Milliy gvardiyasining shaxsiy tarkibi hamda ularning oila aʼzolarini ijtimoiy… 24"
+    ]
+   }
+  },
+  "A-16": {
+   "question": "Ish stajim yetmaydi, faqat 5 yil rasmiy ishlaganman. Pensiya yoshiga yetganimda menga nima to'lanadi, yoshga doir nafaqa bormi?",
+   "ranks": {
+    "hybrid": 1
+   },
+   "top3": {
+    "hybrid": [
+     "Fuqarolarning davlat pensiya taʼminoti toʻgʻrisidagi Qonun (938-XII) 8",
+     "Vazirlar Mahkamasi qarori 119: Ijtimoiy himoyaga muhtoj ayrim toifadagi shaxslarga nafaqa va moddiy yordamlarni tayinlash hamda toʻlash tartibi toʻgʻrisidagi n… 18",
+     "Davlat pensiya taʼminoti bilan bogʻliq ishlar boʻyicha sud amaliyoti toʻgʻrisidagi Hujjat (44) 10"
+    ]
+   }
+  },
+  "A-17": {
+   "question": "Harbiy xizmatda o'tgan muddat va oliy o'qishda o'qigan yillar pensiya uchun ish stajiga qo'shiladimi?",
+   "ranks": {
+    "hybrid": 6
+   },
+   "top3": {
+    "hybrid": [
+     "Nogironlik pensiyalari va kompensatsiyalarni tayinlashda proaktiv xizmatlarni joriy etish toʻgʻrisidagi Prezident qarori (PQ-194) 3",
+     "Vazirlar Mahkamasi qarori 592: Davlat pensiyalarini tayinlash va toʻlash tartibi toʻgʻrisidagi nizomni tasdiqlash haqida 59",
+     "Prezident qarori PQ-5102: Fuqarolarga davlat pensiyalarini tayinlash jarayonini soddalashtirish hamda pensiya va nafaqalarni yetkazish tizimini yanada takomill… 1"
+    ]
+   }
+  },
+  "A-18": {
+   "question": "kam taminlangan oilalarga bolalar nafaqasi qancha muddatga tayinlanadi va qayerga murojat qilish kerak? ijtimoiy reestrga qanday kiriladi",
+   "ranks": {
+    "hybrid": 1
+   },
+   "top3": {
+    "hybrid": [
+     "Vazirlar Mahkamasi qarori 35: Ijtimoiy reyestrga kiritilgan oilalarni qoʻllab-quvvatlash tizimini takomillashtirishning qoʻshimcha chora-tadbirlari toʻgʻrisida 13",
+     "Vazirlar Mahkamasi qarori 35: Ijtimoiy reyestrga kiritilgan oilalarni qoʻllab-quvvatlash tizimini takomillashtirishning qoʻshimcha chora-tadbirlari toʻgʻrisida 6",
+     "Prezident qarori PQ-4797: Aholiga davlat ijtimoiy xizmatlari va yordam taqdim etish tartib-taomillarini avtomatlashtirish boʻyicha qoʻshimcha chora-tadbirlar t… 14"
+    ]
+   }
+  },
+  "A-19": {
+   "question": "Ishsiz bo'lib qoldim. Bandlik markazida ro'yxatdan o'tsam ishsizlik nafaqasi qancha muddat va qancha miqdorda beriladi?",
+   "ranks": {
+    "hybrid": 1
+   },
+   "top3": {
+    "hybrid": [
+     "Aholi bandligi toʻgʻrisidagi Qonun (OʻRQ-642) 51",
+     "Aholi bandligi toʻgʻrisidagi Qonun (OʻRQ-642) 53",
+     "Buyruq 3472: Shaxslarni ishsiz deb eʼtirof etish va ularga ishsizlik nafaqasini tayinlash boʻyicha elektron davlat xizmatini koʻrsatish toʻgʻrisidagi reglament… None"
+    ]
+   }
+  },
+  "A-20": {
+   "question": "Ona bolaga 2 yoshgacha qarash nafaqasini oladimi yoki uni otasi ham olishi mumkinmi?",
+   "ranks": {
+    "hybrid": 1
+   },
+   "top3": {
+    "hybrid": [
+     "Ayrim turdagi nafaqalarni tayinlash va toʻlashni tartibga solish chora-tadbirlari toʻgʻrisidagi Vazirlar Mahkamasi qarori (314) 5",
+     "Mehnat kodeksi 405",
+     "Ayrim turdagi nafaqalarni tayinlash va toʻlashni tartibga solish chora-tadbirlari toʻgʻrisidagi Vazirlar Mahkamasi qarori (314) 1"
+    ]
+   }
+  },
+  "A-21": {
+   "question": "Pensiya kartaga kelyapti, lekin onam yotib qolgan, bankka borolmaydi. Pensiyani ishonchnoma bilan boshqa odam olishi mumkinmi?",
+   "ranks": {
+    "hybrid": 3
+   },
+   "top3": {
+    "hybrid": [
+     "Prezident qarori PQ-738: Oʻzbekiston Respublikasi fuqarolarining Koreya Respublikasidagi mehnat faoliyati davrida toʻlangan pensiya ajratmalarini olishda ularg… 15",
+     "Vazirlar Mahkamasi qarori 354: Oʻzbekiston Respublikasi ichki ishlar organlari va Milliy gvardiyasining shaxsiy tarkibi hamda ularning oila aʼzolarini ijtimoiy… 231",
+     "Fuqarolik kodeksi (birinchi qism) 137"
+    ]
+   }
+  },
+  "A-22": {
+   "question": "1-guruh nogironligi bor odamga qarab turgan oila a'zosiga kompensatsiya yoki nafaqa to'lanadimi?",
+   "ranks": {
+    "hybrid": null
+   },
+   "top3": {
+    "hybrid": [
+     "Vazirlar Mahkamasi qarori 170: Chernobil halokatidan ziyon koʻrgan Oʻzbekiston Respublikasida istiqomat qiluvchi fuqarolarni ijtimoiy himoyalash haqida None",
+     "Vazirlar Mahkamasi qarori 119: Ijtimoiy himoyaga muhtoj ayrim toifadagi shaxslarga nafaqa va moddiy yordamlarni tayinlash hamda toʻlash tartibi toʻgʻrisidagi n… 1",
+     "Mehnat kodeksi 325"
+    ]
+   }
+  },
+  "A-23": {
+   "question": "nogironligim bor 2 guruh, ish beruvchi qisqartirilgan ish vaqti va qo'shimcha tatil berishi shartmi?",
+   "ranks": {
+    "hybrid": 6
+   },
+   "top3": {
+    "hybrid": [
+     "Mehnat kodeksi 431",
+     "Mehnat kodeksi 430",
+     "Mehnat kodeksi 183"
+    ]
+   }
+  },
+  "A-24": {
+   "question": "Nogironligi bor bolalar uchun bepul protez, aravacha yoki eshitish apparati qanday tartibda beriladi?",
+   "ranks": {
+    "hybrid": 2
+   },
+   "top3": {
+    "hybrid": [
+     "Hujjat 2839: Jinoyatlar sodir etganlikda gumon qilinuvchi, ayblanuvchi, sudlanuvchi, shuningdek mahkumlarni tibbiy-mehnat ekspert komissiyalarida tibbiy koʻrik… 18",
+     "Vazirlar Mahkamasi qarori 253: Muhtoj shaxslarni protez-ortopediya moslamalari va reabilitatsiya qilishning texnik vositalari bilan taʼminlash tartibi toʻgʻris… 6",
+     "Prezident farmoni PF-6195: Keksalar va nogironligi boʻlgan shaxslarni ijtimoiy qoʻllab-quvvatlash, Ijtimoiy qoʻllab-quvvatlash markazlari va “Gʻamxoʻrlik” mark… 4"
+    ]
+   }
+  },
+  "A-25": {
+   "question": "Nogironlik guruhini qayta ko'rikdan o'tkazish (TMEK) har yili shartmi yoki muddatsiz belgilanishi mumkinmi?",
+   "ranks": {
+    "hybrid": 1
+   },
+   "top3": {
+    "hybrid": [
+     "Vazirlar Mahkamasi qarori 62: Tibbiy-ijtimoiy ekspertiza xizmati tashkiliy tuzilmasini va faoliyatini tashkil etishga oid normativ-huquqiy hujjatlarni tasdiqla… 55",
+     "Vazirlar Mahkamasi qarori 253: Muhtoj shaxslarni protez-ortopediya moslamalari va reabilitatsiya qilishning texnik vositalari bilan taʼminlash tartibi toʻgʻris… 9",
+     "Vazirlar Mahkamasi qarori 62: Tibbiy-ijtimoiy ekspertiza xizmati tashkiliy tuzilmasini va faoliyatini tashkil etishga oid normativ-huquqiy hujjatlarni tasdiqla… 3"
+    ]
+   }
+  },
+  "A-26": {
+   "question": "Ko'p bolali onaman, 5 ta farzandim bor. Ko'p bolali oilalarga qanday imtiyozlar bor, masalan kommunal to'lovlar yoki uy-joy bo'yicha?",
+   "ranks": {
+    "hybrid": 1
+   },
+   "top3": {
+    "hybrid": [
+     "Oila kodeksi 4¹",
+     "Prezident farmoni PF-82: Aholiga sifatli ijtimoiy xizmat va yordam koʻrsatish hamda uning samarali nazorat tizimini yoʻlga qoʻyish boʻyicha kompleks chora-tadb… None",
+     "Vazirlar Mahkamasi qarori 656: Yetim bolalar va ota-ona qaramogʻidan mahrum boʻlgan bolalarni ijtimoiy qoʻllab-quvvatlashga doir qoʻshimcha chora-tadbirlar toʻ… 44"
+    ]
+   }
+  },
+  "A-27": {
+   "question": "Korxonalarda nogironligi bor shaxslar uchun ish o'rinlari kvotasi necha foiz qilib belgilangan?",
+   "ranks": {
+    "hybrid": 1
+   },
+   "top3": {
+    "hybrid": [
+     "Nogironligi boʻlgan shaxslarning huquqlari toʻgʻrisidagi Qonun (OʻRQ-641) 43",
+     "Prezident qarori PQ-249: Davlat xaridlari tizimini takomillashtirish va unda kichik tadbirkorlik subyektlari ishtirokini ragʻbatlantirish chora-tadbirlari toʻg… 1",
+     "Vazirlar Mahkamasi qarori 965: Ijtimoiy muhofazaga muhtoj, ish topishda qiynalayotgan va mehnat bozorida teng shartlarda raqobatlasha olmaydigan shaxslarni ish… 6"
+    ]
+   }
+  },
+  "A-28": {
+   "question": "Rossiyaga ishga ketmoqchiman. Chet elga ishlash uchun ketayotgan fuqaro qayerda ro'yxatdan o'tishi kerak va qanday ijtimoiy kafolatlar bor?",
+   "ranks": {
+    "hybrid": null
+   },
+   "top3": {
+    "hybrid": [
+     "Qonun OʻRQ-1074: Oʻzbekiston Respublikasi fuqarolarini, chet el fuqarolarini hamda fuqaroligi boʻlmagan shaxslarni yashash joyi va turgan joyi boʻyicha roʻyxat… 15",
+     "Qonun OʻRQ-1074: Oʻzbekiston Respublikasi fuqarolarini, chet el fuqarolarini hamda fuqaroligi boʻlmagan shaxslarni yashash joyi va turgan joyi boʻyicha roʻyxat… 16",
+     "Qonun OʻRQ-1074: Oʻzbekiston Respublikasi fuqarolarini, chet el fuqarolarini hamda fuqaroligi boʻlmagan shaxslarni yashash joyi va turgan joyi boʻyicha roʻyxat… 19"
+    ]
+   }
+  },
+  "A-29": {
+   "question": "Rossiyada 6 yil ishlab qaytdim, u yerdagi ish stajim Ozbekistonda pensiyaga hisoblanadimi?",
+   "ranks": {
+    "hybrid": 1
+   },
+   "top3": {
+    "hybrid": [
+     "Vazirlar Mahkamasi qarori 592: Davlat pensiyalarini tayinlash va toʻlash tartibi toʻgʻrisidagi nizomni tasdiqlash haqida 41",
+     "Hujjat 2337: Imtiyozli shartlarda pensiya olish huquqini beradigan ishlab chiqarishlar, muassasalar, ishlar, kasblar, lavozimlar va koʻrsatkichlar roʻyxatlarin… 34",
+     "Fuqarolarning davlat pensiya taʼminoti toʻgʻrisidagi Qonun (938-XII) 1"
+    ]
+   }
+  },
+  "A-30": {
+   "question": "Xorijdan qaytgan mehnat migrantlariga kasb o'rganish yoki o'z ishini ochish uchun davlat tomonidan subsidiya yoki imtiyozli kredit beriladimi?",
+   "ranks": {
+    "hybrid": null
+   },
+   "top3": {
+    "hybrid": [
+     "Xorijda mehnat faoliyatini amalga oshirish jarayonlarini tartibga solish boʻyicha qoʻshimcha chora-tadbirlar toʻgʻrisidagi Prezident qarori (PQ-367) 12",
+     "Vazirlar Mahkamasi qarori 252: Oʻzbekiston Respublikasi fuqarolarini xorijda tashkillashtirilgan tartibda ishga joylashtirish tizimini yanada takomillashtirish… None",
+     "Ishchi kasblar boʻyicha kadrlarni tayyorlash tizimini yanada takomillashtirish chora-tadbirlari toʻgʻrisidagi Prezident qarori (PQ-5140) 3"
+    ]
+   }
+  },
+  "B-01": {
+   "question": "erim bilan ajrashmoqchiman, 2 ta bolam bor 3 va 7 yoshda. aliment oyligidan necha foiz bo'ladi?",
+   "ranks": {
+    "hybrid": 1
+   },
+   "top3": {
+    "hybrid": [
+     "Oila kodeksi 99",
+     "Hujjat 11: Sudlar tomonidan voyaga yetmagan va voyaga yetgan mehnatga layoqatsiz bolalar taʼminoti uchun aliment undirishga oid ishlar boʻyicha qonunchilikni q… 8",
+     "Oila kodeksi 102"
+    ]
+   }
+  },
+  "B-02": {
+   "question": "Ajrashgandan keyin sobiq erim aliment to'lamayapti, 8 oydan beri qarzi yig'ilib qoldi. Qarzi uchun penya hisoblanadimi va qancha?",
+   "ranks": {
+    "hybrid": 2
+   },
+   "top3": {
+    "hybrid": [
+     "Chiqindilar bilan bogʻliq ishlarni amalga oshirish sohasidagi normativ-huquqiy hujjatlarni tasdiqlash toʻgʻrisidagi Vazirlar Mahkamasi qarori (95) 30",
+     "Oila kodeksi 140",
+     "Elektr energiyasi va tabiiy gazdan foydalanish qoidalarini tasdiqlash toʻgʻrisidagi Vazirlar Mahkamasi qarori (319) 130"
+    ]
+   }
+  },
+  "B-03": {
+   "question": "ZAGSga zayavleniya berdik, nikoh qachon tuziladi? necha kun kutish kerak va tezlashtirsa bo'ladimi",
+   "ranks": {
+    "hybrid": 1
+   },
+   "top3": {
+    "hybrid": [
+     "Oila kodeksi 13",
+     "Fuqarolik holati dalolatnomalarini yozish tartiblarini yanada takomillashtirish chora-tadbirlari toʻgʻrisidagi Vazirlar Mahkamasi qarori (540) 11",
+     "Buyruq 2547: Fuqarolik holati dalolatnomalarini yozish organlarida ish yuritish tartibi toʻgʻrisidagi yoʻriqnomani tasdiqlash haqida 70"
+    ]
+   }
+  },
+  "B-04": {
+   "question": "Qizim 17 yoshda, turmushga chiqmoqchi. Nikoh yoshini kamaytirish mumkinmi va buni kim hal qiladi?",
+   "ranks": {
+    "hybrid": 1
+   },
+   "top3": {
+    "hybrid": [
+     "Oila kodeksi 15",
+     "Vazirlar Mahkamasi qarori 550: Nikoh, oila va fuqarolik holati dalolatnomalarini qayd etish sohasidagi normativ-huquqiy hujjatlarni tizimlashtirish toʻgʻrisida 69",
+     "Prezident farmoni PF-33: Ayollar va bolalar huquqlarining himoyasini kuchaytirish hamda ularga nisbatan tazyiq va zoʻravonlik holatlarining oldini olish boʻyic… 8"
+    ]
+   }
+  },
+  "B-05": {
+   "question": "Homilador xotin bilan er ajrashishi mumkinmi? Xotinim roziligi yo'q, men sudga ariza bermoqchiman, bola tug'ilib 1 yosh bo'lmagan.",
+   "ranks": {
+    "hybrid": 3
+   },
+   "top3": {
+    "hybrid": [
+     "Sudlar tomonidan nikohdan ajratishga oid ishlar boʻyicha qonunchilikni qoʻllash amaliyoti toʻgʻrisidagi Hujjat (06) 6",
+     "Fuqarolik protsessual kodeksi 122",
+     "Oila kodeksi 39"
+    ]
+   }
+  },
+  "B-06": {
+   "question": "Nikoh shartnomasini to'ydan keyin ham tuzsa bo'ladimi yoki faqat nikohdan oldinmi? Notarial tasdiqlash shartmi?",
+   "ranks": {
+    "hybrid": 1
+   },
+   "top3": {
+    "hybrid": [
+     "Oila kodeksi 30",
+     "Buyruq 3743: Notariuslar tomonidan nikoh shartnomalarini tasdiqlash tartibi toʻgʻrisidagi nizomni tasdiqlash haqida 1",
+     "Buyruq 3743: Notariuslar tomonidan nikoh shartnomalarini tasdiqlash tartibi toʻgʻrisidagi nizomni tasdiqlash haqida None"
+    ]
+   }
+  },
+  "B-07": {
+   "question": "Biz er-xotin bolalar uyidan bola asrab olmoqchimiz. Farzandlikka oluvchiga qanday talablar qo'yiladi, yoshi farqi va uy-joy bo'yicha cheklov bormi?",
+   "ranks": {
+    "hybrid": 8
+   },
+   "top3": {
+    "hybrid": [
+     "Vazirlar Mahkamasi qarori 893: Yetim bolalar va ota-ona qaramogʻidan mahrum boʻlgan bolalarni joylashtirish shakllari boʻyicha ayrim normativ-huquqiy hujjatlar… 30",
+     "Vazirlar Mahkamasi qarori 893: Yetim bolalar va ota-ona qaramogʻidan mahrum boʻlgan bolalarni joylashtirish shakllari boʻyicha ayrim normativ-huquqiy hujjatlar… 18",
+     "Bolalarni ijtimoiy himoya qilish tizimini yanada takomillashtirish chora-tadbirlari toʻgʻrisidagi Prezident farmoni (PF-185) 26"
+    ]
+   }
+  },
+  "B-08": {
+   "question": "otasi vafot etgan nevaramga vasiy bo'lmoqchiman, men buvisiman 64 yoshdaman. vasiylikka qayerga murojaat qilinadi va qanday hujjatlar kerak",
+   "ranks": {
+    "hybrid": 1
+   },
+   "top3": {
+    "hybrid": [
+     "Vazirlar Mahkamasi qarori 269: “Vasiylik va homiylik toʻgʻrisida”gi Oʻzbekiston Respublikasi Qonunini amalga oshirishga doir normativ-huquqiy hujjatlarni tasdi… 80",
+     "Vazirlar Mahkamasi qarori 269: “Vasiylik va homiylik toʻgʻrisida”gi Oʻzbekiston Respublikasi Qonunini amalga oshirishga doir normativ-huquqiy hujjatlarni tasdi… 82",
+     "Vazirlar Mahkamasi qarori 893: Yetim bolalar va ota-ona qaramogʻidan mahrum boʻlgan bolalarni joylashtirish shakllari boʻyicha ayrim normativ-huquqiy hujjatlar… 25"
+    ]
+   }
+  },
+  "B-09": {
+   "question": "Ajrashgandan keyin bola menda qoldi. Otasi bolani olib chet elga ketmoqchi, mening roziligimsiz bolani chet elga olib chiqib keta oladimi?",
+   "ranks": {
+    "hybrid": null
+   },
+   "top3": {
+    "hybrid": [
+     "Bola huquqlarining kafolatlari toʻgʻrisidagi Qonun (OʻRQ-139) 14",
+     "Vazirlar Mahkamasi qarori 200: Oʻzbekiston Respublikasi fuqarosining biometrik pasportini va 16 yoshga toʻlmagan shaxslar uchun fuqaroligi boʻlmagan shaxslarni… 2",
+     "Oʻzbekiston Respublikasining fuqaroligi toʻgʻrisidagi Qonun (OʻRQ-610) 35"
+    ]
+   }
+  },
+  "B-10": {
+   "question": "Nikohdan keyin otamning pulga olgan kvartirasi meni nomimga hadya qilingan. Ajrashsak eri buni bo'lishga haqlimi?",
+   "ranks": {
+    "hybrid": 1
+   },
+   "top3": {
+    "hybrid": [
+     "Oila kodeksi 25",
+     "Uy-joy kodeksi 32",
+     "Sudlar tomonidan er va xotinning umumiy mol-mulkini boʻlish haqidagi ishlarni koʻrishda qonunchilikni qoʻllash amaliyoti toʻgʻrisidagi Hujjat (3) 5"
+    ]
+   }
+  },
+  "B-11": {
+   "question": "Otam vafot etganiga 7 oy bo'ldi, men Rossiyada ishlayman. Merosni qabul qilish muddati o'tib ketgan bo'lsa nima qilish kerak, tiklasa bo'ladimi?",
+   "ranks": {
+    "hybrid": 9
+   },
+   "top3": {
+    "hybrid": [
+     "Fuqarolik kodeksi (ikkinchi qism) 1157",
+     "Sudlar tomonidan meros huquqiga oid qonunchilikning qoʻllanilishi toʻgʻrisidagi Hujjat (05) 15",
+     "Fuqarolik kodeksi (ikkinchi qism) 1140¹"
+    ]
+   }
+  },
+  "B-12": {
+   "question": "dadam vasiyatnoma yozib uyni faqat akamga qoldirgan. onam nafaqada 68 yoshda, unga hech narsa tegmaydimi? majburiy ulush bormi",
+   "ranks": {
+    "hybrid": 1
+   },
+   "top3": {
+    "hybrid": [
+     "Fuqarolik kodeksi (ikkinchi qism) 1142",
+     "Vazirlar Mahkamasi qarori 726: Notariuslar tomonidan ayrim notarial harakatlarni amalga oshirish tartibi toʻgʻrisidagi maʼmuriy reglamentlarni tasdiqlash haqida 26",
+     "Hujjat 2191: Oʻzbekiston Respublikasi konsullik muassasalarining konsullari tomonidan notarial harakatlarni amalga oshirish tartibi toʻgʻrisidagi yoʻriqnomani… 125"
+    ]
+   }
+  },
+  "B-13": {
+   "question": "Vasiyat yo'q bo'lsa meros kimlarga va qanday navbatda o'tadi? Bobomning uyi bor, uning 3 o'g'li va 1 qizi bor, bittasi bobomdan oldin vafot etgan.",
+   "ranks": {
+    "hybrid": 2
+   },
+   "top3": {
+    "hybrid": [
+     "Sudlar tomonidan meros huquqiga oid qonunchilikning qoʻllanilishi toʻgʻrisidagi Hujjat (05) 14",
+     "Fuqarolik kodeksi (ikkinchi qism) 1135",
+     "Fuqarolik kodeksi (ikkinchi qism) 1134"
+    ]
+   }
+  },
+  "B-14": {
+   "question": "Vasiyatnomani notariussiz, oddiy qog'ozga yozib qo'ysa kuchga egami? Kasalxonada yotgan odam qanday vasiyat qila oladi?",
+   "ranks": {
+    "hybrid": 2
+   },
+   "top3": {
+    "hybrid": [
+     "Fuqarolik kodeksi (ikkinchi qism) 1125",
+     "Fuqarolik kodeksi (ikkinchi qism) 1126",
+     "Buyruq 2231: Notarial tasdiqlangan hujjatlarga tenglashtiriladigan vasiyatnomalar, ishonchnomalar va arizalarni tasdiqlash tartibi toʻgʻrisidagi yoʻriqnomani t… 19"
+    ]
+   }
+  },
+  "B-15": {
+   "question": "merosdan voz kechmoqchiman singlim foydasiga. notariusga borib voz kechsam keyin fikrimni o'zgartira olamanmi",
+   "ranks": {
+    "hybrid": 1
+   },
+   "top3": {
+    "hybrid": [
+     "Fuqarolik kodeksi (ikkinchi qism) 1147",
+     "Sudlar tomonidan meros huquqiga oid qonunchilikning qoʻllanilishi toʻgʻrisidagi Hujjat (05) 19",
+     "Vazirlar Mahkamasi qarori 726: Notariuslar tomonidan ayrim notarial harakatlarni amalga oshirish tartibi toʻgʻrisidagi maʼmuriy reglamentlarni tasdiqlash haqida 23"
+    ]
+   }
+  },
+  "B-16": {
+   "question": "Kvartira oldi-sotdi dogovori notariusda tasdiqlanadimi yoki kadastrda ro'yxatdan o'tkazish yetarlimi? Mulk huquqi qaysi paytdan boshlanadi?",
+   "ranks": {
+    "hybrid": 2
+   },
+   "top3": {
+    "hybrid": [
+     "Uy-joy kodeksi 14",
+     "Fuqarolik kodeksi (birinchi qism) 185",
+     "Buyruq 3113: Notariuslar tomonidan notarial harakatlarni amalga oshirish tartibi toʻgʻrisida yoʻriqnomani tasdiqlash haqida 32"
+    ]
+   }
+  },
+  "B-17": {
+   "question": "Kvartiramni ijaraga beraman. Ijarachi bilan yozma shartnoma tuzmasam jarima bormi va ijaradan olgan daromadimdan qancha soliq to'lashim kerak?",
+   "ranks": {
+    "hybrid": 6
+   },
+   "top3": {
+    "hybrid": [
+     "Oʻzbekiston Respublikasining 2015-yilgi asosiy makroiqtisodiy koʻrsatkichlari prognozi va Davlat budjeti parametrlari toʻgʻrisidagi Prezident qarori (PQ-2270) 4",
+     "Oʻzbekiston Respublikasining 2016-yilgi asosiy makroiqtisodiy koʻrsatkichlari prognozi va Davlat budjeti parametrlari toʻgʻrisidagi Prezident qarori (PQ-2455) 5",
+     "Oʻzbekiston Respublikasining 2017-yilgi asosiy makroiqtisodiy koʻrsatkichlari prognozi va Davlat budjeti parametrlari toʻgʻrisidagi Prezident qarori (PQ-2699) 5"
+    ]
+   }
+  },
+  "B-18": {
+   "question": "ijarada turibman egasi 1 kunda chiqib keting deyapti, dogovor 1 yilga tuzilgan hali 5 oy bor. muddatidan oldin chiqarib yuborishga haqqi bormi",
+   "ranks": {
+    "hybrid": null
+   },
+   "top3": {
+    "hybrid": [
+     "Vazirlar Mahkamasi qarori 170: Davlat uy-joy fondidagi turar joylarni taqsimlash va fuqarolarga ijara shartnomasi shartlari asosida berishni tartibga solishga… 5",
+     "Vazirlar Mahkamasi qarori 170: Davlat uy-joy fondidagi turar joylarni taqsimlash va fuqarolarga ijara shartnomasi shartlari asosida berishni tartibga solishga… 20",
+     "Fuqarolik kodeksi (ikkinchi qism) 612"
+    ]
+   }
+  },
+  "B-19": {
+   "question": "Toshkentda kvartira sotib oldim, viloyatdanman. Toshkent shahriga doimiy propiska qilish uchun qanday shartlar bor, kvartira kvadrati bo'yicha talab bormi?",
+   "ranks": {
+    "hybrid": null
+   },
+   "top3": {
+    "hybrid": [
+     "Vazirlar Mahkamasi qarori 593: Oʻzbekiston Respublikasida chet el fuqarolari va fuqaroligi boʻlmagan shaxslarni roʻyxatga olish tartibini soddalashtirish chora… 8",
+     "Vazirlar Mahkamasi qarori 593: Oʻzbekiston Respublikasida chet el fuqarolari va fuqaroligi boʻlmagan shaxslarni roʻyxatga olish tartibini soddalashtirish chora… 29",
+     "Vazirlar Mahkamasi qarori 593: Oʻzbekiston Respublikasida chet el fuqarolari va fuqaroligi boʻlmagan shaxslarni roʻyxatga olish tartibini soddalashtirish chora… 68"
+    ]
+   }
+  },
+  "B-20": {
+   "question": "Ko'p qavatli uyda qo'shnim balkonini kengaytirib, yuk ko'taruvchi devorni buzdi. Qayta qurish uchun ruxsat kerakmi va buni qayerga shikoyat qilsam bo'ladi?",
+   "ranks": {
+    "hybrid": null
+   },
+   "top3": {
+    "hybrid": [
+     "Qurilish sohasiga oid yagona maʼmuriy qurilish reglamentlarini tasdiqlash toʻgʻrisidagi Vazirlar Mahkamasi qarori (200) None",
+     "Qurilish sohasiga oid yagona maʼmuriy qurilish reglamentlarini tasdiqlash toʻgʻrisidagi Vazirlar Mahkamasi qarori (200) 6",
+     "Koʻp kvartirali uylarni saqlash va ulardan foydalanish qoidalarini tasdiqlash toʻgʻrisidagi Buyruq (3824) 36"
+    ]
+   }
+  },
+  "B-21": {
+   "question": "Kommunal to'lovlardan qarzim bor deb gaz va svetni o'chirib qo'yishdi. Ogohlantirmasdan o'chirishga haqlarimi? Qarz necha oy bo'lsa o'chiriladi?",
+   "ranks": {
+    "hybrid": null
+   },
+   "top3": {
+    "hybrid": [
+     "Vazirlar Mahkamasi qarori 484: Oʻzbekiston Respublikasi Bosh prokuraturasi huzuridagi Majburiy ijro byurosining elektr energiyasi va tabiiy gaz yetkazib beruvc… 13",
+     "Oʻzbekiston Respublikasi Uy-joy kommunal xizmat koʻrsatish vazirligi faoliyatini tashkil etish toʻgʻrisidagi Prezident qarori (PQ-2900) 8",
+     "Vazirlar Mahkamasi qarori 484: Oʻzbekiston Respublikasi Bosh prokuraturasi huzuridagi Majburiy ijro byurosining elektr energiyasi va tabiiy gaz yetkazib beruvc… 12"
+    ]
+   }
+  },
+  "B-22": {
+   "question": "Ko'p kvartirali uyda podyezd va tom ta'miri uchun pulni kim to'laydi? Uy-joy mulkdorlari shirkatiga a'zo bo'lishga majburmanmi?",
+   "ranks": {
+    "hybrid": 6
+   },
+   "top3": {
+    "hybrid": [
+     "Uy-joy kodeksi 139",
+     "Vazirlar Mahkamasi qarori 100: Xususiy uy-joy mulkdorlari shirkatining namunaviy ustavini hamda xususiy uy-joy mulkdorlari shirkati bilan koʻp kvartirali uydag… 1",
+     "Uy-joy kodeksi 128"
+    ]
+   }
+  },
+  "B-23": {
+   "question": "qishloqda hovlimiz bor tomorqa yer uchastkasini merosga qoldirsa bo'ladimi yoki sotsa bo'ladimi? yer davlatniki deyishadi",
+   "ranks": {
+    "hybrid": 8
+   },
+   "top3": {
+    "hybrid": [
+     "Yer kodeksi 24³",
+     "Tomorqa xoʻjaligi toʻgʻrisidagi Qonun (OʻRQ-681) 4",
+     "Tomorqa xoʻjaligi toʻgʻrisidagi Qonun (OʻRQ-681) 5"
+    ]
+   }
+  },
+  "B-24": {
+   "question": "Hovlimda ikki qavatli uy qurmoqchiman. Yakka tartibdagi uy-joy qurish uchun ruxsatnoma olish shartmi, qancha muddatda beriladi?",
+   "ranks": {
+    "hybrid": null
+   },
+   "top3": {
+    "hybrid": [
+     "Qurilish sohasiga oid yagona maʼmuriy qurilish reglamentlarini tasdiqlash toʻgʻrisidagi Vazirlar Mahkamasi qarori (200) 34",
+     "Urbanizatsiya va uy-joy qurilishi sohasida islohotlarni yanada jadallashtirish chora-tadbirlari toʻgʻrisidagi Prezident qarori (PQ-252) 1",
+     "Vazirlar Mahkamasi qarori 148: Yakka tartibda hamda qishloq joylarda namunaviy loyihalar boʻyicha arzon uy-joylar qurilishida qatnashuvchi tijorat banklari — “… 31"
+    ]
+   }
+  },
+  "B-25": {
+   "question": "Chet elda yashayman, Toshkentdagi kvartiramni sotish uchun ukamga ishonchnoma bermoqchiman. Konsullikda rasmiylashtirilgan doverennost O'zbekistonda kuchga egami?",
+   "ranks": {
+    "hybrid": 1
+   },
+   "top3": {
+    "hybrid": [
+     "Oʻzbekiston Respublikasining Konsullik ustavini tasdiqlash toʻgʻrisidagi Qonun (OʻRQ-517) 27",
+     "Vazirlar Mahkamasi qarori 610: Oʻzbekiston Respublikasida hamda xorijda hujjatlar va dalolatnomalarni konsullik legallashtirish tartibi toʻgʻrisidagi nizomni t… 7",
+     "Hujjat 2191: Oʻzbekiston Respublikasi konsullik muassasalarining konsullari tomonidan notarial harakatlarni amalga oshirish tartibi toʻgʻrisidagi yoʻriqnomani… 1"
+    ]
+   }
+  },
+  "B-26": {
+   "question": "Notarius kvartira oldi-sotdisini tasdiqlash uchun qancha davlat boji oladi? Qarindoshlar o'rtasida hadya qilinsa boj kamroqmi?",
+   "ranks": {
+    "hybrid": 9
+   },
+   "top3": {
+    "hybrid": [
+     "Vazirlar Mahkamasi qarori 180: “Davlat uy-joy fondini xususiylashtirish toʻgʻrisida” Oʻzbekiston Respublikasi Qonunining qabul qilinishi munosabati bilan norma… 8",
+     "Vazirlar Mahkamasi qarori 726: Notariuslar tomonidan ayrim notarial harakatlarni amalga oshirish tartibi toʻgʻrisidagi maʼmuriy reglamentlarni tasdiqlash haqida 31",
+     "Vazirlar Mahkamasi qarori 726: Notariuslar tomonidan ayrim notarial harakatlarni amalga oshirish tartibi toʻgʻrisidagi maʼmuriy reglamentlarni tasdiqlash haqida 33"
+    ]
+   }
+  },
+  "B-27": {
+   "question": "notarius ishonchnomani tasdiqlashdan bosh tortdi sababini aytmadi. notarius rad etsa yozma sabab berishi kerakmi va ustidan qayerga shikoyat qilinadi",
+   "ranks": {
+    "hybrid": 5
+   },
+   "top3": {
+    "hybrid": [
+     "Buyruq 3743: Notariuslar tomonidan nikoh shartnomalarini tasdiqlash tartibi toʻgʻrisidagi nizomni tasdiqlash haqida 46",
+     "Buyruq 3757: Notariuslar tomonidan ijro xatlarini yozish tartibi toʻgʻrisidagi nizomni tasdiqlash haqida 17",
+     "Buyruq 3743: Notariuslar tomonidan nikoh shartnomalarini tasdiqlash tartibi toʻgʻrisidagi nizomni tasdiqlash haqida 18"
+    ]
+   }
+  },
+  "B-28": {
+   "question": "Do'kondan telefon oldim, 10 kunda ekrani o'chib qoldi. Pulini qaytarishni talab qilsam bo'ladimi yoki faqat ta'mirlab berishadimi? Kafolat muddati ichida.",
+   "ranks": {
+    "hybrid": null
+   },
+   "top3": {
+    "hybrid": [
+     "Isteʼmolchilarning huquqlarini himoya qilish toʻgʻrisidagi Qonun (221-I) 15",
+     "Vazirlar Mahkamasi qarori 75: Oʻzbekiston Respublikasida chakana savdo qoidalarini hamda Oʻzbekiston Respublikasida umumiy ovqatlanish mahsulotlarini (xizmatla… 29",
+     "Tegishli darajada sifatli boʻlmagan mahsulotlar (tovarlar)ni yetkazib berish bilan bogʻliq boʻlgan nizolarni hal qilish tartibi toʻgʻrisidagi Hujjat (174) 19"
+    ]
+   }
+  },
+  "B-29": {
+   "question": "Kiyim sotib oldim razmeri to'g'ri kelmadi, chek bor, kiyilmagan. Sifatli tovarni necha kun ichida almashtirish yoki qaytarish mumkin?",
+   "ranks": {
+    "hybrid": 1
+   },
+   "top3": {
+    "hybrid": [
+     "Fuqarolik kodeksi (ikkinchi qism) 433",
+     "Isteʼmolchilarning huquqlarini himoya qilish toʻgʻrisidagi Qonun (221-I) 18",
+     "Elektron tijorat toʻgʻrisidagi Qonun (OʻRQ-792) 26"
+    ]
+   }
+  },
+  "B-30": {
+   "question": "Mebel buyurtma qildim, avans to'ladim, kelishilgan muddatdan 2 oy o'tdi hali yetkazib berishmadi. Kechiktirgani uchun neustoyka talab qila olamanmi, qancha?",
+   "ranks": {
+    "hybrid": 2
+   },
+   "top3": {
+    "hybrid": [
+     "Isteʼmolchilarning huquqlarini himoya qilish toʻgʻrisidagi Qonun (221-I) 15",
+     "Isteʼmolchilarning huquqlarini himoya qilish toʻgʻrisidagi Qonun (221-I) 19",
+     "Vazirlar Mahkamasi qarori 206: Ijtimoiy va ishlab chiqarish infratuzilmasini rivojlantirish dasturlarini shakllantirish va davlat investitsiyalarini boshqarish… 23"
+    ]
+   }
+  },
+  "C-01": {
+   "question": "Uyimni ijaraga beryapman oyiga 4 million so'mga. Shu daromaddan qancha foiz nalog to'lashim kerak va qachongacha?",
+   "ranks": {
+    "hybrid": 1
+   },
+   "top3": {
+    "hybrid": [
+     "Soliq kodeksi 398",
+     "Oʻzbekiston Respublikasining 2017-yilgi asosiy makroiqtisodiy koʻrsatkichlari prognozi va Davlat budjeti parametrlari toʻgʻrisidagi Prezident qarori (PQ-2699) 5",
+     "Soliq kodeksi 397"
+    ]
+   }
+  },
+  "C-02": {
+   "question": "Pensionerlar mol-mulk solig'idan ozod qilinadimi? Onamning nomida uy bor, u pensiyada.",
+   "ranks": {
+    "hybrid": 1
+   },
+   "top3": {
+    "hybrid": [
+     "Soliq kodeksi 421",
+     "Soliq kodeksi 436",
+     "Vazirlar Mahkamasi qarori 543: Ichki ishlar organlari xodimlari va pensionerlari hamda ularning oila aʼzolarini turar joy bilan taʼminlash boʻyicha qoʻshimcha… 1"
+    ]
+   }
+  },
+  "C-03": {
+   "question": "aylanmadan olinadigan soliq stavkasi necha foiz hozir? kichik magazinim bor yillik oborot 500 mln atrofida",
+   "ranks": {
+    "hybrid": null
+   },
+   "top3": {
+    "hybrid": [
+     "Yakka tartibdagi tadbirkorlar hamda oʻzini oʻzi band qilgan shaxslar uchun qulay shart-sharoit yaratish chora-tadbirlari toʻgʻrisidagi Prezident qarori (PQ-247) 5",
+     "Soliq kodeksi 480²",
+     "Respublikada ov qilish va ovchilik xoʻjaliklari faoliyatini yanada takomillashtirish chora-tadbirlari toʻgʻrisidagi Prezident farmoni (PF-105) 7"
+    ]
+   }
+  },
+  "C-04": {
+   "question": "Korxonamizning yillik aylanmasi 1 milliard so'mdan oshib ketdi. QQS to'lovchisi sifatida qachondan ro'yxatdan o'tishimiz shart?",
+   "ranks": {
+    "hybrid": 4
+   },
+   "top3": {
+    "hybrid": [
+     "Vazirlar Mahkamasi qarori 664: Soliq toʻlovchilar ixtiyoriy tugatilganda soliqlar boʻyicha xulosa berish huquqiga ega boʻlgan soliq maslahatchilari tashkilotla… 10",
+     "Soliq va bojxona imtiyozlari berilishini yanada tartibga solish chora-tadbirlari toʻgʻrisidagi Prezident farmoni (PF-5755) 3",
+     "Vazirlar Mahkamasi qarori 595: Soliq toʻlovchilarni hisobga olishni yanada takomillashtirish va qoʻshilgan qiymat soligʻining oʻrnini qoplash tartibini soddala… 29"
+    ]
+   }
+  },
+  "C-05": {
+   "question": "Jismoniy shaxs yillik daromad deklaratsiyasini qaysi muddatgacha topshirishi kerak? Chet eldan pul kelgan edi",
+   "ranks": {
+    "hybrid": 1
+   },
+   "top3": {
+    "hybrid": [
+     "Soliq kodeksi 397",
+     "Soliq kodeksi 393",
+     "Jismoniy shaxslarning jami daromadini deklaratsiyalash tizimini bosqichma-bosqich joriy etish chora-tadbirlari toʻgʻrisidagi Prezident farmoni (PF-3127) 2"
+    ]
+   }
+  },
+  "C-06": {
+   "question": "Bolamning kontrakt pulini to'ladim universitetga. Shu summani daromad solig'idan chegirib qaytarib olsa bo'ladimi?",
+   "ranks": {
+    "hybrid": null
+   },
+   "top3": {
+    "hybrid": [
+     "Hujjat 2107: Oʻzbekiston Respublikasining professional va oliy taʼlim tashkilotlarida taʼlim olish uchun yoʻnaltiriladigan mablagʻlarga jismoniy shaxslardan ol… 7",
+     "Vazirlar Mahkamasi qarori 501: Pedagoglarning davlat oliy taʼlim tashkilotlariga oʻqishga kirgan va tahsil olayotgan farzandlarining toʻlov-kontrakt summasiga… 3",
+     "Davlat oliy taʼlim muassasalariga moliyaviy mustaqillik berish chora-tadbirlari toʻgʻrisidagi Prezident qarori (PQ-61) 14"
+    ]
+   }
+  },
+  "C-07": {
+   "question": "Tomorqa yerim uchun yer solig'ini kim hisoblaydi, o'zim borib to'lashim kerakmi yoki xabarnoma keladimi? Muddati qachon?",
+   "ranks": {
+    "hybrid": 1
+   },
+   "top3": {
+    "hybrid": [
+     "Soliq kodeksi 439",
+     "Soliq kodeksi 423",
+     "Mahalla boshqaruvini samarali tashkil etishga oid qoʻshimcha chora-tadbirlar toʻgʻrisidagi Prezident farmoni (PF-116) 8"
+    ]
+   }
+  },
+  "C-08": {
+   "question": "nalogni vaqtida tolamasam penya qancha hisoblanadi kuniga?",
+   "ranks": {
+    "hybrid": 5
+   },
+   "top3": {
+    "hybrid": [
+     "Hujjat 3663: Banklar tomonidan Omonatlarni kafolatlash jamgʻarmasiga badallar toʻlash tartibi toʻgʻrisidagi nizomni tasdiqlash haqida 21",
+     "Vazirlar Mahkamasi qarori 132: Tabiiy gaz isteʼmolchilari va gaz bilan taʼminlovchi tashkilotlar oʻrtasidagi oʻzaro hisob-kitoblarni takomillashtirish toʻgʻris… 8",
+     "Vazirlar Mahkamasi qarori 661: Ijtimoiy soliqni taqsimlash, pensiya va boshqa toʻlovlarni toʻlash uchun ajratilgan xarajatlarni qoplash tartibi toʻgʻrisidagi n… 42"
+    ]
+   }
+  },
+  "C-09": {
+   "question": "YaTT bo'lib ro'yxatdan o'tish uchun qanday hujjatlar kerak va davlat boji qancha? Sartaroshxona ochmoqchiman.",
+   "ranks": {
+    "hybrid": 1
+   },
+   "top3": {
+    "hybrid": [
+     "Vazirlar Mahkamasi qarori 66: Oʻzbekiston Respublikasi Prezidentining “Tadbirkorlik subyektlarini davlat roʻyxatidan oʻtkazish va hisobga qoʻyish tizimini tako… 33",
+     "Vazirlar Mahkamasi qarori 200: Oʻzbekiston Respublikasi fuqarosining biometrik pasportini va 16 yoshga toʻlmagan shaxslar uchun fuqaroligi boʻlmagan shaxslarni… 2",
+     "Nodavlat notijorat tashkilotlari toʻgʻrisidagi Qonun (763-I) 22"
+    ]
+   }
+  },
+  "C-10": {
+   "question": "O'zini o'zi band qilgan shaxs sifatida qanaqa ishlar bilan shug'ullanish mumkin? Uyda tort pishirib sotaman, ro'yxatdan o'tsam soliq to'laymanmi?",
+   "ranks": {
+    "hybrid": null
+   },
+   "top3": {
+    "hybrid": [
+     "Vazirlar Mahkamasi qarori 806: Oʻzini oʻzi band qilgan shaxs sifatida faoliyatni amalga oshirish tartibi toʻgʻrisidagi nizomni tasdiqlash haqida 7",
+     "Vazirlar Mahkamasi qarori 595: Soliq toʻlovchilarni hisobga olishni yanada takomillashtirish va qoʻshilgan qiymat soligʻining oʻrnini qoplash tartibini soddala… 8",
+     "Vazirlar Mahkamasi qarori 806: Oʻzini oʻzi band qilgan shaxs sifatida faoliyatni amalga oshirish tartibi toʻgʻrisidagi nizomni tasdiqlash haqida 6"
+    ]
+   }
+  },
+  "C-11": {
+   "question": "kassa apparatsiz savdo qilsam shtraf qancha? kichkina oziq ovqat dokoni",
+   "ranks": {
+    "hybrid": null
+   },
+   "top3": {
+    "hybrid": [
+     "Onlayn nazorat-kassa mashinalari va virtual kassa tizimi qoʻllanilishini taʼminlash chora-tadbirlari toʻgʻrisidagi Vazirlar Mahkamasi qarori (943) 6",
+     "Vazirlar Mahkamasi qarori 485: Koʻchma savdo faoliyatiga zamonaviy axborot texnologiyalarini yanada keng joriy etish hamda savdo avtomati orqali chakana savdo… 3",
+     "Alkogol va tamaki mahsulotlarining tarqatilishini hamda isteʼmol qilinishini cheklash toʻgʻrisidagi Qonun (OʻRQ-844) 32"
+    ]
+   }
+  },
+  "C-12": {
+   "question": "Spirtli ichimlik sotish uchun litsenziya olish kerakmi, chakana savdo do'koniga? Maktabga yaqin joyda sotish mumkinmi?",
+   "ranks": {
+    "hybrid": 2
+   },
+   "top3": {
+    "hybrid": [
+     "Vazirlar Mahkamasi qarori 75: Oʻzbekiston Respublikasida chakana savdo qoidalarini hamda Oʻzbekiston Respublikasida umumiy ovqatlanish mahsulotlarini (xizmatla… 187¹",
+     "Alkogol va tamaki mahsulotlarining tarqatilishini hamda isteʼmol qilinishini cheklash toʻgʻrisidagi Qonun (OʻRQ-844) 21",
+     "Vazirlar Mahkamasi qarori 45: Isteʼmol va texnik etil spirti, alkogol mahsulotlarini ishlab chiqarish, idishlarga quyish, saqlash va ulgurji sotishni hisobga o… 12"
+    ]
+   }
+  },
+  "C-13": {
+   "question": "Soliq inspektorlari tadbirkorni oldindan xabar bermasdan tekshirishga kelishi mumkinmi? Tekshiruv necha kun davom etadi?",
+   "ranks": {
+    "hybrid": null
+   },
+   "top3": {
+    "hybrid": [
+     "Vazirlar Mahkamasi qarori 1: Soliq xavfini boshqarish, soliq xavfi mavjud soliq toʻlovchilarni (soliq agentlarini) aniqlash va soliq tekshiruvlarini tashkil et… 9",
+     "Vazirlar Mahkamasi qarori 704: Tadbirkorlik subyektlarini ixtiyoriy tugatish va ularning faoliyatini toʻxtatish tartibi hamda Moliya-xoʻjalik faoliyatini amalg… 21",
+     "Xizmatlar sohasi barqaror rivojlanishi uchun qulay shart-sharoitlar yaratishga oid qoʻshimcha chora-tadbirlar toʻgʻrisidagi Prezident qarori (PQ-78) 15"
+    ]
+   }
+  },
+  "C-14": {
+   "question": "IT Park rezidenti bo'lsa qanday soliq imtiyozlari beriladi? Startap ochyapmiz, chet elga dasturlash xizmati sotamiz.",
+   "ranks": {
+    "hybrid": 10
+   },
+   "top3": {
+    "hybrid": [
+     "Dasturiy mahsulotlar va axborot texnologiyalari texnologik parki faoliyatini tashkil etish chora-tadbirlari toʻgʻrisidagi Vazirlar Mahkamasi qarori (589) None",
+     "Dasturiy mahsulotlar va axborot texnologiyalari texnologik parki faoliyatini tashkil etish chora-tadbirlari toʻgʻrisidagi Vazirlar Mahkamasi qarori (589) 27",
+     "Axborot texnologiyalari va kommunikatsiyalarini yanada rivojlantirishga investitsiyalarni jalb qilish chora-tadbirlari toʻgʻrisidagi Prezident qarori (PQ-4986) 6"
+    ]
+   }
+  },
+  "C-15": {
+   "question": "Kafe ochmoqchiman, sanitariya-epidemiologiya xulosasi va boshqa ruxsatnomalar kerakmi yoki faqat xabardor qilish yetarlimi?",
+   "ranks": {
+    "hybrid": null
+   },
+   "top3": {
+    "hybrid": [
+     "Vazirlar Mahkamasi qarori 720: Oziq-ovqat va qishloq xoʻjaligi mahsulotlariga sanitariya-epidemiologik xulosa berish boʻyicha davlat xizmatini koʻrsatishning m… 7",
+     "Aholining sanitariya-epidemiologik osoyishtaligi toʻgʻrisidagi Qonun (OʻRQ-393) 16",
+     "Vazirlar Mahkamasi qarori 720: Oziq-ovqat va qishloq xoʻjaligi mahsulotlariga sanitariya-epidemiologik xulosa berish boʻyicha davlat xizmatini koʻrsatishning m… 2"
+    ]
+   }
+  },
+  "C-16": {
+   "question": "xaridor sotib olgan kiyimini 3 kundan keyin qaytarib olib keldi chek bor, qaytarib olishim shartmi? necha kun ichida qaytarish mumkin",
+   "ranks": {
+    "hybrid": 2
+   },
+   "top3": {
+    "hybrid": [
+     "Vazirlar Mahkamasi qarori 255: Savdo va xizmat koʻrsatish sohasida jamoatchilik nazorati samaradorligini oshirishga doir qoʻshimcha chora-tadbirlar toʻgʻrisida 11",
+     "Vazirlar Mahkamasi qarori 75: Oʻzbekiston Respublikasida chakana savdo qoidalarini hamda Oʻzbekiston Respublikasida umumiy ovqatlanish mahsulotlarini (xizmatla… 27",
+     "Vazirlar Mahkamasi qarori 255: Savdo va xizmat koʻrsatish sohasida jamoatchilik nazorati samaradorligini oshirishga doir qoʻshimcha chora-tadbirlar toʻgʻrisida 25"
+    ]
+   }
+  },
+  "C-17": {
+   "question": "Fermer xo'jaligiga yer necha yilga ijaraga beriladi va ijara shartnomasini muddatidan oldin bekor qilish mumkinmi?",
+   "ranks": {
+    "hybrid": 8
+   },
+   "top3": {
+    "hybrid": [
+     "Qonun OʻRQ-328: “Tadbirkorlik faoliyati erkinligining kafolatlari toʻgʻrisida”gi Oʻzbekiston Respublikasi Qonuniga oʻzgartish va qoʻshimchalar kiritish haqida 24",
+     "Fuqarolik kodeksi (ikkinchi qism) 551",
+     "Fuqarolik kodeksi (ikkinchi qism) 550"
+    ]
+   }
+  },
+  "C-18": {
+   "question": "Dehqon xo'jaligi ochish uchun yer qanday ajratiladi? Oilaviy dehqon xo'jaligi yuridik shaxs bo'lishi shartmi?",
+   "ranks": {
+    "hybrid": 1
+   },
+   "top3": {
+    "hybrid": [
+     "Dehqon xoʻjaligi toʻgʻrisidagi Qonun (OʻRQ-680) 3",
+     "Qonun OʻRQ-328: “Tadbirkorlik faoliyati erkinligining kafolatlari toʻgʻrisida”gi Oʻzbekiston Respublikasi Qonuniga oʻzgartish va qoʻshimchalar kiritish haqida 7",
+     "Dehqon xoʻjaligi toʻgʻrisidagi Qonun (OʻRQ-680) 22"
+    ]
+   }
+  },
+  "C-19": {
+   "question": "Paxta yetishtiradigan fermerga yerdan maqsadsiz foydalangani yoki hosildorlik past bo'lgani uchun yerni qaytarib olishlari mumkinmi?",
+   "ranks": {
+    "hybrid": 6
+   },
+   "top3": {
+    "hybrid": [
+     "Prezident qarori PQ-373: Dehqon xoʻjaliklari tashkil etishni qoʻllab-quvvatlash orqali aholi daromadlarini oshirish boʻyicha qoʻshimcha chora-tadbirlar toʻgʻri… 4",
+     "Vazirlar Mahkamasi qarori 22: Fermer xoʻjaligi yer maydonini maqbullashtirish va uni tugatish tartibi toʻgʻrisidagi Nizomni tasdiqlash haqida 14",
+     "Vazirlar Mahkamasi qarori 14: Fermer xoʻjaliklari va boshqa qishloq xoʻjaligi korxonalari yer maydonlarini maqbullashtirish hamda qishloq xoʻjaligi ekin yerlar… 2"
+    ]
+   }
+  },
+  "C-20": {
+   "question": "qishloq xojalik yerini boshqa odamga subijaraga berib qoysam boladimi? fermerman",
+   "ranks": {
+    "hybrid": 5
+   },
+   "top3": {
+    "hybrid": [
+     "Qishloq xoʻjaligida ijara munosabatlarini yanada rivojlantirish chora-tadbirlari toʻgʻrisidagi Vazirlar Mahkamasi qarori (486) 9",
+     "Vazirlar Mahkamasi qarori 709: Qishloq xoʻjaligiga moʻljallangan yer uchastkalarini ijaraga berish tartibiga doir normativ-huquqiy hujjatlarni tasdiqlash toʻgʻ… 2",
+     "2004-2006-yillarda fermer xoʻjaliklarini rivojlantirish konsepsiyasini amalga oshirish chora-tadbirlari toʻgʻrisidagi Vazirlar Mahkamasi qarori (476) 20"
+    ]
+   }
+  },
+  "C-21": {
+   "question": "Mikroqarz bo'yicha bank yillik foizni qancha bo'lishi mumkin, chegarasi bormi? Kreditni muddatidan oldin yopsam jarima olishadimi?",
+   "ranks": {
+    "hybrid": 3
+   },
+   "top3": {
+    "hybrid": [
+     "Vazirlar Mahkamasi qarori 130: Qishloq xoʻjaligi mahsulotlari ishlab chiqaruvchilarini davlat tomonidan moliyaviy qoʻllab-quvvatlashni tashkil etish toʻgʻrisida 14",
+     "Vazirlar Mahkamasi qarori 612: Ijtimoiy reyestrga kiritilgan oilalarga kreditlar ajratish tartibi toʻgʻrisidagi nizomni tasdiqlash haqida 22",
+     "Hujjat 3205: Mikromoliya tashkiloti va lombard tomonidan beriladigan kreditlar (mikroqarzlar) boʻyicha qarz oluvchi jismoniy shaxslarning qarz yukini tartibga… 11¹"
+    ]
+   }
+  },
+  "C-22": {
+   "question": "kredit tolay olmay qoldim 3 oydan beri, bank garovdagi uyimni sudsiz sotib yuborishi mumkinmi?",
+   "ranks": {
+    "hybrid": 1
+   },
+   "top3": {
+    "hybrid": [
+     "Fuqarolik kodeksi (birinchi qism) 280",
+     "Qonun 614-I: “Garov toʻgʻrisida”gi Oʻzbekiston Respublikasi Qonuniga oʻzgartishlar va qoʻshimchalar kiritish haqida 27",
+     "Jinoyat-protsessual kodeksi 249"
+    ]
+   }
+  },
+  "C-23": {
+   "question": "Iste'mol krediti shartnomasini imzolaganimdan keyin fikrimdan qaytsam, necha kun ichida shartnomadan voz kechish huquqim bor?",
+   "ranks": {
+    "hybrid": 1
+   },
+   "top3": {
+    "hybrid": [
+     "Nobank kredit tashkilotlari va mikromoliyalashtirish faoliyati toʻgʻrisidagi Qonun (OʻRQ-765) 33",
+     "Isteʼmol krediti toʻgʻrisidagi Qonun (OʻRQ-33) 12",
+     "Fuqarolik kodeksi (ikkinchi qism) 628"
+    ]
+   }
+  },
+  "C-24": {
+   "question": "Kollektorlar kechasi qo'ng'iroq qilib, qarindoshlarimga ham telefon qilyapti. Qarzni undirishda ular nima qilishi taqiqlangan?",
+   "ranks": {
+    "hybrid": 2
+   },
+   "top3": {
+    "hybrid": [
+     "Toʻlovga qobiliyatsizlik toʻgʻrisidagi Qonun (OʻRQ-763) 81",
+     "Hujjat 3384: Moliyaviy xizmatlar isteʼmolchilari bilan oʻzaro munosabatlarni amalga oshirishda mikromoliya tashkilotlari va lombardlarning faoliyatiga qoʻyilad… 33",
+     "Sud hujjatlari va boshqa organlar hujjatlarini ijro etish toʻgʻrisidagi Qonun (258-II) 64"
+    ]
+   }
+  },
+  "C-25": {
+   "question": "Prava muddati o'tib ketgan, almashtirmasdan haydasam shtraf qancha bo'ladi? Almashtirish uchun med spravka kerakmi?",
+   "ranks": {
+    "hybrid": null
+   },
+   "top3": {
+    "hybrid": [
+     "Vazirlar Mahkamasi qarori 393: Avtomototransport vositalari haydovchilarini tayyorlash, qayta tayyorlash va malakasini oshirish hamda ularni imtihondan oʻtkazi… 1",
+     "Jinoyat kodeksi 124",
+     "Yoʻl harakati toʻgʻrisidagi Qonun (OʻRQ-900) 44"
+    ]
+   }
+  },
+  "C-26": {
+   "question": "Yangi olgan mashinani necha kun ichida GAIda ro'yxatdan o'tkazish kerak? Kech qolsam jarima bormi?",
+   "ranks": {
+    "hybrid": 1
+   },
+   "top3": {
+    "hybrid": [
+     "Vazirlar Mahkamasi qarori 683: Avtomototransport vositalarini davlat roʻyxatidan oʻtkazish va ularga roʻyxatdan oʻtkazish davlat raqami belgilarini berish tart… 6",
+     "Buyruq 2050: Avtomototransport vositalarini qayta roʻyxatdan oʻtkazishni (qayd etishni) tashkil etish va amalga oshirish tartibi toʻgʻrisidagi yoʻriqnomani tas… 2",
+     "Vazirlar Mahkamasi qarori 683: Avtomototransport vositalarini davlat roʻyxatidan oʻtkazish va ularga roʻyxatdan oʻtkazish davlat raqami belgilarini berish tart… 44"
+    ]
+   }
+  },
+  "C-27": {
+   "question": "OSAGO sug'urta polisi bo'lmasa haydaganim uchun qancha jarima soladi? Yillik polis narxi qanday hisoblanadi?",
+   "ranks": {
+    "hybrid": 1
+   },
+   "top3": {
+    "hybrid": [
+     "Maʼmuriy javobgarlik toʻgʻrisidagi kodeks 135¹",
+     "Vazirlar Mahkamasi qarori 141: “Transport vositalari egalarining fuqarolik javobgarligini majburiy sugʻurta qilish toʻgʻrisida”gi Oʻzbekiston Respublikasi Qonu… 1",
+     "Vazirlar Mahkamasi qarori 141: “Transport vositalari egalarining fuqarolik javobgarligini majburiy sugʻurta qilish toʻgʻrisida”gi Oʻzbekiston Respublikasi Qonu… 2"
+    ]
+   }
+  },
+  "C-28": {
+   "question": "Endigina guvohnoma oldim 19 yoshdaman. Yangi haydovchilarga qanday cheklovlar bor, masalan tezlik yoki mashina orqasiga belgi qo'yish shartmi?",
+   "ranks": {
+    "hybrid": 1
+   },
+   "top3": {
+    "hybrid": [
+     "Yoʻl harakati qoidalarini tasdiqlash toʻgʻrisidagi Vazirlar Mahkamasi qarori (172) 176",
+     "Vazirlar Mahkamasi qarori 389: Ichki ishlar organlari tizimida davlat xizmatlari koʻrsatish sifatini yanada takomillashtirish va tartib-taomillarini soddalasht… None",
+     "Vazirlar Mahkamasi qarori 116: Milliy haydovchilik guvohnomasining hamda avtomototransport vositasi roʻyxatdan oʻtkazilganligi toʻgʻrisidagi guvohnomaning yang… None"
+    ]
+   }
+  },
+  "C-29": {
+   "question": "taksi bolib ishlash uchun litsenziya kerakmi yoki YaTT ochish yetadimi? yandexda ishlamoqchiman o'z mashinamda",
+   "ranks": {
+    "hybrid": 7
+   },
+   "top3": {
+    "hybrid": [
+     "Avtomobil transportida yoʻlovchi tashish faoliyatini tartibga solish boʻyicha qoʻshimcha chora-tadbirlar toʻgʻrisidagi Vazirlar Mahkamasi qarori (200) 10",
+     "Avtomobil transportida yoʻlovchi tashish faoliyatini tartibga solish boʻyicha qoʻshimcha chora-tadbirlar toʻgʻrisidagi Vazirlar Mahkamasi qarori (200) 14",
+     "Avtomobil transportida yoʻlovchi tashish faoliyatini tartibga solish boʻyicha qoʻshimcha chora-tadbirlar toʻgʻrisidagi Vazirlar Mahkamasi qarori (200) 13"
+    ]
+   }
+  },
+  "C-30": {
+   "question": "Yuk mashinasi haydovchisiman. Bir kunda necha soat rulda bo'lishim mumkin, dam olish vaqtlari qanday belgilangan?",
+   "ranks": {
+    "hybrid": 5
+   },
+   "top3": {
+    "hybrid": [
+     "Buyruq 2506: Avtotransport vositalari haydovchilarining ish vaqti va dam olish vaqti toʻgʻrisida nizomni tasdiqlash haqida 17",
+     "Buyruq 2506: Avtotransport vositalari haydovchilarining ish vaqti va dam olish vaqti toʻgʻrisida nizomni tasdiqlash haqida 5",
+     "Buyruq 2506: Avtotransport vositalari haydovchilarining ish vaqti va dam olish vaqti toʻgʻrisida nizomni tasdiqlash haqida 9"
+    ]
+   }
+  },
+  "D-01": {
+   "question": "Kontrakt pulini bo'lib to'lasa bo'ladimi? Qizim OTMda kontraktda o'qiydi, birdaniga hammasini to'lay olmaymiz, necha qismga bo'lib to'lash mumkin va oxirgi muddati qachon?",
+   "ranks": {
+    "hybrid": 1
+   },
+   "top3": {
+    "hybrid": [
+     "Buyruq 2431: Oliy va oʻrta maxsus, professional taʼlim tashkilotlarida oʻqitishning toʻlov-kontrakt shakli va undan tushgan mablagʻlarni taqsimlash tartibi toʻ… 20",
+     "Buyruq 2431: Oliy va oʻrta maxsus, professional taʼlim tashkilotlarida oʻqitishning toʻlov-kontrakt shakli va undan tushgan mablagʻlarni taqsimlash tartibi toʻ… 22",
+     "Buyruq 2431: Oliy va oʻrta maxsus, professional taʼlim tashkilotlarida oʻqitishning toʻlov-kontrakt shakli va undan tushgan mablagʻlarni taqsimlash tartibi toʻ… 29"
+    ]
+   }
+  },
+  "D-02": {
+   "question": "akademik tatil necha yilga beriladi va qanday sabab bilan olsa boladi? homilador bolib qoldim 3-kursda",
+   "ranks": {
+    "hybrid": 1
+   },
+   "top3": {
+    "hybrid": [
+     "Vazirlar Mahkamasi qarori 344: Oʻzbekiston Respublikasi oliy taʼlim muassasalari talabalariga akademik taʼtil berish toʻgʻrisidagi nizomni tasdiqlash haqida 3",
+     "Vazirlar Mahkamasi qarori 599: Oʻzbekiston Respublikasi Bank-moliya akademiyasida boshqaruv kadrlarini tayyorlash, qayta tayyorlash va ularning malakasini oshi… 21",
+     "Vazirlar Mahkamasi qarori 344: Oʻzbekiston Respublikasi oliy taʼlim muassasalari talabalariga akademik taʼtil berish toʻgʻrisidagi nizomni tasdiqlash haqida 2"
+    ]
+   }
+  },
+  "D-03": {
+   "question": "Bir universitetdan boshqa universitetga ko'chirish (perevod) qachon qilinadi? Kontrakt talabasiman, Toshkentdan Samarqanddagi oliy o'quv yurtiga o'tmoqchiman, qanday tartibda bo'ladi?",
+   "ranks": {
+    "hybrid": 5
+   },
+   "top3": {
+    "hybrid": [
+     "Vazirlar Mahkamasi qarori 578: Oliy taʼlim tashkilotlariga oʻqishga qabul qilish jarayonlarini tartibga soluvchi normativ-huquqiy hujjatlarni tasdiqlash toʻgʻr… 8",
+     "Davlat oliy taʼlim muassasalariga oʻqishga qabul qilish jarayonlarini tashkil etish toʻgʻrisidagi Prezident qarori (PQ-279) 7",
+     "Vazirlar Mahkamasi qarori 578: Oliy taʼlim tashkilotlariga oʻqishga qabul qilish jarayonlarini tartibga soluvchi normativ-huquqiy hujjatlarni tasdiqlash toʻgʻr… 9"
+    ]
+   }
+  },
+  "D-04": {
+   "question": "Nogironligi bor bolalar oliygohga kirishda imtiyoz bormi? Ukam 2-guruh nogironi, test sinovlarida unga alohida kvota ajratiladimi?",
+   "ranks": {
+    "hybrid": 1
+   },
+   "top3": {
+    "hybrid": [
+     "Vazirlar Mahkamasi qarori 417: Oliy taʼlim muassasalariga nogironligi boʻlgan shaxslarni qoʻshimcha davlat granti kvotalari asosida oʻqishga qabul qilish tarti… 13",
+     "Vazirlar Mahkamasi qarori 417: Oliy taʼlim muassasalariga nogironligi boʻlgan shaxslarni qoʻshimcha davlat granti kvotalari asosida oʻqishga qabul qilish tarti… 5",
+     "Vazirlar Mahkamasi qarori 417: Oliy taʼlim muassasalariga nogironligi boʻlgan shaxslarni qoʻshimcha davlat granti kvotalari asosida oʻqishga qabul qilish tarti… 12"
+    ]
+   }
+  },
+  "D-05": {
+   "question": "Maktabda o'qituvchi bolani urishi mumkinmi, qanday javobgarlik bor? Oglim 5-sinfda, uchitel qulog'idan tortib sinfdan haydab chiqargan",
+   "ranks": {
+    "hybrid": null
+   },
+   "top3": {
+    "hybrid": [
+     "Maktabgacha taʼlim va tarbiya toʻgʻrisidagi Qonun (OʻRQ-595) 39",
+     "Pedagogning maqomi toʻgʻrisidagi Qonun (OʻRQ-901) 8",
+     "Vazirlar Mahkamasi qarori 440: Bolalarga nisbatan zoʻravonlik holatlarini aniqlash, zoʻravonlik xavfi darajasini baholash, himoya qilish rejasini ishlab chiqis… 26"
+    ]
+   }
+  },
+  "D-06": {
+   "question": "Bolani maktabga 1-sinfga necha yoshdan qabul qilishadi? Sentabrda 6 yoshu 8 oylik bo'ladi, olishadimi?",
+   "ranks": {
+    "hybrid": 3
+   },
+   "top3": {
+    "hybrid": [
+     "Maktabgacha taʼlim va tarbiyaning davlat standartini tasdiqlash toʻgʻrisidagi Vazirlar Mahkamasi qarori (802) 14",
+     "Alohida taʼlim ehtiyojlari boʻlgan bolalarga taʼlim berishga oid normativ-huquqiy hujjatlarni tasdiqlash toʻgʻrisidagi Vazirlar Mahkamasi qarori (638) 12",
+     "Taʼlim toʻgʻrisidagi Qonun (OʻRQ-637) 9"
+    ]
+   }
+  },
+  "D-07": {
+   "question": "Davlat grantida o'qiyotgan talaba sessiyadan yiqilsa yoki qarzi qolsa grantdan chiqarib kontraktga o'tkazishadimi?",
+   "ranks": {
+    "hybrid": 6
+   },
+   "top3": {
+    "hybrid": [
+     "Vazirlar Mahkamasi qarori 300: “Yangi Oʻzbekiston” universitetining iqtidorli talabalariga davlat grantini berish tartibi hamda Oʻzbekiston Respublikasida faol… 21",
+     "Oliy taʼlim, fan va innovatsiyalar tizimini takomillashtirishning qoʻshimcha chora-tadbirlari toʻgʻrisidagi Prezident farmoni (PF-58) 6",
+     "Vazirlar Mahkamasi qarori 490: Toshkent davlat yuridik universitetining Ixtisoslashtirilgan filialiga oʻqishga qabul qilish tartibi va oʻquv jarayonini tashkil… 6¹"
+    ]
+   }
+  },
+  "D-08": {
+   "question": "bolnichniy necha foiz tolanadi? 6 yil stajim bor, 10 kun kasal boldim, ishxona qancha to'lab berishi kerak",
+   "ranks": {
+    "hybrid": 8
+   },
+   "top3": {
+    "hybrid": [
+     "Ayrim turdagi nafaqalarni tayinlash va toʻlashni tartibga solish chora-tadbirlari toʻgʻrisidagi Vazirlar Mahkamasi qarori (314) 24",
+     "Ayrim turdagi nafaqalarni tayinlash va toʻlashni tartibga solish chora-tadbirlari toʻgʻrisidagi Vazirlar Mahkamasi qarori (314) 35",
+     "Ayrim turdagi nafaqalarni tayinlash va toʻlashni tartibga solish chora-tadbirlari toʻgʻrisidagi Vazirlar Mahkamasi qarori (314) 23"
+    ]
+   }
+  },
+  "D-09": {
+   "question": "Poliklinikada qaysi tibbiy xizmatlar bepul ko'rsatilishi kerak? Uchastka shifokori qon tahlilini pullik qilib qo'ydi, bu qonuniymi?",
+   "ranks": {
+    "hybrid": 5
+   },
+   "top3": {
+    "hybrid": [
+     "Aholiga tez tibbiy yordam koʻrsatish tizimini takomillashtirish toʻgʻrisidagi Prezident qarori (PQ-283) 18",
+     "Prezident qarori PQ-3039: Toshkent shahri aholisiga birlamchi tibbiy-sanitariya yordami koʻrsatishni boshqarish tizimini yanada takomillashtirish hamda uning s… 4",
+     "Fuqarolar sogʻligʻini saqlash toʻgʻrisidagi Qonun (265-I) 8"
+    ]
+   }
+  },
+  "D-10": {
+   "question": "Bolamga majburiy emlashni qilmasam bo'ladimi? Yozma ravishda rad etish huquqim bormi va bog'chaga olmay qo'yishlari mumkinmi?",
+   "ranks": {
+    "hybrid": 8
+   },
+   "top3": {
+    "hybrid": [
+     "Bola huquqlarining kafolatlari toʻgʻrisidagi Qonun (OʻRQ-139) 22",
+     "Vazirlar Mahkamasi qarori 48: Oʻzbekiston Respublikasi Sogʻliqni saqlash vazirligi huzuridagi Sanitariya-epidemiologik osoyishtalik va jamoat salomatligi qoʻmi… 11",
+     "Bolalar tarbiyasi bilan bogʻliq nizolarni hal qilishda sudlar tomonidan qonunlarni qoʻllash amaliyoti toʻgʻrisidagi Hujjat (23) 7"
+    ]
+   }
+  },
+  "D-11": {
+   "question": "Qandli diabet bilan kasallanganlarga insulin bepul beriladimi, buning uchun qayerga murojaat qilish kerak?",
+   "ranks": {
+    "hybrid": 1
+   },
+   "top3": {
+    "hybrid": [
+     "Endokrinologiya xizmatini takomillashtirish va koʻlamini kengaytirish chora-tadbirlari toʻgʻrisidagi Prezident qarori (PQ-102) 5",
+     "Prezident qarori PQ-4295: 2019-2021-yillarda respublika aholisiga endokrinologiya yordami koʻrsatishni takomillashtirish boʻyicha milliy dasturni tasdiqlash to… 4",
+     "Hujjat 1854: Ogʻir kasallikka chalingan mahkumlarni tibbiy tekshiruvdan oʻtkazish va ularni kasalligi tufayli jazoni oʻtashdan ozod qilishga taqdim etish qoida… None"
+    ]
+   }
+  },
+  "D-12": {
+   "question": "Shifokor xatosi bilan operatsiyadan keyin onam nogiron bo'lib qoldi. Tibbiy xatolik uchun shifokorga qanday javobgarlik bor?",
+   "ranks": {
+    "hybrid": 3
+   },
+   "top3": {
+    "hybrid": [
+     "Vazirlar Mahkamasi qarori 754: Jamoat tartibini saqlash, jamoat xavfsizligini taʼminlash va huquqbuzarliklar profilaktikasi sohasidagi Hukumat qarorlarini tizi… 33",
+     "Vazirlar Mahkamasi qarori 271: Ruhiy holati buzilgan nogironligi boʻlgan shaxslar uchun internat muassasalarini takomillashtirish va yangi ijtimoiy xizmatlarni… 48",
+     "Fuqarolar sogʻligʻini saqlash toʻgʻrisidagi Qonun (265-I) 46"
+    ]
+   }
+  },
+  "D-13": {
+   "question": "Bemorning kasalligi haqidagi ma'lumotni shifoxona boshqalarga, masalan ish beruvchiga aytishi mumkinmi? Vrach sirini oshkor qilgani uchun nima bo'ladi?",
+   "ranks": {
+    "hybrid": 1
+   },
+   "top3": {
+    "hybrid": [
+     "Fuqarolar sogʻligʻini saqlash toʻgʻrisidagi Qonun (265-I) 45",
+     "Fuqarolar sogʻligʻini saqlash toʻgʻrisidagi Qonun (265-I) 24",
+     "Fuqarolarning reproduktiv salomatligini saqlash toʻgʻrisidagi Qonun (OʻRQ-528) 19"
+    ]
+   }
+  },
+  "D-14": {
+   "question": "Muddatli harbiy xizmatga necha yoshdan chaqiriladi va xizmat muddati qancha?",
+   "ranks": {
+    "hybrid": 2
+   },
+   "top3": {
+    "hybrid": [
+     "Prezident qarori PQ-4447: Oʻzbekiston Respublikasi fuqarolarining harbiy xizmatni oʻtash tartibi toʻgʻrisidagi nizomni tasdiqlash haqida 23",
+     "Umumiy harbiy majburiyat va harbiy xizmat toʻgʻrisidagi Qonun (436-II) 5",
+     "Prezident qarori PQ-4447: Oʻzbekiston Respublikasi fuqarolarining harbiy xizmatni oʻtash tartibi toʻgʻrisidagi nizomni tasdiqlash haqida 25"
+    ]
+   }
+  },
+  "D-15": {
+   "question": "voenkomatdan povestka keldi, lekin men magistraturada kunduzgi o'qiyman. Otsrochka beriladimi?",
+   "ranks": {
+    "hybrid": 2
+   },
+   "top3": {
+    "hybrid": [
+     "Vazirlar Mahkamasi qarori 143: Oʻzbekiston Respublikasi Huquqni muhofaza qilish akademiyasida oliy taʼlim va oliy taʼlimdan keyingi taʼlimga qabul qilish va oʻ… 74",
+     "Umumiy harbiy majburiyat va harbiy xizmat toʻgʻrisidagi Qonun (436-II) 21",
+     "Vazirlar Mahkamasi qarori 655: Oliy harbiylashtirilgan taʼlim muassasalari toʻgʻrisidagi nizomni tasdiqlash haqida 17"
+    ]
+   }
+  },
+  "D-16": {
+   "question": "Safarbarlik chaqiruv rezervida xizmat qilish uchun qancha pul to'lanadi va u qancha muddatga bo'ladi? O'g'lim armiyaga borishni xohlamayapti, pullik variant bormi",
+   "ranks": {
+    "hybrid": 2
+   },
+   "top3": {
+    "hybrid": [
+     "Oʻzbekiston Respublikasi fuqarolarining safarbarlik chaqiruvi rezervidagi xizmatini tashkil etish chora-tadbirlari toʻgʻrisidagi Vazirlar Mahkamasi qarori (99) None",
+     "Oʻzbekiston Respublikasi fuqarolarining safarbarlik chaqiruvi rezervidagi xizmatini tashkil etish chora-tadbirlari toʻgʻrisidagi Vazirlar Mahkamasi qarori (99) 2",
+     "Oʻzbekiston Respublikasi fuqarolarining safarbarlik chaqiruvi rezervidagi xizmatini tashkil etish chora-tadbirlari toʻgʻrisidagi Vazirlar Mahkamasi qarori (99) 2"
+    ]
+   }
+  },
+  "D-17": {
+   "question": "Oilada yolg'iz boquvchi bo'lsam, ya'ni otam vafot etgan, onam nogiron bo'lsa armiyaga olishadimi?",
+   "ranks": {
+    "hybrid": 1
+   },
+   "top3": {
+    "hybrid": [
+     "Umumiy harbiy majburiyat va harbiy xizmat toʻgʻrisidagi Qonun (436-II) 21",
+     "Vazirlar Mahkamasi qarori 354: Oʻzbekiston Respublikasi ichki ishlar organlari va Milliy gvardiyasining shaxsiy tarkibi hamda ularning oila aʼzolarini ijtimoiy… 30",
+     "Vazirlar Mahkamasi qarori 402: Oliy taʼlim muassasalariga qoʻshimcha davlat granti asosidagi qabul koʻrsatkichlari doirasida ehtiyojmand oilalardagi xotin-qizl… 2"
+    ]
+   }
+  },
+  "D-18": {
+   "question": "Chaqiruv qog'ozi kelganida harbiy komissariatga bormasa qanday jarima yoki jazo bor?",
+   "ranks": {
+    "hybrid": 1
+   },
+   "top3": {
+    "hybrid": [
+     "Maʼmuriy javobgarlik toʻgʻrisidagi kodeks 235",
+     "Maʼmuriy javobgarlik toʻgʻrisidagi kodeks 236",
+     "Maʼmuriy javobgarlik toʻgʻrisidagi kodeks 196¹"
+    ]
+   }
+  },
+  "D-19": {
+   "question": "Mashinani noto'g'ri joyga qo'yganim uchun shtraf keldi. Jarimani necha kun ichida to'lasam chegirma bo'ladi va to'lamasam nima bo'ladi?",
+   "ranks": {
+    "hybrid": null
+   },
+   "top3": {
+    "hybrid": [
+     "Yoʻl harakati qoidalariga rioya etilishini taʼminlash boʻyicha qoʻshimcha chora-tadbirlar toʻgʻrisidagi Vazirlar Mahkamasi qarori (463) 18",
+     "Maʼmuriy javobgarlik toʻgʻrisidagi kodeks 291",
+     "Vazirlar Mahkamasi qarori 431: Maʼmuriy huquqbuzarliklar toʻgʻrisidagi ishlarni yuritishning elektron tizimini joriy etish boʻyicha qoʻshimcha chora-tadbirlar… 31"
+    ]
+   }
+  },
+  "D-20": {
+   "question": "Telegramda telefon sotaman deb oldindan pulni olib, keyin blok qilib yubordi. 3 million so'm. Bu firibgarlikmi va qayerga ariza berish kerak?",
+   "ranks": {
+    "hybrid": null
+   },
+   "top3": {
+    "hybrid": [
+     "Firibgarlikka oid ishlar boʻyicha sud amaliyoti toʻgʻrisidagi Hujjat (17) 22",
+     "Maʼmuriy tartib-taomillar toʻgʻrisidagi Qonun (OʻRQ-457) 42",
+     "Ichki ishlar organlari toʻgʻrisidagi Qonun (OʻRQ-407) 16"
+    ]
+   }
+  },
+  "D-21": {
+   "question": "Akamni militsiya ushlab ketdi, hech narsa demayapti. Qancha soatgacha ushlab turishga haqli va biz advokat yollasak u bilan qachondan uchrashtirishadi?",
+   "ranks": {
+    "hybrid": 2
+   },
+   "top3": {
+    "hybrid": [
+     "Jinoyat ishini yuritish chogʻida qamoqda saqlash toʻgʻrisidagi Qonun (OʻRQ-298) 22",
+     "Jinoyat-protsessual kodeksi 230",
+     "Ichki ishlar organlari toʻgʻrisidagi Qonun (OʻRQ-407) 18"
+    ]
+   }
+  },
+  "D-22": {
+   "question": "kochada janjal bolib qoldi, mayda bezorilik deb protokol yozishdi. bunga qancha shtraf yoki necha sutka qamoq berishi mumkin?",
+   "ranks": {
+    "hybrid": 1
+   },
+   "top3": {
+    "hybrid": [
+     "Maʼmuriy javobgarlik toʻgʻrisidagi kodeks 183",
+     "Maʼmuriy javobgarlik toʻgʻrisidagi kodeks 190",
+     "Maʼmuriy javobgarlik toʻgʻrisidagi kodeks 206"
+    ]
+   }
+  },
+  "D-23": {
+   "question": "Amnistiya qaysi jinoyatlarga tatbiq etilmaydi? Ukam firibgarlik bo'yicha birinchi marta sudlangan, amnistiyaga tushishi mumkinmi?",
+   "ranks": {
+    "hybrid": null
+   },
+   "top3": {
+    "hybrid": [
+     "Farmoyish F-2087: Oʻzbekiston Respublikasi Prezidentining 2004-yil 6-dekabrdagi F-2087-son farmoyishi 12",
+     "Oʻzbekiston Respublikasi Konstitutsiyasi qabul qilinganligining oʻn ikki yilligi munosabati bilan amnistiya toʻgʻrisidagi Prezident farmoni (PF-3515) 6",
+     "Sudlar tomonidan amnistiya aktlarini qoʻllashning ayrim masalalari toʻgʻrisidagi Hujjat (16) 2"
+    ]
+   }
+  },
+  "D-24": {
+   "question": "Ma'muriy jarima to'g'risidagi qarorga necha kun ichida shikoyat qilsa bo'ladi?",
+   "ranks": {
+    "hybrid": 1
+   },
+   "top3": {
+    "hybrid": [
+     "Maʼmuriy javobgarlik toʻgʻrisidagi kodeks 316",
+     "Buyruq 2240: Yoʻl harakati qoidalarining buzilishiga doir maʼmuriy ishlarni koʻrib chiqish tartibi toʻgʻrisidagi yoʻriqnomani tasdiqlash haqida None",
+     "Maʼmuriy tartib-taomillar toʻgʻrisidagi Qonun (OʻRQ-457) 67"
+    ]
+   }
+  },
+  "D-25": {
+   "question": "ID karta muddati tugab qoldi, almashtirish uchun qancha davlat boji to'lanadi va necha kunda tayyor bo'ladi?",
+   "ranks": {
+    "hybrid": 10
+   },
+   "top3": {
+    "hybrid": [
+     "Fuqarolikni rasmiylashtirish sohasida ayrim davlat xizmatlari koʻrsatishning maʼmuriy reglamentlarini tasdiqlash toʻgʻrisidagi Vazirlar Mahkamasi qarori (8) 7",
+     "Vazirlar Mahkamasi qarori 129: Oʻzbekiston Respublikasida identifikatsiya ID-kartalarini rasmiylashtirish va berish tizimini joriy etish chora-tadbirlari toʻgʻ… 2",
+     "Oʻzbekiston Respublikasida identifikatsiya ID-kartalarni joriy etish chora-tadbirlari toʻgʻrisidagi Prezident farmoni (PF-6065) 12"
+    ]
+   }
+  },
+  "D-26": {
+   "question": "Xokimiyatga yozgan murojaatimga bir oydan beri javob yo'q. Davlat organi murojaatga necha kun ichida javob berishi shart?",
+   "ranks": {
+    "hybrid": null
+   },
+   "top3": {
+    "hybrid": [
+     "Qonun OʻRQ-445: “Jismoniy va yuridik shaxslarning murojaatlari toʻgʻrisida”gi Oʻzbekiston Respublikasi Qonuniga oʻzgartish va qoʻshimchalar kiritish haqida 31",
+     "Vazirlar Mahkamasi qarori 341: Davlat organlarida, davlat muassasalarida va davlat ishtirokidagi tashkilotlarda jismoniy va yuridik shaxslarning murojaatlari b… 45",
+     "Vazirlar Mahkamasi qarori 341: Davlat organlarida, davlat muassasalarida va davlat ishtirokidagi tashkilotlarda jismoniy va yuridik shaxslarning murojaatlari b… 29"
+    ]
+   }
+  },
+  "D-27": {
+   "question": "Men Rossiya fuqarosiman, Toshkentda ijarada turaman. Vaqtincha ro'yxatdan o'tish (propiska) uchun necha kun ichida murojaat qilishim kerak va kech qolsam jarima bormi?",
+   "ranks": {
+    "hybrid": 1
+   },
+   "top3": {
+    "hybrid": [
+     "Vazirlar Mahkamasi qarori 593: Oʻzbekiston Respublikasida chet el fuqarolari va fuqaroligi boʻlmagan shaxslarni roʻyxatga olish tartibini soddalashtirish chora… 10",
+     "Vazirlar Mahkamasi qarori 200: Oʻzbekiston Respublikasi fuqarosining biometrik pasportini va 16 yoshga toʻlmagan shaxslar uchun fuqaroligi boʻlmagan shaxslarni… 2",
+     "Vazirlar Mahkamasi qarori 593: Oʻzbekiston Respublikasida chet el fuqarolari va fuqaroligi boʻlmagan shaxslarni roʻyxatga olish tartibini soddalashtirish chora… 2"
+    ]
+   }
+  },
+  "D-28": {
+   "question": "O'zbekiston fuqaroligini olish uchun qancha yil yashash kerak? Turkmanistondan ko'chib kelganman, yashash uchun ruxsatnomam bor",
+   "ranks": {
+    "hybrid": 5
+   },
+   "top3": {
+    "hybrid": [
+     "Vazirlar Mahkamasi qarori 593: Oʻzbekiston Respublikasida chet el fuqarolari va fuqaroligi boʻlmagan shaxslarni roʻyxatga olish tartibini soddalashtirish chora… 36",
+     "Vazirlar Mahkamasi qarori 593: Oʻzbekiston Respublikasida chet el fuqarolari va fuqaroligi boʻlmagan shaxslarni roʻyxatga olish tartibini soddalashtirish chora… 38",
+     "Oʻzbekiston Respublikasi fuqaroligiga oid masalalarni koʻrib chiqishning yangilangan tartibini belgilash toʻgʻrisidagi Prezident farmoni (PF-6185) 12"
+    ]
+   }
+  },
+  "D-29": {
+   "question": "turmushga chiqdim familiyamni ozgartirdim, pasportni necha kun ichida almashtirishim shart? kechiktirsam shtraf bormi",
+   "ranks": {
+    "hybrid": 1
+   },
+   "top3": {
+    "hybrid": [
+     "Oʻzbekiston Respublikasida pasport tizimini takomillashtirish toʻgʻrisidagi Prezident farmoni (PF-2240) 17",
+     "Vazirlar Mahkamasi qarori 550: Nikoh, oila va fuqarolik holati dalolatnomalarini qayd etish sohasidagi normativ-huquqiy hujjatlarni tizimlashtirish toʻgʻrisida 159",
+     "Oʻzbekiston Respublikasida pasport tizimini takomillashtirish toʻgʻrisidagi Prezident farmoni (PF-2240) 16"
+    ]
+   }
+  },
+  "D-30": {
+   "question": "Mahalla raisi kam ta'minlangan oilalarga nafaqa tayinlash uchun spravka bermayapti. Mahalla fuqarolar yig'inining vakolatlari qanday va uning ustidan qayerga shikoyat qilinadi?",
+   "ranks": {
+    "hybrid": 1
+   },
+   "top3": {
+    "hybrid": [
+     "Qonun OʻRQ-350: “Fuqarolarning oʻzini oʻzi boshqarish organlari toʻgʻrisida”gi Oʻzbekiston Respublikasi Qonuniga oʻzgartish va qoʻshimchalar kiritish haqida 11",
+     "Qonun OʻRQ-350: “Fuqarolarning oʻzini oʻzi boshqarish organlari toʻgʻrisida”gi Oʻzbekiston Respublikasi Qonuniga oʻzgartish va qoʻshimchalar kiritish haqida 14",
+     "Vazirlar Mahkamasi qarori 380: Fuqarolarning oʻzini oʻzi boshqarish organlari faoliyatini yanada takomillashtirish boʻyicha qoʻshimcha chora-tadbirlar toʻgʻris… 12"
+    ]
+   }
+  }
+ },
+ "settings": {
+  "model": "e5-small-e6-int8",
+  "stem": true,
+  "alt": "eval/alt_llm_questions_blind.json",
+  "questions": "eval/questions_blind.yaml"
+ }
+}

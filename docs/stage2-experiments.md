@@ -959,7 +959,32 @@ faqat bundan keyingi o'zgarishlar uchun.
   oshirmaydi. Bitta model oilasi (Claude) yozgan, savollar ko'pincha ikki qismli.
 - `alt`: 300 savoldagi kabi `llm_eval.py rephrase` (GPT-5.4, ≈32 ming token).
 
-Natijalar: o'lchovdan keyin shu yerga yoziladi.
+**Natija** (xizmatdagi qidiruv: e6 + lemma FTS + `mmarco-uz-rr1`, top 30, LLM `alt`):
+
+| | R@1 | R@5 | R@8 | R@10 |
+|---|---|---|---|---|
+| qat'iy: faqat mustaqil belgilar | 0,408 | 0,667 | 0,767 | 0,800 |
+| + top-10 dagi javoblar, hakam tasdiqlagan | 0,458 | 0,775 | 0,883 | **0,917** |
+| solishtirish: 300 to'plam, aniq, test | 0,529 | 0,817 | 0,846 | 0,856 |
+
+- **Hakam.** Topilmagan 24 savolning top-10 matnini 2 ta subagent qat'iy mezon bilan ko'rdi va
+  14 savolda 26 ta to'g'ri moddani tasdiqladi (`judged: true`). Ulardan bir nechtasi aniq asosiy
+  javob, belgilovchi esa uni o'tkazib yuborgan: Mehnat kodeksi 230 (yillik ta'til), FK 551 (ijara
+  shartnomasini muddatidan oldin bekor qilish), Bola huquqlari kafolatlari qonuni 14 (bolani chet
+  elga olib chiqish), PQ-99 (jarimani 15/30 kunda to'lashda chegirma). Shuning uchun qat'iy 0,800
+  pastki chegara. 0,917 esa yuqori chegara: hakam faqat bizning qidiruv topganini ko'rgan.
+  300 to'plamdagi 0,856 ham shunday `judge` bilan o'lchangan, ya'ni 0,917 bilan solishtiriladi.
+- **Xulosa.** Moddani ko'rmay yozilgan savollarda natija **yomonlashmadi**. Shubha (1)–(2)
+  tasdiqlanmadi: model GPT uslubiga moslashib qolmagan. Sabab, ehtimol, odamlar ko'p so'raydigan
+  mavzular (kodekslar, asosiy qonunlar) 300 to'plamdagi tasodifiy VM qarori bandlaridan osonroq.
+  Javob topilmagan 10 savoldan 3 tasida korpusda to'liq javob yo'q (A-22, C-15, D-23). Haqiqiy
+  xatolar: mehnat shartnomasining yozma shakli (A-12), chet elga ishga ketish (A-28),
+  Toshkentda ro'yxatga olish (B-19), yakka uy qurish ruxsati (B-24), kassasiz savdo jarimasi (C-11),
+  muddati o'tgan guvohnoma (C-25), murojaatga javob muddati (D-26).
+- **Sohalar bo'yicha** (qat'iy R@10): uy-joy 0,44, tadbirkorlik 0,50, javobgarlik 0,50 eng past.
+  Pensiya, sog'liq, meros va harbiy sohalarda 1,00.
+- 120 savol kam: ±0,03–0,04 shovqin. Natija fayli:
+  `eval/results/2026-11-19-full-corpus-questions_blind-alt_llm-rr1-top30.json`.
 
 ## 7. Ochiq masalalar
 
