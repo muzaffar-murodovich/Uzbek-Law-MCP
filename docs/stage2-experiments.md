@@ -921,6 +921,46 @@ birlashtirish, `COMMON_DF` 2 %, HNSW `ef_search` 200. Reranker matnlarni uzunlig
 Maqsad (aniq savollarda R@10 ≥ 0,85) bajarildi. Ehtiyot: birlashtirish va reranker sozlamalari
 shu 208 savolda tanlangan; savollarning ikki yarmida natija yaqin (0,85/0,92).
 
+## 6k. Halol o'lchov: dev/test va "ko'r" savollar (2026-11-19)
+
+**Muammo.** 0,875 optimistik bo'lishi mumkin: (1) savollar moddani ko'rib yozilgan, so'zlari
+moddaga yaqin; (2) fine-tune juftliklari ham, baholash savollari ham GPT-5.4 dan, bir xil
+ko'rsatma bilan; (3) birlashtirish va reranker sozlamalari o'sha 208 savolda tanlangan;
+(4) `judge` faqat bizning qidiruv topganini ko'rgan.
+
+**Dev/test.** `llm_eval.py split` 300 savolni har (aniqlik, hujjat turi) guruhida teng ikkiga
+bo'ldi (`dev`/`test` teglari, seed 2026): har birida 150 savol, 104 tasi `aniq`. Bundan keyin
+sozlash faqat dev'da (`fusion_lab`, `rerank_lab`, `vector_lab`, `miss_depth` standart holatda
+`--tag aniq,dev`), test faqat o'lchanadi. `qonunshunos eval` `aniq+dev`, `aniq+test` ni alohida
+chiqaradi. Joriy xizmat (6j) natijasi qismlar bo'yicha:
+
+| | n | R@1 | R@5 | R@8 | R@10 |
+|---|---|---|---|---|---|
+| aniq, dev | 104 | 0,548 | 0,827 | 0,885 | 0,894 |
+| aniq, test | 104 | 0,529 | 0,817 | 0,846 | **0,856** |
+
+Test ham o'tgan sozlashlarda ishlatilgan, shuning uchun 0,856 ham to'liq toza emas: toza raqam
+faqat bundan keyingi o'zgarishlar uchun.
+
+**"Ko'r" savollar** (`eval/questions_blind.yaml`, 120 ta, `scripts/blind_eval.py`):
+- **Yozish.** 4 ta Claude (Opus) subagent hech narsa qidirmasdan, faqat hayotiy vaziyatlardan
+  savol yozdi: har biriga boshqa sohalar (mehnat/pensiya, oila/meros/uy-joy, soliq/tadbirkorlik/
+  transport, ta'lim/sog'liq/harbiy/javobgarlik), har xil personajlar, uchdan biri "real"
+  imlo bilan (tutuq belgisiz, "prava", "propiska").
+- **Javobni belgilash.** 8 ta boshqa subagent bizning qidiruvni ishlatmadi: butun korpus
+  (15 810 hujjat, 419 586 birlik, `data/eval/blind/units.tsv.gz`) ustida regex `grep`, nom
+  bo'yicha qidiruv va mundarija bilan topdi, har birini to'liq o'qib tasdiqladi. 1–6 ta javob
+  (o'rtacha ≈3), hammasiga javob topildi. Raqamsiz ilova jadvallari (`matn`) `article: ""` bilan
+  hisoblanadi (`evaluation.Expected`).
+- **O'qitish bilan kesishish.** 2 ta savolning javob moddasi fine-tune juftliklarida bor
+  (`trained` tegi). Juftliklar baholash hujjatlarini chetlab o'tgani uchun kam.
+- **Kamchiliklar.** Belgilashning boshida `grep`da tutuq belgisi xatosi bor edi (3 ta
+  belgilovchiga ta'sir qilgan bo'lishi mumkin): o'tkazib yuborilgan javoblar natijani pasaytiradi,
+  oshirmaydi. Bitta model oilasi (Claude) yozgan, savollar ko'pincha ikki qismli.
+- `alt`: 300 savoldagi kabi `llm_eval.py rephrase` (GPT-5.4, ≈32 ming token).
+
+Natijalar: o'lchovdan keyin shu yerga yoziladi.
+
 ## 7. Ochiq masalalar
 
 - **Model tanlovi.** 4.7-bo'lim: sifat bo'yicha bge-m3 birinchi, lekin `myserver` uchun og'ir.
