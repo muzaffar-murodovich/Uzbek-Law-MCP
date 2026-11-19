@@ -924,15 +924,19 @@ shu 208 savolda tanlangan; savollarning ikki yarmida natija yaqin (0,85/0,92).
 ## 7. Ochiq masalalar
 
 - **Model tanlovi.** 4.7-bo'lim: sifat bo'yicha bge-m3 birinchi, lekin `myserver` uchun og'ir.
+  Fine-tune qilingan e5-small (6h, 6i) va reranker (6j) bilan maqsad bajarildi.
 - **Haqiqiy foydalanuvchi savollari** hali yo'q. Xizmat ishga tushgach, so'rovlar anonim holda
-  yig'ilib, baholash to'plamiga qo'shiladi.
+  yig'ilib, baholash to'plamiga qo'shiladi. Birlashtirish va reranker sozlamalari shu 208 savolda
+  tanlangani uchun (6j) natija biroz optimistik: yangi savollarda qayta o'lchash kerak.
 - **Farmon va qarorlar:** `questions_decrees.yaml` (29, qo'lda) va `questions_llm_full.yaml`da
   bor (6c, 6d).
-- **Yuridik domenga moslashtirish.** LLM yordamida yaratilgan "savol → modda" juftliklarida
-  embedding modelini va yengil reranker'ni qo'shimcha o'qitish (fine-tuning). O'qitish
-  juftliklari `clarity` va iqtibosli tekshiruvdan o'tishi kerak (6d); baholashdagi 208 savol va
-  ularning manba moddalari o'qitishga kirmasligi kerak. To'plam yig'ilmoqda (6f).
-- **Qidiruv tezligi:** serverda 3–4 s, asosiy vaqt FTS ball hisoblashi (6e). `COMMON_DF` sinovi.
+- **Noaniq savollar** (92 ta, kontekstsiz): R@10 0,576. Ular uchun qidiruv emas, savolni
+  aniqlashtirish (klient LLM `alt_queries` yozishi) yordam beradi.
+- **Qidiruv tezligi:** 2–3 s, asosiy vaqt reranker (30 ta modda ≈1,4 s, 6j). FTS 0,04–0,2 s.
+- **Ko'proq o'qitish juftliklari:** embedding uchun data hajmi asosiy cheklov emas (6h); reranker
+  uchun sinalmagan. Hard negative'lar e5 ni yomonlashtirdi (6j).
+- **FTS mayda xatolari:** "burni" → `bur` (-ni tushum kelishigi deb kesiladi); ba'zi so'zlar ichida
+  boshqa tutuq belgisi bo'lgani uchun "toʻ", "boʻ" kabi yarim so'zlar indekslangan (6j).
 - **`questions_llm.yaml` (100 savol)** hali `clarity` va qat'iy tekshiruvdan o'tmagan: uning
   `judge` javoblari ham shishirilgan deb hisoblash kerak.
 - **`gte-multilingual-reranker-base`** transformers 5.22 bilan ishlamadi (modelning o'z kodi).
@@ -977,4 +981,27 @@ uv run --group bench python scripts/rerank_lab.py score \
 uv run --group bench python scripts/rerank_lab.py score \
     --model BAAI/bge-reranker-v2-m3 --variants q --top 30 --batch 8
 uv run --group bench python scripts/rerank_lab.py report --tops 10 20 30 50 100
+# 6h–6j: GPU (RunPod) — fine-tune, butun korpus embedding, reranker
+uv run --group bench python scripts/finetune_e5.py --out data/models/e6 --epochs 6 --lr 3e-5
+uv run --group bench python scripts/export_onnx.py data/models/e6
+bash scripts/with_server_db.sh uv run python scripts/dump_chunk_texts.py --all --heading \
+    --out data/embed/chunk_texts_all.json.gz
+uv run --group bench python scripts/embed_file.py data/embed/chunk_texts_all.json.gz \
+    --torch data/models/e6 --out data/embed/e6-fp32 && \
+    uv run python scripts/embed_file.py --out data/embed/e6-fp32 --merge
+venv/bin/python scripts/load_vectors.py data/embed/e6-fp32-vectors.npz   # serverda
+PYTHONPATH=src /tmp/uzm/.venv/bin/python scripts/build_lemmas.py \
+    data/embed/chunk_texts_all.json.gz --out data/fts/lemmas.tsv \
+    --package src/qonunshunos/text/lemmas.tsv.gz             # uzmorph + lt-proc kerak
+venv/bin/qonunshunos index --fts-only                        # serverda, ≈1 soat
+bash scripts/with_server_db.sh uv run python scripts/dump_candidates.py \
+    --alt-file eval/alt_llm_questions_llm_full.json --out data/eval/v2/candidates.json.gz
+uv run --group bench python scripts/mine_negatives.py --vectors data/embed/e6-fp32/vectors.npz \
+    --chunks data/embed/chunk_meta.npz --model data/models/e6 --out data/train/negatives.jsonl
+uv run --group bench python scripts/finetune_reranker.py --negatives data/train/negatives.jsonl \
+    --texts data/embed/chunk_texts_all.json.gz --out data/models/rr3g16 --group 16 --batch 8
+uv run --group bench python scripts/rerank_lab.py score --candidates data/eval/v2/candidates.json.gz \
+    --texts data/eval/v2/texts.json.gz --cache data/eval/v2/rr_text \
+    --fusion n_vec=100,k=20,w_vec=1.5,extra_chunks=0.0 --model data/models/rr3g16 --top 50
+uv run --group bench python scripts/export_reranker.py data/models/rr3g16
 ```
