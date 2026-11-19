@@ -1,4 +1,4 @@
-from qonunshunos.search.rerank import blended_order, rerank_top
+from qonunshunos.search.rerank import DEFAULT_TOP, blended_order, rerank_top
 
 
 def test_blended_order_keeps_agreement_and_lifts_strong_scores():
@@ -16,8 +16,8 @@ def test_blended_order_without_fused_weight_follows_scores():
 
 def test_rerank_top_from_environment(monkeypatch):
     monkeypatch.delenv("QONUNSHUNOS_RERANK_TOP", raising=False)
-    assert rerank_top() == 20
+    assert rerank_top() == DEFAULT_TOP
     monkeypatch.setenv("QONUNSHUNOS_RERANK_TOP", "0")
     assert rerank_top() == 0
-    monkeypatch.setenv("QONUNSHUNOS_RERANK_TOP", "30")
-    assert rerank_top() == 30
+    monkeypatch.setenv("QONUNSHUNOS_RERANK_TOP", "12")
+    assert rerank_top() == 12

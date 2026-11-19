@@ -16,7 +16,7 @@ import numpy as np
 from qonunshunos.index.embed import ModelSpec, ensure_model
 from qonunshunos.text.normalize import embedding_text
 
-RERANKER = ModelSpec(
+RERANKER_BASE = ModelSpec(
     name="mmarco-mMiniLMv2-L12-H384-int8",
     repo="cross-encoder/mmarco-mMiniLMv2-L12-H384-v1",
     revision="1427fd652930e4ba29e8149678df786c240d8825",
@@ -28,8 +28,23 @@ RERANKER = ModelSpec(
     },
     onnx_file="onnx/model_quint8_avx2.onnx",
 )
+# The base model fine-tuned on the question-passage pairs with mined hard negatives
+# (scripts/finetune_reranker.py, docs/stage2-experiments.md 6j), int8 by
+# scripts/export_reranker.py. Not on the Hub: deploy.sh copies it from home's data/models.
+RERANKER = ModelSpec(
+    name="mmarco-uz-rr1-int8",
+    repo="local/mmarco-uz-rr1",
+    revision="2026-11-19",
+    files={
+        "tokenizer.json": "3a56def25aa40facc030ea8b0b87f3688e4b3c39eb8b45d5702b3a1300fe2a20",
+        "onnx/model_int8.onnx": (
+            "628a5442ef35a188fe3552ce5a39f0d7c5898dec9ee94ccf0e08ef1125481693"
+        ),
+    },
+    onnx_file="onnx/model_int8.onnx",
+)
 MAX_TOKENS = 256  # same quality as 512 offline (6e), a third faster
-DEFAULT_TOP = 20
+DEFAULT_TOP = 30
 BLEND = 0.5  # weight of the fused order next to the reranker's order
 RANK_K = 10  # reciprocal-rank constant for both orders
 
@@ -48,6 +63,7 @@ class Reranker:
         root = ensure_model(RERANKER, model_dir)
         self.name = RERANKER.name
         self.tokenizer = Tokenizer.from_file(str(root / "tokenizer.json"))
+        self.tokenizer.no_padding()  # padding is done below, per batch
         self.tokenizer.enable_truncation(max_tokens, strategy="longest_first")
         options = ort.SessionOptions()
         if threads:

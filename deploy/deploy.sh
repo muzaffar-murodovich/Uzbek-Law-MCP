@@ -13,7 +13,7 @@ HOST=${QONUNSHUNOS_HOST:-myserver}
 APP=/home/deploy/qonunshunos
 MODEL=data/models/Xenova__multilingual-e5-small
 E6_MODEL=data/models/local__e5-small-e6
-RERANK_MODEL=data/models/cross-encoder__mmarco-mMiniLMv2-L12-H384-v1
+RERANK_MODEL=data/models/local__mmarco-uz-rr1
 cd "$(dirname "$0")/.."
 # One shared connection: myserver refuses SSH after a burst of new connections.
 SSH_OPTS=(-o ControlMaster=auto -o ControlPath=/tmp/qs-ssh-%r@%h -o ControlPersist=10m)
@@ -39,9 +39,8 @@ echo "== sync the fine-tuned int8 embedding model (not on the Hub: from home's d
 ssh $HOST "mkdir -p $APP/$E6_MODEL"
 rsync -az $E6_MODEL/ $HOST:$APP/$E6_MODEL/
 
-echo "== sync the int8 reranker model"
-uv run python -c "from pathlib import Path; from qonunshunos.index.embed import ensure_model; \
-from qonunshunos.search.rerank import RERANKER; ensure_model(RERANKER, Path('data/models'))"
+echo "== sync the fine-tuned int8 reranker model (not on the Hub: from home's data/models)"
+[ -d $RERANK_MODEL ] || { echo "missing $RERANK_MODEL: deploy from home"; exit 1; }
 ssh $HOST "mkdir -p $APP/$RERANK_MODEL"
 rsync -az $RERANK_MODEL/ $HOST:$APP/$RERANK_MODEL/
 

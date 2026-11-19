@@ -17,9 +17,13 @@ Mode = Literal["hybrid", "fts", "vector"]
 
 _log = logging.getLogger(__name__)
 
-CANDIDATES = 50
-RRF_K = 60
-EF_SEARCH = 100
+CANDIDATES = 50  # FTS candidates per query text
+VEC_CANDIDATES = 100  # vector candidates per query text (the fine-tuned model earns more)
+RRF_K = 20
+VEC_WEIGHT = 1.5  # weight of the vector lists in the fusion (FTS lists: 1)
+EXTRA_CHUNK = 0.0  # share of a unit's further chunks added to its score
+# Fusion chosen offline on the e6 + lemma candidates (docs/stage2-experiments.md, 6j).
+EF_SEARCH = 200  # HNSW candidate list: above VEC_CANDIDATES, or recall suffers
 SNIPPET = 400
 LEX_BASE = "https://lex.uz/docs"
 
@@ -43,12 +47,17 @@ class Hit:
     ranks: dict[str, int] = field(default_factory=dict)  # best rank per list, for debugging
 
 
-def rrf(rankings: Sequence[Sequence[int]], k: int = RRF_K) -> dict[int, float]:
-    """``Σ 1 / (k + rank)`` over all ranked lists (rank starts at 1)."""
+def rrf(
+    rankings: Sequence[Sequence[int]],
+    k: int = RRF_K,
+    weights: Sequence[float] | None = None,
+) -> dict[int, float]:
+    """``Σ weight / (k + rank)`` over all ranked lists (rank starts at 1; weight 1 by default)."""
     scores: dict[int, float] = {}
-    for ranking in rankings:
+    for n, ranking in enumerate(rankings):
+        weight = weights[n] if weights else 1.0
         for rank, item in enumerate(ranking, start=1):
-            scores[item] = scores.get(item, 0.0) + 1.0 / (k + rank)
+            scores[item] = scores.get(item, 0.0) + weight / (k + rank)
     return scores
 
 
@@ -62,7 +71,7 @@ def _filters(statuses: Sequence[str], doc_types: Sequence[str] | None) -> tuple[
 
 
 HEADING_BONUS = 0.5  # extra weight when a term occurs in the chunk heading
-COMMON_DF = 0.05  # terms in more than 5 % of chunks only score, they do not select
+COMMON_DF = 0.02  # terms in more than 2 % of chunks only score, they do not select (6j)
 
 
 TOTAL_TTL = 600.0  # seconds; the count only drifts with the nightly update
@@ -190,9 +199,12 @@ def search(
             )
         if mode in ("hybrid", "vector"):
             lists[f"vec{i}"] = vector_candidates(
-                conn, embedder, q, statuses=statuses, doc_types=doc_types
+                conn, embedder, q, statuses=statuses, doc_types=doc_types, limit=VEC_CANDIDATES
             )
-    scores = rrf(list(lists.values()))
+    scores = rrf(
+        list(lists.values()),
+        weights=[VEC_WEIGHT if name.startswith("vec") else 1.0 for name in lists],
+    )
     if not scores:
         return []
     ranks: dict[int, dict[str, int]] = {}
@@ -218,7 +230,7 @@ def search(
         chunk_id, section_id, text, doc_id = row[0], row[1], row[2], row[3]
         hit = best.get(section_id)
         if hit is not None:
-            hit.score += scores[chunk_id] * 0.1  # small bonus for several matching pieces
+            hit.score += scores[chunk_id] * EXTRA_CHUNK  # bonus for several matching pieces
             continue
         texts[section_id] = text
         elem_id = row[12]
