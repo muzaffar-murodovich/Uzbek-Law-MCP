@@ -1036,7 +1036,12 @@ Savol va javob matnlari `data/`da qoladi, git'da faqat ID, URL va belgilar
   Markaziy bank, Murojaatlar, Valyutani tartibga solish va boshqalar). Endi ular
   "Prokuratura toʻgʻrisidagi Qonun (257-II tahririda)" deb nomlanadi (`doctype.restated_title`),
   nom bo'lak sarlavhalariga ham kiradi. Serverda 30 tasi qayta indekslandi (matn `home`dagi bilan
-  bir xil ekani `content_hash` bilan tekshirildi), 2 tasi (-3815461, -3815502) deploy'dan keyin.
+  bir xil ekani `content_hash` bilan tekshirildi). Qolgan 2 tasi (Savdo-sanoat palatasi -3815461,
+  O'simliklar karantini -3815502) serverda **matnsiz** edi: to'liq yuklashda minor=Y va
+  "o'zgartish…" nomli aktlar faqat rekvizitlar bilan saqlanadi, tungi yangilanish ham shunday
+  qoldiradi. Endi `index_document` butun aktni yangi tahrirda bayon qilgan aktni har doim to'liq
+  indekslaydi; ikkalasi qayta indekslandi. Matnsiz saqlangan 5 371 aktdan boshqasi bunday emas
+  (20+ birlikli 580 tasi haqiqiy o'zgartirish aktlari).
 
 ## 7. Ochiq masalalar
 
