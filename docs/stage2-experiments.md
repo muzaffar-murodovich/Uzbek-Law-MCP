@@ -1047,9 +1047,9 @@ Savol va javob matnlari `data/`da qoladi, git'da faqat ID, URL va belgilar
 
 - **Model tanlovi.** 4.7-bo'lim: sifat bo'yicha bge-m3 birinchi, lekin `myserver` uchun og'ir.
   Fine-tune qilingan e5-small (6h, 6i) va reranker (6j) bilan maqsad bajarildi.
-- **Haqiqiy foydalanuvchi savollari** hali yo'q (6k, 6l: "ko'r" va advice.uz to'plamlari o'rnini bosadi). Xizmat ishga tushgach, so'rovlar anonim holda
-  yig'ilib, baholash to'plamiga qo'shiladi. Birlashtirish va reranker sozlamalari shu 208 savolda
-  tanlangani uchun (6j) natija biroz optimistik: yangi savollarda qayta o'lchash kerak.
+- **Haqiqiy foydalanuvchi savollari** hali yo'q. Xizmat ishga tushgach, so'rovlar anonim holda
+  yig'ilib, baholash to'plamiga qo'shiladi. 6j sozlamalari 208 savolda tanlangan edi; mustaqil
+  to'plamlarda (6k, 6l) natija tasdiqlandi. Bundan keyin sozlash faqat `dev` qismida.
 - **Farmon va qarorlar:** `questions_decrees.yaml` (29, qo'lda) va `questions_llm_full.yaml`da
   bor (6c, 6d).
 - **Noaniq savollar** (92 ta, kontekstsiz): R@10 0,576. Ular uchun qidiruv emas, savolni

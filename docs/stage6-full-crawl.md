@@ -244,7 +244,8 @@ eval/questions.yaml                  ≈30 ta yangi savol
    14 kun (`/media/muzaffar/Data`), auth jadvallari alohida dump'da 30 kun. To'liq dump ≈1 GB.
 6. ⏳ Indekslash: ✅ HNSW'siz yozish (2026-11-09) → ⏳ indeksni qurish → rekvizitlar. `minor=Y` bo'yicha qaror
    qabul qilindi (pastda, "O'zgartirish kirituvchi hujjatlar").
-7. Baholash: yangi savollar, R@10 va javob vaqti, kerak bo'lsa hujjat turi og'irligi.
+7. ✅ Baholash (`docs/stage2-experiments.md` 6d–6l): R@10 aniq savollarda 0,875 (test qismi 0,856),
+   mustaqil to'plamlarda 0,80–0,88 qat'iy, 0,92–0,96 hakam bilan; qidiruv 2–3 s.
 8. Tungi `update`ni kengaytirish (musbat ID'li lotin hujjatlar ham), bir kecha kuzatish.
 9. `robots.txt`, bosh sahifa, huquqshunosga savol → ochish.
 
@@ -296,6 +297,10 @@ eval/questions.yaml                  ≈30 ta yangi savol
   `find_document` topadi, `get_*` buni tushuntiradi). Qolgan 49 tasi (masalan, "Suv kodeksini
   tasdiqlash to'g'risida", uchuvchisiz apparatlar tartibi) to'liq indekslanadi. Qoida:
   `crawler/full.py`dagi `AMENDING_TITLE_RE`, `index` buyrug'i uni qamrov ro'yxatidan oladi.
+  **Istisno (2026-11-24):** butun aktni "yangi tahrirda" bayon qilgan akt (lex.uz o'sha qonunning
+  amaldagi tahririni faqat shu hujjatda saqlaydi, masalan Prokuratura, Banklar to'g'risidagi
+  qonunlar) har doim to'liq indekslanadi va o'z nomi bilan ko'rsatiladi
+  (`writer.restated_name`, 32 ta hujjat). Ulardan 2 tasi shu kungacha matnsiz turgan edi.
 - **Qayta parse va indekslash (2026-11-08).** `parse --all` 15 810 hujjatni 15 daqiqada qayta
   parse qildi: 0 xato, 1 ogohlantirish (lex.uz jadval sarlavhasini modda deb belgilagan), 34 tasi
   faqat PDF. To'liq indekslanadigan 10 432 hujjatdan ≈492 ming bo'lak chiqadi (hozirgi 16 657

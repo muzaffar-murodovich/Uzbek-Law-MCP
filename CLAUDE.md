@@ -80,15 +80,24 @@ asosiy vaqt reranker. Ommaga ochish kechiktirilgan. O'qitish to'plami: `scripts/
 0,385 → 0,697 ga ko'tardi (reranker'siz, `scripts/vector_lab.py`). Serverga: `scripts/export_onnx.py`
 (dynamo eksport, int8 `per_channel`). GPU'da (RunPod RTX 3090, 6h) 1 849 juftlik, 6 epoch, lr 3e-5 → pool'da hybrid R@10 0,837
 (seed shovqini ±0,02), model `home`da `data/models/gpu1/e6`. Butun korpus GPU'da qayta embedding
-qilindi (`scripts/embed_file.py`, `scripts/load_vectors.py`, 6i). Keyingi ish: ommaga ochishga
+qilindi (`scripts/embed_file.py`, `scripts/load_vectors.py`, 6i). Butun aktni "yangi tahrirda"
+bayon qilgan 32 ta o'zgartirish qonuni o'z nomi bilan ko'rsatiladi ("Prokuratura toʻgʻrisidagi
+Qonun (257-II tahririda)") va har doim to'liq indekslanadi (6l). Keyingi ish: ommaga ochishga
 tayyorgarlik.
 
-Baholash: `eval/questions_llm_full.yaml` (300 savol, `aniq`/`noaniq` teglari, javoblar
-tekshirilgan) asosiy to'plam; natijalar `eval/results/`da. Server bazasiga tegadigan o'lchovlarni
-foydalanuvchi `bash scripts/with_server_db.sh <buyruq>` bilan ishga tushiradi (auto mode
-tunnelni ochishga ruxsat bermaydi). Oflayn tajribalar: `scripts/fusion_lab.py`,
-`scripts/rerank_lab.py` (`data/eval/`dagi nomzodlar va matnlar ustida, `--group bench`).
-LLM `judge` natijasini iqtibosli tekshiruvsiz ishlatma (6d).
+Baholash (6k, 6l): uchta mustaqil to'plam, hammasida qat'iy va hakam bilan R@10 yoziladi.
+- `eval/questions_llm_full.yaml` (300, `aniq`/`noaniq`, `dev`/`test` teglari). **Sozlash faqat
+  `dev`da** (lab skriptlar standart `--tag aniq,dev`), `test` faqat o'lchanadi: aniq test 0,856.
+- `eval/questions_blind.yaml` (120, Claude moddani ko'rmay yozgan, javoblar korpusni
+  `scripts/blind_eval.py grep/show` bilan topilgan): qat'iy 0,800, hakam bilan 0,917.
+- advice.uz (269, yurist javob bergan; matnlar faqat `data/eval/real/`da, git'da faqat ID va
+  belgilar `eval/labels_advice.yaml`; `scripts/real_eval.py questions` qayta tiklaydi): aniq 225
+  qat'iy 0,876, hakam bilan 0,964.
+Natijalar `eval/results/`da (advice natijasi matnli, `data/eval/real/results/`da). Eval va server
+bazasiga tegadigan ishlar `home`da `bash scripts/with_server_db.sh <buyruq>` bilan; foydalanuvchi
+so'rasa uni ham, `deploy/deploy.sh`ni ham `ssh home` orqali o'zim ishga tushiraman. Oflayn
+tajribalar: `scripts/fusion_lab.py`, `scripts/rerank_lab.py` (`data/eval/`dagi nomzodlar va
+matnlar ustida, `--group bench`). LLM `judge` natijasini iqtibosli tekshiruvsiz ishlatma (6d).
 
 CLI: `uv run qonunshunos fetch|parse [--all]|crawl-sample|crawl|listing|scope|crawl-full|db-migrate|index|search|eval|serve|tool|user|auth-cleanup|update|report|notify`
 (`--data-dir`, standart `./data`). `serve` standart holatda OAuth talab qiladi: mahalliy
@@ -99,7 +108,9 @@ LLM (OpenAI) faqat `qonunshunos.llm.OpenAIChat` orqali ishlatiladi: u bepul kunl
 
 ## Server (`myserver`)
 
-- Ilova `/home/deploy/qonunshunos`da, `qonunshunos.service`, `127.0.0.1:8100`. nginx sayti
+- Ilova `/home/deploy/qonunshunos`da, `qonunshunos.service`, `127.0.0.1:8100`. Python:
+  `venv/bin/python` (serverda `uv` yo'q); bir martalik skript: `ssh myserver 'cd
+  /home/deploy/qonunshunos && venv/bin/python -' < skript.py` (bitta ulanish). nginx sayti
   `deploy/nginx-qonunshunos.conf`. Server `.env` git'ga qo'shilmaydi va sinxronlanmaydi.
 - Yangilash: `bash deploy/deploy.sh` (sudo kerak emas, `home`da server manzilini `watch.env`dan
   oladi). Auto mode deploy'ni to'xtatadi: uni foydalanuvchi oddiy terminalda ishga tushiradi.
