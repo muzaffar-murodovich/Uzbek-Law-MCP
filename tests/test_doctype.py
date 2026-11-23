@@ -1,6 +1,6 @@
 import pytest
 
-from qonunshunos.index.doctype import display_title, doc_kind
+from qonunshunos.index.doctype import display_title, doc_kind, restated_title
 
 
 @pytest.mark.parametrize(
@@ -66,3 +66,22 @@ def test_display_title(title, kind, number, expected):
 def test_display_title_clips_long_names():
     title = "Juda uzun nom " * 20
     assert len(display_title(title, "qaror", "PQ-1")) <= 160
+
+
+def test_restated_title_names_the_act_set_out_anew():
+    intro = "… Qonuniga oʻzgartishlar kiritilib, u yangi tahrirda bayon etilsin."
+    title = (
+        "“Prokuratura toʻgʻrisida”gi Oʻzbekiston Respublikasi Qonuniga oʻzgartishlar va "
+        "qoʻshimchalar kiritish haqida"
+    )
+    assert restated_title(title, "257-II", intro, 58) == (
+        "Prokuratura toʻgʻrisidagi Qonun (257-II tahririda)"
+    )
+    nizom = "“Sudyalarning malaka hayʼatlari toʻgʻrisida”gi nizomga oʻzgartish kiritish haqida"
+    assert restated_title(nizom, "OʻRQ-368", "uning yangi tahriri tasdiqlansin", 30) == (
+        "Sudyalarning malaka hayʼatlari toʻgʻrisidagi Nizom (OʻRQ-368 tahririda)"
+    )
+    # A few amended articles, or no restatement: the act keeps its own title.
+    assert restated_title(title, "257-II", intro, 3) is None
+    assert restated_title(title, "257-II", "3-modda oʻz kuchini yoʻqotgan", 58) is None
+    assert restated_title("Aholi bandligi toʻgʻrisida", "OʻRQ-642", intro, 58) is None

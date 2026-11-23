@@ -9,7 +9,7 @@ import numpy as np
 import psycopg
 from psycopg.types.json import Jsonb
 
-from qonunshunos.index.doctype import display_title, doc_kind
+from qonunshunos.index.doctype import display_title, doc_kind, restated_title
 from qonunshunos.index.embed import Embed
 from qonunshunos.parser.card import DocumentCard
 from qonunshunos.parser.models import Heading, ParsedDocument, Unit
@@ -34,6 +34,13 @@ def kind_and_title(document: ParsedDocument, card: DocumentCard | None) -> tuple
     if form is None and "konstitutsiya" in document.title.lower():
         form = "konstitutsiya"
     kind = doc_kind(form, document.number, bodies)
+    intro = next((u for u in document.units if u.kind == "kirish"), None)
+    if intro is not None:
+        text = " ".join(p.text for p in intro.paragraphs)
+        units = sum(1 for u in document.units if u.kind != "kirish")
+        restated = restated_title(document.title, document.number, text, units)
+        if restated:
+            return kind, restated
     return kind, display_title(document.title, kind, document.number)
 
 

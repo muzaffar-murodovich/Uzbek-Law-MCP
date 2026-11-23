@@ -100,3 +100,25 @@ def display_title(title: str, kind: str, number: str | None = None) -> str:
         return f"{title}gi {label}{suffix}"
     prefix = f"{label} {number}" if number else label
     return f"{prefix}: {_clip(title, MAX_TITLE - len(prefix) - 2)}"
+
+
+# An amending act that sets out a whole act anew ("… Qonuniga oʻzgartish va qoʻshimchalar kiritish
+# haqida", whose text is "… uning yangi tahriri tasdiqlansin"): lex.uz keeps the current edition
+# of e.g. the Prokuratura law only under such a title, so nobody finds it by its own name.
+_AMENDS_RE = re.compile(
+    r"^“(?P<name>[^”]+)”gi\b.*?\b(?P<base>qonun|nizom)(?:i)?ga\s+oʻzgartish", re.IGNORECASE
+)
+_RESTATED_RE = re.compile(r"yangi tahrir(?:da|i)")
+RESTATED_MIN_UNITS = 10
+
+
+def restated_title(title: str, number: str | None, intro: str, units: int) -> str | None:
+    """ "Prokuratura toʻgʻrisidagi Qonun (257-II tahririda)" for an act restating another one."""
+    match = _AMENDS_RE.match(" ".join(title.split()))
+    if not match or units < RESTATED_MIN_UNITS or not _RESTATED_RE.search(intro):
+        return None
+    name = match.group("name").strip()
+    base = match.group("base").capitalize()
+    joined = f"{name}gi" if name.endswith(_ABOUT_END) else f"{name}:"
+    edition = f" ({number} tahririda)" if number else ""
+    return _clip(f"{joined} {base}{edition}")
