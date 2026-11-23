@@ -1,0 +1,3656 @@
+# advice.uz questions (scripts/real_eval.py): ids, sources and labels only; the texts
+# stay in data/ (questions rebuilds data/eval/real/questions_advice.yaml).
+- id: adv-1092
+  url: https://advice.uz/oz/document/1092
+  expected:
+  - document: -3524650
+    article: ''
+    within: 3-ilova
+  - document: -3524650
+    article: ''
+    within: 2-ilova
+  - document: -3524650
+    article: '4'
+  tags:
+  - blind
+  - tibbiyot
+- id: adv-1201
+  url: https://advice.uz/oz/document/1201
+  expected:
+  - document: -180552
+    article: '745'
+  - document: -3804290
+    article: '27'
+  - document: -3804290
+    article: 30¹
+  - document: -3804290
+    article: 36⁶
+  - document: -3804290
+    article: '35'
+  - document: -7491592
+    article: '3'
+  tags:
+  - blind
+  - bank
+- id: adv-1270
+  url: https://advice.uz/oz/document/1270
+  expected:
+  - document: -54503
+    article: '11'
+  - document: -54503
+    article: 9¹
+  - document: -7228726
+    article: ''
+    within: Nizomga 5-ilova
+  - document: -7228726
+    article: '45'
+  - document: -6502543
+    article: '27'
+  tags:
+  - blind
+  - advokatura
+- id: adv-1272
+  url: https://advice.uz/oz/document/1272
+  expected:
+  - document: -54503
+    article: '17'
+  - document: -6478021
+    article: '12'
+  - document: -6478021
+    article: '20'
+  - document: -6478021
+    article: '2'
+    within: NIZOM
+  tags:
+  - blind
+  - advokatura
+- id: adv-1273
+  url: https://advice.uz/oz/document/1273
+  expected:
+  - document: -54503
+    article: '14'
+  - document: -7619714
+    article: '48'
+  - document: -7619714
+    article: '49'
+  - document: -7619714
+    article: '68'
+  - document: -7619714
+    article: '50'
+  - document: -7619714
+    article: '60'
+  tags:
+  - blind
+  - advokatura
+- id: adv-1441
+  url: https://advice.uz/oz/document/1441
+  expected:
+  - document: -78717
+    article: '3'
+  - document: -6445145
+    article: '64'
+  tags:
+  - blind
+  - harbiy
+- id: adv-151
+  url: https://advice.uz/oz/document/151
+  expected:
+  - document: -3334124
+    article: '29'
+  - document: -3334124
+    article: '30'
+  - document: -3334124
+    article: '15'
+    within: 3-ilova
+  - document: -3334124
+    article: '14'
+    within: 3-ilova
+  tags:
+  - blind
+  - transport
+- id: adv-156
+  url: https://advice.uz/oz/document/156
+  expected:
+  - document: -1225447
+    article: ''
+    within: 2-ilova
+  tags:
+  - blind
+  - transport
+- id: adv-1595
+  url: https://advice.uz/oz/document/1595
+  expected:
+  - document: -7583058
+    article: ''
+    within: 1-ilova
+  - document: -7583058
+    article: '2'
+    within: ''
+  - document: -7098084
+    article: '2'
+    within: ''
+  - document: -7583058
+    article: '3'
+    within: 3-ilova
+  tags:
+  - blind
+  - tibbiyot
+- id: adv-1598
+  url: https://advice.uz/oz/document/1598
+  expected:
+  - document: -2898879
+    article: '5'
+    within: '> I. Umumiy'
+  - document: -2898879
+    article: '3'
+    within: '> I. Umumiy'
+  - document: -2898879
+    article: '12'
+    within: Nizomga 2-ilova
+  tags:
+  - blind
+  - tibbiyot
+- id: adv-1630
+  url: https://advice.uz/oz/document/1630
+  expected:
+  - document: -1729272
+    article: '17'
+    within: 1-ilova
+  - document: -5015098
+    article: '22'
+    within: 1-ilova
+  - document: -5015098
+    article: '9'
+    within: 1-ilova
+  - document: -1729272
+    article: '18'
+    within: 1-ilova
+  tags:
+  - blind
+  - hujjat
+- id: adv-2079-1
+  url: https://advice.uz/oz/document/2079
+  expected:
+  - document: -104720
+    article: '38'
+  - document: -104720
+    article: '40'
+  - document: -104720
+    article: '41'
+  - document: -6638940
+    article: '111'
+  - document: -104720
+    article: '47'
+  - document: -2414114
+    article: '5'
+    judged: true
+  - document: -3517337
+    article: '34'
+    judged: true
+  tags:
+  - blind
+  - oila
+- id: adv-2079-2
+  url: https://advice.uz/oz/document/2079
+  expected:
+  - document: -26477
+    article: 42¹
+  - document: -3967908
+    article: '8'
+  - document: -4591929
+    article: '15'
+  - document: -3967908
+    article: '11'
+  - document: -3967908
+    article: '28'
+  tags:
+  - blind
+  - ijro
+- id: adv-2079-3
+  url: https://advice.uz/oz/document/2079
+  expected:
+  - document: -104720
+    article: '23'
+  - document: -104720
+    article: '25'
+  - document: -104720
+    article: '28'
+  - document: -104720
+    article: '27'
+  tags:
+  - blind
+  - oila
+- id: adv-2079-4
+  url: https://advice.uz/oz/document/2079
+  expected:
+  - document: -104720
+    article: '62'
+  - document: -1945465
+    article: '17'
+  - document: -1945465
+    article: '18'
+  - document: -1945465
+    article: '16'
+  tags:
+  - blind
+  - oila
+- id: adv-2079-5
+  url: https://advice.uz/oz/document/2079
+  expected:
+  - document: -6638940
+    article: '31'
+    within: 3-ilova
+  - document: -104720
+    article: '205'
+  - document: -1604474
+    article: '26'
+  tags:
+  - blind
+  - oila
+- id: adv-2079-6
+  url: https://advice.uz/oz/document/2079
+  expected:
+  - document: -104720
+    article: '70'
+  tags:
+  - blind
+  - oila
+- id: adv-2079-7
+  url: https://advice.uz/oz/document/2079
+  expected:
+  - document: -3517337
+    article: '188'
+  - document: -3523891
+    article: '3'
+  - document: -3527353
+    article: '5'
+  - document: -3517337
+    article: '5'
+  tags:
+  - blind
+  - sud
+- id: adv-2079-8
+  url: https://advice.uz/oz/document/2079
+  expected:
+  - document: -104720
+    article: '39'
+  - document: -2414114
+    article: '6'
+  tags:
+  - blind
+  - oila
+- id: adv-2079-9
+  url: https://advice.uz/oz/document/2079
+  expected:
+  - document: -104720
+    article: '44'
+  - document: -180552
+    article: '733'
+  tags:
+  - blind
+  - oila
+- id: adv-2080-1
+  url: https://advice.uz/oz/document/2080
+  expected:
+  - document: -5013007
+    article: '9'
+  - document: -6044094
+    article: '8'
+    within: 1-ilova
+  tags:
+  - blind
+  - talim
+- id: adv-2080-2
+  url: https://advice.uz/oz/document/2080
+  expected:
+  - document: -5443081
+    article: '2'
+    within: NIZOM > 1-bob
+  - document: -5443081
+    article: '3'
+    within: NIZOM > 1-bob
+  - document: -5443081
+    article: '4'
+    within: NIZOM > 1-bob
+  - document: -5443081
+    article: '5'
+    within: NIZOM > 1-bob
+  tags:
+  - blind
+  - talim
+- id: adv-2080-3
+  url: https://advice.uz/oz/document/2080
+  expected:
+  - document: -7726569
+    article: '81'
+  - document: -7726569
+    article: '26'
+    within: 2-ilova
+  - document: -1380636
+    article: '12'
+  - document: -1380636
+    article: '8'
+    judged: true
+  - document: -1380636
+    article: '6'
+    within: Ilova. Xorijiy fuqarolarni Oʻzbekiston Respublikasi taʼlim muassasalariga oʻqishga qabul qilish
+      va oʻqitish tartibi toʻgʻrisida NIZOM > II. Oʻqishga qabul qilish tartibi, shartlari va oʻqitish
+      turlari
+    judged: true
+  - document: -1380636
+    article: '1'
+    within: ''
+    judged: true
+  - document: -1380636
+    article: '11'
+    judged: true
+  - document: -7726569
+    article: '27'
+    within: 2-ilova. Oliy taʼlim tashkilotlarining magistraturasiga oʻqishga qabul qilish tartibi toʻgʻrisida
+      NIZOM > 5-bob. Xorijiy fuqarolarni oʻqishga qabul qilish
+    judged: true
+  tags:
+  - blind
+  - talim
+- id: adv-2080-4
+  url: https://advice.uz/oz/document/2080
+  expected:
+  - document: -3026246
+    article: '23'
+  - document: -8117474
+    article: '38'
+    judged: true
+  tags:
+  - blind
+  - talim
+- id: adv-2080-5
+  url: https://advice.uz/oz/document/2080
+  expected:
+  - document: -6937332
+    article: '2'
+  - document: -755838
+    article: '3'
+    judged: true
+  - document: -755838
+    article: '1'
+    within: Ilova. Kadrlarni davlat grantlari asosida maqsadli tayyorlash tartibi toʻgʻrisida NIZOM >
+      I. Umumiy qoidalar
+    judged: true
+  tags:
+  - blind
+  - talim
+- id: adv-2083-10
+  url: https://advice.uz/oz/document/2083
+  expected:
+  - document: -2006789
+    article: '5'
+  - document: -3117471
+    article: '1'
+    within: NIZOM
+  tags:
+  - blind
+  - tadbirkorlik
+- id: adv-2083-2
+  url: https://advice.uz/oz/document/2083
+  expected:
+  - document: -180552
+    article: '948'
+  tags:
+  - blind
+  - sugurta
+- id: adv-2083-4
+  url: https://advice.uz/oz/document/2083
+  expected:
+  - document: -4680944
+    article: ''
+  tags:
+  - blind
+  - soliq
+- id: adv-2083-6
+  url: https://advice.uz/oz/document/2083
+  expected:
+  - document: -53877
+    article: '3'
+  - document: -111189
+    article: '329'
+  tags:
+  - blind
+  - fuqarolik
+- id: adv-2083-8
+  url: https://advice.uz/oz/document/2083
+  expected:
+  - document: -1063359
+    article: '6'
+  - document: -1063359
+    article: '63'
+  tags:
+  - blind
+  - fuqarolik
+- id: adv-2085-10
+  url: https://advice.uz/oz/document/2085
+  expected:
+  - document: -104720
+    article: 4¹
+  tags:
+  - blind
+  - oila
+- id: adv-2085-2
+  url: https://advice.uz/oz/document/2085
+  expected:
+  - document: -112314
+    article: '14'
+  - document: -596542
+    article: '2'
+    within: I. UMUMIY QOIDALAR
+  tags:
+  - blind
+  - pensiya
+- id: adv-2085-4
+  url: https://advice.uz/oz/document/2085
+  expected:
+  - document: -3517337
+    article: '295'
+  - document: -3515186
+    article: '24'
+  - document: -1437927
+    article: '16'
+  tags:
+  - blind
+  - pensiya
+- id: adv-2085-6
+  url: https://advice.uz/oz/document/2085
+  expected:
+  - document: -112314
+    article: '49'
+  - document: -6236060
+    article: '125'
+  - document: -6236060
+    article: 125¹
+  - document: -7546356
+    article: '1'
+  tags:
+  - blind
+  - pensiya
+- id: adv-2085-8
+  url: https://advice.uz/oz/document/2085
+  expected:
+  - document: -6905497
+    article: '3'
+    within: NIZOM > 1-bob
+  - document: -6905497
+    article: '13'
+  - document: -6905497
+    article: '23'
+  - document: -6905497
+    article: '24'
+  - document: -6905497
+    article: ''
+    within: 2-ilova
+  - document: -5049511
+    article: '33'
+    judged: true
+  tags:
+  - blind
+  - ijtimoiy
+- id: adv-2088-1
+  url: https://advice.uz/oz/document/2088
+  expected:
+  - document: -4233891
+    article: '3'
+  tags:
+  - blind
+  - sogliq
+- id: adv-2088-2
+  url: https://advice.uz/oz/document/2088
+  expected:
+  - document: -4233891
+    article: '3'
+  - document: -4233891
+    article: '11'
+  - document: -4233891
+    article: '16'
+  - document: -4233891
+    article: '6'
+  tags:
+  - blind
+  - sogliq
+- id: adv-2088-3
+  url: https://advice.uz/oz/document/2088
+  expected:
+  - document: -4233891
+    article: '18'
+  - document: -4951702
+    article: '1'
+    within: NIZOM > 1-bob
+  tags:
+  - blind
+  - sogliq
+- id: adv-2088-4
+  url: https://advice.uz/oz/document/2088
+  expected:
+  - document: -5049511
+    article: '3'
+  tags:
+  - blind
+  - ijtimoiy
+- id: adv-2088-5
+  url: https://advice.uz/oz/document/2088
+  expected:
+  - document: -5049511
+    article: '32'
+  - document: -5049511
+    article: '33'
+  - document: -6523569
+    article: '2'
+    judged: true
+  - document: -5852486
+    article: '2'
+    within: 11-ilova. Nogironligi boʻlgan shaxsni reabilitatsiya qilishning yakka tartibdagi dasturi toʻgʻrisida
+      NIZOM > I. Umumiy qoidalar
+    judged: true
+  tags:
+  - blind
+  - ijtimoiy
+- id: adv-2088-6
+  url: https://advice.uz/oz/document/2088
+  expected:
+  - document: -7583058
+    article: ''
+    within: 1-ilova
+  - document: -7583058
+    article: '2'
+    within: ''
+  - document: -7583058
+    article: '6'
+    within: NIZOM
+  - document: -26013
+    article: '8'
+  tags:
+  - blind
+  - sogliq
+- id: adv-2090-1
+  url: https://advice.uz/oz/document/2090
+  expected:
+  - document: -4674902
+    article: '378'
+  tags:
+  - blind
+  - soliq
+- id: adv-2090-2
+  url: https://advice.uz/oz/document/2090
+  expected:
+  - document: -4674902
+    article: '337'
+  - document: -4674902
+    article: '339'
+  tags:
+  - blind
+  - soliq
+- id: adv-2090-3
+  url: https://advice.uz/oz/document/2090
+  expected:
+  - document: -4674902
+    article: '461'
+  - document: -4674902
+    article: '467'
+  - document: -4674902
+    article: '462'
+  - document: -5739505
+    article: '15'
+    within: 2-ilova. Yakka tartibdagi tadbirkorlar tomonidan soliq solinadigan daromadlar va chegiriladigan
+      xarajatlarning hisobini yuritish tartibi toʻgʻrisida NIZOM > 4-bob. Soliq organlari tomonidan yakka
+      tartibdagi tadbirkorlarning soliq solinadigan daromadlarini aniqlash mezonlari
+    judged: true
+  tags:
+  - blind
+  - soliq
+- id: adv-2090-4
+  url: https://advice.uz/oz/document/2090
+  expected:
+  - document: -4674902
+    article: '421'
+  tags:
+  - blind
+  - soliq
+- id: adv-2090-5
+  url: https://advice.uz/oz/document/2090
+  expected:
+  - document: -4674902
+    article: '369'
+  - document: -4674902
+    article: '381'
+  tags:
+  - blind
+  - soliq
+- id: adv-2091-1
+  url: https://advice.uz/oz/document/2091
+  expected:
+  - document: -3725214
+    article: '30'
+  - document: -3725214
+    article: '33'
+  - document: -3725214
+    article: '31'
+  - document: -3725214
+    article: '34'
+  tags:
+  - blind
+  - jinoyat
+  - trained
+- id: adv-2091-2
+  url: https://advice.uz/oz/document/2091
+  expected:
+  - document: -111460
+    article: '226'
+  - document: -6445145
+    article: '27'
+  tags:
+  - blind
+  - jinoyat
+- id: adv-2091-3
+  url: https://advice.uz/oz/document/2091
+  expected:
+  - document: -6445145
+    article: '136'
+  - document: -5534923
+    article: '9'
+  - document: -5534923
+    article: '63'
+  - document: -5534923
+    article: '64'
+  tags:
+  - blind
+  - sud
+- id: adv-2091-4
+  url: https://advice.uz/oz/document/2091
+  expected:
+  - document: -111460
+    article: '76'
+  - document: -3517337
+    article: '21'
+  - document: -3523891
+    article: '20'
+  - document: -3527353
+    article: '21'
+  tags:
+  - blind
+  - sud
+- id: adv-2091-5
+  url: https://advice.uz/oz/document/2091
+  expected:
+  - document: -5534923
+    article: '63'
+  - document: -5534923
+    article: '64'
+  - document: -6445145
+    article: '136'
+  tags:
+  - blind
+  - sud
+- id: adv-2091-6
+  url: https://advice.uz/oz/document/2091
+  expected:
+  - document: -97664
+    article: '30'
+  - document: -97664
+    article: '31'
+  - document: -97664
+    article: '32'
+  - document: -97664
+    article: '33'
+  - document: -97664
+    article: '34'
+  - document: -97664
+    article: '36'
+  tags:
+  - blind
+  - mamuriy
+- id: adv-2091-7
+  url: https://advice.uz/oz/document/2091
+  expected:
+  - document: -6445145
+    article: '28'
+  - document: -111460
+    article: '23'
+  - document: -5534923
+    article: '16'
+  tags:
+  - blind
+  - jinoyat
+- id: adv-2093-1
+  url: https://advice.uz/oz/document/2093
+  expected:
+  - document: -3804290
+    article: 38¹
+  - document: -4575786
+    article: '37'
+    judged: true
+  - document: -6933268
+    article: '47'
+    judged: true
+  - document: -5355601
+    article: '36'
+    judged: true
+  tags:
+  - blind
+  - bank
+- id: adv-2093-2
+  url: https://advice.uz/oz/document/2093
+  expected:
+  - document: -180552
+    article: '773'
+  - document: -180552
+    article: '783'
+  - document: -180552
+    article: '785'
+  tags:
+  - blind
+  - bank
+- id: adv-2093-3
+  url: https://advice.uz/oz/document/2093
+  expected:
+  - document: -41760
+    article: '13'
+  tags:
+  - blind
+  - bank
+- id: adv-2095-1
+  url: https://advice.uz/oz/document/2095
+  expected:
+  - document: -4704
+    article: '18'
+  - document: -180552
+    article: '433'
+  - document: -243235
+    article: '27'
+  - document: -243235
+    article: '28'
+  tags:
+  - blind
+  - istemolchi
+- id: adv-2095-2
+  url: https://advice.uz/oz/document/2095
+  expected:
+  - document: -4680944
+    article: '8'
+  - document: -4704
+    article: '29'
+  tags:
+  - blind
+  - istemolchi
+- id: adv-2095-3
+  url: https://advice.uz/oz/document/2095
+  expected:
+  - document: -4704
+    article: '7'
+  - document: -4704
+    article: 28¹
+  - document: -6213382
+    article: '26'
+  tags:
+  - blind
+  - istemolchi
+- id: adv-2095-4
+  url: https://advice.uz/oz/document/2095
+  expected:
+  - document: -4704
+    article: '15'
+  tags:
+  - blind
+  - istemolchi
+- id: adv-2095-5
+  url: https://advice.uz/oz/document/2095
+  expected:
+  - document: -4704
+    article: '13'
+  - document: -243235
+    article: '33'
+  tags:
+  - blind
+  - istemolchi
+- id: adv-2095-6
+  url: https://advice.uz/oz/document/2095
+  expected:
+  - document: -4704
+    article: '22'
+  - document: -180552
+    article: '1022'
+  - document: -180552
+    article: '1021'
+    judged: true
+  - document: -1449509
+    article: '8'
+    judged: true
+  - document: -7901164
+    article: '21'
+    judged: true
+  tags:
+  - blind
+  - istemolchi
+- id: adv-221
+  url: https://advice.uz/oz/document/221
+  expected:
+  - document: -112314
+    article: '25'
+  - document: -112314
+    article: '26'
+  - document: -112314
+    article: '27'
+  - document: -112314
+    article: '31'
+  tags:
+  - blind
+  - pensiya
+- id: adv-225
+  url: https://advice.uz/oz/document/225
+  expected:
+  - document: -112314
+    article: '52'
+  - document: -6236060
+    article: '140'
+  - document: -112314
+    article: '63'
+  - document: -112314
+    article: '64'
+  - document: -112314
+    article: '65'
+  - document: -112314
+    article: '60'
+  tags:
+  - blind
+  - pensiya
+- id: adv-2273-1
+  url: https://advice.uz/oz/document/2273
+  expected:
+  - document: -4674902
+    article: '378'
+  - document: -4674902
+    article: '381'
+  tags:
+  - blind
+  - soliq
+- id: adv-2273-2
+  url: https://advice.uz/oz/document/2273
+  expected:
+  - document: -4674902
+    article: '378'
+  - document: -4674902
+    article: '423'
+  - document: -4674902
+    article: '433'
+  tags:
+  - blind
+  - soliq
+- id: adv-2273-3
+  url: https://advice.uz/oz/document/2273
+  expected:
+  - document: -4674902
+    article: '369'
+  - document: -4674902
+    article: '377'
+  - document: -4674902
+    article: '381'
+  tags:
+  - blind
+  - soliq
+- id: adv-2273-4
+  url: https://advice.uz/oz/document/2273
+  expected:
+  - document: -4674902
+    article: '421'
+  - document: -4674902
+    article: '436'
+  tags:
+  - blind
+  - soliq
+- id: adv-2273-5
+  url: https://advice.uz/oz/document/2273
+  expected:
+  - document: -4674902
+    article: '393'
+  - document: -4674902
+    article: '397'
+  - document: -4674902
+    article: '388'
+  tags:
+  - blind
+  - soliq
+- id: adv-2311
+  url: https://advice.uz/oz/document/2311
+  expected:
+  - document: -5871129
+    article: ''
+    within: 16-ilova. Yovvoyi hayvonlarni ovlash uchun ruxsatnoma
+  - document: -4890112
+    article: '16'
+  - document: -4890112
+    article: ''
+    within: 1-ilova. Yovvoyi hayvonlarni tutish uchun toʻlovlar
+  - document: -4890112
+    article: '31'
+  - document: -4680944
+    article: ''
+  tags:
+  - blind
+  - ekologiya
+  - trained
+- id: adv-2341
+  url: https://advice.uz/oz/document/2341
+  expected:
+  - document: -3359038
+    article: '2'
+    within: NIZOM
+  - document: -3359038
+    article: '18'
+  - document: -3359038
+    article: '17'
+  - document: -3359038
+    article: '25'
+  - document: -1833366
+    article: '3'
+    within: itlar va mushuklarni saqlash
+  tags:
+  - blind
+  - veterinariya
+- id: adv-2362
+  url: https://advice.uz/oz/document/2362
+  expected:
+  - document: -4587975
+    article: '3'
+    within: QOIDALARI
+  - document: -4191475
+    article: '8'
+    within: Qattiq va suyuq maishiy chiqindilarni toʻplash
+  - document: -3924395
+    article: '32'
+  - document: -3924395
+    article: '30'
+  - document: -5245839
+    article: '6'
+    within: NIZOM
+  tags:
+  - blind
+  - kommunal
+- id: adv-2363
+  url: https://advice.uz/oz/document/2363
+  expected:
+  - document: -55561
+    article: '28'
+  - document: -2304953
+    article: '17'
+  - document: -55561
+    article: '13'
+  - document: -42423
+    article: '8'
+  - document: -2304953
+    article: '15'
+  tags:
+  - blind
+  - ekologiya
+  - trained
+- id: adv-2452
+  url: https://advice.uz/oz/document/2452
+  expected:
+  - document: -83472
+    article: '3'
+  - document: -6445145
+    article: '33'
+  tags:
+  - blind
+  - axborot
+- id: adv-2456
+  url: https://advice.uz/oz/document/2456
+  expected:
+  - document: -6213382
+    article: '3'
+  - document: -6213382
+    article: '8'
+  tags:
+  - blind
+  - savdo
+- id: adv-2476-1
+  url: https://advice.uz/oz/document/2476
+  expected:
+  - document: -4386848
+    article: '99'
+  - document: -4584371
+    article: '27'
+  - document: -4584371
+    article: '28'
+  - document: -4386848
+    article: '26'
+  tags:
+  - blind
+  - saylov
+- id: adv-2476-2
+  url: https://advice.uz/oz/document/2476
+  expected:
+  - document: -4386848
+    article: '52'
+  - document: -7015537
+    article: '62'
+  - document: -4386848
+    article: '27'
+  - document: -4386848
+    article: '30'
+  tags:
+  - blind
+  - saylov
+- id: adv-2476-3
+  url: https://advice.uz/oz/document/2476
+  expected:
+  - document: -4386848
+    article: '55'
+  - document: -7015537
+    article: '68'
+  tags:
+  - blind
+  - saylov
+- id: adv-2476-4
+  url: https://advice.uz/oz/document/2476
+  expected:
+  - document: -4386848
+    article: '55'
+  - document: -7015537
+    article: '66'
+  tags:
+  - blind
+  - saylov
+- id: adv-2476-5
+  url: https://advice.uz/oz/document/2476
+  expected:
+  - document: -7015537
+    article: '65'
+  - document: -4386848
+    article: '31'
+  - document: -7015537
+    article: '41'
+  - document: -7015537
+    article: '22'
+  tags:
+  - blind
+  - saylov
+- id: adv-2476-6
+  url: https://advice.uz/oz/document/2476
+  expected:
+  - document: -7015537
+    article: '66'
+  - document: -4549525
+    article: 15³
+  tags:
+  - blind
+  - saylov
+- id: adv-2476-7
+  url: https://advice.uz/oz/document/2476
+  expected:
+  - document: -4386848
+    article: '27'
+  - document: -7015537
+    article: '63'
+  - document: -4386848
+    article: '52'
+  tags:
+  - blind
+  - saylov
+- id: adv-2489
+  url: https://advice.uz/oz/document/2489
+  expected:
+  - document: -4167683
+    article: '19'
+  - document: -1729272
+    article: '17'
+    within: 1-ilova
+  tags:
+  - blind
+  - migratsiya
+- id: adv-2507
+  url: https://advice.uz/oz/document/2507
+  expected:
+  - document: -3765833
+    article: '74'
+  - document: -3765833
+    article: '76'
+  - document: -3765833
+    article: '75'
+  tags:
+  - blind
+  - transport
+- id: adv-2508
+  url: https://advice.uz/oz/document/2508
+  expected:
+  - document: -4022649
+    article: '2'
+    within: 1-ilova
+  - document: -4022649
+    article: '3'
+  tags:
+  - blind
+  - fuqarolik
+- id: adv-2531
+  url: https://advice.uz/oz/document/2531
+  expected:
+  - document: -4386848
+    article: '50'
+  - document: -4386848
+    article: '49'
+  - document: -7015537
+    article: '10'
+  tags:
+  - blind
+  - saylov
+- id: adv-2537
+  url: https://advice.uz/oz/document/2537
+  expected:
+  - document: -5668661
+    article: '2'
+  - document: -5668661
+    article: ''
+    within: 4-ilova
+  - document: -5668661
+    article: '5'
+  tags:
+  - blind
+  - ijtimoiy
+- id: adv-2741
+  url: https://advice.uz/oz/document/2741
+  expected:
+  - document: -2468214
+    article: '3'
+  - document: -2468214
+    article: '5'
+  - document: -2468214
+    article: '6'
+  tags:
+  - blind
+  - nnt
+- id: adv-2788-1
+  url: https://advice.uz/oz/document/2788
+  expected:
+  - document: -180552
+    article: '603'
+  - document: -5936132
+    article: '7'
+    within: 1-ilova. Koʻchmas mulk ijara
+  tags:
+  - blind
+  - uyjoy
+- id: adv-2788-10
+  url: https://advice.uz/oz/document/2788
+  expected:
+  - document: -180552
+    article: '604'
+  tags:
+  - blind
+  - uyjoy
+- id: adv-2788-11
+  url: https://advice.uz/oz/document/2788
+  expected:
+  - document: -180552
+    article: '610'
+  tags:
+  - blind
+  - uyjoy
+- id: adv-2788-2
+  url: https://advice.uz/oz/document/2788
+  expected:
+  - document: -180552
+    article: '612'
+  tags:
+  - blind
+  - uyjoy
+- id: adv-2788-3
+  url: https://advice.uz/oz/document/2788
+  expected:
+  - document: -180552
+    article: '611'
+  - document: -112328
+    article: '12'
+    judged: true
+  - document: -180552
+    article: '577'
+    judged: true
+  tags:
+  - blind
+  - uyjoy
+- id: adv-2788-4
+  url: https://advice.uz/oz/document/2788
+  expected:
+  - document: -180552
+    article: '615'
+  - document: -4216319
+    article: '16'
+    judged: true
+  - document: -4216319
+    article: '18'
+    judged: true
+  tags:
+  - blind
+  - uyjoy
+- id: adv-2788-5
+  url: https://advice.uz/oz/document/2788
+  expected:
+  - document: -180552
+    article: '615'
+  tags:
+  - blind
+  - uyjoy
+- id: adv-2788-6
+  url: https://advice.uz/oz/document/2788
+  expected:
+  - document: -97664
+    article: 159¹
+  tags:
+  - blind
+  - uyjoy
+- id: adv-2788-7
+  url: https://advice.uz/oz/document/2788
+  expected:
+  - document: -180552
+    article: '613'
+  - document: -5936132
+    article: '6'
+    within: 1-ilova. Koʻchmas mulk ijara
+  tags:
+  - blind
+  - uyjoy
+- id: adv-2788-8
+  url: https://advice.uz/oz/document/2788
+  expected:
+  - document: -180552
+    article: '609'
+  - document: -106136
+    article: '61'
+    judged: true
+  tags:
+  - blind
+  - uyjoy
+- id: adv-2788-9
+  url: https://advice.uz/oz/document/2788
+  expected:
+  - document: -5936132
+    article: 7¹
+  - document: -5936132
+    article: 11¹
+  - document: -5936132
+    article: '13'
+    within: 1-ilova. Koʻchmas mulk ijara
+  - document: -8177297
+    article: '8'
+    within: 1-ilova. Oʻzbekiston Respublikasi fuqarolarini yashash va turgan joyi boʻyicha roʻyxatdan
+      oʻtkazish hamda roʻyxatdan oʻtkazilganligini bekor qilish tartibi toʻgʻrisida NIZOM > 1-bob. Umumiy
+      qoidalar
+    judged: true
+  tags:
+  - blind
+  - uyjoy
+- id: adv-2821-1
+  url: https://advice.uz/oz/document/2821
+  expected:
+  - document: -4680944
+    article: ''
+  - document: -4680944
+    article: '4'
+  - document: -4680944
+    article: '19'
+  tags:
+  - blind
+  - oila
+- id: adv-2821-2
+  url: https://advice.uz/oz/document/2821
+  expected:
+  - document: -106197
+    article: '4'
+  - document: -2387357
+    article: '11'
+  - document: -4494709
+    article: '8'
+  tags:
+  - blind
+  - oila
+- id: adv-2821-4
+  url: https://advice.uz/oz/document/2821
+  expected:
+  - document: -6156799
+    article: '2'
+    within: ''
+  - document: -6156799
+    article: '3'
+    within: NIZOM
+  - document: -6156799
+    article: '5'
+    within: NIZOM
+  - document: -5899498
+    article: '3'
+  tags:
+  - blind
+  - talim
+- id: adv-2823-1
+  url: https://advice.uz/oz/document/2823
+  expected:
+  - document: -7484114
+    article: '1'
+    within: ''
+  - document: -7484114
+    article: '3'
+    within: ''
+  - document: -7484114
+    article: '11'
+    within: NIZOM
+  tags:
+  - blind
+  - bojxona
+- id: adv-2823-2
+  url: https://advice.uz/oz/document/2823
+  expected:
+  - document: -7484114
+    article: ''
+    within: 1-ilova. Jismoniy shaxslar tomonidan respublikaga bojsiz
+  - document: -7484114
+    article: ''
+    within: 2-ilova. Jismoniy shaxslar tomonidan ayrim turdagi tovarlarni respublikadan bojsiz olib chiqishning
+      MIQDORIY NORMALARI
+    judged: true
+  tags:
+  - blind
+  - bojxona
+- id: adv-2823-3
+  url: https://advice.uz/oz/document/2823
+  expected:
+  - document: -2442156
+    article: '2'
+    within: Ilova
+  - document: -4517458
+    article: 29¹
+  tags:
+  - blind
+  - bojxona
+- id: adv-2823-4
+  url: https://advice.uz/oz/document/2823
+  expected:
+  - document: -7484114
+    article: '3'
+    within: ''
+  - document: -7484114
+    article: ''
+    within: 2-ilova. Jismoniy shaxslar tomonidan ayrim turdagi
+  tags:
+  - blind
+  - bojxona
+- id: adv-2823-5
+  url: https://advice.uz/oz/document/2823
+  expected:
+  - document: -4562834
+    article: '22'
+  - document: -3540203
+    article: '2'
+    within: 1-ilova
+  - document: -3540203
+    article: '5'
+    within: 1-ilova
+  - document: -3540203
+    article: '6'
+  tags:
+  - blind
+  - bojxona
+- id: adv-2823-6
+  url: https://advice.uz/oz/document/2823
+  expected:
+  - document: -2876354
+    article: '159'
+  - document: -2876354
+    article: '160'
+  - document: -2876354
+    article: '158'
+    judged: true
+  - document: -1703865
+    article: '15'
+    judged: true
+  tags:
+  - blind
+  - bojxona
+- id: adv-2826-1
+  url: https://advice.uz/oz/document/2826
+  expected:
+  - document: -4022649
+    article: '9'
+    within: 1-ilova
+  - document: -4022649
+    article: '1'
+    within: ''
+  tags:
+  - blind
+  - fuqarolik
+- id: adv-2826-2
+  url: https://advice.uz/oz/document/2826
+  expected:
+  - document: -4022649
+    article: '11'
+  - document: -4022649
+    article: '12'
+  tags:
+  - blind
+  - tashqi
+- id: adv-2826-3
+  url: https://advice.uz/oz/document/2826
+  expected:
+  - document: -4022649
+    article: '5'
+    within: ''
+  - document: -4022649
+    article: '13'
+  tags:
+  - blind
+  - tashqi
+- id: adv-2827
+  url: https://advice.uz/oz/document/2827
+  expected:
+  - document: -5871129
+    article: ''
+    within: 15-ilova
+  - document: -6165732
+    article: '32'
+  - document: -6165732
+    article: 31¹
+  tags:
+  - blind
+  - ekologiya
+- id: adv-2829-1
+  url: https://advice.uz/oz/document/2829
+  expected:
+  - document: -5049511
+    article: '31'
+  - document: -5852486
+    article: '9'
+    within: 8-ilova
+  - document: -5852486
+    article: '12'
+    within: 9-ilova
+  tags:
+  - blind
+  - nogironlik
+- id: adv-2829-2
+  url: https://advice.uz/oz/document/2829
+  expected:
+  - document: -5049511
+    article: '31'
+  - document: -5852486
+    article: '16'
+    within: 9-ilova
+  - document: -5852486
+    article: '17'
+    within: 9-ilova
+  - document: -3527353
+    article: '80'
+    judged: true
+  - document: -3523891
+    article: '81'
+    judged: true
+  - document: -2453491
+    article: '4'
+    judged: true
+  - document: -1591655
+    article: '4'
+    judged: true
+  - document: -1633102
+    article: '12'
+    judged: true
+  tags:
+  - blind
+  - nogironlik
+- id: adv-2829-3
+  url: https://advice.uz/oz/document/2829
+  expected:
+  - document: -5852486
+    article: '18'
+    within: 9-ilova
+  - document: -5852486
+    article: '19'
+    within: 9-ilova
+  - document: -5852486
+    article: '14'
+    within: 9-ilova
+  - document: -2453491
+    article: '22'
+    judged: true
+  - document: -1591655
+    article: '15'
+    judged: true
+  - document: -6388692
+    article: '8'
+    judged: true
+  tags:
+  - blind
+  - nogironlik
+- id: adv-2829-4
+  url: https://advice.uz/oz/document/2829
+  expected:
+  - document: -5049511
+    article: '31'
+  - document: -5852486
+    article: '23'
+    within: 9-ilova
+  - document: -97664
+    article: 299¹
+    judged: true
+  - document: -111460
+    article: '184'
+    judged: true
+  tags:
+  - blind
+  - nogironlik
+- id: adv-2829-5
+  url: https://advice.uz/oz/document/2829
+  expected:
+  - document: -5049511
+    article: '36'
+  - document: -5049511
+    article: '37'
+  tags:
+  - blind
+  - nogironlik
+- id: adv-2832
+  url: https://advice.uz/oz/document/2832
+  expected:
+  - document: -5871129
+    article: ''
+    within: 14-ilova
+  - document: -3030362
+    article: '32'
+  - document: -3030362
+    article: '36'
+  - document: -3030362
+    article: '30'
+    judged: true
+  - document: -3030362
+    article: '47'
+    judged: true
+  tags:
+  - blind
+  - ekologiya
+- id: adv-2838-1
+  url: https://advice.uz/oz/document/2838
+  expected:
+  - document: -4428097
+    article: '6'
+  tags:
+  - blind
+  - turizm
+- id: adv-2838-2
+  url: https://advice.uz/oz/document/2838
+  expected:
+  - document: -5991928
+    article: '1'
+    within: ''
+  - document: -5991928
+    article: '4'
+    within: ''
+  - document: -6179293
+    article: '6'
+    within: NIZOM
+  - document: -7138653
+    article: '4'
+    within: 1-ilova. “Oʻzbekiston boʻylab sayohat qil!” ichki turizm yarmarkasini tashkil etish va oʻtkazish
+      tartibi toʻgʻrisida NIZOM > 1-bob. Umumiy qoidalar
+    judged: true
+  - document: -3551112
+    article: '7'
+    judged: true
+  tags:
+  - blind
+  - turizm
+- id: adv-2838-3
+  url: https://advice.uz/oz/document/2838
+  expected:
+  - document: -5825004
+    article: '2'
+    within: ''
+  - document: -4930291
+    article: '5'
+    within: 11-ilova. Tadbirkorlik subyektlariga grantlar berish, kompensatsiya va moliyaviy yordam koʻrsatish
+      hamda Oʻzbekiston Respublikasi Turizmni rivojlantirish davlat qoʻmitasining hamkorlari — nodavlat
+      notijorat tashkilotlarini institutsional qoʻllab-quvvatlash toʻgʻrisida NIZOM > 2-bob. Tadbirkorlik
+      subyektlariga grantlar ajratish tartibi
+    judged: true
+  - document: -4474527
+    article: '7'
+    within: ''
+    judged: true
+  tags:
+  - blind
+  - turizm
+- id: adv-2838-4
+  url: https://advice.uz/oz/document/2838
+  expected:
+  - document: -6137065
+    article: '1'
+  tags:
+  - blind
+  - turizm
+- id: adv-2841
+  url: https://advice.uz/oz/document/2841
+  expected:
+  - document: -3088008
+    article: '3'
+  tags:
+  - blind
+  - korrupsiya
+- id: adv-291
+  url: https://advice.uz/oz/document/291
+  expected:
+  - document: -8128883
+    article: '6'
+    within: REGLAMENTI
+  - document: -8128883
+    article: '7'
+  - document: -8128883
+    article: '9'
+  - document: -8128883
+    article: '16'
+  - document: -8128883
+    article: '18'
+  - document: -8128883
+    article: '28'
+  tags:
+  - blind
+  - talim
+  - trained
+- id: adv-2927
+  url: https://advice.uz/oz/document/2927
+  expected:
+  - document: -6257288
+    article: '204'
+  - document: -6257288
+    article: '206'
+  - document: -6257288
+    article: '207'
+  - document: -6257288
+    article: '208'
+  - document: -6257288
+    article: '209'
+  tags:
+  - blind
+  - mehnat
+- id: adv-3055
+  url: https://advice.uz/oz/document/3055
+  expected:
+  - document: -6076304
+    article: '3'
+    within: 1-ilova
+  - document: -6076304
+    article: '3'
+    within: 2-ilova
+  - document: -6076304
+    article: '2'
+    within: 1-ilova
+  - document: -5789981
+    article: '5'
+  tags:
+  - blind
+  - nogironlik
+- id: adv-3156-1
+  url: https://advice.uz/oz/document/3156
+  expected:
+  - document: -5932671
+    article: '18'
+    within: 1-ilova
+  - document: -5932671
+    article: '7'
+    within: ''
+  - document: -5932671
+    article: ''
+    within: Jarrohlik amaliyotisiz
+  - document: -5932671
+    article: '9'
+    within: 2-ilova
+  tags:
+  - blind
+  - ijtimoiy
+- id: adv-3156-2
+  url: https://advice.uz/oz/document/3156
+  expected:
+  - document: -104720
+    article: 4¹
+  tags:
+  - blind
+  - oila
+- id: adv-3156-3
+  url: https://advice.uz/oz/document/3156
+  expected:
+  - document: -5932671
+    article: '4'
+    within: 1-ilova
+  - document: -5932671
+    article: '6'
+    within: 1-ilova
+  - document: -5932671
+    article: '8'
+    within: 1-ilova
+  - document: -5932671
+    article: '5'
+    within: 1-ilova
+  - document: -5932671
+    article: '7'
+    within: 1-ilova
+  tags:
+  - blind
+  - ijtimoiy
+- id: adv-3156-4
+  url: https://advice.uz/oz/document/3156
+  expected:
+  - document: -5932671
+    article: ''
+    within: uy-joyini taʼmirlash
+  - document: -5932671
+    article: '9'
+    within: 2-ilova
+  - document: -5932671
+    article: '16'
+    within: 1-ilova
+  - document: -6973951
+    article: 12¹
+    judged: true
+  - document: -7645251
+    article: ''
+    within: Nizomga 1-ilova. Qoraqalpogʻiston Respublikasi, viloyatlar va Toshkent shahridagi “Yoshlar
+      daftari” jamgʻarmasi vasiylik kengashining NAMUNAVIY TARKIBI. “Yoshlar daftari”ni yuritish orqali
+      yoshlar muammolarini tizimli ravishda hal etish va ularni ijtimoiy qoʻllab-quvvatlash tartibi toʻgʻrisida
+      NIZOM > 7-bob. Yakunlovchi qoidalar > Uy-joyini taʼmirlash, shu jumladan, oʻzgalar parvarishiga
+      muhtoj boʻlgan yolgʻiz yashovchi hamda yolgʻiz keksalar va nogironligi boʻlgan shaxslarning yashash
+      sharoitini moslashtirish xarajatlarini qoplash yordamini koʻrsatish
+    judged: true
+  - document: -6973951
+    article: ''
+    within: 1-ilova. “Saxovat va koʻmak” jamgʻarmasi mablagʻlari hisobidan ijtimoiy yordam koʻrsatish
+      tartibi toʻgʻrisida NIZOM > 7-bob. Yakunlovchi qoidalar > Uy-joyini taʼmirlash, shu jumladan, oʻzgalar
+      parvarishiga muhtoj boʻlgan yolgʻiz yashovchi hamda yolgʻiz keksalar va nogironligi boʻlgan shaxslarning
+      yashash sharoitini moslashtirish xarajatlarini qoplash yordamini koʻrsatish
+    judged: true
+  - document: -7645251
+    article: ''
+    within: Nizomga 1-ilova. Qoraqalpogʻiston Respublikasi, viloyatlar va Toshkent shahridagi “Yoshlar
+      daftari” jamgʻarmasi vasiylik kengashining NAMUNAVIY TARKIBI. “Yoshlar daftari”ni yuritish orqali
+      yoshlar muammolarini tizimli ravishda hal etish va ularni ijtimoiy qoʻllab-quvvatlash tartibi toʻgʻrisida
+      NIZOM > 7-bob. Yakunlovchi qoidalar > Yongʻin, suv toshqini, zilzila va boshqa texnogen hodisalar
+      oqibatida zarar koʻrgan uy-joylarni tiklash va taʼmirlash xarajatlarini qoplash yordamini koʻrsatish
+    judged: true
+  - document: -6973951
+    article: ''
+    within: 1-ilova. “Saxovat va koʻmak” jamgʻarmasi mablagʻlari hisobidan ijtimoiy yordam koʻrsatish
+      tartibi toʻgʻrisida NIZOM > 7-bob. Yakunlovchi qoidalar > Yongʻin, suv toshqini, zilzila va boshqa
+      texnogen hodisalar oqibatida zarar koʻrgan uy-joylarni tiklash va taʼmirlash xarajatlarini qoplash
+      yordamini koʻrsatish
+    judged: true
+  tags:
+  - blind
+  - ijtimoiy
+- id: adv-3161-1
+  url: https://advice.uz/oz/document/3161
+  expected:
+  - document: -6445145
+    article: '15'
+  - document: -5378966
+    article: '8'
+    judged: true
+  - document: -6523654
+    article: '1'
+    judged: true
+  - document: -6523654
+    article: '4'
+    judged: true
+  - document: -6449033
+    article: ''
+    judged: true
+  tags:
+  - blind
+  - konstitutsiya
+- id: adv-3161-2
+  url: https://advice.uz/oz/document/3161
+  expected:
+  - document: -6445145
+    article: '133'
+  - document: -8536927
+    article: '42'
+  - document: -8536927
+    article: '102'
+  tags:
+  - blind
+  - konstitutsiya
+- id: adv-3161-3
+  url: https://advice.uz/oz/document/3161
+  expected:
+  - document: -6445145
+    article: '103'
+  - document: -2929477
+    article: '18'
+  tags:
+  - blind
+  - konstitutsiya
+- id: adv-3161-4
+  url: https://advice.uz/oz/document/3161
+  expected:
+  - document: -6445145
+    article: '27'
+  - document: -6445145
+    article: '28'
+  - document: -6445145
+    article: '29'
+  - document: -6445145
+    article: '55'
+  - document: -111460
+    article: '64'
+    judged: true
+  tags:
+  - blind
+  - konstitutsiya
+- id: adv-3161-5
+  url: https://advice.uz/oz/document/3161
+  expected:
+  - document: -6445145
+    article: '123'
+  - document: -6445145
+    article: '120'
+  - document: -6445145
+    article: '121'
+  tags:
+  - blind
+  - konstitutsiya
+- id: adv-3161-6
+  url: https://advice.uz/oz/document/3161
+  expected:
+  - document: -6445145
+    article: '99'
+  - document: -5378966
+    article: '9'
+    judged: true
+  - document: -51961
+    article: '29'
+    judged: true
+  - document: -51255
+    article: '9'
+    judged: true
+  tags:
+  - blind
+  - konstitutsiya
+- id: adv-3161-7
+  url: https://advice.uz/oz/document/3161
+  expected:
+  - document: -6445145
+    article: '55'
+  tags:
+  - blind
+  - konstitutsiya
+- id: adv-3163-10
+  url: https://advice.uz/oz/document/3163
+  expected:
+  - document: -7623461
+    article: '7'
+  - document: -7623461
+    article: '19'
+  - document: -5443899
+    article: '6'
+  - document: -5023876
+    article: '12'
+    within: 1-ilova. Oʻzbekiston Respublikasi hududida
+  - document: -5023876
+    article: '49'
+    within: 1-ilova. Oʻzbekiston Respublikasi hududida
+  - document: -7623461
+    article: '6'
+  tags:
+  - blind
+  - migratsiya
+  - trained
+- id: adv-3163-12
+  url: https://advice.uz/oz/document/3163
+  expected:
+  - document: -5023876
+    article: '6'
+    within: 1-ilova. Oʻzbekiston Respublikasi hududida
+  - document: -7623461
+    article: '19'
+  - document: -512233
+    article: 15¹⁷
+  tags:
+  - blind
+  - migratsiya
+  - trained
+- id: adv-3163-14
+  url: https://advice.uz/oz/document/3163
+  expected:
+  - document: -97664
+    article: '225'
+  - document: -5443899
+    article: '30'
+  - document: -512233
+    article: 15²⁰
+  - document: -512233
+    article: 6⁴
+  tags:
+  - blind
+  - migratsiya
+- id: adv-3163-4
+  url: https://advice.uz/oz/document/3163
+  expected:
+  - document: -5013007
+    article: '5'
+  - document: -5443899
+    article: '18'
+  - document: -1380636
+    article: '7'
+    within: Ilova. Xorijiy fuqarolarni
+  - document: -1380636
+    article: '6'
+    within: Ilova. Xorijiy fuqarolarni
+  - document: -5013007
+    article: '38'
+  tags:
+  - blind
+  - talim
+- id: adv-3163-6
+  url: https://advice.uz/oz/document/3163
+  expected:
+  - document: -4562834
+    article: '22'
+  - document: -3540203
+    article: '4'
+    within: 1-ilova. Jismoniy shaxslar
+  - document: -3540203
+    article: '2'
+    within: 1-ilova. Jismoniy shaxslar
+  - document: -3540203
+    article: '3'
+    within: 1-ilova. Jismoniy shaxslar
+  tags:
+  - blind
+  - bojxona
+- id: adv-3163-8
+  url: https://advice.uz/oz/document/3163
+  expected:
+  - document: -3540203
+    article: '5'
+    within: 1-ilova. Jismoniy shaxslar
+  - document: -3540203
+    article: '6'
+  - document: -4562834
+    article: '22'
+  - document: -3540203
+    article: '2'
+    within: 1-ilova. Jismoniy shaxslar
+  tags:
+  - blind
+  - bojxona
+- id: adv-3164-1
+  url: https://advice.uz/oz/document/3164
+  expected:
+  - document: -11360
+    article: '16'
+  - document: -11360
+    article: '17'
+  tags:
+  - blind
+  - nnt
+- id: adv-3164-2
+  url: https://advice.uz/oz/document/3164
+  expected:
+  - document: -11360
+    article: '22'
+  - document: -2356876
+    article: '13'
+    within: 1-ilova. Nodavlat notijorat tashkilotlarini
+  - document: -2356876
+    article: '12'
+    within: 1-ilova. Nodavlat notijorat tashkilotlarini
+  tags:
+  - blind
+  - nnt
+- id: adv-3164-3
+  url: https://advice.uz/oz/document/3164
+  expected:
+  - document: -2468214
+    article: '21'
+  - document: -1101278
+    article: '14'
+  - document: -3568990
+    article: '31'
+  tags:
+  - blind
+  - nnt
+- id: adv-3164-4
+  url: https://advice.uz/oz/document/3164
+  expected:
+  - document: -11360
+    article: '21'
+  - document: -2356876
+    article: '4'
+    within: 1-ilova. Nodavlat notijorat tashkilotlarini
+  tags:
+  - blind
+  - nnt
+- id: adv-3164-5
+  url: https://advice.uz/oz/document/3164
+  expected:
+  - document: -2468214
+    article: '19'
+  - document: -1101278
+    article: '12'
+  tags:
+  - blind
+  - nnt
+- id: adv-3214
+  url: https://advice.uz/oz/document/3214
+  expected:
+  - document: -6906830
+    article: '9'
+  - document: -7170688
+    article: '31'
+  tags:
+  - blind
+  - kredit
+- id: adv-3241
+  url: https://advice.uz/oz/document/3241
+  expected:
+  - document: -112314
+    article: 12¹
+  - document: -112314
+    article: '37'
+  - document: -112314
+    article: '7'
+  tags:
+  - blind
+  - pensiya
+- id: adv-3244
+  url: https://advice.uz/oz/document/3244
+  expected:
+  - document: -180552
+    article: '744'
+  - document: -111189
+    article: '248'
+  tags:
+  - blind
+  - kredit
+- id: adv-3256
+  url: https://advice.uz/oz/document/3256
+  expected:
+  - document: -6945899
+    article: '2'
+    within: “112” yagona dispetcherlik xizmati toʻgʻrisidagi NIZOM
+  - document: -6945899
+    article: '3'
+    within: “112” yagona dispetcherlik xizmati toʻgʻrisidagi NIZOM
+  - document: -6945899
+    article: '3'
+    within: ''
+  - document: -6945899
+    article: '23'
+  tags:
+  - blind
+  - favqulodda
+- id: adv-3296
+  url: https://advice.uz/oz/document/3296
+  expected:
+  - document: -1022944
+    article: '35'
+  - document: -180552
+    article: '1065'
+  - document: -1022944
+    article: '36'
+  - document: -1022944
+    article: '37'
+  tags:
+  - blind
+  - intellektual
+- id: adv-3297
+  url: https://advice.uz/oz/document/3297
+  expected:
+  - document: -180552
+    article: '1031'
+  - document: -180552
+    article: '1032'
+  - document: -180552
+    article: '1038'
+  tags:
+  - blind
+  - intellektual
+- id: adv-3300
+  url: https://advice.uz/oz/document/3300
+  expected:
+  - document: -180552
+    article: '1036'
+  - document: -7622430
+    article: '7'
+    within: 1-ilova. Intellektual mulk obyektlariga oid shartnomalarni
+  - document: -7622430
+    article: '23'
+    within: 1-ilova. Intellektual mulk obyektlariga oid shartnomalarni
+  - document: -7622430
+    article: '5'
+    within: 1-ilova. Intellektual mulk obyektlariga oid shartnomalarni
+  tags:
+  - blind
+  - intellektual
+- id: adv-3302
+  url: https://advice.uz/oz/document/3302
+  expected:
+  - document: -180552
+    article: '1040'
+  - document: -111189
+    article: '11'
+  - document: -111189
+    article: '13'
+  tags:
+  - blind
+  - intellektual
+- id: adv-3306
+  url: https://advice.uz/oz/document/3306
+  expected:
+  - document: -76671
+    article: '5'
+  - document: -76671
+    article: '13'
+  - document: -76671
+    article: '11'
+  - document: -76671
+    article: '3'
+  tags:
+  - blind
+  - intellektual
+- id: adv-3307
+  url: https://advice.uz/oz/document/3307
+  expected:
+  - document: -76671
+    article: '5'
+  - document: -76671
+    article: 28¹
+  - document: -76671
+    article: '10'
+  tags:
+  - blind
+  - intellektual
+  - trained
+- id: adv-3308
+  url: https://advice.uz/oz/document/3308
+  expected:
+  - document: -1055517
+    article: '5'
+  - document: -1055517
+    article: '12'
+  - document: -1055517
+    article: 12¹
+  - document: -1055517
+    article: '6'
+  - document: -1055517
+    article: '8'
+  - document: -97664
+    article: '177'
+  tags:
+  - blind
+  - intellektual
+  - trained
+- id: adv-3309
+  url: https://advice.uz/oz/document/3309
+  expected:
+  - document: -24925
+    article: '4'
+  - document: -24925
+    article: '14'
+  - document: -24925
+    article: '15'
+  - document: -24925
+    article: '21'
+  - document: -24925
+    article: '25'
+  - document: -24925
+    article: '26'
+  tags:
+  - blind
+  - intellektual
+  - trained
+- id: adv-3311
+  url: https://advice.uz/oz/document/3311
+  expected:
+  - document: -2460801
+    article: '10'
+  - document: -2460801
+    article: '8'
+  - document: -2460801
+    article: '11'
+  - document: -2460801
+    article: '4'
+  - document: -2460801
+    article: '6'
+  - document: -180552
+    article: '1096'
+  tags:
+  - blind
+  - intellektual
+  - trained
+- id: adv-3314
+  url: https://advice.uz/oz/document/3314
+  expected:
+  - document: -97664
+    article: 177¹
+  - document: -97664
+    article: '177'
+  - document: -97664
+    article: 177²
+  - document: -111453
+    article: 149¹
+  - document: -111453
+    article: 149²
+  - document: -111453
+    article: 149³
+  - document: -180552
+    article: '1040'
+    judged: true
+  - document: -180552
+    article: '1090'
+    judged: true
+  - document: -6522606
+    article: '24'
+    judged: true
+  tags:
+  - blind
+  - intellektual
+- id: adv-3341
+  url: https://advice.uz/oz/document/3341
+  expected:
+  - document: -6257288
+    article: '333'
+  - document: -6257288
+    article: '253'
+  tags:
+  - blind
+  - mehnat
+- id: adv-3344
+  url: https://advice.uz/oz/document/3344
+  expected:
+  - document: -6257288
+    article: '392'
+  - document: -6257288
+    article: '119'
+  tags:
+  - blind
+  - mehnat
+- id: adv-3354
+  url: https://advice.uz/oz/document/3354
+  expected:
+  - document: -112314
+    article: '2'
+  - document: -112314
+    article: '1'
+  - document: -6411319
+    article: '3'
+    within: nafaqa tayinlash va toʻlash tartibi toʻgʻrisida NIZOM
+  - document: -6411319
+    article: '4'
+    within: nafaqa tayinlash va toʻlash tartibi toʻgʻrisida NIZOM
+  - document: -6236060
+    article: '2'
+    within: 1-ilova. Davlat pensiyalarini tayinlash va toʻlash tartibi toʻgʻrisida nizom > 1-bob. Umumiy
+      qoidalar
+    judged: true
+  - document: -6411319
+    article: '18'
+    within: 1-ilova. Ijtimoiy himoyaga muhtoj boʻlgan ayrim toifadagi shaxslarga nafaqa tayinlash va toʻlash
+      tartibi toʻgʻrisida NIZOM > 6-bob. Yoshga doir nafaqa
+    judged: true
+  tags:
+  - blind
+  - pensiya
+- id: adv-3357
+  url: https://advice.uz/oz/document/3357
+  expected:
+  - document: -112314
+    article: '2'
+  - document: -112314
+    article: '1'
+  - document: -112314
+    article: '4'
+  tags:
+  - blind
+  - pensiya
+- id: adv-3359
+  url: https://advice.uz/oz/document/3359
+  expected:
+  - document: -6411319
+    article: '4'
+    within: 1-ilova. Ijtimoiy himoyaga muhtoj
+  - document: -6411319
+    article: '2'
+    within: 1-ilova. Ijtimoiy himoyaga muhtoj
+  tags:
+  - blind
+  - ijtimoiy
+- id: adv-3364
+  url: https://advice.uz/oz/document/3364
+  expected:
+  - document: -6236060
+    article: '143'
+  - document: -6236060
+    article: '146'
+  - document: -6236060
+    article: '181'
+  - document: -112314
+    article: '59'
+  tags:
+  - blind
+  - pensiya
+  - trained
+- id: adv-3365
+  url: https://advice.uz/oz/document/3365
+  expected:
+  - document: -6236060
+    article: '147'
+  - document: -111189
+    article: '137'
+  tags:
+  - blind
+  - pensiya
+- id: adv-3367
+  url: https://advice.uz/oz/document/3367
+  expected:
+  - document: -54503
+    article: '3'
+  - document: -54503
+    article: 3¹
+  - document: -6143599
+    article: '11'
+  - document: -6143599
+    article: ''
+    within: Advokatlik faoliyatini litsenziyalash PASPORTI
+  tags:
+  - blind
+  - advokatura
+- id: adv-3370
+  url: https://advice.uz/oz/document/3370
+  expected:
+  - document: -3098964
+    article: '4'
+    within: yuridik xizmati toʻgʻrisida NIZOM
+  - document: -3098964
+    article: '5'
+    within: yuridik xizmati toʻgʻrisida NIZOM
+  - document: -3098964
+    article: '7'
+    within: yuridik xizmati toʻgʻrisida NIZOM
+  - document: -3098964
+    article: '2'
+    within: ''
+  tags:
+  - blind
+  - yuridik
+- id: adv-3372
+  url: https://advice.uz/oz/document/3372
+  expected:
+  - document: -3098964
+    article: '18'
+  tags:
+  - blind
+  - yuridik
+- id: adv-3374
+  url: https://advice.uz/oz/document/3374
+  expected:
+  - document: -6502543
+    article: '9'
+  - document: -6502543
+    article: '8'
+  tags:
+  - blind
+  - advokatura
+- id: adv-3375
+  url: https://advice.uz/oz/document/3375
+  expected:
+  - document: -6502543
+    article: '11'
+  - document: -6502543
+    article: '9'
+  tags:
+  - blind
+  - advokatura
+- id: adv-3376
+  url: https://advice.uz/oz/document/3376
+  expected:
+  - document: -6502543
+    article: '19'
+  - document: -6502543
+    article: '18'
+  tags:
+  - blind
+  - advokatura
+- id: adv-3377
+  url: https://advice.uz/oz/document/3377
+  expected:
+  - document: -6502543
+    article: '20'
+  - document: -7228726
+    article: '27'
+  - document: -7228726
+    article: '28'
+  - document: -7228726
+    article: '29'
+  - document: -6502543
+    article: '21'
+  tags:
+  - blind
+  - advokatura
+- id: adv-3378
+  url: https://advice.uz/oz/document/3378
+  expected:
+  - document: -6937312
+    article: '3'
+    within: ''
+  - document: -6937312
+    article: '2'
+    within: ''
+  - document: -4500969
+    article: '1'
+  tags:
+  - blind
+  - advokatura
+- id: adv-3380
+  url: https://advice.uz/oz/document/3380
+  expected:
+  - document: -3646570
+    article: '46'
+  - document: -3646570
+    article: '47'
+  - document: -3646570
+    article: '48'
+  - document: -3646570
+    article: '52'
+  - document: -3646570
+    article: '50'
+  tags:
+  - blind
+  - talim
+- id: adv-3384
+  url: https://advice.uz/oz/document/3384
+  expected:
+  - document: -5953883
+    article: '15'
+  - document: -5953883
+    article: '17'
+  - document: -5953883
+    article: '19'
+  - document: -5953883
+    article: '16'
+  - document: -5953883
+    article: '20'
+  tags:
+  - blind
+  - yolharakati
+- id: adv-3385
+  url: https://advice.uz/oz/document/3385
+  expected:
+  - document: -4089917
+    article: '6'
+  - document: -4089917
+    article: '14'
+  - document: -4089917
+    article: '13'
+  - document: -4089917
+    article: '10'
+  - document: -4089917
+    article: '11'
+  - document: -4089917
+    article: '18'
+  tags:
+  - blind
+  - yolharakati
+- id: adv-3386
+  url: https://advice.uz/oz/document/3386
+  expected:
+  - document: -4089917
+    article: '12'
+  - document: -4089917
+    article: '14'
+  - document: -4089917
+    article: '13'
+  tags:
+  - blind
+  - yolharakati
+- id: adv-3387
+  url: https://advice.uz/oz/document/3387
+  expected:
+  - document: -5953883
+    article: '23'
+  - document: -5953883
+    article: '24'
+  - document: -5953883
+    article: '157'
+  - document: -10943
+    article: '25'
+    judged: true
+  - document: -1404120
+    article: '117'
+    judged: true
+  tags:
+  - blind
+  - yolharakati
+  - trained
+- id: adv-3389
+  url: https://advice.uz/oz/document/3389
+  expected:
+  - document: -3646570
+    article: '47'
+  - document: -3646570
+    article: '44'
+  - document: -3646570
+    article: '43'
+  tags:
+  - blind
+  - talim
+- id: adv-3750
+  url: https://advice.uz/oz/document/3750
+  expected:
+  - document: -104720
+    article: '99'
+  - document: -104720
+    article: '102'
+  - document: -104720
+    article: '98'
+  - document: -104720
+    article: '104'
+  tags:
+  - blind
+  - oila
+- id: adv-4003
+  url: https://advice.uz/oz/document/4003
+  expected:
+  - document: -180552
+    article: '733'
+  - document: -180552
+    article: '732'
+  tags:
+  - blind
+  - fuqarolik
+- id: adv-4014
+  url: https://advice.uz/oz/document/4014
+  expected:
+  - document: -6257288
+    article: '121'
+  - document: -7220862
+    article: '6'
+    within: 3-ilova. Qarindoshlarning
+  - document: -7220862
+    article: '5'
+    within: 3-ilova. Qarindoshlarning
+  - document: -6145972
+    article: '13'
+  tags:
+  - blind
+  - mehnat
+- id: adv-4015
+  url: https://advice.uz/oz/document/4015
+  expected:
+  - document: -54458
+    article: '65'
+  - document: -54458
+    article: '67'
+  - document: -54458
+    article: '68'
+  - document: -54458
+    article: 72²
+  - document: -4138215
+    article: '157'
+  - document: -4138215
+    article: '152'
+  tags:
+  - blind
+  - notariat
+- id: adv-4016
+  url: https://advice.uz/oz/document/4016
+  expected:
+  - document: -54458
+    article: 70²
+  - document: -4138215
+    article: 164²
+  - document: -4138215
+    article: 164³
+  - document: -4138215
+    article: 164⁸
+  - document: -4138215
+    article: 164¹
+  tags:
+  - blind
+  - notariat
+- id: adv-4025
+  url: https://advice.uz/oz/document/4025
+  expected:
+  - document: -4138215
+    article: '4'
+    within: 1-ilova. Notariuslar
+  - document: -54458
+    article: '38'
+  - document: -54458
+    article: '33'
+  - document: -54458
+    article: '39'
+  tags:
+  - blind
+  - notariat
+- id: adv-4027
+  url: https://advice.uz/oz/document/4027
+  expected:
+  - document: -2876354
+    article: '208'
+  - document: -2876354
+    article: '215'
+  - document: -2876354
+    article: '209'
+  - document: -2876354
+    article: '214'
+  - document: -2876354
+    article: '216'
+  tags:
+  - blind
+  - bojxona
+- id: adv-4030
+  url: https://advice.uz/oz/document/4030
+  expected:
+  - document: -180552
+    article: '735'
+  tags:
+  - blind
+  - fuqarolik
+- id: adv-4031
+  url: https://advice.uz/oz/document/4031
+  expected:
+  - document: -180552
+    article: '736'
+  - document: -180552
+    article: '732'
+  - document: -180552
+    article: '735'
+  - document: -111189
+    article: '239'
+    judged: true
+  tags:
+  - blind
+  - fuqarolik
+- id: adv-4032
+  url: https://advice.uz/oz/document/4032
+  expected:
+  - document: -111189
+    article: '123'
+  - document: -180552
+    article: '737'
+  tags:
+  - blind
+  - fuqarolik
+- id: adv-4033-1
+  url: https://advice.uz/oz/document/4033
+  expected:
+  - document: -112314
+    article: '7'
+  tags:
+  - blind
+  - pensiya
+- id: adv-4033-2
+  url: https://advice.uz/oz/document/4033
+  expected:
+  - document: -112314
+    article: '8'
+  - document: -112314
+    article: '29'
+  - document: -6236060
+    article: '117'
+  - document: -6411319
+    article: '18'
+    within: NIZOM > 6-bob. Yoshga doir nafaqa
+  tags:
+  - blind
+  - pensiya
+- id: adv-4033-3
+  url: https://advice.uz/oz/document/4033
+  expected:
+  - document: -112314
+    article: '3'
+  - document: -112314
+    article: 43¹
+  - document: -6236060
+    article: 107¹
+  tags:
+  - blind
+  - pensiya
+- id: adv-4033-4
+  url: https://advice.uz/oz/document/4033
+  expected:
+  - document: -112314
+    article: '25'
+  - document: -112314
+    article: '26'
+  - document: -112314
+    article: '27'
+  - document: -112314
+    article: '31'
+  tags:
+  - blind
+  - pensiya
+- id: adv-4033-5
+  url: https://advice.uz/oz/document/4033
+  expected:
+  - document: -112314
+    article: '47'
+  - document: -112314
+    article: 43¹
+  - document: -6236060
+    article: 107¹
+  tags:
+  - blind
+  - pensiya
+- id: adv-4033-6
+  url: https://advice.uz/oz/document/4033
+  expected:
+  - document: -112314
+    article: '52'
+  - document: -6236060
+    article: '140'
+  tags:
+  - blind
+  - pensiya
+- id: adv-4040
+  url: https://advice.uz/oz/document/4040
+  expected:
+  - document: -4680944
+    article: ''
+  tags:
+  - blind
+  - sud
+- id: adv-4041
+  url: https://advice.uz/oz/document/4041
+  expected:
+  - document: -4586282
+    article: '8'
+  - document: -4586282
+    article: '22'
+  - document: -4586282
+    article: '27'
+  tags:
+  - blind
+  - uyjoy
+  - trained
+- id: adv-4043
+  url: https://advice.uz/oz/document/4043
+  expected:
+  - document: -4586282
+    article: '16'
+  - document: -6297070
+    article: '1'
+    within: NIZOM > 1-bob
+  - document: -4586282
+    article: '29'
+  - document: -4586282
+    article: '18'
+  tags:
+  - blind
+  - uyjoy
+  - trained
+- id: adv-4044
+  url: https://advice.uz/oz/document/4044
+  expected:
+  - document: -4586282
+    article: '28'
+  tags:
+  - blind
+  - uyjoy
+- id: adv-4049
+  url: https://advice.uz/oz/document/4049
+  expected:
+  - document: -7552003
+    article: '2'
+    within: tashabbuslar
+  - document: -6154708
+    article: '3'
+    within: ''
+    judged: true
+  tags:
+  - blind
+  - ekologiya
+- id: adv-4050
+  url: https://advice.uz/oz/document/4050
+  expected:
+  - document: -7552003
+    article: '5'
+    within: III. Oʻrmonlarni
+  - document: -7552003
+    article: ''
+    within: USTUVOR YOʻNALISHLARI
+  - document: -7552003
+    article: '4'
+    within: III. Oʻrmonlarni
+  - document: -7552003
+    article: '6'
+    within: III. Oʻrmonlarni
+  tags:
+  - blind
+  - ekologiya
+- id: adv-4068
+  url: https://advice.uz/oz/document/4068
+  expected:
+  - document: -6257288
+    article: '289'
+  - document: -6257288
+    article: '286'
+  tags:
+  - blind
+  - mehnat
+- id: adv-4076
+  url: https://advice.uz/oz/document/4076
+  expected:
+  - document: -180552
+    article: '1135'
+  - document: -104720
+    article: '25'
+  - document: -180552
+    article: '1142'
+  tags:
+  - blind
+  - meros
+- id: adv-4097
+  url: https://advice.uz/oz/document/4097
+  expected:
+  - document: -4866624
+    article: '2'
+  - document: -4866624
+    article: '6'
+  tags:
+  - blind
+  - talim
+- id: adv-4098
+  url: https://advice.uz/oz/document/4098
+  expected:
+  - document: -180552
+    article: '1153'
+  - document: -180552
+    article: '1150'
+  tags:
+  - blind
+  - meros
+- id: adv-4101
+  url: https://advice.uz/oz/document/4101
+  expected:
+  - document: -4704
+    article: '6'
+  - document: -4704
+    article: '7'
+  tags:
+  - blind
+  - isteʼmolchi
+- id: adv-4102
+  url: https://advice.uz/oz/document/4102
+  expected:
+  - document: -111189
+    article: '245'
+  - document: -4562834
+    article: '17'
+  tags:
+  - blind
+  - fuqarolik
+- id: adv-4109
+  url: https://advice.uz/oz/document/4109
+  expected:
+  - document: -3517337
+    article: '220'
+  - document: -3517337
+    article: '221'
+  - document: -2414114
+    article: '14'
+  - document: -3517337
+    article: '280'
+  tags:
+  - blind
+  - oila
+- id: adv-4111
+  url: https://advice.uz/oz/document/4111
+  expected:
+  - document: -6257288
+    article: '202'
+  - document: -6257288
+    article: '205'
+  tags:
+  - blind
+  - mehnat
+- id: adv-4125
+  url: https://advice.uz/oz/document/4125
+  expected:
+  - document: -180552
+    article: '1146'
+  - document: -5109530
+    article: '18'
+    within: 5-ilova
+  - document: -180552
+    article: '1116'
+  tags:
+  - blind
+  - meros
+- id: adv-4126
+  url: https://advice.uz/oz/document/4126
+  expected:
+  - document: -3805227
+    article: '3'
+  tags:
+  - blind
+  - mediatsiya
+- id: adv-4129
+  url: https://advice.uz/oz/document/4129
+  expected:
+  - document: -3336169
+    article: '5'
+  - document: -3336169
+    article: '6'
+  - document: -3336169
+    article: '21'
+  - document: -3336169
+    article: '9'
+  - document: -3336169
+    article: '25'
+  - document: -3336169
+    article: '28'
+  - document: -4208064
+    article: '19'
+    within: 1-ilova. Oʻzbekiston Respublikasi Prezidentining Qoraqalpogʻiston Respublikasi, viloyatlar
+      va Toshkent shahridagi Xalq qabulxonalari toʻgʻrisidagi NIZOM > 4-bob. Xalq qabulxonasi tomonidan
+      murojaatlarni qabul qilish tartibi
+    judged: true
+  - document: -4208064
+    article: '19'
+    within: 2-ilova. Oʻzbekiston Respublikasi Prezidentining tumanlar va shaharlardagi Xalq qabulxonalari
+      toʻgʻrisidagi NIZOM > 4-bob. Xalq qabulxonasi tomonidan murojaatlarni qabul qilish tartibi
+    judged: true
+  - document: -4208064
+    article: '20'
+    within: 1-ilova. Oʻzbekiston Respublikasi Prezidentining Qoraqalpogʻiston Respublikasi, viloyatlar
+      va Toshkent shahridagi Xalq qabulxonalari toʻgʻrisidagi NIZOM > 4-bob. Xalq qabulxonasi tomonidan
+      murojaatlarni qabul qilish tartibi
+    judged: true
+  - document: -4208064
+    article: '20'
+    within: 2-ilova. Oʻzbekiston Respublikasi Prezidentining tumanlar va shaharlardagi Xalq qabulxonalari
+      toʻgʻrisidagi NIZOM > 4-bob. Xalq qabulxonasi tomonidan murojaatlarni qabul qilish tartibi
+    judged: true
+  tags:
+  - blind
+  - murojaat
+- id: adv-4131
+  url: https://advice.uz/oz/document/4131
+  expected:
+  - document: -6257288
+    article: '240'
+  - document: -6257288
+    article: '241'
+  - document: -6257288
+    article: '242'
+  tags:
+  - blind
+  - mehnat
+- id: adv-4132
+  url: https://advice.uz/oz/document/4132
+  expected:
+  - document: -6978570
+    article: '6'
+    within: 1-ilova. Vaqtinchalik
+  - document: -6978570
+    article: '28'
+    within: 1-ilova. Vaqtinchalik
+  - document: -6257288
+    article: '333'
+  - document: -6257288
+    article: '404'
+  tags:
+  - blind
+  - mehnat
+- id: adv-4139
+  url: https://advice.uz/oz/document/4139
+  expected:
+  - document: -7395923
+    article: ''
+    within: 4-ilova
+  - document: -7395923
+    article: '13'
+  - document: -6433775
+    article: '1'
+  tags:
+  - blind
+  - bank
+- id: adv-4140
+  url: https://advice.uz/oz/document/4140
+  expected:
+  - document: -104720
+    article: '25'
+  - document: -104720
+    article: '24'
+  tags:
+  - blind
+  - oila
+- id: adv-4141
+  url: https://advice.uz/oz/document/4141
+  expected:
+  - document: -6257288
+    article: '167'
+  tags:
+  - blind
+  - mehnat
+- id: adv-4144
+  url: https://advice.uz/oz/document/4144
+  expected:
+  - document: -3805227
+    article: '24'
+  - document: -4138215
+    article: 145⁹
+  tags:
+  - blind
+  - mediatsiya
+- id: adv-4145
+  url: https://advice.uz/oz/document/4145
+  expected:
+  - document: -4674902
+    article: '421'
+  tags:
+  - blind
+  - soliq
+- id: adv-4152
+  url: https://advice.uz/oz/document/4152
+  expected:
+  - document: -180552
+    article: '1182'
+  - document: -54458
+    article: '91'
+  - document: -111189
+    article: '139'
+  tags:
+  - blind
+  - fuqarolik
+- id: adv-4153
+  url: https://advice.uz/oz/document/4153
+  expected:
+  - document: -7604998
+    article: '3'
+  - document: -8515075
+    article: '3'
+  tags:
+  - blind
+  - pensiya
+  - trained
+- id: adv-4154
+  url: https://advice.uz/oz/document/4154
+  expected:
+  - document: -5049511
+    article: '40'
+  - document: -3765153
+    article: '3'
+    within: NIZOM
+  - document: -3765153
+    article: '13'
+  - document: -7726569
+    article: '15'
+    within: 1-ilova
+  - document: -3765153
+    article: '4'
+    within: NIZOM
+  tags:
+  - blind
+  - talim
+- id: adv-4166
+  url: https://advice.uz/oz/document/4166
+  expected:
+  - document: -4674902
+    article: '103'
+  - document: -4674902
+    article: '104'
+  - document: -4674902
+    article: '105'
+  tags:
+  - blind
+  - soliq
+- id: adv-4169
+  url: https://advice.uz/oz/document/4169
+  expected:
+  - document: -6502543
+    article: '16'
+  - document: -6502543
+    article: '17'
+  - document: -6502543
+    article: '18'
+  - document: -6502543
+    article: '19'
+  tags:
+  - blind
+  - yuridik_yordam
+- id: adv-4170
+  url: https://advice.uz/oz/document/4170
+  expected:
+  - document: -6257288
+    article: '502'
+  - document: -6257288
+    article: '184'
+  tags:
+  - blind
+  - mehnat
+- id: adv-4181
+  url: https://advice.uz/oz/document/4181
+  expected:
+  - document: -180552
+    article: '1146'
+  - document: -5109530
+    article: '18'
+    within: 5-ilova
+  tags:
+  - blind
+  - meros
+- id: adv-4190
+  url: https://advice.uz/oz/document/4190
+  expected:
+  - document: -8093787
+    article: '39'
+  tags:
+  - blind
+  - sport
+- id: adv-4198
+  url: https://advice.uz/oz/document/4198
+  expected:
+  - document: -6257288
+    article: '67'
+  - document: -6257288
+    article: '65'
+  tags:
+  - blind
+  - mehnat
+- id: adv-4201
+  url: https://advice.uz/oz/document/4201
+  expected:
+  - document: -104720
+    article: '25'
+  - document: -104720
+    article: '24'
+  tags:
+  - blind
+  - oila
+- id: adv-4204
+  url: https://advice.uz/oz/document/4204
+  expected:
+  - document: -104720
+    article: '42'
+  - document: -104720
+    article: '43'
+  - document: -104720
+    article: '218'
+  - document: -6638940
+    article: '101'
+  - document: -6638940
+    article: '102'
+  - document: -6638940
+    article: '106'
+  tags:
+  - blind
+  - oila
+- id: adv-4205-1
+  url: https://advice.uz/oz/document/4205
+  expected:
+  - document: -1022944
+    article: '5'
+  - document: -1022944
+    article: '6'
+  - document: -180552
+    article: '1041'
+  - document: -180552
+    article: '1042'
+  tags:
+  - blind
+  - intellektual
+- id: adv-4205-2
+  url: https://advice.uz/oz/document/4205
+  expected:
+  - document: -1022944
+    article: '10'
+  - document: -180552
+    article: '1046'
+  - document: -143983
+    article: '4'
+  - document: -143983
+    article: '9'
+  tags:
+  - blind
+  - intellektual
+  - trained
+- id: adv-4205-3
+  url: https://advice.uz/oz/document/4205
+  expected:
+  - document: -1022944
+    article: '38'
+  - document: -1022944
+    article: '39'
+  - document: -180552
+    article: '1067'
+  - document: -180552
+    article: '1068'
+  tags:
+  - blind
+  - intellektual
+- id: adv-4205-4
+  url: https://advice.uz/oz/document/4205
+  expected:
+  - document: -1022944
+    article: '35'
+  - document: -180552
+    article: '1065'
+  - document: -1022944
+    article: '36'
+  tags:
+  - blind
+  - intellektual
+- id: adv-4205-5
+  url: https://advice.uz/oz/document/4205
+  expected:
+  - document: -1022944
+    article: '24'
+  - document: -180552
+    article: '1058'
+  - document: -1022944
+    article: '26'
+  - document: -1022944
+    article: '27'
+  - document: -1022944
+    article: '25'
+  tags:
+  - blind
+  - intellektual
+- id: adv-4205-6
+  url: https://advice.uz/oz/document/4205
+  expected:
+  - document: -1022944
+    article: '65'
+  - document: -1022944
+    article: '66'
+  - document: -97664
+    article: 177¹
+  - document: -111453
+    article: 149¹
+  - document: -180552
+    article: '1040'
+  tags:
+  - blind
+  - intellektual
+- id: adv-4205-7
+  url: https://advice.uz/oz/document/4205
+  expected:
+  - document: -1022944
+    article: '54'
+  tags:
+  - blind
+  - intellektual
+- id: adv-4216
+  url: https://advice.uz/oz/document/4216
+  expected:
+  - document: -8027513
+    article: '13'
+    within: 3-ilova. Ijtimoiy reyestrga kiritilgan oilalarga bolalar
+  - document: -8027513
+    article: '6'
+    within: 3-ilova. Ijtimoiy reyestrga kiritilgan oilalarga bolalar
+  - document: -8027513
+    article: '10'
+    within: 3-ilova. Ijtimoiy reyestrga kiritilgan oilalarga bolalar
+  - document: -8027513
+    article: '11'
+    within: 3-ilova. Ijtimoiy reyestrga kiritilgan oilalarga bolalar
+  - document: -8027513
+    article: '12'
+    within: 3-ilova. Ijtimoiy reyestrga kiritilgan oilalarga bolalar
+  - document: -8027513
+    article: '14'
+    within: 3-ilova. Ijtimoiy reyestrga kiritilgan oilalarga bolalar
+  tags:
+  - blind
+  - ijtimoiy
+- id: adv-4232-1
+  url: https://advice.uz/oz/document/4232
+  expected:
+  - document: -41760
+    article: '3'
+  - document: -41760
+    article: '6'
+  - document: -180552
+    article: '786'
+  tags:
+  - blind
+  - bank
+- id: adv-4232-2
+  url: https://advice.uz/oz/document/4232
+  expected:
+  - document: -41760
+    article: '8'
+  - document: -41760
+    article: '9'
+  - document: -41760
+    article: '10'
+  - document: -41760
+    article: '11'
+  - document: -41760
+    article: '13'
+  - document: -180552
+    article: '786'
+  tags:
+  - blind
+  - bank
+- id: adv-4232-3
+  url: https://advice.uz/oz/document/4232
+  expected:
+  - document: -41760
+    article: '13'
+  tags:
+  - blind
+  - bank
+- id: adv-4232-4
+  url: https://advice.uz/oz/document/4232
+  expected:
+  - document: -41760
+    article: '16'
+  - document: -41760
+    article: '15'
+  tags:
+  - blind
+  - bank
+- id: adv-4232-5
+  url: https://advice.uz/oz/document/4232
+  expected:
+  - document: -97664
+    article: '46'
+  - document: -41760
+    article: '18'
+  tags:
+  - blind
+  - bank
+- id: adv-4236
+  url: https://advice.uz/oz/document/4236
+  expected:
+  - document: -5970701
+    article: '10'
+    within: 2-ilova. Bino va inshootlarning ixtisoslashishini
+  - document: -5970701
+    article: '12'
+    within: 2-ilova. Bino va inshootlarning ixtisoslashishini
+  - document: -5970701
+    article: '11'
+    within: 2-ilova. Bino va inshootlarning ixtisoslashishini
+  - document: -5970701
+    article: '7'
+    within: 2-ilova. Bino va inshootlarning ixtisoslashishini
+  tags:
+  - blind
+  - uyjoy
+- id: adv-4300
+  url: https://advice.uz/oz/document/4300
+  expected:
+  - document: -97664
+    article: '223'
+  - document: -1729272
+    article: '11'
+    within: 1-ilova
+  - document: -5015098
+    article: '10'
+    within: 1-ilova
+  tags:
+  - blind
+  - mamuriy
+- id: adv-4302
+  url: https://advice.uz/oz/document/4302
+  expected:
+  - document: -1832522
+    article: '5'
+  - document: -1832522
+    article: 6¹
+  - document: -1832522
+    article: '8'
+  - document: -1832522
+    article: '58'
+  tags:
+  - blind
+  - mamuriy
+- id: adv-4321
+  url: https://advice.uz/oz/document/4321
+  expected:
+  - document: -54503
+    article: 9¹
+  - document: -54503
+    article: '9'
+  tags:
+  - blind
+  - advokatura
+- id: adv-4353
+  url: https://advice.uz/oz/document/4353
+  expected:
+  - document: -4890112
+    article: '28'
+  - document: -7036488
+    article: '6'
+  tags:
+  - blind
+  - ekologiya
+- id: adv-4363
+  url: https://advice.uz/oz/document/4363
+  expected:
+  - document: -4494709
+    article: '23'
+  - document: -4494709
+    article: '26'
+  - document: -4494709
+    article: '28'
+  - document: -6982043
+    article: '14'
+  - document: -7219502
+    article: '27'
+  - document: -7219502
+    article: '5'
+    judged: true
+  tags:
+  - blind
+  - oila
+  - trained
+- id: adv-4515
+  url: https://advice.uz/oz/document/4515
+  expected:
+  - document: -6858809
+    article: '1'
+  - document: -7865964
+    article: '3'
+    within: 2-ilova
+  - document: -7865964
+    article: '2'
+    within: ''
+  tags:
+  - blind
+  - ekologiya
+- id: adv-4764
+  url: https://advice.uz/oz/document/4764
+  expected:
+  - document: -97664
+    article: '138'
+  tags:
+  - blind
+  - mamuriy
+- id: adv-4775
+  url: https://advice.uz/oz/document/4775
+  expected:
+  - document: -5461749
+    article: 58³⁷
+  - document: -5461749
+    article: 58³²
+  - document: -6705763
+    article: '4'
+  - document: -6931871
+    article: '3'
+  tags:
+  - blind
+  - mahalla
+- id: adv-4777
+  url: https://advice.uz/oz/document/4777
+  expected:
+  - document: -6931871
+    article: '3'
+  - document: -5461749
+    article: '41'
+    within: 1-ilova
+  - document: -5461749
+    article: 58³⁸
+  - document: -2156899
+    article: '14'
+  tags:
+  - blind
+  - mahalla
+- id: adv-4778
+  url: https://advice.uz/oz/document/4778
+  expected:
+  - document: -6931871
+    article: '3'
+  - document: -5758437
+    article: '2'
+  tags:
+  - blind
+  - mahalla
+- id: adv-4779
+  url: https://advice.uz/oz/document/4779
+  expected:
+  - document: -6931871
+    article: '3'
+  - document: -5831865
+    article: '2'
+    within: ''
+  tags:
+  - blind
+  - mahalla
+- id: adv-4780
+  url: https://advice.uz/oz/document/4780
+  expected:
+  - document: -6931871
+    article: '3'
+  - document: -5461749
+    article: '41'
+    within: 1-ilova
+  - document: -5884143
+    article: '8'
+  tags:
+  - blind
+  - mahalla
+- id: adv-4781
+  url: https://advice.uz/oz/document/4781
+  expected:
+  - document: -6931871
+    article: '3'
+  - document: -5461749
+    article: '41'
+    within: 1-ilova
+  - document: -3175732
+    article: '15'
+    judged: true
+  tags:
+  - blind
+  - mahalla
+- id: adv-4782
+  url: https://advice.uz/oz/document/4782
+  expected:
+  - document: -6931871
+    article: '3'
+  - document: -4856349
+    article: '8'
+  tags:
+  - blind
+  - mahalla
+- id: adv-4783
+  url: https://advice.uz/oz/document/4783
+  expected:
+  - document: -6931871
+    article: '3'
+  tags:
+  - blind
+  - soliq
+- id: adv-4784
+  url: https://advice.uz/oz/document/4784
+  expected:
+  - document: -6931871
+    article: '1'
+  - document: -6931871
+    article: '2'
+  - document: -6931871
+    article: '3'
+  - document: -6705763
+    article: '6'
+  - document: -6931871
+    article: ''
+    within: KPI
+  tags:
+  - blind
+  - mahalla
+- id: adv-4788
+  url: https://advice.uz/oz/document/4788
+  expected:
+  - document: -5378966
+    article: '3'
+  - document: -5378966
+    article: '6'
+  - document: -5378966
+    article: '8'
+  - document: -5378966
+    article: '18'
+  tags:
+  - blind
+  - huquq
+- id: adv-4791
+  url: https://advice.uz/oz/document/4791
+  expected:
+  - document: -5378966
+    article: '40'
+  - document: -5378966
+    article: '38'
+  - document: -5378966
+    article: '41'
+  tags:
+  - blind
+  - huquq
+- id: adv-4792
+  url: https://advice.uz/oz/document/4792
+  expected:
+  - document: -5378966
+    article: '39'
+  - document: -3329163
+    article: '17'
+  - document: -5378966
+    article: '45'
+  - document: -5378966
+    article: '40'
+  tags:
+  - blind
+  - huquq
+- id: adv-4793
+  url: https://advice.uz/oz/document/4793
+  expected:
+  - document: -5378966
+    article: '18'
+  - document: -5378966
+    article: '8'
+  - document: -6445145
+    article: '15'
+  tags:
+  - blind
+  - huquq
+- id: adv-755
+  url: https://advice.uz/oz/document/755
+  expected:
+  - document: -26013
+    article: '29'
+  - document: -7836508
+    article: '3'
+    within: NIZOM
+  - document: -7836508
+    article: '4'
+    within: NIZOM
+  - document: -7836508
+    article: '6'
+  - document: -7813256
+    article: '6'
+    within: 1-ilova
+  - document: -26013
+    article: '30'
+  tags:
+  - blind
+  - tibbiyot
