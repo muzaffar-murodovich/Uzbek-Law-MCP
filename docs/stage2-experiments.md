@@ -986,11 +986,51 @@ faqat bundan keyingi o'zgarishlar uchun.
 - 120 savol kam: ±0,03–0,04 shovqin. Natija fayli:
   `eval/results/2026-11-19-full-corpus-questions_blind-alt_llm-rr1-top30.json`.
 
+## 6l. Yurist javob bergan savollar: advice.uz (2026-11-23)
+
+**Manba.** advice.uz ("Madad" NNT, bepul yuridik maslahat portali): savol shaklidagi maqolalar va
+bo'limlardagi "Savol-javoblar" to'plamlari. Savollarni yurist tahrir qilgan (tili rasmiyroq), lekin
+mavzular odamlar haqiqatan so'raydigan narsalar. Boshqa manbalar: buxgalter.uz (javoblar pullik,
+ko'chirish taqiqlangan, 2019 yil, eski Mehnat kodeksi) yaramadi; gov.uz FAQ modullari kam
+to'ldirilgan (5 ta idoradan 29 savol).
+
+**Yig'ish va belgilash** (`scripts/real_eval.py`). 77 bo'lim, 202 sahifa (2 s oraliq). 390 savol,
+COVID karantini (2054) va vaksina (2468) to'plamlari chiqarildi: 279. 10 ta subagent yurist
+javobini ishora sifatida olib, javob moddalarini korpusdan `blind_eval.py grep/show` bilan
+topdi (bizning qidiruv ishlatilmadi). Eskirgan javoblarda amaldagi qoida belgilandi. 10 savol
+tushib qoldi (yuridik emas yoki korpusda qoida yo'q): **269 savol**, 16 tasi `trained`.
+Savol va javob matnlari `data/`da qoladi, git'da faqat ID, URL va belgilar
+(`eval/labels_advice.yaml`). `alt`: `llm_eval.py rephrase` (GPT-5.4, ≈62 ming token).
+
+**Natija** (xizmatdagi qidiruv, 6j sozlamalari):
+
+| | R@1 | R@5 | R@8 | R@10 |
+|---|---|---|---|---|
+| qat'iy | 0,454 | 0,725 | 0,792 | 0,829 |
+| + top-10 dagi javoblar, hakam tasdiqlagan | 0,498 | 0,833 | 0,914 | **0,952** |
+
+- Hakamlar 46 topilmagan savoldan 33 tasida top-10 da to'g'ri modda topdi. Bu yerda ular
+  yumshoqroq: ko'p savol umumiy ("Pensiya bilan nafaqaning farqi nimada?",
+  "Konstitutsiya to'g'ridan-to'g'ri amal qiladimi?") va bir nechta modda javob bo'la oladi.
+  Haqiqiy qiymat 0,83 va 0,95 orasida.
+- **Uch mustaqil to'plam bir xil manzarani beradi:** qat'iy R@10 0,80–0,83, hakam bilan
+  0,92–0,95; 300 to'plamning testi (0,856, hakam bilan o'lchangan) ulardan pastroq. Ya'ni
+  0,875 optimistik emas edi: qiyin qismi tasodifiy VM qarori bandlari, odamlar ko'p so'raydigan
+  mavzular osonroq.
+- **Zaif sohalar** (qat'iy R@10): uy-joy 0,47 ("ko'r" to'plamda ham 0,44), nogironlik 0,50,
+  turizm 0,50, ta'lim 0,67, ijtimoiy himoya 0,67. Keyingi qidiruv ishlari uchun shular nishon
+  (dev qismida sozlab).
+- Belgilovchilar korpusdagi bir xatoni payqadi: ba'zi qonunlar o'z nomi bilan emas, ularni
+  o'zgartirgan qonun nomi bilan saqlangan (Valyutani tartibga solish -4562834, Prokuratura
+  -106197). 7-bo'limga qo'shildi.
+
 ## 7. Ochiq masalalar
 
 - **Model tanlovi.** 4.7-bo'lim: sifat bo'yicha bge-m3 birinchi, lekin `myserver` uchun og'ir.
   Fine-tune qilingan e5-small (6h, 6i) va reranker (6j) bilan maqsad bajarildi.
-- **Haqiqiy foydalanuvchi savollari** hali yo'q. Xizmat ishga tushgach, so'rovlar anonim holda
+- **Hujjat nomlari:** ba'zi qonunlar ularni o'zgartirgan qonunning nomi bilan saqlangan
+  (-4562834 Valyutani tartibga solish, -106197 Prokuratura; 6l). Parser/`display_title`ni tekshirish.
+- **Haqiqiy foydalanuvchi savollari** hali yo'q (6k, 6l: "ko'r" va advice.uz to'plamlari o'rnini bosadi). Xizmat ishga tushgach, so'rovlar anonim holda
   yig'ilib, baholash to'plamiga qo'shiladi. Birlashtirish va reranker sozlamalari shu 208 savolda
   tanlangani uchun (6j) natija biroz optimistik: yangi savollarda qayta o'lchash kerak.
 - **Farmon va qarorlar:** `questions_decrees.yaml` (29, qo'lda) va `questions_llm_full.yaml`da
