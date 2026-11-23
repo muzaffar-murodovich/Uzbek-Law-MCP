@@ -81,6 +81,12 @@ def test_restated_title_names_the_act_set_out_anew():
     assert restated_title(nizom, "OʻRQ-368", "uning yangi tahriri tasdiqlansin", 30) == (
         "Sudyalarning malaka hayʼatlari toʻgʻrisidagi Nizom (OʻRQ-368 tahririda)"
     )
+    tili = (
+        "“Oʻzbekiston Respublikasining Davlat tili haqida”gi Qonuniga oʻzgartishlar kiritish haqida"
+    )
+    assert restated_title(tili, "167-I", intro, 24) == (
+        "Oʻzbekiston Respublikasining Davlat tili haqidagi Qonun (167-I tahririda)"
+    )
     # A few amended articles, or no restatement: the act keeps its own title.
     assert restated_title(title, "257-II", intro, 3) is None
     assert restated_title(title, "257-II", "3-modda oʻz kuchini yoʻqotgan", 58) is None

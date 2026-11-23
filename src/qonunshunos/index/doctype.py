@@ -119,6 +119,6 @@ def restated_title(title: str, number: str | None, intro: str, units: int) -> st
         return None
     name = match.group("name").strip()
     base = match.group("base").capitalize()
-    joined = f"{name}gi" if name.endswith(_ABOUT_END) else f"{name}:"
+    joined = f"{name}gi" if name.endswith((_ABOUT_END, "haqida")) else f"{name}:"
     edition = f" ({number} tahririda)" if number else ""
     return _clip(f"{joined} {base}{edition}")
