@@ -34,14 +34,17 @@ def kind_and_title(document: ParsedDocument, card: DocumentCard | None) -> tuple
     if form is None and "konstitutsiya" in document.title.lower():
         form = "konstitutsiya"
     kind = doc_kind(form, document.number, bodies)
+    return kind, restated_name(document) or display_title(document.title, kind, document.number)
+
+
+def restated_name(document: ParsedDocument) -> str | None:
+    """The act an amending act sets out anew in full ("… yangi tahriri tasdiqlansin"), if any."""
     intro = next((u for u in document.units if u.kind == "kirish"), None)
-    if intro is not None:
-        text = " ".join(p.text for p in intro.paragraphs)
-        units = sum(1 for u in document.units if u.kind != "kirish")
-        restated = restated_title(document.title, document.number, text, units)
-        if restated:
-            return kind, restated
-    return kind, display_title(document.title, kind, document.number)
+    if intro is None:
+        return None
+    text = " ".join(p.text for p in intro.paragraphs)
+    units = sum(1 for u in document.units if u.kind != "kirish")
+    return restated_title(document.title, document.number, text, units)
 
 
 # card1 arrives in Uzbek Cyrillic, Uzbek Latin or Russian from one request to the next, so only
@@ -195,6 +198,9 @@ def index_document(
     ``requisites_only`` keeps an amending act's requisites but not its text: its amendments
     are already part of the current editions of the acts it amends.
     """
+    # An amending act that sets out a whole act anew holds that act's only current edition.
+    if requisites_only and restated_name(document):
+        requisites_only = False
     digest = content_hash(document, card, requisites_only)
     if not force and stored_hash(conn, document.lex_id) == digest:
         write_pending_changes(conn, document)

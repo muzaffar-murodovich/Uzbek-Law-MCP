@@ -161,3 +161,34 @@ def test_amending_act_keeps_requisites_only(corpus, fixture_html):
     assert "oʻzgartish kiritadi" in result.text and "1-modda" not in result.text
     hits = tools.search_law(corpus, FakeEmbedder(), "omonat")
     assert str(amending) not in hits.text
+
+
+def test_act_set_out_anew_is_indexed_in_full(corpus, fixture_html):
+    """lex.uz keeps some laws' current edition only inside the act that restated them."""
+    from qonunshunos.parser.models import Paragraph, Unit
+
+    restating = -888002
+    card = parse_card(fixture_html("card1_in_force.html"), restating)
+    document = parse_document(fixture_html("doc_law_omonatlar.html"), restating)
+    intro = Unit(
+        kind="kirish",
+        paragraphs=[
+            Paragraph(
+                elem_id=None,
+                text="… Qonuniga oʻzgartishlar kiritilib, uning yangi tahriri tasdiqlansin.",
+            )
+        ],
+    )
+    units = [intro, *document.units]
+    while sum(u.kind != "kirish" for u in units) < 10:
+        units.append(document.units[-1])
+    document = document.model_copy(
+        update={
+            "title": "“Omonatlar toʻgʻrisida”gi Oʻzbekiston Respublikasi Qonuniga oʻzgartishlar "
+            "kiritish haqida",
+            "units": units,
+        }
+    )
+    count = index_document(corpus, document, card, FakeEmbedder(), requisites_only=True)
+    assert count and count > 0
+    assert "Omonatlar toʻgʻrisidagi Qonun" in tools.get_document(corpus, str(restating)).text
