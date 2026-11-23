@@ -1017,19 +1017,31 @@ Savol va javob matnlari `data/`da qoladi, git'da faqat ID, URL va belgilar
   0,92–0,95; 300 to'plamning testi (0,856, hakam bilan o'lchangan) ulardan pastroq. Ya'ni
   0,875 optimistik emas edi: qiyin qismi tasodifiy VM qarori bandlari, odamlar ko'p so'raydigan
   mavzular osonroq.
-- **Zaif sohalar** (qat'iy R@10): uy-joy 0,47 ("ko'r" to'plamda ham 0,44), nogironlik 0,50,
-  turizm 0,50, ta'lim 0,67, ijtimoiy himoya 0,67. Keyingi qidiruv ishlari uchun shular nishon
-  (dev qismida sozlab).
-- Belgilovchilar korpusdagi bir xatoni payqadi: ba'zi qonunlar o'z nomi bilan emas, ularni
-  o'zgartirgan qonun nomi bilan saqlangan (Valyutani tartibga solish -4562834, Prokuratura
-  -106197). 7-bo'limga qo'shildi.
+- **Aniqlik** (`llm_eval.py clarity`, GPT-5.4, manba = birinchi javob hujjati): 44 savol
+  `noaniq`, asosan to'plamlardan ajratilgan kontekstsiz savollar ("Shartnoma qancha muddatga
+  tuziladi?" — mavzu, uy-joy ijarasi, faqat to'plam sarlavhasida). Teglar `eval/labels_advice.yaml`da.
+
+| advice.uz | n | R@1 | R@5 | R@8 | R@10 | R@10, hakam bilan |
+|---|---|---|---|---|---|---|
+| aniq | 225 | 0,493 | 0,764 | 0,836 | **0,876** | 0,964 |
+| noaniq | 44 | 0,250 | 0,523 | 0,568 | 0,591 | 0,886 |
+
+- **"Uy-joy zaif" asosan to'plam xatosi edi.** 15 uy-joy savolidan 8 tasi 2788-to'plamning
+  kontekstsiz savollari (`noaniq`). `aniq` uy-joy savollarida qat'iy R@10 6/8. Haqiqiy xatolar
+  alohida-alohida: shartnomasiz ijara uchun javobgarlik (MJtK 159¹), kvartira sotilganda ijara
+  (FK 604), "ko'r" to'plamda Toshkentda ro'yxatga olish (yangi OʻRQ-1074 o'rniga chet elliklar
+  haqidagi VM 593) va yakka uy qurish ruxsati. Test to'plamlarida sozlanmadi.
+- **Hujjat nomlari tuzatildi.** Belgilovchilar payqadi: 32 ta qonunning amaldagi tahriri lex.uz'da
+  faqat uni "yangi tahrirda" bayon qilgan o'zgartirish qonuni nomi bilan bor (Prokuratura, Banklar,
+  Markaziy bank, Murojaatlar, Valyutani tartibga solish va boshqalar). Endi ular
+  "Prokuratura toʻgʻrisidagi Qonun (257-II tahririda)" deb nomlanadi (`doctype.restated_title`),
+  nom bo'lak sarlavhalariga ham kiradi. Serverda 30 tasi qayta indekslandi (matn `home`dagi bilan
+  bir xil ekani `content_hash` bilan tekshirildi), 2 tasi (-3815461, -3815502) deploy'dan keyin.
 
 ## 7. Ochiq masalalar
 
 - **Model tanlovi.** 4.7-bo'lim: sifat bo'yicha bge-m3 birinchi, lekin `myserver` uchun og'ir.
   Fine-tune qilingan e5-small (6h, 6i) va reranker (6j) bilan maqsad bajarildi.
-- **Hujjat nomlari:** ba'zi qonunlar ularni o'zgartirgan qonunning nomi bilan saqlangan
-  (-4562834 Valyutani tartibga solish, -106197 Prokuratura; 6l). Parser/`display_title`ni tekshirish.
 - **Haqiqiy foydalanuvchi savollari** hali yo'q (6k, 6l: "ko'r" va advice.uz to'plamlari o'rnini bosadi). Xizmat ishga tushgach, so'rovlar anonim holda
   yig'ilib, baholash to'plamiga qo'shiladi. Birlashtirish va reranker sozlamalari shu 208 savolda
   tanlangani uchun (6j) natija biroz optimistik: yangi savollarda qayta o'lchash kerak.

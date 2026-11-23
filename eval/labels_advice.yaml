@@ -14,6 +14,7 @@
   tags:
   - blind
   - tibbiyot
+  - aniq
 - id: adv-1201
   url: https://advice.uz/oz/document/1201
   expected:
@@ -32,6 +33,7 @@
   tags:
   - blind
   - bank
+  - noaniq
 - id: adv-1270
   url: https://advice.uz/oz/document/1270
   expected:
@@ -49,6 +51,7 @@
   tags:
   - blind
   - advokatura
+  - aniq
 - id: adv-1272
   url: https://advice.uz/oz/document/1272
   expected:
@@ -64,6 +67,7 @@
   tags:
   - blind
   - advokatura
+  - aniq
 - id: adv-1273
   url: https://advice.uz/oz/document/1273
   expected:
@@ -82,6 +86,7 @@
   tags:
   - blind
   - advokatura
+  - aniq
 - id: adv-1441
   url: https://advice.uz/oz/document/1441
   expected:
@@ -92,6 +97,7 @@
   tags:
   - blind
   - harbiy
+  - aniq
 - id: adv-151
   url: https://advice.uz/oz/document/151
   expected:
@@ -108,6 +114,7 @@
   tags:
   - blind
   - transport
+  - aniq
 - id: adv-156
   url: https://advice.uz/oz/document/156
   expected:
@@ -117,6 +124,7 @@
   tags:
   - blind
   - transport
+  - aniq
 - id: adv-1595
   url: https://advice.uz/oz/document/1595
   expected:
@@ -135,6 +143,7 @@
   tags:
   - blind
   - tibbiyot
+  - aniq
 - id: adv-1598
   url: https://advice.uz/oz/document/1598
   expected:
@@ -150,6 +159,7 @@
   tags:
   - blind
   - tibbiyot
+  - noaniq
 - id: adv-1630
   url: https://advice.uz/oz/document/1630
   expected:
@@ -168,6 +178,7 @@
   tags:
   - blind
   - hujjat
+  - aniq
 - id: adv-2079-1
   url: https://advice.uz/oz/document/2079
   expected:
@@ -190,6 +201,7 @@
   tags:
   - blind
   - oila
+  - aniq
 - id: adv-2079-2
   url: https://advice.uz/oz/document/2079
   expected:
@@ -206,6 +218,7 @@
   tags:
   - blind
   - ijro
+  - aniq
 - id: adv-2079-3
   url: https://advice.uz/oz/document/2079
   expected:
@@ -220,6 +233,7 @@
   tags:
   - blind
   - oila
+  - aniq
 - id: adv-2079-4
   url: https://advice.uz/oz/document/2079
   expected:
@@ -234,6 +248,7 @@
   tags:
   - blind
   - oila
+  - aniq
 - id: adv-2079-5
   url: https://advice.uz/oz/document/2079
   expected:
@@ -247,6 +262,7 @@
   tags:
   - blind
   - oila
+  - aniq
 - id: adv-2079-6
   url: https://advice.uz/oz/document/2079
   expected:
@@ -255,6 +271,7 @@
   tags:
   - blind
   - oila
+  - aniq
 - id: adv-2079-7
   url: https://advice.uz/oz/document/2079
   expected:
@@ -269,6 +286,7 @@
   tags:
   - blind
   - sud
+  - aniq
 - id: adv-2079-8
   url: https://advice.uz/oz/document/2079
   expected:
@@ -279,6 +297,7 @@
   tags:
   - blind
   - oila
+  - aniq
 - id: adv-2079-9
   url: https://advice.uz/oz/document/2079
   expected:
@@ -289,6 +308,7 @@
   tags:
   - blind
   - oila
+  - aniq
 - id: adv-2080-1
   url: https://advice.uz/oz/document/2080
   expected:
@@ -300,6 +320,7 @@
   tags:
   - blind
   - talim
+  - aniq
 - id: adv-2080-2
   url: https://advice.uz/oz/document/2080
   expected:
@@ -318,6 +339,7 @@
   tags:
   - blind
   - talim
+  - aniq
 - id: adv-2080-3
   url: https://advice.uz/oz/document/2080
   expected:
@@ -352,6 +374,7 @@
   tags:
   - blind
   - talim
+  - aniq
 - id: adv-2080-4
   url: https://advice.uz/oz/document/2080
   expected:
@@ -363,6 +386,7 @@
   tags:
   - blind
   - talim
+  - aniq
 - id: adv-2080-5
   url: https://advice.uz/oz/document/2080
   expected:
@@ -379,6 +403,7 @@
   tags:
   - blind
   - talim
+  - aniq
 - id: adv-2083-10
   url: https://advice.uz/oz/document/2083
   expected:
@@ -390,6 +415,7 @@
   tags:
   - blind
   - tadbirkorlik
+  - aniq
 - id: adv-2083-2
   url: https://advice.uz/oz/document/2083
   expected:
@@ -398,6 +424,7 @@
   tags:
   - blind
   - sugurta
+  - aniq
 - id: adv-2083-4
   url: https://advice.uz/oz/document/2083
   expected:
@@ -406,6 +433,7 @@
   tags:
   - blind
   - soliq
+  - aniq
 - id: adv-2083-6
   url: https://advice.uz/oz/document/2083
   expected:
@@ -416,6 +444,7 @@
   tags:
   - blind
   - fuqarolik
+  - aniq
 - id: adv-2083-8
   url: https://advice.uz/oz/document/2083
   expected:
@@ -426,6 +455,7 @@
   tags:
   - blind
   - fuqarolik
+  - aniq
 - id: adv-2085-10
   url: https://advice.uz/oz/document/2085
   expected:
@@ -434,6 +464,7 @@
   tags:
   - blind
   - oila
+  - aniq
 - id: adv-2085-2
   url: https://advice.uz/oz/document/2085
   expected:
@@ -445,6 +476,7 @@
   tags:
   - blind
   - pensiya
+  - aniq
 - id: adv-2085-4
   url: https://advice.uz/oz/document/2085
   expected:
@@ -457,6 +489,7 @@
   tags:
   - blind
   - pensiya
+  - aniq
 - id: adv-2085-6
   url: https://advice.uz/oz/document/2085
   expected:
@@ -471,6 +504,7 @@
   tags:
   - blind
   - pensiya
+  - aniq
 - id: adv-2085-8
   url: https://advice.uz/oz/document/2085
   expected:
@@ -492,6 +526,7 @@
   tags:
   - blind
   - ijtimoiy
+  - aniq
 - id: adv-2088-1
   url: https://advice.uz/oz/document/2088
   expected:
@@ -500,6 +535,7 @@
   tags:
   - blind
   - sogliq
+  - aniq
 - id: adv-2088-2
   url: https://advice.uz/oz/document/2088
   expected:
@@ -514,6 +550,7 @@
   tags:
   - blind
   - sogliq
+  - aniq
 - id: adv-2088-3
   url: https://advice.uz/oz/document/2088
   expected:
@@ -525,6 +562,7 @@
   tags:
   - blind
   - sogliq
+  - aniq
 - id: adv-2088-4
   url: https://advice.uz/oz/document/2088
   expected:
@@ -533,6 +571,7 @@
   tags:
   - blind
   - ijtimoiy
+  - aniq
 - id: adv-2088-5
   url: https://advice.uz/oz/document/2088
   expected:
@@ -551,6 +590,7 @@
   tags:
   - blind
   - ijtimoiy
+  - aniq
 - id: adv-2088-6
   url: https://advice.uz/oz/document/2088
   expected:
@@ -568,6 +608,7 @@
   tags:
   - blind
   - sogliq
+  - noaniq
 - id: adv-2090-1
   url: https://advice.uz/oz/document/2090
   expected:
@@ -576,6 +617,7 @@
   tags:
   - blind
   - soliq
+  - aniq
 - id: adv-2090-2
   url: https://advice.uz/oz/document/2090
   expected:
@@ -586,6 +628,7 @@
   tags:
   - blind
   - soliq
+  - aniq
 - id: adv-2090-3
   url: https://advice.uz/oz/document/2090
   expected:
@@ -604,6 +647,7 @@
   tags:
   - blind
   - soliq
+  - aniq
 - id: adv-2090-4
   url: https://advice.uz/oz/document/2090
   expected:
@@ -612,6 +656,7 @@
   tags:
   - blind
   - soliq
+  - aniq
 - id: adv-2090-5
   url: https://advice.uz/oz/document/2090
   expected:
@@ -622,6 +667,7 @@
   tags:
   - blind
   - soliq
+  - aniq
 - id: adv-2091-1
   url: https://advice.uz/oz/document/2091
   expected:
@@ -637,6 +683,7 @@
   - blind
   - jinoyat
   - trained
+  - aniq
 - id: adv-2091-2
   url: https://advice.uz/oz/document/2091
   expected:
@@ -647,6 +694,7 @@
   tags:
   - blind
   - jinoyat
+  - aniq
 - id: adv-2091-3
   url: https://advice.uz/oz/document/2091
   expected:
@@ -661,6 +709,7 @@
   tags:
   - blind
   - sud
+  - aniq
 - id: adv-2091-4
   url: https://advice.uz/oz/document/2091
   expected:
@@ -675,6 +724,7 @@
   tags:
   - blind
   - sud
+  - aniq
 - id: adv-2091-5
   url: https://advice.uz/oz/document/2091
   expected:
@@ -687,6 +737,7 @@
   tags:
   - blind
   - sud
+  - aniq
 - id: adv-2091-6
   url: https://advice.uz/oz/document/2091
   expected:
@@ -705,6 +756,7 @@
   tags:
   - blind
   - mamuriy
+  - aniq
 - id: adv-2091-7
   url: https://advice.uz/oz/document/2091
   expected:
@@ -717,6 +769,7 @@
   tags:
   - blind
   - jinoyat
+  - aniq
 - id: adv-2093-1
   url: https://advice.uz/oz/document/2093
   expected:
@@ -734,6 +787,7 @@
   tags:
   - blind
   - bank
+  - aniq
 - id: adv-2093-2
   url: https://advice.uz/oz/document/2093
   expected:
@@ -746,6 +800,7 @@
   tags:
   - blind
   - bank
+  - aniq
 - id: adv-2093-3
   url: https://advice.uz/oz/document/2093
   expected:
@@ -754,6 +809,7 @@
   tags:
   - blind
   - bank
+  - aniq
 - id: adv-2095-1
   url: https://advice.uz/oz/document/2095
   expected:
@@ -768,6 +824,7 @@
   tags:
   - blind
   - istemolchi
+  - aniq
 - id: adv-2095-2
   url: https://advice.uz/oz/document/2095
   expected:
@@ -778,6 +835,7 @@
   tags:
   - blind
   - istemolchi
+  - aniq
 - id: adv-2095-3
   url: https://advice.uz/oz/document/2095
   expected:
@@ -790,6 +848,7 @@
   tags:
   - blind
   - istemolchi
+  - aniq
 - id: adv-2095-4
   url: https://advice.uz/oz/document/2095
   expected:
@@ -798,6 +857,7 @@
   tags:
   - blind
   - istemolchi
+  - aniq
 - id: adv-2095-5
   url: https://advice.uz/oz/document/2095
   expected:
@@ -808,6 +868,7 @@
   tags:
   - blind
   - istemolchi
+  - noaniq
 - id: adv-2095-6
   url: https://advice.uz/oz/document/2095
   expected:
@@ -827,6 +888,7 @@
   tags:
   - blind
   - istemolchi
+  - noaniq
 - id: adv-221
   url: https://advice.uz/oz/document/221
   expected:
@@ -841,6 +903,7 @@
   tags:
   - blind
   - pensiya
+  - aniq
 - id: adv-225
   url: https://advice.uz/oz/document/225
   expected:
@@ -859,6 +922,7 @@
   tags:
   - blind
   - pensiya
+  - aniq
 - id: adv-2273-1
   url: https://advice.uz/oz/document/2273
   expected:
@@ -869,6 +933,7 @@
   tags:
   - blind
   - soliq
+  - aniq
 - id: adv-2273-2
   url: https://advice.uz/oz/document/2273
   expected:
@@ -881,6 +946,7 @@
   tags:
   - blind
   - soliq
+  - aniq
 - id: adv-2273-3
   url: https://advice.uz/oz/document/2273
   expected:
@@ -893,6 +959,7 @@
   tags:
   - blind
   - soliq
+  - aniq
 - id: adv-2273-4
   url: https://advice.uz/oz/document/2273
   expected:
@@ -903,6 +970,7 @@
   tags:
   - blind
   - soliq
+  - aniq
 - id: adv-2273-5
   url: https://advice.uz/oz/document/2273
   expected:
@@ -915,6 +983,7 @@
   tags:
   - blind
   - soliq
+  - noaniq
 - id: adv-2311
   url: https://advice.uz/oz/document/2311
   expected:
@@ -934,6 +1003,7 @@
   - blind
   - ekologiya
   - trained
+  - aniq
 - id: adv-2341
   url: https://advice.uz/oz/document/2341
   expected:
@@ -952,6 +1022,7 @@
   tags:
   - blind
   - veterinariya
+  - aniq
 - id: adv-2362
   url: https://advice.uz/oz/document/2362
   expected:
@@ -971,6 +1042,7 @@
   tags:
   - blind
   - kommunal
+  - noaniq
 - id: adv-2363
   url: https://advice.uz/oz/document/2363
   expected:
@@ -988,6 +1060,7 @@
   - blind
   - ekologiya
   - trained
+  - aniq
 - id: adv-2452
   url: https://advice.uz/oz/document/2452
   expected:
@@ -998,6 +1071,7 @@
   tags:
   - blind
   - axborot
+  - aniq
 - id: adv-2456
   url: https://advice.uz/oz/document/2456
   expected:
@@ -1008,6 +1082,7 @@
   tags:
   - blind
   - savdo
+  - aniq
 - id: adv-2476-1
   url: https://advice.uz/oz/document/2476
   expected:
@@ -1022,6 +1097,7 @@
   tags:
   - blind
   - saylov
+  - aniq
 - id: adv-2476-2
   url: https://advice.uz/oz/document/2476
   expected:
@@ -1036,6 +1112,7 @@
   tags:
   - blind
   - saylov
+  - aniq
 - id: adv-2476-3
   url: https://advice.uz/oz/document/2476
   expected:
@@ -1046,6 +1123,7 @@
   tags:
   - blind
   - saylov
+  - aniq
 - id: adv-2476-4
   url: https://advice.uz/oz/document/2476
   expected:
@@ -1056,6 +1134,7 @@
   tags:
   - blind
   - saylov
+  - aniq
 - id: adv-2476-5
   url: https://advice.uz/oz/document/2476
   expected:
@@ -1070,6 +1149,7 @@
   tags:
   - blind
   - saylov
+  - aniq
 - id: adv-2476-6
   url: https://advice.uz/oz/document/2476
   expected:
@@ -1080,6 +1160,7 @@
   tags:
   - blind
   - saylov
+  - aniq
 - id: adv-2476-7
   url: https://advice.uz/oz/document/2476
   expected:
@@ -1092,6 +1173,7 @@
   tags:
   - blind
   - saylov
+  - aniq
 - id: adv-2489
   url: https://advice.uz/oz/document/2489
   expected:
@@ -1103,6 +1185,7 @@
   tags:
   - blind
   - migratsiya
+  - aniq
 - id: adv-2507
   url: https://advice.uz/oz/document/2507
   expected:
@@ -1115,6 +1198,7 @@
   tags:
   - blind
   - transport
+  - aniq
 - id: adv-2508
   url: https://advice.uz/oz/document/2508
   expected:
@@ -1126,6 +1210,7 @@
   tags:
   - blind
   - fuqarolik
+  - aniq
 - id: adv-2531
   url: https://advice.uz/oz/document/2531
   expected:
@@ -1138,6 +1223,7 @@
   tags:
   - blind
   - saylov
+  - aniq
 - id: adv-2537
   url: https://advice.uz/oz/document/2537
   expected:
@@ -1151,6 +1237,7 @@
   tags:
   - blind
   - ijtimoiy
+  - aniq
 - id: adv-2741
   url: https://advice.uz/oz/document/2741
   expected:
@@ -1163,6 +1250,7 @@
   tags:
   - blind
   - nnt
+  - aniq
 - id: adv-2788-1
   url: https://advice.uz/oz/document/2788
   expected:
@@ -1174,6 +1262,7 @@
   tags:
   - blind
   - uyjoy
+  - aniq
 - id: adv-2788-10
   url: https://advice.uz/oz/document/2788
   expected:
@@ -1182,6 +1271,7 @@
   tags:
   - blind
   - uyjoy
+  - aniq
 - id: adv-2788-11
   url: https://advice.uz/oz/document/2788
   expected:
@@ -1190,6 +1280,7 @@
   tags:
   - blind
   - uyjoy
+  - noaniq
 - id: adv-2788-2
   url: https://advice.uz/oz/document/2788
   expected:
@@ -1198,6 +1289,7 @@
   tags:
   - blind
   - uyjoy
+  - noaniq
 - id: adv-2788-3
   url: https://advice.uz/oz/document/2788
   expected:
@@ -1212,6 +1304,7 @@
   tags:
   - blind
   - uyjoy
+  - noaniq
 - id: adv-2788-4
   url: https://advice.uz/oz/document/2788
   expected:
@@ -1226,6 +1319,7 @@
   tags:
   - blind
   - uyjoy
+  - noaniq
 - id: adv-2788-5
   url: https://advice.uz/oz/document/2788
   expected:
@@ -1234,6 +1328,7 @@
   tags:
   - blind
   - uyjoy
+  - noaniq
 - id: adv-2788-6
   url: https://advice.uz/oz/document/2788
   expected:
@@ -1242,6 +1337,7 @@
   tags:
   - blind
   - uyjoy
+  - aniq
 - id: adv-2788-7
   url: https://advice.uz/oz/document/2788
   expected:
@@ -1253,6 +1349,7 @@
   tags:
   - blind
   - uyjoy
+  - aniq
 - id: adv-2788-8
   url: https://advice.uz/oz/document/2788
   expected:
@@ -1264,6 +1361,7 @@
   tags:
   - blind
   - uyjoy
+  - noaniq
 - id: adv-2788-9
   url: https://advice.uz/oz/document/2788
   expected:
@@ -1283,6 +1381,7 @@
   tags:
   - blind
   - uyjoy
+  - noaniq
 - id: adv-2821-1
   url: https://advice.uz/oz/document/2821
   expected:
@@ -1295,6 +1394,7 @@
   tags:
   - blind
   - oila
+  - aniq
 - id: adv-2821-2
   url: https://advice.uz/oz/document/2821
   expected:
@@ -1307,6 +1407,7 @@
   tags:
   - blind
   - oila
+  - aniq
 - id: adv-2821-4
   url: https://advice.uz/oz/document/2821
   expected:
@@ -1324,6 +1425,7 @@
   tags:
   - blind
   - talim
+  - aniq
 - id: adv-2823-1
   url: https://advice.uz/oz/document/2823
   expected:
@@ -1339,6 +1441,7 @@
   tags:
   - blind
   - bojxona
+  - noaniq
 - id: adv-2823-2
   url: https://advice.uz/oz/document/2823
   expected:
@@ -1353,6 +1456,7 @@
   tags:
   - blind
   - bojxona
+  - noaniq
 - id: adv-2823-3
   url: https://advice.uz/oz/document/2823
   expected:
@@ -1364,6 +1468,7 @@
   tags:
   - blind
   - bojxona
+  - aniq
 - id: adv-2823-4
   url: https://advice.uz/oz/document/2823
   expected:
@@ -1376,6 +1481,7 @@
   tags:
   - blind
   - bojxona
+  - noaniq
 - id: adv-2823-5
   url: https://advice.uz/oz/document/2823
   expected:
@@ -1392,6 +1498,7 @@
   tags:
   - blind
   - bojxona
+  - aniq
 - id: adv-2823-6
   url: https://advice.uz/oz/document/2823
   expected:
@@ -1408,6 +1515,7 @@
   tags:
   - blind
   - bojxona
+  - aniq
 - id: adv-2826-1
   url: https://advice.uz/oz/document/2826
   expected:
@@ -1420,6 +1528,7 @@
   tags:
   - blind
   - fuqarolik
+  - noaniq
 - id: adv-2826-2
   url: https://advice.uz/oz/document/2826
   expected:
@@ -1430,6 +1539,7 @@
   tags:
   - blind
   - tashqi
+  - noaniq
 - id: adv-2826-3
   url: https://advice.uz/oz/document/2826
   expected:
@@ -1441,6 +1551,7 @@
   tags:
   - blind
   - tashqi
+  - noaniq
 - id: adv-2827
   url: https://advice.uz/oz/document/2827
   expected:
@@ -1454,6 +1565,7 @@
   tags:
   - blind
   - ekologiya
+  - aniq
 - id: adv-2829-1
   url: https://advice.uz/oz/document/2829
   expected:
@@ -1468,6 +1580,7 @@
   tags:
   - blind
   - nogironlik
+  - aniq
 - id: adv-2829-2
   url: https://advice.uz/oz/document/2829
   expected:
@@ -1497,6 +1610,7 @@
   tags:
   - blind
   - nogironlik
+  - noaniq
 - id: adv-2829-3
   url: https://advice.uz/oz/document/2829
   expected:
@@ -1521,6 +1635,7 @@
   tags:
   - blind
   - nogironlik
+  - noaniq
 - id: adv-2829-4
   url: https://advice.uz/oz/document/2829
   expected:
@@ -1538,6 +1653,7 @@
   tags:
   - blind
   - nogironlik
+  - noaniq
 - id: adv-2829-5
   url: https://advice.uz/oz/document/2829
   expected:
@@ -1548,6 +1664,7 @@
   tags:
   - blind
   - nogironlik
+  - noaniq
 - id: adv-2832
   url: https://advice.uz/oz/document/2832
   expected:
@@ -1567,6 +1684,7 @@
   tags:
   - blind
   - ekologiya
+  - aniq
 - id: adv-2838-1
   url: https://advice.uz/oz/document/2838
   expected:
@@ -1575,6 +1693,7 @@
   tags:
   - blind
   - turizm
+  - aniq
 - id: adv-2838-2
   url: https://advice.uz/oz/document/2838
   expected:
@@ -1598,6 +1717,7 @@
   tags:
   - blind
   - turizm
+  - aniq
 - id: adv-2838-3
   url: https://advice.uz/oz/document/2838
   expected:
@@ -1618,6 +1738,7 @@
   tags:
   - blind
   - turizm
+  - aniq
 - id: adv-2838-4
   url: https://advice.uz/oz/document/2838
   expected:
@@ -1626,6 +1747,7 @@
   tags:
   - blind
   - turizm
+  - aniq
 - id: adv-2841
   url: https://advice.uz/oz/document/2841
   expected:
@@ -1634,6 +1756,7 @@
   tags:
   - blind
   - korrupsiya
+  - aniq
 - id: adv-291
   url: https://advice.uz/oz/document/291
   expected:
@@ -1654,6 +1777,7 @@
   - blind
   - talim
   - trained
+  - aniq
 - id: adv-2927
   url: https://advice.uz/oz/document/2927
   expected:
@@ -1670,6 +1794,7 @@
   tags:
   - blind
   - mehnat
+  - aniq
 - id: adv-3055
   url: https://advice.uz/oz/document/3055
   expected:
@@ -1687,6 +1812,7 @@
   tags:
   - blind
   - nogironlik
+  - noaniq
 - id: adv-3156-1
   url: https://advice.uz/oz/document/3156
   expected:
@@ -1705,6 +1831,7 @@
   tags:
   - blind
   - ijtimoiy
+  - aniq
 - id: adv-3156-2
   url: https://advice.uz/oz/document/3156
   expected:
@@ -1713,6 +1840,7 @@
   tags:
   - blind
   - oila
+  - aniq
 - id: adv-3156-3
   url: https://advice.uz/oz/document/3156
   expected:
@@ -1734,6 +1862,7 @@
   tags:
   - blind
   - ijtimoiy
+  - aniq
 - id: adv-3156-4
   url: https://advice.uz/oz/document/3156
   expected:
@@ -1783,6 +1912,7 @@
   tags:
   - blind
   - ijtimoiy
+  - noaniq
 - id: adv-3161-1
   url: https://advice.uz/oz/document/3161
   expected:
@@ -1803,6 +1933,7 @@
   tags:
   - blind
   - konstitutsiya
+  - aniq
 - id: adv-3161-2
   url: https://advice.uz/oz/document/3161
   expected:
@@ -1815,6 +1946,7 @@
   tags:
   - blind
   - konstitutsiya
+  - aniq
 - id: adv-3161-3
   url: https://advice.uz/oz/document/3161
   expected:
@@ -1825,6 +1957,7 @@
   tags:
   - blind
   - konstitutsiya
+  - aniq
 - id: adv-3161-4
   url: https://advice.uz/oz/document/3161
   expected:
@@ -1842,6 +1975,7 @@
   tags:
   - blind
   - konstitutsiya
+  - aniq
 - id: adv-3161-5
   url: https://advice.uz/oz/document/3161
   expected:
@@ -1854,6 +1988,7 @@
   tags:
   - blind
   - konstitutsiya
+  - aniq
 - id: adv-3161-6
   url: https://advice.uz/oz/document/3161
   expected:
@@ -1871,6 +2006,7 @@
   tags:
   - blind
   - konstitutsiya
+  - noaniq
 - id: adv-3161-7
   url: https://advice.uz/oz/document/3161
   expected:
@@ -1879,6 +2015,7 @@
   tags:
   - blind
   - konstitutsiya
+  - noaniq
 - id: adv-3163-10
   url: https://advice.uz/oz/document/3163
   expected:
@@ -1900,6 +2037,7 @@
   - blind
   - migratsiya
   - trained
+  - aniq
 - id: adv-3163-12
   url: https://advice.uz/oz/document/3163
   expected:
@@ -1914,6 +2052,7 @@
   - blind
   - migratsiya
   - trained
+  - aniq
 - id: adv-3163-14
   url: https://advice.uz/oz/document/3163
   expected:
@@ -1928,6 +2067,7 @@
   tags:
   - blind
   - migratsiya
+  - noaniq
 - id: adv-3163-4
   url: https://advice.uz/oz/document/3163
   expected:
@@ -1946,6 +2086,7 @@
   tags:
   - blind
   - talim
+  - aniq
 - id: adv-3163-6
   url: https://advice.uz/oz/document/3163
   expected:
@@ -1963,6 +2104,7 @@
   tags:
   - blind
   - bojxona
+  - aniq
 - id: adv-3163-8
   url: https://advice.uz/oz/document/3163
   expected:
@@ -1979,6 +2121,7 @@
   tags:
   - blind
   - bojxona
+  - aniq
 - id: adv-3164-1
   url: https://advice.uz/oz/document/3164
   expected:
@@ -1989,6 +2132,7 @@
   tags:
   - blind
   - nnt
+  - aniq
 - id: adv-3164-2
   url: https://advice.uz/oz/document/3164
   expected:
@@ -2003,6 +2147,7 @@
   tags:
   - blind
   - nnt
+  - aniq
 - id: adv-3164-3
   url: https://advice.uz/oz/document/3164
   expected:
@@ -2015,6 +2160,7 @@
   tags:
   - blind
   - nnt
+  - aniq
 - id: adv-3164-4
   url: https://advice.uz/oz/document/3164
   expected:
@@ -2026,6 +2172,7 @@
   tags:
   - blind
   - nnt
+  - aniq
 - id: adv-3164-5
   url: https://advice.uz/oz/document/3164
   expected:
@@ -2036,6 +2183,7 @@
   tags:
   - blind
   - nnt
+  - noaniq
 - id: adv-3214
   url: https://advice.uz/oz/document/3214
   expected:
@@ -2046,6 +2194,7 @@
   tags:
   - blind
   - kredit
+  - aniq
 - id: adv-3241
   url: https://advice.uz/oz/document/3241
   expected:
@@ -2058,6 +2207,7 @@
   tags:
   - blind
   - pensiya
+  - aniq
 - id: adv-3244
   url: https://advice.uz/oz/document/3244
   expected:
@@ -2068,6 +2218,7 @@
   tags:
   - blind
   - kredit
+  - noaniq
 - id: adv-3256
   url: https://advice.uz/oz/document/3256
   expected:
@@ -2085,6 +2236,7 @@
   tags:
   - blind
   - favqulodda
+  - aniq
 - id: adv-3296
   url: https://advice.uz/oz/document/3296
   expected:
@@ -2099,6 +2251,7 @@
   tags:
   - blind
   - intellektual
+  - aniq
 - id: adv-3297
   url: https://advice.uz/oz/document/3297
   expected:
@@ -2111,6 +2264,7 @@
   tags:
   - blind
   - intellektual
+  - aniq
 - id: adv-3300
   url: https://advice.uz/oz/document/3300
   expected:
@@ -2128,6 +2282,7 @@
   tags:
   - blind
   - intellektual
+  - aniq
 - id: adv-3302
   url: https://advice.uz/oz/document/3302
   expected:
@@ -2140,6 +2295,7 @@
   tags:
   - blind
   - intellektual
+  - aniq
 - id: adv-3306
   url: https://advice.uz/oz/document/3306
   expected:
@@ -2154,6 +2310,7 @@
   tags:
   - blind
   - intellektual
+  - aniq
 - id: adv-3307
   url: https://advice.uz/oz/document/3307
   expected:
@@ -2167,6 +2324,7 @@
   - blind
   - intellektual
   - trained
+  - aniq
 - id: adv-3308
   url: https://advice.uz/oz/document/3308
   expected:
@@ -2186,6 +2344,7 @@
   - blind
   - intellektual
   - trained
+  - aniq
 - id: adv-3309
   url: https://advice.uz/oz/document/3309
   expected:
@@ -2205,6 +2364,7 @@
   - blind
   - intellektual
   - trained
+  - aniq
 - id: adv-3311
   url: https://advice.uz/oz/document/3311
   expected:
@@ -2224,6 +2384,7 @@
   - blind
   - intellektual
   - trained
+  - aniq
 - id: adv-3314
   url: https://advice.uz/oz/document/3314
   expected:
@@ -2251,6 +2412,7 @@
   tags:
   - blind
   - intellektual
+  - aniq
 - id: adv-3341
   url: https://advice.uz/oz/document/3341
   expected:
@@ -2261,6 +2423,7 @@
   tags:
   - blind
   - mehnat
+  - aniq
 - id: adv-3344
   url: https://advice.uz/oz/document/3344
   expected:
@@ -2271,6 +2434,7 @@
   tags:
   - blind
   - mehnat
+  - aniq
 - id: adv-3354
   url: https://advice.uz/oz/document/3354
   expected:
@@ -2297,6 +2461,7 @@
   tags:
   - blind
   - pensiya
+  - aniq
 - id: adv-3357
   url: https://advice.uz/oz/document/3357
   expected:
@@ -2309,6 +2474,7 @@
   tags:
   - blind
   - pensiya
+  - aniq
 - id: adv-3359
   url: https://advice.uz/oz/document/3359
   expected:
@@ -2321,6 +2487,7 @@
   tags:
   - blind
   - ijtimoiy
+  - noaniq
 - id: adv-3364
   url: https://advice.uz/oz/document/3364
   expected:
@@ -2336,6 +2503,7 @@
   - blind
   - pensiya
   - trained
+  - aniq
 - id: adv-3365
   url: https://advice.uz/oz/document/3365
   expected:
@@ -2346,6 +2514,7 @@
   tags:
   - blind
   - pensiya
+  - aniq
 - id: adv-3367
   url: https://advice.uz/oz/document/3367
   expected:
@@ -2361,6 +2530,7 @@
   tags:
   - blind
   - advokatura
+  - aniq
 - id: adv-3370
   url: https://advice.uz/oz/document/3370
   expected:
@@ -2379,6 +2549,7 @@
   tags:
   - blind
   - yuridik
+  - noaniq
 - id: adv-3372
   url: https://advice.uz/oz/document/3372
   expected:
@@ -2387,6 +2558,7 @@
   tags:
   - blind
   - yuridik
+  - aniq
 - id: adv-3374
   url: https://advice.uz/oz/document/3374
   expected:
@@ -2397,6 +2569,7 @@
   tags:
   - blind
   - advokatura
+  - aniq
 - id: adv-3375
   url: https://advice.uz/oz/document/3375
   expected:
@@ -2407,6 +2580,7 @@
   tags:
   - blind
   - advokatura
+  - aniq
 - id: adv-3376
   url: https://advice.uz/oz/document/3376
   expected:
@@ -2417,6 +2591,7 @@
   tags:
   - blind
   - advokatura
+  - aniq
 - id: adv-3377
   url: https://advice.uz/oz/document/3377
   expected:
@@ -2433,6 +2608,7 @@
   tags:
   - blind
   - advokatura
+  - aniq
 - id: adv-3378
   url: https://advice.uz/oz/document/3378
   expected:
@@ -2447,6 +2623,7 @@
   tags:
   - blind
   - advokatura
+  - aniq
 - id: adv-3380
   url: https://advice.uz/oz/document/3380
   expected:
@@ -2463,6 +2640,7 @@
   tags:
   - blind
   - talim
+  - aniq
 - id: adv-3384
   url: https://advice.uz/oz/document/3384
   expected:
@@ -2479,6 +2657,7 @@
   tags:
   - blind
   - yolharakati
+  - aniq
 - id: adv-3385
   url: https://advice.uz/oz/document/3385
   expected:
@@ -2497,6 +2676,7 @@
   tags:
   - blind
   - yolharakati
+  - aniq
 - id: adv-3386
   url: https://advice.uz/oz/document/3386
   expected:
@@ -2509,6 +2689,7 @@
   tags:
   - blind
   - yolharakati
+  - aniq
 - id: adv-3387
   url: https://advice.uz/oz/document/3387
   expected:
@@ -2528,6 +2709,7 @@
   - blind
   - yolharakati
   - trained
+  - aniq
 - id: adv-3389
   url: https://advice.uz/oz/document/3389
   expected:
@@ -2540,6 +2722,7 @@
   tags:
   - blind
   - talim
+  - noaniq
 - id: adv-3750
   url: https://advice.uz/oz/document/3750
   expected:
@@ -2554,6 +2737,7 @@
   tags:
   - blind
   - oila
+  - aniq
 - id: adv-4003
   url: https://advice.uz/oz/document/4003
   expected:
@@ -2564,6 +2748,7 @@
   tags:
   - blind
   - fuqarolik
+  - noaniq
 - id: adv-4014
   url: https://advice.uz/oz/document/4014
   expected:
@@ -2580,6 +2765,7 @@
   tags:
   - blind
   - mehnat
+  - aniq
 - id: adv-4015
   url: https://advice.uz/oz/document/4015
   expected:
@@ -2598,6 +2784,7 @@
   tags:
   - blind
   - notariat
+  - aniq
 - id: adv-4016
   url: https://advice.uz/oz/document/4016
   expected:
@@ -2614,6 +2801,7 @@
   tags:
   - blind
   - notariat
+  - aniq
 - id: adv-4025
   url: https://advice.uz/oz/document/4025
   expected:
@@ -2629,6 +2817,7 @@
   tags:
   - blind
   - notariat
+  - aniq
 - id: adv-4027
   url: https://advice.uz/oz/document/4027
   expected:
@@ -2645,6 +2834,7 @@
   tags:
   - blind
   - bojxona
+  - aniq
 - id: adv-4030
   url: https://advice.uz/oz/document/4030
   expected:
@@ -2653,6 +2843,7 @@
   tags:
   - blind
   - fuqarolik
+  - aniq
 - id: adv-4031
   url: https://advice.uz/oz/document/4031
   expected:
@@ -2668,6 +2859,7 @@
   tags:
   - blind
   - fuqarolik
+  - noaniq
 - id: adv-4032
   url: https://advice.uz/oz/document/4032
   expected:
@@ -2678,6 +2870,7 @@
   tags:
   - blind
   - fuqarolik
+  - aniq
 - id: adv-4033-1
   url: https://advice.uz/oz/document/4033
   expected:
@@ -2686,6 +2879,7 @@
   tags:
   - blind
   - pensiya
+  - aniq
 - id: adv-4033-2
   url: https://advice.uz/oz/document/4033
   expected:
@@ -2701,6 +2895,7 @@
   tags:
   - blind
   - pensiya
+  - aniq
 - id: adv-4033-3
   url: https://advice.uz/oz/document/4033
   expected:
@@ -2713,6 +2908,7 @@
   tags:
   - blind
   - pensiya
+  - aniq
 - id: adv-4033-4
   url: https://advice.uz/oz/document/4033
   expected:
@@ -2727,6 +2923,7 @@
   tags:
   - blind
   - pensiya
+  - aniq
 - id: adv-4033-5
   url: https://advice.uz/oz/document/4033
   expected:
@@ -2739,6 +2936,7 @@
   tags:
   - blind
   - pensiya
+  - aniq
 - id: adv-4033-6
   url: https://advice.uz/oz/document/4033
   expected:
@@ -2749,6 +2947,7 @@
   tags:
   - blind
   - pensiya
+  - aniq
 - id: adv-4040
   url: https://advice.uz/oz/document/4040
   expected:
@@ -2757,6 +2956,7 @@
   tags:
   - blind
   - sud
+  - aniq
 - id: adv-4041
   url: https://advice.uz/oz/document/4041
   expected:
@@ -2770,6 +2970,7 @@
   - blind
   - uyjoy
   - trained
+  - aniq
 - id: adv-4043
   url: https://advice.uz/oz/document/4043
   expected:
@@ -2786,6 +2987,7 @@
   - blind
   - uyjoy
   - trained
+  - aniq
 - id: adv-4044
   url: https://advice.uz/oz/document/4044
   expected:
@@ -2794,6 +2996,7 @@
   tags:
   - blind
   - uyjoy
+  - aniq
 - id: adv-4049
   url: https://advice.uz/oz/document/4049
   expected:
@@ -2807,6 +3010,7 @@
   tags:
   - blind
   - ekologiya
+  - aniq
 - id: adv-4050
   url: https://advice.uz/oz/document/4050
   expected:
@@ -2825,6 +3029,7 @@
   tags:
   - blind
   - ekologiya
+  - aniq
 - id: adv-4068
   url: https://advice.uz/oz/document/4068
   expected:
@@ -2835,6 +3040,7 @@
   tags:
   - blind
   - mehnat
+  - aniq
 - id: adv-4076
   url: https://advice.uz/oz/document/4076
   expected:
@@ -2847,6 +3053,7 @@
   tags:
   - blind
   - meros
+  - aniq
 - id: adv-4097
   url: https://advice.uz/oz/document/4097
   expected:
@@ -2857,6 +3064,7 @@
   tags:
   - blind
   - talim
+  - aniq
 - id: adv-4098
   url: https://advice.uz/oz/document/4098
   expected:
@@ -2867,6 +3075,7 @@
   tags:
   - blind
   - meros
+  - aniq
 - id: adv-4101
   url: https://advice.uz/oz/document/4101
   expected:
@@ -2877,6 +3086,7 @@
   tags:
   - blind
   - isteʼmolchi
+  - aniq
 - id: adv-4102
   url: https://advice.uz/oz/document/4102
   expected:
@@ -2887,6 +3097,7 @@
   tags:
   - blind
   - fuqarolik
+  - aniq
 - id: adv-4109
   url: https://advice.uz/oz/document/4109
   expected:
@@ -2901,6 +3112,7 @@
   tags:
   - blind
   - oila
+  - aniq
 - id: adv-4111
   url: https://advice.uz/oz/document/4111
   expected:
@@ -2911,6 +3123,7 @@
   tags:
   - blind
   - mehnat
+  - aniq
 - id: adv-4125
   url: https://advice.uz/oz/document/4125
   expected:
@@ -2924,6 +3137,7 @@
   tags:
   - blind
   - meros
+  - aniq
 - id: adv-4126
   url: https://advice.uz/oz/document/4126
   expected:
@@ -2932,6 +3146,7 @@
   tags:
   - blind
   - mediatsiya
+  - aniq
 - id: adv-4129
   url: https://advice.uz/oz/document/4129
   expected:
@@ -2972,6 +3187,7 @@
   tags:
   - blind
   - murojaat
+  - aniq
 - id: adv-4131
   url: https://advice.uz/oz/document/4131
   expected:
@@ -2984,6 +3200,7 @@
   tags:
   - blind
   - mehnat
+  - noaniq
 - id: adv-4132
   url: https://advice.uz/oz/document/4132
   expected:
@@ -3000,6 +3217,7 @@
   tags:
   - blind
   - mehnat
+  - aniq
 - id: adv-4139
   url: https://advice.uz/oz/document/4139
   expected:
@@ -3013,6 +3231,7 @@
   tags:
   - blind
   - bank
+  - aniq
 - id: adv-4140
   url: https://advice.uz/oz/document/4140
   expected:
@@ -3023,6 +3242,7 @@
   tags:
   - blind
   - oila
+  - aniq
 - id: adv-4141
   url: https://advice.uz/oz/document/4141
   expected:
@@ -3031,6 +3251,7 @@
   tags:
   - blind
   - mehnat
+  - aniq
 - id: adv-4144
   url: https://advice.uz/oz/document/4144
   expected:
@@ -3041,6 +3262,7 @@
   tags:
   - blind
   - mediatsiya
+  - aniq
 - id: adv-4145
   url: https://advice.uz/oz/document/4145
   expected:
@@ -3049,6 +3271,7 @@
   tags:
   - blind
   - soliq
+  - aniq
 - id: adv-4152
   url: https://advice.uz/oz/document/4152
   expected:
@@ -3061,6 +3284,7 @@
   tags:
   - blind
   - fuqarolik
+  - aniq
 - id: adv-4153
   url: https://advice.uz/oz/document/4153
   expected:
@@ -3072,6 +3296,7 @@
   - blind
   - pensiya
   - trained
+  - aniq
 - id: adv-4154
   url: https://advice.uz/oz/document/4154
   expected:
@@ -3091,6 +3316,7 @@
   tags:
   - blind
   - talim
+  - aniq
 - id: adv-4166
   url: https://advice.uz/oz/document/4166
   expected:
@@ -3103,6 +3329,7 @@
   tags:
   - blind
   - soliq
+  - aniq
 - id: adv-4169
   url: https://advice.uz/oz/document/4169
   expected:
@@ -3117,6 +3344,7 @@
   tags:
   - blind
   - yuridik_yordam
+  - aniq
 - id: adv-4170
   url: https://advice.uz/oz/document/4170
   expected:
@@ -3127,6 +3355,7 @@
   tags:
   - blind
   - mehnat
+  - aniq
 - id: adv-4181
   url: https://advice.uz/oz/document/4181
   expected:
@@ -3138,6 +3367,7 @@
   tags:
   - blind
   - meros
+  - aniq
 - id: adv-4190
   url: https://advice.uz/oz/document/4190
   expected:
@@ -3146,6 +3376,7 @@
   tags:
   - blind
   - sport
+  - aniq
 - id: adv-4198
   url: https://advice.uz/oz/document/4198
   expected:
@@ -3156,6 +3387,7 @@
   tags:
   - blind
   - mehnat
+  - aniq
 - id: adv-4201
   url: https://advice.uz/oz/document/4201
   expected:
@@ -3166,6 +3398,7 @@
   tags:
   - blind
   - oila
+  - aniq
 - id: adv-4204
   url: https://advice.uz/oz/document/4204
   expected:
@@ -3184,6 +3417,7 @@
   tags:
   - blind
   - oila
+  - aniq
 - id: adv-4205-1
   url: https://advice.uz/oz/document/4205
   expected:
@@ -3198,6 +3432,7 @@
   tags:
   - blind
   - intellektual
+  - aniq
 - id: adv-4205-2
   url: https://advice.uz/oz/document/4205
   expected:
@@ -3213,6 +3448,7 @@
   - blind
   - intellektual
   - trained
+  - aniq
 - id: adv-4205-3
   url: https://advice.uz/oz/document/4205
   expected:
@@ -3227,6 +3463,7 @@
   tags:
   - blind
   - intellektual
+  - aniq
 - id: adv-4205-4
   url: https://advice.uz/oz/document/4205
   expected:
@@ -3239,6 +3476,7 @@
   tags:
   - blind
   - intellektual
+  - aniq
 - id: adv-4205-5
   url: https://advice.uz/oz/document/4205
   expected:
@@ -3255,6 +3493,7 @@
   tags:
   - blind
   - intellektual
+  - aniq
 - id: adv-4205-6
   url: https://advice.uz/oz/document/4205
   expected:
@@ -3271,6 +3510,7 @@
   tags:
   - blind
   - intellektual
+  - aniq
 - id: adv-4205-7
   url: https://advice.uz/oz/document/4205
   expected:
@@ -3279,6 +3519,7 @@
   tags:
   - blind
   - intellektual
+  - aniq
 - id: adv-4216
   url: https://advice.uz/oz/document/4216
   expected:
@@ -3303,6 +3544,7 @@
   tags:
   - blind
   - ijtimoiy
+  - noaniq
 - id: adv-4232-1
   url: https://advice.uz/oz/document/4232
   expected:
@@ -3315,6 +3557,7 @@
   tags:
   - blind
   - bank
+  - aniq
 - id: adv-4232-2
   url: https://advice.uz/oz/document/4232
   expected:
@@ -3333,6 +3576,7 @@
   tags:
   - blind
   - bank
+  - aniq
 - id: adv-4232-3
   url: https://advice.uz/oz/document/4232
   expected:
@@ -3341,6 +3585,7 @@
   tags:
   - blind
   - bank
+  - aniq
 - id: adv-4232-4
   url: https://advice.uz/oz/document/4232
   expected:
@@ -3351,6 +3596,7 @@
   tags:
   - blind
   - bank
+  - noaniq
 - id: adv-4232-5
   url: https://advice.uz/oz/document/4232
   expected:
@@ -3361,6 +3607,7 @@
   tags:
   - blind
   - bank
+  - aniq
 - id: adv-4236
   url: https://advice.uz/oz/document/4236
   expected:
@@ -3379,6 +3626,7 @@
   tags:
   - blind
   - uyjoy
+  - aniq
 - id: adv-4300
   url: https://advice.uz/oz/document/4300
   expected:
@@ -3393,6 +3641,7 @@
   tags:
   - blind
   - mamuriy
+  - aniq
 - id: adv-4302
   url: https://advice.uz/oz/document/4302
   expected:
@@ -3407,6 +3656,7 @@
   tags:
   - blind
   - mamuriy
+  - aniq
 - id: adv-4321
   url: https://advice.uz/oz/document/4321
   expected:
@@ -3417,6 +3667,7 @@
   tags:
   - blind
   - advokatura
+  - aniq
 - id: adv-4353
   url: https://advice.uz/oz/document/4353
   expected:
@@ -3427,6 +3678,7 @@
   tags:
   - blind
   - ekologiya
+  - aniq
 - id: adv-4363
   url: https://advice.uz/oz/document/4363
   expected:
@@ -3447,6 +3699,7 @@
   - blind
   - oila
   - trained
+  - aniq
 - id: adv-4515
   url: https://advice.uz/oz/document/4515
   expected:
@@ -3461,6 +3714,7 @@
   tags:
   - blind
   - ekologiya
+  - aniq
 - id: adv-4764
   url: https://advice.uz/oz/document/4764
   expected:
@@ -3469,6 +3723,7 @@
   tags:
   - blind
   - mamuriy
+  - aniq
 - id: adv-4775
   url: https://advice.uz/oz/document/4775
   expected:
@@ -3483,6 +3738,7 @@
   tags:
   - blind
   - mahalla
+  - aniq
 - id: adv-4777
   url: https://advice.uz/oz/document/4777
   expected:
@@ -3498,6 +3754,7 @@
   tags:
   - blind
   - mahalla
+  - noaniq
 - id: adv-4778
   url: https://advice.uz/oz/document/4778
   expected:
@@ -3508,6 +3765,7 @@
   tags:
   - blind
   - mahalla
+  - aniq
 - id: adv-4779
   url: https://advice.uz/oz/document/4779
   expected:
@@ -3519,6 +3777,7 @@
   tags:
   - blind
   - mahalla
+  - noaniq
 - id: adv-4780
   url: https://advice.uz/oz/document/4780
   expected:
@@ -3532,6 +3791,7 @@
   tags:
   - blind
   - mahalla
+  - aniq
 - id: adv-4781
   url: https://advice.uz/oz/document/4781
   expected:
@@ -3546,6 +3806,7 @@
   tags:
   - blind
   - mahalla
+  - noaniq
 - id: adv-4782
   url: https://advice.uz/oz/document/4782
   expected:
@@ -3556,6 +3817,7 @@
   tags:
   - blind
   - mahalla
+  - noaniq
 - id: adv-4783
   url: https://advice.uz/oz/document/4783
   expected:
@@ -3564,6 +3826,7 @@
   tags:
   - blind
   - soliq
+  - noaniq
 - id: adv-4784
   url: https://advice.uz/oz/document/4784
   expected:
@@ -3581,6 +3844,7 @@
   tags:
   - blind
   - mahalla
+  - aniq
 - id: adv-4788
   url: https://advice.uz/oz/document/4788
   expected:
@@ -3595,6 +3859,7 @@
   tags:
   - blind
   - huquq
+  - aniq
 - id: adv-4791
   url: https://advice.uz/oz/document/4791
   expected:
@@ -3607,6 +3872,7 @@
   tags:
   - blind
   - huquq
+  - aniq
 - id: adv-4792
   url: https://advice.uz/oz/document/4792
   expected:
@@ -3621,6 +3887,7 @@
   tags:
   - blind
   - huquq
+  - aniq
 - id: adv-4793
   url: https://advice.uz/oz/document/4793
   expected:
@@ -3633,6 +3900,7 @@
   tags:
   - blind
   - huquq
+  - aniq
 - id: adv-755
   url: https://advice.uz/oz/document/755
   expected:
@@ -3654,3 +3922,4 @@
   tags:
   - blind
   - tibbiyot
+  - aniq
