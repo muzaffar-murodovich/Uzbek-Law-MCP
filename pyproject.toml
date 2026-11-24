@@ -3,6 +3,7 @@ name = "nizom"
 version = "0.1.0"
 description = "Remote MCP server for Uzbek legislation (source: lex.uz)"
 readme = "README.md"
+license = "MIT"
 requires-python = ">=3.12"
 dependencies = [
     "beautifulsoup4>=4.12",
