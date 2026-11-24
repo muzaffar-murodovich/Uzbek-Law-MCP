@@ -1043,6 +1043,66 @@ Savol va javob matnlari `data/`da qoladi, git'da faqat ID, URL va belgilar
   indekslaydi; ikkalasi qayta indekslandi. Matnsiz saqlangan 5 371 aktdan boshqasi bunday emas
   (20+ birlikli 580 tasi haqiqiy o'zgartirish aktlari).
 
+## 6m. lex.uz'ning o'z qidiruvi bilan solishtirish (2026-11-24)
+
+**Usul** (`scripts/lexuz_search_eval.py`). 208 ta aniq savol (`questions_llm_full`), lex.uz'dagi "Milliy qonunchilik"
+ro'yxatining "Matndagi so'z yoki jumla" filtri (`query_1` maydoni, "Aniq mos kelishi" belgilanmagan;
+sahifa JS'i uni `/uz/search/nat?lang=4&status=Y&query=…` ga aylantiradi, 100 belgidan uzun matnni
+qabul qilmaydi). Saytda alohida umumiy qidiruv oynasi yo'q. So'rovlar `myserver`dan, 2,5 s
+oraliq bilan (4 × 208 = 832 ta). lex.uz modda emas, hujjat qaytaradi, shuning uchun mezon
+yengilroq: kutilgan hujjatlardan biri birinchi 10 natija (birinchi sahifa, 20 tadan 10 tasi)
+ichida bo'lsa yetarli. So'rov 100 belgigacha qisqartirildi (lex.uz cheklovi), tinish belgilari
+olib tashlandi, apostroflar lex.uz yozuviga (oʻ, gʻ, ʼ) keltirildi. To'rt variant: savol matni,
+AI'ning birinchi rasmiy iborasi (`alt`), shu iboraning birinchi 2 va 3 so'zi.
+
+**lex.uz qidiruvi qanday ishlaydi** (sinov so'rovlaridan): so'rovdagi hamma so'z bor hujjatlarni
+topadi (aniq so'z shakli bilan) va ularni sana bo'yicha, eng yangisidan tartiblaydi. Masalan,
+"yillik mehnat taʼtili" so'rovida 34 ta hujjat chiqdi, Mehnat kodeksi birinchi 5 tasida yo'q.
+
+| So'rov | Natija qaytdi | R@1 | R@10 (hujjat) |
+|---|---:|---:|---:|
+| savol matni | 0,000 | 0,000 | 0,000 |
+| rasmiy ibora | 0,043 | 0,005 | 0,019 |
+| iboraning 2 so'zi | 0,981 | 0,034 | 0,120 |
+| iboraning 3 so'zi | 0,856 | 0,038 | 0,159 |
+| *Nizom, xizmat (modda, 6j)* | — | *0,538* | *0,875* |
+
+Natija: `eval/results/2026-11-24-lexuz-search.jsonl` (faqat ID'lar). Uzun so'rovda lex.uz deyarli
+hech narsa topmaydi ("Sizning so'rovingiz bo'yicha hujjat topilmadi!"). Qisqa so'rovda natija bor,
+lekin saralanmagan. Kalit so'zlarni qo'lda yaxshiroq tanlagan odam bundan yuqori natija olishi
+mumkin: bu raqamlar oddiy qoida bilan tanlangan so'zlar uchun.
+
+## 6n. Stemmer va lemmaning ta'siri, butun korpusda (2026-11-24)
+
+**Usul** (`scripts/fts_ablation.py`). 4.1'dagi stemming o'lchovi 21 hujjat va 77 savolda edi, 6j'dagi
+lemma o'lchovi esa faqat lemmani solishtirgan. Bu safar uch holat bir xil sharoitda o'lchandi:
+- `none`: so'z faqat `fold` qilinadi (kichik harf, tutuq belgilarisiz), stemming yo'q;
+- `stem`: lemma jadvaligacha bo'lgan stemmer (d7d1c2d: `-chi` qoidasi va unli tushishi yo'q);
+- `lemma`: xizmatdagi holat (f0160c4).
+
+Baza: `home`da sudo'siz ochilgan alohida PostgreSQL 18 klaster (port 5441), unga 2026-11-23 kechki
+zaxira nusxadan faqat `documents`, `sections`, `chunks`, `fts_stats` tiklandi. `home`da pgvector
+yo'q, shuning uchun `embedding` matn sifatida tiklandi va `vector_candidates` numpy'dagi aniq
+cosine qidiruv bilan almashtirildi (HNSW emas). Qolgan hamma narsa `nizom eval` yo'li:
+IDF FTS, RRF, `mmarco-uz-rr1-int8` top 30. Har variant uchun `tsv` va `fts_stats` qayta qurildi.
+208 ta aniq savol, LLM `alt`. Tekshiruv: `lemma` holati xizmatdagi o'lchovni takrorladi (FTS R@10
+0,630, reranker bilan 0,875 va R@1 0,538, 6j bilan bir xil).
+
+| Holat | FTS so'zlari | FTS R@1 | FTS R@10 | Gibrid R@10 | + reranker R@1 | + reranker R@10 |
+|---|---:|---:|---:|---:|---:|---:|
+| `none` | 260 906 | 0,139 | 0,428 | 0,760 | 0,529 | 0,870 |
+| `stem` | 166 969 | 0,250 | 0,615 | 0,812 | 0,529 | 0,885 |
+| `lemma` | 162 053 | 0,264 | 0,630 | 0,817 | 0,538 | 0,875 |
+
+Savolma-savol (top-10 ga kirgan / chiqib ketgan): FTS `none → stem` +53/−14, `stem → lemma` +6/−3;
+gibrid `none → stem` +14/−3; reranker bilan `none → stem` +8/−5, `stem → lemma` +1/−3.
+
+**Xulosa.** Stemmer FTS uchun katta foyda (R@10 +0,19), reranker'siz gibridda ham sezilarli
+(+0,05). Reranker bilan farq shovqin ichida: vektor va reranker so'z shaklini o'zi tushunadi.
+Lemma stemmer ustiga shovqin darajasida. 4.1'dagi "stemming shovqin darajasida" xulosasi kichik
+to'plamdan chiqqan edi: butun korpusda FTS uchun bu noto'g'ri. Natijalar:
+`eval/results/2026-11-24-fts-ablation-{none,stem,lemma}.json`.
+
 ## 7. Ochiq masalalar
 
 - **Model tanlovi.** 4.7-bo'lim: sifat bo'yicha bge-m3 birinchi, lekin `myserver` uchun og'ir.
