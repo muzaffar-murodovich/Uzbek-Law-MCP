@@ -33,7 +33,7 @@ limitlarni hisoblash mumkin.
 - Limitlar ishlaydi va oshib ketganda o'zbekcha xabar qaytadi (xato emas). Hisoblagich
   Toshkent vaqti bilan 00:00 da nolga tushadi.
 - `usage_events.user_id` to'ldiriladi.
-- Admin CLI: `qonunshunos user list|show|limit|block|unblock`. Akkauntlarni birlashtirish yo'q.
+- Admin CLI: `nizom user list|show|limit|block|unblock`. Akkauntlarni birlashtirish yo'q.
 - Maxfiylik siyosati va foydalanish shartlari sahifalari bor (Google buni talab qiladi).
 - **Haqiqiy mijozlar bilan sinov:** Claude Code, claude.ai va ChatGPT konnektor sifatida
   ulanadi, kiradi va savolga javob oladi. Natija "Natija" bo'limiga yoziladi.
@@ -57,7 +57,7 @@ limitlarni hisoblash mumkin.
 ## Kirish oqimi
 
 ```
-AI mijoz (claude.ai)            Qonunshunos                         Google          
+AI mijoz (claude.ai)            Nizom                               Google          
    │ POST /mcp (tokensiz)  ───►  401 + resource metadata havolasi
    │ GET /.well-known/...  ───►  metama'lumot
    │ POST /register        ───►  client_id (DCR)
@@ -79,7 +79,7 @@ AI mijoz (claude.ai)            Qonunshunos                         Google
   qayta ishga tushsa ham oqim uzilmaydi.
 - **Rozilik sahifasi.** DCR orqali har kim mijoz ro'yxatdan o'tkaza oladi va istalgan nom
   qo'yadi. Shuning uchun foydalanuvchiga "«Claude» (claude.ai) sizning nomingizdan
-  Qonunshunos'dan foydalanmoqchi. Ruxsat berasizmi?" deb so'raladi. Nom yonida `redirect_uri`
+  Nizomdan foydalanmoqchi. Ruxsat berasizmi?" deb so'raladi. Nom yonida `redirect_uri`
   domeni ko'rsatiladi, chunki nomni soxtalashtirish mumkin, domenni esa yo'q. Bir marta ruxsat
   berilgan mijoz uchun sahifa qayta chiqmaydi (`oauth_consents`).
 - **`redirect_uri`**: faqat `https://…` yoki `http://localhost` / `127.0.0.1` (Claude Code,
@@ -171,7 +171,7 @@ usage_events     + counted boolean NOT NULL DEFAULT true; user_id → users(id)
 ```
 
 Muddati o'tgan kodlar, so'rovlar va tokenlar har kuni tozalanadi (5-bosqichdagi worker
-timer'iga qo'shiladi, hozircha `qonunshunos auth-cleanup` buyrug'i).
+timer'iga qo'shiladi, hozircha `nizom auth-cleanup` buyrug'i).
 
 ## Sahifalar
 
@@ -191,20 +191,20 @@ havolalari kerak.
 ## Konfiguratsiya (`.env`)
 
 ```
-QONUNSHUNOS_PUBLIC_URL=https://qonunshunos.muzaffar.zip   # issuer va resource shundan
-QONUNSHUNOS_CONTACT=...           # /maxfiylik va /shartlar'dagi murojaat manzili
+NIZOM_PUBLIC_URL=https://nizom.org   # issuer va resource shundan
+NIZOM_CONTACT=...           # /maxfiylik va /shartlar'dagi murojaat manzili
 GOOGLE_CLIENT_ID=... / GOOGLE_CLIENT_SECRET=...
 ```
 
-`qonunshunos serve` auth'ni sozlamalar bo'lsa yoqadi. `--no-auth` faqat `127.0.0.1`da
-ishlaganda ruxsat etiladi. Mahalliy ishlab chiqish uchun `QONUNSHUNOS_DEV_LOGIN=1` kirish
+`nizom serve` auth'ni sozlamalar bo'lsa yoqadi. `--no-auth` faqat `127.0.0.1`da
+ishlaganda ruxsat etiladi. Mahalliy ishlab chiqish uchun `NIZOM_DEV_LOGIN=1` kirish
 sahifasiga "Test foydalanuvchi sifatida kirish" tugmasini qo'shadi (faqat localhost'da). Shunda
 testlar va mahalliy sinov Google'siz ishlaydi.
 
 ## Modullar
 
 ```
-src/qonunshunos/auth/
+src/nizom/auth/
   provider.py   OAuthAuthorizationServerProvider: mijozlar, kodlar, tokenlar (Postgres)
   google.py     OIDC: start URL, kodni almashtirish, ID token tekshiruvi
   users.py      foydalanuvchini topish/yaratish, blok
@@ -231,18 +231,18 @@ limit tekshiruvi hamda `user_id`.
 
 claude.ai va ChatGPT konnektorlari faqat ommaviy HTTPS manzil bilan ishlaydi. Shuning uchun bosqich oxirida server `myserver`ga
 **sinov tarzida** qo'yiladi: systemd xizmati, nginx sayti va Let's Encrypt sertifikati
-`qonunshunos.muzaffar.zip` uchun, PGDG'dan pgvector va namunaviy korpus (22 ta kodeks + 65 ta
+`nizom.org` uchun, PGDG'dan pgvector va namunaviy korpus (22 ta kodeks + 65 ta
 qonun). Bu 5-bosqichning bir qismini oldinroq bajaradi; zaxira nusxa, monitoring va kunlik
 yangilash 5-bosqichda qoladi (roziligi 2026-11-06). `myserver`da har bir o'zgarishdan oldin ruxsat so'raladi.
 
 Sinov rejasi:
 
-1. Claude Code: `claude mcp add --transport http qonunshunos https://qonunshunos.muzaffar.zip/mcp`,
+1. Claude Code: `claude mcp add --transport http nizom https://nizom.org/mcp`,
    `/mcp` → kirish → bitta savol.
 2. claude.ai: Settings → Connectors → custom connector, Google bilan kirish, savol.
 3. ChatGPT: developer mode'da konnektor, Google bilan kirish, savol.
 4. Limit: `limits_override` bilan 2 ta qidiruv qo'yib, uchinchisida xabar chiqishini tekshirish.
-5. Blok: `qonunshunos user block` → keyingi so'rov `401`.
+5. Blok: `nizom user block` → keyingi so'rov `401`.
 
 ## Foydalanuvchi bajaradigan ishlar
 
@@ -250,7 +250,7 @@ Bularni men qila olmayman (akkauntlar sizniki):
 
 1. **Google Cloud:** loyiha → OAuth consent screen (External, nom, email, `/maxfiylik`,
    `/shartlar`) → Credentials → OAuth client ID (Web application). Redirect URI'lar:
-   `https://qonunshunos.muzaffar.zip/auth/google/callback` va
+   `https://nizom.org/auth/google/callback` va
    `http://localhost:8000/auth/google/callback`. So'ng ilovani "Production"ga o'tkazish.
    Client ID va secret `.env`ga.
 2. `myserver`dagi o'zgarishlarga ruxsat (sinov deploy'i).
@@ -268,7 +268,7 @@ Bularni men qila olmayman (akkauntlar sizniki):
 
 ## Natija (2026-11-07)
 
-Uchala mijoz ham `https://qonunshunos.muzaffar.zip/mcp`ga Google orqali kirib, savolga javob
+Uchala mijoz ham `https://nizom.org/mcp`ga Google orqali kirib, savolga javob
 oldi. Server kodiga hech qanday o'zgartirish kiritish kerak bo'lmadi. Ma'lumotlar nginx log'i va
 `usage_events` jadvalidan olindi.
 
@@ -305,7 +305,7 @@ Kuzatuvlar (foydalanuvchiga ta'siri yo'q, 5-bosqichdagi monitoringda kuzatiladi)
 
 - 1–6-qadamlar bajarildi: `auth/` (`users`, `limits`, `provider`, `google`, `pages`),
   `site.py` (`/`, `/maxfiylik`, `/shartlar`), `0005` migratsiyasi, `serve` OAuth bilan,
-  `qonunshunos user list|show|limit|block|unblock` va `qonunshunos auth-cleanup`. Testlar:
+  `nizom user list|show|limit|block|unblock` va `nizom auth-cleanup`. Testlar:
   157 ta. Ular orasida SDK'ning OAuth mijozi bilan to'liq oqim testi (ro'yxatdan o'tish → dev
   login → rozilik → token → tool → limit) va soxta Google bilan callback testi bor.
 - **Mijoz siri** xesh qilinmaydi: SDK uni ochiq matn bilan solishtiradi. Bu xavfli emas, chunki
@@ -314,7 +314,7 @@ Kuzatuvlar (foydalanuvchiga ta'siri yo'q, 5-bosqichdagi monitoringda kuzatiladi)
   server tomonida bog'lanadi. Rozilik formasi esa faqat o'sha sahifada ko'rsatilgan bir
   martalik token bilan qabul qilinadi. Google callback'i `qs_req` cookie orqali kirish
   boshlangan brauzerga bog'langan (login CSRF'dan himoya).
-- `QONUNSHUNOS_SECRET` kerak bo'lmadi: hamma holat bazada saqlanadi.
+- `NIZOM_SECRET` kerak bo'lmadi: hamma holat bazada saqlanadi.
 - `resource` yubormaydigan mijozlar uchun `resource` avtomatik `<public_url>/mcp` qilib
   qo'yiladi, aks holda `validate_token_resource` ularning tokenini rad etardi.
 - `serve` endi standart holatda OAuth talab qiladi. `--no-auth` faqat loopback'da ishlaydi
@@ -342,7 +342,7 @@ Kuzatuvlar (foydalanuvchiga ta'siri yo'q, 5-bosqichdagi monitoringda kuzatiladi)
   Google ismi va emaili bilan yaratildi, tokenga `resource=http://localhost:8000/mcp` yozildi.
 - Headless Claude Code saqlangan token bilan "Mehnat ta'tili necha kun?" savoliga javob berdi:
   MK 217- va 218-moddalarga havola qilib, 21 kun. `usage_events`ga 4 ta chaqiruv (1 ta qidiruv,
-  3 ta modda) foydalanuvchi bilan yozildi. `qonunshunos user show 1`: search 1/30, other 3/200.
+  3 ta modda) foydalanuvchi bilan yozildi. `nizom user show 1`: search 1/30, other 3/200.
 - Mahalliy sinovda `public_url` `http://localhost:8000` bo'lishi kerak: Google'dagi redirect
   shunday yozilgan. MCP konnektori ham `localhost` bilan qo'shiladi (`127.0.0.1` emas), aks holda
   `resource` mos kelmaydi.

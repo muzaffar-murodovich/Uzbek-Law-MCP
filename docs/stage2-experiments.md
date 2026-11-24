@@ -1,6 +1,6 @@
 # O'zbek tilidagi yuridik qidiruv: tajribalar jurnali
 
-Qonunshunos loyihasining 2-bosqichi (2026-11-05). Bu hujjatda o'zbek tilidagi qonun matnlari
+Nizom loyihasining 2-bosqichi (2026-11-05). Bu hujjatda o'zbek tilidagi qonun matnlari
 bo'yicha qidiruv qanday qurilgani, qanday o'lchangani va har bir qaror qaysi raqamga
 asoslangani yozilgan. Dizayn: [stage2-index-search.md](stage2-index-search.md).
 
@@ -250,7 +250,7 @@ qiyin. Bu model kuchliroq serverga o'tganda ma'qul keladi.
 hisobdan yecha boshlaydi. Birinchi versiyadagi "429 kelsa keyingi kalitga o't" mantiqi buni
 sezmadi va ≈80 ming token pullik bo'lib ketdi.
 
-**Tuzatish.** Mahalliy hisob qo'shildi ([llm.py](../src/qonunshunos/llm.py),
+**Tuzatish.** Mahalliy hisob qo'shildi ([llm.py](../src/nizom/llm.py),
 `data/llm_usage.json`): har bir kalit va har bir model toifasi uchun UTC kuni bo'yicha sarf
 yuritiladi va so'rov bepul limitdan **oldin** to'xtatiladi. Ro'yxatda yo'q model chaqirilmaydi.
 Testlar bilan himoyalangan.
@@ -625,7 +625,7 @@ Xulosa: e5 o'zbek tilini web matnidan o'rgangan, u yerda tipografik qo'shtirnoql
 belgilar kam. Shuning uchun modelga (hujjat va savol) tipografik shakl beriladi:
 `normalize.embedding_text`. Saqlanadigan matn, FTS va foydalanuvchiga ko'rsatiladigan matn
 o'zgarmaydi. Model nomi `e5-small-int8/q1` bo'ldi, eski vektorlar qayta ishlatilmaydi. Butun
-korpus `qonunshunos reembed --rebuild-hnsw` bilan qayta hisoblandi (`home`, 2026-11-11/12,
+korpus `nizom reembed --rebuild-hnsw` bilan qayta hisoblandi (`home`, 2026-11-11/12,
 10,7 soat, 492 139 bo'lak; HNSW qayta qurish 19 daqiqa).
 
 To'liq korpusda natija (208 ta aniq savol, LLM `alt`; FTS natijalari 300/300 savolda aynan bir
@@ -659,7 +659,7 @@ yaxshilanishi kerak. "halves" ustunida yarimlar orasidagi farq 0,15–0,20: 208 
 farqlar shovqin.
 
 **Reranker xizmatga qo'yildi (2026-11-12).** int8 ONNX (`model_quint8_avx2.onnx`), birinchi 20 ta
-birlik, faqat savol matni bilan, blend 0,5 (`search/rerank.py`, `QONUNSHUNOS_RERANK_TOP`). Oflayn:
+birlik, faqat savol matni bilan, blend 0,5 (`search/rerank.py`, `NIZOM_RERANK_TOP`). Oflayn:
 int8 fp32 dan farq qilmaydi (top 30 da R@10 0,750 va 0,760, R@1 0,42 va 0,41); matn shakli
 (tipografik yoki rasmiy) ham farq qilmaydi. To'liq korpusda, jonli baza bilan:
 
@@ -845,7 +845,7 @@ float16).
 vektor 20 000 talik batch'larda yozildi (COPY → UPDATE, 218 s), 10 274 hujjat belgilandi,
 `reembed` uchun hujjat qolmadi; HNSW qayta qurildi (≈29 daqiqa, 2 yadro).
 
-**Xizmatda o'lchov** (butun korpus, `qonunshunos eval --rerank`, 208 aniq savol, LLM `alt`):
+**Xizmatda o'lchov** (butun korpus, `nizom eval --rerank`, 208 aniq savol, LLM `alt`):
 
 | Run | R@1 | R@5 | R@8 | R@10 | MRR |
 |---|---|---|---|---|---|
@@ -931,7 +931,7 @@ ko'rsatma bilan; (3) birlashtirish va reranker sozlamalari o'sha 208 savolda tan
 **Dev/test.** `llm_eval.py split` 300 savolni har (aniqlik, hujjat turi) guruhida teng ikkiga
 bo'ldi (`dev`/`test` teglari, seed 2026): har birida 150 savol, 104 tasi `aniq`. Bundan keyin
 sozlash faqat dev'da (`fusion_lab`, `rerank_lab`, `vector_lab`, `miss_depth` standart holatda
-`--tag aniq,dev`), test faqat o'lchanadi. `qonunshunos eval` `aniq+dev`, `aniq+test` ni alohida
+`--tag aniq,dev`), test faqat o'lchanadi. `nizom eval` `aniq+dev`, `aniq+test` ni alohida
 chiqaradi. Joriy xizmat (6j) natijasi qismlar bo'yicha:
 
 | | n | R@1 | R@5 | R@8 | R@10 |
@@ -1066,16 +1066,16 @@ Savol va javob matnlari `data/`da qoladi, git'da faqat ID, URL va belgilar
 ## Qayta ishlab chiqarish
 
 ```bash
-uv run qonunshunos crawl-sample && uv run qonunshunos crawl --ids-file eval/corpus/laws.txt
-uv run qonunshunos db-migrate && uv run qonunshunos index
-uv run qonunshunos eval --alt-file eval/alt_llm.json
-uv run qonunshunos eval --questions eval/questions_llm.yaml --alt-file eval/alt_llm_questions_llm.json
+uv run nizom crawl-sample && uv run nizom crawl --ids-file eval/corpus/laws.txt
+uv run nizom db-migrate && uv run nizom index
+uv run nizom eval --alt-file eval/alt_llm.json
+uv run nizom eval --questions eval/questions_llm.yaml --alt-file eval/alt_llm_questions_llm.json
 uv run --group bench python scripts/bench_embeddings.py --alt-file eval/alt_llm.json
-# To'liq baza (6c): server bazasiga tunnel orqali, QONUNSHUNOS_DSN tunnelga qaratilgan
+# To'liq baza (6c): server bazasiga tunnel orqali, NIZOM_DSN tunnelga qaratilgan
 uv run python scripts/llm_eval.py generate --by-kind --sample 450 --limit 300 \
     --out eval/questions_llm_full.yaml --id-prefix lf --workers 6
 uv run python scripts/llm_eval.py judge --questions eval/questions_llm_full.yaml --workers 6
-uv run qonunshunos eval --questions eval/questions_llm_full.yaml --save full-corpus-questions_llm_full
+uv run nizom eval --questions eval/questions_llm_full.yaml --save full-corpus-questions_llm_full
 # 6d: AI alt, aniq/noaniq teglari, ikkinchi judge (keyin javoblar eval/verified_llm_full.json
 # bo'yicha tozalangan), tozalangan ro'yxat bilan o'lchash
 uv run python scripts/llm_eval.py rephrase --questions eval/questions_llm_full.yaml \
@@ -1084,7 +1084,7 @@ uv run python scripts/llm_eval.py clarity
 uv run python scripts/llm_eval.py judge --questions eval/questions_llm_full.yaml \
     --alt-file eval/alt_llm_questions_llm_full.json --depth 10 --chars 800 \
     --missed-in eval/results/2026-11-10-full-corpus-questions_llm_full-alt_llm.json
-uv run qonunshunos eval --questions eval/questions_llm_full.yaml --workers 4 \
+uv run nizom eval --questions eval/questions_llm_full.yaml --workers 4 \
     --alt-file eval/alt_llm_questions_llm_full.json \
     --save full-corpus-questions_llm_full-alt_llm-verified
 # Server bazasiga tunnel bilan: bash scripts/with_server_db.sh <buyruq> (oddiy terminalda)
@@ -1114,8 +1114,8 @@ uv run --group bench python scripts/embed_file.py data/embed/chunk_texts_all.jso
 venv/bin/python scripts/load_vectors.py data/embed/e6-fp32-vectors.npz   # serverda
 PYTHONPATH=src /tmp/uzm/.venv/bin/python scripts/build_lemmas.py \
     data/embed/chunk_texts_all.json.gz --out data/fts/lemmas.tsv \
-    --package src/qonunshunos/text/lemmas.tsv.gz             # uzmorph + lt-proc kerak
-venv/bin/qonunshunos index --fts-only                        # serverda, ≈1 soat
+    --package src/nizom/text/lemmas.tsv.gz             # uzmorph + lt-proc kerak
+venv/bin/nizom index --fts-only                        # serverda, ≈1 soat
 bash scripts/with_server_db.sh uv run python scripts/dump_candidates.py \
     --alt-file eval/alt_llm_questions_llm_full.json --out data/eval/v2/candidates.json.gz
 uv run --group bench python scripts/mine_negatives.py --vectors data/embed/e6-fp32/vectors.npz \

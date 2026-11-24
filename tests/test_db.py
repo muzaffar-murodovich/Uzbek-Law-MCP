@@ -1,6 +1,6 @@
 import pytest
 
-from qonunshunos.db import connect, migrate, migration_files
+from nizom.db import connect, migrate, migration_files
 
 
 def test_migration_files_are_numbered():

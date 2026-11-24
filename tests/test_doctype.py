@@ -1,6 +1,6 @@
 import pytest
 
-from qonunshunos.index.doctype import display_title, doc_kind, restated_title
+from nizom.index.doctype import display_title, doc_kind, restated_title
 
 
 @pytest.mark.parametrize(

@@ -42,13 +42,13 @@ kesib olish.
   `~/backups`dagi boshqa nusxalarni ham) har kecha tortib oladi va 30 kun saqlaydi.
 - **Tiklash sinovi:** dump'dan bo'sh bazaga tiklab, `search_law` ishlashi bir marta qo'lda
   tekshiriladi. Qadamlar shu hujjatga yoziladi.
-- `home` har 5 daqiqada `https://qonunshunos.muzaffar.zip/healthz`ni tekshiradi. Ketma-ket 2
+- `home` har 5 daqiqada `https://nizom.org/healthz`ni tekshiradi. Ketma-ket 2
   marta xato bo'lsa, Telegram'ga xabar ketadi. Sayt tiklanganda yana xabar keladi.
 - Tungi ishlarning (yangilash, zaxira, tozalash) har biri xato bilan tugasa, Telegram'ga xabar
   keladi (systemd `OnFailure=`).
 - Har kuni ertalab hisobot keladi: kecha nechta hujjat yangilandi, xatolar, foydalanuvchilar va
   chaqiruvlar soni, disk, oxirgi zaxira va `home`ga oxirgi ko'chirish vaqti.
-- `qonunshunos update` lex.uz'dan yangi va o'zgargan hujjatlarni topadi va qayta indekslaydi.
+- `nizom update` lex.uz'dan yangi va o'zgargan hujjatlarni topadi va qayta indekslaydi.
   So'rovlar orasida kamida 2 soniya o'tadi va bir kechada so'rovlar soni cheklangan.
 - Testlar tarmoqqa chiqmaydi: RSS va sahifalar `tests/fixtures`dan olinadi.
 
@@ -105,7 +105,7 @@ crawl_state   doc_id PK, checked_at, changed_at, recheck_until, last_error
 rss_seen      doc_id PK, title, seen_at, links (int[])
 ```
 
-Buyruq: `qonunshunos update [--budget 400] [--dry-run]`. Oxirida hisobot qaytaradi: yangi,
+Buyruq: `nizom update [--budget 400] [--dry-run]`. Oxirida hisobot qaytaradi: yangi,
 o'zgargan, kuchini yo'qotgan va xato bergan hujjatlar. Bu hisobot ertalabki xabarga qo'shiladi.
 
 Yangilash `myserver`ning o'zida ishlaydi. Embedding modeli alohida jarayonga yuklanadi
@@ -117,8 +117,8 @@ lex.uz'dan 86 ta hujjat qayta yuklanmaydi.
 
 | Vaqt | Qayerda | Ish | systemd unit |
 |---|---|---|---|
-| 03:30 | `myserver` | `qonunshunos update` | `qonunshunos-update.timer` |
-| 04:30 | `myserver` | `qonunshunos auth-cleanup` | `qonunshunos-cleanup.timer` |
+| 03:30 | `myserver` | `nizom update` | `qonunshunos-update.timer` |
+| 04:30 | `myserver` | `nizom auth-cleanup` | `qonunshunos-cleanup.timer` |
 | 04:40 | `myserver` | `pg_dump -Fc` → `~/backups/qonunshunos_*.dump` (3 kun) va `qonunshunos-auth_*.dump` (30 kun) | `qonunshunos-backup.timer` |
 | 05:30 | `home` | `rsync myserver:~/backups/ → /media/muzaffar/Data/backups/myserver/` | `backup-pull.timer` (user) |
 | 08:00 | `myserver` | ertalabki hisobot Telegram'ga | `qonunshunos-report.timer` |
@@ -143,12 +143,12 @@ lex.uz'dan 86 ta hujjat qayta yuklanmaydi.
 - Qaror (2026-11-07): **yangi bot** (BotFather orqali, masalan `@qonunshunos_ops_bot`). Uni faqat siz ishlatasiz:
   xabarlar sizning chat ID'ingizga keladi. Token va chat ID serverdagi `.env`da va `home`dagi
   `~/.config/qonunshunos/watch.env`da saqlanadi, git'ga qo'shilmaydi.
-- Kod: `qonunshunos.notify` (`httpx` bilan, yangi bog'liqlik kerak emas) va CLI
-  `qonunshunos notify "matn"`. `home`dagi tekshiruv skripti faqat `curl` ishlatadi.
+- Kod: `nizom.notify` (`httpx` bilan, yangi bog'liqlik kerak emas) va CLI
+  `nizom notify "matn"`. `home`dagi tekshiruv skripti faqat `curl` ishlatadi.
 - Xabar namunasi:
 
   ```
-  Qonunshunos · 08.11 hisobot
+  Nizom · 08.11 hisobot
   Yangilash: 86 tekshirildi, 1 o'zgardi (Mehnat kodeksi), 0 xato
   RSS: 5 yangi hujjat, 1 tasi bizdagi hujjatga havola qiladi
   Foydalanuvchilar: 3 (kecha faol 2) · chaqiruvlar: 14 qidiruv, 41 boshqa
@@ -159,10 +159,10 @@ lex.uz'dan 86 ta hujjat qayta yuklanmaydi.
 
 | Fayl | Mazmuni |
 |---|---|
-| `src/qonunshunos/crawler/rss.py` | RSS'ni o'qish: ID, sarlavha, tur, sana |
-| `src/qonunshunos/crawler/update.py` | `update`: RSS → havolalar → navbat → qayta tekshirish |
-| `src/qonunshunos/db/migrations/0006_crawl_state.sql` | `crawl_state`, `rss_seen` |
-| `src/qonunshunos/notify.py` | Telegram'ga yuborish, ertalabki hisobot |
+| `src/nizom/crawler/rss.py` | RSS'ni o'qish: ID, sarlavha, tur, sana |
+| `src/nizom/crawler/update.py` | `update`: RSS → havolalar → navbat → qayta tekshirish |
+| `src/nizom/db/migrations/0006_crawl_state.sql` | `crawl_state`, `rss_seen` |
+| `src/nizom/notify.py` | Telegram'ga yuborish, ertalabki hisobot |
 | `deploy/systemd/*.service`, `*.timer` | `update`, `cleanup`, `backup`, `report`, `alert@` |
 | `deploy/backup.sh` | `pg_dump -Fc`, tarkibini tekshirish, auth jadvallarining alohida dump'i, tozalash (3 / 30 kun). Parol argv'ga emas, `PGPASSWORD`ga |
 | `deploy/home/` | `backup-pull`, `qonunshunos-watch` user unit'lari, `telegram.sh`, `install.sh` (Mac'dan ishga tushiriladi) |
@@ -173,7 +173,7 @@ lex.uz'dan 86 ta hujjat qayta yuklanmaydi.
 1. ✅ `rss.py` + testlar (`tests/fixtures`dagi qisqartirilgan RSS). Parser: `pending_changes`
    (`lx_strip`) + MJtK sahifasidan olingan fixture. `get_article`/`get_document`da ogohlantirish.
 2. ✅ `0006` migratsiyasi, `update.py` + testlar (soxta `LexClient`, `-m db`).
-3. ✅ `notify.py`, `qonunshunos notify` va `report` + testlar.
+3. ✅ `notify.py`, `nizom notify` va `report` + testlar.
 4. ✅ `deploy/` fayllari: zaxira skripti, systemd unit'lari, `home` skriptlari.
 5. ✅ Siz: Telegram bot yaratib, token va chat ID'ni berasiz.
 6. ✅ Server: `deploy.sh`, `data/` rsync, `root-setup.sh` (sudo bilan, siz ishga tushirasiz).
@@ -201,7 +201,7 @@ Bot: @qonunshunosbot, xabarlar faqat operatorning shaxsiy chatiga keladi.
   lex.uz kartochkani har safar boshqa tilda beradi (o'zbek kirill, lotin yoki rus:
   `Кодекс`/`Kodeks`, `Амалда`/`Действующий`). Endi `content_hash` kartochkadan faqat tilga
   bog'liq bo'lmagan maydonlarni oladi (`CARD_HASH_FIELDS`). Saqlangan hash'lar serverda
-  `qonunshunos index` bilan bir marta yangilandi: 46 soniya, birorta bo'lak qayta hisoblanmadi.
+  `nizom index` bilan bir marta yangilandi: 46 soniya, birorta bo'lak qayta hisoblanmadi.
 - **Ikkinchi xato:** kodeksga o'xshagan, lekin qamrovdan tashqaridagi yangi hujjatning
   (VM qarori 585) parse fayli `data/parsed`da qolib ketgan, `index` esa uni bazaga qo'shgan.
   Endi bunday fayl o'chiriladi, qaror bazadan olib tashlandi.
@@ -236,7 +236,7 @@ so'rovlari (4-bosqich "Natija").
 ```
 createdb qonunshunos_restore
 pg_restore --no-owner --dbname=qonunshunos_restore qonunshunos_YYYYmmdd_HHMMSS.dump
-QONUNSHUNOS_DSN=postgresql://…/qonunshunos_restore uv run qonunshunos search "yillik taʼtil"
+NIZOM_DSN=postgresql://…/qonunshunos_restore uv run nizom search "yillik taʼtil"
 ```
 
 Serverda to'liq tiklash: `qonunshunos` xizmatini to'xtatish, bazani `dropdb`/`createdb` bilan

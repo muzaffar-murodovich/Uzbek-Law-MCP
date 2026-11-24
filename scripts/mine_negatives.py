@@ -19,8 +19,8 @@ import torch
 import torch.nn.functional as F
 from transformers import AutoModel
 
-from qonunshunos.index.embed import load_tokenizer
-from qonunshunos.text.normalize import embedding_text
+from nizom.index.embed import load_tokenizer
+from nizom.text.normalize import embedding_text
 
 
 def main() -> None:

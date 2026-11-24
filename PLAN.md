@@ -1,6 +1,6 @@
-# Qonunshunos — loyiha rejasi
+# Nizom — loyiha rejasi
 
-> **Qonunshunos** — ishchi (vaqtinchalik) nom.
+> **Nizom** — loyiha nomi (2026-11-24 gacha ishchi nom "Qonunshunos" edi; server ichki nomlari — `/home/deploy/qonunshunos`, systemd unit'lar, baza — eski nomda qoldi).
 
 O'zbekiston Respublikasi qonunchiligiga oid savollarga javob topishda yordam beradigan masofaviy
 (remote) MCP server. Hozircha xizmat to'liq bepul, pullik tariflar keyinroq qo'shiladi.
@@ -9,7 +9,7 @@ O'zbekiston Respublikasi qonunchiligiga oid savollarga javob topishda yordam ber
 
 | Mavzu | Qaror |
 |---|---|
-| Nom | Qonunshunos (ishchi nom) |
+| Nom | Nizom (2026-11-24 dan; avval "Qonunshunos") |
 | Manba | lex.uz (Qonunchilik ma'lumotlari milliy bazasi), mahalliy bazaga yuklab olinadi va indekslanadi. Har bir javobda lex.uz'ga havola beriladi. Pullik tariflar ishga tushishidan oldin "Adolat" markazining yozma roziligi olinadi (3-bo'lim) |
 | Qamrov (MVP) | Qonun hujjatlari (Konstitutsiya, kodekslar, qonunlar), Prezident hujjatlari, Hukumat qarorlari, vazirlik va idoralar hujjatlari. Keyin: mahalliy hokimiyat qarorlari, xalqaro shartnomalar, sud amaliyoti |
 | Til | Hozircha o'zbek (lotin). Keyin: o'zbek (kirill), rus |
@@ -19,7 +19,7 @@ O'zbekiston Respublikasi qonunchiligiga oid savollarga javob topishda yordam ber
 | Yangilash | Har kuni tunda avtomatik |
 | Stek | Python: MCP Python SDK (FastMCP) + Starlette/FastAPI |
 | Joylashuv | Gibrid (2026-11-05). Xizmat `myserver`da (Hetzner, 2 vCPU / 3,7 GB, ochiq IP) Dockersiz ishlaydi: systemd + mavjud nginx + mavjud PostgreSQL 16 + pgvector. Og'ir ish (to'liq yuklab olish, boshlang'ich embedding) `home` serverda (i5-1235U, 12 oqim, 7,4 GB) bajariladi va natija SSH tunnel orqali to'g'ridan-to'g'ri `myserver` bazasiga yoziladi. Kunlik yangilash `myserver`ning o'zida. Docker hech qayerda ishlatilmaydi (2026-11-05) |
-| Domen | `qonunshunos.muzaffar.zip` (MCP manzili: `https://qonunshunos.muzaffar.zip/mcp`). Domen spaceship.com'da ro'yxatdan o'tgan, lekin DNS'ini Cloudflare boshqaradi (nameserverlar Cloudflare'da). A yozuvi Cloudflare'da `myserver`ga (46.62.145.27) qo'shilgan, proksisiz ("DNS only", 2026-11-06). Proksi 6-bosqichda yoqiladi |
+| Domen | `nizom.org` (MCP manzili: `https://nizom.org/mcp`). Domen spaceship.com'da ro'yxatdan o'tgan, lekin DNS'ini Cloudflare boshqaradi (nameserverlar Cloudflare'da). A yozuvi Cloudflare'da `myserver`ga (46.62.145.27) qo'shilgan, proksisiz ("DNS only", 2026-11-06). Proksi 6-bosqichda yoqiladi |
 | Transport | Streamable HTTP (remote MCP) |
 | Mijozlar | claude.ai, Claude Desktop, Claude Code, ChatGPT, Cursor — OAuth 2.1 orqali |
 | Kirish | Google (Gmail) va Telegram orqali |
@@ -89,10 +89,10 @@ Batafsil: [docs/research/lexuz.md](docs/research/lexuz.md). Qisqacha:
 ```
 
 - **Gibrid joylashuv:** `myserver`da allaqachon nginx, PostgreSQL 16, 3 ta gunicorn ilova va
-  Telegram bot ishlaydi (bo'sh RAM ≈2,8 GB). Docker qo'shilmaydi, Qonunshunos ham boshqa ilovalar
+  Telegram bot ishlaydi (bo'sh RAM ≈2,8 GB). Docker qo'shilmaydi, Nizom ham boshqa ilovalar
   kabi systemd xizmati sifatida ishlaydi. `home` — uy noutbuki: kuchli, lekin doim yoqiq emas.
   Shuning uchun u faqat og'ir, bir martalik ishlar uchun ishlatiladi. `home`da baza bo'lmaydi:
-  `qonunshunos index` SSH tunnel (`ssh -L 5434:localhost:5432 myserver`) orqali `myserver`dagi
+  `nizom index` SSH tunnel (`ssh -L 5434:localhost:5432 myserver`) orqali `myserver`dagi
   bazaga yozadi, shuning uchun PostgreSQL versiyalari mos kelishi muammosi yo'q.
 - **pgvector versiyasi:** Ubuntu 24.04 repozitoriyasidagi `postgresql-16-pgvector` 0.6 versiyada,
   bizga esa ≥ 0.8 kerak (`halfvec` 0.7 dan, `iterative_scan` 0.8 dan). `myserver`ga paket PGDG
@@ -108,7 +108,7 @@ Batafsil: [docs/research/lexuz.md](docs/research/lexuz.md). Qisqacha:
   ishlatiladi va unga o'zimizning normalizatsiya qo'shiladi: apostroflar (`oʻ o' o‘ o'` → bitta
   shakl), pastki registr, oddiy qo'shimchalarni kesish. `pg_trgm` faqat hujjat nomi va raqami
   bo'yicha xatoli qidiruv uchun ishlatiladi.
-- **RAM:** `myserver`dagi Postgres klasteri boshqa ilovalar bilan umumiy. Qonunshunos app va
+- **RAM:** `myserver`dagi Postgres klasteri boshqa ilovalar bilan umumiy. Nizom app va
   modeli ≈0,5–1 GB oladi. Vektor indeksi (≈22 ming hujjat, bir necha yuz ming bo'lak × 384 ×
   2 bayt) bir necha yuz MB bo'ladi.
 
@@ -219,7 +219,7 @@ Tamoyillar:
 - MCP server: FastMCP, Streamable HTTP. MCP Inspector va Claude Code bilan sinaladi.
 - OAuth va kirish 7-bo'limda yozilganidek. claude.ai va ChatGPT konnektorlari bilan sinaladi.
 - Deploy: `myserver`da systemd xizmatlari (`qonunshunos-app`, `qonunshunos-worker.timer`), mavjud
-  nginx'ga `qonunshunos.muzaffar.zip` uchun sayt va Let's Encrypt sertifikati. PostgreSQL 16'ga
+  nginx'ga `nizom.org` uchun sayt va Let's Encrypt sertifikati. PostgreSQL 16'ga
   PGDG repozitoriyasidan `postgresql-16-pgvector` (≥ 0.8) o'rnatiladi va alohida baza hamda
   foydalanuvchi ochiladi. Boshlang'ich indekslash `home`da hisoblanib, SSH tunnel orqali shu
   bazaga yoziladi. Har kuni
@@ -239,7 +239,7 @@ Tamoyillar:
 ## 9. Repozitoriy tuzilmasi (taklif)
 
 ```
-src/qonunshunos/
+src/nizom/
   crawler/      lex.uz'dan yuklab olish
   parser/       HTML → tuzilma
   text/         normalizatsiya, chunking

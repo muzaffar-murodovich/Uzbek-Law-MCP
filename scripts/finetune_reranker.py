@@ -24,7 +24,7 @@ import torch
 import torch.nn.functional as F
 from transformers import AutoModelForSequenceClassification, AutoTokenizer
 
-from qonunshunos.text.normalize import embedding_text
+from nizom.text.normalize import embedding_text
 
 BASE = "cross-encoder/mmarco-mMiniLMv2-L12-H384-v1"
 

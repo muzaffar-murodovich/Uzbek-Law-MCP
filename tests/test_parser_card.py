@@ -1,4 +1,4 @@
-from qonunshunos.parser.card import parse_card
+from nizom.parser.card import parse_card
 
 
 def test_card_in_force(fixture_html):

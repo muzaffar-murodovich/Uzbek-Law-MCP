@@ -1,4 +1,4 @@
-"""Nightly update against a fake lex.uz (needs QONUNSHUNOS_TEST_DSN)."""
+"""Nightly update against a fake lex.uz (needs NIZOM_TEST_DSN)."""
 
 from datetime import UTC, datetime, timedelta
 
@@ -6,13 +6,13 @@ import httpx
 import pytest
 from fakes import FakeEmbedder
 
-from qonunshunos.crawler.client import LexClient
-from qonunshunos.crawler.pipeline import Workspace
-from qonunshunos.crawler.update import linked_ids, run_update
-from qonunshunos.db import connect
-from qonunshunos.index.writer import index_document
-from qonunshunos.parser.card import parse_card
-from qonunshunos.parser.document import parse_document
+from nizom.crawler.client import LexClient
+from nizom.crawler.pipeline import Workspace
+from nizom.crawler.update import linked_ids, run_update
+from nizom.db import connect
+from nizom.index.writer import index_document
+from nizom.parser.card import parse_card
+from nizom.parser.document import parse_document
 
 pytestmark = pytest.mark.db
 

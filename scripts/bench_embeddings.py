@@ -16,10 +16,10 @@ from pathlib import Path
 
 import numpy as np
 
-from qonunshunos.config import Settings
-from qonunshunos.db import connect
-from qonunshunos.evaluation import load_questions, metrics
-from qonunshunos.search.hybrid import CANDIDATES, fts_candidates, rrf
+from nizom.config import Settings
+from nizom.db import connect
+from nizom.evaluation import load_questions, metrics
+from nizom.search.hybrid import CANDIDATES, fts_candidates, rrf
 
 
 @dataclass

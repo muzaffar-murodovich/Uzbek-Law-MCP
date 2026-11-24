@@ -9,11 +9,11 @@ Result (2026-11-06): no rule helps, see docs/stage2-experiments.md, 6b.
 import json
 from pathlib import Path
 
-from qonunshunos.config import Settings
-from qonunshunos.db import connect
-from qonunshunos.evaluation import first_rank, load_questions
-from qonunshunos.index.embed import Embedder
-from qonunshunos.search.hybrid import search
+from nizom.config import Settings
+from nizom.db import connect
+from nizom.evaluation import first_rank, load_questions
+from nizom.index.embed import Embedder
+from nizom.search.hybrid import search
 
 D = Path("data/cutoff")
 D.mkdir(parents=True, exist_ok=True)

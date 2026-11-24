@@ -1,5 +1,5 @@
 [Unit]
-Description=Qonunshunos: new and amended acts from lex.uz (*-*-* 03:30 Asia/Tashkent)
+Description=Nizom: new and amended acts from lex.uz (*-*-* 03:30 Asia/Tashkent)
 
 [Timer]
 OnCalendar=*-*-* 03:30 Asia/Tashkent

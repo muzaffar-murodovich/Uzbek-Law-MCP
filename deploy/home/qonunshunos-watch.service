@@ -1,5 +1,5 @@
 [Unit]
-Description=Qonunshunos: is the public site up?
+Description=Nizom: is the public site up?
 
 [Service]
 Type=oneshot

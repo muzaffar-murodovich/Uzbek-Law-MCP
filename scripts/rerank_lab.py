@@ -19,7 +19,7 @@ sys.path.insert(0, str(Path(__file__).parent))
 
 from fusion_lab import DEFAULT_TAG, Lab, Params
 
-from qonunshunos.evaluation import metrics
+from nizom.evaluation import metrics
 
 FUSION = Params(n_fts=100, k=20, w_vec=0.5)  # best fusion variant; its pool is what we rerank
 CACHE = Path("data/eval/rerank")

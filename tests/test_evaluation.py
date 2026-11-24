@@ -1,6 +1,6 @@
 import pytest
 
-from qonunshunos.evaluation import (
+from nizom.evaluation import (
     Expected,
     Question,
     first_rank,
@@ -9,7 +9,7 @@ from qonunshunos.evaluation import (
     metrics,
     run,
 )
-from qonunshunos.search.hybrid import Hit
+from nizom.search.hybrid import Hit
 
 
 def _hit(doc: int, number: str, path: list[str] | None = None) -> Hit:

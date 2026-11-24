@@ -1,7 +1,7 @@
 import pytest
 from tokenizers import Tokenizer, models, pre_tokenizers
 
-from qonunshunos.index.embed import DEFAULT_MODEL, MODELS, ensure_model, load_tokenizer
+from nizom.index.embed import DEFAULT_MODEL, MODELS, ensure_model, load_tokenizer
 
 
 def test_load_tokenizer_drops_saved_padding_and_truncation(tmp_path):
@@ -23,7 +23,7 @@ def test_local_model_is_never_downloaded(tmp_path, monkeypatch):
     def no_network(*args, **kwargs):
         raise AssertionError("a local/ model must not be fetched from the Hub")
 
-    monkeypatch.setattr("qonunshunos.index.embed.httpx.stream", no_network)
+    monkeypatch.setattr("nizom.index.embed.httpx.stream", no_network)
     assert MODELS[DEFAULT_MODEL].repo.startswith("local/")
     with pytest.raises(RuntimeError, match="not on the Hub"):
         ensure_model(MODELS[DEFAULT_MODEL], tmp_path)

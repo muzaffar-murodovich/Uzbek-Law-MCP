@@ -1,14 +1,14 @@
-"""Tools against a tiny indexed corpus (needs QONUNSHUNOS_TEST_DSN)."""
+"""Tools against a tiny indexed corpus (needs NIZOM_TEST_DSN)."""
 
 import anyio
 import pytest
 from fakes import FakeEmbedder
 
-from qonunshunos.db import connect
-from qonunshunos.index.writer import index_document, refresh_fts_stats
-from qonunshunos.mcp import tools
-from qonunshunos.parser.card import CardBody, parse_card
-from qonunshunos.parser.document import parse_document
+from nizom.db import connect
+from nizom.index.writer import index_document, refresh_fts_stats
+from nizom.mcp import tools
+from nizom.parser.card import CardBody, parse_card
+from nizom.parser.document import parse_document
 
 pytestmark = pytest.mark.db
 
@@ -97,7 +97,7 @@ def test_find_document_and_list_codes(corpus):
 def test_mcp_protocol(corpus, db_dsn):
     from mcp import Client
 
-    from qonunshunos.mcp.server import Services, create_server
+    from nizom.mcp.server import Services, create_server
 
     services = Services(db_dsn, None, embedder=FakeEmbedder())
     server = create_server(services)
@@ -165,7 +165,7 @@ def test_amending_act_keeps_requisites_only(corpus, fixture_html):
 
 def test_act_set_out_anew_is_indexed_in_full(corpus, fixture_html):
     """lex.uz keeps some laws' current edition only inside the act that restated them."""
-    from qonunshunos.parser.models import Paragraph, Unit
+    from nizom.parser.models import Paragraph, Unit
 
     restating = -888002
     card = parse_card(fixture_html("card1_in_force.html"), restating)

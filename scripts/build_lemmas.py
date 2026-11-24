@@ -8,7 +8,7 @@ environment, with the project's ``src`` on the path for ``fold``:
         https://huggingface.co/javohirmat/uzmorph/resolve/main/dist/uzmorph-0.9.0-py3-none-any.whl
     PYTHONPATH=src /tmp/uzm/.venv/bin/python scripts/build_lemmas.py \
         data/embed/chunk_texts_all.json.gz --out data/fts/lemmas.tsv \
-        --package src/qonunshunos/text/lemmas.tsv.gz
+        --package src/nizom/text/lemmas.tsv.gz
 
 Only the table (data) is used by the service, never uzmorph itself. Keys and lemmas are in the
 FTS form: ``fold`` and without the ʻ ʼ marks (``text.fts.terms``). ``--out``: ``word<TAB>lemma
@@ -30,8 +30,8 @@ from pathlib import Path
 
 import uzmorph
 
-from qonunshunos.text.fts import _DROP, _WORD_RE, stem
-from qonunshunos.text.normalize import fold
+from nizom.text.fts import _DROP, _WORD_RE, stem
+from nizom.text.normalize import fold
 
 # Kept on the lemma when uzmorph strips them: agent nouns, -li / -siz adjectives, -lik nouns,
 # negation (-ma), birov. Longest first.

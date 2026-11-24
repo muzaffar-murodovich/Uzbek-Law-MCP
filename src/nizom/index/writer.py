@@ -1,0 +1,500 @@
+"""Write parsed documents into PostgreSQL: documents → sections → chunks (+ FTS, embeddings)."""
+
+import hashlib
+import json
+import logging
+from dataclasses import dataclass, field
+
+import numpy as np
+import psycopg
+from psycopg.types.json import Jsonb
+
+from nizom.index.doctype import display_title, doc_kind, restated_title
+from nizom.index.embed import Embed
+from nizom.parser.card import DocumentCard
+from nizom.parser.models import Heading, ParsedDocument, Unit
+from nizom.text.chunk import Chunk, chunk_unit, unit_text
+from nizom.text.fts import to_fts_text
+from nizom.text.normalize import fold
+
+log = logging.getLogger(__name__)
+
+# Bumped when the writer changes what it stores (headings, kinds), so documents are rewritten.
+INDEX_VERSION = 2
+
+
+def kind_and_title(document: ParsedDocument, card: DocumentCard | None) -> tuple[str, str]:
+    """Normalized kind and the display title used in tool output and chunk headings."""
+    bodies = " ".join(
+        [document.accepting_body or "", *(b.organ or "" for b in (card.bodies if card else []))]
+    )
+    form = card.form if card else None
+    if form is None and "kodeks" in document.title.lower():
+        form = "kodeks"
+    if form is None and "konstitutsiya" in document.title.lower():
+        form = "konstitutsiya"
+    kind = doc_kind(form, document.number, bodies)
+    return kind, restated_name(document) or display_title(document.title, kind, document.number)
+
+
+def restated_name(document: ParsedDocument) -> str | None:
+    """The act an amending act sets out anew in full ("… yangi tahriri tasdiqlansin"), if any."""
+    intro = next((u for u in document.units if u.kind == "kirish"), None)
+    if intro is None:
+        return None
+    text = " ".join(p.text for p in intro.paragraphs)
+    units = sum(1 for u in document.units if u.kind != "kirish")
+    return restated_title(document.title, document.number, text, units)
+
+
+# card1 arrives in Uzbek Cyrillic, Uzbek Latin or Russian from one request to the next, so only
+# fields that read the same in every language take part in the hash.
+CARD_HASH_FIELDS = {
+    "status",
+    "entry_into_force",
+    "lost_force_at",
+    "registration_number",
+    "registration_date",
+    "moj_registration_number",
+    "moj_registration_date",
+}
+
+
+def content_hash(
+    document: ParsedDocument, card: DocumentCard | None, requisites_only: bool = False
+) -> str:
+    payload = {
+        "index_version": INDEX_VERSION,
+        # Banners come and go without the text changing; they are written separately.
+        "document": document.model_dump(mode="json", exclude={"pending_changes"}),
+        "card": card.model_dump(mode="json", include=CARD_HASH_FIELDS) if card else None,
+    }
+    if requisites_only:  # only when set, so the hashes of indexed documents stay the same
+        payload["requisites_only"] = True
+    raw = json.dumps(payload, ensure_ascii=False, sort_keys=True).encode("utf-8")
+    return hashlib.sha256(raw).hexdigest()
+
+
+@dataclass
+class SectionRow:
+    kind: str
+    number: str | None
+    title: str | None
+    path: list[str]
+    elem_id: int | None
+    text: str
+    level: int | None = None
+    extra: dict = field(default_factory=dict)
+    unit: Unit | None = None
+
+
+def build_sections(document: ParsedDocument) -> list[SectionRow]:
+    """Interleave headings and units in reading order.
+
+    Units carry the path of headings they live under; a heading is emitted when it first
+    appears in a unit's path (or differs from the previous unit's path at its level).
+    Heading metadata is looked up forward in ``document.headings`` by text.
+    """
+    rows: list[SectionRow] = []
+    headings = document.headings
+    cursor = 0
+    previous: list[str] = []
+
+    def find_heading(text: str) -> Heading | None:
+        nonlocal cursor
+        for i in range(cursor, len(headings)):
+            if headings[i].text == text:
+                cursor = i + 1
+                return headings[i]
+        return None
+
+    for unit in document.units:
+        common = 0
+        while common < min(len(previous), len(unit.path)) and previous[common] == unit.path[common]:
+            common += 1
+        for depth in range(common, len(unit.path)):
+            text = unit.path[depth]
+            heading = find_heading(text)
+            rows.append(
+                SectionRow(
+                    kind=heading.kind if heading else "sarlavha",
+                    number=heading.number if heading else None,
+                    title=heading.title if heading else text,
+                    path=unit.path[:depth],
+                    elem_id=heading.elem_id if heading else None,
+                    text=text,
+                    level=heading.level if heading else None,
+                )
+            )
+        previous = unit.path
+        extra = {}
+        if unit.okoz:
+            extra["okoz"] = unit.okoz
+        if unit.changes:
+            extra["changes"] = [c.model_dump(mode="json") for c in unit.changes]
+        if unit.comments:
+            extra["comments"] = [c.model_dump(mode="json") for c in unit.comments]
+        rows.append(
+            SectionRow(
+                kind=unit.kind,
+                number=unit.number,
+                title=unit.title,
+                path=unit.path,
+                elem_id=unit.elem_id,
+                text=unit_text(unit),
+                extra=extra,
+                unit=unit,
+            )
+        )
+    return rows
+
+
+def _date(value: str | None) -> str | None:
+    return value or None
+
+
+def stored_hash(conn: psycopg.Connection, lex_id: int) -> str | None:
+    row = conn.execute("SELECT content_hash FROM documents WHERE id = %s", (lex_id,)).fetchone()
+    return row[0] if row else None
+
+
+def write_pending_changes(conn: psycopg.Connection, document: ParsedDocument) -> bool:
+    """Store the document's "amendment pending" banners. Returns True if they changed."""
+    pending = Jsonb([p.model_dump(mode="json") for p in document.pending_changes])
+    cur = conn.execute(
+        "UPDATE documents SET pending_changes = %s WHERE id = %s AND pending_changes <> %s",
+        (pending, document.lex_id, pending),
+    )
+    return cur.rowcount > 0
+
+
+def stored_vectors(conn: psycopg.Connection, lex_id: int, model: str) -> dict[tuple, np.ndarray]:
+    """Embeddings already in the database for this document, by (heading, text) of the chunk.
+
+    When an amendment touches a few articles of a code, only those chunks are embedded again.
+    """
+    row = conn.execute("SELECT meta->>'embed_model' FROM documents WHERE id = %s", (lex_id,))
+    found = row.fetchone()
+    if found is None or found[0] != model:
+        return {}
+    rows = conn.execute(
+        "SELECT heading, text, embedding::vector FROM chunks WHERE document_id = %s", (lex_id,)
+    ).fetchall()
+    return {(heading, text): vec.to_numpy().astype(np.float32) for heading, text, vec in rows}
+
+
+def index_document(
+    conn: psycopg.Connection,
+    document: ParsedDocument,
+    card: DocumentCard | None,
+    embedder: Embed,
+    *,
+    use_stem: bool = True,
+    force: bool = False,
+    requisites_only: bool = False,
+) -> int | None:
+    """(Re)write one document. Returns the number of chunks, or ``None`` if unchanged.
+
+    ``requisites_only`` keeps an amending act's requisites but not its text: its amendments
+    are already part of the current editions of the acts it amends.
+    """
+    # An amending act that sets out a whole act anew holds that act's only current edition.
+    if requisites_only and restated_name(document):
+        requisites_only = False
+    digest = content_hash(document, card, requisites_only)
+    if not force and stored_hash(conn, document.lex_id) == digest:
+        write_pending_changes(conn, document)
+        return None
+
+    status = card.status if card else "unknown"
+    kind, name = kind_and_title(document, card)
+    content = "requisites" if requisites_only else document.content
+    searchable = status == "in_force" and content == "html"
+    sections = build_sections(document) if searchable else []
+    chunks: list[tuple[int, Chunk]] = []
+    for index, row in enumerate(sections):
+        if row.unit is not None:
+            chunks.extend((index, c) for c in chunk_unit(name, row.unit))
+    model = getattr(embedder, "name", "unknown")
+    known = stored_vectors(conn, document.lex_id, model) if chunks and not force else {}
+    vectors = np.zeros((len(chunks), 384), dtype=np.float32)
+    missing = [i for i, (_, c) in enumerate(chunks) if (c.heading, c.text) not in known]
+    for i, (_, c) in enumerate(chunks):
+        if (c.heading, c.text) in known:
+            vectors[i] = known[(c.heading, c.text)]
+    if missing:
+        vectors[missing] = embedder.passages([chunks[i][1].passage for i in missing])
+    if known:
+        log.info(
+            "%s: %d chunks embedded, %d reused",
+            document.lex_id,
+            len(missing),
+            len(chunks) - len(missing),
+        )
+
+    meta = {
+        "alternates": document.alternates,
+        "okoz": document.okoz,
+        "tsz": document.tsz,
+        "signature": document.signature,
+        "signed_place": document.signed_place,
+        "signed_date": document.signed_date,
+        "publication_origin": document.publication_origin,
+        "notes": document.notes,
+        "parser_version": document.parser_version,
+        "embed_model": model,
+        "fts_stem": use_stem,
+    }
+    title_norm = fold(" ".join(p for p in (document.title, document.number or "") if p))
+
+    with conn.transaction():
+        conn.execute("DELETE FROM documents WHERE id = %s", (document.lex_id,))
+        conn.execute(
+            """
+            INSERT INTO documents (id, title, display_title, doc_type, doc_kind, number,
+                adopted_at, status,
+                accepting_body, url, content, edition_date, last_change_date, content_hash,
+                card, meta, title_norm, pending_changes)
+            VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+            """,
+            (
+                document.lex_id,
+                document.title,
+                name,
+                card.form if card else None,
+                kind,
+                document.number,
+                _date(document.date),
+                status,
+                document.accepting_body,
+                document.url,
+                content,
+                _date(document.edition_date),
+                _date(document.last_change_date),
+                digest,
+                Jsonb(card.model_dump(mode="json")) if card else None,
+                Jsonb(meta),
+                title_norm,
+                Jsonb([p.model_dump(mode="json") for p in document.pending_changes]),
+            ),
+        )
+        with conn.cursor() as cur:
+            # executemany is pipelined: one round trip per batch, not per row (the database
+            # may sit behind an SSH tunnel during bulk indexing).
+            cur.executemany(
+                """
+                INSERT INTO sections (document_id, ord, kind, level, number, title, path,
+                    elem_id, text, extra)
+                VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+                """,
+                [
+                    (
+                        document.lex_id,
+                        ord_,
+                        row.kind,
+                        row.level,
+                        row.number,
+                        row.title,
+                        row.path,
+                        row.elem_id,
+                        row.text,
+                        Jsonb(row.extra),
+                    )
+                    for ord_, row in enumerate(sections)
+                ],
+            )
+            section_ids = [
+                r[0]
+                for r in cur.execute(
+                    "SELECT id FROM sections WHERE document_id = %s ORDER BY ord",
+                    (document.lex_id,),
+                ).fetchall()
+            ]
+            cur.executemany(
+                """
+                INSERT INTO chunks (document_id, section_id, ord, heading, text, tsv, embedding)
+                VALUES (%s, %s, %s, %s, %s,
+                    setweight(to_tsvector('simple', %s), 'A')
+                    || setweight(to_tsvector('simple', %s), 'B'),
+                    %s::halfvec)
+                """,
+                [
+                    (
+                        document.lex_id,
+                        section_ids[index],
+                        ord_,
+                        chunk.heading,
+                        chunk.text,
+                        to_fts_text(chunk.heading, use_stem),
+                        to_fts_text(chunk.text, use_stem),
+                        vectors[ord_].tolist(),
+                    )
+                    for ord_, (index, chunk) in enumerate(chunks)
+                ],
+            )
+    log.info("indexed %s: %d sections, %d chunks", document.lex_id, len(sections), len(chunks))
+    return len(chunks)
+
+
+def rebuild_fts(
+    conn: psycopg.Connection, use_stem: bool, *, batch: int = 5000, progress=print
+) -> int:
+    """Recompute ``chunks.tsv`` (e.g. after changing the stemmer) without re-embedding.
+
+    Chunks are read and written ``batch`` ids at a time, each batch in its own transaction:
+    the full corpus does not fit in the server's memory at once, and a stopped run leaves
+    every chunk with either the old or the new terms.
+    """
+    low, high = conn.execute("SELECT min(id), max(id) FROM chunks").fetchone()
+    done = 0
+    for start in range(low or 0, (high or -1) + 1, batch):
+        rows = conn.execute(
+            "SELECT id, heading, text FROM chunks WHERE id >= %s AND id < %s",
+            (start, start + batch),
+        ).fetchall()
+        with conn.transaction(), conn.cursor() as cur:
+            cur.executemany(
+                "UPDATE chunks SET tsv = setweight(to_tsvector('simple', %s), 'A')"
+                " || setweight(to_tsvector('simple', %s), 'B') WHERE id = %s",
+                [(to_fts_text(h, use_stem), to_fts_text(t, use_stem), i) for i, h, t in rows],
+            )
+        done += len(rows)
+        progress(f"{done} chunks (ids < {start + batch})")
+    with conn.transaction():
+        conn.execute("UPDATE documents SET meta = meta || %s", (Jsonb({"fts_stem": use_stem}),))
+    refresh_fts_stats(conn)
+    return done
+
+
+def refresh_fts_stats(conn: psycopg.Connection) -> int:
+    """Recount document frequencies of FTS terms (``ts_stat`` over all chunks)."""
+    with conn.transaction():
+        conn.execute("TRUNCATE fts_stats")
+        conn.execute(
+            "INSERT INTO fts_stats (word, ndoc)"
+            " SELECT word, ndoc FROM ts_stat('SELECT tsv FROM chunks')"
+        )
+    return conn.execute("SELECT count(*) FROM fts_stats").fetchone()[0]
+
+
+HNSW_INDEX = (
+    "CREATE INDEX chunks_embedding ON chunks USING hnsw (embedding halfvec_cosine_ops)"
+    " WITH (m = 32, ef_construction = 200)"
+)  # same parameters as migration 0003
+
+
+def reembed(
+    conn: psycopg.Connection,
+    embedder: Embed,
+    *,
+    batch_chunks: int = 512,
+    limit_docs: int | None = None,
+    lex_ids: list[int] | None = None,
+    progress=print,
+) -> int:
+    """Recompute the vectors of documents embedded by another model or text form.
+
+    Only ``chunks.embedding`` and ``documents.meta->>'embed_model'`` change. Work is committed
+    a few documents at a time, so the run can be stopped and started again. ``lex_ids`` are
+    redone whatever their marker says (e.g. documents rewritten by the old code during a run).
+    """
+    model = getattr(embedder, "name", "unknown")
+    todo = (
+        list(lex_ids)
+        if lex_ids
+        else [
+            r[0]
+            for r in conn.execute(
+                "SELECT d.id FROM documents d WHERE coalesce(d.meta->>'embed_model', '') <> %s"
+                " AND EXISTS (SELECT 1 FROM chunks c WHERE c.document_id = d.id) ORDER BY d.id",
+                (model,),
+            ).fetchall()
+        ]
+    )
+    if limit_docs:
+        todo = todo[:limit_docs]
+    total_chunks = 0
+    group: list[int] = []
+    rows: list[tuple[int, str, str]] = []
+
+    def flush() -> None:
+        nonlocal total_chunks
+        vectors = embedder.passages([f"{heading}\n{text}" for _id, heading, text in rows])
+        with conn.transaction(), conn.cursor() as cur:
+            cur.executemany(
+                "UPDATE chunks SET embedding = %s::halfvec WHERE id = %s",
+                [(v.tolist(), cid) for (cid, _h, _t), v in zip(rows, vectors, strict=True)],
+            )
+            cur.execute(
+                "UPDATE documents SET meta = meta || %s WHERE id = ANY(%s)",
+                (Jsonb({"embed_model": model}), group),
+            )
+        total_chunks += len(rows)
+        group.clear()
+        rows.clear()
+
+    for n, lex_id in enumerate(todo, start=1):
+        rows.extend(
+            conn.execute(
+                "SELECT id, heading, text FROM chunks WHERE document_id = %s ORDER BY ord",
+                (lex_id,),
+            ).fetchall()
+        )
+        group.append(lex_id)
+        if len(rows) >= batch_chunks or n == len(todo):
+            flush()
+            progress(f"{n}/{len(todo)} documents, {total_chunks} chunks")
+    return total_chunks
+
+
+@dataclass
+class LoadResult:
+    updated: int  # chunks whose vector was written
+    marked: int  # documents now marked with the model
+    left: int  # documents with chunks still marked otherwise (for ``reembed``)
+
+
+def load_vectors(
+    conn: psycopg.Connection,
+    ids: np.ndarray,
+    vectors: np.ndarray,
+    model: str,
+    *,
+    batch: int = 20000,
+    progress=print,
+) -> LoadResult:
+    """Write vectors computed elsewhere (scripts/embed_file.py) into ``chunks.embedding``.
+
+    The database may have moved on since the text dump: an id that no longer exists is
+    skipped, and a document gets ``embed_model = model`` only when every one of its chunks got
+    a vector. The caller drops and rebuilds the HNSW index around this (scripts/load_vectors.py).
+    """
+    conn.execute("CREATE TEMP TABLE IF NOT EXISTS new_vec (id bigint PRIMARY KEY, v halfvec(384))")
+    conn.execute("CREATE TEMP TABLE IF NOT EXISTS loaded (id bigint PRIMARY KEY)")
+    conn.execute("TRUNCATE new_vec, loaded")
+    updated = 0
+    for start in range(0, len(ids), batch):
+        part = slice(start, start + batch)
+        with conn.transaction(), conn.cursor() as cur:
+            with cur.copy("COPY new_vec (id, v) FROM STDIN") as copy:
+                for cid, vec in zip(ids[part], vectors[part], strict=True):
+                    copy.write_row((int(cid), "[" + ",".join(map(str, vec.tolist())) + "]"))
+            cur.execute("UPDATE chunks c SET embedding = n.v FROM new_vec n WHERE c.id = n.id")
+            updated += cur.rowcount
+            cur.execute("INSERT INTO loaded SELECT n.id FROM new_vec n JOIN chunks c USING (id)")
+            cur.execute("TRUNCATE new_vec")
+        progress(f"{min(start + batch, len(ids))}/{len(ids)} read, {updated} updated")
+    with conn.transaction():
+        marked = conn.execute(
+            "UPDATE documents d SET meta = meta || %s"
+            " WHERE EXISTS (SELECT 1 FROM chunks c WHERE c.document_id = d.id)"
+            " AND NOT EXISTS (SELECT 1 FROM chunks c WHERE c.document_id = d.id"
+            "   AND NOT EXISTS (SELECT 1 FROM loaded l WHERE l.id = c.id))",
+            (Jsonb({"embed_model": model}),),
+        ).rowcount
+    left = conn.execute(
+        "SELECT count(*) FROM documents d WHERE coalesce(d.meta->>'embed_model', '') <> %s"
+        " AND EXISTS (SELECT 1 FROM chunks c WHERE c.document_id = d.id)",
+        (model,),
+    ).fetchone()[0]
+    return LoadResult(updated, marked, left)

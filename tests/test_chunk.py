@@ -1,5 +1,5 @@
-from qonunshunos.parser.models import Paragraph, Table, Unit
-from qonunshunos.text.chunk import PIECE_TARGET, SINGLE_MAX, chunk_unit, heading_for
+from nizom.parser.models import Paragraph, Table, Unit
+from nizom.text.chunk import PIECE_TARGET, SINGLE_MAX, chunk_unit, heading_for
 
 
 def _unit(*texts: str, **kw) -> Unit:

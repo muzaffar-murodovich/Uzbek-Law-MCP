@@ -1,5 +1,5 @@
 [Unit]
-Description=Qonunshunos: Telegram alert for failed %i
+Description=Nizom: Telegram alert for failed %i
 
 [Service]
 Type=oneshot
@@ -7,5 +7,5 @@ User=deploy
 Group=deploy
 WorkingDirectory=/home/deploy/qonunshunos
 # deploy is in the adm group, so it can read the unit's journal.
-ExecStart=/bin/sh -c '{ echo "❌ myserver: %i xato bilan tugadi"; journalctl -u %i -n 15 --no-pager -o cat; } | /home/deploy/qonunshunos/venv/bin/qonunshunos notify'
+ExecStart=/bin/sh -c '{ echo "❌ myserver: %i xato bilan tugadi"; journalctl -u %i -n 15 --no-pager -o cat; } | /home/deploy/qonunshunos/venv/bin/nizom notify'
 NoNewPrivileges=true

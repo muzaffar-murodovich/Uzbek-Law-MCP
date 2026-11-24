@@ -24,9 +24,9 @@ from pathlib import Path
 
 import yaml
 
-from qonunshunos.config import Settings
-from qonunshunos.db import connect
-from qonunshunos.llm import OpenAIChat
+from nizom.config import Settings
+from nizom.db import connect
+from nizom.llm import OpenAIChat
 
 EVAL_SETS = sorted(Path("eval").glob("questions*.yaml"))
 

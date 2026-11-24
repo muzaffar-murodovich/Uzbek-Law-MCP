@@ -115,7 +115,7 @@ uchraydi: ilovadagi jadvallar, sxemalar, faqat rasm, g'alati raqamlash. Shuning 
 
 ### 3. To'liq yuklab olish (`crawl`)
 
-Mavjud `qonunshunos crawl --ids-file` asosida, lekin uzoq ishga moslashtiriladi:
+Mavjud `nizom crawl --ids-file` asosida, lekin uzoq ishga moslashtiriladi:
 
 - **Davom ettirsa bo'ladi.** Allaqachon saqlangan sahifa qayta yuklanmaydi (bu hozir ham shunday).
   To'xtatib qayta ishga tushirilsa, qolgan joyidan davom etadi.
@@ -221,12 +221,12 @@ To'liq baza tayyor bo'lib, sifat tekshirilgandan keyin:
 ## Modullar va fayllar
 
 ```
-src/qonunshunos/crawler/listing.py   toifa/yil bo'yicha ro'yxatlar, davom ettirish
-src/qonunshunos/crawler/full.py      to'liq crawl: navbat, pauza, xatolarda kutish, holat
-src/qonunshunos/crawler/sample.py    sinov to'plami va parser hisoboti
-src/qonunshunos/crawler/update.py    SCOPE_KINDS → qamrov qoidasi, navbat ustuvorligi
-src/qonunshunos/index/writer.py      rekvizitlar rejimi, HNSW'ni o'chirib/qurib yozish
-src/qonunshunos/site.py              robots.txt, bosh sahifa matni
+src/nizom/crawler/listing.py   toifa/yil bo'yicha ro'yxatlar, davom ettirish
+src/nizom/crawler/full.py      to'liq crawl: navbat, pauza, xatolarda kutish, holat
+src/nizom/crawler/sample.py    sinov to'plami va parser hisoboti
+src/nizom/crawler/update.py    SCOPE_KINDS → qamrov qoidasi, navbat ustuvorligi
+src/nizom/index/writer.py      rekvizitlar rejimi, HNSW'ni o'chirib/qurib yozish
+src/nizom/site.py              robots.txt, bosh sahifa matni
 deploy/backup.sh                     saqlash muddatlari, kichik auth dump
 deploy/home/backup-pull.sh           home'dagi saqlash muddati (30 → 14 kun)
 eval/questions.yaml                  ≈30 ta yangi savol
@@ -236,10 +236,10 @@ eval/questions.yaml                  ≈30 ta yangi savol
 
 1. ✅ Qamrov filtri bo'yicha tadqiqot: toifa filtri o'rniga `/uz/search/nat` bo'limi
    (`docs/research/lexuz.md`, 9-bo'lim).
-2. ✅ Ro'yxatlar `minor`/yil bo'yicha (`qonunshunos scope`): 15 811 ta, lex.uz soni bilan aynan mos.
+2. ✅ Ro'yxatlar `minor`/yil bo'yicha (`nizom scope`): 15 811 ta, lex.uz soni bilan aynan mos.
 3. ⏭ Sinov to'plami alohida qilinmadi: xom sahifalar saqlanadi, parser keyin tuzatilib, qayta
    yuklamasdan qayta parse qilinadi. Parser ogohlantirishlari to'liq yuklashdan keyin ko'riladi.
-4. ✅ To'liq yuklab olish (`qonunshunos crawl-full`) `myserver`da: 2026-11-07 22:25 – 11-08 16:47 (Toshkent).
+4. ✅ To'liq yuklab olish (`nizom crawl-full`) `myserver`da: 2026-11-07 22:25 – 11-08 16:47 (Toshkent).
 5. ✅ Zaxira nusxa muddatlari (2026-11-09, foydalanuvchi ma'qulladi): serverda 3 kun, `home`da
    14 kun (`/media/muzaffar/Data`), auth jadvallari alohida dump'da 30 kun. To'liq dump ≈1 GB.
 6. ⏳ Indekslash: ✅ HNSW'siz yozish (2026-11-09) → ⏳ indeksni qurish → rekvizitlar. `minor=Y` bo'yicha qaror

@@ -4,7 +4,7 @@
 #   ~/.config/qonunshunos/watch.env   TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID, MYSERVER_SSH=deploy@<ip>
 #                                     (created once, by hand)
 set -euo pipefail
-HOST=${QONUNSHUNOS_HOME_HOST:-home}
+HOST=${NIZOM_HOME_HOST:-home}
 cd ${0:A:h}
 ssh $HOST 'mkdir -p ~/qonunshunos-ops ~/.config/systemd/user ~/.config/qonunshunos'
 # tar, not rsync: macOS openrsync silently skipped some of several source files.

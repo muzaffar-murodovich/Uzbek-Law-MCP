@@ -2,9 +2,9 @@ from datetime import UTC, datetime, timedelta
 
 import pytest
 
-from qonunshunos.auth import limits, users
-from qonunshunos.auth.limits import TASHKENT, Limits, MinuteWindow
-from qonunshunos.db import connect
+from nizom.auth import limits, users
+from nizom.auth.limits import TASHKENT, Limits, MinuteWindow
+from nizom.db import connect
 
 
 def test_limits_for_plan_and_override():

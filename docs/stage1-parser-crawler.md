@@ -12,9 +12,9 @@ hujjat: 20 ta kodeks + Konstitutsiya).
 
 ## Tayyor bo'lish mezonlari
 
-- `qonunshunos fetch <id>` hujjat va kartochkasini `data/raw/`ga yuklab oladi.
-- `qonunshunos parse <id>` `data/parsed/<id>.json`ni yaratadi.
-- `qonunshunos crawl-sample` namunaviy to'plamni yuklab oladi, parse qiladi va hisobot chiqaradi:
+- `nizom fetch <id>` hujjat va kartochkasini `data/raw/`ga yuklab oladi.
+- `nizom parse <id>` `data/parsed/<id>.json`ni yaratadi.
+- `nizom crawl-sample` namunaviy to'plamni yuklab oladi, parse qiladi va hisobot chiqaradi:
   har bir hujjat uchun moddalar soni va parser ogohlantirishlari.
 - Mehnat kodeksida barcha moddalar (2026-11-05 holatiga 593 ta) topiladi va ularning bob/bo'lim
   yo'li to'g'ri chiqadi.
@@ -25,7 +25,7 @@ hujjat: 20 ta kodeks + Konstitutsiya).
 1. ✅ **Qolgan tadqiqot** — [lexuz.md, 8-bo'lim](research/lexuz.md): qaror va farmonlar
    tuzilishi, ilovalar, jadvallar, faqat PDF'li yangi hujjatlar, card1, kodekslar ro'yxati
    (`fform_id=3964`) va postback bilan sahifalash.
-2. ✅ **Loyiha karkasi:** `pyproject.toml` (uv), `src/qonunshunos/`, `tests/`, ruff, `.gitignore`
+2. ✅ **Loyiha karkasi:** `pyproject.toml` (uv), `src/nizom/`, `tests/`, ruff, `.gitignore`
    (`data/`), qisqa README.
 3. ✅ `text/normalize.py` + testlar.
 4. ✅ `parser/document.py` + fixture'lar + testlar.
@@ -35,7 +35,7 @@ hujjat: 20 ta kodeks + Konstitutsiya).
 
 ## Natija (2026-11-05)
 
-`qonunshunos crawl-sample`: 21 ta hujjat (Konstitutsiya + 20 ta amaldagi kodeks), ≈44 ta so'rov,
+`nizom crawl-sample`: 21 ta hujjat (Konstitutsiya + 20 ta amaldagi kodeks), ≈44 ta so'rov,
 xatosiz. Parserda ogohlantirish yo'q, takroriy yoki bo'sh modda yo'q.
 
 | Hujjat | Moddalar | Hujjat | Moddalar |
@@ -70,7 +70,7 @@ Python ≥3.12, uv, httpx, beautifulsoup4 + lxml, pydantic v2, pytest, ruff. CLI
 ## Modullar
 
 ```
-src/qonunshunos/
+src/nizom/
   text/normalize.py      apostroflar, bo'shliqlar, <sup> → ¹²³
   parser/models.py       pydantic modellar (quyida)
   parser/document.py     hujjat HTML → ParsedDocument
@@ -79,7 +79,7 @@ src/qonunshunos/
   crawler/store.py       data/raw'ga saqlash
   crawler/listing.py     qidiruv ro'yxatlari (ASP.NET postback)
   crawler/sample.py      namunaviy to'plam
-  cli.py                 `qonunshunos` buyrug'i
+  cli.py                 `nizom` buyrug'i
 ```
 
 ## Natija modeli (pydantic, soddalashtirilgan)
@@ -190,7 +190,7 @@ xaritalanadi. Sanalar `dd.mm.yyyy` → ISO.
 
 ## Crawler
 
-- **Klient:** httpx, `User-Agent: QonunshunosBot/0.1` (shaxsiy email qo'yilmaydi). So'rovlar
+- **Klient:** httpx, `User-Agent: NizomBot/0.1` (shaxsiy email qo'yilmaydi). So'rovlar
   orasida kamida 2 soniya, parallel so'rov yo'q. Timeout 60 s (Mehnat kodeksi sahifasi 3,5 MB).
   5xx va timeout bo'lsa 3 marta qayta urinadi (2, 4, 8 s). `/Pages/404.aspx`ga yo'naltirish
   `NotFound` deb qaraladi.

@@ -24,7 +24,7 @@ import torch
 import torch.nn.functional as F
 from transformers import AutoModel, AutoTokenizer
 
-from qonunshunos.text.normalize import embedding_text
+from nizom.text.normalize import embedding_text
 
 BASE = "intfloat/multilingual-e5-small"
 

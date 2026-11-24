@@ -4,7 +4,7 @@ import hashlib
 
 import numpy as np
 
-from qonunshunos.text.fts import terms
+from nizom.text.fts import terms
 
 
 class FakeEmbedder:

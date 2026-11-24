@@ -19,8 +19,8 @@ import json
 import sys
 from pathlib import Path
 
-from qonunshunos.config import Settings
-from qonunshunos.db import connect
+from nizom.config import Settings
+from nizom.db import connect
 
 BATCH = 2000
 

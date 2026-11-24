@@ -5,7 +5,7 @@
 Output next to the model: onnx/model.onnx (fp32), onnx/model_int8.onnx (dynamic int8 weights,
 per channel) and a tokenizer.json without saved padding. The check scores real-looking pairs
 with torch and with both ONNX files, in one padded batch and one pair at a time, the way the
-live Reranker (qonunshunos.search.rerank) feeds them.
+live Reranker (nizom.search.rerank) feeds them.
 """
 
 import argparse
@@ -19,7 +19,7 @@ from onnxruntime.quantization import QuantType, quantize_dynamic
 from tokenizers import Tokenizer
 from transformers import AutoModelForSequenceClassification
 
-from qonunshunos.text.normalize import embedding_text
+from nizom.text.normalize import embedding_text
 
 PAIRS = [
     (

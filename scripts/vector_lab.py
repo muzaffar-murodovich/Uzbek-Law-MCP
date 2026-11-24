@@ -30,8 +30,8 @@ import torch.nn.functional as F
 from fusion_lab import DEFAULT_TAG, Lab, Params
 from transformers import AutoModel, AutoTokenizer
 
-from qonunshunos.evaluation import metrics
-from qonunshunos.text.normalize import embedding_text
+from nizom.evaluation import metrics
+from nizom.text.normalize import embedding_text
 
 CACHE = Path("data/eval/vec")
 
@@ -74,7 +74,7 @@ class OnnxModel:
     def __init__(self, name: str, max_len: int) -> None:
         import onnxruntime as ort
 
-        from qonunshunos.index.embed import Embedder, load_tokenizer
+        from nizom.index.embed import Embedder, load_tokenizer
 
         path = Path(name)
         self.embedder = Embedder.__new__(Embedder)  # skip the Hub download of the live model

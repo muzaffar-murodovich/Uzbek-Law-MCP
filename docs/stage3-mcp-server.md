@@ -12,8 +12,8 @@ OAuth, limitlar va ommaviy manzil keyingi bosqichlarda qo'shiladi (4- va 5-bosqi
 
 ## Tayyor bo'lish mezonlari
 
-- `qonunshunos serve` Streamable HTTP serverini ishga tushiradi (`http://127.0.0.1:8000/mcp`).
-  `qonunshunos serve --stdio` esa mahalliy mijozlar uchun.
+- `nizom serve` Streamable HTTP serverini ishga tushiradi (`http://127.0.0.1:8000/mcp`).
+  `nizom serve --stdio` esa mahalliy mijozlar uchun.
 - 6 ta tool ishlaydi: `search_law`, `get_article`, `get_document`, `get_section`,
   `find_document`, `list_codes`. Bundan tashqari `yuridik_savol` prompti va `lex://` resurslari
   bor.
@@ -42,9 +42,9 @@ OAuth, limitlar va ommaviy manzil keyingi bosqichlarda qo'shiladi (4- va 5-bosqi
 
 ## Natija (2026-11-06)
 
-- **Server:** `qonunshunos serve` (Streamable HTTP, `/mcp`, `/healthz`) va `--stdio`. 6 ta tool,
+- **Server:** `nizom serve` (Streamable HTTP, `/mcp`, `/healthz`) va `--stdio`. 6 ta tool,
   `yuridik_savol` prompti, `lex://` resurslari. Har bir chaqiruv `usage_events`ga yoziladi.
-  Qo'lda tekshirish uchun: `qonunshunos tool <nom> key=value ...`.
+  Qo'lda tekshirish uchun: `nizom tool <nom> key=value ...`.
 - **Kechikish** (HTTP orqali, Mac): `search_law` 45–66 ms, qolganlari 1–7 ms (mezon 300 / 50 ms).
 - **Javob hajmi:** 8 ta qidiruv natijasi ≈4,5 ming belgi (≈1100 token).
 - **Testlar:** 134 ta, shundan 9 tasi bazali (`-m db`), ular orasida SDK'ning xotiradagi mijozi
@@ -56,7 +56,7 @@ OAuth, limitlar va ommaviy manzil keyingi bosqichlarda qo'shiladi (4- va 5-bosqi
 
 10 ta savol berildi: bittasi qo'lda, `/yuridik_savol` prompti bilan ("Ishdan bo'shatishsa nima
 qilaman?"), 9 tasi avtomatik, promptsiz, oddiy savol sifatida (`scripts/e2e_claude.sh`,
-`eval/e2e/questions.tsv`). Avtomatik sinovda Claude Code'ga faqat Qonunshunos serveri berildi:
+`eval/e2e/questions.tsv`). Avtomatik sinovda Claude Code'ga faqat Nizom serveri berildi:
 o'rnatilgan tool'lar, veb-qidiruv va loyiha `CLAUDE.md`si yo'q edi. Tahlil:
 `scripts/e2e_analyze.py`, natija: `eval/results/2026-11-06-e2e-claude-code.jsonl`.
 
@@ -246,7 +246,7 @@ shuning uchun keshlanmaydi: har bir chaqiruv `usage_events`ga yozilishi kerak.
 ## Modullar
 
 ```
-src/qonunshunos/
+src/nizom/
   index/doctype.py   card1 shakli → doc_kind, display_title
   mcp/__init__.py
   mcp/resolve.py     hujjat (ID / raqam / nom) va modda raqamini aniqlash
@@ -257,7 +257,7 @@ src/qonunshunos/
 ```
 
 `tools.py` MCP'ga bog'liq emas: uning funksiyalari connection va embedder oladi va matn
-qaytaradi. Shunda ularni testda va CLI'da (`qonunshunos tool get_article …` — qo'lda tekshirish
+qaytaradi. Shunda ularni testda va CLI'da (`nizom tool get_article …` — qo'lda tekshirish
 uchun) to'g'ridan-to'g'ri chaqirish mumkin.
 
 ## Testlar

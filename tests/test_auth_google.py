@@ -10,11 +10,11 @@ import pytest
 from mcp.server.auth.provider import AuthorizationParams
 from mcp.shared.auth import OAuthClientInformationFull
 
-from qonunshunos.auth import google
-from qonunshunos.auth.google import GoogleConfig, GoogleError
-from qonunshunos.auth.pages import AuthConfig, routes
-from qonunshunos.auth.provider import Provider
-from qonunshunos.db import connect
+from nizom.auth import google
+from nizom.auth.google import GoogleConfig, GoogleError
+from nizom.auth.pages import AuthConfig, routes
+from nizom.auth.provider import Provider
+from nizom.db import connect
 
 CONFIG = GoogleConfig(client_id="cid.apps.googleusercontent.com", client_secret="gsecret")
 

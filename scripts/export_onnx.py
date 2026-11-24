@@ -2,7 +2,7 @@
 
     uv run --group bench python scripts/export_onnx.py data/models/e5-small-ft1
 
-The live search reads ONNX on onnxruntime without torch (qonunshunos.index.embed). Output
+The live search reads ONNX on onnxruntime without torch (nizom.index.embed). Output
 next to the model: onnx/model.onnx (fp32), onnx/model_int8.onnx (dynamic int8 weights, per
 channel) and tokenizer.json. A check embeds a
 few real passages with torch and with both ONNX files and prints the cosine between them.
@@ -18,8 +18,8 @@ from onnxruntime.quantization import QuantType, quantize_dynamic
 from tokenizers import Tokenizer
 from transformers import AutoModel
 
-from qonunshunos.index.embed import load_tokenizer
-from qonunshunos.text.normalize import embedding_text
+from nizom.index.embed import load_tokenizer
+from nizom.text.normalize import embedding_text
 
 SAMPLES = [
     "query: Ish beruvchi meni ogohlantirmasdan ishdan boʻshatishi mumkinmi?",

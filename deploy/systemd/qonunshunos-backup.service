@@ -1,5 +1,5 @@
 [Unit]
-Description=Qonunshunos: database dump to ~/backups
+Description=Nizom: database dump to ~/backups
 After=network-online.target postgresql.service
 Wants=network-online.target
 OnFailure=qonunshunos-alert@%n.service

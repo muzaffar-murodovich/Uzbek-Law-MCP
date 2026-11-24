@@ -5,8 +5,8 @@ from datetime import UTC, datetime, timedelta
 import httpx
 import pytest
 
-from qonunshunos.db import connect
-from qonunshunos.notify import NotifyError, morning_report, send
+from nizom.db import connect
+from nizom.notify import NotifyError, morning_report, send
 
 
 def test_send_posts_to_telegram():
@@ -67,7 +67,7 @@ def test_morning_report(db_dsn, tmp_path):
             (now - timedelta(hours=12), now - timedelta(hours=1)),  # yesterday 20:00, today
         )
         text = morning_report(conn, tmp_path, tmp_path, now=lambda: now)
-    assert text.splitlines()[0] == "Qonunshunos · 08.11 hisobot"
+    assert text.splitlines()[0] == "Nizom · 08.11 hisobot"
     assert "tekshirildi 12, oʻzgardi 1" in text
     assert "~ Maʼmuriy javobgarlik toʻgʻrisidagi kodeks" in text
     assert "1 tasi bizdagi hujjatlarga havola qiladi" in text

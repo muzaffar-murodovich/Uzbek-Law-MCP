@@ -2,7 +2,7 @@
 
     uv run python scripts/fusion_lab.py data/eval/candidates_llm_full.json.gz
 
-``fuse`` with default parameters repeats ``qonunshunos.search.hybrid.search`` (RRF over the
+``fuse`` with default parameters repeats ``nizom.search.hybrid.search`` (RRF over the
 chunk lists of every query, best chunk per unit). The other parameters are the variants:
 list weights, candidates per list, the RRF constant, a bonus for the best single rank and
 document-kind weights. Numbers are for questions with every tag of ``--tag`` (default:
@@ -18,7 +18,7 @@ from pathlib import Path
 
 import yaml
 
-from qonunshunos.evaluation import Expected, has_tags, metrics
+from nizom.evaluation import Expected, has_tags, metrics
 
 QUESTIONS = Path("eval/questions_llm_full.yaml")
 DEFAULT_TAG = "aniq,dev"  # tune on dev only: test is for reporting (docs/stage2-experiments.md 6k)

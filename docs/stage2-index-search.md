@@ -12,19 +12,19 @@ kutubxona va CLI bor. MCP server 3-bosqichda shu kutubxona ustiga quriladi.
 
 ## Tayyor bo'lish mezonlari
 
-- `qonunshunos db-migrate` bazani yaratadi yoki yangilaydi (PostgreSQL 16 + pgvector + pg_trgm).
-- `qonunshunos index [<id>...]` parse qilingan hujjatlarni bazaga yozadi. Agar hujjat
+- `nizom db-migrate` bazani yaratadi yoki yangilaydi (PostgreSQL 16 + pgvector + pg_trgm).
+- `nizom index [<id>...]` parse qilingan hujjatlarni bazaga yozadi. Agar hujjat
   o'zgarmagan bo'lsa (`content_hash` bir xil), qayta ishlamaydi.
-- `qonunshunos search "<savol>"` gibrid qidiruv natijalarini chiqaradi: hujjat, modda, yo'l,
+- `nizom search "<savol>"` gibrid qidiruv natijalarini chiqaradi: hujjat, modda, yo'l,
   havola, ball.
-- `qonunshunos eval` baholash to'plamini ishga tushiradi va hisobot beradi: Recall@5,
+- `nizom eval` baholash to'plamini ishga tushiradi va hisobot beradi: Recall@5,
   Recall@10, MRR. Hisobotda FTS, vektor va gibrid alohida ko'rsatiladi.
 - Baholash to'plamida 80–100 ta savol bo'ladi. Gibrid qidiruvda Recall@10 ≥ 0,80 bo'lishi kerak.
   Bu dastlabki mo'ljal, birinchi o'lchovdan keyin aniqlashtiriladi.
 - Qidiruv kechikishi (embedding + SQL) bitta so'rov uchun 300 ms'dan oshmaydi. Bu 2 vCPU'li
   serverga mo'ljallangan.
 - Testlar bazasiz va tarmoqsiz o'tadi. Baza kerak bo'lgan testlar alohida belgilanadi
-  (`-m db`) va faqat `QONUNSHUNOS_TEST_DSN` berilganda ishlaydi.
+  (`-m db`) va faqat `NIZOM_TEST_DSN` berilganda ishlaydi.
 
 ## Ishlar tartibi
 
@@ -72,7 +72,7 @@ Bu taxminan 160 ta so'rov, ya'ni 2 soniya oraliq bilan ≈6 daqiqa. To'liq yukla
 ## Ma'lumotlar bazasi
 
 Kirish — `psycopg` 3 (sinxron, pool bilan), toza SQL. ORM ishlatilmaydi: so'rovlar kam va
-qidiruv SQL'ni qo'lda yozish qulayroq. Migratsiyalar — `src/qonunshunos/db/migrations/NNNN_*.sql`
+qidiruv SQL'ni qo'lda yozish qulayroq. Migratsiyalar — `src/nizom/db/migrations/NNNN_*.sql`
 fayllari va `schema_migrations` jadvali. Alembic'ning bu yerda foydasi yo'q.
 
 ```sql
@@ -190,7 +190,7 @@ search(query, alt_queries=[], doc_types=None, status='in_force', limit=8)
 ## Modullar
 
 ```
-src/qonunshunos/
+src/nizom/
   config.py          Settings (DSN, model yo'li, limitlar), env'dan o'qiladi
   db/                connect(), migrate(), migrations/*.sql
   text/chunk.py      Unit → bo'laklar

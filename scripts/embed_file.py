@@ -5,7 +5,7 @@
 
 For re-embedding the corpus on a rented machine: the passages go through the live search's own
 Embedder code (``passage: `` prefix, ``embedding_text``, mean pooling), so the vectors equal
-what ``qonunshunos reembed`` would write with the same ONNX file. Work is split into parts of
+what ``nizom reembed`` would write with the same ONNX file. Work is split into parts of
 ``--part`` chunks saved as ``<out>/part-NNNNN.npz`` (ids int64, vectors float16); a part that
 exists is skipped, so the run can be stopped and started again. ``--merge`` joins the parts
 into ``<out>/vectors.npz``. ``--provider cuda`` needs onnxruntime-gpu installed instead of
@@ -28,7 +28,7 @@ _embedder = None
 def _load(onnx: str, provider: str, threads: int) -> None:
     import onnxruntime as ort
 
-    from qonunshunos.index.embed import Embedder, load_tokenizer
+    from nizom.index.embed import Embedder, load_tokenizer
 
     global _embedder
     path = Path(onnx)
@@ -64,7 +64,7 @@ class _TorchEmbedder:
         import torch
         from transformers import AutoModel
 
-        from qonunshunos.index.embed import load_tokenizer
+        from nizom.index.embed import load_tokenizer
 
         self.torch = torch
         self.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
@@ -72,7 +72,7 @@ class _TorchEmbedder:
         self.model = AutoModel.from_pretrained(folder).to(self.device).eval()
 
     def passages(self, texts: list[str], batch_size: int) -> np.ndarray:
-        from qonunshunos.text.normalize import embedding_text
+        from nizom.text.normalize import embedding_text
 
         torch = self.torch
         order = sorted(range(len(texts)), key=lambda i: len(texts[i]))

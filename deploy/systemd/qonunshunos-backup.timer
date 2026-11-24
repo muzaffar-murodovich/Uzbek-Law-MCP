@@ -1,5 +1,5 @@
 [Unit]
-Description=Qonunshunos: database dump to ~/backups (*-*-* 04:40 Asia/Tashkent)
+Description=Nizom: database dump to ~/backups (*-*-* 04:40 Asia/Tashkent)
 
 [Timer]
 OnCalendar=*-*-* 04:40 Asia/Tashkent

@@ -7,7 +7,7 @@ umask 077
 export LC_ALL=C.UTF-8
 
 APP=${QONUNSHUNOS_APP:-/home/deploy/qonunshunos}
-BACKUP_DIR=${QONUNSHUNOS_BACKUPS_DIR:-/home/deploy/backups}
+BACKUP_DIR=${NIZOM_BACKUPS_DIR:-/home/deploy/backups}
 LOG="$BACKUP_DIR/backup.log"
 # Full dumps are ~1 GB since the full corpus (2026-11-09); embeddings can be recomputed, so
 # only 3 days stay here (home keeps 14). Users and OAuth cannot be recomputed: they also get
@@ -19,8 +19,8 @@ AUTH_TABLES=(users user_identities oauth_clients oauth_codes oauth_consents oaut
 
 log() { echo "$(date '+%Y-%m-%d %H:%M:%S') $*" | tee -a "$LOG"; }
 
-DSN=$(grep '^QONUNSHUNOS_DSN=' "$APP/.env" | cut -d= -f2-)
-[ -n "$DSN" ] || { log "FAIL qonunshunos: QONUNSHUNOS_DSN is empty"; exit 1; }
+DSN=$(grep -E '^(NIZOM|QONUNSHUNOS)_DSN=' "$APP/.env" | cut -d= -f2-)
+[ -n "$DSN" ] || { log "FAIL qonunshunos: NIZOM_DSN is empty"; exit 1; }
 # The password goes through the environment, not argv (argv is visible in `ps`).
 read -r PGPASSWORD DSN < <(python3 - "$DSN" <<'PY'
 import sys, urllib.parse as u

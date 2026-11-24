@@ -1,6 +1,6 @@
 import pytest
 
-from qonunshunos.text.normalize import (
+from nizom.text.normalize import (
     APOSTROPHES,
     clean_whitespace,
     embedding_text,

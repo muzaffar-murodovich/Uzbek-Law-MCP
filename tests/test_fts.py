@@ -1,6 +1,6 @@
 import pytest
 
-from qonunshunos.text.fts import stem, terms, to_tsquery
+from nizom.text.fts import stem, terms, to_tsquery
 
 
 @pytest.mark.parametrize(

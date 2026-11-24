@@ -6,7 +6,7 @@ set -euo pipefail
 DEST=${BACKUP_PULL_DEST:-/media/muzaffar/Data/backups/myserver}
 DIR=$(dirname "$0")
 # MYSERVER_SSH (e.g. deploy@<ip>) lives in watch.env: home's ~/.ssh/config has no "myserver".
-. "${QONUNSHUNOS_WATCH_ENV:-$HOME/.config/qonunshunos/watch.env}"
+. "${NIZOM_WATCH_ENV:-$HOME/.config/qonunshunos/watch.env}"
 SERVER=${MYSERVER_SSH:-myserver}
 export RSYNC_RSH="ssh -o BatchMode=yes -o ConnectTimeout=20"
 mkdir -p "$DEST"

@@ -4,7 +4,7 @@ from datetime import date
 
 import anyio
 
-from qonunshunos import site
+from nizom import site
 
 
 def test_home_shows_coverage_and_last_update():

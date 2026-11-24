@@ -18,7 +18,7 @@ O'zbekiston Respublikasi Adliya vazirligi qoshidagi
 
 Hurmatli [rahbarning ismi-sharifi]!
 
-Biz "Qonunshunos" (ishchi nom) axborot xizmatini ishlab chiqmoqdamiz. Xizmat sun'iy intellekt
+Biz "Nizom" axborot xizmatini ishlab chiqmoqdamiz. Xizmat sun'iy intellekt
 yordamchilari (Claude, ChatGPT va boshqalar) uchun Model Context Protocol (MCP) standartidagi
 server bo'lib, foydalanuvchilarga O'zbekiston Respublikasi qonunchiligiga oid savollar bo'yicha
 amaldagi normativ-huquqiy hujjatlarning tegishli moddalarini topishda yordam beradi.

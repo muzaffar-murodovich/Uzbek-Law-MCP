@@ -5,11 +5,11 @@ import pytest
 from mcp.server.auth.provider import AuthorizationParams, RegistrationError, TokenError
 from mcp.shared.auth import OAuthClientInformationFull
 
-from qonunshunos.auth import users
-from qonunshunos.auth.provider import Provider, allowed_redirect_uri, cleanup
-from qonunshunos.db import connect
+from nizom.auth import users
+from nizom.auth.provider import Provider, allowed_redirect_uri, cleanup
+from nizom.db import connect
 
-URL = "https://qonunshunos.example"
+URL = "https://nizom.example"
 
 
 def test_allowed_redirect_uris():

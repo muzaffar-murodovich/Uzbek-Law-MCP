@@ -29,8 +29,8 @@ APOSTROPHES = "ʻʼ‘’'`"
 
 def export_units(args: argparse.Namespace) -> None:
     """One line per unit of every current Latin document, as the index stores them."""
-    from qonunshunos.crawler.pipeline import Workspace, load_parsed
-    from qonunshunos.index.writer import build_sections, kind_and_title
+    from nizom.crawler.pipeline import Workspace, load_parsed
+    from nizom.index.writer import build_sections, kind_and_title
 
     ws = Workspace(args.data_dir)
     files = sorted((args.data_dir / "parsed").glob("*.json"))

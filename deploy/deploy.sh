@@ -4,12 +4,12 @@
 # The server's .env (DSN, public URL, Google client) is created once by hand and never synced.
 set -euo pipefail
 
-# Host: $QONUNSHUNOS_HOST, else MYSERVER_SSH from home's watch.env (home has no "myserver" alias).
+# Host: $NIZOM_HOST, else MYSERVER_SSH from home's watch.env (home has no "myserver" alias).
 WATCH_ENV=~/.config/qonunshunos/watch.env
-if [ -z "${QONUNSHUNOS_HOST:-}" ] && [ -f "$WATCH_ENV" ]; then
-  QONUNSHUNOS_HOST=$(sed -n 's/^MYSERVER_SSH=//p' "$WATCH_ENV" | tr -d "\"'")
+if [ -z "${NIZOM_HOST:-}" ] && [ -f "$WATCH_ENV" ]; then
+  NIZOM_HOST=$(sed -n 's/^MYSERVER_SSH=//p' "$WATCH_ENV" | tr -d "\"'")
 fi
-HOST=${QONUNSHUNOS_HOST:-myserver}
+HOST=${NIZOM_HOST:-myserver}
 APP=/home/deploy/qonunshunos
 MODEL=data/models/Xenova__multilingual-e5-small
 E6_MODEL=data/models/local__e5-small-e6
@@ -49,8 +49,9 @@ ssh $HOST "set -e; cd $APP
   [ -d venv ] || python3 -m venv venv
   venv/bin/pip install -q --upgrade pip
   venv/bin/pip install -q -r deploy/requirements.txt
+  venv/bin/pip uninstall -q -y qonunshunos 2>/dev/null || true  # the package before the rename
   venv/bin/pip install -q --no-deps --force-reinstall .
-  venv/bin/qonunshunos db-migrate"
+  venv/bin/nizom db-migrate"
 
 if ssh $HOST "systemctl cat qonunshunos >/dev/null 2>&1"; then
   echo "== restart"

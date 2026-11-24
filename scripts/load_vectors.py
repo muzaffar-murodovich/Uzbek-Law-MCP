@@ -3,7 +3,7 @@
     venv/bin/python scripts/load_vectors.py data/embed/vectors.npz
 
 See ``writer.load_vectors``: chunks gone since the text dump are skipped, and a document is
-marked with the new model only when all its chunks got a vector; ``qonunshunos reembed`` then
+marked with the new model only when all its chunks got a vector; ``nizom reembed`` then
 redoes the rest. The HNSW index is dropped first (updating 0.5M indexed rows one by one is
 slow) and built again at the end; meanwhile vector search scans the table.
 """
@@ -14,10 +14,10 @@ from pathlib import Path
 
 import numpy as np
 
-from qonunshunos.config import Settings
-from qonunshunos.db import connect
-from qonunshunos.index.embed import DEFAULT_MODEL, MODELS, embed_name
-from qonunshunos.index.writer import HNSW_INDEX, load_vectors
+from nizom.config import Settings
+from nizom.db import connect
+from nizom.index.embed import DEFAULT_MODEL, MODELS, embed_name
+from nizom.index.writer import HNSW_INDEX, load_vectors
 
 
 def main() -> None:
@@ -43,7 +43,7 @@ def main() -> None:
         result = load_vectors(conn, ids, vectors, name, batch=args.batch, progress=progress)
         progress(
             f"{result.updated} chunks updated, {result.marked} documents marked {name}, "
-            f"{result.left} left for `qonunshunos reembed`"
+            f"{result.left} left for `nizom reembed`"
         )
         conn.execute("SET maintenance_work_mem = '512MB'")
         conn.execute(HNSW_INDEX)

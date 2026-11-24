@@ -1,11 +1,11 @@
 #!/bin/bash
-# One-time root setup of Qonunshunos on myserver. Idempotent: safe to run again.
+# One-time root setup of Nizom on myserver. Idempotent: safe to run again.
 # Run after deploy/deploy.sh has copied the code and .env (and again when deploy/systemd changes):
 #   ssh -t myserver 'sudo bash /home/deploy/qonunshunos/deploy/root-setup.sh'
 set -euo pipefail
 
 APP=/home/deploy/qonunshunos
-DOMAIN=qonunshunos.muzaffar.zip
+DOMAIN=nizom.org
 SERVICE=qonunshunos
 PGVECTOR=0.8.7
 PGVECTOR_SHA256=cac0b10c360f05b2d521200105ba3697e773d4cd3731f5a915a7e37ebe0bea85
@@ -37,7 +37,7 @@ fi
 grep default_version /usr/share/postgresql/16/extension/vector.control
 
 step "2/6 database and role 'qonunshunos'"
-DSN=$(grep '^QONUNSHUNOS_DSN=' "$APP/.env" | cut -d= -f2-)
+DSN=$(grep -E '^(NIZOM|QONUNSHUNOS)_DSN=' "$APP/.env" | cut -d= -f2-)
 PASS=$(python3 -c 'import sys, urllib.parse as u; print(u.unquote(u.urlparse(sys.argv[1]).password))' "$DSN")
 sudo -u postgres psql -q -v ON_ERROR_STOP=1 -v pass="$PASS" <<'SQL'
 SELECT 'CREATE ROLE qonunshunos LOGIN'
@@ -65,9 +65,17 @@ if ! grep -qF "$RULE" "$SUDOERS"; then
 fi
 echo "sudoers: $(grep -c "$SERVICE" "$SUDOERS") rule(s) for $SERVICE"
 
-step "4/6 certificate: the existing *.muzaffar.zip Cloudflare Origin CA (proxied site)"
-# 80/443 are open to Cloudflare only, so Let's Encrypt HTTP-01 cannot reach us; the site
-# runs behind the Cloudflare proxy like muzaffar.zip and xorazmcha.muzaffar.zip.
+step "4/6 certificates: Cloudflare Origin CA for nizom.org (+ *.muzaffar.zip for the old name)"
+# 80/443 are open to Cloudflare only, so Let's Encrypt HTTP-01 cannot reach us; the site runs
+# behind the Cloudflare proxy ("Full (strict)"). The nizom.org key was made on this server by
+# the deploy user (~deploy/certs/, see docs/stage5-ops.md) and never left it; the certificate
+# is the one Cloudflare signed for that key's CSR.
+CERTS=/home/deploy/certs
+if [ -f "$CERTS/nizom.org.crt" ] && [ -f "$CERTS/nizom.org.key" ]; then
+  install -m 644 "$CERTS/nizom.org.crt" /etc/ssl/certs/nizom.org.crt
+  install -m 600 "$CERTS/nizom.org.key" /etc/ssl/private/nizom.org.key
+fi
+openssl x509 -in /etc/ssl/certs/nizom.org.crt -noout -subject -enddate
 openssl x509 -in /etc/ssl/certs/muzaffar.crt -noout -subject -enddate
 rm -rf /var/www/letsencrypt
 

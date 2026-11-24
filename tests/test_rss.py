@@ -1,4 +1,4 @@
-from qonunshunos.crawler.rss import parse_rss
+from nizom.crawler.rss import parse_rss
 
 
 def test_parse_rss(fixture_html):

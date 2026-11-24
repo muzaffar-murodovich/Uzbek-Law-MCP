@@ -1,7 +1,7 @@
 import pytest
 
-from qonunshunos import llm
-from qonunshunos.llm import BudgetExhausted, Ledger, LLMError, OpenAIChat, tier_of
+from nizom import llm
+from nizom.llm import BudgetExhausted, Ledger, LLMError, OpenAIChat, tier_of
 
 
 def test_unknown_model_is_refused():

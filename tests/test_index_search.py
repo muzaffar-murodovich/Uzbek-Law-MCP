@@ -1,8 +1,8 @@
 import pytest
 from fakes import FakeEmbedder
 
-from qonunshunos.db import connect
-from qonunshunos.index.writer import (
+from nizom.db import connect
+from nizom.index.writer import (
     build_sections,
     index_document,
     kind_and_title,
@@ -11,9 +11,9 @@ from qonunshunos.index.writer import (
     reembed,
     refresh_fts_stats,
 )
-from qonunshunos.parser.card import parse_card
-from qonunshunos.parser.document import parse_document
-from qonunshunos.search.hybrid import rrf, search
+from nizom.parser.card import parse_card
+from nizom.parser.document import parse_document
+from nizom.search.hybrid import rrf, search
 
 
 def test_rrf_sums_reciprocal_ranks():
@@ -88,7 +88,7 @@ class CountingEmbedder(FakeEmbedder):
 
 @pytest.mark.db
 def test_reindex_reuses_vectors_and_stores_banners(db_dsn, fixture_html):
-    from qonunshunos.parser.models import Link, PendingChange
+    from nizom.parser.models import Link, PendingChange
 
     doc = parse_document(fixture_html("doc_mehnat_kodeksi.html"), -6257288)
     card = parse_card(fixture_html("card1_in_force.html"), -6257288)
@@ -116,7 +116,7 @@ def test_reindex_reuses_vectors_and_stores_banners(db_dsn, fixture_html):
 
 
 def test_content_hash_ignores_card_language(fixture_html):
-    from qonunshunos.index.writer import content_hash
+    from nizom.index.writer import content_hash
 
     doc = parse_document(fixture_html("doc_mehnat_kodeksi.html"), -6257288)
     card = parse_card(fixture_html("card1_in_force.html"), -6257288)

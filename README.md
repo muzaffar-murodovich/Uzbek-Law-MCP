@@ -1,7 +1,7 @@
-# Qonunshunos
+# Nizom
 
 O'zbekiston Respublikasi qonunchiligiga oid savollarga javob topishda yordam beradigan remote MCP
-server (ishchi nom). Manba — [lex.uz](https://lex.uz). Har bir javobda lex.uz'dagi asl hujjatga
+server. Manba — [lex.uz](https://lex.uz). Har bir javobda lex.uz'dagi asl hujjatga
 havola beriladi.
 
 Reja va qarorlar: [PLAN.md](PLAN.md). Joriy bosqich: [docs/stage1-parser-crawler.md](docs/stage1-parser-crawler.md).
@@ -10,7 +10,7 @@ Reja va qarorlar: [PLAN.md](PLAN.md). Joriy bosqich: [docs/stage1-parser-crawler
 
 ```sh
 uv sync
-uv run qonunshunos --help
+uv run nizom --help
 ```
 
 ## Ishlab chiqish

@@ -2,9 +2,9 @@ import datetime as dt
 
 import pytest
 
-from qonunshunos.mcp import format as fmt
-from qonunshunos.mcp.resolve import key, normalize_unit_number, unit_kinds
-from qonunshunos.mcp.tools import SectionRow, _find_heading, table_of_contents
+from nizom.mcp import format as fmt
+from nizom.mcp.resolve import key, normalize_unit_number, unit_kinds
+from nizom.mcp.tools import SectionRow, _find_heading, table_of_contents
 
 
 @pytest.mark.parametrize(

@@ -2,8 +2,8 @@ import json
 
 import httpx
 
-from qonunshunos.crawler.client import LexClient
-from qonunshunos.crawler.full import (
+from nizom.crawler.client import LexClient
+from nizom.crawler.full import (
     ERROR_PAUSE,
     ERRORS_PER_HOUR,
     FIRST_YEAR,
@@ -15,7 +15,7 @@ from qonunshunos.crawler.full import (
     scope_dir,
     unit_active,
 )
-from qonunshunos.crawler.pipeline import Workspace
+from nizom.crawler.pipeline import Workspace
 
 EMPTY_LISTING = "<html><body>0 hujjat topildi</body></html>"
 

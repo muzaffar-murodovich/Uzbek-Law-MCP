@@ -1,4 +1,4 @@
-"""LLM-made evaluation data (OpenAI, see ``qonunshunos.llm``).
+"""LLM-made evaluation data (OpenAI, see ``nizom.llm``).
 
     uv run python scripts/llm_eval.py rephrase   # eval/alt_llm.json: formal search queries
     uv run python scripts/llm_eval.py generate   # eval/questions_llm.yaml: new questions
@@ -21,10 +21,10 @@ from pathlib import Path
 
 import yaml
 
-from qonunshunos.config import Settings
-from qonunshunos.db import connect
-from qonunshunos.evaluation import CLARITY, SPLITS, load_questions
-from qonunshunos.llm import OpenAIChat
+from nizom.config import Settings
+from nizom.db import connect
+from nizom.evaluation import CLARITY, SPLITS, load_questions
+from nizom.llm import OpenAIChat
 
 REPHRASE_SYSTEM = """Sen Oʻzbekiston qonunchiligi boʻyicha savollarga javob beradigan AI \
 yordamchisan. Senda lex.uz bazasi boʻyicha qidiruv vositasi bor: u qonun matnidagi soʻzlar va \
@@ -161,9 +161,9 @@ def judge(args: argparse.Namespace) -> None:
     """Add articles that also answer a question (pooled relevance judgments)."""
     import threading
 
-    from qonunshunos.evaluation import Expected
-    from qonunshunos.index.embed import Embedder
-    from qonunshunos.search.hybrid import search
+    from nizom.evaluation import Expected
+    from nizom.index.embed import Embedder
+    from nizom.search.hybrid import search
 
     settings = Settings.from_env()
     llm = OpenAIChat(args.model, allow_paid=args.allow_paid)

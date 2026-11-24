@@ -1,16 +1,16 @@
-from qonunshunos.cli import main
+from nizom.cli import main
 
 
 def test_main_without_command_prints_help(capsys):
     assert main([]) == 0
-    assert "qonunshunos" in capsys.readouterr().out
+    assert "nizom" in capsys.readouterr().out
 
 
 def test_parse_all_reparses_scope_pages_only(tmp_path, fixture_html, capsys):
     import json
 
-    from qonunshunos.crawler.full import scope_dir
-    from qonunshunos.crawler.pipeline import Workspace
+    from nizom.crawler.full import scope_dir
+    from nizom.crawler.pipeline import Workspace
 
     ws = Workspace(tmp_path)
     for lex_id in (-1, -2, -3):  # -3: an RSS act outside the scope

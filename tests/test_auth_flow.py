@@ -1,5 +1,5 @@
 """End-to-end OAuth: the SDK's OAuth client registers, signs in (dev login), consents, gets a
-token and calls tools over Streamable HTTP; limits apply per user. Needs QONUNSHUNOS_TEST_DSN."""
+token and calls tools over Streamable HTTP; limits apply per user. Needs NIZOM_TEST_DSN."""
 
 import re
 from urllib.parse import parse_qs, urljoin, urlparse
@@ -13,10 +13,10 @@ from mcp.client.auth import OAuthClientProvider
 from mcp.client.streamable_http import streamable_http_client
 from mcp.shared.auth import AuthorizationCodeResult, OAuthClientMetadata, OAuthToken
 
-from qonunshunos.auth import users
-from qonunshunos.auth.pages import AuthConfig
-from qonunshunos.db import connect
-from qonunshunos.mcp.server import Services, create_server
+from nizom.auth import users
+from nizom.auth.pages import AuthConfig
+from nizom.db import connect
+from nizom.mcp.server import Services, create_server
 
 pytestmark = pytest.mark.db
 
@@ -56,7 +56,7 @@ class Browser:
         assert response.status_code == 302, response.text
         response = await self.http.get(response.headers["location"])
         self.pages.append(response.text)
-        assert "Qonunshunos'ga kirish" in response.text and "Test foydalanuvchi" in response.text
+        assert "Nizomga kirish" in response.text and "Test foydalanuvchi" in response.text
         request_id = re.search(r"name='req' value='([^']+)'", response.text).group(1)
         response = await self.http.post("/auth/dev", data={"req": request_id})
         if response.status_code == 200:  # first time for this client: consent page

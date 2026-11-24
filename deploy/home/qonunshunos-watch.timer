@@ -1,5 +1,5 @@
 [Unit]
-Description=Qonunshunos: health check every 5 minutes
+Description=Nizom: health check every 5 minutes
 
 [Timer]
 OnBootSec=2min

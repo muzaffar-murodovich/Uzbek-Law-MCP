@@ -17,11 +17,11 @@ import threading
 from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 
-from qonunshunos.config import Settings
-from qonunshunos.db import connect
-from qonunshunos.evaluation import Question, load_questions
-from qonunshunos.index.embed import Embedder
-from qonunshunos.search import hybrid
+from nizom.config import Settings
+from nizom.db import connect
+from nizom.evaluation import Question, load_questions
+from nizom.index.embed import Embedder
+from nizom.search import hybrid
 
 
 def main() -> None:

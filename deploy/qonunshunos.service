@@ -1,5 +1,5 @@
 [Unit]
-Description=Qonunshunos MCP server (Uzbek legislation search)
+Description=Nizom MCP server (Uzbek legislation search)
 After=network.target postgresql.service
 Wants=postgresql.service
 
@@ -9,7 +9,7 @@ User=deploy
 Group=deploy
 WorkingDirectory=/home/deploy/qonunshunos
 # Settings (DSN, public URL, Google client) come from /home/deploy/qonunshunos/.env.
-ExecStart=/home/deploy/qonunshunos/venv/bin/qonunshunos serve --host 127.0.0.1 --port 8100 --no-access-log
+ExecStart=/home/deploy/qonunshunos/venv/bin/nizom serve --host 127.0.0.1 --port 8100 --no-access-log
 Restart=on-failure
 RestartSec=5
 # One process holds the embedding model (~250 MB); keep it from starving the other apps.

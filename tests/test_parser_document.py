@@ -1,7 +1,7 @@
 import pytest
 
-from qonunshunos.parser.common import parse_link, uz_date_to_iso
-from qonunshunos.parser.document import ParseError, classify_heading, parse_document
+from nizom.parser.common import parse_link, uz_date_to_iso
+from nizom.parser.document import ParseError, classify_heading, parse_document
 
 
 def units_by_number(doc, kind):

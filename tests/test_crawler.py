@@ -3,10 +3,10 @@ from urllib.parse import parse_qs
 import httpx
 import pytest
 
-from qonunshunos.crawler.client import USER_AGENT, FetchError, LexClient, NotFound
-from qonunshunos.crawler.listing import NEXT_PAGE_TARGET, iter_listing, parse_listing
-from qonunshunos.crawler.pipeline import Workspace, fetch, parse
-from qonunshunos.crawler.store import RawStore
+from nizom.crawler.client import USER_AGENT, FetchError, LexClient, NotFound
+from nizom.crawler.listing import NEXT_PAGE_TARGET, iter_listing, parse_listing
+from nizom.crawler.pipeline import Workspace, fetch, parse
+from nizom.crawler.store import RawStore
 
 
 class FakeTime:

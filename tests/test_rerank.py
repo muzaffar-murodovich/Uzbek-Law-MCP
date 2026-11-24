@@ -1,4 +1,4 @@
-from qonunshunos.search.rerank import DEFAULT_TOP, blended_order, rerank_top
+from nizom.search.rerank import DEFAULT_TOP, blended_order, rerank_top
 
 
 def test_blended_order_keeps_agreement_and_lifts_strong_scores():
@@ -15,16 +15,17 @@ def test_blended_order_without_fused_weight_follows_scores():
 
 
 def test_rerank_top_from_environment(monkeypatch):
+    monkeypatch.delenv("NIZOM_RERANK_TOP", raising=False)
     monkeypatch.delenv("QONUNSHUNOS_RERANK_TOP", raising=False)
     assert rerank_top() == DEFAULT_TOP
-    monkeypatch.setenv("QONUNSHUNOS_RERANK_TOP", "0")
+    monkeypatch.setenv("NIZOM_RERANK_TOP", "0")
     assert rerank_top() == 0
-    monkeypatch.setenv("QONUNSHUNOS_RERANK_TOP", "12")
+    monkeypatch.setenv("NIZOM_RERANK_TOP", "12")
     assert rerank_top() == 12
 
 
 def test_score_keeps_the_order_of_the_texts():
-    from qonunshunos.search.rerank import Reranker
+    from nizom.search.rerank import Reranker
 
     class Lengths(Reranker):
         def __init__(self) -> None:

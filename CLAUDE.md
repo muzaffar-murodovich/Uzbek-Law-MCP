@@ -2,7 +2,7 @@
 
 ## Loyiha
 
-**Qonunshunos** (ishchi nom) — O'zbekiston Respublikasi qonunchiligiga oid savollarga javob
+**Nizom** (avval "Qonunshunos") — O'zbekiston Respublikasi qonunchiligiga oid savollarga javob
 topishda yordam beradigan remote MCP server. Manba — lex.uz (o'zbek tili, lotin yozuvi).
 Dasturlash tili — Python.
 
@@ -40,14 +40,14 @@ Dasturlash tili — Python.
   ishxona bilan umumiy: lex.uz'ga ko'p so'rov (to'liq yuklab olish) `myserver`dan yuboriladi.
   Docker ishlatilmaydi.
 - Mahalliy baza (Mac): Homebrew `postgresql@17` + `pgvector`, port 5433 (`.env.example`).
-  Domen: `qonunshunos.muzaffar.zip`. DNS'ni Spaceship emas, Cloudflare boshqaradi: A yozuvi
+  Domen: `nizom.org`. DNS'ni Spaceship emas, Cloudflare boshqaradi: A yozuvi
   Cloudflare'da, proksi yoqilgan (2026-11-06 dan), Spaceship'dagi yozuvlar ishlatilmaydi.
   Serverlarda o'zgarish qilishdan oldin foydalanuvchidan so'ra.
 - Bepul davr limitlari: kuniga 30 ta qidiruv, 200 ta boshqa chaqiruv, daqiqasiga 10 ta.
 
 ## lex.uz bilan ishlash
 
-- So'rovlar orasida kamida 2 soniya, parallel so'rov yo'q. User-Agent: `QonunshunosBot/0.1`,
+- So'rovlar orasida kamida 2 soniya, parallel so'rov yo'q. User-Agent: `NizomBot/0.1`,
   unga shaxsiy ma'lumot (email) qo'yilmaydi.
 - Lotin versiya: `https://lex.uz/docs/-{id}` (odatda manfiy ID; 402 ta lotin hujjatda ID musbat).
 - Yuklab olingan sahifalar `data/`ga saqlanadi va git'ga qo'shilmaydi.
@@ -55,7 +55,7 @@ Dasturlash tili — Python.
 
 ## Kod
 
-- Tuzilma: `src/qonunshunos/`, testlar `tests/`da.
+- Tuzilma: `src/nizom/`, testlar `tests/`da.
 - Commitdan oldin: `uv run ruff format .`, `uv run ruff check .`, `uv run pytest`.
 - Commitlar kichik va mantiqiy bo'lsin.
 
@@ -63,8 +63,8 @@ Dasturlash tili — Python.
 
 Bosqichlar holati `PLAN.md`ning 8-bo'limida. 1–5-bosqichlar bajarildi (har birining hujjatida
 "Natija" bo'limi bor, tajribalar `docs/stage2-experiments.md`da). Xizmat
-`https://qonunshunos.muzaffar.zip`da ishlayapti (to'liq korpus). Har kecha
-`qonunshunos update` lex.uz'dan yangilaydi, zaxira `home`ga ko'chiriladi, xatolar va ertalabki
+`https://nizom.org`da ishlayapti (to'liq korpus). Har kecha
+`nizom update` lex.uz'dan yangilaydi, zaxira `home`ga ko'chiriladi, xatolar va ertalabki
 hisobot Telegram'ga (@qonunshunosbot) keladi (`docs/stage5-ops.md`). 6-bosqich jarayonda
 (`docs/stage6-full-crawl.md`): 15 810 ta amaldagi lotin hujjat yuklab olindi, parser v2 bilan
 parse qilindi va server bazasiga indekslandi (491 947 bo'lak, HNSW qurilgan, tungi update timer'i
@@ -72,7 +72,7 @@ yoqilgan). To'liq bazada aniq savollarda R@10 0,875, R@8 0,865 (R@1 0,538), maqs
 0,85 bajarildi (6j). Xizmatda: fine-tune qilingan embedding modeli `e5-small-e6-int8/q1` (fayllari HF'da emas,
 `home`dagi `data/models/local__e5-small-e6`, deploy ko'chiradi; tipografik `‘ ’` shakl, 6e) va fine-tune qilingan reranker
 `mmarco-uz-rr1-int8` (`home`dagi `data/models/local__mmarco-uz-rr1`, top 30, 256 token,
-`QONUNSHUNOS_RERANK_TOP`); FTS'da noun lemmalari (`text/lemmas.tsv.gz`, uzmorph'dan,
+`NIZOM_RERANK_TOP`); FTS'da noun lemmalari (`text/lemmas.tsv.gz`, uzmorph'dan,
 `scripts/build_lemmas.py`), `COMMON_DF` 2 %, vektor og'irligi 1,5. Serverda bitta qidiruv 2–3 s,
 asosiy vaqt reranker. Ommaga ochish kechiktirilgan. O'qitish to'plami: `scripts/train_data.py`,
 `data/train/pairs.jsonl` (`home`da), 1 849 juftlik (6f). Birinchi fine-tune (ft1, 1 506 juftlik,
@@ -99,11 +99,11 @@ so'rasa uni ham, `deploy/deploy.sh`ni ham `ssh home` orqali o'zim ishga tushiram
 tajribalar: `scripts/fusion_lab.py`, `scripts/rerank_lab.py` (`data/eval/`dagi nomzodlar va
 matnlar ustida, `--group bench`). LLM `judge` natijasini iqtibosli tekshiruvsiz ishlatma (6d).
 
-CLI: `uv run qonunshunos fetch|parse [--all]|crawl-sample|crawl|listing|scope|crawl-full|db-migrate|index|search|eval|serve|tool|user|auth-cleanup|update|report|notify`
+CLI: `uv run nizom fetch|parse [--all]|crawl-sample|crawl|listing|scope|crawl-full|db-migrate|index|search|eval|serve|tool|user|auth-cleanup|update|report|notify`
 (`--data-dir`, standart `./data`). `serve` standart holatda OAuth talab qiladi: mahalliy
-ishlab chiqishda `.env`da `QONUNSHUNOS_DEV_LOGIN=1` yoki `--no-auth` (faqat loopback'da). Mahalliy
+ishlab chiqishda `.env`da `NIZOM_DEV_LOGIN=1` yoki `--no-auth` (faqat loopback'da). Mahalliy
 OAuth uchun manzil `http://localhost:8000` (`127.0.0.1` emas: Google redirect shunday yozilgan).
-LLM (OpenAI) faqat `qonunshunos.llm.OpenAIChat` orqali ishlatiladi: u bepul kunlik limitni
+LLM (OpenAI) faqat `nizom.llm.OpenAIChat` orqali ishlatiladi: u bepul kunlik limitni
 `data/llm_usage.json` bo'yicha nazorat qiladi.
 
 ## Server (`myserver`)

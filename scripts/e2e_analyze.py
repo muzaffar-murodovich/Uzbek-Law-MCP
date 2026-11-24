@@ -14,8 +14,8 @@ from pathlib import Path
 import psycopg
 import yaml
 
-from qonunshunos.config import Settings, load_dotenv
-from qonunshunos.mcp.resolve import normalize_unit_number, resolve_document
+from nizom.config import Settings, load_dotenv
+from nizom.mcp.resolve import normalize_unit_number, resolve_document
 
 D = Path(sys.argv[1])
 load_dotenv()

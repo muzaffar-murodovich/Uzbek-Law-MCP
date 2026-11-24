@@ -3,7 +3,7 @@ articles their answers cite (docs/stage2-experiments.md 6l).
 
 The question and answer texts stay in ``data/`` (not in git): the repo keeps only ids, source
 URLs and labels (``eval/labels_advice.yaml``). ``questions`` rebuilds the full question file
-from both, for ``qonunshunos eval``.
+from both, for ``nizom eval``.
 
     uv run python scripts/real_eval.py fetch        # advice.uz -> data/eval/real/advice/raw/
     uv run python scripts/real_eval.py extract      # raw pages -> items.json (question, answer)
@@ -30,7 +30,7 @@ RAW = ROOT / "raw"
 ITEMS = ROOT / "items.json"
 FULL = Path("data/eval/real/questions_advice.yaml")
 LABELS = Path("eval/labels_advice.yaml")
-HEADERS = {"User-Agent": "QonunshunosBot/0.1"}
+HEADERS = {"User-Agent": "NizomBot/0.1"}
 PAUSE = 2.0  # seconds between requests, one at a time
 
 
