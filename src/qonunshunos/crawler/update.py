@@ -196,17 +196,27 @@ def _read_rss(
         report.rss_new.append({"id": item.lex_id, "title": item.title, "links": targets})
 
 
-def _listed_new(conn: psycopg.Connection, client: LexClient, budget: Budget) -> dict[int, bool]:
+def _listed_new(
+    conn: psycopg.Connection, client: LexClient, budget: Budget, report: Report
+) -> dict[int, bool]:
     """Acts in force on the newest pages of the scope listings that we do not have yet.
 
-    Returns lex id → whether to keep only the requisites (an amending act).
+    Returns lex id → whether to keep only the requisites (an amending act). A listing that fails
+    (lex.uz sometimes sends it to its 404 page) is reported and skipped: it is read again the
+    next night, since new acts are found by comparing with the ids we have.
     """
     ours = known_ids(conn)
     found: dict[int, bool] = {}
     for minor in MINOR_ORDER:
         pages = iter_pages(client, f"{NAT_LISTING}&minor={minor}", max_pages=LISTING_PAGES)
         while budget.take(1):
-            page = next(pages, None)
+            try:
+                page = next(pages, None)
+            except Exception as exc:
+                log.warning("listing minor=%s: %s", minor, exc)
+                error = f"{type(exc).__name__}: {exc}"
+                report.errors.append({"id": f"minor={minor}", "error": error})
+                break
             if page is None:  # no request was made
                 budget.give_back(1)
                 break
@@ -276,10 +286,15 @@ def run_update(
     report = Report()
     left = Budget(budget)
     left.take(1)
-    items = parse_rss(client.get(RSS_PATH).text)
+    try:
+        items = parse_rss(client.get(RSS_PATH).text)
+    except Exception as exc:  # lex.uz hiccup: the listings and rechecks still run tonight
+        log.warning("rss: %s", exc)
+        report.errors.append({"id": "rss", "error": f"{type(exc).__name__}: {exc}"})
+        items = []
     report.rss_items = len(items)
     _read_rss(conn, client, ws, items, left, report, started, dry_run)
-    listed = _listed_new(conn, client, left)
+    listed = _listed_new(conn, client, left, report)
 
     if dry_run:
         report.added = [{"id": i, "title": ""} for i in listed]

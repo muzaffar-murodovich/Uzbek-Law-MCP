@@ -39,6 +39,7 @@ class FakeLex:
     def __init__(self, fixture_html):
         self.html = fixture_html
         self.requests: list[str] = []
+        self.broken: set[str] = set()  # paths lex.uz sends to its 404 page
         self.konst = fixture_html("doc_konstitutsiya.html")
         self.new_act_card = fixture_html("card1_in_force.html")
 
@@ -48,6 +49,13 @@ class FakeLex:
     def __call__(self, request: httpx.Request) -> httpx.Response:
         path = request.url.path
         self.requests.append(path)
+        key = (
+            f"{path}?minor={request.url.params['minor']}" if "minor" in request.url.params else path
+        )
+        if key in self.broken:
+            return httpx.Response(302, headers={"Location": "/Pages/404.aspx"})
+        if path == "/Pages/404.aspx":
+            return httpx.Response(200, text="<html>topilmadi</html>")
         if path == "/uz/search/nat":
             minor = request.url.params.get("minor")
             return httpx.Response(200, text=listing(SCOPE_N if minor == "N" else SCOPE_Y))
@@ -153,3 +161,12 @@ def test_listed_acts_are_added_amending_ones_by_requisites(setup):
     chunks = conn.execute("SELECT count(*) FROM chunks WHERE document_id = %s", (AMENDING,))
     assert chunks.fetchone()[0] == 0
     assert lex.requests.count(f"/docs/{VM_ABOUT_CODE}") == 1  # stored when read from RSS
+
+
+def test_a_failing_lex_page_does_not_stop_the_night(setup):
+    conn, client, lex, ws = setup
+    lex.broken = {"/uz/rss", "/uz/search/nat?minor=N"}
+    report = run_update(conn, client, ws, FakeEmbedder(), now=lambda: T0)
+    assert [e["id"] for e in report.errors] == ["rss", "minor=N"]
+    assert [a["id"] for a in report.added] == [AMENDING]  # the other listing still read
+    assert conn.execute("SELECT count(*) FROM update_runs").fetchone()[0] == 1
