@@ -266,6 +266,9 @@ def _serve(args: argparse.Namespace) -> int:
         access_log=not args.no_access_log,
         proxy_headers=True,
         forwarded_allow_ips="127.0.0.1",
+        # A client may hold a connection open (an MCP stream); without a limit a restart waits
+        # for it until systemd kills the process 90 s later.
+        timeout_graceful_shutdown=5,
     )
     return 0
 
