@@ -44,7 +44,7 @@ PAGE = Template("""<!doctype html>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>$title — Nizom</title>
+<title>$title | Nizom</title>
 <style>
 :root { --bg: #f6f5f2; --card: #fff; --text: #1d1d1b; --muted: #66645e; --line: #dedbd3;
   --accent: #1f5f8b; --accent-text: #fff; }
@@ -60,8 +60,7 @@ main.wide { max-width: 720px; margin-top: 6vh; }
 h2 { font-size: 1.05rem; margin: 22px 0 8px; }
 ul, ol { margin: 0 0 14px; padding-left: 22px; }
 code { font-size: .9em; background: var(--bg); padding: 1px 5px; border-radius: 4px; }
-.card { background: var(--card); border: 1px solid var(--line); border-radius: 12px;
-  padding: 28px 24px; }
+.card { background: var(--card); border-radius: 12px; padding: 28px 24px; }
 h1 { font-size: 1.3rem; margin: 0 0 12px; }
 p { margin: 0 0 14px; }
 .muted { color: var(--muted); font-size: .9rem; }
@@ -71,7 +70,8 @@ p { margin: 0 0 14px; }
   cursor: pointer; }
 .primary { background: var(--accent); border-color: var(--accent); color: var(--accent-text); }
 form { margin: 0; }
-footer { margin-top: 16px; text-align: center; }
+footer { margin-top: 16px; display: flex; flex-wrap: wrap; justify-content: center;
+  gap: 4px 24px; }
 a { color: var(--accent); }
 </style>
 </head>
@@ -80,7 +80,7 @@ a { color: var(--accent); }
 <div class="card">
 $body
 </div>
-<footer class="muted"><a href="/maxfiylik">Maxfiylik siyosati</a> ·
+<footer class="muted"><a href="/maxfiylik">Maxfiylik siyosati</a>
 <a href="/shartlar">Foydalanish shartlari</a></footer>
 </main>
 </body>
