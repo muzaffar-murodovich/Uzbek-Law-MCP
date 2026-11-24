@@ -46,41 +46,45 @@ PAGE = Template("""<!doctype html>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>$title | Nizom</title>
 <style>
-:root { --bg: #f6f5f2; --card: #fff; --text: #1d1d1b; --muted: #66645e; --line: #dedbd3;
-  --accent: #1f5f8b; --accent-text: #fff; }
+:root { --bg: #fff; --text: #1a1a1a; --muted: #5f5f5f; --line: #d9d9d9; --code: #f1f1ef;
+  --accent: #1d3f8f; --accent-text: #fff; }
 @media (prefers-color-scheme: dark) {
-  :root { --bg: #161615; --card: #20201e; --text: #ecebe6; --muted: #a3a19a; --line: #3a3935;
-    --accent: #6aa9d6; --accent-text: #0d1b26; }
+  :root { --bg: #25262a; --text: #e8e6e1; --muted: #a9a7a1; --line: #44464c; --code: #30323a;
+    --accent: #9db6f0; --accent-text: #14213f; }
 }
 * { box-sizing: border-box; }
 body { margin: 0; background: var(--bg); color: var(--text);
-  font: 16px/1.5 system-ui, -apple-system, "Segoe UI", sans-serif; }
-main { max-width: 440px; margin: 10vh auto; padding: 0 16px; }
-main.wide { max-width: 720px; margin-top: 6vh; }
-h2 { font-size: 1.05rem; margin: 22px 0 8px; }
-ul, ol { margin: 0 0 14px; padding-left: 22px; }
-code { font-size: .9em; background: var(--bg); padding: 1px 5px; border-radius: 4px; }
-.card { background: var(--card); border-radius: 12px; padding: 28px 24px; }
-h1 { font-size: 1.3rem; margin: 0 0 12px; }
-p { margin: 0 0 14px; }
+  font: 18px/1.6 Charter, "Iowan Old Style", Georgia, serif; }
+main { max-width: 480px; margin: 0 auto; padding: 56px 20px 40px; }
+main.wide { max-width: 680px; }
+header { border-bottom: 2px solid var(--text); padding-bottom: 14px; margin-bottom: 28px; }
+.mark { display: block; font-size: 2.4rem; font-weight: 700; line-height: 1.1; margin: 0;
+  color: var(--text); text-decoration: none; }
+header p { margin: 6px 0 0; color: var(--muted); }
+h1 { font-size: 1.5rem; line-height: 1.3; margin: 0 0 14px; }
+h2 { font-size: 1.2rem; margin: 32px 0 8px; }
+p { margin: 0 0 16px; }
+ul, ol { margin: 0 0 16px; padding-left: 22px; }
+code { font: .82em ui-monospace, Menlo, monospace; background: var(--code); padding: 2px 5px;
+  border-radius: 3px; }
 .muted { color: var(--muted); font-size: .9rem; }
 .button { display: block; width: 100%; padding: 12px 16px; margin: 10px 0 0;
-  border-radius: 8px; border: 1px solid var(--line); background: var(--card);
+  border-radius: 6px; border: 1px solid var(--line); background: var(--bg);
   color: var(--text); font: inherit; text-align: center; text-decoration: none;
   cursor: pointer; }
 .primary { background: var(--accent); border-color: var(--accent); color: var(--accent-text); }
 form { margin: 0; }
-footer { margin-top: 16px; display: flex; flex-wrap: wrap; justify-content: center;
-  gap: 4px 24px; }
 a { color: var(--accent); }
+footer { margin-top: 40px; padding-top: 14px; border-top: 1px solid var(--line); display: flex;
+  flex-wrap: wrap; gap: 4px 24px; font-size: .9rem; }
 </style>
 </head>
 <body>
 <main class="$main_class">
-<div class="card">
+<header>$mark
+<p>Oʻzbekiston qonunchiligi AI yordamchingiz uchun</p></header>
 $body
-</div>
-<footer class="muted"><a href="/maxfiylik">Maxfiylik siyosati</a>
+<footer><a href="/maxfiylik">Maxfiylik siyosati</a>
 <a href="/shartlar">Foydalanish shartlari</a></footer>
 </main>
 </body>
@@ -88,8 +92,14 @@ $body
 """)
 
 
-def page(title: str, body: str, status: int = 200, *, wide: bool = False) -> HTMLResponse:
-    html = PAGE.substitute(title=escape(title), body=body, main_class="wide" if wide else "")
+def page(
+    title: str, body: str, status: int = 200, *, wide: bool = False, home: bool = False
+) -> HTMLResponse:
+    # On the home page the wordmark is the page heading; elsewhere it links home.
+    mark = "<h1 class='mark'>Nizom</h1>" if home else "<a class='mark' href='/'>Nizom</a>"
+    html = PAGE.substitute(
+        title=escape(title), body=body, main_class="wide" if wide else "", mark=mark
+    )
     return HTMLResponse(html, status_code=status)
 
 

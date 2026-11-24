@@ -80,7 +80,6 @@ def _coverage(stats: Stats | None) -> str:
 def home(base_url: str, stats: Stats | None = None) -> HTMLResponse:
     mcp = escape(f"{base_url.rstrip('/')}/mcp")
     body = f"""
-<h1>Nizom</h1>
 <p>AI yordamchingiz (Claude, ChatGPT, Cursor va boshqalar) Oʻzbekiston qonunchiligidan javob
 topishi uchun MCP server. Manba — <a href="https://lex.uz">lex.uz</a> (Qonunchilik
 maʼlumotlari milliy bazasi). Har bir javobda moddaga aniq havola beriladi.</p>
@@ -106,7 +105,7 @@ qoʻshing.</li>
 organlariga aloqasi yoʻq. Eng yangi hujjatlar bazada hali boʻlmasligi mumkin, shuning uchun
 muhim masalada asl matnni lex.uz'da tekshiring va yuristga murojaat qiling.</p>
 """
-    return page("Oʻzbekiston qonunchiligi uchun MCP server", body, wide=True)
+    return page("Oʻzbekiston qonunchiligi uchun MCP server", body, wide=True, home=True)
 
 
 def privacy(contact: str) -> HTMLResponse:
