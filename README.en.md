@@ -56,6 +56,24 @@ results. R@1 means the correct article is ranked first. All numbers are measured
 corpus, with the production code, on questions rephrased by an AI (`alt_queries`), the way a
 real client calls the tool. Full log (in Uzbek): [docs/stage2-experiments.md](docs/stage2-experiments.md).
 
+**Strict and with judge.** Each question was written from one article, and that article is
+labeled as the correct answer. But many questions are also answered by an article in another act.
+For example, "If a relative of mine is in detention, how often and for how long can I visit?" was
+written from article 16 of the Law on serving administrative arrest, yet article 76 of the
+Criminal Enforcement Code ("Visits to convicts") answers it too. If search returns that article,
+the **strict** count, which only accepts the labeled article, calls it a miss.
+
+The **judge** is an LLM that reads the articles search returned but nobody labeled, and decides
+whether each one answers the question. To say yes it must quote the answering sentence word for
+word; a script looks the quote up in the text and drops the answer if it is not there. This rule
+was needed: without quotes, only 30% of the answers an LLM judge accepted were actually correct.
+Counting judge-confirmed articles as correct too gives the **with judge** number.
+
+The strict number is a lower bound (some correct finds count as misses), the judged one an upper
+bound (the judge only saw what our search found). All charts and tables in this section, except
+the independent checks, use the judged count, so they compare fairly with each other. Counted
+strictly, the headline R@10 is **0.822** instead of 0.875.
+
 ### Before and after fine-tuning
 
 Set: 208 unambiguous questions written by GPT-5.4 from the whole corpus (`eval/questions_llm_full.yaml`).
@@ -93,7 +111,7 @@ Observations:
   across several runs.
 - int8 quantization cost nothing (0.837 vs 0.837 on the pool), so the server runs int8.
 
-### Compared with other search methods
+### Search methods
 
 Same 208 questions, full corpus:
 
@@ -101,33 +119,29 @@ Same 208 questions, full corpus:
 
 | Method | R@1 | R@10 |
 |---|---:|---:|
-| lex.uz text filter: the question as is | 0.000 | 0.000 |
-| lex.uz text filter: formal phrase written by the AI | 0.005 | 0.019 |
-| lex.uz text filter: first 2 words of the phrase | 0.034 | 0.120 |
-| lex.uz text filter: first 3 words of the phrase | 0.038 | 0.159 |
 | Vector only, stock e5-small | 0.101 | 0.370 |
 | FTS only (keywords, with Uzbek stemming and lemmas) | 0.264 | 0.630 |
 | Vector only, fine-tuned e5-small | 0.274 | 0.707 |
 | **Nizom: hybrid + reranker** | **0.538** | **0.875** |
 
-- "lex.uz text filter" is the "Matndagi so'z yoki jumla" (word or phrase in the text) field on
-  lex.uz's ["National legislation" listing](https://lex.uz/uz/search/nat?lang=4) ("exact match"
-  unchecked, acts in force only). The site has no separate general search box; searching by text
-  goes through this filter.
-- The filter finds acts that contain every word of the query and sorts them by date (newest
-  first), not by relevance. It returns acts, not articles, so it gets an easier test: the right act
-  anywhere in the first 10 results. Nizom has to put the right article in the top 10. Queries were
-  cut to 100 characters (the lex.uz limit) and apostrophes converted to the lex.uz spelling (oʻ, gʻ, ʼ).
-- With the question text lex.uz returned nothing for all 208 questions ("no documents found"); with
-  the formal phrase, for 96 % of them. With 2–3 keywords there is almost always a result, but since
-  it is not ranked by relevance, the right act rarely lands in the first 10. It is a
-  word filter: handy when you know an act's title or number, but not designed to understand a plain
-  question and find the answer. The keywords were picked by a simple rule; a person choosing them
-  carefully could do better.
-- Script: [scripts/lexuz_search_eval.py](scripts/lexuz_search_eval.py), results:
-  `eval/results/2026-11-24-lexuz-search.jsonl`.
-- Keyword search and vector search each stop at 0.63–0.71 on their own. Fused and reranked, they
-  reach 0.875.
+Keyword search and vector search each stop at 0.63–0.71 on their own. Fused and reranked, they
+reach 0.875.
+
+### How this differs from searching lex.uz
+
+lex.uz has no box for asking a plain question. Searching by text goes through the "Matndagi so'z
+yoki jumla" (word or phrase in the text) filter on the
+["National legislation" listing](https://lex.uz/uz/search/nat?lang=4). It finds acts that contain
+every word of the query and sorts them by date, newest first. It is handy when you know an act's
+title or number but is not built to answer questions, so it is not on the chart with Nizom. On the
+same 208 questions:
+- with the question itself, lex.uz found no documents for any of them;
+- with 3 keywords taken from the question, the right act was in the first 10 results for 16% of
+  questions (Nizom puts the right **article** in its top 10 for 88%).
+
+The keywords were picked by a simple rule; a person choosing them by hand could do better.
+Script: [scripts/lexuz_search_eval.py](scripts/lexuz_search_eval.py); all variants are in
+[docs/stage2-experiments.md](docs/stage2-experiments.md) (6m, in Uzbek).
 
 ### Uzbek stemmer and lemmas
 
@@ -157,16 +171,15 @@ restored from last night's backup:
 The settings above were tuned on those 208 questions, so the number could be optimistic. It was
 re-measured on three more sets:
 
-![R@10 on independent sets: test 0.856, blind questions 0.800–0.917, advice.uz 0.876–0.964](docs/images/independent-en.png)
+![R@10 on independent sets: test 0.808–0.856, blind questions 0.800–0.917, advice.uz 0.876–0.964](docs/images/independent-en.png)
 
 | Set | Questions | R@1 | R@10, strict | R@10, with judge |
 |---|---:|---:|---:|---:|
-| GPT-5.4 questions, held-out `test` half (never used for tuning) | 104 | 0.529 | — | 0.856 |
+| GPT-5.4 questions, held-out `test` half (never used for tuning) | 104 | 0.529 | 0.808 | 0.856 |
 | "Blind" questions: written without seeing any article, answers found in the corpus by hand | 120 | 0.408 | 0.800 | 0.917 |
 | [advice.uz](https://advice.uz): questions asked by people and answered by lawyers | 225 | 0.493 | 0.876 | 0.964 |
 
-- **Strict** counts only the answers labeled in advance. **With judge** also counts other correct
-  articles in the top 10 (found by an LLM judge, each checked against the quoted text). The true
+- **Strict** and **with judge** are explained at the start of [Results](#results). The true
   value lies between the two.
 - All three sets tell the same story. On real questions (advice.uz) search does no worse than on
   LLM-written ones.

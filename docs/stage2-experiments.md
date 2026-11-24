@@ -942,6 +942,10 @@ chiqaradi. Joriy xizmat (6j) natijasi qismlar bo'yicha:
 Test ham o'tgan sozlashlarda ishlatilgan, shuning uchun 0,856 ham to'liq toza emas: toza raqam
 faqat bundan keyingi o'zgarishlar uchun.
 
+Qat'iy raqam (2026-11-24): `judged: true` javoblar olib tashlanib, faqat savol yozilgan manba
+modda qoldirildi. Xuddi shu xizmat sozlamalari bilan R@10: aniq 0,822 (171/208), dev 0,837,
+**test 0,808** (84/104). Ya'ni test uchun qat'iy 0,808, hakam bilan 0,856.
+
 **"Ko'r" savollar** (`eval/questions_blind.yaml`, 120 ta, `scripts/blind_eval.py`):
 - **Yozish.** 4 ta Claude (Opus) subagent hech narsa qidirmasdan, faqat hayotiy vaziyatlardan
   savol yozdi: har biriga boshqa sohalar (mehnat/pensiya, oila/meros/uy-joy, soliq/tadbirkorlik/

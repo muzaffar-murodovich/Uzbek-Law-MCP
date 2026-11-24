@@ -52,6 +52,24 @@ Metrika: **Recall@10**, ya'ni to'g'ri modda birinchi 10 ta natija ichida bo'lgan
 R@1 — to'g'ri modda birinchi o'rinda. O'lchovlar butun korpusda, xizmatdagi kod bilan, AI qayta
 yozgan savollar (`alt_queries`) bilan o'tkazildi. Batafsil: [docs/stage2-experiments.md](docs/stage2-experiments.md).
 
+**Qat'iy va hakam bilan.** Har bir savol bitta moddadan yozilgan va o'sha modda to'g'ri javob
+deb belgilangan. Lekin ko'p savolga boshqa qonundagi modda ham javob beradi. Masalan, "Yaqinim
+qamoqda bo'lsa, u bilan necha marta va qancha vaqtga ko'risha olaman?" savoli Ma'muriy qamoqni
+o'tash tartibi to'g'risidagi Qonunning 16-moddasidan yozilgan, lekin Jinoyat-ijroiya kodeksining
+76-moddasi ("Mahkumlarning uchrashuvlari") ham bunga javob beradi. Qidiruv shu moddani topsa,
+faqat oldindan belgilangan modda hisoblanadigan **qat'iy** hisobda bu xato sanaladi.
+
+**Hakam** — qidiruv topgan, lekin belgilanmagan moddalarni o'qib, "bu modda savolga javob
+beradimi?" deb tekshiradigan LLM. U "ha" desa, moddadan javob beradigan jumlani so'zma-so'z
+ko'chirib ko'rsatishi shart, iqtibos skript bilan matndan qidiriladi, topilmasa javob o'chiriladi.
+Bu qoida kerak bo'ldi: iqtibossiz LLM hakam qabul qilgan javoblarning faqat 30 %i haqiqiy edi.
+Hakam tasdiqlagan moddalar ham to'g'ri deb sanalsa, bu **hakam bilan** hisob.
+
+Qat'iy raqam pastki chegara (to'g'ri topilgan moddalar ham xato sanaladi), hakam bilan raqam
+yuqori chegara (hakam faqat bizning qidiruv topganini ko'rgan). Bu bo'limdagi grafik va
+jadvallar (mustaqil tekshiruvdan tashqari) hakam bilan hisoblangan, ular bir-biri bilan to'g'ri
+solishtiriladi. Qat'iy hisobda asosiy natija R@10 0,875 emas, **0,822**.
+
 ### Fine-tune'dan oldin va keyin
 
 To'plam: GPT-5.4 butun korpusdan yozgan 208 ta aniq savol (`eval/questions_llm_full.yaml`).
@@ -88,7 +106,7 @@ Kuzatuvlar:
 - Seed shovqini katta: bir xil sozlamada R@10 0,808–0,841. Har bir qaror bir nechta run bilan tekshirildi.
 - int8 kvantlash sifatni pasaytirmadi (pool'da 0,837 va 0,837), shuning uchun serverga int8 qo'yildi.
 
-### Boshqa qidiruv usullari bilan solishtirish
+### Qidiruv usullari
 
 Bir xil 208 savol, butun korpus:
 
@@ -96,34 +114,29 @@ Bir xil 208 savol, butun korpus:
 
 | Usul | R@1 | R@10 |
 |---|---:|---:|
-| lex.uz filtri: savolning o'zi | 0,000 | 0,000 |
-| lex.uz filtri: AI yozgan rasmiy ibora | 0,005 | 0,019 |
-| lex.uz filtri: iboraning birinchi 2 so'zi | 0,034 | 0,120 |
-| lex.uz filtri: iboraning birinchi 3 so'zi | 0,038 | 0,159 |
 | Faqat vektor, asl e5-small | 0,101 | 0,370 |
 | Faqat FTS (kalit so'zlar, o'zbekcha stemming va lemma bilan) | 0,264 | 0,630 |
 | Faqat vektor, fine-tune qilingan e5-small | 0,274 | 0,707 |
 | **Nizom: gibrid + reranker** | **0,538** | **0,875** |
 
-- "lex.uz filtri" — lex.uz'dagi hujjatlar ro'yxatining
-  ["Milliy qonunchilik" sahifasidagi](https://lex.uz/uz/search/nat?lang=4) "Matndagi so'z yoki
-  jumla" maydoni ("Aniq mos kelishi" belgilanmagan, faqat amaldagi hujjatlar). Saytda alohida
-  umumiy qidiruv oynasi yo'q, matn bo'yicha qidirish shu filtr orqali.
-- Bu filtr so'rovdagi hamma so'z bor hujjatlarni topadi va ularni moslik bo'yicha emas,
-  sana bo'yicha (eng yangisi birinchi) tartiblaydi. U modda emas, hujjat qaytaradi, shuning uchun
-  uning uchun yengilroq mezon olindi: to'g'ri hujjat birinchi 10 natija ichida bo'lsa yetarli.
-  Nizom uchun esa to'g'ri modda top-10 da bo'lishi kerak. So'rovlar 100 belgigacha qisqartirildi
-  (lex.uz cheklovi), apostroflar lex.uz yozuviga (oʻ, gʻ, ʼ) keltirildi.
-- Savol matni bilan lex.uz 208 savolning birortasida ham natija qaytarmadi ("hujjat topilmadi"),
-  rasmiy ibora bilan 96 % hollarda shunday. 2–3 ta kalit so'z bilan natija deyarli doim bor, lekin
-  moslik bo'yicha saralanmagani uchun kerakli hujjat birinchi 10 tasiga kamdan-kam tushadi. Bu
-  so'zlar bo'yicha filtr: hujjat nomi yoki raqami ma'lum bo'lganda qulay, lekin oddiy
-  savolni tushunib, javobni topib berish uchun mo'ljallanmagan. Kalit so'zlar oddiy qoida bilan
-  olindi: ularni qo'lda yaxshiroq tanlagan odam yuqoriroq natija olishi mumkin.
-- Skript: [scripts/lexuz_search_eval.py](scripts/lexuz_search_eval.py), natija:
-  `eval/results/2026-11-24-lexuz-search.jsonl`.
-- Kalit so'z qidiruvi ham, vektor qidiruvi ham alohida 0,63–0,71 da qoladi. Ikkalasini birlashtirib,
-  reranker bilan qayta saralaganda 0,875 ga chiqadi.
+Kalit so'z qidiruvi ham, vektor qidiruvi ham alohida 0,63–0,71 da qoladi. Ikkalasini birlashtirib,
+reranker bilan qayta saralaganda 0,875 ga chiqadi.
+
+### lex.uz'da qidirish bilan farqi
+
+lex.uz'da oddiy savol bilan qidiradigan oyna yo'q. Matn bo'yicha qidirish
+["Milliy qonunchilik" sahifasidagi](https://lex.uz/uz/search/nat?lang=4) "Matndagi so'z yoki
+jumla" filtri orqali bo'ladi. Bu filtr so'rovdagi hamma so'z bor hujjatlarni topadi va ularni
+sana bo'yicha (eng yangisi birinchi) tartiblaydi. U hujjat nomi yoki raqami ma'lum bo'lganda
+qulay, savolga javob topish uchun mo'ljallanmagan, shuning uchun uni Nizom bilan bir grafikka
+qo'ymadik. Bir xil 208 savolda nima bo'lishini tekshirdik:
+- savolni o'zini yozsak, lex.uz birorta savolda ham hujjat topmadi;
+- savoldan olingan 3 ta kalit so'z bilan kerakli hujjat birinchi 10 natija ichida 16 % savolda
+  chiqdi (Nizom'da kerakli **modda** top-10 da 88 % savolda).
+
+Kalit so'zlar oddiy qoida bilan olindi, ularni qo'lda tanlagan odam yaxshiroq natija olishi
+mumkin. Skript: [scripts/lexuz_search_eval.py](scripts/lexuz_search_eval.py), barcha variantlar:
+[docs/stage2-experiments.md](docs/stage2-experiments.md) (6m).
 
 ### O'zbekcha stemmer va lemma
 
@@ -154,16 +167,15 @@ nusxadan tiklangan baza:
 Sozlamalar yuqoridagi 208 savolda tanlangani uchun natija optimistik bo'lishi mumkin edi. Shuning
 uchun yana uchta to'plamda o'lchandi:
 
-![Mustaqil to'plamlarda R@10: test 0,856, ko'r savollar 0,800–0,917, advice.uz 0,876–0,964](docs/images/independent-uz.png)
+![Mustaqil to'plamlarda R@10: test 0,808–0,856, ko'r savollar 0,800–0,917, advice.uz 0,876–0,964](docs/images/independent-uz.png)
 
 | To'plam | Savol | R@1 | R@10, qat'iy | R@10, hakam bilan |
 |---|---:|---:|---:|---:|
-| GPT-5.4 savollari, `test` qismi (sozlashda ishlatilmagan) | 104 | 0,529 | — | 0,856 |
+| GPT-5.4 savollari, `test` qismi (sozlashda ishlatilmagan) | 104 | 0,529 | 0,808 | 0,856 |
 | "Ko'r" savollar: moddani ko'rmay yozilgan, javoblar korpusdan qo'lda topilgan | 120 | 0,408 | 0,800 | 0,917 |
 | [advice.uz](https://advice.uz): odamlar bergan, yurist javob bergan savollar | 225 | 0,493 | 0,876 | 0,964 |
 
-- **Qat'iy** — faqat oldindan belgilangan javoblar hisoblanadi. **Hakam bilan** — top-10 dagi
-  boshqa to'g'ri moddalar ham hisoblanadi (LLM hakam topadi, har biri iqtibos bilan tekshirilgan).
+- **Qat'iy** va **hakam bilan** nimani anglatishi [Natijalar](#natijalar) boshida yozilgan.
   Haqiqiy qiymat shu ikki raqam orasida.
 - Uchala to'plam bir xil manzarani beradi. Haqiqiy savollarda (advice.uz) natija LLM
   savollaridagidan past emas.
