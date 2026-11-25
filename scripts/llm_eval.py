@@ -5,10 +5,14 @@
     uv run python scripts/llm_eval.py judge      # add other articles that answer them
     uv run python scripts/llm_eval.py clarity    # tag questions aniq / noaniq
     uv run python scripts/llm_eval.py split      # tag questions dev / test
+    uv run python scripts/llm_eval.py verify     # keep judged articles only with a real quote
 
 ``rephrase`` imitates the assistant that calls ``search_law``: it sees only the user's
 question (never the article) and writes formal search queries. ``generate`` samples articles
 from the database and asks for a question an ordinary citizen would ask about each one.
+``verify`` re-checks what ``judge`` added: the checker reads the whole article and must copy
+the sentence that answers the question; an answer whose quote is not in the text is dropped
+(``judge`` alone accepted about two of three wrong articles, stage2-experiments 6d).
 ``clarity`` marks questions that do not say what they are about ("shu yordam puli"): written
 from one clause, they fit dozens of documents in the full corpus and no search can answer them.
 """
@@ -293,6 +297,110 @@ def clarity(args: argparse.Namespace) -> None:
     print("tokens:", llm.usage)
 
 
+VERIFY_SYSTEM = """Sen qatʼiy oʻzbek yuristisan. Senga fuqaroning savoli va qonun hujjatidan \
+bitta moddaning toʻliq matni beriladi. Modda savolga bevosita javob beradimi, yaʼni yurist \
+javobda aynan shu moddaga havola qilib, savolga javob bera oladimi? Mavzusi yaqin, lekin \
+savolning oʻziga javob bermaydigan modda "yoʻq" hisoblanadi.
+Agar "ha" boʻlsa, matndan javob beradigan jumlani soʻzma-soʻz, oʻzgartirmasdan koʻchir \
+(bitta jumla yoki uning boʻlagi, kamida 5 soʻz).
+Faqat JSON qaytar: {"answers": true, "quote": "...", "reason": "qisqa izoh"} yoki \
+{"answers": false, "reason": "qisqa izoh"}"""
+
+APOSTROPHES = str.maketrans({c: "'" for c in "ʻʼ‘’`´"})
+
+
+def normalized(text: str) -> str:
+    return " ".join(text.translate(APOSTROPHES).lower().split())
+
+
+def verify(args: argparse.Namespace) -> None:
+    """Keep a judged answer only when the checker quotes the sentence that answers the question.
+
+    Decisions go to ``--log`` (rerunning skips decided answers); the questions file is then
+    rewritten: kept answers get ``verified: true``, the rest are removed.
+    """
+    settings = Settings.from_env()
+    llm = OpenAIChat(args.model, allow_paid=args.allow_paid)
+    items = yaml.safe_load(args.questions.read_text(encoding="utf-8"))
+    log = json.loads(args.log.read_text(encoding="utf-8")) if args.log.exists() else []
+    decided = {(d["question"], d["document"], d["article"], d["within"]) for d in log}
+
+    def key(item: dict, e: dict) -> tuple:
+        return (item["id"], e["document"], e["article"], e.get("within"))
+
+    todo = [
+        (item, e)
+        for item in items
+        for e in item["expected"]
+        if e.get("judged") and not e.get("verified") and key(item, e) not in decided
+    ]
+    with connect(settings.dsn) as conn:
+        texts = {}
+        for item, e in todo:
+            rows = conn.execute(
+                """
+                SELECT path, text FROM sections
+                WHERE document_id = %s AND number IS NOT DISTINCT FROM %s ORDER BY ord
+                """,
+                (e["document"], e["article"]),
+            ).fetchall()
+            within = e.get("within")
+            parts = [t for path, t in rows if within is None or within in " > ".join(path)]
+            texts[key(item, e)] = "\n".join(parts)
+
+    def ask(pair):
+        item, e = pair
+        text = texts[key(item, e)]
+        if not text:
+            return {"answers": False, "reason": "article text not found"}
+        prompt = f"Savol: {item['question']}\n\nModda matni:\n{text[: args.chars]}"
+        return llm.json(VERIFY_SYSTEM, prompt)
+
+    with ThreadPoolExecutor(args.workers) as pool:
+        for start in range(0, len(todo), args.workers):
+            batch = todo[start : start + args.workers]
+            for (item, e), reply in zip(batch, pool.map(ask, batch), strict=True):
+                quote = str(reply.get("quote") or "")
+                text = texts[key(item, e)]
+                if reply.get("answers") is not True:
+                    status = "rejected"
+                elif len(quote.split()) < 5 or normalized(quote) not in normalized(text):
+                    status = "quote_not_found"
+                else:
+                    status = "kept"
+                question, document, article, within = key(item, e)
+                log.append(
+                    {
+                        "question": question,
+                        "document": document,
+                        "article": article,
+                        "within": within,
+                        "status": status,
+                        "quote": quote,
+                        "reason": str(reply.get("reason", "")),
+                    }
+                )
+                print(question, document, article, status, flush=True)
+            args.log.write_text(json.dumps(log, ensure_ascii=False, indent=1), encoding="utf-8")
+
+    kept = {(d["question"], d["document"], d["article"], d["within"]) for d in log
+            if d["status"] == "kept"}  # fmt: skip
+    for item in items:
+        item["expected"] = [
+            {**e, "verified": True} if key(item, e) in kept else e
+            for e in item["expected"]
+            if not e.get("judged") or e.get("verified") or key(item, e) in kept
+        ]
+    args.questions.write_text(
+        YAML_HEADER + yaml.safe_dump(items, allow_unicode=True, sort_keys=False, width=100),
+        encoding="utf-8",
+    )
+    counts: dict[str, int] = {}
+    for d in log:
+        counts[d["status"]] = counts.get(d["status"], 0) + 1
+    print("decisions:", counts, "tokens:", llm.usage)
+
+
 def split(args: argparse.Namespace) -> None:
     """Tag each question ``dev`` or ``test``, half and half within every (clarity, kind) group.
 
@@ -349,6 +457,12 @@ def main() -> None:
     p = sub.add_parser("split")
     p.add_argument("--questions", type=Path, default=Path("eval/questions_llm_full.yaml"))
     p.add_argument("--seed", type=int, default=2026)
+    p = sub.add_parser("verify")
+    p.add_argument("--model", default="gpt-5.4")
+    p.add_argument("--questions", type=Path, default=Path("eval/questions_tax.yaml"))
+    p.add_argument("--log", type=Path, default=Path("eval/verified_tax.json"))
+    p.add_argument("--chars", type=int, default=8000, help="article text shown to the checker")
+    p.add_argument("--workers", type=int, default=6, help="parallel API calls")
     p = sub.add_parser("generate")
     p.add_argument("--model", default="gpt-5.4")
     p.add_argument("--sample", type=int, default=400, help="articles to try")
@@ -379,6 +493,7 @@ def main() -> None:
         "judge": judge,
         "clarity": clarity,
         "split": split,
+        "verify": verify,
     }
     commands[args.command](args)
 
