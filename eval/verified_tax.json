@@ -1,0 +1,866 @@
+[
+ {
+  "question": "sk-001",
+  "document": -4674902,
+  "article": "254",
+  "within": "MAXSUS QISM > X BOʻLIM. QOʻSHILGAN QIYMAT SOLIGʻI > 34-bob. Soliq bazasi",
+  "status": "kept",
+  "quote": "Soliq bazasi Oʻzbekiston Respublikasi hududiga olib kiriladigan bir nomdagi, turdagi va markadagi tovarlarning har bir guruhi boʻyicha alohida aniqlanadi.",
+  "reason": "Modda savoldagi holatga bevosita javob beradi: turli tovarlar uchun soliq bazasi har bir guruh boʻyicha alohida aniqlanadi."
+ },
+ {
+  "question": "sk-002",
+  "document": -6707765,
+  "article": null,
+  "within": "11-ilova. 2024-yil uchun yuk koʻtarish quvvati 10 tonnadan yuqori boʻlgan yuk avtotransport vositalari va tirkamalarining avtomobil yoʻllari boʻylab harakatlanishi huquqi uchun yigʻimlar stavkalari",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Modda 12 tonnalik tirkama uchun yigʻim stavkasini ko‘rsatadi, lekin alohida to‘lov qilinadimi yoki qaysi mashinalar ozod etilishi haqida javob bermaydi."
+ },
+ {
+  "question": "sk-003",
+  "document": -4674902,
+  "article": "274",
+  "within": "MAXSUS QISM > X BOʻLIM. QOʻSHILGAN QIYMAT SOLIGʻI > 37-bob. Soliqni hisoblab chiqarish va toʻlash tartibi. Soliq hisobotini taqdim etish tartibi.",
+  "status": "kept",
+  "quote": "Soliq toʻlovchi oʻrni qoplanishi lozim boʻlgan soliq summasini qaytarishga doir soliq hisobotini taqdim etishda soliq organlarini bu haqda xabardor qilgan holda, soliqning salbiy summasi oʻrnini qoplash (qaytarish) uchun murojaat qilish huquqiga ham ega boʻladi.",
+  "reason": "Modda salbiy soliq summasini qoplash yoki qaytarish mumkinligini bevosita aytadi."
+ },
+ {
+  "question": "sk-003",
+  "document": -4948595,
+  "article": "8",
+  "within": "1-ilova. Qoʻshilgan qiymat soligʻi summasi oʻrnini qoplash tartibi toʻgʻrisida NIZOM > 2-bob. Soliq summasini qoplash uchun asos boʻluvchi hujjatlar va ularni taqdim etish tartibi",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Modda faqat qoplanish ariza asosida amalga oshirilishini aytadi, lekin manfiy chiqqan summani qaytarib olish yoki qoplatish mumkinligi haqida bevosita javob bermaydi."
+ },
+ {
+  "question": "sk-004",
+  "document": -4674902,
+  "article": "462",
+  "within": "MAXSUS QISM > XX BOʻLIM. AYLANMADAN OLINADIGAN SOLIQ > 66-bob. Aylanmadan olinadigan soliqni hisoblab chiqarish va toʻlash",
+  "status": "kept",
+  "quote": "Soliq davri davomida jami daromadi bir milliard soʻmdan oshgan soliq toʻlovchilar, shu jumladan yangi tashkil etilgan yuridik shaxslar va yangi roʻyxatdan oʻtgan yakka tartibdagi tadbirkorlar, oʻzini oʻzi band qilgan shaxslar jami daromadi koʻrsatilgan miqdorga yetgan kundan eʼtiboran qoʻshilgan qiymat soligʻini va foyda soligʻini toʻlashga oʻtadi.",
+  "reason": "Modda aynan yakka tartibdagi tadbirkor daromadi 1 mlrd soʻmdan oshganda foyda soligʻini ham toʻlashga oʻtishini bevosita belgilaydi."
+ },
+ {
+  "question": "sk-004",
+  "document": -4131684,
+  "article": "8",
+  "within": "",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Modda 1 mlrd so‘mdan oshganda yakka tartibdagi tadbirkor yuridik shaxslar uchun nazarda tutilgan tartibda soliqlarni to‘lashi aytiladi, lekin aynan foydadan alohida soliq to‘lanadimi degan savolga bevosita javob bermaydi."
+ },
+ {
+  "question": "sk-004",
+  "document": -7681520,
+  "article": "5",
+  "within": "III. Tadbirkorlik subyektlari oʻrtasida teng sharoitlarni taʼminlash",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Modda 1 milliard so‘mdan oshganda amaldagi tartib saqlanishini aytadi, lekin foydadan alohida soliq to‘lanadimi degan savolga bevosita javob bermaydi."
+ },
+ {
+  "question": "sk-004",
+  "document": -4674902,
+  "article": "361",
+  "within": "MAXSUS QISM > XII BOʻLIM. FOYDA SOLIGʻI > 51-bob. Yakka tartibdagi tadbirkorlarning daromadlariga soliq solishning oʻziga xos xususiyatlari",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Modda foyda soligʻini qachon toʻlashga oʻtilishini yoki 1 milliard soʻmdan oshganda foydadan alohida soliq toʻlash majburiyatini bevosita belgilamaydi."
+ },
+ {
+  "question": "sk-005",
+  "document": -5115911,
+  "article": "25",
+  "within": "2-ilova. Soliq toʻlovchining bank hisobvaraqlari bilan bogʻliq operatsiyalar boʻyicha soliq organi va bank tizimi oʻrtasida elektron maʼlumot almashish tartibi toʻgʻrisida NIZOM > 5-bob. Banklar tomonidan soliq organi qarorining bajarilishi",
+  "status": "kept",
+  "quote": "Soliq toʻlovchining (soliq agentining) bankdagi hisobvaraqlari boʻyicha operatsiyalarni toʻxtatib turish toʻgʻrisida soliq organining qarori olinganidan soʻng banklar ushbu soliq toʻlovchiga (soliq agentiga) yangi hisobvaraqlar, omonatlar va depozitlar ochishga haqli emas, bundan qonunchilik hujjatlariga muvofiq undiruv yoʻl qoʻyilmaydigan hisobvaraqlar mustasno.",
+  "reason": "Modda yangi hisobvaraq/omonat/depozit ochish mumkin emasligini bevosita belgilaydi."
+ },
+ {
+  "question": "sk-005",
+  "document": -6379336,
+  "article": "4",
+  "within": "1-ilova. Bank hisobvaraqlarini ochish, yuritish va yopish tartibi toʻgʻrisidagi yoʻriqnoma > 1-bob. Umumiy qoidalar",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Modda faqat maʼlumotlar qanday shakllantirilishi va banklarga uzatilishini aytadi; yangi karta yoki hisob ochish mumkin-yoʻqligiga bevosita javob bermaydi."
+ },
+ {
+  "question": "sk-005",
+  "document": -5115911,
+  "article": "20",
+  "within": "2-ilova. Soliq toʻlovchining bank hisobvaraqlari bilan bogʻliq operatsiyalar boʻyicha soliq organi va bank tizimi oʻrtasida elektron maʼlumot almashish tartibi toʻgʻrisida NIZOM > 4-bob. Soliq toʻlovchining bank hisobvaraqlari boʻyicha operatsiyalarni toʻxtatib turishi tartibi",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Modda faqat mavjud hisobvaraqlar bo‘yicha operatsiyalarni to‘xtatish muddati va tartibini aytadi, yangi karta yoki hisob ochish mumkinligi haqida bevosita qoida bermaydi."
+ },
+ {
+  "question": "sk-005",
+  "document": -5115911,
+  "article": "22",
+  "within": "2-ilova. Soliq toʻlovchining bank hisobvaraqlari bilan bogʻliq operatsiyalar boʻyicha soliq organi va bank tizimi oʻrtasida elektron maʼlumot almashish tartibi toʻgʻrisida NIZOM > 4-bob. Soliq toʻlovchining bank hisobvaraqlari boʻyicha operatsiyalarni toʻxtatib turishi tartibi",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Modda faqat operatsiyalarni toʻxtatib turish haqidagi qarorni bekor qilish asoslari va muddatlarini aytadi, yangi karta yoki hisob ochish mumkinligini bevosita tartibga solmaydi."
+ },
+ {
+  "question": "sk-006",
+  "document": -5156631,
+  "article": "2",
+  "within": "Ilova. Mahalliy davlat hokimiyati organlari tomonidan soliq toʻlovchilarning soliq toʻlash muddatlarini oʻzgartirish tartibi toʻgʻrisida NIZOM > 1-bob. Umumiy qoidalar",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Modda faqat atamalarni ta’riflaydi; kechiktirilgan kunlar uchun qo‘shimcha to‘lov undirilishi haqida bevosita qoida bermaydi."
+ },
+ {
+  "question": "sk-006",
+  "document": -4674902,
+  "article": "97",
+  "within": "UMUMIY QISM > III BOʻLIM. SOLIQ MAJBURIYATINI BAJARISH > 11-bob. Soliqlarni toʻlash muddatlarini oʻzgartirish",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Modda oddiy kechikkan kunlar uchun qoʻshimcha toʻlov (penya) chiqishi haqida bevosita qoida bermaydi, u asosan toʻlash muddatini rasmiy oʻzgartirish va foizlar haqida."
+ },
+ {
+  "question": "sk-007",
+  "document": -3160010,
+  "article": "3",
+  "within": "3-ilova. Erkin iqtisodiy zonalar hududida soliqlar va bojxona toʻlovlari boʻyicha imtiyozlarni qoʻllash tartibi toʻgʻrisida NIZOM > 1-bob. Umumiy qoidalar",
+  "status": "kept",
+  "quote": "5 mln AQSH dollaridan 10 mln AQSH dollarigacha investitsiya kiritilganda — 7 yil muddatga;",
+  "reason": "Modda 6 mln dollar investitsiya uchun imtiyoz muddatini bevosita ko‘rsatadi."
+ },
+ {
+  "question": "sk-007",
+  "document": -3056978,
+  "article": "4",
+  "within": "",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Modda imtiyoz muddatlarini beradi, lekin aynan foydadan olinadigan soliq haqida alohida aytmaydi; faqat Farmonning 3-bandida ko‘zda tutilgan soliq imtiyozlariga ishora qiladi."
+ },
+ {
+  "question": "sk-007",
+  "document": -4674902,
+  "article": "474",
+  "within": "MAXSUS QISM > XXI BOʻLIM. SOLIQ TOʻLOVCHILARNING AYRIM TOIFALARIGA VA OʻZBEKISTON RESPUBLIKASINING AYRIM HUDUDLARIDA SOLIQ SOLISHNING OʻZIGA XOS XUSUSIYATLARI > 68-bob. Maxsus iqtisodiy zonalarning ishtirokchilariga soliq solishning oʻziga xos xususiyatlari",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Modda foyda solig‘i imtiyozining qachondan hisoblanishini va uzaytirilishini aytadi, lekin 6 mln dollar investitsiya uchun necha yil berilishini ko‘rsatmaydi."
+ },
+ {
+  "question": "sk-008",
+  "document": -5206072,
+  "article": "241",
+  "within": "2-ilova. Soliq tekshiruvlarini tashkil etish va oʻtkazish tartibi toʻgʻrisida NIZOM > II BOʻLIM. SOLIQ TEKSHIRUVLARINI OʻTKAZISH TARTIBI > 6-bob. Soliq auditini tashkil etish va oʻtkazish tartibi > 9-§. Huquqni suiisteʼmol qilgan yoki soxta bitimlarga asosan qoʻshilgan qiymat soligʻini hisobga oladigan, ammo toʻlamaydigan soliq toʻlovchilarda tekshirishlarni amalga oshirish",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Modda bozor qiymati ta’rifini va soliq organlari uni qanday aniqlashini belgilaydi, lekin mahsulot yoki xizmat bilan hisob-kitob qilinganda soliq kelishilgan narxdanmi yoki bozor bahosidanmi hisoblanishini bevosita aytmaydi."
+ },
+ {
+  "question": "sk-008",
+  "document": -4948595,
+  "article": "4",
+  "within": "3-ilova. Qoʻshilgan qiymat soligʻi bazasini tovarlarning (xizmatlarning) bozor qiymatidan kelib chiqib aniqlash tartibi toʻgʻrisida NIZOM > 2-bob. Qoʻshilgan qiymat soligʻini hisoblash va toʻlash chogʻida tovarlarning (xizmatlarning) bozor qiymatini aniqlash tartibi",
+  "status": "kept",
+  "quote": "tovarlarni (xizmatlarni) boshqa tovarlarga (xizmatlarga) ayirboshlab realizatsiya qilishda, shu jumladan, tovar ayirboshlash (barter) operatsiyalari boʻyicha;",
+  "reason": "Savoldagi pul oʻrniga mahsulot yoki xizmat bilan hisob-kitob barter/ayirboshlashga toʻgʻri keladi; modda bunday holatda soliq bazasi bozor qiymatidan kelib chiqib aniqlanishini nazarda tutadi."
+ },
+ {
+  "question": "sk-008",
+  "document": -4948595,
+  "article": "5",
+  "within": "3-ilova. Qoʻshilgan qiymat soligʻi bazasini tovarlarning (xizmatlarning) bozor qiymatidan kelib chiqib aniqlash tartibi toʻgʻrisida NIZOM > 2-bob. Qoʻshilgan qiymat soligʻini hisoblash va toʻlash chogʻida tovarlarning (xizmatlarning) bozor qiymatini aniqlash tartibi",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Modda soliq bazasi Soliq kodeksining 248-moddasi tartibida aniqlanishini va u bozor narxlariga mos deb qabul qilinishini aytadi, lekin mahsulot yoki xizmat bilan hisob-kitob qilinganda aynan kelishilgan narxmi yoki bozor bahosimi degan savolga bevosita javob bermaydi."
+ },
+ {
+  "question": "sk-010",
+  "document": -3243910,
+  "article": "8",
+  "within": "Ilova. Qurilish va uy-joy kommunal xoʻjaligi vazirligi tizimi xodimlari mehnatiga haq toʻlash va ularni moddiy ragʻbatlantirish tartibi toʻgʻrisida NIZOM > 3-bob. Qoʻshimchalar va ustamalar",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Modda ustozlik uchun majburiy qoʻshimcha toʻlovni bevosita belgilamaydi; faqat boshqa qoʻshimcha va ustamalar ichki hujjatlar yoki shartnomada nazarda tutilishi mumkinligini aytadi."
+ },
+ {
+  "question": "sk-011",
+  "document": -5739505,
+  "article": "13",
+  "within": "2-ilova. Yakka tartibdagi tadbirkorlar tomonidan soliq solinadigan daromadlar va chegiriladigan xarajatlarning hisobini yuritish tartibi toʻgʻrisida NIZOM > 4-bob. Soliq organlari tomonidan yakka tartibdagi tadbirkorlarning soliq solinadigan daromadlarini aniqlash mezonlari",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Modda hisobot topshirish muddatini yoki daromad bo‘lmasa ham qachongacha topshirilishi kerakligini aniq belgilamaydi, faqat hisobot qonunchilikda belgilangan tartibda taqdim etilishini aytadi."
+ },
+ {
+  "question": "sk-011",
+  "document": -4674902,
+  "article": "389",
+  "within": "MAXSUS QISM > XIII BOʻLIM. JISMONIY SHAXSLARDAN OLINADIGAN DAROMAD SOLIGʻI > 56-bob. Soliqni hisoblab chiqarish, soliq hisobotini taqdim etish va toʻlash tartibi",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Modda yakka tartibdagi tadbirkor-soliq agentining xodimlarga oid hisobotlari haqida, lekin daromad bo‘lmagan chorakda aynan qachongacha hisobot topshirish kerakligi haqida bevosita javob bermaydi."
+ },
+ {
+  "question": "sk-012",
+  "document": -2849450,
+  "article": null,
+  "within": "1-ilova. Mikrofirmalar va kichik korxonalar uchun (savdo va umumiy ovqatlanish korxonalaridan tashqari) yagona soliq toʻlovi STAVKALARI",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Modda kichik shaharcha yoki do‘kon joylashuviga qarab stavkani belgilamaydi; umumiy korxonalar va ayrim toifalar uchun stavkalarni ko‘rsatadi, savoldagi holatga bevosita javob bermaydi."
+ },
+ {
+  "question": "sk-012",
+  "document": -3085627,
+  "article": null,
+  "within": "1-ilova. Mikrofirmalar va kichik korxonalar uchun (savdo va umumiy ovqatlanish korxonalaridan tashqari) yagona soliq toʻlovi STAVKALARI",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Modda kichik shaharcha yoki doʻkon joylashuviga qarab stavkani belgilamaydi; u yuridik shaxslar uchun umumiy va ayrim maxsus soliq stavkalarini ko‘rsatadi."
+ },
+ {
+  "question": "sk-013",
+  "document": -5115911,
+  "article": "21",
+  "within": "2-ilova. Soliq toʻlovchining bank hisobvaraqlari bilan bogʻliq operatsiyalar boʻyicha soliq organi va bank tizimi oʻrtasida elektron maʼlumot almashish tartibi toʻgʻrisida NIZOM > 4-bob. Soliq toʻlovchining bank hisobvaraqlari boʻyicha operatsiyalarni toʻxtatib turishi tartibi",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Modda sababini ko‘rsatgan holda xabarnoma yuborilishini bevosita tasdiqlaydi, lekin hamma hisoblar bo‘yicha chiqimlar yopiladimi degan savolga javob bermaydi."
+ },
+ {
+  "question": "sk-013",
+  "document": -4674902,
+  "article": "113",
+  "within": "UMUMIY QISM > III BOʻLIM. SOLIQ MAJBURIYATINI BAJARISH > 13-bob. Soliq majburiyatining bajarilishini taʼminlash",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Modda bankning qarorni bajarishi, muddat va yangi hisobvaraqlar ochilmasligini aytadi, lekin soliq to‘lovchini sababini yozib xabardor qilish yoki hamma hisoblaridan chiqim yopilishi haqida bevosita javob bermaydi."
+ },
+ {
+  "question": "sk-013",
+  "document": -5115911,
+  "article": "20",
+  "within": "2-ilova. Soliq toʻlovchining bank hisobvaraqlari bilan bogʻliq operatsiyalar boʻyicha soliq organi va bank tizimi oʻrtasida elektron maʼlumot almashish tartibi toʻgʻrisida NIZOM > 4-bob. Soliq toʻlovchining bank hisobvaraqlari boʻyicha operatsiyalarni toʻxtatib turishi tartibi",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Modda operatsiyalarni to‘xtatish tartibi va 10 kun ichida sudga murojaat qilinmasa bekor qilinishini aytadi, lekin sababini yozib xabar berish yoki barcha hisoblar bo‘yicha chiqimlar yopilishi haqida bevosita javob bermaydi."
+ },
+ {
+  "question": "sk-014",
+  "document": -152653,
+  "article": "53",
+  "within": "6-BOB. QISHLOQ XOʻJALIGIGA MOʻLJALLANGAN YERLAR",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Modda fermer xo‘jaligining umumiy ta’rifini beradi, lekin savoldagi 80 foiz daromad va qishloq xo‘jaligi ishlab chiqaruvchisi hisoblanish mezoniga bevosita javob bermaydi."
+ },
+ {
+  "question": "sk-015",
+  "document": -4674902,
+  "article": "27",
+  "within": "UMUMIY QISM > I BOʻLIM. UMUMIY QOIDALAR > 3-bob. Soliq munosabatlarining subyektlari, ularning huquqlari va majburiyatlari",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Modda soliq organlarining umumiy majburiyatlarini sanaydi, lekin yozma so‘rovga necha kunda javob berishi kerakligini belgilamaydi."
+ },
+ {
+  "question": "sk-016",
+  "document": -4674902,
+  "article": "103",
+  "within": "UMUMIY QISM > III BOʻLIM. SOLIQ MAJBURIYATINI BAJARISH > 12-bob. Ortiqcha toʻlangan va ortiqcha undirilgan soliqlarni hisobga olish hamda qaytarish",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Modda ortiqcha toʻlangan soliqni kimga qaytarish haqida faqat “soliq toʻlovchiga” deydi, lekin ukasi boshqa shaxs sifatida toʻlab berishi mumkinligi va aynan ukasi davlatdan qaytarib soʻrashi mumkinligi masalasiga bevosita javob bermaydi."
+ },
+ {
+  "question": "sk-017",
+  "document": -4674902,
+  "article": "103",
+  "within": "UMUMIY QISM > III BOʻLIM. SOLIQ MAJBURIYATINI BAJARISH > 12-bob. Ortiqcha toʻlangan va ortiqcha undirilgan soliqlarni hisobga olish hamda qaytarish",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Modda ortiqcha toʻlangan summani mavjud soliq qarziga qanday ketma-ketlikda hisobga olishni tartibga soladi, lekin oddiy toʻlov qilinganda avval asosiy qarzmi yoki penya/jarimami degan savolga bevosita javob bermaydi."
+ },
+ {
+  "question": "sk-019",
+  "document": -5959958,
+  "article": "4",
+  "within": "",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Modda faqat yuridik shaxslarning ko‘chmas mulk obyektlari haqida va soliq bazasida baholash natijalarini qo‘llashni nazarda tutadi; foydalanuvchining o‘zi (jismoniy shaxs) uchun bevosita javob bermaydi."
+ },
+ {
+  "question": "sk-019",
+  "document": -3480384,
+  "article": null,
+  "within": "18-ilova. Jismoniy shaxslarning mol-mulkiga solinadigan soliq STAVKALARI",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Modda kadastr qiymati soliq uchun kamida 42 000 ming soʻm boʻlishini belgilaydi, lekin mustaqil baholatib soliqni shu baho boʻyicha toʻlash mumkinligi haqida bevosita javob bermaydi."
+ },
+ {
+  "question": "sk-020",
+  "document": -6257288,
+  "article": "234",
+  "within": "MAXSUS QISM > IV BOʻLIM. YAKKA TARTIBDAGI MEHNATGA OID MUNOSABATLAR > 14-bob. Dam olish vaqti > 4-§. Har yilgi mehnat taʼtili",
+  "status": "kept",
+  "quote": "Mehnat shartnomasi bekor qilinganda xodimga barcha foydalanilmagan har yilgi asosiy va qoʻshimcha mehnat taʼtillari uchun pulli kompensatsiya toʻlanadi.",
+  "reason": "Modda savoldagi ishdan bo‘shaganda foydalanilmagan ta’til uchun pul to‘lanishini bevosita belgilaydi."
+ },
+ {
+  "question": "sk-021",
+  "document": -5206072,
+  "article": "20",
+  "within": "2-ilova. Soliq tekshiruvlarini tashkil etish va oʻtkazish tartibi toʻgʻrisida NIZOM > I BOʻLIM. UMUMIY QOIDALAR > 3-bob. Soliq tekshiruvlari ishtirokchilari, ularning huquqlari va majburiyatlari",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Modda soliqchilarning tekshiruvdagi majburiyatlarini sanaydi, lekin doʻkon/omborga kirib koʻrish, hujjat talab qilish huquqini bevosita belgilamaydi."
+ },
+ {
+  "question": "sk-021",
+  "document": -4672409,
+  "article": "9",
+  "within": "Ilova. Davlat soliq xizmati organlari tomonidan soliq toʻlovchilar faoliyatida amalga oshiriladigan soliq nazorati tadbirini videotasvirga olish tartibi toʻgʻrisidagi NIZOM > 3-bob. Nazorat tadbirlarini videotasvirga olish",
+  "status": "kept",
+  "quote": "soliq toʻlovchi tomonidan daromadlar olish uchun foydalanilayotgan yoki soliq solish obyektlari bilan bogʻliq hududlarni, ishlab chiqarish, omborxona, savdo hamda boshqa binolarini, shu jumladan joylarni koʻzdan kechirish, shuningdek soliq toʻlovchining mol-mulkini inventarizatsiyadan oʻtkazishda;",
+  "reason": "Modda tekshiruvda doʻkon, ombor va boshqa joylarni koʻzdan kechirish mumkinligini, shuningdek ayrim jarayonlar videotasvirga olinishini va hujjatlar taqdim etilmaganda holat qayd etilishini bevosita nazarda tutadi."
+ },
+ {
+  "question": "sk-021",
+  "document": -5206072,
+  "article": "13",
+  "within": "Ilova. Davlat soliq xizmati organlari tomonidan soliq toʻlovchilar faoliyatida amalga oshiriladigan soliq nazorati tadbirini videotasvirga olish tartibi toʻgʻrisida NIZOM > 3-bob. Nazorat tadbirlarini videotasvirga olish",
+  "status": "kept",
+  "quote": "soliq toʻlovchi tomonidan daromadlar olish uchun foydalanilayotgan yoki soliq solish obyektlari bilan bogʻliq hududlarni, ishlab chiqarish, omborxona, savdo hamda boshqa binolarini, shu jumladan, joylarni koʻzdan kechirish, shuningdek, soliq toʻlovchining mol-mulkini xatlovdan oʻtkazishda;",
+  "reason": "Modda doʻkon/omborni koʻzdan kechirish va bu jarayon videotasvirga olinishi mumkinligini bevosita koʻrsatadi; hujjatlar taqdim etilmaganda holati ham nazarda tutilgan."
+ },
+ {
+  "question": "sk-021",
+  "document": -5206072,
+  "article": "145",
+  "within": "2-ilova. Soliq tekshiruvlarini tashkil etish va oʻtkazish tartibi toʻgʻrisida NIZOM > II BOʻLIM. SOLIQ TEKSHIRUVLARINI OʻTKAZISH TARTIBI > 6-bob. Soliq auditini tashkil etish va oʻtkazish tartibi > 3-§. Hudud va binolarni koʻzdan kechirish",
+  "status": "kept",
+  "quote": "Koʻzdan kechirish davomida suratga olish va videoyozuvlar amalga oshiriladi, hujjatlardan nusxa olinadi yoki tekshirish bilan bogʻlik boshqa harakatlar amalga oshiriladi.",
+  "reason": "Modda tekshiruv vaqtida hudud yoki binoni koʻzdan kechirish, suratga-video olish va hujjatlar bilan ishlash mumkinligini bevosita belgilaydi."
+ },
+ {
+  "question": "sk-021",
+  "document": -4674902,
+  "article": "145",
+  "within": "UMUMIY QISM > V BOʻLIM. SOLIQ NAZORATI > 17-bob. Soliq nazorati toʻgʻrisidagi umumiy qoidalar. Soliq tekshiruvlari",
+  "status": "kept",
+  "quote": "Soliq organining soliq tekshiruvini oʻtkazuvchi mansabdor shaxslari tekshiruvning toʻliqligi uchun ahamiyatga ega boʻlgan holatlarni aniqlashtirish maqsadida tekshirilayotgan shaxsning hududlari va binolarini, shuningdek hujjatlar va buyumlarni koʻzdan kechirishni amalga oshirishga haqli.",
+  "reason": "Modda doʻkon/omborni ko‘zdan kechirish va hujjat-buyumlarni ko‘rish vakolatini bevosita beradi; shuningdek videotasvir va fotosuratga olish ham nazarda tutilgan."
+ },
+ {
+  "question": "sk-022",
+  "document": -4674902,
+  "article": "472",
+  "within": "MAXSUS QISM > XXI BOʻLIM. SOLIQ TOʻLOVCHILARNING AYRIM TOIFALARIGA VA OʻZBEKISTON RESPUBLIKASINING AYRIM HUDUDLARIDA SOLIQ SOLISHNING OʻZIGA XOS XUSUSIYATLARI > 67-bob. Toʻgʻridan-toʻgʻri xususiy chet el investitsiyalari ishtirokidagi yuridik shaxslarga soliq solishning oʻziga xos xususiyatlari",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Modda soliq hisobotini topshirish va soliqni toʻlash muddatlarini emas, soliq imtiyozlari shartlari hamda faoliyat tugatilganda imtiyozlarni qoplash masalasini tartibga soladi."
+ },
+ {
+  "question": "sk-022",
+  "document": -4674902,
+  "article": "281",
+  "within": "MAXSUS QISM > X BOʻLIM. QOʻSHILGAN QIYMAT SOLIGʻI > 39-bob. Elektron shaklda xizmatlar koʻrsatuvchi chet el yuridik shaxslariga soliq solishning oʻziga xos xususiyatlari",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Modda faqat elektron xizmatlar ko‘rsatuvchi chet el yuridik shaxslarining choraklik hisobot va to‘lov muddatini belgilaydi, yil tugamasidan faoliyatni tugatganda topshirish va to‘lashning alohida muddatini bevosita aytmaydi."
+ },
+ {
+  "question": "sk-023",
+  "document": -97664,
+  "article": "324",
+  "within": "MAXSUS QISM > TOʻRTINCHI BOʻLIM MAʼMURIY HUQUQBUZARLIK TOʻGʻRISIDAGI ISHLARNI YURITISH > XXIV BOB. MAʼMURIY HUQUQBUZARLIK TOʻGʻRISIDAGI ISH YUZASIDAN QAROR (AJRIM) USTIDAN SHIKOYAT BERISH VA PROTEST BILDIRISH",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Modda undirib olingan pul summalarini qaytarishni nazarda tutadi, lekin foiz bilan qaytarilishi haqida bevosita qoida bermaydi."
+ },
+ {
+  "question": "sk-023",
+  "document": -7008443,
+  "article": "23",
+  "within": "",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Modda undirib olingan pulni qaytarishni aytadi, lekin foiz bilan qaytarilishi haqida qoida bermaydi."
+ },
+ {
+  "question": "sk-023",
+  "document": -6881533,
+  "article": "26",
+  "within": "",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Modda undirib olingan pul summalari qaytarilishini aytadi, lekin ularning foizi bilan qaytarilishi haqida bevosita qoida bermaydi."
+ },
+ {
+  "question": "sk-023",
+  "document": -4674902,
+  "article": "105",
+  "within": "UMUMIY QISM > III BOʻLIM. SOLIQ MAJBURIYATINI BAJARISH > 12-bob. Ortiqcha toʻlangan va ortiqcha undirilgan soliqlarni hisobga olish hamda qaytarish",
+  "status": "kept",
+  "quote": "Ortiqcha undirilgan soliq summasiga foizlar soliq toʻlovchi undan soliq ortiqcha undirilgani fakti oʻziga maʼlum boʻlgan kundan yoki sudning qarori qonuniy kuchga kirgan kundan eʼtiboran oʻttiz kun ichida murojaat etgan taqdirda hisoblanadi.",
+  "reason": "Modda ortiqcha undirilgan soliq qaytarilishi va foizlar qachon hisoblanishini bevosita belgilaydi."
+ },
+ {
+  "question": "sk-023",
+  "document": -2921799,
+  "article": "42⁴",
+  "within": "Ilova. Budjet tizimi budjetlari daromadlarining kassa ijrosi toʻgʻrisidagi YOʻRIQNOMA > 3-bob. Toʻlovlar kontingentini “OʻRIMV” ATda aks ettirish orqali YAGʻHga kiritish va ortiqcha toʻlangan yoki undirilgan toʻlovlarni qaytarish > 3-§. Muddatida qaytarilmagan ortiqcha toʻlangan yoki ortiqcha undirilgan soliq summasiga foiz hisoblash va toʻlab berish tartibi",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Modda foizlar qachon hisoblanmasligini sanaydi, lekin bekor qilingan notoʻgʻri qaror bo‘yicha pul foiz bilan qaytariladimi degan savolga bevosita umumiy javob bermaydi."
+ },
+ {
+  "question": "sk-023",
+  "document": -3967898,
+  "article": "15",
+  "within": "Ilova. Oʻzbekiston Respublikasi Soliq qoʻmitasining Moddiy yordam, ijtimoiy himoya, soliq organlarini rivojlantirish va koʻzda tutilmagan xarajatlar maxsus jamgʻarmasi toʻgʻrisida NIZOM > 4-bob. Maxsus jamgʻarma mablagʻlaridan foydalanish",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Modda undirib olingan mablagʻlar qaytarilishini aytadi, lekin ularni foizi bilan qaytarish haqida norma bermaydi."
+ },
+ {
+  "question": "sk-024",
+  "document": -5739825,
+  "article": "1",
+  "within": "",
+  "status": "kept",
+  "quote": "foyda soligʻi, aylanmadan olinadigan soliq, ijtimoiy soliq, jismoniy shaxslardan olinadigan daromad soligʻi boʻyicha oʻrnatilgan soliq stavkalarini 1 foiz etib belgilash;",
+  "reason": "Modda aynan jismoniy shaxslardan olinadigan daromad soligʻi stavkasi 1 foiz etib belgilanishini ko‘rsatadi."
+ },
+ {
+  "question": "sk-025",
+  "document": -4674902,
+  "article": "386",
+  "within": "MAXSUS QISM > XIII BOʻLIM. JISMONIY SHAXSLARDAN OLINADIGAN DAROMAD SOLIGʻI > 56-bob. Soliqni hisoblab chiqarish, soliq hisobotini taqdim etish va toʻlash tartibi",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Modda soliq agentining umumiy majburiyatlari va ma’lumotnoma berishini tartibga soladi, lekin eski ish joyidan ma’lumotnoma birinchi maoshdan oldin taqdim etilmasa, yangi ish joyida soliq qanday ushlab qolinishi haqida bevosita javob bermaydi."
+ },
+ {
+  "question": "sk-026",
+  "document": -4674902,
+  "article": "423",
+  "within": "MAXSUS QISM > XV BOʻLIM. MOL-MULK SOLIGʻI > 60-bob. Jismoniy shaxslardan olinadigan mol-mulk soligʻi",
+  "status": "kept",
+  "quote": "Soliqni toʻlash toʻgʻrisidagi toʻlov xabarnomasi soliq organlari tomonidan soliq toʻlovchilarga imzo qoʻydirilgan holda yoki mavjud boʻlgan taqdirda, soliq toʻlovchining shaxsiy kabinetiga elektron tarzda, soliq toʻlovchining nomiga rasmiylashtirilgan uyali telefon raqamiga va soliq organlarining maxsus mobil ilovasiga SMS-xabarnoma tarzida, shuningdek toʻlov xabarnomasi olinganligini va olingan sanani tasdiqlovchi boshqa usulda har yili 1-martdan kechiktirmay topshiriladi.",
+  "reason": "Modda xabarnoma qachongacha yetkazilishi kerakligini bevosita belgilaydi."
+ },
+ {
+  "question": "sk-027",
+  "document": -4674902,
+  "article": "6",
+  "within": "UMUMIY QISM > I BOʻLIM. UMUMIY QOIDALAR > 1-bob. Asosiy qoidalar",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Modda xalqaro shartnomalar va haqiqiy huquq egasini aniqlash tartibini tartibga soladi, lekin chet el fuqarosining Oʻzbekistonda ishlab topgan daromadi uchun soliq toʻlashi shartmi degan savolga bevosita javob bermaydi."
+ },
+ {
+  "question": "sk-027",
+  "document": -4674902,
+  "article": "379",
+  "within": "MAXSUS QISM > XIII BOʻLIM. JISMONIY SHAXSLARDAN OLINADIGAN DAROMAD SOLIGʻI > 54-bob. Soliq imtiyozlari",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Modda faqat ayrim chet el fuqarolari uchun soliqdan ozod etiladigan maxsus holatlarni sanaydi, umumiy holda chet el fuqarosining Oʻzbekistondagi ish daromadiga soliq toʻlashi kerakmi degan savolga bevosita javob bermaydi."
+ },
+ {
+  "question": "sk-027",
+  "document": -4674902,
+  "article": "400",
+  "within": "MAXSUS QISM > XIII BOʻLIM. JISMONIY SHAXSLARDAN OLINADIGAN DAROMAD SOLIGʻI > 57-bob. Jami yillik daromad toʻgʻrisidagi deklaratsiya asosida daromadlarga soliq solish",
+  "status": "kept",
+  "quote": "Oʻzbekiston Respublikasining norezidenti boʻlgan jismoniy shaxslarning daromadlariga soliq solish toʻlov manbaida toʻlovlar Oʻzbekiston Respublikasining ichkarisida yoki tashqarisida qilinganligidan qatʼi nazar amalga oshiriladi.",
+  "reason": "Modda norezident jismoniy shaxsning daromadiga Oʻzbekistonda soliq solinishini bevosita belgilaydi."
+ },
+ {
+  "question": "sk-027",
+  "document": -4674902,
+  "article": "382",
+  "within": "MAXSUS QISM > XIII BOʻLIM. JISMONIY SHAXSLARDAN OLINADIGAN DAROMAD SOLIGʻI > 55-bob. Soliq stavkalari. Soliq davri",
+  "status": "kept",
+  "quote": "Mehnat shartnomalari (kontraktlari) va fuqarolik-huquqiy xususiyatdagi shartnomalar boʻyicha olingan daromadlar, 1 va 2-bandlarda koʻrsatilmagan boshqa daromadlar | 12",
+  "reason": "Modda norezident jismoniy shaxsning Oʻzbekistondagi manbalardan olgan mehnat daromadiga soliq stavkasi qoʻllanishini bevosita belgilaydi."
+ },
+ {
+  "question": "sk-029",
+  "document": -4674902,
+  "article": "96",
+  "within": "UMUMIY QISM > III BOʻLIM. SOLIQ MAJBURIYATINI BAJARISH > 10-bob. Soliq majburiyatini bajarish",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Modda faqat vafot etgan shaxsning soliq qarzining qaysi qismi undirilishi umidsiz deb e’tirof etilishini aytadi; merosxo‘r qarzni to‘lashi shartmi degan savolga bevosita javob bermaydi."
+ },
+ {
+  "question": "sk-029",
+  "document": -4674902,
+  "article": "87",
+  "within": "UMUMIY QISM > III BOʻLIM. SOLIQ MAJBURIYATINI BAJARISH > 9-bob. Soliq majburiyatini bajarishning umumiy qoidalari",
+  "status": "kept",
+  "quote": "Vafot etgan yoki vafot etgan deb eʼlon qilingan jismoniy shaxsning soliq qarzi ushbu Kodeksning 94-moddasida belgilangan tartibda meros mol-mulkning qiymati doirasida merosxoʻrlardan undiriladi.",
+  "reason": "Modda savolga bevosita javob beradi: marhumning soliq qarzi o‘chib ketmaydi, merosxo‘rlardan meros qiymati doirasida undiriladi."
+ },
+ {
+  "question": "sk-029",
+  "document": -4888800,
+  "article": "4",
+  "within": "Ilova. Undirilishi umidsiz deb eʼtirof etilgan soliq qarzini hisobdan chiqarish tartibi toʻgʻrisidagi NIZOM > 2-bob. Undirilishi umidsiz deb eʼtirof etiladigan soliq qarzi",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Modda faqat qachon soliq qarzi undirilishi umidsiz deb e’tirof etilishini aytadi, merosxo‘r soliqni to‘lashi shartmi degan savolga bevosita javob bermaydi."
+ },
+ {
+  "question": "sk-030",
+  "document": -4674902,
+  "article": "399",
+  "within": "MAXSUS QISM > XIII BOʻLIM. JISMONIY SHAXSLARDAN OLINADIGAN DAROMAD SOLIGʻI > 57-bob. Jami yillik daromad toʻgʻrisidagi deklaratsiya asosida daromadlarga soliq solish",
+  "status": "kept",
+  "quote": "Oʻzbekiston Respublikasidan tashqarida toʻlangan, Oʻzbekiston Respublikasining rezidenti boʻlgan jismoniy shaxslardan olinadigan daromad soligʻi summalari Oʻzbekiston Respublikasida soliq toʻlashda ushbu Kodeksning 342-moddasida nazarda tutilgan tartibda hisobga olinadi.",
+  "reason": "Modda rezident jismoniy shaxsning chet eldagi daromadiga doir soliq Oʻzbekistonda hisobga olinishini bevosita aytyapti."
+ },
+ {
+  "question": "sk-031",
+  "document": -4674902,
+  "article": "7",
+  "within": "UMUMIY QISM > I BOʻLIM. UMUMIY QOIDALAR > 1-bob. Asosiy qoidalar",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Modda faqat soliq solishning umumiy prinsiplari haqida; fuqarolik yoki mulk shakliga qarab soliqni qimmatroq belgilash mumkin emasligi haqida bevosita qoida bermaydi."
+ },
+ {
+  "question": "sk-032",
+  "document": -5739505,
+  "article": "31",
+  "within": "2-ilova. Yakka tartibdagi tadbirkorlar tomonidan soliq solinadigan daromadlar va chegiriladigan xarajatlarning hisobini yuritish tartibi toʻgʻrisida NIZOM > 7-bob. Tovarlar (xizmatlar)ni realizatsiya qilishdan olingan daromaddan chegiriladigan xarajatlar",
+  "status": "kept",
+  "quote": "tadbirkorlik faoliyatini amalga oshirish bilan bogʻliq boʻlgan va hujjatlar bilan tasdiqlangan boshqa xarajatlar ham tovarlar (xizmatlar)ni realizatsiya qilishdan olingan jami daromaddan chegiriladigan xarajatlar sifatida hisobga olinishi mumkin.",
+  "reason": "Modda xarajatlarni chegirish uchun ular hujjatlar bilan tasdiqlangan bo‘lishi kerakligini bevosita aytadi."
+ },
+ {
+  "question": "sk-032",
+  "document": -8263938,
+  "article": "30",
+  "within": "1-ilova. Davlat organlari va tashkilotlari xodimlarini, shuningdek, Oʻzbekiston Respublikasi delegatsiyalarini chet davlatlarga xizmat safariga yuborish hamda xizmat safari xarajatlarini moliyalashtirish tartibi toʻgʻrisida NIZOM > 5-bob. Transport xarajatlari uchun mablagʻlar ajratish",
+  "status": "kept",
+  "quote": "haqiqiy xarajatlar boʻyicha ularni tegishli hujjatlar asosida tasdiqlash sharti bilan toʻlanadi",
+  "reason": "Modda xarajatlarni qoplash uchun tegishli hujjatlar bilan tasdiqlash shartligini bevosita belgilaydi."
+ },
+ {
+  "question": "sk-032",
+  "document": -8263938,
+  "article": "51",
+  "within": "1-ilova. Davlat organlari va tashkilotlari xodimlarini, shuningdek, Oʻzbekiston Respublikasi delegatsiyalarini chet davlatlarga xizmat safariga yuborish hamda xizmat safari xarajatlarini moliyalashtirish tartibi toʻgʻrisida NIZOM > 7-bob. Hisobot",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Modda faqat Vazirlar Mahkamasi farmoyishi asosidagi xizmat safari va ko‘zda tutilmagan xarajatlarni tasdiqlovchi hujjatlar bo‘lsa qoplash haqida; umumiy tarzda xarajatlarni hisobdan chiqarish yoki chet eldagi xarajatlar haqidagi savolga bevosita javob bermaydi."
+ },
+ {
+  "question": "sk-033",
+  "document": -4674902,
+  "article": "386",
+  "within": "MAXSUS QISM > XIII BOʻLIM. JISMONIY SHAXSLARDAN OLINADIGAN DAROMAD SOLIGʻI > 56-bob. Soliqni hisoblab chiqarish, soliq hisobotini taqdim etish va toʻlash tartibi",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Moddada ushlab qolinmagan soliq bo‘yicha soliq organiga qancha muddat ichida xabar berish kerakligi ko‘rsatilmagan."
+ },
+ {
+  "question": "sk-034",
+  "document": -7231780,
+  "article": "26",
+  "within": "4-ilova. Oʻzbekiston Respublikasi Prezidentining ayrim hujjatlariga kiritilayotgan oʻzgartirishlar. “Nazorat qiluvchi organlar tomonidan tadbirkorlik subyektlari faoliyatida tekshiruvlar va profilaktika tadbirlarini oʻtkazish tartibi toʻgʻrisida NIZOM > 4-bob. Tekshiruvlarni oʻtkazish",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Modda faqat tekshiruv muddatini uzaytirish tartibi va cheklovini aytadi, lekin tekshiruvning odatiy davomiyligi yoki eng ko‘pi bilan necha oy bo‘lishini aniq ko‘rsatmaydi."
+ },
+ {
+  "question": "sk-034",
+  "document": -7231780,
+  "article": "25",
+  "within": "4-ilova. Oʻzbekiston Respublikasi Prezidentining ayrim hujjatlariga kiritilayotgan oʻzgartirishlar. “Nazorat qiluvchi organlar tomonidan tadbirkorlik subyektlari faoliyatida tekshiruvlar va profilaktika tadbirlarini oʻtkazish tartibi toʻgʻrisida NIZOM > 4-bob. Tekshiruvlarni oʻtkazish",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Modda tekshiruvning odatiy davomiyligi yoki eng ko‘pi bilan necha oyga cho‘zilishi mumkinligini emas, faqat ayrim holatlarda tekshiruvni to‘xtatish va boshqa vaqtga ko‘chirish tartibini belgilaydi."
+ },
+ {
+  "question": "sk-035",
+  "document": -180552,
+  "article": "781",
+  "within": "IKKINCHI QISM > 3-kichik boʻlim. MAJBURIYATLARNING AYRIM TURLARI > 44-bob. Bank hisobvaragʻi",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Modda bank foiz toʻlashi va uning miqdori/shartnomasini tartibga soladi, lekin foizdan qancha ushlab qolinishi haqida javob bermaydi."
+ },
+ {
+  "question": "sk-036",
+  "document": -4674902,
+  "article": "402",
+  "within": "MAXSUS QISM > XIV BOʻLIM. IJTIMOIY SOLIQ > 58-bob. Ijtimoiy soliqni hisoblab chiqarish va toʻlash",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Modda umumiy jismoniy shaxs qachon soliq toʻlovchi boʻlishini emas, faqat ijtimoiy soliq toʻlovchilarining ayrim toifalarini ko‘rsatadi."
+ },
+ {
+  "question": "sk-036",
+  "document": -4674902,
+  "article": "385",
+  "within": "MAXSUS QISM > XIII BOʻLIM. JISMONIY SHAXSLARDAN OLINADIGAN DAROMAD SOLIGʻI > 56-bob. Soliqni hisoblab chiqarish, soliq hisobotini taqdim etish va toʻlash tartibi",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Modda soliqni kim hisoblab chiqarishi va toʻlash tartibini belgilaydi, lekin oddiy jismoniy shaxs qaysi holatda soliq toʻlovchi hisoblanishini bevosita aytmaydi."
+ },
+ {
+  "question": "sk-036",
+  "document": -4674902,
+  "article": "364",
+  "within": "MAXSUS QISM > XIII BOʻLIM. JISMONIY SHAXSLARDAN OLINADIGAN DAROMAD SOLIGʻI > 52-bob. Soliq toʻlovchilar, soliq solish obyekti va soliq bazasi",
+  "status": "kept",
+  "quote": "1) Oʻzbekiston Respublikasining rezidentlari boʻlgan jismoniy shaxslar;\n2) Oʻzbekiston Respublikasidagi manbalardan daromad oluvchi Oʻzbekiston Respublikasining norezidenti boʻlgan jismoniy shaxslar.",
+  "reason": "Modda oddiy jismoniy shaxs qaysi holatda daromad soligʻi bo‘yicha soliq to‘lovchi hisoblanishini bevosita aytadi."
+ },
+ {
+  "question": "sk-037",
+  "document": -8206406,
+  "article": "14",
+  "within": "Ilova. Soliq bazasini ayrim tovarlarning bozor narxidan kelib chiqqan holda aniqlash tartibi toʻgʻrisida NIZOM > 2-bob. Soliq bazasini tovarlarning bozor narxidan kelib chiqqan holda aniqlash uchun foydalanadigan usul va uni qoʻllash tartibi",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Modda faqat turli manbalarda narxlar farq qilsa o‘rtacha bozor narxini qanday aniqlashni aytadi, aynan arzonroqqa sotilgan bitim bo‘yicha hisob-kitobda bozor narxidan kelib chiqilishi masalasiga bevosita javob bermaydi."
+ },
+ {
+  "question": "sk-037",
+  "document": -4948595,
+  "article": "6",
+  "within": "3-ilova. Qoʻshilgan qiymat soligʻi bazasini tovarlarning (xizmatlarning) bozor qiymatidan kelib chiqib aniqlash tartibi toʻgʻrisida NIZOM > 2-bob. Qoʻshilgan qiymat soligʻini hisoblash va toʻlash chogʻida tovarlarning (xizmatlarning) bozor qiymatini aniqlash tartibi",
+  "status": "kept",
+  "quote": "Agar tovarlarning (xizmatlarning) bozor qiymati koʻrsatib oʻtilgan organlarda turlicha boʻlsa, soliq solish maqsadlarida ularning oʻrtacha qiymati inobatga olinadi.",
+  "reason": "Modda o‘rtacha bozor qiymatini soliq solish maqsadida inobatga olish mumkinligini bevosita aytadi."
+ },
+ {
+  "question": "sk-037",
+  "document": -4948595,
+  "article": "9",
+  "within": "3-ilova. Qoʻshilgan qiymat soligʻi bazasini tovarlarning (xizmatlarning) bozor qiymatidan kelib chiqib aniqlash tartibi toʻgʻrisida NIZOM > 2-bob. Qoʻshilgan qiymat soligʻini hisoblash va toʻlash chogʻida tovarlarning (xizmatlarning) bozor qiymatini aniqlash tartibi",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Modda bozor qiymatini aniqlashda odatdagi ustama va chegirmalar hisobga olinishini aytadi, lekin tanishga bozordan ancha arzon sotilganda baribir o‘rtacha bozor narxidan kelib chiqib qaralishi mumkinmi degan savolga bevosita javob bermaydi."
+ },
+ {
+  "question": "sk-039",
+  "document": -4674902,
+  "article": "115",
+  "within": "UMUMIY QISM > III BOʻLIM. SOLIQ MAJBURIYATINI BAJARISH > 14-bob. Soliq qarzini uzish toʻgʻrisidagi talabnoma",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Modda faqat talabnoma yuborilishi muddatini aytadi, unda xatda qancha qarz, oshishi yoki to‘lamasa oqibatlari ko‘rsatilishi shartligi haqida yo‘q."
+ },
+ {
+  "question": "sk-039",
+  "document": -4674902,
+  "article": "55",
+  "within": "UMUMIY QISM > I BOʻLIM. UMUMIY QOIDALAR > 4-bob. Ushbu Kodeksda qoʻllaniladigan asosiy tushunchalar",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Modda soliq qarzi nimalardan iboratligi va to‘lash ketma-ketligini aytadi, lekin xabarda nimalar ko‘rsatilishi shartligini bevosita belgilamaydi."
+ },
+ {
+  "question": "sk-040",
+  "document": -4674902,
+  "article": "369",
+  "within": "MAXSUS QISM > XIII BOʻLIM. JISMONIY SHAXSLARDAN OLINADIGAN DAROMAD SOLIGʻI > 53-bob. Jami daromad",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Modda mahalladan beriladigan yordam pulini bevosita tilga olmaydi; unda asosan davlat pensiyalari, nafaqalar va ayrim moddiy yordam turlari sanab o‘tilgan."
+ },
+ {
+  "question": "sk-040",
+  "document": -8052870,
+  "article": "2",
+  "within": "II. Moliyaviy resurslar",
+  "status": "kept",
+  "quote": "Bunda mazkur qarorning 1-bandi “a” va “b” kichik bandilariga muvofiq beriladigan moliyaviy yordamlar Oʻzbekiston Respublikasi Soliq kodeksiga asosan jismoniy shaxslardan olinadigan daromad soligʻini hisoblashda jami daromad tarkibiga kiritilmaydi.",
+  "reason": "Modda yordam puli daromad tarkibiga kiritilmasligini bevosita aytgan."
+ },
+ {
+  "question": "sk-041",
+  "document": -5260791,
+  "article": "15",
+  "within": "",
+  "status": "kept",
+  "quote": "Belgilansinki, davlat soliq xizmatining faoliyatini “Soliqchi-koʻmakchi” tamoyili asosida tashkil etish doirasida oldingi yil uchun daromadlari yillik moliyaviy hisobot maʼlumotlariga koʻra kamida 5 milliard soʻmni tashkil etgan, yuridik shaxs maqomiga ega boʻlgan tadbirkorlik subyektlari va fermer xoʻjaliklari soliq monitoringida ishtirok etishga haqli.",
+  "reason": "Modda bevosita 5 milliard soʻmdan oshgan subyektlar soliq monitoringida ishtirok etishi huquq ekanini, majburiyat emasligini ko‘rsatadi."
+ },
+ {
+  "question": "sk-041",
+  "document": -5115911,
+  "article": "1",
+  "within": "1-ilova. Soliq monitoringini oʻtkazish tartibi toʻgʻrisida NIZOM > 1-bob. Umumiy qoidalar",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Modda faqat qaysi yuridik shaxslarda soliq monitoringini o‘tkazish tartibi belgilanishini aytadi, lekin unga kirish ixtiyoriy yoki majburiy ekaniga bevosita javob bermaydi."
+ },
+ {
+  "question": "sk-041",
+  "document": -5115911,
+  "article": "3",
+  "within": "1-ilova. Soliq monitoringini oʻtkazish tartibi toʻgʻrisida NIZOM > 1-bob. Umumiy qoidalar",
+  "status": "kept",
+  "quote": "Soliq monitoringi soliq toʻlovchiga nisbatan ixtiyoriy boʻlib",
+  "reason": "Modda savoldagi majburiymi yoki ixtiyoriymi degan savolga bevosita javob beradi."
+ },
+ {
+  "question": "sk-042",
+  "document": -7949060,
+  "article": "12",
+  "within": "3-bob. Budjetlararo munosabatlarni tartibga solishning oʻziga xos xususiyatlari",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Modda import qilingan pivo uchun 2026-yil fevraldan 1 litriga qancha soliq stavkasi toʻlanishini belgilamaydi, faqat ayrim soliqlarning budjetlar oʻrtasida taqsimlanishini aytadi."
+ },
+ {
+  "question": "sk-043",
+  "document": -4674902,
+  "article": "97",
+  "within": "UMUMIY QISM > III BOʻLIM. SOLIQ MAJBURIYATINI BAJARISH > 11-bob. Soliqlarni toʻlash muddatlarini oʻzgartirish",
+  "status": "kept",
+  "quote": "Soliq toʻlashni kechiktirish yoki boʻlib-boʻlib toʻlash soliqlarni toʻlashni kechiktirish yoki boʻlib-boʻlib toʻlash imkoniyatini berish toʻgʻrisida qaror qabul qilinguniga qadar yuzaga kelgan qarz summasiga yoki kelgusida yuzaga keladigan qarz summasiga nisbatan berilishi mumkin.",
+  "reason": "Modda savoldagi oldingi davrdagi va keyingi qarzlarga tatbiq etilishi masalasiga bevosita javob beradi."
+ },
+ {
+  "question": "sk-043",
+  "document": -4745555,
+  "article": "2",
+  "within": "",
+  "status": "kept",
+  "quote": "oʻtgan soliq davri uchun soliq hisoboti aynan oʻsha soliq davrida amal qilgan tartib va shakllar asosida taqdim etiladi",
+  "reason": "Modda yangi tartibning oʻtgan soliq davriga emas, oʻsha davrda amal qilgan qoidalarga ko‘ra qo‘llanishini bevosita ko‘rsatadi."
+ },
+ {
+  "question": "sk-043",
+  "document": -6402529,
+  "article": "2",
+  "within": "I bob. Umumiy masalalar",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Modda yangi Soliq kodeksi qachondan kuchga kirgani va qo‘llash tartibi boshqa moddada belgilanganini aytadi, lekin savoldagi eski davrga tatbiq etilishi haqida bevosita javob bermaydi."
+ },
+ {
+  "question": "sk-045",
+  "document": -8236831,
+  "article": "6",
+  "within": "IV. Qoʻshilgan qiymat soligʻi boʻyicha soddalashtirilgan tartibni joriy etish",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Modda soddalashtirilgan tartibda QQSni hisoblash haqida, lekin savoldagi 5 foizlik mezon va xaridlardagi soliqni alohida ajratmasdan tannarxga kiritish sharti haqida bevosita qoida bermaydi."
+ },
+ {
+  "question": "sk-046",
+  "document": -5115911,
+  "article": null,
+  "within": "Ilova. Soliq organi tomonidan soliq hisobotini shakllantirish va tuzish hamda soliq toʻlovchilar tomonidan soliq hisobotini tasdiqlash SXEMASI",
+  "status": "kept",
+  "quote": "Jismoniy shaxslardan olinadigan daromad soligʻi va ijtimoiy soliq | Hisobot davridan keyingi oyning oʻninchi kunidan kechiktirmay, yil yakunlari boʻyicha keyingi yilning 10-fevralidan kechiktirmay.",
+  "reason": "Savol ishchilar bo‘yicha topshiriladigan hisobot muddatini so‘raydi; modda aynan JShDS va ijtimoiy soliq hisobotining oylik va yil yakuni muddatini ko‘rsatadi."
+ },
+ {
+  "question": "sk-046",
+  "document": -5115911,
+  "article": null,
+  "within": "Ilova. Soliq organi tomonidan soliq hisobotini shakllantirish va tuzish hamda soliq toʻlovchilar tomonidan soliq hisobotini tasdiqlash SXEMASI",
+  "status": "kept",
+  "quote": "Jismoniy shaxslardan olinadigan daromad soligʻi va ijtimoiy soliq | Hisobot davridan keyingi oyning oʻninchi kunidan kechiktirmay, yil yakunlari boʻyicha keyingi yilning 10-fevralidan kechiktirmay.",
+  "reason": "Savol ishchilar bo‘yicha topshiriladigan soliq hisobotining oylik va yil yakuniy muddatlarini so‘raydi; modda aynan JShDS va ijtimoiy soliq uchun shu muddatlarni bevosita ko‘rsatgan."
+ },
+ {
+  "question": "sk-046",
+  "document": -5115911,
+  "article": "15",
+  "within": "Ilova. Soliq organlari tomonidan soliq hisobotini shakllantirish va tuzish tartibi toʻgʻrisida NIZOM > 5-bob. Soliq toʻlovchilarning majburiyatlari",
+  "status": "kept",
+  "quote": "jismoniy shaxslardan olinadigan daromad soligʻi va ijtimoiy soliq hisobotini shakllantirish uchun ushbu Nizomning 4-bandi toʻrtinchi xatboshisida koʻrsatilgan maʼlumotlarni hisobot oyidan keyingi oyning oʻninchi kunidan kechiktirmay, yil yakunlari boʻyicha esa keyingi yilning 5-fevralidan;",
+  "reason": "Modda ishchilar bo‘yicha topshiriladigan JShODS va ijtimoiy soliq hisobotining oylik hamda yillik muddatini bevosita ko‘rsatadi."
+ },
+ {
+  "question": "sk-047",
+  "document": -4674902,
+  "article": "114",
+  "within": "UMUMIY QISM > III BOʻLIM. SOLIQ MAJBURIYATINI BAJARISH > 13-bob. Soliq majburiyatining bajarilishini taʼminlash",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Modda bank hisobini to‘sib qo‘yish tartibini emas, mol-mulkni xatlash shartlarini tartibga soladi; savoldagi bank hisobvarag‘ini darrov to‘sish mumkinmi degan masalaga bevosita javob bermaydi."
+ },
+ {
+  "question": "sk-047",
+  "document": -4674902,
+  "article": "55",
+  "within": "UMUMIY QISM > I BOʻLIM. UMUMIY QOIDALAR > 4-bob. Ushbu Kodeksda qoʻllaniladigan asosiy tushunchalar",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Modda soliq qarzi tushunchasi va uni toʻlash ketma-ketligini belgilaydi, bank hisobini toʻsish yoki avval boshqa mol-mulkka cheklov qoʻyish tartibiga javob bermaydi."
+ },
+ {
+  "question": "sk-047",
+  "document": -4674902,
+  "article": "121",
+  "within": "UMUMIY QISM > III BOʻLIM. SOLIQ MAJBURIYATINI BAJARISH > 15-bob. Soliq qarzini undirish",
+  "status": "kept",
+  "quote": "Soliq qarzi belgilangan muddatda toʻlanmagan yoki toʻliq toʻlanmagan taqdirda, soliq qarzini undirish — undiruvni bank hisobvaraqlaridagi pul mablagʻlariga (shu jumladan, korporativ kartalardagi pul mablagʻlariga) qaratish yoʻli bilan majburiy tartibda amalga oshiriladi.",
+  "reason": "Modda savoldagi bank hisobini darhol toʻsib/undiruvni avvalo hisobdagi mablagʻlarga qaratish masalasiga bevosita javob beradi."
+ },
+ {
+  "question": "sk-047",
+  "document": -4674902,
+  "article": "123",
+  "within": "UMUMIY QISM > III BOʻLIM. SOLIQ MAJBURIYATINI BAJARISH > 15-bob. Soliq qarzini undirish",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Modda bank hisobini darrov to‘sish masalasini bevosita tartibga solmaydi; u 121 va 122-moddalarda undirish mumkin bo‘lmaganda boshqa mol-mulk hisobidan undirish va ketma-ketlik haqida."
+ },
+ {
+  "question": "sk-048",
+  "document": -4131684,
+  "article": "8",
+  "within": "",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Modda bir milliard soʻmdan oshganda yuridik shaxslar uchun nazarda tutilgan tartibda soliqlar toʻlanishini aytadi, lekin aynan QQS toʻlash shartligi haqida bevosita aytmaydi."
+ },
+ {
+  "question": "sk-048",
+  "document": -7681520,
+  "article": "5",
+  "within": "III. Tadbirkorlik subyektlari oʻrtasida teng sharoitlarni taʼminlash",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Modda 1 milliard soʻmdan oshganda amaldagi tartib saqlanishini aytadi, lekin aynan QQS toʻlash majburiyati bor-yoʻqligini bevosita aytmaydi."
+ },
+ {
+  "question": "sk-049",
+  "document": -4674902,
+  "article": "275",
+  "within": "MAXSUS QISM > X BOʻLIM. QOʻSHILGAN QIYMAT SOLIGʻI > 38-bob. Alohida hollarda soliq solishning oʻziga xos xususiyatlari",
+  "status": "kept",
+  "quote": "Oddiy shirkat shartnomasiga (birgalikdagi faoliyat toʻgʻrisidagi shartnomaga) konsessiya bitimiga yoki mol-mulkni ishonchli boshqarish shartnomasiga muvofiq operatsiyalarni amalga oshirishda shirkatning ishonchli shaxsi, konsessioner yoki ishonchli boshqaruvchi zimmasiga soliq toʻlovchining ushbu boʻlimda belgilangan majburiyatlari yuklatiladi.",
+  "reason": "Modda savoldagi holatda soliq majburiyatlari bitta ishonchli shaxs zimmasiga yuklatilishini bevosita ko‘rsatadi."
+ },
+ {
+  "question": "sk-050",
+  "document": -4674902,
+  "article": "422",
+  "within": "MAXSUS QISM > XV BOʻLIM. MOL-MULK SOLIGʻI > 60-bob. Jismoniy shaxslardan olinadigan mol-mulk soligʻi",
+  "status": "rejected",
+  "quote": "",
+  "reason": "Modda soliq stavkalari va ayrim obyektlarga qoʻllanishini belgilaydi, lekin bir shaxs nomida ikkita uy boʻlsa soliq har bir uy uchun alohidami yoki bitta qilibmi hisoblanishini bevosita aytmaydi."
+ }
+]

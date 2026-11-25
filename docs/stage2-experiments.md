@@ -1107,6 +1107,59 @@ Lemma stemmer ustiga shovqin darajasida. 4.1'dagi "stemming shovqin darajasida" 
 to'plamdan chiqqan edi: butun korpusda FTS uchun bu noto'g'ri. Natijalar:
 `eval/results/2026-11-24-fts-ablation-{none,stem,lemma}.json`.
 
+## 6o. Soliq kodeksi bo'yicha 50 ta savol (2026-11-25)
+
+**Nega.** Mavjud to'plamlarda Soliq kodeksiga oid savollar kam edi va ular umumiy natijadan
+pastroq chiqqan: blind'da 12 tadan 7 tasi, advice.uz'da 12 tadan 9 tasi top-10 da (qat'iy).
+Alohida to'plam bilan shu mavzuni chuqurroq o'lchash kerak edi.
+
+**Usul.** 6c–6d yo'li, faqat bitta hujjat bo'yicha:
+- `generate --document -4674902 --max-chars 6000`: Soliq kodeksining 300–6000 belgili
+  moddalaridan 140 tasi tasodifiy olindi, gpt-5.4 ulardan 50 ta so'zlashuv tilidagi savol yozdi
+  (qolganlari skip). Kodeks moddalari uzun bo'lgani uchun 3000 belgilik chegara ko'tarildi.
+- `clarity`: 36 ta aniq, 14 ta noaniq. `rephrase`: AI `alt`i. `judge`: avval xom savol, keyin
+  `alt` bilan topilganlar baholandi.
+- Yangi `verify` buyrug'i (6d'dagi qo'lda bajarilgan tekshiruvning skripti): tekshiruvchi
+  (gpt-5.4) moddaning to'liq matnini o'qiydi va javob beradigan jumlani so'zma-so'z ko'chiradi;
+  skript iqtibosni matnda qidiradi (apostroflar va bo'shliqlar bir xil shaklga keltiriladi,
+  kamida 5 so'z). Iqtibos topilmasa yoki javob "yo'q" bo'lsa, modda ro'yxatdan o'chiriladi.
+  Qarorlar `eval/verified_tax.json`da.
+
+`judge` 96 ta qo'shimcha modda qo'shdi. `verify`dan 32 tasi o'tdi (14 tasi Soliq kodeksidan,
+18 tasi boshqa hujjatlardan), 64 tasi rad etildi. 6d'dagi kabi, `judge` qabul qilganlarning
+taxminan uchdan ikkisi noto'g'ri.
+
+**Natija** (gibrid, xizmat sozlamalari: `e5-small-e6-int8/q1`, `mmarco-uz-rr1-int8` top 30):
+
+| Ro'yxat | R@1 | R@5 | R@10 | MRR | aniq (36) R@10 | noaniq (14) R@10 |
+|---|---:|---:|---:|---:|---:|---:|
+| Qat'iy (faqat asl modda) | 0,32 | 0,54 | 0,58 | 0,40 | 0,72 | 0,21 |
+| **Iqtibos bilan tekshirilgan** | **0,46** | **0,78** | **0,78** | **0,58** | **0,94** | **0,36** |
+| `judge` (tekshiruvsiz) | 0,56 | 0,84 | 0,84 | 0,67 | 0,97 | 0,50 |
+
+Tekshirilgan ro'yxatda FTS R@10 0,56, vektor 0,70.
+
+**Xulosa.**
+- Aniq yozilgan soliq savolida natija yaxshi: R@10 0,94. Bu `questions_llm_full` aniq `test`
+  (0,856) va blind (hakam bilan 0,917) darajasida yoki undan yuqori. LLM savolni bitta moddadan
+  yozgani uchun bu to'plam blind'dan yengilroq bo'lishi mumkin.
+- Noaniq savolda zaif: R@10 0,36. Bu yerda savol aniqlashtirilmasa, qidiruv yordam bermaydi.
+- Qat'iy va tekshirilgan ro'yxat orasidagi farq boshqa to'plamlardan katta (0,58 → 0,78): Soliq
+  kodeksida bir savolga bir nechta modda javob beradi (stavka, imtiyoz, hisoblash tartibi
+  alohida moddalarda), shuning uchun faqat asl moddani hisoblash natijani ancha kamaytiradi.
+- Top-10 dan tashqarida qolgan 11 ta savolning yarmidan ko'pida qidiruv boshqa hujjatga ketdi:
+  import savollarida Bojxona kodeksi (sk-001, sk-009), tekshiruv muddatida xo'jalik yurituvchi
+  subyektlarni nazorat qilish haqidagi qonun (sk-034), yozma tushuntirish muddatida "Soliq
+  ma'muriyatchiligi" qarori (sk-015). Ayrimlarida o'sha hujjatda ham javob bo'lishi mumkin, lekin
+  `judge` ularni ko'rmagan yoki `verify` ularni rad etgan. Aniq xatolar: kichik shaharchadagi
+  do'kon uchun aylanma solig'i (sk-012), foiz daromadidan soliq (sk-035), qaytarilgan tovar
+  bo'yicha hisobni to'g'rilash muddati (sk-038).
+- Sarf: `generate` ≈62k, `clarity` + `rephrase` + ikki `judge` ≈167k, `verify` ≈85k token
+  (gpt-5.4, bepul kunlik limit ichida).
+
+Natijalar: `eval/results/2026-11-25-full-corpus-questions_tax-alt_llm-rr1-top30.json` (`judge`
+ro'yxati), `eval/results/2026-11-25-full-corpus-questions_tax-alt_llm-verified.json`.
+
 ## 7. Ochiq masalalar
 
 - **Model tanlovi.** 4.7-bo'lim: sifat bo'yicha bge-m3 birinchi, lekin `myserver` uchun og'ir.
@@ -1124,7 +1177,8 @@ to'plamdan chiqqan edi: butun korpusda FTS uchun bu noto'g'ri. Natijalar:
 - **FTS mayda xatolari:** "burni" → `bur` (-ni tushum kelishigi deb kesiladi); ba'zi so'zlar ichida
   boshqa tutuq belgisi bo'lgani uchun "toʻ", "boʻ" kabi yarim so'zlar indekslangan (6j).
 - **`questions_llm.yaml` (100 savol)** hali `clarity` va qat'iy tekshiruvdan o'tmagan: uning
-  `judge` javoblari ham shishirilgan deb hisoblash kerak.
+  `judge` javoblari ham shishirilgan deb hisoblash kerak. Endi buni `llm_eval.py verify`
+  bilan qilish mumkin (6o).
 - **`gte-multilingual-reranker-base`** transformers 5.22 bilan ishlamadi (modelning o'z kodi).
 
 ## Qayta ishlab chiqarish
@@ -1190,4 +1244,16 @@ uv run --group bench python scripts/rerank_lab.py score --candidates data/eval/v
     --texts data/eval/v2/texts.json.gz --cache data/eval/v2/rr_text \
     --fusion n_vec=100,k=20,w_vec=1.5,extra_chunks=0.0 --model data/models/rr3g16 --top 50
 uv run --group bench python scripts/export_reranker.py data/models/rr3g16
+# 6o: Soliq kodeksi bo'yicha 50 savol (hammasi server bazasiga tunnel bilan)
+Q=eval/questions_tax.yaml A=eval/alt_llm_questions_tax.json
+bash scripts/with_server_db.sh uv run python scripts/llm_eval.py generate --document -4674902 \
+    --max-chars 6000 --sample 140 --limit 50 --seed 11 --out $Q --id-prefix sk
+uv run python scripts/llm_eval.py clarity --questions $Q
+uv run python scripts/llm_eval.py rephrase --questions $Q --out $A
+bash scripts/with_server_db.sh uv run python scripts/llm_eval.py judge --questions $Q
+bash scripts/with_server_db.sh uv run python scripts/llm_eval.py judge --questions $Q --alt-file $A
+bash scripts/with_server_db.sh uv run python scripts/llm_eval.py verify --questions $Q \
+    --log eval/verified_tax.json
+bash scripts/with_server_db.sh uv run nizom eval --questions $Q --alt-file $A --workers 4 \
+    --save full-corpus-questions_tax-alt_llm-verified
 ```

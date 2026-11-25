@@ -12,6 +12,7 @@
     article: '254'
     within: MAXSUS QISM > X BOʻLIM. QOʻSHILGAN QIYMAT SOLIGʻI > 34-bob. Soliq bazasi
     judged: true
+    verified: true
   tags:
   - llm
   - kodeks
@@ -27,11 +28,6 @@
   - document: -4674902
     article: '457'
     within: MAXSUS QISM > XIX BOʻLIM. YIGʻIMLAR > 65-bob. Yigʻimlar
-  - document: -6707765
-    article: null
-    within: 11-ilova. 2024-yil uchun yuk koʻtarish quvvati 10 tonnadan yuqori boʻlgan yuk avtotransport
-      vositalari va tirkamalarining avtomobil yoʻllari boʻylab harakatlanishi huquqi uchun yigʻimlar stavkalari
-    judged: true
   tags:
   - llm
   - kodeks
@@ -53,11 +49,7 @@
     within: MAXSUS QISM > X BOʻLIM. QOʻSHILGAN QIYMAT SOLIGʻI > 37-bob. Soliqni hisoblab chiqarish va
       toʻlash tartibi. Soliq hisobotini taqdim etish tartibi.
     judged: true
-  - document: -4948595
-    article: '8'
-    within: 1-ilova. Qoʻshilgan qiymat soligʻi summasi oʻrnini qoplash tartibi toʻgʻrisida NIZOM > 2-bob.
-      Soliq summasini qoplash uchun asos boʻluvchi hujjatlar va ularni taqdim etish tartibi
-    judged: true
+    verified: true
   tags:
   - llm
   - kodeks
@@ -78,19 +70,7 @@
     within: MAXSUS QISM > XX BOʻLIM. AYLANMADAN OLINADIGAN SOLIQ > 66-bob. Aylanmadan olinadigan soliqni
       hisoblab chiqarish va toʻlash
     judged: true
-  - document: -4131684
-    article: '8'
-    within: ''
-    judged: true
-  - document: -7681520
-    article: '5'
-    within: III. Tadbirkorlik subyektlari oʻrtasida teng sharoitlarni taʼminlash
-    judged: true
-  - document: -4674902
-    article: '361'
-    within: MAXSUS QISM > XII BOʻLIM. FOYDA SOLIGʻI > 51-bob. Yakka tartibdagi tadbirkorlarning daromadlariga
-      soliq solishning oʻziga xos xususiyatlari
-    judged: alt
+    verified: true
   tags:
   - llm
   - kodeks
@@ -112,23 +92,7 @@
       organi va bank tizimi oʻrtasida elektron maʼlumot almashish tartibi toʻgʻrisida NIZOM > 5-bob. Banklar
       tomonidan soliq organi qarorining bajarilishi
     judged: true
-  - document: -6379336
-    article: '4'
-    within: 1-ilova. Bank hisobvaraqlarini ochish, yuritish va yopish tartibi toʻgʻrisidagi yoʻriqnoma
-      > 1-bob. Umumiy qoidalar
-    judged: alt
-  - document: -5115911
-    article: '20'
-    within: 2-ilova. Soliq toʻlovchining bank hisobvaraqlari bilan bogʻliq operatsiyalar boʻyicha soliq
-      organi va bank tizimi oʻrtasida elektron maʼlumot almashish tartibi toʻgʻrisida NIZOM > 4-bob. Soliq
-      toʻlovchining bank hisobvaraqlari boʻyicha operatsiyalarni toʻxtatib turishi tartibi
-    judged: alt
-  - document: -5115911
-    article: '22'
-    within: 2-ilova. Soliq toʻlovchining bank hisobvaraqlari bilan bogʻliq operatsiyalar boʻyicha soliq
-      organi va bank tizimi oʻrtasida elektron maʼlumot almashish tartibi toʻgʻrisida NIZOM > 4-bob. Soliq
-      toʻlovchining bank hisobvaraqlari boʻyicha operatsiyalarni toʻxtatib turishi tartibi
-    judged: alt
+    verified: true
   tags:
   - llm
   - kodeks
@@ -144,16 +108,6 @@
     article: '110'
     within: UMUMIY QISM > III BOʻLIM. SOLIQ MAJBURIYATINI BAJARISH > 13-bob. Soliq majburiyatining bajarilishini
       taʼminlash
-  - document: -5156631
-    article: '2'
-    within: Ilova. Mahalliy davlat hokimiyati organlari tomonidan soliq toʻlovchilarning soliq toʻlash
-      muddatlarini oʻzgartirish tartibi toʻgʻrisida NIZOM > 1-bob. Umumiy qoidalar
-    judged: true
-  - document: -4674902
-    article: '97'
-    within: UMUMIY QISM > III BOʻLIM. SOLIQ MAJBURIYATINI BAJARISH > 11-bob. Soliqlarni toʻlash muddatlarini
-      oʻzgartirish
-    judged: alt
   tags:
   - llm
   - kodeks
@@ -175,16 +129,7 @@
     within: 3-ilova. Erkin iqtisodiy zonalar hududida soliqlar va bojxona toʻlovlari boʻyicha imtiyozlarni
       qoʻllash tartibi toʻgʻrisida NIZOM > 1-bob. Umumiy qoidalar
     judged: true
-  - document: -3056978
-    article: '4'
-    within: ''
-    judged: true
-  - document: -4674902
-    article: '474'
-    within: MAXSUS QISM > XXI BOʻLIM. SOLIQ TOʻLOVCHILARNING AYRIM TOIFALARIGA VA OʻZBEKISTON RESPUBLIKASINING
-      AYRIM HUDUDLARIDA SOLIQ SOLISHNING OʻZIGA XOS XUSUSIYATLARI > 68-bob. Maxsus iqtisodiy zonalarning
-      ishtirokchilariga soliq solishning oʻziga xos xususiyatlari
-    judged: alt
+    verified: true
   tags:
   - llm
   - kodeks
@@ -200,25 +145,13 @@
     article: '296'
     within: MAXSUS QISM > XII BOʻLIM. FOYDA SOLIGʻI > 42-bob. Soliq toʻlovchilar, soliq solish obyekti
       va soliq bazasi
-  - document: -5206072
-    article: '241'
-    within: 2-ilova. Soliq tekshiruvlarini tashkil etish va oʻtkazish tartibi toʻgʻrisida NIZOM > II BOʻLIM.
-      SOLIQ TEKSHIRUVLARINI OʻTKAZISH TARTIBI > 6-bob. Soliq auditini tashkil etish va oʻtkazish tartibi
-      > 9-§. Huquqni suiisteʼmol qilgan yoki soxta bitimlarga asosan qoʻshilgan qiymat soligʻini hisobga
-      oladigan, ammo toʻlamaydigan soliq toʻlovchilarda tekshirishlarni amalga oshirish
-    judged: true
   - document: -4948595
     article: '4'
     within: 3-ilova. Qoʻshilgan qiymat soligʻi bazasini tovarlarning (xizmatlarning) bozor qiymatidan
       kelib chiqib aniqlash tartibi toʻgʻrisida NIZOM > 2-bob. Qoʻshilgan qiymat soligʻini hisoblash va
       toʻlash chogʻida tovarlarning (xizmatlarning) bozor qiymatini aniqlash tartibi
     judged: alt
-  - document: -4948595
-    article: '5'
-    within: 3-ilova. Qoʻshilgan qiymat soligʻi bazasini tovarlarning (xizmatlarning) bozor qiymatidan
-      kelib chiqib aniqlash tartibi toʻgʻrisida NIZOM > 2-bob. Qoʻshilgan qiymat soligʻini hisoblash va
-      toʻlash chogʻida tovarlarning (xizmatlarning) bozor qiymatini aniqlash tartibi
-    judged: alt
+    verified: true
   tags:
   - llm
   - kodeks
@@ -249,11 +182,6 @@
     article: '372'
     within: MAXSUS QISM > XIII BOʻLIM. JISMONIY SHAXSLARDAN OLINADIGAN DAROMAD SOLIGʻI > 53-bob. Jami
       daromad
-  - document: -3243910
-    article: '8'
-    within: Ilova. Qurilish va uy-joy kommunal xoʻjaligi vazirligi tizimi xodimlari mehnatiga haq toʻlash
-      va ularni moddiy ragʻbatlantirish tartibi toʻgʻrisida NIZOM > 3-bob. Qoʻshimchalar va ustamalar
-    judged: true
   tags:
   - llm
   - kodeks
@@ -270,17 +198,6 @@
     article: '362'
     within: MAXSUS QISM > XII BOʻLIM. FOYDA SOLIGʻI > 51-bob. Yakka tartibdagi tadbirkorlarning daromadlariga
       soliq solishning oʻziga xos xususiyatlari
-  - document: -5739505
-    article: '13'
-    within: 2-ilova. Yakka tartibdagi tadbirkorlar tomonidan soliq solinadigan daromadlar va chegiriladigan
-      xarajatlarning hisobini yuritish tartibi toʻgʻrisida NIZOM > 4-bob. Soliq organlari tomonidan yakka
-      tartibdagi tadbirkorlarning soliq solinadigan daromadlarini aniqlash mezonlari
-    judged: alt
-  - document: -4674902
-    article: '389'
-    within: MAXSUS QISM > XIII BOʻLIM. JISMONIY SHAXSLARDAN OLINADIGAN DAROMAD SOLIGʻI > 56-bob. Soliqni
-      hisoblab chiqarish, soliq hisobotini taqdim etish va toʻlash tartibi
-    judged: alt
   tags:
   - llm
   - kodeks
@@ -295,16 +212,6 @@
     article: '467'
     within: MAXSUS QISM > XX BOʻLIM. AYLANMADAN OLINADIGAN SOLIQ > 66-bob. Aylanmadan olinadigan soliqni
       hisoblab chiqarish va toʻlash
-  - document: -2849450
-    article: null
-    within: 1-ilova. Mikrofirmalar va kichik korxonalar uchun (savdo va umumiy ovqatlanish korxonalaridan
-      tashqari) yagona soliq toʻlovi STAVKALARI
-    judged: true
-  - document: -3085627
-    article: null
-    within: 1-ilova. Mikrofirmalar va kichik korxonalar uchun (savdo va umumiy ovqatlanish korxonalaridan
-      tashqari) yagona soliq toʻlovi STAVKALARI
-    judged: true
   tags:
   - llm
   - kodeks
@@ -321,23 +228,6 @@
     article: '111'
     within: UMUMIY QISM > III BOʻLIM. SOLIQ MAJBURIYATINI BAJARISH > 13-bob. Soliq majburiyatining bajarilishini
       taʼminlash
-  - document: -5115911
-    article: '21'
-    within: 2-ilova. Soliq toʻlovchining bank hisobvaraqlari bilan bogʻliq operatsiyalar boʻyicha soliq
-      organi va bank tizimi oʻrtasida elektron maʼlumot almashish tartibi toʻgʻrisida NIZOM > 4-bob. Soliq
-      toʻlovchining bank hisobvaraqlari boʻyicha operatsiyalarni toʻxtatib turishi tartibi
-    judged: true
-  - document: -4674902
-    article: '113'
-    within: UMUMIY QISM > III BOʻLIM. SOLIQ MAJBURIYATINI BAJARISH > 13-bob. Soliq majburiyatining bajarilishini
-      taʼminlash
-    judged: alt
-  - document: -5115911
-    article: '20'
-    within: 2-ilova. Soliq toʻlovchining bank hisobvaraqlari bilan bogʻliq operatsiyalar boʻyicha soliq
-      organi va bank tizimi oʻrtasida elektron maʼlumot almashish tartibi toʻgʻrisida NIZOM > 4-bob. Soliq
-      toʻlovchining bank hisobvaraqlari boʻyicha operatsiyalarni toʻxtatib turishi tartibi
-    judged: alt
   tags:
   - llm
   - kodeks
@@ -353,10 +243,6 @@
   - document: -4674902
     article: '57'
     within: UMUMIY QISM > I BOʻLIM. UMUMIY QOIDALAR > 4-bob. Ushbu Kodeksda qoʻllaniladigan asosiy tushunchalar
-  - document: -152653
-    article: '53'
-    within: 6-BOB. QISHLOQ XOʻJALIGIGA MOʻLJALLANGAN YERLAR
-    judged: alt
   tags:
   - llm
   - kodeks
@@ -371,11 +257,6 @@
   - document: -4674902
     article: '174'
     within: UMUMIY QISM > V BOʻLIM. SOLIQ NAZORATI > 19-bob. Soliq monitoringi
-  - document: -4674902
-    article: '27'
-    within: UMUMIY QISM > I BOʻLIM. UMUMIY QOIDALAR > 3-bob. Soliq munosabatlarining subyektlari, ularning
-      huquqlari va majburiyatlari
-    judged: true
   tags:
   - llm
   - kodeks
@@ -392,11 +273,6 @@
     article: '86'
     within: UMUMIY QISM > III BOʻLIM. SOLIQ MAJBURIYATINI BAJARISH > 9-bob. Soliq majburiyatini bajarishning
       umumiy qoidalari
-  - document: -4674902
-    article: '103'
-    within: UMUMIY QISM > III BOʻLIM. SOLIQ MAJBURIYATINI BAJARISH > 12-bob. Ortiqcha toʻlangan va ortiqcha
-      undirilgan soliqlarni hisobga olish hamda qaytarish
-    judged: alt
   tags:
   - llm
   - kodeks
@@ -411,11 +287,6 @@
   - document: -4674902
     article: '55'
     within: UMUMIY QISM > I BOʻLIM. UMUMIY QOIDALAR > 4-bob. Ushbu Kodeksda qoʻllaniladigan asosiy tushunchalar
-  - document: -4674902
-    article: '103'
-    within: UMUMIY QISM > III BOʻLIM. SOLIQ MAJBURIYATINI BAJARISH > 12-bob. Ortiqcha toʻlangan va ortiqcha
-      undirilgan soliqlarni hisobga olish hamda qaytarish
-    judged: alt
   tags:
   - llm
   - kodeks
@@ -445,14 +316,6 @@
     article: '412'
     within: MAXSUS QISM > XV BOʻLIM. MOL-MULK SOLIGʻI > 59-bob. Yuridik shaxslarning mol-mulkiga solinadigan
       soliq
-  - document: -5959958
-    article: '4'
-    within: ''
-    judged: true
-  - document: -3480384
-    article: null
-    within: 18-ilova. Jismoniy shaxslarning mol-mulkiga solinadigan soliq STAVKALARI
-    judged: alt
   tags:
   - llm
   - kodeks
@@ -472,6 +335,7 @@
     within: MAXSUS QISM > IV BOʻLIM. YAKKA TARTIBDAGI MEHNATGA OID MUNOSABATLAR > 14-bob. Dam olish vaqti
       > 4-§. Har yilgi mehnat taʼtili
     judged: alt
+    verified: true
   tags:
   - llm
   - kodeks
@@ -487,34 +351,33 @@
     article: '26'
     within: UMUMIY QISM > I BOʻLIM. UMUMIY QOIDALAR > 3-bob. Soliq munosabatlarining subyektlari, ularning
       huquqlari va majburiyatlari
-  - document: -5206072
-    article: '20'
-    within: 2-ilova. Soliq tekshiruvlarini tashkil etish va oʻtkazish tartibi toʻgʻrisida NIZOM > I BOʻLIM.
-      UMUMIY QOIDALAR > 3-bob. Soliq tekshiruvlari ishtirokchilari, ularning huquqlari va majburiyatlari
-    judged: true
   - document: -4672409
     article: '9'
     within: Ilova. Davlat soliq xizmati organlari tomonidan soliq toʻlovchilar faoliyatida amalga oshiriladigan
       soliq nazorati tadbirini videotasvirga olish tartibi toʻgʻrisidagi NIZOM > 3-bob. Nazorat tadbirlarini
       videotasvirga olish
     judged: true
+    verified: true
   - document: -5206072
     article: '13'
     within: Ilova. Davlat soliq xizmati organlari tomonidan soliq toʻlovchilar faoliyatida amalga oshiriladigan
       soliq nazorati tadbirini videotasvirga olish tartibi toʻgʻrisida NIZOM > 3-bob. Nazorat tadbirlarini
       videotasvirga olish
     judged: true
+    verified: true
   - document: -5206072
     article: '145'
     within: 2-ilova. Soliq tekshiruvlarini tashkil etish va oʻtkazish tartibi toʻgʻrisida NIZOM > II BOʻLIM.
       SOLIQ TEKSHIRUVLARINI OʻTKAZISH TARTIBI > 6-bob. Soliq auditini tashkil etish va oʻtkazish tartibi
       > 3-§. Hudud va binolarni koʻzdan kechirish
     judged: alt
+    verified: true
   - document: -4674902
     article: '145'
     within: UMUMIY QISM > V BOʻLIM. SOLIQ NAZORATI > 17-bob. Soliq nazorati toʻgʻrisidagi umumiy qoidalar.
       Soliq tekshiruvlari
     judged: alt
+    verified: true
   tags:
   - llm
   - kodeks
@@ -530,17 +393,6 @@
     article: '349'
     within: MAXSUS QISM > XII BOʻLIM. FOYDA SOLIGʻI > 49-bob. Faoliyatini doimiy muassasa orqali amalga
       oshirayotgan norezidentlarning daromadlariga soliq solishning oʻziga xos xususiyatlari
-  - document: -4674902
-    article: '472'
-    within: MAXSUS QISM > XXI BOʻLIM. SOLIQ TOʻLOVCHILARNING AYRIM TOIFALARIGA VA OʻZBEKISTON RESPUBLIKASINING
-      AYRIM HUDUDLARIDA SOLIQ SOLISHNING OʻZIGA XOS XUSUSIYATLARI > 67-bob. Toʻgʻridan-toʻgʻri xususiy
-      chet el investitsiyalari ishtirokidagi yuridik shaxslarga soliq solishning oʻziga xos xususiyatlari
-    judged: true
-  - document: -4674902
-    article: '281'
-    within: MAXSUS QISM > X BOʻLIM. QOʻSHILGAN QIYMAT SOLIGʻI > 39-bob. Elektron shaklda xizmatlar koʻrsatuvchi
-      chet el yuridik shaxslariga soliq solishning oʻziga xos xususiyatlari
-    judged: alt
   tags:
   - llm
   - kodeks
@@ -557,38 +409,12 @@
     within: UMUMIY QISM > IX BOʻLIM. SOLIQ ORGANLARINING HUJJATLARI VA ULAR MANSABDOR SHAXSLARINING HARAKATLARI
       (HARAKATSIZLIGI) USTIDAN SHIKOYAT BERISH > 30-bob. Soliq organlarining hujjatlari va ular mansabdor
       shaxslarining harakatlari (harakatsizligi) ustidan shikoyat berish tartibi
-  - document: -97664
-    article: '324'
-    within: MAXSUS QISM > TOʻRTINCHI BOʻLIM MAʼMURIY HUQUQBUZARLIK TOʻGʻRISIDAGI ISHLARNI YURITISH > XXIV
-      BOB. MAʼMURIY HUQUQBUZARLIK TOʻGʻRISIDAGI ISH YUZASIDAN QAROR (AJRIM) USTIDAN SHIKOYAT BERISH VA
-      PROTEST BILDIRISH
-    judged: true
-  - document: -7008443
-    article: '23'
-    within: ''
-    judged: true
-  - document: -6881533
-    article: '26'
-    within: ''
-    judged: true
   - document: -4674902
     article: '105'
     within: UMUMIY QISM > III BOʻLIM. SOLIQ MAJBURIYATINI BAJARISH > 12-bob. Ortiqcha toʻlangan va ortiqcha
       undirilgan soliqlarni hisobga olish hamda qaytarish
     judged: alt
-  - document: -2921799
-    article: 42⁴
-    within: Ilova. Budjet tizimi budjetlari daromadlarining kassa ijrosi toʻgʻrisidagi YOʻRIQNOMA > 3-bob.
-      Toʻlovlar kontingentini “OʻRIMV” ATda aks ettirish orqali YAGʻHga kiritish va ortiqcha toʻlangan
-      yoki undirilgan toʻlovlarni qaytarish > 3-§. Muddatida qaytarilmagan ortiqcha toʻlangan yoki ortiqcha
-      undirilgan soliq summasiga foiz hisoblash va toʻlab berish tartibi
-    judged: alt
-  - document: -3967898
-    article: '15'
-    within: Ilova. Oʻzbekiston Respublikasi Soliq qoʻmitasining Moddiy yordam, ijtimoiy himoya, soliq
-      organlarini rivojlantirish va koʻzda tutilmagan xarajatlar maxsus jamgʻarmasi toʻgʻrisida NIZOM
-      > 4-bob. Maxsus jamgʻarma mablagʻlaridan foydalanish
-    judged: alt
+    verified: true
   tags:
   - llm
   - kodeks
@@ -608,6 +434,7 @@
     article: '1'
     within: ''
     judged: true
+    verified: true
   tags:
   - llm
   - kodeks
@@ -624,11 +451,6 @@
     article: '388'
     within: MAXSUS QISM > XIII BOʻLIM. JISMONIY SHAXSLARDAN OLINADIGAN DAROMAD SOLIGʻI > 56-bob. Soliqni
       hisoblab chiqarish, soliq hisobotini taqdim etish va toʻlash tartibi
-  - document: -4674902
-    article: '386'
-    within: MAXSUS QISM > XIII BOʻLIM. JISMONIY SHAXSLARDAN OLINADIGAN DAROMAD SOLIGʻI > 56-bob. Soliqni
-      hisoblab chiqarish, soliq hisobotini taqdim etish va toʻlash tartibi
-    judged: alt
   tags:
   - llm
   - kodeks
@@ -648,6 +470,7 @@
     within: MAXSUS QISM > XV BOʻLIM. MOL-MULK SOLIGʻI > 60-bob. Jismoniy shaxslardan olinadigan mol-mulk
       soligʻi
     judged: true
+    verified: true
   tags:
   - llm
   - kodeks
@@ -664,24 +487,17 @@
     within: MAXSUS QISM > XIII BOʻLIM. JISMONIY SHAXSLARDAN OLINADIGAN DAROMAD SOLIGʻI > 52-bob. Soliq
       toʻlovchilar, soliq solish obyekti va soliq bazasi
   - document: -4674902
-    article: '6'
-    within: UMUMIY QISM > I BOʻLIM. UMUMIY QOIDALAR > 1-bob. Asosiy qoidalar
-    judged: true
-  - document: -4674902
-    article: '379'
-    within: MAXSUS QISM > XIII BOʻLIM. JISMONIY SHAXSLARDAN OLINADIGAN DAROMAD SOLIGʻI > 54-bob. Soliq
-      imtiyozlari
-    judged: true
-  - document: -4674902
     article: '400'
     within: MAXSUS QISM > XIII BOʻLIM. JISMONIY SHAXSLARDAN OLINADIGAN DAROMAD SOLIGʻI > 57-bob. Jami
       yillik daromad toʻgʻrisidagi deklaratsiya asosida daromadlarga soliq solish
     judged: alt
+    verified: true
   - document: -4674902
     article: '382'
     within: MAXSUS QISM > XIII BOʻLIM. JISMONIY SHAXSLARDAN OLINADIGAN DAROMAD SOLIGʻI > 55-bob. Soliq
       stavkalari. Soliq davri
     judged: alt
+    verified: true
   tags:
   - llm
   - kodeks
@@ -712,19 +528,11 @@
     article: '94'
     within: UMUMIY QISM > III BOʻLIM. SOLIQ MAJBURIYATINI BAJARISH > 10-bob. Soliq majburiyatini bajarish
   - document: -4674902
-    article: '96'
-    within: UMUMIY QISM > III BOʻLIM. SOLIQ MAJBURIYATINI BAJARISH > 10-bob. Soliq majburiyatini bajarish
-    judged: true
-  - document: -4674902
     article: '87'
     within: UMUMIY QISM > III BOʻLIM. SOLIQ MAJBURIYATINI BAJARISH > 9-bob. Soliq majburiyatini bajarishning
       umumiy qoidalari
     judged: alt
-  - document: -4888800
-    article: '4'
-    within: Ilova. Undirilishi umidsiz deb eʼtirof etilgan soliq qarzini hisobdan chiqarish tartibi toʻgʻrisidagi
-      NIZOM > 2-bob. Undirilishi umidsiz deb eʼtirof etiladigan soliq qarzi
-    judged: alt
+    verified: true
   tags:
   - llm
   - kodeks
@@ -744,6 +552,7 @@
     within: MAXSUS QISM > XIII BOʻLIM. JISMONIY SHAXSLARDAN OLINADIGAN DAROMAD SOLIGʻI > 57-bob. Jami
       yillik daromad toʻgʻrisidagi deklaratsiya asosida daromadlarga soliq solish
     judged: alt
+    verified: true
   tags:
   - llm
   - kodeks
@@ -758,10 +567,6 @@
   - document: -4674902
     article: '10'
     within: UMUMIY QISM > I BOʻLIM. UMUMIY QOIDALAR > 1-bob. Asosiy qoidalar
-  - document: -4674902
-    article: '7'
-    within: UMUMIY QISM > I BOʻLIM. UMUMIY QOIDALAR > 1-bob. Asosiy qoidalar
-    judged: true
   tags:
   - llm
   - kodeks
@@ -782,18 +587,14 @@
       xarajatlarning hisobini yuritish tartibi toʻgʻrisida NIZOM > 7-bob. Tovarlar (xizmatlar)ni realizatsiya
       qilishdan olingan daromaddan chegiriladigan xarajatlar
     judged: true
+    verified: true
   - document: -8263938
     article: '30'
     within: 1-ilova. Davlat organlari va tashkilotlari xodimlarini, shuningdek, Oʻzbekiston Respublikasi
       delegatsiyalarini chet davlatlarga xizmat safariga yuborish hamda xizmat safari xarajatlarini moliyalashtirish
       tartibi toʻgʻrisida NIZOM > 5-bob. Transport xarajatlari uchun mablagʻlar ajratish
     judged: alt
-  - document: -8263938
-    article: '51'
-    within: 1-ilova. Davlat organlari va tashkilotlari xodimlarini, shuningdek, Oʻzbekiston Respublikasi
-      delegatsiyalarini chet davlatlarga xizmat safariga yuborish hamda xizmat safari xarajatlarini moliyalashtirish
-      tartibi toʻgʻrisida NIZOM > 7-bob. Hisobot
-    judged: alt
+    verified: true
   tags:
   - llm
   - kodeks
@@ -809,11 +610,6 @@
     article: '23'
     within: UMUMIY QISM > I BOʻLIM. UMUMIY QOIDALAR > 3-bob. Soliq munosabatlarining subyektlari, ularning
       huquqlari va majburiyatlari
-  - document: -4674902
-    article: '386'
-    within: MAXSUS QISM > XIII BOʻLIM. JISMONIY SHAXSLARDAN OLINADIGAN DAROMAD SOLIGʻI > 56-bob. Soliqni
-      hisoblab chiqarish, soliq hisobotini taqdim etish va toʻlash tartibi
-    judged: alt
   tags:
   - llm
   - kodeks
@@ -829,18 +625,6 @@
     article: '142'
     within: UMUMIY QISM > V BOʻLIM. SOLIQ NAZORATI > 17-bob. Soliq nazorati toʻgʻrisidagi umumiy qoidalar.
       Soliq tekshiruvlari
-  - document: -7231780
-    article: '26'
-    within: 4-ilova. Oʻzbekiston Respublikasi Prezidentining ayrim hujjatlariga kiritilayotgan oʻzgartirishlar.
-      “Nazorat qiluvchi organlar tomonidan tadbirkorlik subyektlari faoliyatida tekshiruvlar va profilaktika
-      tadbirlarini oʻtkazish tartibi toʻgʻrisida NIZOM > 4-bob. Tekshiruvlarni oʻtkazish
-    judged: true
-  - document: -7231780
-    article: '25'
-    within: 4-ilova. Oʻzbekiston Respublikasi Prezidentining ayrim hujjatlariga kiritilayotgan oʻzgartirishlar.
-      “Nazorat qiluvchi organlar tomonidan tadbirkorlik subyektlari faoliyatida tekshiruvlar va profilaktika
-      tadbirlarini oʻtkazish tartibi toʻgʻrisida NIZOM > 4-bob. Tekshiruvlarni oʻtkazish
-    judged: true
   tags:
   - llm
   - kodeks
@@ -856,10 +640,6 @@
     article: '353'
     within: MAXSUS QISM > XII BOʻLIM. FOYDA SOLIGʻI > 50-bob. Norezidentlarning doimiy muassasa bilan
       bogʻliq boʻlmagan daromadlariga soliq solishning oʻziga xos xususiyatlari
-  - document: -180552
-    article: '781'
-    within: IKKINCHI QISM > 3-kichik boʻlim. MAJBURIYATLARNING AYRIM TURLARI > 44-bob. Bank hisobvaragʻi
-    judged: true
   tags:
   - llm
   - kodeks
@@ -875,20 +655,11 @@
     within: UMUMIY QISM > I BOʻLIM. UMUMIY QOIDALAR > 3-bob. Soliq munosabatlarining subyektlari, ularning
       huquqlari va majburiyatlari
   - document: -4674902
-    article: '402'
-    within: MAXSUS QISM > XIV BOʻLIM. IJTIMOIY SOLIQ > 58-bob. Ijtimoiy soliqni hisoblab chiqarish va
-      toʻlash
-    judged: true
-  - document: -4674902
-    article: '385'
-    within: MAXSUS QISM > XIII BOʻLIM. JISMONIY SHAXSLARDAN OLINADIGAN DAROMAD SOLIGʻI > 56-bob. Soliqni
-      hisoblab chiqarish, soliq hisobotini taqdim etish va toʻlash tartibi
-    judged: true
-  - document: -4674902
     article: '364'
     within: MAXSUS QISM > XIII BOʻLIM. JISMONIY SHAXSLARDAN OLINADIGAN DAROMAD SOLIGʻI > 52-bob. Soliq
       toʻlovchilar, soliq solish obyekti va soliq bazasi
     judged: alt
+    verified: true
   tags:
   - llm
   - kodeks
@@ -904,24 +675,13 @@
     article: '188'
     within: UMUMIY QISM > VI BOʻLIM. TRANSFERT NARXNI BELGILASHDA SOLIQ NAZORATI > 23-bob. Transfert narxni
       belgilashda soliq nazoratida foydalaniladigan usullar
-  - document: -8206406
-    article: '14'
-    within: Ilova. Soliq bazasini ayrim tovarlarning bozor narxidan kelib chiqqan holda aniqlash tartibi
-      toʻgʻrisida NIZOM > 2-bob. Soliq bazasini tovarlarning bozor narxidan kelib chiqqan holda aniqlash
-      uchun foydalanadigan usul va uni qoʻllash tartibi
-    judged: true
   - document: -4948595
     article: '6'
     within: 3-ilova. Qoʻshilgan qiymat soligʻi bazasini tovarlarning (xizmatlarning) bozor qiymatidan
       kelib chiqib aniqlash tartibi toʻgʻrisida NIZOM > 2-bob. Qoʻshilgan qiymat soligʻini hisoblash va
       toʻlash chogʻida tovarlarning (xizmatlarning) bozor qiymatini aniqlash tartibi
     judged: true
-  - document: -4948595
-    article: '9'
-    within: 3-ilova. Qoʻshilgan qiymat soligʻi bazasini tovarlarning (xizmatlarning) bozor qiymatidan
-      kelib chiqib aniqlash tartibi toʻgʻrisida NIZOM > 2-bob. Qoʻshilgan qiymat soligʻini hisoblash va
-      toʻlash chogʻida tovarlarning (xizmatlarning) bozor qiymatini aniqlash tartibi
-    judged: alt
+    verified: true
   tags:
   - llm
   - kodeks
@@ -951,15 +711,6 @@
     article: '116'
     within: UMUMIY QISM > III BOʻLIM. SOLIQ MAJBURIYATINI BAJARISH > 14-bob. Soliq qarzini uzish toʻgʻrisidagi
       talabnoma
-  - document: -4674902
-    article: '115'
-    within: UMUMIY QISM > III BOʻLIM. SOLIQ MAJBURIYATINI BAJARISH > 14-bob. Soliq qarzini uzish toʻgʻrisidagi
-      talabnoma
-    judged: true
-  - document: -4674902
-    article: '55'
-    within: UMUMIY QISM > I BOʻLIM. UMUMIY QOIDALAR > 4-bob. Ushbu Kodeksda qoʻllaniladigan asosiy tushunchalar
-    judged: alt
   tags:
   - llm
   - kodeks
@@ -974,15 +725,11 @@
     article: '377'
     within: MAXSUS QISM > XIII BOʻLIM. JISMONIY SHAXSLARDAN OLINADIGAN DAROMAD SOLIGʻI > 53-bob. Jami
       daromad
-  - document: -4674902
-    article: '369'
-    within: MAXSUS QISM > XIII BOʻLIM. JISMONIY SHAXSLARDAN OLINADIGAN DAROMAD SOLIGʻI > 53-bob. Jami
-      daromad
-    judged: true
   - document: -8052870
     article: '2'
     within: II. Moliyaviy resurslar
     judged: true
+    verified: true
   tags:
   - llm
   - kodeks
@@ -1001,14 +748,12 @@
     article: '15'
     within: ''
     judged: true
-  - document: -5115911
-    article: '1'
-    within: 1-ilova. Soliq monitoringini oʻtkazish tartibi toʻgʻrisida NIZOM > 1-bob. Umumiy qoidalar
-    judged: true
+    verified: true
   - document: -5115911
     article: '3'
     within: 1-ilova. Soliq monitoringini oʻtkazish tartibi toʻgʻrisida NIZOM > 1-bob. Umumiy qoidalar
     judged: alt
+    verified: true
   tags:
   - llm
   - kodeks
@@ -1024,10 +769,6 @@
     article: 289²
     within: MAXSUS QISM > XI BOʻLIM. AKSIZ SOLIGʻI > 40-bob. Soliq toʻlovchilar, soliq solish obyekti
       va soliq bazasi
-  - document: -7949060
-    article: '12'
-    within: 3-bob. Budjetlararo munosabatlarni tartibga solishning oʻziga xos xususiyatlari
-    judged: true
   tags:
   - llm
   - kodeks
@@ -1047,14 +788,12 @@
     within: UMUMIY QISM > III BOʻLIM. SOLIQ MAJBURIYATINI BAJARISH > 11-bob. Soliqlarni toʻlash muddatlarini
       oʻzgartirish
     judged: true
+    verified: true
   - document: -4745555
     article: '2'
     within: ''
     judged: true
-  - document: -6402529
-    article: '2'
-    within: I bob. Umumiy masalalar
-    judged: alt
+    verified: true
   tags:
   - llm
   - kodeks
@@ -1088,10 +827,6 @@
     article: '268'
     within: MAXSUS QISM > X BOʻLIM. QOʻSHILGAN QIYMAT SOLIGʻI > 37-bob. Soliqni hisoblab chiqarish va
       toʻlash tartibi. Soliq hisobotini taqdim etish tartibi.
-  - document: -8236831
-    article: '6'
-    within: IV. Qoʻshilgan qiymat soligʻi boʻyicha soddalashtirilgan tartibni joriy etish
-    judged: alt
   tags:
   - llm
   - kodeks
@@ -1112,16 +847,19 @@
     within: Ilova. Soliq organi tomonidan soliq hisobotini shakllantirish va tuzish hamda soliq toʻlovchilar
       tomonidan soliq hisobotini tasdiqlash SXEMASI
     judged: true
+    verified: true
   - document: -5115911
     article: null
     within: Ilova. Soliq organi tomonidan soliq hisobotini shakllantirish va tuzish hamda soliq toʻlovchilar
       tomonidan soliq hisobotini tasdiqlash SXEMASI
     judged: alt
+    verified: true
   - document: -5115911
     article: '15'
     within: Ilova. Soliq organlari tomonidan soliq hisobotini shakllantirish va tuzish tartibi toʻgʻrisida
       NIZOM > 5-bob. Soliq toʻlovchilarning majburiyatlari
     judged: alt
+    verified: true
   tags:
   - llm
   - kodeks
@@ -1138,22 +876,10 @@
     within: UMUMIY QISM > V BOʻLIM. SOLIQ NAZORATI > 18-bob. Soliq tekshiruvlarining va soliq nazorati
       boshqa choralarining huquqiy oqibatlari
   - document: -4674902
-    article: '114'
-    within: UMUMIY QISM > III BOʻLIM. SOLIQ MAJBURIYATINI BAJARISH > 13-bob. Soliq majburiyatining bajarilishini
-      taʼminlash
-    judged: true
-  - document: -4674902
-    article: '55'
-    within: UMUMIY QISM > I BOʻLIM. UMUMIY QOIDALAR > 4-bob. Ushbu Kodeksda qoʻllaniladigan asosiy tushunchalar
-    judged: true
-  - document: -4674902
     article: '121'
     within: UMUMIY QISM > III BOʻLIM. SOLIQ MAJBURIYATINI BAJARISH > 15-bob. Soliq qarzini undirish
     judged: alt
-  - document: -4674902
-    article: '123'
-    within: UMUMIY QISM > III BOʻLIM. SOLIQ MAJBURIYATINI BAJARISH > 15-bob. Soliq qarzini undirish
-    judged: alt
+    verified: true
   tags:
   - llm
   - kodeks
@@ -1169,14 +895,6 @@
     article: '237'
     within: MAXSUS QISM > X BOʻLIM. QOʻSHILGAN QIYMAT SOLIGʻI > 31-bob. Soliq toʻlovchilar va soliq solish
       obyekti
-  - document: -4131684
-    article: '8'
-    within: ''
-    judged: true
-  - document: -7681520
-    article: '5'
-    within: III. Tadbirkorlik subyektlari oʻrtasida teng sharoitlarni taʼminlash
-    judged: alt
   tags:
   - llm
   - kodeks
@@ -1197,6 +915,7 @@
     within: MAXSUS QISM > X BOʻLIM. QOʻSHILGAN QIYMAT SOLIGʻI > 38-bob. Alohida hollarda soliq solishning
       oʻziga xos xususiyatlari
     judged: true
+    verified: true
   tags:
   - llm
   - kodeks
@@ -1213,11 +932,6 @@
     article: '420'
     within: MAXSUS QISM > XV BOʻLIM. MOL-MULK SOLIGʻI > 60-bob. Jismoniy shaxslardan olinadigan mol-mulk
       soligʻi
-  - document: -4674902
-    article: '422'
-    within: MAXSUS QISM > XV BOʻLIM. MOL-MULK SOLIGʻI > 60-bob. Jismoniy shaxslardan olinadigan mol-mulk
-      soligʻi
-    judged: true
   tags:
   - llm
   - kodeks

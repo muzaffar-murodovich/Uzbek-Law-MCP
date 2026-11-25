@@ -1,0 +1,1382 @@
+{
+ "modes": {
+  "fts": {
+   "overall": {
+    "n": 50,
+    "recall_at_1": 0.42,
+    "recall_at_5": 0.5,
+    "recall_at_10": 0.56,
+    "mrr": 0.4570238095238095
+   },
+   "by_tag": {
+    "aniq": {
+     "n": 36,
+     "recall_at_1": 0.5555555555555556,
+     "recall_at_5": 0.6388888888888888,
+     "recall_at_10": 0.6944444444444444,
+     "mrr": 0.5930886243386243
+    },
+    "kodeks": {
+     "n": 50,
+     "recall_at_1": 0.42,
+     "recall_at_5": 0.5,
+     "recall_at_10": 0.56,
+     "mrr": 0.4570238095238095
+    },
+    "llm": {
+     "n": 50,
+     "recall_at_1": 0.42,
+     "recall_at_5": 0.5,
+     "recall_at_10": 0.56,
+     "mrr": 0.4570238095238095
+    },
+    "noaniq": {
+     "n": 14,
+     "recall_at_1": 0.07142857142857142,
+     "recall_at_5": 0.14285714285714285,
+     "recall_at_10": 0.21428571428571427,
+     "mrr": 0.10714285714285714
+    }
+   },
+   "ms_per_query": 1772.9
+  },
+  "vector": {
+   "overall": {
+    "n": 50,
+    "recall_at_1": 0.3,
+    "recall_at_5": 0.66,
+    "recall_at_10": 0.7,
+    "mrr": 0.4463333333333333
+   },
+   "by_tag": {
+    "aniq": {
+     "n": 36,
+     "recall_at_1": 0.3611111111111111,
+     "recall_at_5": 0.7777777777777778,
+     "recall_at_10": 0.8333333333333334,
+     "mrr": 0.5365740740740741
+    },
+    "kodeks": {
+     "n": 50,
+     "recall_at_1": 0.3,
+     "recall_at_5": 0.66,
+     "recall_at_10": 0.7,
+     "mrr": 0.4463333333333333
+    },
+    "llm": {
+     "n": 50,
+     "recall_at_1": 0.3,
+     "recall_at_5": 0.66,
+     "recall_at_10": 0.7,
+     "mrr": 0.4463333333333333
+    },
+    "noaniq": {
+     "n": 14,
+     "recall_at_1": 0.14285714285714285,
+     "recall_at_5": 0.35714285714285715,
+     "recall_at_10": 0.35714285714285715,
+     "mrr": 0.21428571428571427
+    }
+   },
+   "ms_per_query": 487.3
+  },
+  "hybrid": {
+   "overall": {
+    "n": 50,
+    "recall_at_1": 0.46,
+    "recall_at_5": 0.78,
+    "recall_at_10": 0.78,
+    "mrr": 0.5806666666666667
+   },
+   "by_tag": {
+    "aniq": {
+     "n": 36,
+     "recall_at_1": 0.5555555555555556,
+     "recall_at_5": 0.9444444444444444,
+     "recall_at_10": 0.9444444444444444,
+     "mrr": 0.7023148148148148
+    },
+    "kodeks": {
+     "n": 50,
+     "recall_at_1": 0.46,
+     "recall_at_5": 0.78,
+     "recall_at_10": 0.78,
+     "mrr": 0.5806666666666667
+    },
+    "llm": {
+     "n": 50,
+     "recall_at_1": 0.46,
+     "recall_at_5": 0.78,
+     "recall_at_10": 0.78,
+     "mrr": 0.5806666666666667
+    },
+    "noaniq": {
+     "n": 14,
+     "recall_at_1": 0.21428571428571427,
+     "recall_at_5": 0.35714285714285715,
+     "recall_at_10": 0.35714285714285715,
+     "mrr": 0.26785714285714285
+    }
+   },
+   "ms_per_query": 1846.4
+  }
+ },
+ "questions": {
+  "sk-001": {
+   "question": "Men chetdan bir nechta turdagi mahsulot olib kirsam, soliq hammasiga bitta qilib chiqadimi yoki har bir turiga alohida hisoblanadimi?",
+   "ranks": {
+    "fts": null,
+    "vector": null,
+    "hybrid": null
+   },
+   "top3": {
+    "fts": [
+     "Vazirlar Mahkamasi qarori 266: Bojxona hududida qayta ishlangan tayyor mahsulotlarni erkin muomalaga chiqarishda tovarlarning bojxona qiymatini belgilash va ul… 2",
+     "Soliq kodeksi 36",
+     "Hujjat 2773: Bojxona yuk deklaratsiyasini toʻldirish tartibi toʻgʻrisidagi yoʻriqnomani tasdiqlash haqida 88"
+    ],
+    "vector": [
+     "Hujjat 3343: Oʻzbekiston Respublikasiga olib kiriladigan tovarlarga toʻlanishi lozim boʻlgan bojxona toʻlovlari miqdorini aniqlash boʻyicha dastlabki qarorni q… 2",
+     "Ayrim turdagi tovarlarni bojxona chegarasi orqali olib oʻtish tartibini yanada takomillashtirish chora-tadbirlari toʻgʻrisidagi Vazirlar Mahkamasi qarori (244) 10",
+     "Vazirlar Mahkamasi qarori 160: Oʻzbekiston Respublikasi bojxona hududiga olib kiriladigan tovarning bojxona qiymatini aniqlash tartibi toʻgʻrisidagi nizomni ta… 25¹"
+    ],
+    "hybrid": [
+     "Hujjat 3343: Oʻzbekiston Respublikasiga olib kiriladigan tovarlarga toʻlanishi lozim boʻlgan bojxona toʻlovlari miqdorini aniqlash boʻyicha dastlabki qarorni q… 2",
+     "Ayrim turdagi tovarlarni bojxona chegarasi orqali olib oʻtish tartibini yanada takomillashtirish chora-tadbirlari toʻgʻrisidagi Vazirlar Mahkamasi qarori (244) 10",
+     "Vazirlar Mahkamasi qarori 160: Oʻzbekiston Respublikasi bojxona hududiga olib kiriladigan tovarning bojxona qiymatini aniqlash tartibi toʻgʻrisidagi nizomni ta… 25¹"
+    ]
+   }
+  },
+  "sk-002": {
+   "question": "Menda 12 tonna yuk ko‘taradigan tirkama bor. Shu uchun alohida to‘lov qilinadimi, yoki ayrim mashinalar bundan ozod bo‘ladimi?",
+   "ranks": {
+    "fts": 6,
+    "vector": null,
+    "hybrid": null
+   },
+   "top3": {
+    "fts": [
+     "Ayrim turdagi tovarlar uchun utilizatsiya yigʻimini joriy etish toʻgʻrisidagi Vazirlar Mahkamasi qarori (347) None",
+     "Respublikada urugʻlik kartoshkasini yetishtirishni yanada rivojlantirish chora-tadbirlari toʻgʻrisidagi Prezident qarori (PQ-3558) None",
+     "2024-yil uchun Oʻzbekiston Respublikasining Davlat budjeti toʻgʻrisidagi Qonun (OʻRQ-886) None"
+    ],
+    "vector": [
+     "2024-yil uchun Oʻzbekiston Respublikasining Davlat budjeti toʻgʻrisidagi Qonun (OʻRQ-886) None",
+     "Oʻzbekiston Respublikasining Yagona milliy baholash standartini tasdiqlash toʻgʻrisidagi Buyruq (3487) 2",
+     "Vazirlar Mahkamasi qarori 191: “Avtotransport vositalari konstruksiyasining foydalanish shartlari boʻyicha xavfsizligi toʻgʻrisida”gi umumiy texnik reglamentni… None"
+    ],
+    "hybrid": [
+     "2024-yil uchun Oʻzbekiston Respublikasining Davlat budjeti toʻgʻrisidagi Qonun (OʻRQ-886) None",
+     "Oʻzbekiston Respublikasining Yagona milliy baholash standartini tasdiqlash toʻgʻrisidagi Buyruq (3487) 2",
+     "Vazirlar Mahkamasi qarori 191: “Avtotransport vositalari konstruksiyasining foydalanish shartlari boʻyicha xavfsizligi toʻgʻrisida”gi umumiy texnik reglamentni… None"
+    ]
+   }
+  },
+  "sk-003": {
+   "question": "Agar hisob-kitobimda soliq summasi manfiy chiqib qolsa, o‘sha pulni keyin qaytarib olishim yoki qoplatishim mumkinmi?",
+   "ranks": {
+    "fts": null,
+    "vector": 2,
+    "hybrid": 2
+   },
+   "top3": {
+    "fts": [
+     "Hujjat 2771: Budjet tizimi budjetlari daromadlarining kassa ijrosi toʻgʻrisidagi yoʻriqnomani tasdiqlash haqida 42⁴",
+     "Vazirlar Mahkamasi qarori 653: Chet davlat fuqarolari tomonidan Oʻzbekiston Respublikasi hududidan chiqib ketishda avval xarid qilingan tovarlar uchun qoʻshilg… 25¹⁰",
+     "Hujjat 2771: Budjet tizimi budjetlari daromadlarining kassa ijrosi toʻgʻrisidagi yoʻriqnomani tasdiqlash haqida 34¹"
+    ],
+    "vector": [
+     "Vazirlar Mahkamasi qarori 489: Qoʻshilgan qiymat soligʻi hamda chet el yuridik shaxslari bilan bogʻliq soliq maʼmurchiligini takomillashtirish chora-tadbirlari… None",
+     "Soliq kodeksi 274",
+     "Soliq kodeksi 105"
+    ],
+    "hybrid": [
+     "Vazirlar Mahkamasi qarori 489: Qoʻshilgan qiymat soligʻi hamda chet el yuridik shaxslari bilan bogʻliq soliq maʼmurchiligini takomillashtirish chora-tadbirlari… 39",
+     "Soliq kodeksi 274",
+     "Soliq kodeksi 105"
+    ]
+   }
+  },
+  "sk-004": {
+   "question": "Men yakka tartibda ishlayman, yiliga tushumim 1 milliard so‘mdan oshsa, foydadan ham alohida soliq to‘lashim kerak bo‘ladimi?",
+   "ranks": {
+    "fts": 1,
+    "vector": 1,
+    "hybrid": 1
+   },
+   "top3": {
+    "fts": [
+     "Soliq kodeksi 462",
+     "Yakka tartibdagi tadbirkorlar hamda oʻzini oʻzi band qilgan shaxslar uchun qulay shart-sharoit yaratish chora-tadbirlari toʻgʻrisidagi Prezident qarori (PQ-247) 5",
+     "Soliq kodeksi 483"
+    ],
+    "vector": [
+     "Soliq kodeksi 462",
+     "Prezident qarori PQ-4086: Oʻzbekiston Respublikasining 2019-yilgi asosiy makroiqtisodiy koʻrsatkichlari prognozi va Davlat budjeti parametrlari hamda 2020-2021… 8",
+     "Vazirlar Mahkamasi qarori 707: Yakka tartibdagi tadbirkorlar tomonidan yollangan xodimlarni davlat soliq xizmati organlarida hisobga qoʻyish hamda soliq solina… 17"
+    ],
+    "hybrid": [
+     "Soliq kodeksi 462",
+     "Yakka tartibdagi tadbirkorlar hamda oʻzini oʻzi band qilgan shaxslar uchun qulay shart-sharoit yaratish chora-tadbirlari toʻgʻrisidagi Prezident qarori (PQ-247) 5",
+     "Prezident qarori PQ-4086: Oʻzbekiston Respublikasining 2019-yilgi asosiy makroiqtisodiy koʻrsatkichlari prognozi va Davlat budjeti parametrlari hamda 2020-2021… 8"
+    ]
+   }
+  },
+  "sk-005": {
+   "question": "Soliqdan muammo chiqib, bankdagi pulimni ishlatishni toʻxtatib qoʻyishsa, shu paytda men bankda yangi karta yoki hisob ochib olsam boʻladimi?",
+   "ranks": {
+    "fts": 1,
+    "vector": 2,
+    "hybrid": 1
+   },
+   "top3": {
+    "fts": [
+     "Soliq kodeksi 113",
+     "Soliq maʼmuriyatchiligini yanada takomillashtirish boʻyicha qoʻshimcha chora-tadbirlar toʻgʻrisidagi Vazirlar Mahkamasi qarori (736) 25",
+     "Soliq kodeksi 112"
+    ],
+    "vector": [
+     "Hujjat 3420: Bank hisobvaraqlarini ochish, yuritish va yopish tartibi toʻgʻrisidagi yoʻriqnomani tasdiqlash haqida 4",
+     "Soliq maʼmuriyatchiligini yanada takomillashtirish boʻyicha qoʻshimcha chora-tadbirlar toʻgʻrisidagi Vazirlar Mahkamasi qarori (736) 25",
+     "Davlat soliq xizmati toʻgʻrisidagi Qonun (474-I) 5"
+    ],
+    "hybrid": [
+     "Soliq maʼmuriyatchiligini yanada takomillashtirish boʻyicha qoʻshimcha chora-tadbirlar toʻgʻrisidagi Vazirlar Mahkamasi qarori (736) 25",
+     "Soliq kodeksi 113",
+     "Hujjat 3420: Bank hisobvaraqlarini ochish, yuritish va yopish tartibi toʻgʻrisidagi yoʻriqnomani tasdiqlash haqida 4"
+    ]
+   }
+  },
+  "sk-006": {
+   "question": "Soliqni bir necha kun kechikib toʻlasam, oʻsha kechikkan kunlar uchun alohida qoʻshimcha pul ham chiqadimi?",
+   "ranks": {
+    "fts": 1,
+    "vector": 1,
+    "hybrid": 1
+   },
+   "top3": {
+    "fts": [
+     "Soliq kodeksi 110",
+     "Xoʻjalik yurituvchi subyektlar faoliyatining shartnomaviy-huquqiy bazasi toʻgʻrisidagi Qonun (670-I) 25",
+     "Vazirlar Mahkamasi qarori 279: Davlat mulki obyektlarini xususiylashtirish tartibi toʻgʻrisidagi nizomlarni tasdiqlash haqida 38"
+    ],
+    "vector": [
+     "Soliq kodeksi 110",
+     "Soliq kodeksi 102",
+     "Hujjat 4: Sudlar tomonidan soliq qonunchiligini qoʻllashning ayrim masalalari haqida 6"
+    ],
+    "hybrid": [
+     "Soliq kodeksi 110",
+     "Soliq kodeksi 102",
+     "Soliq kodeksi 97"
+    ]
+   }
+  },
+  "sk-007": {
+   "question": "Agar men maxsus iqtisodiy zonada korxona ochib, 6 million dollar sarmoya kiritsam, foydadan olinadigan soliqni necha yil to‘lamayman?",
+   "ranks": {
+    "fts": 1,
+    "vector": 1,
+    "hybrid": 1
+   },
+   "top3": {
+    "fts": [
+     "Soliq kodeksi 473",
+     "Sunʼiy intellekt texnologiyalarini yanada rivojlantirishga oid qoʻshimcha chora-tadbirlar toʻgʻrisidagi Prezident farmoni (PF-189) None",
+     "Chiqindilarni qayta ishlash sohasini yanada takomillashtirish hamda kompleks tizimlashtirish chora-tadbirlari toʻgʻrisidagi Prezident farmoni (PF-56) None"
+    ],
+    "vector": [
+     "Soliq kodeksi 473",
+     "Erkin iqtisodiy zonalar faoliyatini tashkil etish chora-tadbirlari toʻgʻrisidagi Vazirlar Mahkamasi qarori (196) 3",
+     "Soliq kodeksi 18"
+    ],
+    "hybrid": [
+     "Soliq kodeksi 473",
+     "Erkin iqtisodiy zonalar faoliyatini tashkil etish chora-tadbirlari toʻgʻrisidagi Vazirlar Mahkamasi qarori (196) 3",
+     "Maxsus iqtisodiy zonalar ishtirokchilarini yanada qoʻllab-quvvatlash chora-tadbirlari toʻgʻrisidagi Prezident qarori (PQ-5243) 3"
+    ]
+   }
+  },
+  "sk-008": {
+   "question": "Agar men biror narsani pulga emas, mahsulot yoki xizmat bilan hisob-kitob qilib olgan bo‘lsam, soliqni o‘sha kelishilgan narxdan hisoblaymanmi yoki bozor bahosidanmi?",
+   "ranks": {
+    "fts": 2,
+    "vector": 2,
+    "hybrid": 2
+   },
+   "top3": {
+    "fts": [
+     "Hujjat 1684: Don va don mahsulotlarini qabul qilish, saqlash va sotish boʻyicha operatsiyalarning buxgalteriya hisobi va hisobotini tashkil etish toʻgʻrisidagi… 4",
+     "Vazirlar Mahkamasi qarori 489: Qoʻshilgan qiymat soligʻi hamda chet el yuridik shaxslari bilan bogʻliq soliq maʼmurchiligini takomillashtirish chora-tadbirlari… 4",
+     "Eksport-import operatsiyalarini barter asosida amalga oshirishni tartibga solish toʻgʻrisidagi Vazirlar Mahkamasi qarori (520) 4"
+    ],
+    "vector": [
+     "Soliq bazasini tovarlarning bozor narxlaridan kelib chiqqan holda aniqlash orqali teng raqobat muhitini yaratish toʻgʻrisidagi Vazirlar Mahkamasi qarori (253) None",
+     "Soliq kodeksi 296",
+     "Soliq bazasini tovarlarning bozor narxlaridan kelib chiqqan holda aniqlash orqali teng raqobat muhitini yaratish toʻgʻrisidagi Vazirlar Mahkamasi qarori (253) 26"
+    ],
+    "hybrid": [
+     "Soliq bazasini tovarlarning bozor narxlaridan kelib chiqqan holda aniqlash orqali teng raqobat muhitini yaratish toʻgʻrisidagi Vazirlar Mahkamasi qarori (253) None",
+     "Soliq kodeksi 296",
+     "Vazirlar Mahkamasi qarori 489: Qoʻshilgan qiymat soligʻi hamda chet el yuridik shaxslari bilan bogʻliq soliq maʼmurchiligini takomillashtirish chora-tadbirlari… 4"
+    ]
+   }
+  },
+  "sk-009": {
+   "question": "Men chetdan o‘zim ishlatish uchun narsa olib kelyapman, sotish uchun emas. Shunaqa holatda soliqni qaysi tartibda to‘layman?",
+   "ranks": {
+    "fts": null,
+    "vector": null,
+    "hybrid": null
+   },
+   "top3": {
+    "fts": [
+     "Jismoniy shaxslar tomonidan shaxsiy ehtiyojlari uchun tovarlarni olib oʻtish tartibini yanada takomillashtirish toʻgʻrisidagi Prezident qarori (PQ-4508) 1",
+     "Vazirlar Mahkamasi qarori 102: Jismoniy shaxslarning chegara bojxona postlari orqali notijorat maqsadlarda olib kirilayotgan belgilangan meʼyorlardan ortiq boʻ… 1",
+     "Bojxona kodeksi 155"
+    ],
+    "vector": [
+     "Ayrim turdagi tovarlarni bojxona chegarasi orqali olib oʻtish tartibini yanada takomillashtirish chora-tadbirlari toʻgʻrisidagi Vazirlar Mahkamasi qarori (244) 2",
+     "Bojxona kodeksi 163",
+     "Hujjat 3343: Oʻzbekiston Respublikasiga olib kiriladigan tovarlarga toʻlanishi lozim boʻlgan bojxona toʻlovlari miqdorini aniqlash boʻyicha dastlabki qarorni q… 2"
+    ],
+    "hybrid": [
+     "Bojxona kodeksi 163",
+     "Ayrim turdagi tovarlarni bojxona chegarasi orqali olib oʻtish tartibini yanada takomillashtirish chora-tadbirlari toʻgʻrisidagi Vazirlar Mahkamasi qarori (244) 2",
+     "Jismoniy shaxslar tomonidan shaxsiy ehtiyojlari uchun tovarlarni olib oʻtish tartibini yanada takomillashtirish toʻgʻrisidagi Prezident qarori (PQ-4508) 1"
+    ]
+   }
+  },
+  "sk-010": {
+   "question": "Men ish joyimda ustozlik qilib yuraman, shu uchun oyligimga qoʻshimcha pul berilishi kerakmi?",
+   "ranks": {
+    "fts": null,
+    "vector": null,
+    "hybrid": null
+   },
+   "top3": {
+    "fts": [
+     "Prezident qarori PQ-370: Paxtachilik va gʻallachilikda hosildorlikni oshirish uchun yuqori samarador intensiv agrotexnologiyalarni qoʻllashning qoʻshimcha chor… 6",
+     "Magistral elektr tarmoqlaridan foydalanish qoidalarini tasdiqlash toʻgʻrisidagi Vazirlar Mahkamasi qarori (338) 1055",
+     "Hujjat 2174: Tergovga qadar tekshiruv, surishtiruv, dastlabki tergov va sud muhokamasi davomida ashyoviy dalillar, moddiy qimmatliklar va boshqa mol-mulkni oli… 53"
+    ],
+    "vector": [
+     "Davlat maktabgacha taʼlim tizimi xodimlari mehnatiga haq toʻlash tartibini takomillashtirish toʻgʻrisidagi Vazirlar Mahkamasi qarori (10) 10",
+     "Respublika oliy taʼlim muassasalari xodimlari mehnatiga haq toʻlashning takomillashtirilgan tizimini tasdiqlash toʻgʻrisidagi Vazirlar Mahkamasi qarori (164) 3",
+     "Davlat maktabgacha taʼlim tizimi xodimlari mehnatiga haq toʻlash tartibini takomillashtirish toʻgʻrisidagi Vazirlar Mahkamasi qarori (10) 5"
+    ],
+    "hybrid": [
+     "Davlat maktabgacha taʼlim tizimi xodimlari mehnatiga haq toʻlash tartibini takomillashtirish toʻgʻrisidagi Vazirlar Mahkamasi qarori (10) 10",
+     "Respublika oliy taʼlim muassasalari xodimlari mehnatiga haq toʻlashning takomillashtirilgan tizimini tasdiqlash toʻgʻrisidagi Vazirlar Mahkamasi qarori (164) 3",
+     "Davlat maktabgacha taʼlim tizimi xodimlari mehnatiga haq toʻlash tartibini takomillashtirish toʻgʻrisidagi Vazirlar Mahkamasi qarori (10) 5"
+    ]
+   }
+  },
+  "sk-011": {
+   "question": "Men yakka tartibda ishlayman. Shu chorakda umuman ish bo‘lmadi, daromad ham tushmadi. Baribir qachongacha hisobot topshirishim kerak?",
+   "ranks": {
+    "fts": 1,
+    "vector": null,
+    "hybrid": 1
+   },
+   "top3": {
+    "fts": [
+     "Soliq kodeksi 362",
+     "Vazirlar Mahkamasi qarori 707: Yakka tartibdagi tadbirkorlar tomonidan yollangan xodimlarni davlat soliq xizmati organlarida hisobga qoʻyish hamda soliq solina… 13",
+     "Soliq kodeksi 389"
+    ],
+    "vector": [
+     "Vazirlar Mahkamasi qarori 707: Yakka tartibdagi tadbirkorlar tomonidan yollangan xodimlarni davlat soliq xizmati organlarida hisobga qoʻyish hamda soliq solina… 13",
+     "Prezident qarori PQ-8: Tadbirkorlik subyektlari tomonidan davlat organlariga hisobot va statistik maʼlumotlarni taqdim etish jarayonlarini yanada soddalashtiri… None",
+     "Yakka tartibdagi tadbirkorlar hamda oʻzini oʻzi band qilgan shaxslar uchun qulay shart-sharoit yaratish chora-tadbirlari toʻgʻrisidagi Prezident qarori (PQ-247) 6"
+    ],
+    "hybrid": [
+     "Soliq kodeksi 362",
+     "Vazirlar Mahkamasi qarori 707: Yakka tartibdagi tadbirkorlar tomonidan yollangan xodimlarni davlat soliq xizmati organlarida hisobga qoʻyish hamda soliq solina… 13",
+     "Soliq kodeksi 465"
+    ]
+   }
+  },
+  "sk-012": {
+   "question": "Do‘konim kichik shaharchada bo‘lsa, sotuvdan qancha foiz to‘layman?",
+   "ranks": {
+    "fts": null,
+    "vector": null,
+    "hybrid": null
+   },
+   "top3": {
+    "fts": [
+     "Oʻzbekiston Respublikasining 2017-yilgi asosiy makroiqtisodiy koʻrsatkichlari prognozi va Davlat budjeti parametrlari toʻgʻrisidagi Prezident qarori (PQ-2699) None",
+     "Oʻzbekiston Respublikasining 2018-yilgi asosiy makroiqtisodiy koʻrsatkichlari prognozi va Davlat budjeti parametrlari toʻgʻrisidagi Prezident qarori (PQ-3454) None",
+     "Oʻzbekiston Respublikasining 2015-yilgi asosiy makroiqtisodiy koʻrsatkichlari prognozi va Davlat budjeti parametrlari toʻgʻrisidagi Prezident qarori (PQ-2270) None"
+    ],
+    "vector": [
+     "Oʻzbekiston Respublikasining 2014-yilgi asosiy makroiqtisodiy koʻrsatkichlari prognozi va Davlat budjeti parametrlari toʻgʻrisidagi Prezident qarori (PQ-2099) None",
+     "Oʻzbekiston Respublikasining 2017-yilgi asosiy makroiqtisodiy koʻrsatkichlari prognozi va Davlat budjeti parametrlari toʻgʻrisidagi Prezident qarori (PQ-2699) None",
+     "Oʻzbekiston Respublikasining 2017-yilgi asosiy makroiqtisodiy koʻrsatkichlari prognozi va Davlat budjeti parametrlari toʻgʻrisidagi Prezident qarori (PQ-2699) None"
+    ],
+    "hybrid": [
+     "Oʻzbekiston Respublikasining 2017-yilgi asosiy makroiqtisodiy koʻrsatkichlari prognozi va Davlat budjeti parametrlari toʻgʻrisidagi Prezident qarori (PQ-2699) None",
+     "Oʻzbekiston Respublikasining 2014-yilgi asosiy makroiqtisodiy koʻrsatkichlari prognozi va Davlat budjeti parametrlari toʻgʻrisidagi Prezident qarori (PQ-2099) None",
+     "Oʻzbekiston Respublikasining 2016-yilgi asosiy makroiqtisodiy koʻrsatkichlari prognozi va Davlat budjeti parametrlari toʻgʻrisidagi Prezident qarori (PQ-2455) None"
+    ]
+   }
+  },
+  "sk-013": {
+   "question": "Agar soliqchilar men yuborishim kerak bo‘lgan hisobotni vaqtida topshirmadim deb bankdagi hisobimdan chiqimlarni to‘xtatib qo‘ysa, menga bu haqda sababini yozib xabar berishadimi va hamma hisoblarimdan pul chiqishi yopiladimi?",
+   "ranks": {
+    "fts": 1,
+    "vector": 1,
+    "hybrid": 1
+   },
+   "top3": {
+    "fts": [
+     "Soliq kodeksi 111",
+     "Soliq kodeksi 112",
+     "Soliq maʼmuriyatchiligini yanada takomillashtirish boʻyicha qoʻshimcha chora-tadbirlar toʻgʻrisidagi Vazirlar Mahkamasi qarori (736) 21"
+    ],
+    "vector": [
+     "Soliq kodeksi 111",
+     "Davlat soliq xizmati toʻgʻrisidagi Qonun (474-I) 5",
+     "Iqtisodiy protsessual kodeksi 219"
+    ],
+    "hybrid": [
+     "Soliq kodeksi 111",
+     "Davlat soliq xizmati toʻgʻrisidagi Qonun (474-I) 5",
+     "Soliq kodeksi 113"
+    ]
+   }
+  },
+  "sk-014": {
+   "question": "Fermer xo‘jaligimiz bor: o‘zimiz ekin ekamiz, mahsulotning bir qismini o‘zimiz qayta ishlab sotamiz. Daromadimizning kamida 80 foizi shu o‘zimiz yetishtirgan narsadan tushsa va ekin ekadigan yerimiz bo‘lsa, biz qishloq xo‘jaligi ishlab chiqaruvchisi hisoblanamizmi?",
+   "ranks": {
+    "fts": 1,
+    "vector": 1,
+    "hybrid": 1
+   },
+   "top3": {
+    "fts": [
+     "Soliq kodeksi 57",
+     "Vazirlar Mahkamasi qarori 466: Paxta xomashyosi yetishtirish xarajatlarini muqobil manbalar hisobidan moliyalashtirish va samarali faoliyat yuritayotgan qishlo… 1",
+     "Prezident qarori PQ-115: Aholi xonadonlarida sanoat usulida mahsulot ishlab chiqarishni qoʻllab-quvvatlash hamda tomorqa va dehqon xoʻjaliklarida yangi zaxiral… 8"
+    ],
+    "vector": [
+     "Soliq kodeksi 57",
+     "Prezident qarori PQ-4549: Meva-sabzavotchilik va uzumchilik tarmogʻini yanada rivojlantirish, sohada qoʻshilgan qiymat zanjirini yaratishga doir qoʻshimcha cho… None",
+     "Andijon viloyatining Ulugʻnor tumanida qishloq hoʻjaligi sohasini rivojlantirish chora-tadbirlari toʻgʻrisidagi Vazirlar Mahkamasi qarori (314) None"
+    ],
+    "hybrid": [
+     "Soliq kodeksi 57",
+     "Prezident qarori PQ-4549: Meva-sabzavotchilik va uzumchilik tarmogʻini yanada rivojlantirish, sohada qoʻshilgan qiymat zanjirini yaratishga doir qoʻshimcha cho… None",
+     "Andijon viloyatining Ulugʻnor tumanida qishloq hoʻjaligi sohasini rivojlantirish chora-tadbirlari toʻgʻrisidagi Vazirlar Mahkamasi qarori (314) None"
+    ]
+   }
+  },
+  "sk-015": {
+   "question": "Korxonamiz soliqni toʻgʻri hisoblaganmizmi yoʻqmi deb ikkilanib turibdi. Shu bo‘yicha soliqdagilardan yozma javob so‘rasak, ular necha kunda javob berishi kerak?",
+   "ranks": {
+    "fts": null,
+    "vector": null,
+    "hybrid": null
+   },
+   "top3": {
+    "fts": [
+     "Buyruq 3686: Idoraviy normativ-huquqiy hujjatlarni tayyorlash, qabul qilish, huquqiy ekspertiza va davlat roʻyxatidan oʻtkazish qoidalarini tasdiqlash toʻgʻris… 4",
+     "Soliq kodeksi 150",
+     "Soliq kodeksi 27"
+    ],
+    "vector": [
+     "Soliq kodeksi 173",
+     "Soliq maʼmuriyatchiligini yanada takomillashtirish boʻyicha qoʻshimcha chora-tadbirlar toʻgʻrisidagi Vazirlar Mahkamasi qarori (736) None",
+     "Soliq kodeksi 27"
+    ],
+    "hybrid": [
+     "Soliq maʼmuriyatchiligini yanada takomillashtirish boʻyicha qoʻshimcha chora-tadbirlar toʻgʻrisidagi Vazirlar Mahkamasi qarori (736) 48",
+     "Soliq kodeksi 27",
+     "Soliq kodeksi 173"
+    ]
+   }
+  },
+  "sk-016": {
+   "question": "Mening nomimdagi soliqni ukam borib to'lab bersa bo'ladimi, keyin u o'sha pulni davlatdan qaytarib so'ray oladimi?",
+   "ranks": {
+    "fts": null,
+    "vector": null,
+    "hybrid": null
+   },
+   "top3": {
+    "fts": [
+     "Hujjat 2892: Oʻzbekiston Respublikasi norezidentlarining daromadlari boʻyicha yuridik shaxslardan olinadigan foyda soligʻining ortiqcha toʻlangan summasini qay… 14",
+     "Vazirlar Mahkamasi qarori 661: Ijtimoiy soliqni taqsimlash, pensiya va boshqa toʻlovlarni toʻlash uchun ajratilgan xarajatlarni qoplash tartibi toʻgʻrisidagi n… None",
+     "“20 ming tadbirkor-500 ming malakali mutaxassis” dasturini amalga oshirish boʻyicha chora-tadbirlar toʻgʻrisidagi Vazirlar Mahkamasi qarori (279) None"
+    ],
+    "vector": [
+     "Hujjat 3237: Soliq toʻlovchilar toʻgʻrisida hisob maʼlumotlarini yuritish, bu maʼlumotlarni uchinchi shaxslarga taqdim etish, shuningdek soliq toʻlovchilarinin… 14",
+     "Soliq kodeksi 103",
+     "Buyruq 3857: Oʻzbekiston Respublikasi budjet hisobining standarti (19-sonli BHS) “Daromad”ni tasdiqlash haqida 35"
+    ],
+    "hybrid": [
+     "Hujjat 2892: Oʻzbekiston Respublikasi norezidentlarining daromadlari boʻyicha yuridik shaxslardan olinadigan foyda soligʻining ortiqcha toʻlangan summasini qay… 3",
+     "Hujjat 2892: Oʻzbekiston Respublikasi norezidentlarining daromadlari boʻyicha yuridik shaxslardan olinadigan foyda soligʻining ortiqcha toʻlangan summasini qay… 24",
+     "Hujjat 2892: Oʻzbekiston Respublikasi norezidentlarining daromadlari boʻyicha yuridik shaxslardan olinadigan foyda soligʻining ortiqcha toʻlangan summasini qay… 26"
+    ]
+   }
+  },
+  "sk-017": {
+   "question": "Soliqdan qarzim chiqib qolgan ekan, pul to‘lasam avval asosiy qarz yopiladimi, keyin qo‘shilgan foizi va jarimasi ketadimi?",
+   "ranks": {
+    "fts": null,
+    "vector": 2,
+    "hybrid": 4
+   },
+   "top3": {
+    "fts": [
+     "Soliq kodeksi 104",
+     "Hujjat 2771: Budjet tizimi budjetlari daromadlarining kassa ijrosi toʻgʻrisidagi yoʻriqnomani tasdiqlash haqida 42⁴",
+     "Soliq kodeksi 103"
+    ],
+    "vector": [
+     "Soliq kodeksi 60",
+     "Soliq kodeksi 55",
+     "Soliq kodeksi 91"
+    ],
+    "hybrid": [
+     "Soliq kodeksi 103",
+     "Soliq kodeksi 91",
+     "Soliq kodeksi 60"
+    ]
+   }
+  },
+  "sk-018": {
+   "question": "Men kon ochishga tayyorgarlik qilib ancha xarajat qildim, lekin hali qazishni boshlamadim. Shu pulni soliqdan qachondan boshlab hisobdan chiqarsam bo‘ladi?",
+   "ranks": {
+    "fts": 1,
+    "vector": null,
+    "hybrid": 1
+   },
+   "top3": {
+    "fts": [
+     "Soliq kodeksi 311",
+     "Hujjat 2277: Oʻzbekiston Respublikasi va “Soyuzneftegaz Vostok Limited” kompaniyasi oʻrtasida 2007-yil 23-yanvardagi Oʻzbekiston Respublikasining janubiy-gʻarb… None",
+     "Vazirlar Mahkamasi qarori 983: Yer qaʼrini geologik oʻrganish, foydalanish va muhofaza qilish sohasidagi boshqaruv va nazorat qilish tizimini yanada takomillas… 80"
+    ],
+    "vector": [
+     "Hujjat 2699: Oʻzbekiston Respublikasi foydali qazilmalari zaxiralarini hisobga olish va hisobot balanslarini tuzish boʻyicha yoʻriqnomani tasdiqlash toʻgʻrisida None",
+     "Hujjat 2699: Oʻzbekiston Respublikasi foydali qazilmalari zaxiralarini hisobga olish va hisobot balanslarini tuzish boʻyicha yoʻriqnomani tasdiqlash toʻgʻrisida 8",
+     "Hujjat 2699: Oʻzbekiston Respublikasi foydali qazilmalari zaxiralarini hisobga olish va hisobot balanslarini tuzish boʻyicha yoʻriqnomani tasdiqlash toʻgʻrisida None"
+    ],
+    "hybrid": [
+     "Soliq kodeksi 311",
+     "Hujjat 2699: Oʻzbekiston Respublikasi foydali qazilmalari zaxiralarini hisobga olish va hisobot balanslarini tuzish boʻyicha yoʻriqnomani tasdiqlash toʻgʻrisida None",
+     "Vazirlar Mahkamasi qarori 983: Yer qaʼrini geologik oʻrganish, foydalanish va muhofaza qilish sohasidagi boshqaruv va nazorat qilish tizimini yanada takomillas… 72"
+    ]
+   }
+  },
+  "sk-019": {
+   "question": "Uyimning 1 kvadrati narxi belgilangan eng kam summadan past chiqsa, men o'zim mustaqil baholatib, soliqni shu baho bo'yicha to'lasam bo'ladimi?",
+   "ranks": {
+    "fts": null,
+    "vector": 2,
+    "hybrid": 3
+   },
+   "top3": {
+    "fts": [
+     "Vazirlar Mahkamasi qarori 1043: Soliq solish maqsadida jismoniy shaxslarga tegishli boʻlgan koʻchmas mulk obyektlarining, turar joy fondining kadastr qiymatini… 9",
+     "Vazirlar Mahkamasi qarori 1043: Soliq solish maqsadida jismoniy shaxslarga tegishli boʻlgan koʻchmas mulk obyektlarining, turar joy fondining kadastr qiymatini… 1",
+     "Vazirlar Mahkamasi qarori 1043: Soliq solish maqsadida jismoniy shaxslarga tegishli boʻlgan koʻchmas mulk obyektlarining, turar joy fondining kadastr qiymatini… 14"
+    ],
+    "vector": [
+     "Budjetlararo munosabatlarni va soliq maʼmuriyatchiligini yanada takomillashtirish toʻgʻrisidagi Prezident qarori (PQ-208) 4",
+     "Soliq kodeksi 412",
+     "Oʻzbekiston Respublikasining 2018-yilgi asosiy makroiqtisodiy koʻrsatkichlari prognozi va Davlat budjeti parametrlari toʻgʻrisidagi Prezident qarori (PQ-3454) None"
+    ],
+    "hybrid": [
+     "Budjetlararo munosabatlarni va soliq maʼmuriyatchiligini yanada takomillashtirish toʻgʻrisidagi Prezident qarori (PQ-208) 4",
+     "Oʻzbekiston Respublikasining 2018-yilgi asosiy makroiqtisodiy koʻrsatkichlari prognozi va Davlat budjeti parametrlari toʻgʻrisidagi Prezident qarori (PQ-3454) None",
+     "Soliq kodeksi 412"
+    ]
+   }
+  },
+  "sk-020": {
+   "question": "Ishdan bo‘shayotganimda ololmay qolgan ta’til kunlarim uchun pul berilish kerakmi?",
+   "ranks": {
+    "fts": 3,
+    "vector": 6,
+    "hybrid": 2
+   },
+   "top3": {
+    "fts": [
+     "Sudlar tomonidan mehnat shartnomasini bekor qilishni tartibga soluvchi qonunchilikni qoʻllash amaliyoti toʻgʻrisidagi Hujjat (26) 63",
+     "Sudlar tomonidan mehnat shartnomasini bekor qilishni tartibga soluvchi qonunchilikni qoʻllash amaliyoti toʻgʻrisidagi Hujjat (26) 24",
+     "Mehnat kodeksi 234"
+    ],
+    "vector": [
+     "Oʻzbekiston Respublikasining Mehnat kodeksini amalga oshirishga oid normativ-huquqiy hujjatlarni tasdiqlash toʻgʻrisidagi Vazirlar Mahkamasi qarori (758) 8",
+     "Mehnat kodeksi 286",
+     "Mehnat kodeksi 493"
+    ],
+    "hybrid": [
+     "Mehnat kodeksi 493",
+     "Mehnat kodeksi 234",
+     "Mehnat kodeksi 286"
+    ]
+   }
+  },
+  "sk-021": {
+   "question": "Soliqchilar tekshiruvga kelsa, doʻkonimni yoki omborimni kirib koʻrishi, rasmga-videoга olishi va kerak boʻlsa hujjatlarni soʻrashi mumkinmi?",
+   "ranks": {
+    "fts": 1,
+    "vector": 2,
+    "hybrid": 1
+   },
+   "top3": {
+    "fts": [
+     "Vazirlar Mahkamasi qarori 1: Soliq xavfini boshqarish, soliq xavfi mavjud soliq toʻlovchilarni (soliq agentlarini) aniqlash va soliq tekshiruvlarini tashkil et… 13",
+     "Soliq kodeksi 145",
+     "Vazirlar Mahkamasi qarori 1: Soliq xavfini boshqarish, soliq xavfi mavjud soliq toʻlovchilarni (soliq agentlarini) aniqlash va soliq tekshiruvlarini tashkil et… 15"
+    ],
+    "vector": [
+     "Vazirlar Mahkamasi qarori 1: Soliq xavfini boshqarish, soliq xavfi mavjud soliq toʻlovchilarni (soliq agentlarini) aniqlash va soliq tekshiruvlarini tashkil et… 19",
+     "Vazirlar Mahkamasi qarori 1: Soliq xavfini boshqarish, soliq xavfi mavjud soliq toʻlovchilarni (soliq agentlarini) aniqlash va soliq tekshiruvlarini tashkil et… 145",
+     "Hujjat 3207: Davlat soliq xizmati organlari tomonidan soliq toʻlovchilar faoliyatida amalga oshiriladigan soliq nazorati tadbirini videotasvirga olish tartibi… 9"
+    ],
+    "hybrid": [
+     "Vazirlar Mahkamasi qarori 1: Soliq xavfini boshqarish, soliq xavfi mavjud soliq toʻlovchilarni (soliq agentlarini) aniqlash va soliq tekshiruvlarini tashkil et… 13",
+     "Hujjat 3207: Davlat soliq xizmati organlari tomonidan soliq toʻlovchilar faoliyatida amalga oshiriladigan soliq nazorati tadbirini videotasvirga olish tartibi… 9",
+     "Vazirlar Mahkamasi qarori 1: Soliq xavfini boshqarish, soliq xavfi mavjud soliq toʻlovchilarni (soliq agentlarini) aniqlash va soliq tekshiruvlarini tashkil et… 145"
+    ]
+   }
+  },
+  "sk-022": {
+   "question": "Chet el firmasi O‘zbekistonda ishlab turib, yil tugamasidan ishini yopsa, soliq bo‘yicha qog‘ozlarini qachongacha topshirishi va soliqni qachongacha to‘lashi kerak?",
+   "ranks": {
+    "fts": 1,
+    "vector": 1,
+    "hybrid": 1
+   },
+   "top3": {
+    "fts": [
+     "Soliq kodeksi 349",
+     "Vazirlar Mahkamasi qarori 489: Qoʻshilgan qiymat soligʻi hamda chet el yuridik shaxslari bilan bogʻliq soliq maʼmurchiligini takomillashtirish chora-tadbirlari… 6",
+     "Soliq kodeksi 471"
+    ],
+    "vector": [
+     "Soliq kodeksi 349",
+     "Soliq kodeksi 417",
+     "Soliq kodeksi 407"
+    ],
+    "hybrid": [
+     "Soliq kodeksi 349",
+     "Soliq kodeksi 417",
+     "Soliq kodeksi 281"
+    ]
+   }
+  },
+  "sk-023": {
+   "question": "Soliqchilar menga notoʻgʻri qaror chiqarib pul undirib olishgan, keyin bu qaror bekor qilinsa, olingan pulim foizi bilan qaytariladimi?",
+   "ranks": {
+    "fts": 4,
+    "vector": 4,
+    "hybrid": 2
+   },
+   "top3": {
+    "fts": [
+     "Hujjat 2771: Budjet tizimi budjetlari daromadlarining kassa ijrosi toʻgʻrisidagi yoʻriqnomani tasdiqlash haqida 42⁴",
+     "Hujjat 2771: Budjet tizimi budjetlari daromadlarining kassa ijrosi toʻgʻrisidagi yoʻriqnomani tasdiqlash haqida 42⁸",
+     "Soliq kodeksi 104"
+    ],
+    "vector": [
+     "Vazirlar Mahkamasi qarori 811: Oʻzbekiston Respublikasi Soliq qoʻmitasining Moddiy yordam, ijtimoiy himoya, soliq organlarini rivojlantirish va koʻzda tutilmag… 15",
+     "Hujjat 2771: Budjet tizimi budjetlari daromadlarining kassa ijrosi toʻgʻrisidagi yoʻriqnomani tasdiqlash haqida 42⁵",
+     "Hujjat 4: Sudlar tomonidan soliq qonunchiligini qoʻllashning ayrim masalalari haqida 15"
+    ],
+    "hybrid": [
+     "Hujjat 2771: Budjet tizimi budjetlari daromadlarining kassa ijrosi toʻgʻrisidagi yoʻriqnomani tasdiqlash haqida 42⁵",
+     "Soliq kodeksi 105",
+     "Soliq kodeksi 104"
+    ]
+   }
+  },
+  "sk-024": {
+   "question": "Men shu maxsus hududda ishlasam, oyligimdan ushlanadigan soliq 1 foiz bo‘ladimi?",
+   "ranks": {
+    "fts": null,
+    "vector": 1,
+    "hybrid": 1
+   },
+   "top3": {
+    "fts": [
+     "“20 ming tadbirkor-500 ming malakali mutaxassis” dasturini amalga oshirish boʻyicha chora-tadbirlar toʻgʻrisidagi Vazirlar Mahkamasi qarori (279) 14",
+     "Raqamli texnologiyalar xalqaro markazi toʻgʻrisidagi Qonun (OʻRQ-1169) 49",
+     "Prezident qarori PQ-498: Orol dengizining Oʻzbekistonga tegishli qismiga nisbatan mahsulotni taqsimlash toʻgʻrisidagi bitimni amalga oshirish tartibi va mexani… 1"
+    ],
+    "vector": [
+     "Soliq kodeksi 480²",
+     "Soliq kodeksi 480¹",
+     "Orolboʻyi mintaqasida tadbirkorlikni jadal rivojlantirishga oid qoʻshimcha chora-tadbirlar toʻgʻrisidagi Prezident farmoni (PF-25) 1"
+    ],
+    "hybrid": [
+     "Soliq kodeksi 480²",
+     "Soliq kodeksi 380",
+     "Soliq kodeksi 480¹"
+    ]
+   }
+  },
+  "sk-025": {
+   "question": "Men yil o‘rtasida ish joyimni almashtirdim. Yangi ish joyimga eski ishdan olgan oyliklarim va ushlab qolingan soliq haqida qog‘ozni birinchi maoshimdan oldin olib bormasam, soliqni qanday ushlab qolishadi?",
+   "ranks": {
+    "fts": 1,
+    "vector": 1,
+    "hybrid": 1
+   },
+   "top3": {
+    "fts": [
+     "Soliq kodeksi 388",
+     "Soliq kodeksi 386",
+     "Soliq kodeksi 345"
+    ],
+    "vector": [
+     "Soliq kodeksi 388",
+     "Soliq kodeksi 387",
+     "Soliq maʼmuriyatchiligini yanada takomillashtirish boʻyicha qoʻshimcha chora-tadbirlar toʻgʻrisidagi Vazirlar Mahkamasi qarori (736) 4"
+    ],
+    "hybrid": [
+     "Soliq kodeksi 388",
+     "Soliq kodeksi 386",
+     "Soliq kodeksi 387"
+    ]
+   }
+  },
+  "sk-026": {
+   "question": "Menga yer soligʻi qancha chiqqani va qachongacha toʻlashim kerakligi haqida xabar qachongacha kelishi kerak?",
+   "ranks": {
+    "fts": 1,
+    "vector": 2,
+    "hybrid": 1
+   },
+   "top3": {
+    "fts": [
+     "Soliq kodeksi 439",
+     "Vazirlar Mahkamasi qarori 389: Soliqqa oid davlat xizmatlarini elektron shaklda koʻrsatish qamrovi yanada kengaytirilishi munosabati bilan Oʻzbekiston Respubli… 25⁴",
+     "Vazirlar Mahkamasi qarori 389: Soliqqa oid davlat xizmatlarini elektron shaklda koʻrsatish qamrovi yanada kengaytirilishi munosabati bilan Oʻzbekiston Respubli… 3"
+    ],
+    "vector": [
+     "Soliq toʻlovchilarga ayrim interaktiv davlat xizmatlarini koʻrsatish boʻyicha maʼmuriy reglamentlarni tasdiqlash toʻgʻrisidagi Vazirlar Mahkamasi qarori (150) 16",
+     "Soliq kodeksi 439",
+     "Soliq kodeksi 423"
+    ],
+    "hybrid": [
+     "Soliq kodeksi 439",
+     "Soliq toʻlovchilarga ayrim interaktiv davlat xizmatlarini koʻrsatish boʻyicha maʼmuriy reglamentlarni tasdiqlash toʻgʻrisidagi Vazirlar Mahkamasi qarori (150) 16",
+     "Soliq kodeksi 423"
+    ]
+   }
+  },
+  "sk-027": {
+   "question": "Men chet el fuqarosiman, lekin Oʻzbekistonda ishlab pul olyapman. Shu daromadim uchun bu yerda soliq toʻlashim kerakmi?",
+   "ranks": {
+    "fts": null,
+    "vector": 6,
+    "hybrid": 2
+   },
+   "top3": {
+    "fts": [
+     "Soliq kodeksi 366",
+     "Buyruq 3826: Kapital bozori sohasida “Tartibga solish qumdoni” maxsus huquqiy rejimi doirasida chet el valyutasida ifodalangan obligatsiyalarni chiqarish, joyl… 35",
+     "Soliq kodeksi 204"
+    ],
+    "vector": [
+     "Soliq kodeksi 6",
+     "Soliq kodeksi 379",
+     "Soliq kodeksi 404"
+    ],
+    "hybrid": [
+     "Raqamli texnologiyalar xalqaro markazi toʻgʻrisidagi Qonun (OʻRQ-1169) 49",
+     "Soliq kodeksi 400",
+     "Soliq kodeksi 382"
+    ]
+   }
+  },
+  "sk-028": {
+   "question": "Ish joyimdan maoshimdan qancha soliq ushlanganini ko‘rsatib beradigan qog‘oz so‘rasam, berishi shartmi?",
+   "ranks": {
+    "fts": null,
+    "vector": null,
+    "hybrid": null
+   },
+   "top3": {
+    "fts": [
+     "Oʻzbekiston Respublikasi budjet hisobining standarti (2-sonli BHS) “Yagona schyotlar rejasi”ni tasdiqlash toʻgʻrisidagi Buyruq (3078) 268",
+     "Hujjat 1781: Fermer xoʻjaliklarida buxgalteriya hisobining soddalashtirilgan tizimini tashkil etish toʻgʻrisidagi nizomni tasdiqlash haqida 35",
+     "Buyruq 2501: Buxgalteriya hisobining milliy standarti (20-sonli BHMS) “Kichik tadbirkorlik subyektlari tomonidan buxgalteriya hisobini yuritishning soddalashti… 38"
+    ],
+    "vector": [
+     "Mehnat kodeksi 175",
+     "Soliq kodeksi 133",
+     "Soliq maʼmuriyatchiligini yanada takomillashtirish boʻyicha qoʻshimcha chora-tadbirlar toʻgʻrisidagi Vazirlar Mahkamasi qarori (736) 4"
+    ],
+    "hybrid": [
+     "Mehnat kodeksi 175",
+     "Soliq kodeksi 133",
+     "Soliq maʼmuriyatchiligini yanada takomillashtirish boʻyicha qoʻshimcha chora-tadbirlar toʻgʻrisidagi Vazirlar Mahkamasi qarori (736) 4"
+    ]
+   }
+  },
+  "sk-029": {
+   "question": "Otam vafot etib, uydan menga meros qolsa, uning oldin to‘lanmay qolgan soliq pulini men to‘lashim kerakmi yoki hammasi o‘chib ketadimi?",
+   "ranks": {
+    "fts": 1,
+    "vector": 1,
+    "hybrid": 1
+   },
+   "top3": {
+    "fts": [
+     "Soliq kodeksi 94",
+     "Hujjat 3256: Undirilishi umidsiz deb eʼtirof etilgan soliq qarzini hisobdan chiqarish tartibi toʻgʻrisidagi nizomni tasdiqlash haqida 9",
+     "Soliq kodeksi 96"
+    ],
+    "vector": [
+     "Soliq kodeksi 94",
+     "Davlat soliq xizmati toʻgʻrisidagi Qonun (474-I) 6",
+     "Soliq kodeksi 87"
+    ],
+    "hybrid": [
+     "Soliq kodeksi 94",
+     "Hujjat 3256: Undirilishi umidsiz deb eʼtirof etilgan soliq qarzini hisobdan chiqarish tartibi toʻgʻrisidagi nizomni tasdiqlash haqida 4",
+     "Soliq kodeksi 87"
+    ]
+   }
+  },
+  "sk-030": {
+   "question": "Men Oʻzbekistonda doimiy yashayman, chet eldan ham pul topsam, soliqda shu ham hisobga kiradimi?",
+   "ranks": {
+    "fts": 8,
+    "vector": 1,
+    "hybrid": 1
+   },
+   "top3": {
+    "fts": [
+     "Soliq toʻlovchilarga ayrim interaktiv davlat xizmatlarini koʻrsatish boʻyicha maʼmuriy reglamentlarni tasdiqlash toʻgʻrisidagi Vazirlar Mahkamasi qarori (150) 10",
+     "Chet el fuqarolariga maxsus soliq rejimini taqdim etish boʻyicha maʼmuriy reglamentni tasdiqlash toʻgʻrisidagi Vazirlar Mahkamasi qarori (270) 2",
+     "Chet el fuqarolari uchun maxsus soliq rejimini joriy etish chora-tadbirlari toʻgʻrisidagi Prezident farmoni (PF-180) 1"
+    ],
+    "vector": [
+     "Soliq kodeksi 399",
+     "Vazirlar Mahkamasi qarori 201: Oʻzbekiston Respublikasi fuqarolariga xorijiy davlat hududida yashash uchun mablagʻlarsiz qolgan taqdirda, moliyaviy yordam koʻr… 15",
+     "Soliq kodeksi 379"
+    ],
+    "hybrid": [
+     "Soliq kodeksi 399",
+     "Soliq kodeksi 379",
+     "Vazirlar Mahkamasi qarori 201: Oʻzbekiston Respublikasi fuqarolariga xorijiy davlat hududida yashash uchun mablagʻlarsiz qolgan taqdirda, moliyaviy yordam koʻr… 15"
+    ]
+   }
+  },
+  "sk-031": {
+   "question": "Menga soliqni boshqalardan qimmatroq qilib qoʻyishsa, faqat fuqaroligim boshqacha yoki mulkim boshqa turda deb, shu toʻgʻrimi?",
+   "ranks": {
+    "fts": 1,
+    "vector": 1,
+    "hybrid": 1
+   },
+   "top3": {
+    "fts": [
+     "Soliq kodeksi 10",
+     "Fuqarolik kodeksi (ikkinchi qism) 1077",
+     "Jismoniy va yuridik shaxslarning murojaatlari toʻgʻrisidagi Qonun (OʻRQ-445 tahririda) 16"
+    ],
+    "vector": [
+     "Soliq kodeksi 10",
+     "Soliq kodeksi 6",
+     "Soliq kodeksi 11"
+    ],
+    "hybrid": [
+     "Soliq kodeksi 10",
+     "Soliq kodeksi 6",
+     "Soliq kodeksi 11"
+    ]
+   }
+  },
+  "sk-032": {
+   "question": "Ishim uchun qilgan xarajatlarimni hisobdan chiqarishim uchun albatta chek yoki boshqa qog‘ozi bo‘lishi kerakmi, chet elda qilingan xarajatlar ham kiradimi?",
+   "ranks": {
+    "fts": null,
+    "vector": 1,
+    "hybrid": 1
+   },
+   "top3": {
+    "fts": [
+     "Vazirlar Mahkamasi qarori 303: Davlat organlari va tashkilotlari xodimlarini, shuningdek, Oʻzbekiston Respublikasi delegatsiyalarini chet davlatlarga xizmat sa… 51",
+     "Vazirlar Mahkamasi qarori 303: Davlat organlari va tashkilotlari xodimlarini, shuningdek, Oʻzbekiston Respublikasi delegatsiyalarini chet davlatlarga xizmat sa… 48",
+     "Vazirlar Mahkamasi qarori 303: Davlat organlari va tashkilotlari xodimlarini, shuningdek, Oʻzbekiston Respublikasi delegatsiyalarini chet davlatlarga xizmat sa… 18"
+    ],
+    "vector": [
+     "Vazirlar Mahkamasi qarori 303: Davlat organlari va tashkilotlari xodimlarini, shuningdek, Oʻzbekiston Respublikasi delegatsiyalarini chet davlatlarga xizmat sa… 30",
+     "Vazirlar Mahkamasi qarori 303: Davlat organlari va tashkilotlari xodimlarini, shuningdek, Oʻzbekiston Respublikasi delegatsiyalarini chet davlatlarga xizmat sa… 8",
+     "Vazirlar Mahkamasi qarori 303: Davlat organlari va tashkilotlari xodimlarini, shuningdek, Oʻzbekiston Respublikasi delegatsiyalarini chet davlatlarga xizmat sa… 6"
+    ],
+    "hybrid": [
+     "Vazirlar Mahkamasi qarori 303: Davlat organlari va tashkilotlari xodimlarini, shuningdek, Oʻzbekiston Respublikasi delegatsiyalarini chet davlatlarga xizmat sa… 30",
+     "Vazirlar Mahkamasi qarori 303: Davlat organlari va tashkilotlari xodimlarini, shuningdek, Oʻzbekiston Respublikasi delegatsiyalarini chet davlatlarga xizmat sa… 51",
+     "Vazirlar Mahkamasi qarori 303: Davlat organlari va tashkilotlari xodimlarini, shuningdek, Oʻzbekiston Respublikasi delegatsiyalarini chet davlatlarga xizmat sa… 8"
+    ]
+   }
+  },
+  "sk-033": {
+   "question": "Men ish beruvchiman, xodimimning pulidan ushlanadigan soliqni bir sabab bilan ushlab qololmay qolsam, bu haqda soliqdagilarga qancha muddat ichida xabar berishim kerak?",
+   "ranks": {
+    "fts": 1,
+    "vector": 4,
+    "hybrid": 1
+   },
+   "top3": {
+    "fts": [
+     "Soliq kodeksi 23",
+     "Soliq kodeksi 388",
+     "Soliq kodeksi 386"
+    ],
+    "vector": [
+     "Soliq kodeksi 172",
+     "Soliq kodeksi 387",
+     "Soliq maʼmuriyatchiligini yanada takomillashtirish boʻyicha qoʻshimcha chora-tadbirlar toʻgʻrisidagi Vazirlar Mahkamasi qarori (736) 48"
+    ],
+    "hybrid": [
+     "Soliq kodeksi 23",
+     "Soliq kodeksi 387",
+     "Soliq kodeksi 400"
+    ]
+   }
+  },
+  "sk-034": {
+   "question": "Meni firmamni tekshirayotganlar bor, shu tekshiruv odatda qancha davom etadi, choʻzilsa eng koʻpi bilan necha oygacha borishi mumkin?",
+   "ranks": {
+    "fts": null,
+    "vector": null,
+    "hybrid": null
+   },
+   "top3": {
+    "fts": [
+     "Xoʻjalik yurituvchi subyektlar faoliyatini davlat tomonidan nazorat qilish toʻgʻrisidagi Qonun (717-I) 11",
+     "Hujjat 3524: Oʻzbekiston Respublikasi Davlat xavfsizlik xizmati “Temurbeklar maktabi” va “Yosh chegarachilar” harbiy-akademik litseylariga oʻqishga kirayotgan… 20",
+     "Vazirlar Mahkamasi qarori 611: Nazorat qiluvchi organlar tomonidan tadbirkorlik subyektlari faoliyatida davlat nazoratini tashkil etish boʻyicha qoʻshimcha cho… 15"
+    ],
+    "vector": [
+     "Xoʻjalik yurituvchi subyektlar faoliyatini davlat tomonidan nazorat qilish toʻgʻrisidagi Qonun (717-I) 10",
+     "Tadbirkorlar huquqlari va qonuniy manfaatlarini ishonchli himoya qilish chora-tadbirlari toʻgʻrisidagi Prezident farmoni (PF-184) 26",
+     "Prezident qarori PQ-374: Tadbirkorlik subyektlari faoliyatida tekshiruvlar oʻtkazishni muvofiqlashtirish tartibini takomillashtirish chora-tadbirlari toʻgʻrisi… 22"
+    ],
+    "hybrid": [
+     "Xoʻjalik yurituvchi subyektlar faoliyatini davlat tomonidan nazorat qilish toʻgʻrisidagi Qonun (717-I) 10",
+     "Xoʻjalik yurituvchi subyektlar faoliyatini davlat tomonidan nazorat qilish toʻgʻrisidagi Qonun (717-I) 10²",
+     "Xoʻjalik yurituvchi subyektlar faoliyatini davlat tomonidan nazorat qilish toʻgʻrisidagi Qonun (717-I) 11"
+    ]
+   }
+  },
+  "sk-035": {
+   "question": "Menga chetdan kelgan puldan bank foiz toʻlasa, shu foizdan necha foiz ushlab qolinadi?",
+   "ranks": {
+    "fts": null,
+    "vector": null,
+    "hybrid": null
+   },
+   "top3": {
+    "fts": [
+     "Hujjat 2111: Oʻzbekiston Respublikasi Xalq bankidagi fuqarolarning shaxsiy jamgʻarib boriladigan pensiya hisobvaraqlariga ixtiyoriy ravishda yoʻnaltiriladigan… 4",
+     "Hujjat 2107: Oʻzbekiston Respublikasining professional va oliy taʼlim tashkilotlarida taʼlim olish uchun yoʻnaltiriladigan mablagʻlarga jismoniy shaxslardan ol… 10",
+     "Hujjat 2111: Oʻzbekiston Respublikasi Xalq bankidagi fuqarolarning shaxsiy jamgʻarib boriladigan pensiya hisobvaraqlariga ixtiyoriy ravishda yoʻnaltiriladigan… 16"
+    ],
+    "vector": [
+     "Soliq kodeksi 483",
+     "Soliq kodeksi 344",
+     "Soliq kodeksi 381"
+    ],
+    "hybrid": [
+     "Soliq kodeksi 483",
+     "Soliq kodeksi 344",
+     "Soliq kodeksi 207"
+    ]
+   }
+  },
+  "sk-036": {
+   "question": "Men oddiy odam sifatida qaysi holatda soliq toʻlovchi hisoblanaman?",
+   "ranks": {
+    "fts": null,
+    "vector": 3,
+    "hybrid": 3
+   },
+   "top3": {
+    "fts": [
+     "Soliq toʻlovchilarga ayrim interaktiv davlat xizmatlarini koʻrsatish boʻyicha maʼmuriy reglamentlarni tasdiqlash toʻgʻrisidagi Vazirlar Mahkamasi qarori (150) 4",
+     "Soliq toʻlovchilarga ayrim interaktiv davlat xizmatlarini koʻrsatish boʻyicha maʼmuriy reglamentlarni tasdiqlash toʻgʻrisidagi Vazirlar Mahkamasi qarori (150) 8",
+     "Soliq toʻlovchilarga ayrim interaktiv davlat xizmatlarini koʻrsatish boʻyicha maʼmuriy reglamentlarni tasdiqlash toʻgʻrisidagi Vazirlar Mahkamasi qarori (150) 14"
+    ],
+    "vector": [
+     "Soliq kodeksi 402",
+     "Soliq kodeksi 448",
+     "Soliq kodeksi 364"
+    ],
+    "hybrid": [
+     "Soliq kodeksi 402",
+     "Soliq kodeksi 448",
+     "Soliq kodeksi 364"
+    ]
+   }
+  },
+  "sk-037": {
+   "question": "Men tanishimga tovarni bozordagidan ancha arzonroqqa sotgan bo‘lsam, keyin hisob-kitobda baribir o‘rtacha bozor narxidan kelib chiqib qarashlari mumkinmi?",
+   "ranks": {
+    "fts": 1,
+    "vector": 1,
+    "hybrid": 1
+   },
+   "top3": {
+    "fts": [
+     "Vazirlar Mahkamasi qarori 489: Qoʻshilgan qiymat soligʻi hamda chet el yuridik shaxslari bilan bogʻliq soliq maʼmurchiligini takomillashtirish chora-tadbirlari… 6",
+     "Vazirlar Mahkamasi qarori 489: Qoʻshilgan qiymat soligʻi hamda chet el yuridik shaxslari bilan bogʻliq soliq maʼmurchiligini takomillashtirish chora-tadbirlari… 9",
+     "Vazirlar Mahkamasi qarori 722: Narxlari davlat tomonidan tartibga solinishi lozim boʻlgan tovarlar narxlarining (tariflarining) shakllanishi hamda qoʻllanilish… 13"
+    ],
+    "vector": [
+     "Vazirlar Mahkamasi qarori 489: Qoʻshilgan qiymat soligʻi hamda chet el yuridik shaxslari bilan bogʻliq soliq maʼmurchiligini takomillashtirish chora-tadbirlari… 6",
+     "Soliq bazasini tovarlarning bozor narxlaridan kelib chiqqan holda aniqlash orqali teng raqobat muhitini yaratish toʻgʻrisidagi Vazirlar Mahkamasi qarori (253) 14",
+     "Soliq kodeksi 253"
+    ],
+    "hybrid": [
+     "Vazirlar Mahkamasi qarori 489: Qoʻshilgan qiymat soligʻi hamda chet el yuridik shaxslari bilan bogʻliq soliq maʼmurchiligini takomillashtirish chora-tadbirlari… 6",
+     "Soliq bazasini tovarlarning bozor narxlaridan kelib chiqqan holda aniqlash orqali teng raqobat muhitini yaratish toʻgʻrisidagi Vazirlar Mahkamasi qarori (253) 14",
+     "Soliq kodeksi 253"
+    ]
+   }
+  },
+  "sk-038": {
+   "question": "Men mijozga tovar sotgandim, keyin u bir qismini qaytarib berdi. Shu holatda hisob-kitobni qaysi muddat ichida qayta to‘g‘rilashim mumkin?",
+   "ranks": {
+    "fts": null,
+    "vector": null,
+    "hybrid": null
+   },
+   "top3": {
+    "fts": [
+     "Vazirlar Mahkamasi qarori 610: Aholining ijtimoiy himoyaga muhtoj toifalari tomonidan ijtimoiy karta orqali xarid qilingan ayrim tovarlar (xizmatlar) boʻyicha… 14",
+     "Onlayn nazorat-kassa mashinalari va virtual kassa tizimi qoʻllanilishini taʼminlash chora-tadbirlari toʻgʻrisidagi Vazirlar Mahkamasi qarori (943) 38¹",
+     "Hujjat 3229: Oʻzbekiston Respublikasida naqd pulsiz hisob-kitoblar toʻgʻrisidagi nizomni tasdiqlash haqida 49"
+    ],
+    "vector": [
+     "Vazirlar Mahkamasi qarori 255: Savdo va xizmat koʻrsatish sohasida jamoatchilik nazorati samaradorligini oshirishga doir qoʻshimcha chora-tadbirlar toʻgʻrisida 14",
+     "Vazirlar Mahkamasi qarori 745: Tadbirkorlik subyektlarini ragʻbatlantirish va ularning qonuniy ishlashi uchun qoʻshimcha shart-sharoitlar yaratish chora-tadbir… 13",
+     "Vazirlar Mahkamasi qarori 95: Don va donni qayta ishlash mahsulotlari hisobini yuritish tizimini takomillashtirishga, ularning saqlanishi ustidan nazoratni kuc… 3"
+    ],
+    "hybrid": [
+     "Vazirlar Mahkamasi qarori 745: Tadbirkorlik subyektlarini ragʻbatlantirish va ularning qonuniy ishlashi uchun qoʻshimcha shart-sharoitlar yaratish chora-tadbir… 13",
+     "Vazirlar Mahkamasi qarori 255: Savdo va xizmat koʻrsatish sohasida jamoatchilik nazorati samaradorligini oshirishga doir qoʻshimcha chora-tadbirlar toʻgʻrisida 14",
+     "Vazirlar Mahkamasi qarori 255: Savdo va xizmat koʻrsatish sohasida jamoatchilik nazorati samaradorligini oshirishga doir qoʻshimcha chora-tadbirlar toʻgʻrisida 13"
+    ]
+   }
+  },
+  "sk-039": {
+   "question": "Menga soliqdan qarzingiz bor, falon muddatda to'lang degan xabar keldi. Shu xatda yana nimalar yozilgan bo'lishi kerak: qancha qarz, qancha oshib boryapti, to'lamasam nima bo'lishi kabi?",
+   "ranks": {
+    "fts": null,
+    "vector": 2,
+    "hybrid": 3
+   },
+   "top3": {
+    "fts": [
+     "Davlat pensiya taʼminotiga oid zamonaviy xizmatlarni joriy etishning qoʻshimcha chora-tadbirlari toʻgʻrisidagi Prezident qarori (PQ-355) None",
+     "Vazirlar Mahkamasi qarori 505: Mehnat faoliyati bilan bogʻliq baxtsiz hodisalar toʻgʻrisida xabar berish, ularni tekshirish va hisobga olish hamda ularning oqi… None",
+     "Soliq kodeksi 123"
+    ],
+    "vector": [
+     "Toʻlovga qobiliyatsizlik institutini yanada takomillashtirish chora-tadbirlari toʻgʻrisidagi Prezident farmoni (PF-78) None",
+     "Soliq kodeksi 116",
+     "Soliq kodeksi 55"
+    ],
+    "hybrid": [
+     "Toʻlovga qobiliyatsizlik institutini yanada takomillashtirish chora-tadbirlari toʻgʻrisidagi Prezident farmoni (PF-78) None",
+     "Soliq kodeksi 121¹",
+     "Soliq kodeksi 116"
+    ]
+   }
+  },
+  "sk-040": {
+   "question": "Mahalladan berilgan yordam puli ham daromad hisoblanadimi?",
+   "ranks": {
+    "fts": null,
+    "vector": 4,
+    "hybrid": 4
+   },
+   "top3": {
+    "fts": [
+     "Vazirlar Mahkamasi qarori 35: Ijtimoiy reyestrga kiritilgan oilalarni qoʻllab-quvvatlash tizimini takomillashtirishning qoʻshimcha chora-tadbirlari toʻgʻrisida None",
+     "Vazirlar Mahkamasi qarori 35: Ijtimoiy reyestrga kiritilgan oilalarni qoʻllab-quvvatlash tizimini takomillashtirishning qoʻshimcha chora-tadbirlari toʻgʻrisida 26",
+     "Prezident qarori PQ-31: Mahallada tadbirkorlikni rivojlantirish, aholi bandligini taʼminlash va kambagʻallikni qisqartirish masalalari boʻyicha hokim yordamchi… None"
+    ],
+    "vector": [
+     "Buyruq 3944: Oʻzbekiston Respublikasi moliyaviy hisobotning milliy standarti (70-sonli MHMS) “Qishloq xoʻjaligi faoliyati hisobi”ni tasdiqlash haqida 87",
+     "Buyruq 3534: Oʻzbekiston Respublikasi buxgalteriya hisobining milliy standarti (10-sonli BHMS) “Davlat yordamining hisobi va u toʻgʻrisidagi maʼlumotlarni yori… 11",
+     "Soliq kodeksi 369"
+    ],
+    "hybrid": [
+     "Buyruq 3944: Oʻzbekiston Respublikasi moliyaviy hisobotning milliy standarti (70-sonli MHMS) “Qishloq xoʻjaligi faoliyati hisobi”ni tasdiqlash haqida 87",
+     "Buyruq 3534: Oʻzbekiston Respublikasi buxgalteriya hisobining milliy standarti (10-sonli BHMS) “Davlat yordamining hisobi va u toʻgʻrisidagi maʼlumotlarni yori… 11",
+     "Soliq kodeksi 369"
+    ]
+   }
+  },
+  "sk-041": {
+   "question": "Firmamizning o‘tgan yilgi tushumi 5 milliard so‘mdan oshgan ekan. Soliqchilar bilan shu alohida kuzatuvga o‘zimiz xohlasak kiramizmi yoki majburiymi?",
+   "ranks": {
+    "fts": null,
+    "vector": 2,
+    "hybrid": 1
+   },
+   "top3": {
+    "fts": [
+     "Prezident qarori PQ-4086: Oʻzbekiston Respublikasining 2019-yilgi asosiy makroiqtisodiy koʻrsatkichlari prognozi va Davlat budjeti parametrlari hamda 2020-2021… 8",
+     "Soliq kodeksi 462",
+     "Oʻzbekiston Respublikasining soliq siyosatini takomillashtirish konsepsiyasi toʻgʻrisidagi Prezident farmoni (PF-5468) 2"
+    ],
+    "vector": [
+     "Soliq maʼmuriyatchiligini yanada takomillashtirish boʻyicha qoʻshimcha chora-tadbirlar toʻgʻrisidagi Vazirlar Mahkamasi qarori (736) 1",
+     "Soliq kodeksi 169",
+     "Soliq maʼmuriyatchiligini yanada takomillashtirish boʻyicha qoʻshimcha chora-tadbirlar toʻgʻrisidagi Vazirlar Mahkamasi qarori (736) 17"
+    ],
+    "hybrid": [
+     "Soliq kodeksi 169",
+     "Soliq maʼmuriyatchiligini yanada takomillashtirish boʻyicha qoʻshimcha chora-tadbirlar toʻgʻrisidagi Vazirlar Mahkamasi qarori (736) 1",
+     "Prezident farmoni PF-6155: 2017-2021-yillarda Oʻzbekiston Respublikasini rivojlantirishning beshta ustuvor yoʻnalishi boʻyicha Harakatlar strategiyasini “Yoshl… 15"
+    ]
+   }
+  },
+  "sk-042": {
+   "question": "Do'konga chetdan keltirilgan pivo olib kirilsa, 2026-yil fevraldan boshlab har 1 litriga qancha soliq to'lanadi?",
+   "ranks": {
+    "fts": 1,
+    "vector": null,
+    "hybrid": 4
+   },
+   "top3": {
+    "fts": [
+     "Soliq kodeksi 289²",
+     "Oʻzbekiston Respublikasining 2014-yilgi asosiy makroiqtisodiy koʻrsatkichlari prognozi va Davlat budjeti parametrlari toʻgʻrisidagi Prezident qarori (PQ-2099) None",
+     "Oʻzbekiston Respublikasining 2016-yilgi asosiy makroiqtisodiy koʻrsatkichlari prognozi va Davlat budjeti parametrlari toʻgʻrisidagi Prezident qarori (PQ-2455) None"
+    ],
+    "vector": [
+     "Qoraqalpogʻiston Respublikasini ijtimoiy-iqtisodiy rivojlantirishga qaratilgan chora-tadbirlarni yanada jadallashtirish toʻgʻrisidagi Prezident qarori (PQ-248) 2",
+     "2026-yil uchun Oʻzbekiston Respublikasining Davlat budjeti toʻgʻrisidagi Qonun (OʻRQ-1105) 12",
+     "2024-yil uchun Oʻzbekiston Respublikasining Davlat budjeti toʻgʻrisidagi Qonun (OʻRQ-886) None"
+    ],
+    "hybrid": [
+     "Oʻzbekiston Respublikasining 2015-yilgi asosiy makroiqtisodiy koʻrsatkichlari prognozi va Davlat budjeti parametrlari toʻgʻrisidagi Prezident qarori (PQ-2270) None",
+     "Oʻzbekiston Respublikasining 2014-yilgi asosiy makroiqtisodiy koʻrsatkichlari prognozi va Davlat budjeti parametrlari toʻgʻrisidagi Prezident qarori (PQ-2099) None",
+     "2026-yil uchun Oʻzbekiston Respublikasining Davlat budjeti toʻgʻrisidagi Qonun (OʻRQ-1105) 12"
+    ]
+   }
+  },
+  "sk-043": {
+   "question": "Yaqinda soliq qoidasi o‘zgardi deyishdi. Shu yangi tartib oldingi davr uchun ham menga qo‘llanadimi yoki faqat keyin paydo bo‘lgan qarzlarimga ishlaydimi?",
+   "ranks": {
+    "fts": 1,
+    "vector": 4,
+    "hybrid": 2
+   },
+   "top3": {
+    "fts": [
+     "Soliq kodeksi 4",
+     "Kommunal xoʻjaligi tizimida tabiatni muhofaza qilish faoliyatini yaxshilashga doir qoʻshimcha chora-tadbirlar toʻgʻrisidagi Vazirlar Mahkamasi qarori (11) 34",
+     "“Oʻzbekiston-2030” strategiyasini 2023-yilda sifatli va oʻz vaqtida amalga oshirish chora-tadbirlari toʻgʻrisidagi Prezident qarori (PQ-300) None"
+    ],
+    "vector": [
+     "Soliq kodeksi 86",
+     "Hujjat 4: Sudlar tomonidan soliq qonunchiligini qoʻllashning ayrim masalalari haqida 2",
+     "Soliq kodeksi 291"
+    ],
+    "hybrid": [
+     "Soliq kodeksi 86",
+     "Soliq kodeksi 4",
+     "Hujjat 4: Sudlar tomonidan soliq qonunchiligini qoʻllashning ayrim masalalari haqida 2"
+    ]
+   }
+  },
+  "sk-044": {
+   "question": "Men yiliga bir marta daromadimni topshiradigan toifaga kirsam, ish qilib topgan pulimdan asbob-uskunaga yoki xizmat ko‘rsatishga ketgan, chek-qog‘oz bilan tasdiqlangan xarajatlarimni ayirib hisoblasam bo‘ladimi?",
+   "ranks": {
+    "fts": 3,
+    "vector": 4,
+    "hybrid": 1
+   },
+   "top3": {
+    "fts": [
+     "Vazirlar Mahkamasi qarori 574: Soliq organlari xodimlari hamda Navoiy va Chirchiq shaharlarida hisobga qoʻyilgan jismoniy shaxslar tomonidan oʻzining jami yill… 7",
+     "Soliq kodeksi 395",
+     "Soliq kodeksi 394"
+    ],
+    "vector": [
+     "Vazirlar Mahkamasi qarori 707: Yakka tartibdagi tadbirkorlar tomonidan yollangan xodimlarni davlat soliq xizmati organlarida hisobga qoʻyish hamda soliq solina… 31",
+     "Vazirlar Mahkamasi qarori 574: Soliq organlari xodimlari hamda Navoiy va Chirchiq shaharlarida hisobga qoʻyilgan jismoniy shaxslar tomonidan oʻzining jami yill… 5",
+     "Buyruq 3542: Oʻzbekiston Respublikasi buxgalteriya hisobining milliy standarti (2-sonli BHMS) “Asosiy xoʻjalik faoliyatidan daromadlar”ni tasdiqlash haqida 4"
+    ],
+    "hybrid": [
+     "Soliq kodeksi 394",
+     "Vazirlar Mahkamasi qarori 707: Yakka tartibdagi tadbirkorlar tomonidan yollangan xodimlarni davlat soliq xizmati organlarida hisobga qoʻyish hamda soliq solina… 31",
+     "Vazirlar Mahkamasi qarori 574: Soliq organlari xodimlari hamda Navoiy va Chirchiq shaharlarida hisobga qoʻyilgan jismoniy shaxslar tomonidan oʻzining jami yill… 5"
+    ]
+   }
+  },
+  "sk-045": {
+   "question": "Men ham soliq solinadigan, ham soliq olinmaydigan ish qilaman. Kirimlarimning soliq tushadigan qismi 5 foizga ham yetmasa, xaridlarimga to‘lagan soliqni alohida ajratmay, hammasini tovar yoki xizmat narxiga qo‘shib yuborsam bo‘ladimi?",
+   "ranks": {
+    "fts": 1,
+    "vector": null,
+    "hybrid": 3
+   },
+   "top3": {
+    "fts": [
+     "Soliq kodeksi 268",
+     "Soliq kodeksi 270",
+     "Soliq kodeksi 243"
+    ],
+    "vector": [
+     "Kichik biznes subyektlarining oʻsishi uchun yanada qulay iqtisodiy va maʼmuriy shart-sharoitlar yaratish toʻgʻrisidagi Prezident farmoni (PF-100) 6",
+     "Soliq kodeksi 361",
+     "Soliq kodeksi 462"
+    ],
+    "hybrid": [
+     "Kichik biznes subyektlarining oʻsishi uchun yanada qulay iqtisodiy va maʼmuriy shart-sharoitlar yaratish toʻgʻrisidagi Prezident farmoni (PF-100) 6",
+     "Vazirlar Mahkamasi qarori 489: Qoʻshilgan qiymat soligʻi hamda chet el yuridik shaxslari bilan bogʻliq soliq maʼmurchiligini takomillashtirish chora-tadbirlari… 13",
+     "Soliq kodeksi 268"
+    ]
+   }
+  },
+  "sk-046": {
+   "question": "Firmamda ishchilar bor. Men ular bo‘yicha soliqka topshiriladigan hisobotni har oy qaysi sanagacha topshirishim kerak, yil yakunida esa qachongacha?",
+   "ranks": {
+    "fts": 1,
+    "vector": 1,
+    "hybrid": 1
+   },
+   "top3": {
+    "fts": [
+     "Soliq kodeksi 389",
+     "Soliq kodeksi 388",
+     "Soliq kodeksi 470"
+    ],
+    "vector": [
+     "Soliq kodeksi 389",
+     "Soliq kodeksi 81",
+     "Soliq maʼmuriyatchiligini yanada takomillashtirish boʻyicha qoʻshimcha chora-tadbirlar toʻgʻrisidagi Vazirlar Mahkamasi qarori (736) None"
+    ],
+    "hybrid": [
+     "Soliq kodeksi 389",
+     "Soliq kodeksi 81",
+     "Soliq kodeksi 349"
+    ]
+   }
+  },
+  "sk-047": {
+   "question": "Menga soliqdan qarz chiqib qolsa, ular darrov bankdagi hisobimni to‘sib qo‘yishi mumkinmi yoki oldin boshqa mol-mulkimga cheklov qo‘yilishi kerakmi?",
+   "ranks": {
+    "fts": null,
+    "vector": 2,
+    "hybrid": 2
+   },
+   "top3": {
+    "fts": [
+     "Oʻzbekiston Respublikasining 2017-yilgi asosiy makroiqtisodiy koʻrsatkichlari prognozi va Davlat budjeti parametrlari toʻgʻrisidagi Prezident qarori (PQ-2699) None",
+     "Sud hujjatlari va boshqa organlar hujjatlarini ijro etish toʻgʻrisidagi Qonun (258-II) 58",
+     "Oʻzbekiston Respublikasining 2018-yilgi asosiy makroiqtisodiy koʻrsatkichlari prognozi va Davlat budjeti parametrlari toʻgʻrisidagi Prezident qarori (PQ-3454) None"
+    ],
+    "vector": [
+     "Soliq kodeksi 114",
+     "Soliq kodeksi 121",
+     "Soliq kodeksi 313"
+    ],
+    "hybrid": [
+     "Soliq kodeksi 114",
+     "Soliq kodeksi 121",
+     "Soliq maʼmuriyatchiligini yanada takomillashtirish boʻyicha qoʻshimcha chora-tadbirlar toʻgʻrisidagi Vazirlar Mahkamasi qarori (736) 1"
+    ]
+   }
+  },
+  "sk-048": {
+   "question": "Men yakka tartibda ishlayman, yil davomida tushumim 1 milliard so‘mdan oshsa, QQS to‘lashim shart bo‘ladimi?",
+   "ranks": {
+    "fts": 7,
+    "vector": 5,
+    "hybrid": 5
+   },
+   "top3": {
+    "fts": [
+     "Soliq kodeksi 462",
+     "Soliq va bojxona imtiyozlari berilishini yanada tartibga solish chora-tadbirlari toʻgʻrisidagi Prezident farmoni (PF-5755) 1",
+     "Vazirlar Mahkamasi qarori 595: Soliq toʻlovchilarni hisobga olishni yanada takomillashtirish va qoʻshilgan qiymat soligʻining oʻrnini qoplash tartibini soddala… 11"
+    ],
+    "vector": [
+     "Prezident qarori PQ-4086: Oʻzbekiston Respublikasining 2019-yilgi asosiy makroiqtisodiy koʻrsatkichlari prognozi va Davlat budjeti parametrlari hamda 2020-2021… 8",
+     "Vazirlar Mahkamasi qarori 595: Soliq toʻlovchilarni hisobga olishni yanada takomillashtirish va qoʻshilgan qiymat soligʻining oʻrnini qoplash tartibini soddala… 11",
+     "Soliq kodeksi 462"
+    ],
+    "hybrid": [
+     "Soliq kodeksi 462",
+     "Vazirlar Mahkamasi qarori 595: Soliq toʻlovchilarni hisobga olishni yanada takomillashtirish va qoʻshilgan qiymat soligʻining oʻrnini qoplash tartibini soddala… 11",
+     "Prezident qarori PQ-4086: Oʻzbekiston Respublikasining 2019-yilgi asosiy makroiqtisodiy koʻrsatkichlari prognozi va Davlat budjeti parametrlari hamda 2020-2021… 8"
+    ]
+   }
+  },
+  "sk-049": {
+   "question": "Bir necha odam sherik bo‘lib ish qilsak, soliqni hammamiz alohida to‘laymizmi yoki bitta mas’ul odam hammaning nomidan hisob-kitob qilib to‘laydimi?",
+   "ranks": {
+    "fts": 1,
+    "vector": 1,
+    "hybrid": 1
+   },
+   "top3": {
+    "fts": [
+     "Soliq kodeksi 319",
+     "Soliq kodeksi 275",
+     "Fuqarolik kodeksi (ikkinchi qism) 965"
+    ],
+    "vector": [
+     "Soliq kodeksi 275",
+     "Soliq kodeksi 294",
+     "Soliq kodeksi 319"
+    ],
+    "hybrid": [
+     "Soliq kodeksi 275",
+     "Soliq kodeksi 319",
+     "Soliq kodeksi 294"
+    ]
+   }
+  },
+  "sk-050": {
+   "question": "Mening nomimda ikkita uy bo‘lsa, soliq har ikkalasiga bitta qilib chiqadimi yoki har bir uy uchun alohida hisoblanadimi?",
+   "ranks": {
+    "fts": null,
+    "vector": 5,
+    "hybrid": 4
+   },
+   "top3": {
+    "fts": [
+     "Vazirlar Mahkamasi qarori 1043: Soliq solish maqsadida jismoniy shaxslarga tegishli boʻlgan koʻchmas mulk obyektlarining, turar joy fondining kadastr qiymatini… 10",
+     "Soliq kodeksi 422",
+     "Vazirlar Mahkamasi qarori 445: Mahalliy budjetlarning daromadlar bazasini kengaytirish zaxiralarini aniqlash ishlarini tashkil etish chora-tadbirlari toʻgʻrisi… 8"
+    ],
+    "vector": [
+     "Buyruq 2146: Budjet tasnifini qoʻllash boʻyicha yoʻriqnomani tasdiqlash haqida None",
+     "Oʻzbekiston Respublikasining 2017-yilgi asosiy makroiqtisodiy koʻrsatkichlari prognozi va Davlat budjeti parametrlari toʻgʻrisidagi Prezident qarori (PQ-2699) None",
+     "Vazirlar Mahkamasi qarori 1043: Soliq solish maqsadida jismoniy shaxslarga tegishli boʻlgan koʻchmas mulk obyektlarining, turar joy fondining kadastr qiymatini… 1"
+    ],
+    "hybrid": [
+     "Vazirlar Mahkamasi qarori 1043: Soliq solish maqsadida jismoniy shaxslarga tegishli boʻlgan koʻchmas mulk obyektlarining, turar joy fondining kadastr qiymatini… 1",
+     "Buyruq 2146: Budjet tasnifini qoʻllash boʻyicha yoʻriqnomani tasdiqlash haqida None",
+     "Oʻzbekiston Respublikasining 2017-yilgi asosiy makroiqtisodiy koʻrsatkichlari prognozi va Davlat budjeti parametrlari toʻgʻrisidagi Prezident qarori (PQ-2699) None"
+    ]
+   }
+  }
+ },
+ "settings": {
+  "model": "e5-small-e6-int8",
+  "stem": true,
+  "alt": "eval/alt_llm_questions_tax.json",
+  "questions": "eval/questions_tax.yaml"
+ }
+}
