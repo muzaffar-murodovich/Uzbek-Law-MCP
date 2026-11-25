@@ -66,7 +66,9 @@ ELIGIBLE = """
     SELECT s.id, s.document_id, d.doc_kind
     FROM sections s JOIN documents d ON d.id = s.document_id
     WHERE s.kind IN ('modda', 'band') AND s.number IS NOT NULL
-      AND length(s.text) BETWEEN 300 AND 3000 AND d.status = 'in_force' AND d.content = 'html'
+      AND length(s.text) BETWEEN 300 AND %(max_chars)s
+      AND d.status = 'in_force' AND d.content = 'html'
+      AND (%(document)s::bigint IS NULL OR s.document_id = %(document)s::bigint)
     ORDER BY s.id
 """
 
@@ -100,7 +102,9 @@ def generate(args: argparse.Namespace) -> None:
     items = yaml.safe_load(out.read_text(encoding="utf-8")) if out.exists() else []
     seen = {(i["expected"][0]["document"], i["expected"][0]["article"]) for i in items}
     with connect(settings.dsn) as conn:
-        rows = conn.execute(ELIGIBLE).fetchall()
+        rows = conn.execute(
+            ELIGIBLE, {"max_chars": args.max_chars, "document": args.document}
+        ).fetchall()
         if args.by_kind:
             ids = stratified(rows, args.sample, args.min_per_kind, rng)
         else:
@@ -359,6 +363,8 @@ def main() -> None:
         "documents drawn per kind in proportion to the corpus",
     )
     p.add_argument("--min-per-kind", type=int, default=5)
+    p.add_argument("--document", type=int, help="only articles of this document (lex.uz id)")
+    p.add_argument("--max-chars", type=int, default=3000, help="longest article text to use")
     p.add_argument("--workers", type=int, default=6, help="parallel API calls")
     for p in sub.choices.values():
         p.add_argument(
